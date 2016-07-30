@@ -1,2 +1,4 @@
-# angular-django
+angular-django
+==============
+
 Angular Frontend with Django Backend

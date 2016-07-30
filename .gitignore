@@ -1,0 +1,50 @@
+# Server-specific passwords etc.
+secrets.json
+
+# Top-level Media and Static directories
+/ad/media
+/ad/static
+
+# Python bytecode:
+*.py[co]
+
+# Packaging files:
+*.egg*
+
+# Sphinx docs:
+_build
+
+# SQLite3 database files:
+*.db
+
+# Logs:
+*.log
+
+# PyCharm
+.idea
+
+# Eclipse
+.project
+.pydevproject
+.settings
+
+# Linux Editors
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+.\#*
+*.swp
+*.swo
+
+# Mac
+.DS_Store
+._*
+
+# Windows
+Thumbs.db
+Desktop.ini
+

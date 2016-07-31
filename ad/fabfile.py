@@ -52,21 +52,29 @@ def setup(*args, **kwargs):
     with lcd(SITE_ROOT):
         local('pip install -r requirements/local.txt')
 
+    # Build Angular 2 frontend
+    with lcd(DJANGO_ROOT):
+        local('npm install')
+
     # Get current data from live
-    if confirm('Get data from live system?'):
-        with cd(LIVE_SITE_ROOT):
-            run('~/.virtualenvs/ahernp/bin/python manage.py dumpdata --settings=ahernp.settings.production '
-                '--indent 4 dmcm sites.site feedreader.group feedreader.feed > ~/live_snapshot.json')
-        get('live_snapshot.json', join(DJANGO_ROOT, 'ahernp', 'fixtures', 'live_snapshot.json'))
+    # if confirm('Get data from live system?'):
+    #     with cd(LIVE_SITE_ROOT):
+    #         run('~/.virtualenvs/ahernp/bin/python manage.py dumpdata --settings=ahernp.settings.production '
+    #             '--indent 4 dmcm sites.site feedreader.group feedreader.feed > ~/live_snapshot.json')
+    #     get('live_snapshot.json', join(DJANGO_ROOT, 'ahernp', 'fixtures', 'live_snapshot.json'))
 
     # Reload database
-    local('dropdb %s' % (DATABASE_NAME))
-    local('createdb %s' % (DATABASE_NAME))
+    # local('dropdb %s' % (DATABASE_NAME))
+    # local('createdb %s' % (DATABASE_NAME))
+    #
+    # manage('migrate --settings=ahernp.settings.local')
+    # manage('loaddata ahernp/fixtures/live_snapshot.json --settings=ahernp.settings.local')
+    # manage('loaddata ahernp/fixtures/auth.json --settings=ahernp.settings.local')
+    # manage('collectstatic --noinput --settings=ahernp.settings.local')
 
-    manage('migrate --settings=ahernp.settings.local')
-    manage('loaddata ahernp/fixtures/live_snapshot.json --settings=ahernp.settings.local')
-    manage('loaddata ahernp/fixtures/auth.json --settings=ahernp.settings.local')
-    manage('collectstatic --noinput --settings=ahernp.settings.local')
+    # Run Angular 2 frontend
+    with lcd(DJANGO_ROOT):
+        local('npm start')
 
 
 @task

@@ -1,0 +1,59 @@
+body {
+	font-family: 'Droid Sans', Arial, sans-serif;
+	font-size: 16px;
+	background-color: #fff;
+	color: #444;
+	margin: 0;
+}
+h1, h2, h3, h4, a, th {color: #046;}
+h1 {font-size: 1.5em;}
+h2 {font-size: 1.25em;}
+h3 {font-size: 1em;}
+h4 {font-size: .75em;}
+code {
+	font-family: 'Droid Sans Mono', Monospace;
+	color: #000;
+}
+table {border-collapse: collapse;}
+th, td {
+	border: 1px solid #000;
+	padding:0 0.5em 0 0.5em;
+}
+tr.even {background-color: #ddd;}
+tr.even:hover {background-color: #ace;}
+tr.odd:hover {background-color: #ace;}
+button {
+	color: #fff;
+	background-color: #046;
+	font-size: 1em;
+}
+#content {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2.5em;
+	margin-bottom: 3.5em;
+}
+#source_label {
+	color: #046;
+	text-decoration: underline;
+	cursor: pointer;
+}
+#header {
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	border-bottom: 1px #ccc solid;
+	margin 0;
+	z-index: 9;
+}
+#footer {
+	background-color: #fff;
+	position: fixed;
+	bottom: 0%;
+	width: 100%;
+	border-top: 1px #ccc solid;
+	margin 0;
+	z-index: 9;
+}

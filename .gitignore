@@ -5,6 +5,10 @@ secrets.json
 /ad/media
 /ad/static
 
+# NPM and Typescript typings directories
+/ad/node_modules
+/ad/typings
+
 # Python bytecode:
 *.py[co]
 

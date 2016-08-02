@@ -5,26 +5,16 @@ from os.path import abspath, dirname, join
 
 from decorator import decorator
 
-from fabric.api import (env, local, lcd, cd, run,
-                        task, hosts, settings, abort,
-                        prefix)
+from fabric.api import (env, local, lcd,
+                        task, hosts, settings)
 from fabric.colors import magenta
-from fabric.contrib.console import confirm
-from fabric.operations import get
+from fabric.contrib.files import exists
 
 DJANGO_ROOT = dirname(abspath(__file__))
 SITE_ROOT = dirname(DJANGO_ROOT)
-LIVE_SITE_ROOT = '~/code/django-ahernp/ahernp'
-DATABASE_NAME = 'ad'
+PROJECT_NAME = 'ad'
 
 env.hosts = ['web']
-
-
-def write_file(filename, data):
-    """Write data to file."""
-    output_file = codecs.open(filename, 'w', 'utf-8')
-    output_file.write(data)
-    output_file.close()
 
 
 @decorator
@@ -44,37 +34,33 @@ def timer(func, *args, **kwargs):
 def setup(*args, **kwargs):
     """Setup development environment in current virtualenv."""
     if args and args[0] == 'init':
-        pass  # Rebuild development environment
-    else:
         with lcd(DJANGO_ROOT):
-            local("git pull")
+            local('rm -rf static')
+            local('rm db.sqlite3')
 
+    with lcd(DJANGO_ROOT):
+        local("git pull")
+
+    # Install packages
     with lcd(SITE_ROOT):
         local('pip install -r requirements/local.txt')
 
     # Build Angular 2 frontend
+    with settings(warn_only=True):
+        with lcd(join(DJANGO_ROOT, 'site_assets')):
+            local('rm node_modules')
+
     with lcd(DJANGO_ROOT):
         local('npm install')
+        local('npm run tsc')
 
-    # Get current data from live
-    # if confirm('Get data from live system?'):
-    #     with cd(LIVE_SITE_ROOT):
-    #         run('~/.virtualenvs/ahernp/bin/python manage.py dumpdata --settings=ahernp.settings.production '
-    #             '--indent 4 dmcm sites.site feedreader.group feedreader.feed > ~/live_snapshot.json')
-    #     get('live_snapshot.json', join(DJANGO_ROOT, 'ahernp', 'fixtures', 'live_snapshot.json'))
+    with lcd(join(DJANGO_ROOT, 'site_assets')):
+        local('ln -s ../node_modules node_modules')
 
-    # Reload database
-    # local('dropdb %s' % (DATABASE_NAME))
-    # local('createdb %s' % (DATABASE_NAME))
-    #
-    # manage('migrate --settings=ahernp.settings.local')
-    # manage('loaddata ahernp/fixtures/live_snapshot.json --settings=ahernp.settings.local')
-    # manage('loaddata ahernp/fixtures/auth.json --settings=ahernp.settings.local')
-    # manage('collectstatic --noinput --settings=ahernp.settings.local')
-
-    # Run Angular 2 frontend
-    with lcd(DJANGO_ROOT):
-        local('npm start')
+    # Reset database
+    manage('migrate')
+    manage('loaddata %s/fixtures/live_snapshot.json' % PROJECT_NAME)
+    manage('loaddata %s/fixtures/auth.json' % PROJECT_NAME)
 
 
 @task
@@ -83,7 +69,7 @@ def setup(*args, **kwargs):
 def test():
     """Run Django Unit Tests."""
     with settings(warn_only=True), lcd(DJANGO_ROOT):
-        result = local('python manage.py test --settings=ahernp.settings.test')
+        result = local('python manage.py test')
     return result
 
 
@@ -93,45 +79,7 @@ def test():
 def runserver():
     """Run Django runserver."""
     with settings(warn_only=True), lcd(DJANGO_ROOT):
-        local('python manage.py runsslserver --settings=ahernp.settings.local')
-
-
-@task
-@timer
-def deliver():
-    """Test, commit and push changes. """
-    local("git status")
-    with lcd(DJANGO_ROOT):
-        local('grep -r --include="*.py" "pdb" . || [ $? -lt 2 ]')
-        # grep issues a return code of 1 if no matches were found
-        # '|| [ $? -lt 2 ]' ensures a zero return code to local
-        if not confirm('Check status. Continue with delivery?'):
-            abort('Aborting at user request.')
-
-        with settings(warn_only=True):
-            result = local('python manage.py test --settings=ahernp.settings.local')
-        if result.failed and not confirm("Tests failed. Continue anyway?"):
-            abort("Aborting at user request.")
-
-        local("git add -p && git commit")
-        local("git push")
-
-
-@task
-@timer
-def deploy():
-    """Deploy django-ahernp into virtualenv on live server."""
-    with settings(warn_only=True):
-        if run("test -d %s" % LIVE_SITE_ROOT).failed:
-            run("git clone git@github.com:ahernp/DMCM.git %s" % LIVE_SITE_ROOT)
-        else:
-            with cd(LIVE_SITE_ROOT):
-                run("git pull")
-
-    with cd(LIVE_SITE_ROOT):
-        run('~/.virtualenvs/ahernp/bin/pip install -r ../requirements/production.txt')
-        run('~/.virtualenvs/ahernp/bin/python manage.py collectstatic --noinput --settings=ahernp.settings.production')
-        run('touch ahernp/uwsgi.ini')
+        local('python manage.py runserver')
 
 
 @task

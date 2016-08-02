@@ -9,6 +9,10 @@ secrets.json
 /ad/node_modules
 /ad/typings
 
+# Javascript
+*.js
+*.js.map
+
 # Python bytecode:
 *.py[co]
 

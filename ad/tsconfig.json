@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "outDir": "static",
+        "outDir": "site_assets",
         "target": "es5",
         "module": "commonjs",
         "preserveConstEnums": true,

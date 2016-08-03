@@ -10,7 +10,7 @@ secrets.json
 /ad/typings
 
 # Link to NPM directory
-#/ad/site_assets/node_modules
+/ad/site_assets/node_modules
 
 # Directory containing compiled Angular code
 /ad/angularjs
@@ -25,7 +25,7 @@ secrets.json
 _build
 
 # SQLite3 database files:
-#*.sqlite3
+*.sqlite3
 
 # Logs:
 *.log

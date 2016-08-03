@@ -34,9 +34,10 @@ def timer(func, *args, **kwargs):
 def setup(*args, **kwargs):
     """Setup development environment in current virtualenv."""
     if args and args[0] == 'init':
-        with lcd(DJANGO_ROOT):
-            local('rm -rf static')
-            local('rm db.sqlite3')
+        with settings(warn_only=True):
+            with lcd(DJANGO_ROOT):
+                local('rm -rf static')
+                local('rm db.sqlite3')
 
     with lcd(DJANGO_ROOT):
         local("git pull")
@@ -46,16 +47,13 @@ def setup(*args, **kwargs):
         local('pip install -r requirements/local.txt')
 
     # Build Angular 2 frontend
-    with settings(warn_only=True):
-        with lcd(join(DJANGO_ROOT, 'site_assets')):
-            local('rm node_modules')
-
     with lcd(DJANGO_ROOT):
         local('npm install')
         local('npm run tsc')
 
-    with lcd(join(DJANGO_ROOT, 'site_assets')):
-        local('ln -s ../node_modules node_modules')
+    with settings(warn_only=True):
+        with lcd(join(DJANGO_ROOT, 'site_assets')):
+            local('ln -s ../node_modules node_modules')
 
     # Reset database
     manage('migrate')

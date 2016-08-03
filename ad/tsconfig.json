@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "outDir": "site_assets",
+        "outDir": "angularjs",
         "target": "es5",
         "module": "commonjs",
         "preserveConstEnums": true,
@@ -11,6 +11,7 @@
         "noImplicitAny": false
     },
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "angularjs"
     ]
 }

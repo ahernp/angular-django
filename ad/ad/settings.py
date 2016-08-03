@@ -123,4 +123,5 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.normpath(os.path.join(BASE_DIR, 'site_assets')),
+    os.path.normpath(os.path.join(BASE_DIR, 'angularjs')),
 )

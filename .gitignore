@@ -2,18 +2,15 @@
 secrets.json
 
 # Top-level Media and Static directories
-/ad/media
-/ad/static
+/django/media
+/django/static
 
 # NPM and Typescript typings directories
-/ad/node_modules
-/ad/typings
-
-# Link to NPM directory
-/ad/site_assets/node_modules
+/angular/node_modules
+/angular/typings
 
 # Directory containing compiled Angular code
-/ad/angularjs
+/angular/dist
 
 # Python bytecode:
 *.py[co]

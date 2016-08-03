@@ -46,11 +46,6 @@ def setup(*args, **kwargs):
     with lcd(SITE_ROOT):
         local('pip install -r requirements/local.txt')
 
-    # Build Angular 2 frontend
-    with lcd(DJANGO_ROOT):
-        local('npm install')
-        local('npm run tsc')
-
     with settings(warn_only=True):
         with lcd(join(DJANGO_ROOT, 'site_assets')):
             local('ln -s ../node_modules node_modules')

@@ -12,6 +12,7 @@
     },
     "exclude": [
         "node_modules",
-        "angularjs"
+        "angularjs",
+        "site_assets"
     ]
 }

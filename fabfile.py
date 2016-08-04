@@ -10,8 +10,9 @@ from fabric.api import (env, local, lcd,
 from fabric.colors import magenta
 from fabric.contrib.files import exists
 
-DJANGO_ROOT = dirname(abspath(__file__))
-SITE_ROOT = dirname(DJANGO_ROOT)
+SITE_ROOT = dirname(abspath(__file__))
+DJANGO_ROOT = join(SITE_ROOT, 'django')
+ANGULAR_ROOT = join(SITE_ROOT, 'angular')
 PROJECT_NAME = 'ad'
 
 env.hosts = ['web']
@@ -38,22 +39,26 @@ def setup(*args, **kwargs):
             with lcd(DJANGO_ROOT):
                 local('rm -rf static')
                 local('rm db.sqlite3')
+            with lcd(ANGULAR_ROOT):
+                local('rm -rf node_modules')
 
     with lcd(DJANGO_ROOT):
         local("git pull")
 
-    # Install packages
+    # Install Python packages
     with lcd(SITE_ROOT):
         local('pip install -r requirements/local.txt')
 
-    with settings(warn_only=True):
-        with lcd(join(DJANGO_ROOT, 'site_assets')):
-            local('ln -s ../node_modules node_modules')
+    # Setup Angular
+    with lcd(ANGULAR_ROOT):
+        local('npm install')
+        local('npm run tsc')
 
     # Reset database
     manage('migrate')
     manage('loaddata %s/fixtures/live_snapshot.json' % PROJECT_NAME)
     manage('loaddata %s/fixtures/auth.json' % PROJECT_NAME)
+
 
 
 @task
@@ -73,6 +78,15 @@ def runserver():
     """Run Django runserver."""
     with settings(warn_only=True), lcd(DJANGO_ROOT):
         local('python manage.py runserver')
+
+
+@task
+@hosts('localhost')
+@timer
+def start():
+    """Run local Angular server."""
+    with settings(warn_only=True), lcd(ANGULAR_ROOT):
+        local('npm start')
 
 
 @task

@@ -4,7 +4,5 @@ import {Component} from '@angular/core';
     selector: 'ad-header',
     template: '<p>Header</p>'
 })
-
-
 export class HeaderComponent {
 }

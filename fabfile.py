@@ -15,6 +15,9 @@ DJANGO_ROOT = join(SITE_ROOT, 'django')
 ANGULAR_ROOT = join(SITE_ROOT, 'angular')
 PROJECT_NAME = 'ad'
 
+ANGULAR_RESOURCES = ['node_modules', 'dist', 'index.html',
+                     'systemjs.config.js', 'styles.css']
+
 env.hosts = ['web']
 
 
@@ -41,6 +44,10 @@ def setup(*args, **kwargs):
                 local('rm db.sqlite3')
             with lcd(ANGULAR_ROOT):
                 local('rm -rf node_modules')
+                local('rm -rf typings')
+                with lcd(join(DJANGO_ROOT, 'site_assets')):
+                    for resource in ANGULAR_RESOURCES:
+                        local('rm {0}'.format(resource))
 
     with lcd(DJANGO_ROOT):
         local("git pull")
@@ -53,6 +60,12 @@ def setup(*args, **kwargs):
     with lcd(ANGULAR_ROOT):
         local('npm install')
         local('npm run tsc')
+
+    # Link to Angular resources
+    with settings(warn_only=True):
+        with lcd(join(DJANGO_ROOT, 'site_assets')):
+            for resource in ANGULAR_RESOURCES:
+                local('ln -s ../../angular/{0} {0}'.format(resource))
 
     # Reset database
     manage('migrate')

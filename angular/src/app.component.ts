@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {ROUTER_DIRECTIVES} from '@angular/router';
+import {HTTP_PROVIDERS} from '@angular/http';
 
 import {PagesComponent} from './pages.component';
 import {DashboardComponent} from './dashboard.component';
@@ -22,7 +23,8 @@ import {PageService} from './page.service';
         DashboardComponent
     ],
     providers: [
-        PageService
+        PageService,
+        HTTP_PROVIDERS
     ]
 })
 export class AppComponent {

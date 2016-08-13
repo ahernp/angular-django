@@ -15,7 +15,7 @@ DJANGO_ROOT = join(SITE_ROOT, 'django')
 ANGULAR_ROOT = join(SITE_ROOT, 'angular')
 PROJECT_NAME = 'ad'
 
-ANGULAR_RESOURCES = ['node_modules', 'dist', 'index.html',
+ANGULAR_RESOURCES = ['node_modules', 'dist',
                      'systemjs.config.js', 'styles.css']
 
 env.hosts = ['web']

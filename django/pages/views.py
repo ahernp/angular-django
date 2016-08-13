@@ -20,4 +20,4 @@ def read_page(request, slug):
 
 class HomePageView(TemplateView):
 
-    template_name = 'base.html'
+    template_name = 'index.html'

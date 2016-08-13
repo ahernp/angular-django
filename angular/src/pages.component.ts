@@ -16,10 +16,13 @@ import {PageService} from './page.service';
     ],
     template: `
         <ad-header></ad-header>
-        <ad-content></ad-content>
-        <ad-footer [currentPage]="currentPage"></ad-footer>
+        <ad-content [page]="currentPage" [title]="contentTitle"></ad-content>
+        <ad-footer [page]="currentPage"></ad-footer>
+        
+        <h2>Current Page</h2>
+        <div *ngIf="currentPage">{{currentPage.content}}</div>
         <h2>Pages</h2>
-        <ul class="pages">
+        <ul>
             <li *ngFor="let page of pages">{{page.title}}</li>
         </ul>
         `,
@@ -29,20 +32,32 @@ import {PageService} from './page.service';
 
 export class PagesComponent implements OnInit {
     pages:Page[];
+    contentTitle: string = 'Title passed from Parent';
     currentPage: Page;
+    error: any;
+
+    private homePageUrl = '/pages/read/ahernp-com';
 
     constructor(private pageService:PageService) {
     }
 
     ngOnInit() {
         this.getPages();
+        this.getCurrentPage(this.homePageUrl);
     }
 
     getPages() {
-        this.pageService.getPages().then(pages => this.pages = pages);
+        this.pageService
+            .getPages()
+            .then(pages => this.pages = pages)
+            .catch(error => this.error = error);
+
     }
 
-    setCurrentPage(page:Page) {
-        this.currentPage = page;
+    getCurrentPage(url:string) {
+        this.pageService
+            .getPage(url)
+            .then(page => this.currentPage = page)
+            .catch(error => this.error = error);
     }
 }

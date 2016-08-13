@@ -44,6 +44,13 @@ export class PageService {
             .catch(this.handleError);
     }
 
+    getPage(url:string) {
+        return this.http.get(url)
+            .toPromise()
+            .then(response => response.json() as Page)
+            .catch(this.handleError);
+    }
+
     save(page:Page):Promise<Page> {
         if (page.id) {
             return this.put(page);

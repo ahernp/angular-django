@@ -9,11 +9,11 @@ import {PageSourceComponent} from './page-source.component'
     template: `
         <p>
             Footer
-            <page-source [page]="currentPage"></page-source>
+            <page-source [page]="page"></page-source>
         </p>
     `
 })
 export class FooterComponent {
     @Input()
-    currentPage: Page;
+    page: Page;
 }

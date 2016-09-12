@@ -20,7 +20,7 @@ import {PageService} from './page.service';
         <ad-footer [page]="currentPage"></ad-footer>
         
         <h2>Current Page</h2>
-        <div *ngIf="currentPage">{{currentPage.content}}</div>
+        <div *ngIf="currentPage">{{currentPage.title}}</div>
         <h2>Pages</h2>
         <ul>
             <li *ngFor="let page of pages">{{page.title}}</li>
@@ -47,6 +47,7 @@ export class PagesComponent implements OnInit {
     }
 
     getPages() {
+
         this.pageService
             .getPages()
             .then(pages => this.pages = pages)
@@ -57,7 +58,11 @@ export class PagesComponent implements OnInit {
     getCurrentPage(url:string) {
         this.pageService
             .getPage(url)
-            .then(page => this.currentPage = page)
+            .then(page => {
+                console.log('getCurrentPage');
+                console.log(page);
+                this.currentPage = page
+            })
             .catch(error => this.error = error);
     }
 }

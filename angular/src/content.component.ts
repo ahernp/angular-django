@@ -4,7 +4,12 @@ import { Page } from './page';
 
 @Component({
     selector: 'ad-content',
-    template: '<p>Content</p>'
+    template: `
+        <h3>Title</h3>
+        <p>{{title}}</p>
+        <h3>Page Title</h3>
+        <p>"{{page?.title}}"</p>
+    `
 })
 export class ContentComponent {
     @Input()

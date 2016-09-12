@@ -15,7 +15,12 @@ def list_pages(request):
 
 def read_page(request, slug):
     page = Page.objects.get(slug=slug)
-    data = serializers.serialize("json", [page])
+    data = json.dumps({'id': page.id,
+                       'title': page.title,
+                       'slug': page.slug,
+                       'parent': page.parent_id,
+                       'updated': page.updated.strftime('%Y-%m-%d %H:%M:%S'),
+                       'content': page.content})
     return HttpResponse(data, content_type='application/json')
 
 class HomePageView(TemplateView):

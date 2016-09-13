@@ -16,7 +16,7 @@ import {PageService} from './page.service';
     ],
     template: `
         <ad-header></ad-header>
-        <ad-content [page]="currentPage" [title]="contentTitle"></ad-content>
+        <ad-content [page]="currentPage"></ad-content>
         <ad-footer [page]="currentPage"></ad-footer>
         
         <h2>Current Page</h2>
@@ -32,7 +32,6 @@ import {PageService} from './page.service';
 
 export class PagesComponent implements OnInit {
     pages:Page[];
-    contentTitle: string = 'Title passed from Parent';
     currentPage: Page;
     error: any;
 
@@ -59,8 +58,6 @@ export class PagesComponent implements OnInit {
         this.pageService
             .getPage(url)
             .then(page => {
-                console.log('getCurrentPage');
-                console.log(page);
                 this.currentPage = page
             })
             .catch(error => this.error = error);

@@ -7,13 +7,12 @@ import {Page} from './page';
 
 @Injectable()
 export class PageService {
-    private pagesUrl = '/pages/list';
 
     constructor(private http:Http) {
     }
 
     getPages() {
-        return this.http.get(this.pagesUrl)
+        return this.http.get('/api/pages/list')
             .toPromise()
             .then(response => response.json() as Page[])
             .catch(this.handleError);
@@ -24,7 +23,7 @@ export class PageService {
         let headers = new Headers({'Content-Type': 'application/json'});
 
         return this.http
-            .post(this.pagesUrl, JSON.stringify(page), {headers: headers})
+            .post(`/api/pages/add/${page.slug}`, JSON.stringify(page), {headers: headers})
             .toPromise()
             .then(res => res.json().data)
             .catch(this.handleError);
@@ -35,7 +34,7 @@ export class PageService {
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
 
-        let url = `${this.pagesUrl}/${page.id}`;
+        let url = `/api/pages/update/${page.id}`;
 
         return this.http
             .put(url, JSON.stringify(page), {headers: headers})
@@ -44,8 +43,8 @@ export class PageService {
             .catch(this.handleError);
     }
 
-    getPage(url:string) {
-        return this.http.get(url)
+    getPage(slug:string) {
+        return this.http.get(`/api/pages/read/${slug}`)
             .toPromise()
             .then(response => response.json() as Page)
             .catch(this.handleError);

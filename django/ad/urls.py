@@ -20,7 +20,7 @@ from pages.views import HomePageView
 
 urlpatterns = [
     url(r'^$', HomePageView.as_view(), name='homepage'),
-    url(r'^pages/', include('pages.urls')),
+    url(r'^api/pages/', include('pages.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^.*$', HomePageView.as_view(), name='homepage_redirect'),
 ]

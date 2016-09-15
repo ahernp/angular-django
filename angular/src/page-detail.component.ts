@@ -16,7 +16,7 @@ import {PageService} from './page.service';
         FooterComponent
     ],
     template: `
-        <ad-header [page]="currentPage"></ad-header>
+        <ad-header *ngIf="currentPage" [page]="currentPage"></ad-header>
         <ad-content [page]="currentPage"></ad-content>
         <ad-footer [page]="currentPage"></ad-footer>
         `,
@@ -25,7 +25,6 @@ import {PageService} from './page.service';
 
 
 export class PageDetailComponent implements OnInit {
-    pages:Page[];
     currentPage: Page;
     error: any;
 
@@ -41,15 +40,6 @@ export class PageDetailComponent implements OnInit {
             let slug = params['slug'];
             this.getCurrentPage(slug);
         });
-    }
-
-    getPages() {
-
-        this.pageService
-            .getPages()
-            .then(pages => this.pages = pages)
-            .catch(error => this.error = error);
-
     }
 
     getCurrentPage(slug:string) {

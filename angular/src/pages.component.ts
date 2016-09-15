@@ -31,7 +31,7 @@ import {PageService} from './page.service';
 
 
 export class PagesComponent implements OnInit {
-    pages:Page[];
+    pages: Page[];
     currentPage: Page;
     error: any;
 

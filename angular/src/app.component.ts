@@ -10,14 +10,7 @@ import {PageService} from './page.service';
 
 @Component({
     selector: 'ad-app',
-    template: `
-        <h1>{{title}}</h1>
-            <nav>
-                <a [routerLink]="['/dashboard']" routerLinkActive="active">Dashboard</a>
-                <a [routerLink]="['/pages']">Pages</a>
-            </nav>
-        <router-outlet></router-outlet>
-        `,
+    template: `<router-outlet></router-outlet>`,
     directives: [ROUTER_DIRECTIVES],
     precompile: [
         PageDetailComponent,

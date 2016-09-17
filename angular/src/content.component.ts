@@ -1,11 +1,12 @@
 import {Component, Input} from '@angular/core';
 
-import { Page } from './page';
+import {Page} from './page';
 
 @Component({
     selector: 'ad-content',
     template: `
-        <h3>{{page?.title}}</h3>
+        {{page.content}}
+        <page-source [page]="page"></page-source>
     `
 })
 export class ContentComponent {

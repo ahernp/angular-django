@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
-import { Page } from './page';
+import {Page} from './page';
 
 @Component({
     selector: 'page-source',

@@ -7,10 +7,7 @@ import {PageSourceComponent} from './page-source.component'
     selector: 'ad-footer',
     directives: [PageSourceComponent],
     template: `
-        <p>
-            Footer
-            <page-source [page]="page"></page-source>
-        </p>
+        <p>Updated {{page.updated}}</p>
     `
 })
 export class FooterComponent {

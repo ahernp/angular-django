@@ -15,9 +15,9 @@ class Breadcrumb {
 @Component({
     selector: 'ad-header',
     template: `
-        <span *ngFor="let breadcrumb of breadcrumbs">
+        <p *ngFor="let breadcrumb of breadcrumbs">
             <a href="{{breadcrumb.url}}">{{breadcrumb.label}}</a> ›
-        </span>
+        </p>
 `
 })
 export class HeaderComponent {

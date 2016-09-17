@@ -17,8 +17,8 @@ import {PageService} from './page.service';
     ],
     template: `
         <ad-header *ngIf="currentPage" [page]="currentPage"></ad-header>
-        <ad-content [page]="currentPage"></ad-content>
-        <ad-footer [page]="currentPage"></ad-footer>
+        <ad-content *ngIf="currentPage" [page]="currentPage"></ad-content>
+        <ad-footer *ngIf="currentPage" [page]="currentPage"></ad-footer>
         `,
     providers: []
 })

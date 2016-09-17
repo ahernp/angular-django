@@ -27,33 +27,41 @@ button {
 	background-color: #046;
 	font-size: 1em;
 }
-#content {
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 2.5em;
-	margin-bottom: 3.5em;
-}
 #source_label {
 	color: #046;
 	text-decoration: underline;
 	cursor: pointer;
 }
-#header {
+ad-header {
+    display: block;
 	background-color: #fff;
 	position: fixed;
 	top: 0;
+	height: 32px;
 	width: 100%;
 	border-bottom: 1px #ccc solid;
-	margin 0;
+	margin: 0;
 	z-index: 9;
 }
-#footer {
+ad-header p {
+    margin: 8px;
+}
+ad-content {
+    display: block;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 35px;
+	margin-0bottom: 48px;
+}
+ad-footer {
+    display: block;
 	background-color: #fff;
 	position: fixed;
 	bottom: 0%;
+	height: 45px;
 	width: 100%;
 	border-top: 1px #ccc solid;
-	margin 0;
+	margin: 0;
 	z-index: 9;
 }

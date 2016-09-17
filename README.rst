@@ -1,4 +1,4 @@
 angular-django
 ==============
 
-Angular Frontend with Django Backend
+Angular 2 frontend with Django backend implemention of ahernp.com

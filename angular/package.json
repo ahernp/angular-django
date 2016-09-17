@@ -1,6 +1,8 @@
 {
   "name": "angular2-django",
-  "version": "1.0.0",
+  "version": "0.1.0",
+  "description": "An Angular 2 version of ahernp.com with a Django backend",
+  "repository": "https://github.com/ahernp/angular-django",
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "lite": "lite-server",
@@ -35,5 +37,6 @@
     "lite-server": "^2.2.0",
     "typescript": "^1.8.10",
     "typings": "^1.0.4"
-  }
+  },
+  "readme": "https://github.com/ahernp/angular-django/blob/master/README.rst"
 }

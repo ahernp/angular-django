@@ -8,7 +8,7 @@ from decorator import decorator
 from fabric.api import (env, local, lcd,
                         task, hosts, settings)
 from fabric.colors import magenta
-from fabric.contrib.files import exists
+from fabric.contrib.files import append, exists
 
 SITE_ROOT = dirname(abspath(__file__))
 DJANGO_ROOT = join(SITE_ROOT, 'django')
@@ -33,7 +33,16 @@ def timer(func, *args, **kwargs):
     return result
 
 
+def add_missing_typings():
+    with lcd(join(ANGULAR_ROOT, 'typings', 'globals')):
+        local('mkdir showdown')
+    with lcd(join(ANGULAR_ROOT, 'typings', 'globals', 'showdown')):
+        local('wget https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/showdown/showdown.d.ts')
+    append(join(ANGULAR_ROOT, 'typings', 'index.d.ts'), '/// <reference path=\"globals/showdown/showdown.d.ts\" />')
+
+
 @task
+@hosts('localhost')
 @timer
 def setup(*args, **kwargs):
     """Setup development environment in current virtualenv."""
@@ -59,6 +68,7 @@ def setup(*args, **kwargs):
     # Setup Angular
     with lcd(ANGULAR_ROOT):
         local('npm install')
+        add_missing_typings()
         local('npm run tsc')
 
     # Link to Angular resources

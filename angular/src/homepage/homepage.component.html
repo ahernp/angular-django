@@ -1,3 +1,73 @@
 <ad-header *ngIf="homepage" [page]="homepage"></ad-header>
-<ad-content *ngIf="homepage" [page]="homepage"></ad-content>
+
+<h1 id="personal-website-of-paul-ahern">Personal Website of Paul Ahern</h1>
+
+<p>
+    Here you will find a <a routerLink="/blog/" title="Blog">Blog</a>,
+    some Application <a routerLink="/applications/" title="Application Guides">Guides</a>,
+    a catalog for my <a routerLink="/library/" title="Library">Library</a>
+    and a <a routerLink="/gallery/" title="Gallery">Gallery</a> of photographs.
+</p>
+
+<p>See <a routerLink="/rooska/" title="Rooska">Rooska</a> for maps and photographs of my mountain.</p>
+
+<div class="column-left">
+    <ad-content *ngIf="homepage" [page]="homepage"></ad-content>
+</div>
+
+<div class="column-right">
+    <p><a routerLink="/applications/" title="Applications">Apps</a> ›
+    <a routerLink="/google-chrome/">Chrome</a>
+    <a routerLink="/firefox/">Firefox</a>
+    <a routerLink="/applications/#tiddlywiki">TiddlyWiki</a>
+    <a routerLink="/vim-editor/">Vim</a>
+    <br>
+    <a routerLink="/blog/">Blog</a> ›
+    <a routerLink="blog/archive/">Archive</a>
+    <a routerLink="/blog/feed/">RSS Feed</a>
+    <br>
+    <a routerLink="/gallery/" title="Gallery">Gallery</a> ›
+    <a routerLink="/gallery/#ovens">Ovens</a>
+    <a routerLink="/gallery/#london">London</a>
+    <a routerLink="/gallery/#wallpaper">Wallpaper</a>
+    <br>
+    <a routerLink="/library/" title="Library">Library</a> ›
+    <a routerLink="/books/">Books</a>
+    <a routerLink="/cds/">CDs</a>
+    <a routerLink="/dvds/">DVDs</a>
+    <a routerLink="/software/">Software</a>
+    <br>
+    Misc:
+    <a routerLink="/msc/" title="MSc">MSc</a>
+    <a routerLink="/twinings-tea/" title="Twinings Tea">Tea</a>
+    <br>
+    Personal:
+    <a routerLink="/cv/" title="CV">CV</a>
+    <a routerLink="/profile/" title="Personal Profile">Profile</a>
+    <a routerLink="/public-key/" title="Public Key">Public Key</a>
+    <br>
+    <a routerLink="/reference/" title="Technical Reference">Ref</a> ›
+    <a routerLink="/html-colours/" title="147 Named HTML Colours">Colours</a>
+    <a routerLink="/linux/">Linux</a>
+    <a routerLink="/mysql/">MySQL</a>
+    <a routerLink="/python/">Python</a>
+    <br>
+    <a routerLink="/rooska/" title="Rooska by Bantry Bay">Rooska</a> ›
+    <a routerLink="/planting/" title="Planting Trees">Planting</a>
+    <br>
+    This Site:
+    <a routerLink="/monitoring/dashboard">Dashboard</a>
+    <a routerLink="/site_map/">Site Map</a>
+    (<a routerLink="/dmcm/edit/">edit</a>)
+    <br>
+    <a routerLink="/tools/" title="Tools">Tools</a> ›
+    <a routerLink="/tools/javascript/#/cardgen">Cardgen</a>
+    <a routerLink="/tools/javascript/#/deduplicate">Deduplicate</a>
+    <a routerLink="/feedreader/">Feedreader</a>
+    <br>
+    <a routerLink="/timers">Timers</a></p>
+</div>
+
+<div style="clear:both"></div>
+
 <ad-footer *ngIf="homepage" [page]="homepage"></ad-footer>

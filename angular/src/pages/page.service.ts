@@ -5,6 +5,8 @@ import 'rxjs/add/operator/toPromise';
 
 import {Page} from './page';
 
+import appSettings = require('../app.settings');
+
 @Injectable()
 export class PageService {
 
@@ -23,7 +25,7 @@ export class PageService {
         let headers = new Headers({'Content-Type': 'application/json'});
 
         return this.http
-            .post(`/api/pages/add/${page.slug}`, JSON.stringify(page), {headers: headers})
+            .post(`${appSettings.apiEndpoint}/pages/add/${page.slug}`, JSON.stringify(page), {headers: headers})
             .toPromise()
             .then(res => res.json().data)
             .catch(this.handleError);
@@ -44,7 +46,7 @@ export class PageService {
     }
 
     getPage(slug:string) {
-        return this.http.get(`/api/pages/read/${slug}`)
+        return this.http.get(`${appSettings.apiEndpoint}/pages/read/${slug}`)
             .toPromise()
             .then(response => response.json() as Page)
             .catch(this.handleError);

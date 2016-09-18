@@ -28,8 +28,6 @@ export class PageDetailComponent implements OnInit {
     currentPage: Page;
     error: any;
 
-    private homePageSlug = 'ahernp-com';
-
     constructor(
         private pageService:PageService,
         private route: ActivatedRoute) {

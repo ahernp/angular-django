@@ -13,6 +13,7 @@ import {FooterComponent} from "./footer.component";
 import {HeaderComponent} from "./header.component";
 import {ContentComponent} from "./content.component";
 import {PageSourceComponent} from "./pages/page-source.component";
+import {BreadcrumbService} from "./breadcrumbs/breadcrumb.service";
 
 @NgModule({
     imports: [
@@ -33,6 +34,7 @@ import {PageSourceComponent} from "./pages/page-source.component";
     ],
     providers: [
         PageService,
+        BreadcrumbService,
     ],
     bootstrap: [AppComponent]
 })

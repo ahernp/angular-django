@@ -7,9 +7,9 @@ import {PageService} from './page.service';
 @Component({
     selector: 'ad-page',
     template: `
-        <ad-header *ngIf="currentPage" [page]="currentPage"></ad-header>
-        <ad-content *ngIf="currentPage" [page]="currentPage"></ad-content>
-        <ad-footer *ngIf="currentPage" [page]="currentPage"></ad-footer>
+        <ad-header id="header" *ngIf="currentPage" [page]="currentPage"></ad-header>
+        <ad-content id="content" *ngIf="currentPage" [page]="currentPage"></ad-content>
+        <ad-footer id="footer" *ngIf="currentPage" [page]="currentPage"></ad-footer>
         `,
     providers: []
 })

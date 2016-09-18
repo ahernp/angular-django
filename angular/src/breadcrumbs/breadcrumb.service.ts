@@ -11,7 +11,6 @@ export class BreadcrumbService {
     lastBreadcrumb: any = undefined;
 
     addBreadcrumb(newBreadcrumb: Breadcrumb) {
-        console.log(`url is ${newBreadcrumb.url}`);
         this.homepageFlag = newBreadcrumb.slug == appSettings.homepageSlug;
         if (this.homepageFlag) {
             this.breadcrumbs = [];

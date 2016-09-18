@@ -71,6 +71,10 @@ def setup(*args, **kwargs):
         add_missing_typings()
         local('npm run tsc')
 
+    # Copy templates from src to dist directories
+    with lcd(ANGULAR_ROOT):
+        local('rsync -am --include=\'*.html\' --include=\'*/\' --exclude=\'*\' src/ dist/')
+
     # Link to Angular resources
     with settings(warn_only=True):
         with lcd(join(DJANGO_ROOT, 'site_assets')):

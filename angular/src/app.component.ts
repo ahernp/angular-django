@@ -3,10 +3,10 @@ import {ROUTER_DIRECTIVES} from '@angular/router';
 import {HTTP_PROVIDERS} from '@angular/http';
 
 import {PageDetailComponent} from './pages/page-detail.component';
-import {PagesComponent} from './pages/pages.component';
-import {DashboardComponent} from './dashboard.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
 
 import {PageService} from './pages/page.service';
+import {HomepageComponent} from "./homepage/homepage.component";
 
 @Component({
     selector: 'ad-app',
@@ -14,7 +14,7 @@ import {PageService} from './pages/page.service';
     directives: [ROUTER_DIRECTIVES],
     precompile: [
         PageDetailComponent,
-        PagesComponent,
+        HomepageComponent,
         DashboardComponent
     ],
     providers: [

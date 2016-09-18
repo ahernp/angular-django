@@ -1,13 +1,13 @@
 import {provideRouter, RouterConfig}  from '@angular/router';
 
 import {PageDetailComponent} from './pages/page-detail.component';
-import {DashboardComponent} from './dashboard.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {HomepageComponent} from './homepage/homepage.component';
 
 const routes: RouterConfig = [
   {
     path: '',
-    redirectTo: '/page/ahernp-com',
-    pathMatch: 'full'
+    component: HomepageComponent
   },
   {
     path: 'page/:slug',

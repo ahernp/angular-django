@@ -58,7 +58,7 @@ ad-footer {
     display: block;
 	background-color: #fff;
 	position: fixed;
-	bottom: 0%;
+	bottom: 0;
 	height: 45px;
 	width: 100%;
 	border-top: 1px #ccc solid;

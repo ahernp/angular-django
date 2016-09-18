@@ -8,13 +8,21 @@ import appSettings = require('../app.settings');
 export class BreadcrumbService {
     homepageFlag: boolean = true;
     breadcrumbs: Breadcrumb[] = [];
+    lastBreadcrumb: any = undefined;
 
-    addBreadcrumb(breadcrumb: Breadcrumb) {
-        console.log(`url is ${breadcrumb.url}`);
-        this.homepageFlag = breadcrumb.slug == appSettings.homepageSlug;
-        if (this.homepageFlag)
+    addBreadcrumb(newBreadcrumb: Breadcrumb) {
+        console.log(`url is ${newBreadcrumb.url}`);
+        this.homepageFlag = newBreadcrumb.slug == appSettings.homepageSlug;
+        if (this.homepageFlag) {
             this.breadcrumbs = [];
+            this.lastBreadcrumb = undefined;
+        }
         else
-            this.breadcrumbs.push(breadcrumb);
+            if (this.lastBreadcrumb == undefined)
+                this.lastBreadcrumb = newBreadcrumb;
+            else {
+                this.breadcrumbs.push(this.lastBreadcrumb);
+                this.lastBreadcrumb = newBreadcrumb;
+            }
     }
 }

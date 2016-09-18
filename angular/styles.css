@@ -65,3 +65,11 @@ ad-footer {
 	margin: 0;
 	z-index: 9;
 }
+@media screen and (orientation:portrait) {
+    .column_left {width:100%}
+    .column_right {width:100%}
+}
+@media screen and (orientation:landscape) {
+    .column_left {width:53%; float:left}
+    .column_right {width:44%;float:left;padding-left:1em;}
+}

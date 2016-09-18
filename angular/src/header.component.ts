@@ -11,9 +11,8 @@ import {BreadcrumbService} from './breadcrumbs/breadcrumb.service';
         <p *ngIf="breadcrumbService.homepageFlag">ahernp.com</p>
         <p *ngIf="!breadcrumbService.homepageFlag">
             <a routerLink="/">ahernp.com</a>
-            <span *ngFor="let breadcrumb of breadcrumbService.breadcrumbs">
-                › <a routerLink="{{breadcrumb.url}}">{{breadcrumb.label}}</a>
-            </span>
+            <span *ngFor="let breadcrumb of breadcrumbService.breadcrumbs">› <a routerLink="{{breadcrumb.url}}">{{breadcrumb.label}}</a></span>
+            <span *ngIf="breadcrumbService.lastBreadcrumb">› {{breadcrumbService.lastBreadcrumb.label}}</span>
         </p>
 `
 })

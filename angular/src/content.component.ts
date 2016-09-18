@@ -8,7 +8,7 @@ import {Page} from './pages/page';
     selector: 'ad-content',
     template: `
         <div [innerHTML]="html_content"></div>
-        <page-source [page]="page"></page-source>
+        <!--<page-source [page]="page"></page-source>-->
     `
 })
 export class ContentComponent {

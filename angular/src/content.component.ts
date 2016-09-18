@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core';
 
 import * as showdown from 'showdown';
 
-import {Page} from './page';
+import {Page} from './pages/page';
 
 @Component({
     selector: 'ad-content',

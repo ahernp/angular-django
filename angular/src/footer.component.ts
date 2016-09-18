@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 
-import { Page } from './page';
-import {PageSourceComponent} from './page-source.component'
+import {Page} from './pages/page';
+import {PageSourceComponent} from './pages/page-source.component'
 
 @Component({
     selector: 'ad-footer',

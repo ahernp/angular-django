@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 
-import {HeaderComponent} from './header.component'
-import {ContentComponent} from './content.component'
-import {FooterComponent} from './footer.component'
+import {HeaderComponent} from '../header.component'
+import {ContentComponent} from '../content.component'
+import {FooterComponent} from '../footer.component'
 
 import {Page} from './page';
 import {PageService} from './page.service';

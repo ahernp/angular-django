@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 
-import {Page} from './page';
+import {Page} from './pages/page';
 
 class Breadcrumb {
     label: string;

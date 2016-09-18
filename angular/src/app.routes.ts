@@ -1,7 +1,7 @@
 import { provideRouter, RouterConfig }  from '@angular/router';
 
-import { PageDetailComponent } from './page-detail.component';
-import { PagesComponent } from './pages.component';
+import { PageDetailComponent } from './pages/page-detail.component';
+import { PagesComponent } from './pages/pages.component';
 import { DashboardComponent } from './dashboard.component';
 
 const routes: RouterConfig = [

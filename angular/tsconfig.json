@@ -3,6 +3,7 @@
         "outDir": "dist",
         "target": "es5",
         "module": "commonjs",
+        "moduleResolution": "node",
         "preserveConstEnums": true,
         "sourceMap": true,
         "emitDecoratorMetadata": true,

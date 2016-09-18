@@ -1,24 +1,23 @@
-import {provideRouter, RouterConfig}  from '@angular/router';
+import {ModuleWithProviders} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 
 import {PageDetailComponent} from './pages/page-detail.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {HomepageComponent} from './homepage/homepage.component';
 
-const routes: RouterConfig = [
-  {
-    path: '',
-    component: HomepageComponent
-  },
-  {
-    path: 'page/:slug',
-    component: PageDetailComponent
-  },
-  {
-    path: 'dashboard',
-    component: DashboardComponent
-  }
+const appRoutes: Routes = [
+    {
+        path: '',
+        component: HomepageComponent
+    },
+    {
+        path: 'page/:slug',
+        component: PageDetailComponent
+    },
+    {
+        path: 'dashboard',
+        component: DashboardComponent
+    }
 ];
 
-export const appRouterProviders = [
-  provideRouter(routes)
-];
+export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

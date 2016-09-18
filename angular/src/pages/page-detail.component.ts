@@ -10,11 +10,6 @@ import {PageService} from './page.service';
 
 @Component({
     selector: 'ad-page',
-    directives: [
-        HeaderComponent,
-        ContentComponent,
-        FooterComponent
-    ],
     template: `
         <ad-header *ngIf="currentPage" [page]="currentPage"></ad-header>
         <ad-content *ngIf="currentPage" [page]="currentPage"></ad-content>

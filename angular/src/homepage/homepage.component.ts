@@ -13,11 +13,6 @@ import appSettings = require('../app.settings');
 @Component({
     moduleId: module.id,
     selector: 'ad-page',
-    directives: [
-        HeaderComponent,
-        ContentComponent,
-        FooterComponent
-    ],
     templateUrl: './homepage.component.html',
     providers: []
 })

@@ -3,27 +3,20 @@ import {Http} from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import {Page} from './page';
+import {Dashboard} from './dashboard';
 
 import appSettings = require('../app.settings');
 
 @Injectable()
-export class PageService {
+export class DashboardService {
 
     constructor(private http:Http) {
     }
 
-    getPages() {
-        return this.http.get(`${appSettings.apiEndpoint}/pages/list`)
+    getDashboard() {
+        return this.http.get(`${appSettings.apiEndpoint}/site/dashboard/`)
             .toPromise()
-            .then(response => response.json() as Page[])
-            .catch(this.handleError);
-    }
-
-    getPage(slug:string) {
-        return this.http.get(`${appSettings.apiEndpoint}/pages/read/${slug}`)
-            .toPromise()
-            .then(response => response.json() as Page)
+            .then(response => response.json() as Dashboard)
             .catch(this.handleError);
     }
 

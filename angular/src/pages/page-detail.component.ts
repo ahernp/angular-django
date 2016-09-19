@@ -25,10 +25,7 @@ export class PageDetailComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.route.params.forEach((params: Params) => {
-            let slug = params['slug'];
-            this.getCurrentPage(slug);
-        });
+        this.getCurrentPage(this.route.snapshot.params['slug']);
     }
 
     getCurrentPage(slug:string) {

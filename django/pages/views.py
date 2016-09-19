@@ -1,6 +1,5 @@
 import json
 
-from django.core import serializers
 from django.http import HttpResponse
 from django.views.generic import TemplateView
 
@@ -22,6 +21,7 @@ def read_page(request, slug):
                        'updated': page.updated.strftime('%Y-%m-%d %H:%M:%S'),
                        'content': page.content})
     return HttpResponse(data, content_type='application/json')
+
 
 class HomePageView(TemplateView):
 

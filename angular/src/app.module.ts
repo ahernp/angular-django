@@ -14,6 +14,7 @@ import {HeaderComponent} from "./header.component";
 import {ContentComponent} from "./content.component";
 import {PageSourceComponent} from "./pages/page-source.component";
 import {BreadcrumbService} from "./breadcrumbs/breadcrumb.service";
+import {DashboardService} from "./dashboard/dashboard.service";
 
 @NgModule({
     imports: [
@@ -35,6 +36,7 @@ import {BreadcrumbService} from "./breadcrumbs/breadcrumb.service";
     providers: [
         PageService,
         BreadcrumbService,
+        DashboardService,
     ],
     bootstrap: [AppComponent]
 })

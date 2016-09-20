@@ -3,11 +3,13 @@ import {ActivatedRoute, Params} from '@angular/router'
 
 import {Page} from './page';
 import {PageService} from './page.service';
+import {Breadcrumb} from "../breadcrumbs/breadcrumb";
+import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
 
 @Component({
     selector: 'ad-page',
     template: `
-        <ad-header id="header" *ngIf="currentPage" [page]="currentPage"></ad-header>
+        <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
         <ad-content id="content" *ngIf="currentPage" [page]="currentPage"></ad-content>
         <ad-footer id="footer" *ngIf="currentPage" [page]="currentPage"></ad-footer>
         `,
@@ -17,10 +19,12 @@ import {PageService} from './page.service';
 
 export class PageDetailComponent implements OnInit {
     currentPage: Page;
+    breadcrumbs: Breadcrumb[];
     error: any;
 
     constructor(
         private pageService:PageService,
+        private breadcrumbService:BreadcrumbService,
         private route: ActivatedRoute) {
     }
 
@@ -32,7 +36,9 @@ export class PageDetailComponent implements OnInit {
         this.pageService
             .getPage(slug)
             .then(page => {
-                this.currentPage = page
+                this.currentPage = page;
+                var breadcrumb = new Breadcrumb(this.currentPage.title, `/page/${this.currentPage.slug}`);
+                this.breadcrumbs = this.breadcrumbService.addBreadcrumb(breadcrumb);
             })
             .catch(error => this.error = error);
     }

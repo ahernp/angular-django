@@ -3,11 +3,13 @@ import {ActivatedRoute} from '@angular/router'
 
 import {Dashboard} from './dashboard';
 import {DashboardService} from './dashboard.service';
+import {Breadcrumb} from "../breadcrumbs/breadcrumb";
+import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
 
 @Component({
     selector: 'ad-dashboard',
     template: `
-        <ad-header id="header" *ngIf="dashboard" [page]="dashboard"></ad-header>
+        <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
         <div *ngIf="dashboard" id="content">
                 <h1>Status <span style="font-size: small;">at {{dashboard.time_checked}}</span></h1>
                 <div style="width: 47%; float: left; padding-bottom: 1em; word-wrap: break-word;">
@@ -39,10 +41,12 @@ import {DashboardService} from './dashboard.service';
 
 export class DashboardComponent implements OnInit {
     dashboard: Dashboard;
+    breadcrumbs: Breadcrumb[];
     error: any;
 
     constructor(
         private dashboardService:DashboardService,
+        private breadcrumbService:BreadcrumbService,
         private route: ActivatedRoute) {
     }
 
@@ -55,6 +59,8 @@ export class DashboardComponent implements OnInit {
             .getDashboard()
             .then(dashboard => {
                 this.dashboard = dashboard;
+                var breadcrumb = new Breadcrumb('Dashboard', '/dashboard');
+                this.breadcrumbs = this.breadcrumbService.addBreadcrumb(breadcrumb);
             })
             .catch(error => this.error = error);
     }

@@ -6,22 +6,16 @@ import appSettings = require('../app.settings');
 
 @Injectable()
 export class BreadcrumbService {
-    homepageFlag: boolean = true;
-    breadcrumbs: Breadcrumb[] = [];
-    lastBreadcrumb: any = undefined;
+    breadcrumbs: Breadcrumb[] = [new Breadcrumb('ahernp.com', '/')];
 
-    addBreadcrumb(newBreadcrumb: Breadcrumb) {
-        this.homepageFlag = newBreadcrumb.slug == appSettings.homepageSlug;
-        if (this.homepageFlag) {
-            this.breadcrumbs = [];
-            this.lastBreadcrumb = undefined;
-        }
-        else
-            if (this.lastBreadcrumb == undefined)
-                this.lastBreadcrumb = newBreadcrumb;
-            else {
-                this.breadcrumbs.push(this.lastBreadcrumb);
-                this.lastBreadcrumb = newBreadcrumb;
+    addBreadcrumb(newBreadcrumb: Breadcrumb): Breadcrumb[] {
+        this.breadcrumbs.push(newBreadcrumb);
+        for (var i = 0; i < this.breadcrumbs.length; i++) {
+            if (this.breadcrumbs[i].label == newBreadcrumb.label) {
+                this.breadcrumbs = this.breadcrumbs.slice(0, i+1);
+                break
             }
+        }
+        return this.breadcrumbs;
     }
 }

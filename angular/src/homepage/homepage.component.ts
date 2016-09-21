@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router'
 
 import {Page} from '../pages/page';
 import {PageService} from '../pages/page.service';
@@ -23,8 +22,7 @@ export class HomepageComponent implements OnInit {
 
     constructor(
         private pageService:PageService,
-        private breadcrumbService:BreadcrumbService,
-        private route: ActivatedRoute) {
+        private breadcrumbService:BreadcrumbService) {
     }
 
     ngOnInit(): void {

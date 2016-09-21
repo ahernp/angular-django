@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router'
 
 import {Dashboard} from './dashboard';
 import {DashboardService} from './dashboard.service';
@@ -46,8 +45,7 @@ export class DashboardComponent implements OnInit {
 
     constructor(
         private dashboardService:DashboardService,
-        private breadcrumbService:BreadcrumbService,
-        private route: ActivatedRoute) {
+        private breadcrumbService:BreadcrumbService) {
     }
 
     ngOnInit(): void {

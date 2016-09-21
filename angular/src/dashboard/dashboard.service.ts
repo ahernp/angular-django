@@ -14,9 +14,9 @@ export class DashboardService {
     }
 
     getDashboard() {
-        return this.http.get(`${appSettings.apiEndpoint}/dashboard`)
+        return this.http.get(`${appSettings.apiEndpoint}/dashboard/`)
             .toPromise()
-            .then(response => response.json() as Dashboard)
+            .then(response => {debugger; return response.json() as Dashboard})
             .catch(this.handleError);
     }
 

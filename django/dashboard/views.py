@@ -1,6 +1,7 @@
 from __future__ import absolute_import
 
 import json
+import os
 from subprocess import Popen, PIPE
 
 from django.conf import settings
@@ -42,6 +43,12 @@ def dashboard(request):
     cwd = settings.BASE_DIR
     for name, shell_command in SHELL_COMMANDS:
         data[name] = run_shell_command(shell_command, cwd)
+
+    npm_packages = json.loads(run_shell_command('npm list --depth=0 --json',
+                                                os.path.join(os.path.dirname(cwd), 'angular')))
+    data['npm_packages'] = ' '.join(['%s==%s' % (key, value['version'])
+                                    for key, value in npm_packages['dependencies'].items()])
+
 
     # Settings Flags
     data['settings_flags'] = []

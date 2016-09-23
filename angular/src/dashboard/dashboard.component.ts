@@ -20,6 +20,7 @@ import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
                     </span>
                     <h2>Version Information</h2>
                     <p *ngIf="dashboard.python_packages"><strong>Python Packages:</strong> {{dashboard.python_packages}}</p>
+                    <p *ngIf="dashboard.npm_packages"><strong>NPM Packages:</strong> {{dashboard.npm_packages}}</p>
                     <div *ngIf="dashboard.gitversion">
                         <strong>Most Recent Commit:</strong><br>
                         <div style="padding-left:1em;">

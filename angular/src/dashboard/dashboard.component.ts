@@ -4,13 +4,17 @@ import {Dashboard} from './dashboard';
 import {DashboardService} from './dashboard.service';
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
+import {rootTitle} from "../app.settings";
+
+export const dashboardTitle: string = 'Dashboard';
+export const dashboardUrl: string = '/dashboard';
 
 @Component({
     selector: 'ad-dashboard',
     template: `
         <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
         <div *ngIf="dashboard" id="content">
-                <h1>Status <span style="font-size: small;">at {{dashboard.time_checked}}</span></h1>
+                <h1>Status <span style="font-size: small;">at {{dashboard.timeChecked}}</span></h1>
                 <div style="width: 47%; float: left; padding-bottom: 1em; word-wrap: break-word;">
                     <p *ngIf="dashboard.hostname"><strong>Hostname:</strong> {{dashboard.hostname}}</p>
                     <h2>Settings Flags</h2>
@@ -38,7 +42,6 @@ import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
     providers: []
 })
 
-
 export class DashboardComponent implements OnInit {
     dashboard: Dashboard;
     breadcrumbs: Breadcrumb[];
@@ -58,8 +61,8 @@ export class DashboardComponent implements OnInit {
             .getDashboard()
             .then(dashboard => {
                 this.dashboard = dashboard;
-                var breadcrumb = new Breadcrumb('Dashboard', '/dashboard');
-                this.breadcrumbs = this.breadcrumbService.addBreadcrumb(breadcrumb);
+                var dashboardBreadcrumb = new Breadcrumb(dashboardTitle, dashboardUrl, dashboard.timeChecked, rootTitle);
+                this.breadcrumbs = this.breadcrumbService.addBreadcrumb(dashboardBreadcrumb);
             })
             .catch(error => this.error = error);
     }

@@ -5,6 +5,7 @@ export class SettingsFlag {
 }
 
 export class Dashboard {
+    timeChecked: string;
     hostname: string;
     gitversion: number;
     python_packages: string;

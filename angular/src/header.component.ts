@@ -8,8 +8,8 @@ import {Breadcrumb} from './breadcrumbs/breadcrumb';
         <p>
             <span *ngFor="let breadcrumb of breadcrumbs; let first = first; let last = last">
                 <span *ngIf="!first">› </span>
-                <span *ngIf="!last"><a routerLink="{{breadcrumb.url}}">{{breadcrumb.label}}</a></span>
-                <span *ngIf="last">{{breadcrumb.label}}</span>
+                <span *ngIf="!last"><a routerLink="{{breadcrumb.url}}">{{breadcrumb.title}}</a></span>
+                <span *ngIf="last">{{breadcrumb.title}}</span>
             </span>
         </p>
 `

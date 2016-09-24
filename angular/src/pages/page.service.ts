@@ -6,6 +6,7 @@ import 'rxjs/add/operator/toPromise';
 import {Page} from './page';
 
 import appSettings = require('../app.settings');
+import {Breadcrumb} from "../breadcrumbs/breadcrumb";
 
 @Injectable()
 export class PageService {
@@ -13,10 +14,10 @@ export class PageService {
     constructor(private http:Http) {
     }
 
-    getPages() {
+    getBreadcrumbs() {
         return this.http.get(`${appSettings.apiEndpoint}/pages/list`)
             .toPromise()
-            .then(response => response.json() as Page[])
+            .then(response => response.json() as Breadcrumb[])
             .catch(this.handleError);
     }
 

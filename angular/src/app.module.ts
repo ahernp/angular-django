@@ -15,6 +15,7 @@ import {ContentComponent} from "./content.component";
 import {PageSourceComponent} from "./pages/page-source.component";
 import {BreadcrumbService} from "./breadcrumbs/breadcrumb.service";
 import {DashboardService} from "./dashboard/dashboard.service";
+import {SitemapComponent} from "./sitemap/sitemap.component";
 
 @NgModule({
     imports: [
@@ -32,6 +33,7 @@ import {DashboardService} from "./dashboard/dashboard.service";
         HomepageComponent,
         PageDetailComponent,
         PageSourceComponent,
+        SitemapComponent,
     ],
     providers: [
         PageService,

@@ -1,9 +1,13 @@
 export class Breadcrumb {
-    label: string;
+    title: string;
     url: string;
+    updated: string;
+    parentName: string;
 
-    constructor(label:string, url:string) {
-        this.label = label;
+    constructor(title:string, url:string, updated: string, parentName: string) {
+        this.title = title;
         this.url = url;
+        this.updated = updated;
+        this.parentName = parentName;
     }
 }

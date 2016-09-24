@@ -1,2 +1,2 @@
 export const apiEndpoint: string = '/api';
-export const homepageSlug: string = 'ahernp-com';
+export const rootTitle: string = 'ahernp.com';

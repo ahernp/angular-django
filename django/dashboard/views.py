@@ -60,5 +60,5 @@ def dashboard(request):
             'actual': actual_setting
         })
 
-    data['time_checked'] = timezone.now().strftime('%Y-%m-%d %H:%M:%S')
+    data['timeChecked'] = timezone.now().strftime('%Y-%m-%d %H:%M:%S')
     return HttpResponse(json.dumps(data), content_type='application/json')

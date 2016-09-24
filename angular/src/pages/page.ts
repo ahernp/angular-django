@@ -1,8 +1,8 @@
 export class Page {
     id: number;
     title: string;
-    slug: string;
-    parent: number;
+    url: string;
+    parentName: string;
     updated: string;
     content: string;
 }

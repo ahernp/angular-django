@@ -6,6 +6,8 @@ import 'rxjs/add/operator/toPromise';
 import {Dashboard} from './dashboard';
 
 import appSettings = require('../app.settings');
+import {dashboardUrl} from "./dashboard.component";
+
 
 @Injectable()
 export class DashboardService {
@@ -14,9 +16,9 @@ export class DashboardService {
     }
 
     getDashboard() {
-        return this.http.get(`${appSettings.apiEndpoint}/dashboard/`)
+        return this.http.get(`${appSettings.apiEndpoint}${dashboardUrl}/`)
             .toPromise()
-            .then(response => {debugger; return response.json() as Dashboard})
+            .then(response => response.json() as Dashboard)
             .catch(this.handleError);
     }
 

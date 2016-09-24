@@ -3,15 +3,16 @@ import {Injectable} from '@angular/core';
 import {Breadcrumb} from './breadcrumb';
 
 import appSettings = require('../app.settings');
+import {rootTitle} from "../app.settings";
 
 @Injectable()
 export class BreadcrumbService {
-    breadcrumbs: Breadcrumb[] = [new Breadcrumb('ahernp.com', '/')];
+    breadcrumbs: Breadcrumb[] = [new Breadcrumb(rootTitle, '/', '', '')];
 
     addBreadcrumb(newBreadcrumb: Breadcrumb): Breadcrumb[] {
         this.breadcrumbs.push(newBreadcrumb);
         for (var i = 0; i < this.breadcrumbs.length; i++) {
-            if (this.breadcrumbs[i].label == newBreadcrumb.label) {
+            if (this.breadcrumbs[i].url == newBreadcrumb.url) {
                 this.breadcrumbs = this.breadcrumbs.slice(0, i+1);
                 break
             }

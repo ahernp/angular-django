@@ -37,7 +37,11 @@ export class PageDetailComponent implements OnInit {
             .getPage(slug)
             .then(page => {
                 this.currentPage = page;
-                var breadcrumb = new Breadcrumb(this.currentPage.title, `/page/${this.currentPage.slug}`);
+                var breadcrumb = new Breadcrumb(
+                    this.currentPage.title,
+                    this.currentPage.url,
+                    this.currentPage.updated,
+                    this.currentPage.parentName);
                 this.breadcrumbs = this.breadcrumbService.addBreadcrumb(breadcrumb);
             })
             .catch(error => this.error = error);

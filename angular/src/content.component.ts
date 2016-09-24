@@ -14,6 +14,7 @@ import {Page} from './pages/page';
 export class ContentComponent {
     @Input()
     page: Page;
+
     html_content: string;
 
     ngOnInit() {

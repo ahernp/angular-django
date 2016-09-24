@@ -4,6 +4,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {PageDetailComponent} from './pages/page-detail.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {HomepageComponent} from './homepage/homepage.component';
+import {SitemapComponent} from "./sitemap/sitemap.component";
 
 const appRoutes: Routes = [
     {
@@ -17,6 +18,10 @@ const appRoutes: Routes = [
     {
         path: 'dashboard',
         component: DashboardComponent
+    },
+    {
+        path: 'sitemap',
+        component: SitemapComponent
     },
     {
         path: '**',

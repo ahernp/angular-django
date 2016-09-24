@@ -58,9 +58,16 @@ export class SitemapComponent implements OnInit {
     }
 
     addClientsideEntries() {
-        var dashboardBreadcrumb = new Breadcrumb(dashboardTitle, dashboardUrl, this.now, rootTitle);
+        var dashboardBreadcrumb = new Breadcrumb({
+            title: dashboardTitle,
+            url: dashboardUrl,
+            updated: this.now,
+            parentName: rootTitle});
         this.sitemap.push(dashboardBreadcrumb);
-        var homepageBreadcrumb = new Breadcrumb(homepageTitle, homepageUrl, '', rootTitle);
+        var homepageBreadcrumb = new Breadcrumb({
+            title: homepageTitle,
+            url: homepageUrl,
+            parentName: rootTitle});
         this.sitemap.push(homepageBreadcrumb);
     }
 
@@ -70,7 +77,11 @@ export class SitemapComponent implements OnInit {
             .then(pageBreadcrumbs => {
                 this.sitemap = pageBreadcrumbs;
                 this.addClientsideEntries();
-                var breadcrumb = new Breadcrumb(sitemapTitle, sitemapUrl, this.now, rootTitle);
+                var breadcrumb = new Breadcrumb({
+                    title: sitemapTitle,
+                    url: sitemapUrl,
+                    updated: this.now,
+                    parentName: rootTitle});
                 this.breadcrumbs = this.breadcrumbService.addBreadcrumb(breadcrumb);
             })
             .catch(error => this.error = error);

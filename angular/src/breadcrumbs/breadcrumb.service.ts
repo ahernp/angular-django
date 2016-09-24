@@ -7,7 +7,7 @@ import {rootTitle} from "../app.settings";
 
 @Injectable()
 export class BreadcrumbService {
-    breadcrumbs: Breadcrumb[] = [new Breadcrumb(rootTitle, '/', '', '')];
+    breadcrumbs: Breadcrumb[] = [new Breadcrumb({title: rootTitle, url: '/'})];
 
     addBreadcrumb(newBreadcrumb: Breadcrumb): Breadcrumb[] {
         this.breadcrumbs.push(newBreadcrumb);

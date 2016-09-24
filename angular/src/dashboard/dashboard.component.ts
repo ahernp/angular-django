@@ -61,7 +61,11 @@ export class DashboardComponent implements OnInit {
             .getDashboard()
             .then(dashboard => {
                 this.dashboard = dashboard;
-                var dashboardBreadcrumb = new Breadcrumb(dashboardTitle, dashboardUrl, dashboard.timeChecked, rootTitle);
+                var dashboardBreadcrumb = new Breadcrumb({
+                    title: dashboardTitle,
+                    url: dashboardUrl,
+                    updated: dashboard.timeChecked,
+                    parentName: rootTitle});
                 this.breadcrumbs = this.breadcrumbService.addBreadcrumb(dashboardBreadcrumb);
             })
             .catch(error => this.error = error);

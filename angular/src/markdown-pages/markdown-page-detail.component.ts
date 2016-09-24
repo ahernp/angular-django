@@ -44,11 +44,11 @@ export class MarkdownPageDetailComponent implements OnInit {
             .then(page => {
                 this.page = page;
 
-                var breadcrumb = new Breadcrumb(
-                    this.page.title,
-                    this.page.url,
-                    this.page.updated,
-                    this.page.parentName);
+                var breadcrumb = new Breadcrumb({
+                    title: this.page.title,
+                    url: this.page.url,
+                    updated: this.page.updated,
+                    parentName: this.page.parentName});
                 this.breadcrumbs = this.breadcrumbService.addBreadcrumb(breadcrumb);
 
                 var converter = new showdown.Converter({'tables': true});

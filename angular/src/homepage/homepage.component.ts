@@ -40,7 +40,11 @@ export class HomepageComponent implements OnInit {
             .getPage(homepageSlug)
             .then(page => {
                 this.homepage = page;
-                var breadcrumb = new Breadcrumb(homepageTitle, homepageUrl, page.updated, rootTitle);
+                var breadcrumb = new Breadcrumb({
+                    title: homepageTitle,
+                    url: homepageUrl,
+                    updated: page.updated,
+                    parentName: rootTitle});
                 this.breadcrumbs = this.breadcrumbService.addBreadcrumb(breadcrumb);
             })
             .catch(error => this.error = error);

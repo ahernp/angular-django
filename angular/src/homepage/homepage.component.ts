@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
-import {Page} from '../pages/page';
-import {PageService} from '../pages/page.service';
+import {MarkdownPage} from '../markdown-pages/markdown-page';
+import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
 
 import appSettings = require('../app.settings');
 import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
@@ -22,12 +22,12 @@ const homepageSlug: string = 'ahernp-com';
 
 
 export class HomepageComponent implements OnInit {
-    homepage: Page;
+    homepage: MarkdownPage;
     breadcrumbs: Breadcrumb[];
     error: any;
 
     constructor(
-        private pageService:PageService,
+        private markdownPageService:MarkdownPageService,
         private breadcrumbService:BreadcrumbService) {
     }
 
@@ -36,7 +36,7 @@ export class HomepageComponent implements OnInit {
     }
 
     getHomepage() {
-        this.pageService
+        this.markdownPageService
             .getPage(homepageSlug)
             .then(page => {
                 this.homepage = page;

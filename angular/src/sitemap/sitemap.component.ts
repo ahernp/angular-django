@@ -1,12 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 
-import {PageService} from '../pages/page.service';
+import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
 
 import {dashboardTitle, dashboardUrl} from "../dashboard/dashboard.component";
 import {homepageTitle, homepageUrl} from "../homepage/homepage.component";
-import {rootTitle} from "../app.settings";
+import {rootTitle, toDateTimeString} from "../app.settings";
 
 export const sitemapTitle: string = 'Site Map';
 export const sitemapUrl: string = '/sitemap';
@@ -15,23 +15,25 @@ export const sitemapUrl: string = '/sitemap';
     selector: 'ad-sitemap',
     template: `
         <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
-        <h1>{{title}}</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Parent</th>
-                    <th>Updated</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let row of sitemap">
-                    <td><a routerLink="{{row.url}}">{{row.title}}</a></td>
-                    <td>{{row.parentName}}</td>
-                    <td>{{row.updated}}</td>
-                </tr>
-            </tbody>
-        </table>
+        <div id="content">
+            <h1>{{title}}</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Parent</th>
+                        <th>Updated</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of sitemap">
+                        <td><a routerLink="{{row.url}}">{{row.title}}</a></td>
+                        <td>{{row.parentName}}</td>
+                        <td>{{row.updated}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <ad-footer id="footer" *ngIf="sitemap" [page]="sitemap"></ad-footer>
         `,
     providers: []
@@ -40,36 +42,36 @@ export const sitemapUrl: string = '/sitemap';
 
 export class SitemapComponent implements OnInit {
     title: string = sitemapTitle;
+    now: string;
     breadcrumbs: Breadcrumb[];
     sitemap: Breadcrumb[];
     error: any;
 
     constructor(
-        private pageService:PageService,
+        private markdownPageService:MarkdownPageService,
         private breadcrumbService:BreadcrumbService) {
     }
 
     ngOnInit(): void {
+        this.now = toDateTimeString(new Date());
         this.getAllBreadcrumbs();
     }
 
-    addClientsideBreadcrumbs() {
-        var dashboardBreadcrumb = new Breadcrumb(dashboardTitle, dashboardUrl, '', rootTitle);
+    addClientsideEntries() {
+        var dashboardBreadcrumb = new Breadcrumb(dashboardTitle, dashboardUrl, this.now, rootTitle);
         this.sitemap.push(dashboardBreadcrumb);
         var homepageBreadcrumb = new Breadcrumb(homepageTitle, homepageUrl, '', rootTitle);
         this.sitemap.push(homepageBreadcrumb);
     }
 
     getAllBreadcrumbs() {
-        this.pageService
+        this.markdownPageService
             .getBreadcrumbs()
             .then(pageBreadcrumbs => {
                 this.sitemap = pageBreadcrumbs;
-                this.addClientsideBreadcrumbs()
-                var now = new Date().toLocaleDateString();
-                var breadcrumb = new Breadcrumb(sitemapTitle, sitemapUrl, now, rootTitle);
+                this.addClientsideEntries();
+                var breadcrumb = new Breadcrumb(sitemapTitle, sitemapUrl, this.now, rootTitle);
                 this.breadcrumbs = this.breadcrumbService.addBreadcrumb(breadcrumb);
-                this.addClientsideBreadcrumbs()
             })
             .catch(error => this.error = error);
     }

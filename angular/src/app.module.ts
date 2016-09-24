@@ -6,13 +6,13 @@ import {HttpModule} from '@angular/http';
 import {AppComponent} from './app.component';
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {HomepageComponent} from "./homepage/homepage.component";
-import {PageDetailComponent} from "./pages/page-detail.component";
-import {PageService} from "./pages/page.service";
+import {MarkdownPageDetailComponent} from "./markdown-pages/markdown-page-detail.component";
+import {MarkdownPageService} from "./markdown-pages/markdown-page.service";
 import {routing} from "./app.routes";
 import {FooterComponent} from "./footer.component";
 import {HeaderComponent} from "./header.component";
-import {ContentComponent} from "./content.component";
-import {PageSourceComponent} from "./pages/page-source.component";
+import {MarkdownContentComponent} from "./markdown-content.component";
+import {MarkdownPageSourceComponent} from "./markdown-pages/markdown-page-source.component";
 import {BreadcrumbService} from "./breadcrumbs/breadcrumb.service";
 import {DashboardService} from "./dashboard/dashboard.service";
 import {SitemapComponent} from "./sitemap/sitemap.component";
@@ -26,17 +26,17 @@ import {SitemapComponent} from "./sitemap/sitemap.component";
     ],
     declarations: [
         AppComponent,
-        ContentComponent,
+        MarkdownContentComponent,
         DashboardComponent,
         FooterComponent,
         HeaderComponent,
         HomepageComponent,
-        PageDetailComponent,
-        PageSourceComponent,
+        MarkdownPageDetailComponent,
+        MarkdownPageSourceComponent,
         SitemapComponent,
     ],
     providers: [
-        PageService,
+        MarkdownPageService,
         BreadcrumbService,
         DashboardService,
     ],

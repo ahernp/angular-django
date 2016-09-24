@@ -1,4 +1,4 @@
-export class Page {
+export class MarkdownPage {
     id: number;
     title: string;
     url: string;

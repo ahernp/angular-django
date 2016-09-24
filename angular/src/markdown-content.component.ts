@@ -2,18 +2,18 @@ import {Component, Input} from '@angular/core';
 
 import * as showdown from 'showdown';
 
-import {Page} from './pages/page';
+import {MarkdownPage} from './markdown-pages/markdown-page';
 
 @Component({
-    selector: 'ad-content',
+    selector: 'ad-markdown-content',
     template: `
         <div [innerHTML]="html_content"></div>
         <!--<page-source [page]="page"></page-source>-->
     `
 })
-export class ContentComponent {
+export class MarkdownContentComponent {
     @Input()
-    page: Page;
+    page: MarkdownPage;
 
     html_content: string;
 

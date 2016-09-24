@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 
-import {Page} from './pages/page';
+import {MarkdownPage} from './markdown-pages/markdown-page';
 
 @Component({
     selector: 'ad-footer',
@@ -10,5 +10,5 @@ import {Page} from './pages/page';
 })
 export class FooterComponent {
     @Input()
-    page: Page;
+    page: MarkdownPage;
 }

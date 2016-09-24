@@ -1,8 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router'
 
-import {Page} from './page';
-import {PageService} from './page.service';
+import * as showdown from 'showdown';
+
+import {MarkdownPage} from './markdown-page';
+import {MarkdownPageService} from './markdown-page.service';
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
 
@@ -10,20 +12,24 @@ import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
     selector: 'ad-page',
     template: `
         <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
-        <ad-content id="content" *ngIf="currentPage" [page]="currentPage"></ad-content>
-        <ad-footer id="footer" *ngIf="currentPage" [page]="currentPage"></ad-footer>
+        <div id="content">
+            <div [innerHTML]="html_content"></div>
+            <!--<page-source [page]="page"></page-source>-->
+        </div>
+        <ad-footer id="footer" *ngIf="page" [page]="page"></ad-footer>
         `,
     providers: []
 })
 
 
-export class PageDetailComponent implements OnInit {
-    currentPage: Page;
+export class MarkdownPageDetailComponent implements OnInit {
+    page: MarkdownPage;
+    html_content: string;
     breadcrumbs: Breadcrumb[];
     error: any;
 
     constructor(
-        private pageService:PageService,
+        private markdownPageService:MarkdownPageService,
         private breadcrumbService:BreadcrumbService,
         private route: ActivatedRoute) {
     }
@@ -33,16 +39,20 @@ export class PageDetailComponent implements OnInit {
     }
 
     getCurrentPage(slug:string) {
-        this.pageService
+        this.markdownPageService
             .getPage(slug)
             .then(page => {
-                this.currentPage = page;
+                this.page = page;
+
                 var breadcrumb = new Breadcrumb(
-                    this.currentPage.title,
-                    this.currentPage.url,
-                    this.currentPage.updated,
-                    this.currentPage.parentName);
+                    this.page.title,
+                    this.page.url,
+                    this.page.updated,
+                    this.page.parentName);
                 this.breadcrumbs = this.breadcrumbService.addBreadcrumb(breadcrumb);
+
+                var converter = new showdown.Converter({'tables': true});
+                this.html_content = converter.makeHtml(this.page.content);
             })
             .catch(error => this.error = error);
     }

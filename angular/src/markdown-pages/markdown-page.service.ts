@@ -3,13 +3,13 @@ import {Http} from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import {Page} from './page';
+import {MarkdownPage} from './markdown-page';
 
 import appSettings = require('../app.settings');
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
 
 @Injectable()
-export class PageService {
+export class MarkdownPageService {
 
     constructor(private http:Http) {
     }
@@ -24,7 +24,7 @@ export class PageService {
     getPage(slug:string) {
         return this.http.get(`${appSettings.apiEndpoint}/pages/read/${slug}`)
             .toPromise()
-            .then(response => response.json() as Page)
+            .then(response => response.json() as MarkdownPage)
             .catch(this.handleError);
     }
 

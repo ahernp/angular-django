@@ -1,7 +1,7 @@
 import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
-import {PageDetailComponent} from './pages/page-detail.component';
+import {MarkdownPageDetailComponent} from './markdown-pages/markdown-page-detail.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {HomepageComponent} from './homepage/homepage.component';
 import {SitemapComponent} from "./sitemap/sitemap.component";
@@ -13,7 +13,7 @@ const appRoutes: Routes = [
     },
     {
         path: 'page/:slug',
-        component: PageDetailComponent
+        component: MarkdownPageDetailComponent
     },
     {
         path: 'dashboard',

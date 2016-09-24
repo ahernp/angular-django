@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 
-import {Page} from './page';
+import {MarkdownPage} from './markdown-page';
 
 @Component({
     selector: 'page-source',
@@ -10,7 +10,7 @@ import {Page} from './page';
         </div>
     `
 })
-export class PageSourceComponent {
+export class MarkdownPageSourceComponent {
     @Input()
-    page: Page;
+    page: MarkdownPage;
 }

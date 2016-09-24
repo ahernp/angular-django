@@ -1,2 +1,14 @@
 export const apiEndpoint: string = '/api';
 export const rootTitle: string = 'ahernp.com';
+
+var leadingZero = (number) => number < 10 ? `0${number}` : number;
+
+export function toDateTimeString(date: Date):string {
+    return '' +
+        date.getFullYear() + '-' +
+        leadingZero(date.getUTCMonth()) + '-' +
+        leadingZero(date.getUTCDate()) + ' ' +
+        leadingZero(date.getUTCHours()) + ':' +
+        leadingZero(date.getUTCMinutes()) + ':' +
+        leadingZero(date.getUTCSeconds())
+}

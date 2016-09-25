@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router'
+import {ActivatedRoute, Params} from '@angular/router'
 
 import * as showdown from 'showdown';
 
@@ -41,7 +41,7 @@ export class MarkdownPageDetailComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.getCurrentPage(this.route.snapshot.params['slug']);
+        this.route.params.forEach((params: Params) => this.getCurrentPage(params['slug']));
     }
 
     getCurrentPage(slug:string) {

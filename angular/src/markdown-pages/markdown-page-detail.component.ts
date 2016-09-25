@@ -48,6 +48,7 @@ export class MarkdownPageDetailComponent implements OnInit {
         this.markdownPageService
             .getPage(slug)
             .then(page => {
+                console.log(page);
                 this.page = page;
 
                 var breadcrumb = new Breadcrumb({

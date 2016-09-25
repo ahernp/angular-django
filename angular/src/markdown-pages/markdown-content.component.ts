@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core';
 
 import * as showdown from 'showdown';
 
-import {MarkdownPage} from './markdown-pages/markdown-page';
+import {MarkdownPage} from './markdown-page';
 
 @Component({
     selector: 'ad-markdown-content',

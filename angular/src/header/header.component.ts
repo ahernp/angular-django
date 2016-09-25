@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 
-import {Breadcrumb} from './breadcrumbs/breadcrumb';
+import {Breadcrumb} from '../breadcrumbs/breadcrumb';
 
 @Component({
     selector: 'ad-header',

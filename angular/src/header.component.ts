@@ -15,6 +15,5 @@ import {Breadcrumb} from './breadcrumbs/breadcrumb';
 `
 })
 export class HeaderComponent {
-    @Input()
-    breadcrumbs: Breadcrumb[];
+    @Input() breadcrumbs: Breadcrumb[];
 }

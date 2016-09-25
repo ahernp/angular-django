@@ -1,19 +1,20 @@
-import {Breadcrumb} from "../breadcrumbs/breadcrumb";
-
 interface FooterOptions {
     updated?: string;
-    breadcrumbs: Breadcrumb[];
+    sourceFlag?: boolean;
+    markdownFlag?: boolean;
     adminUrl?: string;
 }
 
 export class Footer {
     updated: string;
-    breadcrumbs: Breadcrumb[];
+    sourceFlag: boolean;
+    markdownFlag: boolean;
     adminUrl: string;
 
     constructor(args: FooterOptions) {
         this.updated = args.updated;
-        this.breadcrumbs = args.breadcrumbs;
+        this.sourceFlag = args.sourceFlag;
+        this.markdownFlag = args.markdownFlag;
         this.adminUrl = args.adminUrl;
     }
 }

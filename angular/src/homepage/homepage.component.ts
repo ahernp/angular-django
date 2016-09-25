@@ -5,7 +5,7 @@ import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
 
 import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
-import {rootTitle, markdownBreadcrumb} from "../app.settings";
+import {rootTitle} from "../app.settings";
 import {Footer} from "../footer/footer";
 
 export const homepageTitle: string = 'ahernp.com';
@@ -25,6 +25,7 @@ export class HomepageComponent implements OnInit {
     homepage: MarkdownPage;
     breadcrumbs: Breadcrumb[];
     footer: Footer;
+    showSource: boolean = false;
     error: any;
 
     constructor(
@@ -51,14 +52,16 @@ export class HomepageComponent implements OnInit {
 
                 this.footer = new Footer({
                     updated: this.homepage.updated,
-                    breadcrumbs: [
-                        new Breadcrumb({title: 'Source', url: '#'}),
-                        markdownBreadcrumb,
-                    ],
+                    sourceFlag: true,
+                    markdownFlag: true,
                     adminUrl: `/admin/pages/page/${this.homepage.id}/change/`,
                 });
 
             })
             .catch(error => this.error = error);
+    }
+
+    onToggleSource(showSource: boolean) {
+        this.showSource = showSource;
     }
 }

@@ -73,6 +73,12 @@
     </div>
 
     <div style="clear:both"></div>
+
+    <div *ngIf="showSource">
+        <h2>Page Source</h2>
+        <page-source [page]="homepage"></page-source>
+    </div>
+
 </div>
 
-<ad-footer id="footer" *ngIf="footer" [footer]="footer"></ad-footer>
+<ad-footer id="footer" *ngIf="footer" [footer]="footer" (onToggleSource)="onToggleSource($event)"></ad-footer>

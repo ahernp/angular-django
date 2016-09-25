@@ -8,12 +8,10 @@ import {MarkdownPage} from './markdown-pages/markdown-page';
     selector: 'ad-markdown-content',
     template: `
         <div [innerHTML]="html_content"></div>
-        <!--<page-source [page]="page"></page-source>-->
     `
 })
 export class MarkdownContentComponent {
-    @Input()
-    page: MarkdownPage;
+    @Input() page: MarkdownPage;
 
     html_content: string;
 

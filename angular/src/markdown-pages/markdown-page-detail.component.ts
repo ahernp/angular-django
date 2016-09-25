@@ -8,7 +8,6 @@ import {MarkdownPageService} from './markdown-page.service';
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
 import {Footer} from "../footer/footer";
-import {markdownBreadcrumb} from "../app.settings";
 
 @Component({
     selector: 'ad-page',
@@ -16,9 +15,12 @@ import {markdownBreadcrumb} from "../app.settings";
         <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
         <div id="content">
             <div [innerHTML]="html_content"></div>
-            <!--<page-source [page]="page"></page-source>-->
+            <div *ngIf="showSource">
+                <h2>Page Source</h2>
+                <page-source [page]="page"></page-source>
+            </div>
         </div>
-        <ad-footer id="footer" *ngIf="footer" [footer]="footer"></ad-footer>
+        <ad-footer id="footer" *ngIf="footer" [footer]="footer" (onToggleSource)="onToggleSource($event)"></ad-footer>
         `,
     providers: []
 })
@@ -29,6 +31,7 @@ export class MarkdownPageDetailComponent implements OnInit {
     html_content: string;
     breadcrumbs: Breadcrumb[];
     footer: Footer;
+    showSource: boolean = false;
     error: any;
 
     constructor(
@@ -59,13 +62,15 @@ export class MarkdownPageDetailComponent implements OnInit {
 
                 this.footer = new Footer({
                     updated: this.page.updated,
-                    breadcrumbs: [
-                        new Breadcrumb({title: 'Source', url: '#'}),
-                        markdownBreadcrumb,
-                    ],
+                    sourceFlag: true,
+                    markdownFlag: true,
                     adminUrl: `/admin/pages/page/${this.page.id}/change/`,
                 });
             })
             .catch(error => this.error = error);
+    }
+
+    onToggleSource(showSource: boolean) {
+        this.showSource = showSource;
     }
 }

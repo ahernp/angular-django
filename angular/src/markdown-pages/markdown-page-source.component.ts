@@ -11,6 +11,5 @@ import {MarkdownPage} from './markdown-page';
     `
 })
 export class MarkdownPageSourceComponent {
-    @Input()
-    page: MarkdownPage;
+    @Input() page: MarkdownPage;
 }

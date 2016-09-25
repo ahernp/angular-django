@@ -73,7 +73,6 @@ export class DashboardComponent implements OnInit {
 
                 this.footer = new Footer({
                     updated: this.dashboard.timeChecked,
-                    breadcrumbs: [],
                     adminUrl: `/admin/`,
                 });
 

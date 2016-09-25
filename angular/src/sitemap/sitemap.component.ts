@@ -89,7 +89,6 @@ export class SitemapComponent implements OnInit {
 
                 this.footer = new Footer({
                     updated: this.now,
-                    breadcrumbs: [],
                     adminUrl: `/admin/`,
                 });
 

@@ -16,6 +16,7 @@ import {MarkdownPageSourceComponent} from "./markdown-pages/markdown-page-source
 import {BreadcrumbService} from "./breadcrumbs/breadcrumb.service";
 import {DashboardService} from "./dashboard/dashboard.service";
 import {SitemapComponent} from "./sitemap/sitemap.component";
+import {SpinnerComponent} from "./spinner/spinner.component";
 
 @NgModule({
     imports: [
@@ -34,6 +35,7 @@ import {SitemapComponent} from "./sitemap/sitemap.component";
         MarkdownPageDetailComponent,
         MarkdownPageSourceComponent,
         SitemapComponent,
+        SpinnerComponent,
     ],
     providers: [
         MarkdownPageService,

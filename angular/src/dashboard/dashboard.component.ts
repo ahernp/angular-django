@@ -4,7 +4,7 @@ import {Dashboard} from './dashboard';
 import {DashboardService} from './dashboard.service';
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
-import {rootTitle} from "../app.settings";
+import {rootTitle, toDateTimeString} from "../app.settings";
 import {Footer} from "../footer/footer";
 
 export const dashboardTitle: string = 'Dashboard';
@@ -39,14 +39,17 @@ export const dashboardUrl: string = '/dashboard';
             <div style="clear:both"></div>
         </div>
         <ad-footer id="footer" *ngIf="footer" [footer]="footer"></ad-footer>
+        <ad-spinner *ngIf="showSpinner"></ad-spinner>
         `,
     providers: []
 })
 
 export class DashboardComponent implements OnInit {
+    now: string;
     dashboard: Dashboard;
     breadcrumbs: Breadcrumb[];
     footer: Footer;
+    showSpinner: Boolean = false;
     error: any;
 
     constructor(
@@ -55,26 +58,35 @@ export class DashboardComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        this.now = toDateTimeString(new Date());
+        this.populateHeader();
+        this.populateFooter();
         this.getDashboard();
     }
 
+    populateHeader() {
+        var dashboardBreadcrumb = new Breadcrumb({
+            title: dashboardTitle,
+            url: dashboardUrl,
+            updated: this.now,
+            parentName: rootTitle});
+        this.breadcrumbs = this.breadcrumbService.addBreadcrumb(dashboardBreadcrumb);
+    }
+
+    populateFooter() {
+        this.footer = new Footer({
+            updated: this.now,
+            adminUrl: `/admin/`,
+        });
+    }
+
     getDashboard() {
+        this.showSpinner = true;
         this.dashboardService
             .getDashboard()
             .then(dashboard => {
                 this.dashboard = dashboard;
-
-                var dashboardBreadcrumb = new Breadcrumb({
-                    title: dashboardTitle,
-                    url: dashboardUrl,
-                    updated: this.dashboard.timeChecked,
-                    parentName: rootTitle});
-                this.breadcrumbs = this.breadcrumbService.addBreadcrumb(dashboardBreadcrumb);
-
-                this.footer = new Footer({
-                    updated: this.dashboard.timeChecked,
-                    adminUrl: `/admin/`,
-                });
+                this.showSpinner = false;
 
             })
             .catch(error => this.error = error);

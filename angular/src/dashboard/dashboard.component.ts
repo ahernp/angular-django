@@ -5,6 +5,7 @@ import {DashboardService} from './dashboard.service';
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
 import {rootTitle} from "../app.settings";
+import {Footer} from "../footer/footer";
 
 export const dashboardTitle: string = 'Dashboard';
 export const dashboardUrl: string = '/dashboard';
@@ -37,7 +38,7 @@ export const dashboardUrl: string = '/dashboard';
                 </div>
             <div style="clear:both"></div>
         </div>
-        <ad-footer id="footer" *ngIf="dashboard" [page]="dashboard"></ad-footer>
+        <ad-footer id="footer" *ngIf="footer" [footer]="footer"></ad-footer>
         `,
     providers: []
 })
@@ -45,6 +46,7 @@ export const dashboardUrl: string = '/dashboard';
 export class DashboardComponent implements OnInit {
     dashboard: Dashboard;
     breadcrumbs: Breadcrumb[];
+    footer: Footer;
     error: any;
 
     constructor(
@@ -61,12 +63,20 @@ export class DashboardComponent implements OnInit {
             .getDashboard()
             .then(dashboard => {
                 this.dashboard = dashboard;
+
                 var dashboardBreadcrumb = new Breadcrumb({
                     title: dashboardTitle,
                     url: dashboardUrl,
-                    updated: dashboard.timeChecked,
+                    updated: this.dashboard.timeChecked,
                     parentName: rootTitle});
                 this.breadcrumbs = this.breadcrumbService.addBreadcrumb(dashboardBreadcrumb);
+
+                this.footer = new Footer({
+                    updated: this.dashboard.timeChecked,
+                    breadcrumbs: [],
+                    adminUrl: `/admin/`,
+                });
+
             })
             .catch(error => this.error = error);
     }

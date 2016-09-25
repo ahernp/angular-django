@@ -2,7 +2,6 @@ import {Injectable} from '@angular/core';
 
 import {Breadcrumb} from './breadcrumb';
 
-import appSettings = require('../app.settings');
 import {rootTitle} from "../app.settings";
 
 @Injectable()

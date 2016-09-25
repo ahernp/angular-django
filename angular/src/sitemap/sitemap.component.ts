@@ -7,6 +7,7 @@ import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
 import {dashboardTitle, dashboardUrl} from "../dashboard/dashboard.component";
 import {homepageTitle, homepageUrl} from "../homepage/homepage.component";
 import {rootTitle, toDateTimeString} from "../app.settings";
+import {Footer} from "../footer/footer";
 
 export const sitemapTitle: string = 'Site Map';
 export const sitemapUrl: string = '/sitemap';
@@ -34,7 +35,7 @@ export const sitemapUrl: string = '/sitemap';
                 </tbody>
             </table>
         </div>
-        <ad-footer id="footer" *ngIf="sitemap" [page]="sitemap"></ad-footer>
+        <ad-footer id="footer" *ngIf="footer" [footer]="footer"></ad-footer>
         `,
     providers: []
 })
@@ -45,6 +46,7 @@ export class SitemapComponent implements OnInit {
     now: string;
     breadcrumbs: Breadcrumb[];
     sitemap: Breadcrumb[];
+    footer: Footer;
     error: any;
 
     constructor(
@@ -77,12 +79,20 @@ export class SitemapComponent implements OnInit {
             .then(pageBreadcrumbs => {
                 this.sitemap = pageBreadcrumbs;
                 this.addClientsideEntries();
+
                 var breadcrumb = new Breadcrumb({
                     title: sitemapTitle,
                     url: sitemapUrl,
                     updated: this.now,
                     parentName: rootTitle});
                 this.breadcrumbs = this.breadcrumbService.addBreadcrumb(breadcrumb);
+
+                this.footer = new Footer({
+                    updated: this.now,
+                    breadcrumbs: [],
+                    adminUrl: `/admin/`,
+                });
+
             })
             .catch(error => this.error = error);
     }

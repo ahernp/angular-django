@@ -5,8 +5,8 @@ import 'rxjs/add/operator/toPromise';
 
 import {MarkdownPage} from './markdown-page';
 
-import appSettings = require('../app.settings');
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
+import {apiEndpoint} from "../app.settings";
 
 @Injectable()
 export class MarkdownPageService {
@@ -15,14 +15,14 @@ export class MarkdownPageService {
     }
 
     getBreadcrumbs() {
-        return this.http.get(`${appSettings.apiEndpoint}/pages/list`)
+        return this.http.get(`${apiEndpoint}/pages/list`)
             .toPromise()
             .then(response => response.json() as Breadcrumb[])
             .catch(this.handleError);
     }
 
     getPage(slug:string) {
-        return this.http.get(`${appSettings.apiEndpoint}/pages/read/${slug}`)
+        return this.http.get(`${apiEndpoint}/pages/read/${slug}`)
             .toPromise()
             .then(response => response.json() as MarkdownPage)
             .catch(this.handleError);

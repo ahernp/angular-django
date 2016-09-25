@@ -3,10 +3,10 @@ import {Component, OnInit} from '@angular/core';
 import {MarkdownPage} from '../markdown-pages/markdown-page';
 import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
 
-import appSettings = require('../app.settings');
 import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
-import {rootTitle} from "../app.settings";
+import {rootTitle, markdownBreadcrumb} from "../app.settings";
+import {Footer} from "../footer/footer";
 
 export const homepageTitle: string = 'ahernp.com';
 export const homepageUrl: string = '/';
@@ -24,6 +24,7 @@ const homepageSlug: string = 'ahernp-com';
 export class HomepageComponent implements OnInit {
     homepage: MarkdownPage;
     breadcrumbs: Breadcrumb[];
+    footer: Footer;
     error: any;
 
     constructor(
@@ -40,12 +41,23 @@ export class HomepageComponent implements OnInit {
             .getPage(homepageSlug)
             .then(page => {
                 this.homepage = page;
+
                 var breadcrumb = new Breadcrumb({
                     title: homepageTitle,
                     url: homepageUrl,
-                    updated: page.updated,
+                    updated: this.homepage.updated,
                     parentName: rootTitle});
                 this.breadcrumbs = this.breadcrumbService.addBreadcrumb(breadcrumb);
+
+                this.footer = new Footer({
+                    updated: this.homepage.updated,
+                    breadcrumbs: [
+                        new Breadcrumb({title: 'Source', url: '#'}),
+                        markdownBreadcrumb,
+                    ],
+                    adminUrl: `/admin/pages/page/${this.homepage.id}/change/`,
+                });
+
             })
             .catch(error => this.error = error);
     }

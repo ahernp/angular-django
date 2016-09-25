@@ -7,6 +7,8 @@ import {MarkdownPage} from './markdown-page';
 import {MarkdownPageService} from './markdown-page.service';
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
+import {Footer} from "../footer/footer";
+import {markdownBreadcrumb} from "../app.settings";
 
 @Component({
     selector: 'ad-page',
@@ -16,7 +18,7 @@ import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
             <div [innerHTML]="html_content"></div>
             <!--<page-source [page]="page"></page-source>-->
         </div>
-        <ad-footer id="footer" *ngIf="page" [page]="page"></ad-footer>
+        <ad-footer id="footer" *ngIf="footer" [footer]="footer"></ad-footer>
         `,
     providers: []
 })
@@ -26,6 +28,7 @@ export class MarkdownPageDetailComponent implements OnInit {
     page: MarkdownPage;
     html_content: string;
     breadcrumbs: Breadcrumb[];
+    footer: Footer;
     error: any;
 
     constructor(
@@ -53,6 +56,15 @@ export class MarkdownPageDetailComponent implements OnInit {
 
                 var converter = new showdown.Converter({'tables': true});
                 this.html_content = converter.makeHtml(this.page.content);
+
+                this.footer = new Footer({
+                    updated: this.page.updated,
+                    breadcrumbs: [
+                        new Breadcrumb({title: 'Source', url: '#'}),
+                        markdownBreadcrumb,
+                    ],
+                    adminUrl: `/admin/pages/page/${this.page.id}/change/`,
+                });
             })
             .catch(error => this.error = error);
     }

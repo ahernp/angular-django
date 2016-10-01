@@ -19,9 +19,16 @@ export const blogUrl: string = '/blog';
         <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
         <div id="content">
             <div *ngFor="let page of pages">
+                <h2 class="published_date" *ngIf="page.published">
+                    {{page.published|date:'d MMMM y'}}
+                </h2>
                 <ad-markdown-content [page]="page"></ad-markdown-content>
-                <p>Last Updated: {{page.updated}}</p>
+                <p class="blog_info">
+                    Last Updated: {{page.updated}};
+                    <a routerLink="{{page.url}}">{{page.title}}</a>.
+                </p>
             </div>
+        </div>
         <ad-footer id="footer" *ngIf="footer" [footer]="footer"></ad-footer>
         `,
     providers: []
@@ -29,7 +36,6 @@ export const blogUrl: string = '/blog';
 
 
 export class BlogComponent implements OnInit {
-    now: string;
     title: string = blogTitle;
     breadcrumbs: Breadcrumb[];
     pages: MarkdownPage[];
@@ -42,7 +48,6 @@ export class BlogComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.now = toDateTimeString(new Date());
         this.populateHeader();
         this.populateFooter();
         this.getBlogPages();
@@ -57,7 +62,6 @@ export class BlogComponent implements OnInit {
 
     populateFooter() {
         this.footer = new Footer({
-            updated: this.now,
             adminUrl: `/admin/`,
         });
     }

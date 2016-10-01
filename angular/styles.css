@@ -63,6 +63,7 @@ button {
 	width: 100%;
 	border-top: 1px #ccc solid;
 	margin: 0;
+	padding-left: 8px;
 	z-index: 9;
 }
 #spinner {
@@ -84,4 +85,9 @@ button {
 }
 h2.published_date {
 	text-align: right;
+}
+p.blog_info {
+	border-top: 1px #ccc solid;
+	margin: 16px 0;
+	padding-top: 16px;
 }

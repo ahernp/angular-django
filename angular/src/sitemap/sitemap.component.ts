@@ -62,7 +62,10 @@ export class SitemapComponent implements OnInit {
         this.now = toDateTimeString(new Date());
         this.route.params.forEach((params: Params) => {
             this.parent_slug = params['slug'];
-            this.getBreadcrumbs(params)
+            this.now = toDateTimeString(new Date());
+            this.getBreadcrumbs();
+            this.populateHeaderAndTitle();
+            this.populateFooter();
         });
     }
 
@@ -80,18 +83,17 @@ export class SitemapComponent implements OnInit {
         this.sitemap.push(homepageBreadcrumb);
     }
 
-    populateSitemap() {
+    populateHeaderAndTitle() {
         if (this.parent_slug == undefined) {
-            this.addClientsideEntries();
-            this.title = sitemapTitle;
             this.populateHeader(sitemapTitle);
+            this.title = sitemapTitle;
         }
         else {
             var parent = this.markdownPageService
                 .getPage(this.parent_slug)
                 .then(page => {
-                    this.title = page.title;
                     this.populateHeader(page.title);
+                    this.title = page.title;
                 })
                 .catch(error => this.error = error);
         }
@@ -114,14 +116,13 @@ export class SitemapComponent implements OnInit {
         });
     }
 
-    getBreadcrumbs(params) {
+    getBreadcrumbs() {
         this.markdownPageService
             .getPageBreadcrumbs(this.parent_slug)
             .then(pageBreadcrumbs => {
                 this.sitemap = pageBreadcrumbs;
-                this.now = toDateTimeString(new Date());
-                this.populateSitemap();
-                this.populateFooter();
+                if (this.parent_slug == undefined)
+                    this.addClientsideEntries();
             })
             .catch(error => this.error = error);
     }

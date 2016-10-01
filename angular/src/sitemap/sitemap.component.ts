@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Params} from '@angular/router'
+import {Router, ActivatedRoute, Params} from '@angular/router'
 
 import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
@@ -54,7 +54,8 @@ export class SitemapComponent implements OnInit {
     constructor(
         private markdownPageService:MarkdownPageService,
         private breadcrumbService:BreadcrumbService,
-        private route: ActivatedRoute) {
+        private route: ActivatedRoute,
+        private router: Router) {
     }
 
     ngOnInit(): void {
@@ -79,28 +80,48 @@ export class SitemapComponent implements OnInit {
         this.sitemap.push(homepageBreadcrumb);
     }
 
+    populateSitemap() {
+        if (this.parent_slug == undefined) {
+            this.addClientsideEntries();
+            this.title = sitemapTitle;
+            this.populateHeader(sitemapTitle);
+        }
+        else {
+            var parent = this.markdownPageService
+                .getPage(this.parent_slug)
+                .then(page => {
+                    this.title = page.title;
+                    this.populateHeader(page.title);
+                })
+                .catch(error => this.error = error);
+        }
+
+    }
+
+    populateHeader(title:string) {
+        var breadcrumb = new Breadcrumb({
+            title: title,
+            url: this.router.url,
+            updated: this.now,
+            parentName: rootTitle});
+        this.breadcrumbs = this.breadcrumbService.addBreadcrumb(breadcrumb);
+    }
+
+    populateFooter() {
+        this.footer = new Footer({
+            updated: this.now,
+            adminUrl: `/admin/`,
+        });
+    }
+
     getBreadcrumbs(params) {
         this.markdownPageService
-            .getPageBreadcrumbs(params['slug'])
+            .getPageBreadcrumbs(this.parent_slug)
             .then(pageBreadcrumbs => {
                 this.sitemap = pageBreadcrumbs;
-
-                if (this.parent_slug == undefined)
-                    this.addClientsideEntries();
-
                 this.now = toDateTimeString(new Date());
-
-                var breadcrumb = new Breadcrumb({
-                    title: sitemapTitle,
-                    url: sitemapUrl,
-                    updated: this.now,
-                    parentName: rootTitle});
-                this.breadcrumbs = this.breadcrumbService.addBreadcrumb(breadcrumb);
-
-                this.footer = new Footer({
-                    updated: this.now,
-                    adminUrl: `/admin/`,
-                });
+                this.populateSitemap();
+                this.populateFooter();
             })
             .catch(error => this.error = error);
     }

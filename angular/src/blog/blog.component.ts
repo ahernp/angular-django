@@ -10,7 +10,7 @@ import {MarkdownPage} from "../markdown-pages/markdown-page";
 export const blogTitle: string = 'Blog';
 export const blogUrl: string = '/blog';
 
-const blogArchiveBreadcrumb = new Breadcrumb({title: 'Blog Archive', url: '/sitemap/blog'});
+const blogArchiveBreadcrumb = new Breadcrumb({title: 'Archive', url: '/sitemap/blog'});
 
 @Component({
     selector: 'ad-blog',

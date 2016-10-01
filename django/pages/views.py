@@ -17,16 +17,15 @@ def list_pages(request):
 
 def read_page(request, slug):
     page = Page.objects.get(slug=slug)
-    data = json.dumps({'id': page.id,
-                       'title': page.title,
-                       'url': '/page/%s' % page.slug,
-                       'parentName': page.parent.title,
-                       'updated': page.updated.strftime('%Y-%m-%d %H:%M:%S'),
-                       'published': page.published.strftime('%Y-%m-%d') if page.published else '',
-                       'content': page.content})
+    return HttpResponse(page.json, content_type='application/json')
+
+
+def child_pages(request, parent_slug, limit=3):
+    parent = Page.objects.get(slug=parent_slug)
+    pages = Page.objects.filter(parent=parent).order_by('-published')[:limit]
+    data = '[%s]' % ', '.join([page.json for page in pages])
     return HttpResponse(data, content_type='application/json')
 
 
 class HomePageView(TemplateView):
-
     template_name = 'index.html'

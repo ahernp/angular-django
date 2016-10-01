@@ -5,6 +5,7 @@ import {MarkdownPageDetailComponent} from './markdown-pages/markdown-page-detail
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {HomepageComponent} from './homepage/homepage.component';
 import {SitemapComponent} from "./sitemap/sitemap.component";
+import {BlogComponent} from "./blog/blog.component";
 
 const appRoutes: Routes = [
     {
@@ -22,6 +23,10 @@ const appRoutes: Routes = [
     {
         path: 'sitemap',
         component: SitemapComponent
+    },
+    {
+        path: 'blog',
+        component: BlogComponent
     },
     {
         path: '**',

@@ -18,6 +18,7 @@ import {SitemapComponent} from "./sitemap/sitemap.component";
 import {SpinnerComponent} from "./spinner/spinner.component";
 import {MarkdownToHtmlPipe} from "./markdown-pages/markdown.pipe";
 import {MarkdownContentComponent} from "./markdown-pages/markdown-content.component";
+import {BlogComponent} from "./blog/blog.component";
 
 @NgModule({
     imports: [
@@ -38,6 +39,7 @@ import {MarkdownContentComponent} from "./markdown-pages/markdown-content.compon
         SitemapComponent,
         SpinnerComponent,
         MarkdownToHtmlPipe,
+        BlogComponent,
     ],
     providers: [
         MarkdownPageService,

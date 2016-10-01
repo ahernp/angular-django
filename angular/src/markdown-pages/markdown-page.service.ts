@@ -28,6 +28,13 @@ export class MarkdownPageService {
             .catch(this.handleError);
     }
 
+    getChildPages(slug:string) {
+        return this.http.get(`${apiEndpoint}/pages/childpages/${slug}`)
+            .toPromise()
+            .then(response => response.json() as MarkdownPage[])
+            .catch(this.handleError);
+    }
+
     private handleError(error:any) {
         console.error('An error occurred', error);
         return Promise.reject(error.message || error);

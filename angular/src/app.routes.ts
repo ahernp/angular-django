@@ -25,6 +25,10 @@ const appRoutes: Routes = [
         component: SitemapComponent
     },
     {
+        path: 'sitemap/:slug',
+        component: SitemapComponent
+    },
+    {
         path: 'blog',
         component: BlogComponent
     },

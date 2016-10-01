@@ -14,11 +14,20 @@ export class MarkdownPageService {
     constructor(private http:Http) {
     }
 
-    getBreadcrumbs() {
-        return this.http.get(`${apiEndpoint}/pages/list`)
-            .toPromise()
-            .then(response => response.json() as Breadcrumb[])
-            .catch(this.handleError);
+    getAllPageBreadcrumbs() {
+    }
+
+    getPageBreadcrumbs(slug:string) {
+        if (slug == undefined)
+            return this.http.get(`${apiEndpoint}/pages/list/`)
+                .toPromise()
+                .then(response => response.json() as Breadcrumb[])
+                .catch(this.handleError);
+        else
+            return this.http.get(`${apiEndpoint}/pages/list/?parent_slug=${slug}`)
+                .toPromise()
+                .then(response => response.json() as Breadcrumb[])
+                .catch(this.handleError);
     }
 
     getPage(slug:string) {

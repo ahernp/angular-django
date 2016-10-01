@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Params} from '@angular/router'
 
 import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
@@ -44,6 +45,7 @@ export const sitemapUrl: string = '/sitemap';
 export class SitemapComponent implements OnInit {
     title: string = sitemapTitle;
     now: string;
+    parent_slug: string;
     breadcrumbs: Breadcrumb[];
     sitemap: Breadcrumb[];
     footer: Footer;
@@ -51,12 +53,16 @@ export class SitemapComponent implements OnInit {
 
     constructor(
         private markdownPageService:MarkdownPageService,
-        private breadcrumbService:BreadcrumbService) {
+        private breadcrumbService:BreadcrumbService,
+        private route: ActivatedRoute) {
     }
 
     ngOnInit(): void {
         this.now = toDateTimeString(new Date());
-        this.getAllBreadcrumbs();
+        this.route.params.forEach((params: Params) => {
+            this.parent_slug = params['slug'];
+            this.getBreadcrumbs(params)
+        });
     }
 
     addClientsideEntries() {
@@ -73,12 +79,16 @@ export class SitemapComponent implements OnInit {
         this.sitemap.push(homepageBreadcrumb);
     }
 
-    getAllBreadcrumbs() {
+    getBreadcrumbs(params) {
         this.markdownPageService
-            .getBreadcrumbs()
+            .getPageBreadcrumbs(params['slug'])
             .then(pageBreadcrumbs => {
                 this.sitemap = pageBreadcrumbs;
-                this.addClientsideEntries();
+
+                if (this.parent_slug == undefined)
+                    this.addClientsideEntries();
+
+                this.now = toDateTimeString(new Date());
 
                 var breadcrumb = new Breadcrumb({
                     title: sitemapTitle,
@@ -91,7 +101,6 @@ export class SitemapComponent implements OnInit {
                     updated: this.now,
                     adminUrl: `/admin/`,
                 });
-
             })
             .catch(error => this.error = error);
     }

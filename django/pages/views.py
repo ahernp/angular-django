@@ -7,7 +7,12 @@ from pages.models import Page
 
 
 def list_pages(request):
-    pages = Page.objects.all()
+    parent_slug = request.GET.get('parent_slug')
+    if parent_slug:
+        parent = Page.objects.get(slug=parent_slug)
+        pages = Page.objects.filter(parent=parent)
+    else:
+        pages = Page.objects.all()
     data = json.dumps([{'title': page.title,
                         'url': '/page/%s' % page.slug,
                         'updated': page.updated.strftime('%Y-%m-%d %H:%M:%S'),

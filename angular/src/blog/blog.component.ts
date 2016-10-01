@@ -4,14 +4,13 @@ import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
 
-import {dashboardTitle, dashboardUrl} from "../dashboard/dashboard.component";
-import {homepageTitle, homepageUrl} from "../homepage/homepage.component";
-import {rootTitle, toDateTimeString} from "../app.settings";
 import {Footer} from "../footer/footer";
 import {MarkdownPage} from "../markdown-pages/markdown-page";
 
 export const blogTitle: string = 'Blog';
 export const blogUrl: string = '/blog';
+
+const blogArchiveBreadcrumb = new Breadcrumb({title: 'Blog Archive', url: '/sitemap/blog'});
 
 @Component({
     selector: 'ad-blog',
@@ -54,15 +53,15 @@ export class BlogComponent implements OnInit {
     }
 
     populateHeader() {
-        var dashboardBreadcrumb = new Breadcrumb({
+        var blogBreadcrumb = new Breadcrumb({
             title: blogTitle,
             url: blogUrl});
-        this.breadcrumbs = this.breadcrumbService.addBreadcrumb(dashboardBreadcrumb);
+        this.breadcrumbs = this.breadcrumbService.addBreadcrumb(blogBreadcrumb);
     }
 
     populateFooter() {
         this.footer = new Footer({
-            adminUrl: `/admin/`,
+            breadcrumbs: [blogArchiveBreadcrumb]
         });
     }
 

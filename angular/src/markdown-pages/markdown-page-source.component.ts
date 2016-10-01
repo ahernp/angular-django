@@ -3,11 +3,10 @@ import {Component, Input} from '@angular/core';
 import {MarkdownPage} from './markdown-page';
 
 @Component({
-    selector: 'page-source',
+    selector: 'ad-page-source',
     template: `
-        <div *ngIf="page">
-            <pre>{{page.content}}</pre>
-        </div>
+        <h2>Markdown Source</h2>
+        <pre>{{page.content}}</pre>
     `
 })
 export class MarkdownPageSourceComponent {

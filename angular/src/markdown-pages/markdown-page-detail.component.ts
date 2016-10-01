@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router'
 
-import * as showdown from 'showdown';
-
 import {MarkdownPage} from './markdown-page';
 import {MarkdownPageService} from './markdown-page.service';
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
@@ -14,11 +12,8 @@ import {Footer} from "../footer/footer";
     template: `
         <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
         <div id="content">
-            <div [innerHTML]="html_content"></div>
-            <div *ngIf="showSource">
-                <h2>Page Source</h2>
-                <page-source [page]="page"></page-source>
-            </div>
+            <ad-markdown-content *ngIf="page" [page]="page"></ad-markdown-content>
+            <ad-page-source *ngIf="showSource" [page]="page"></ad-page-source>
         </div>
         <ad-footer id="footer" *ngIf="footer" [footer]="footer" (onToggleSource)="onToggleSource($event)"></ad-footer>
         `,
@@ -28,7 +23,6 @@ import {Footer} from "../footer/footer";
 
 export class MarkdownPageDetailComponent implements OnInit {
     page: MarkdownPage;
-    html_content: string;
     breadcrumbs: Breadcrumb[];
     footer: Footer;
     showSource: boolean = false;
@@ -56,9 +50,6 @@ export class MarkdownPageDetailComponent implements OnInit {
                     updated: this.page.updated,
                     parentName: this.page.parentName});
                 this.breadcrumbs = this.breadcrumbService.addBreadcrumb(breadcrumb);
-
-                var converter = new showdown.Converter({'tables': true});
-                this.html_content = converter.makeHtml(this.page.content);
 
                 this.footer = new Footer({
                     updated: this.page.updated,

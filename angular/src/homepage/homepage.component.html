@@ -74,10 +74,7 @@
 
     <div style="clear:both"></div>
 
-    <div *ngIf="showSource">
-        <h2>Page Source</h2>
-        <page-source [page]="homepage"></page-source>
-    </div>
+    <ad-page-source *ngIf="showSource" [page]="homepage"></ad-page-source>
 
 </div>
 

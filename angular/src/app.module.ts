@@ -11,12 +11,13 @@ import {MarkdownPageService} from "./markdown-pages/markdown-page.service";
 import {routing} from "./app.routes";
 import {FooterComponent} from "./footer/footer.component";
 import {HeaderComponent} from "./header/header.component";
-import {MarkdownContentComponent} from "./markdown-pages/markdown-content.component";
 import {MarkdownPageSourceComponent} from "./markdown-pages/markdown-page-source.component";
 import {BreadcrumbService} from "./breadcrumbs/breadcrumb.service";
 import {DashboardService} from "./dashboard/dashboard.service";
 import {SitemapComponent} from "./sitemap/sitemap.component";
 import {SpinnerComponent} from "./spinner/spinner.component";
+import {MarkdownToHtmlPipe} from "./markdown-pages/markdown.pipe";
+import {MarkdownContentComponent} from "./markdown-pages/markdown-content.component";
 
 @NgModule({
     imports: [
@@ -27,15 +28,16 @@ import {SpinnerComponent} from "./spinner/spinner.component";
     ],
     declarations: [
         AppComponent,
-        MarkdownContentComponent,
         DashboardComponent,
         FooterComponent,
         HeaderComponent,
         HomepageComponent,
+        MarkdownContentComponent,
         MarkdownPageDetailComponent,
         MarkdownPageSourceComponent,
         SitemapComponent,
         SpinnerComponent,
+        MarkdownToHtmlPipe,
     ],
     providers: [
         MarkdownPageService,

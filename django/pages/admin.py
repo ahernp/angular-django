@@ -18,7 +18,7 @@ class PageAdmin(admin.ModelAdmin):
             'fields': (('content',),
                        ('title', 'parent',),
                        ('slug',),
-                       ('updated'),
+                       ('updated', 'published'),
             )
         }),
     )

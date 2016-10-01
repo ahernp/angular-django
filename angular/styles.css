@@ -82,3 +82,6 @@ button {
     .column-left {width:53%; float:left}
     .column-right {width:44%;float:left;padding-left:1em;}
 }
+h2.published_date {
+	text-align: right;
+}

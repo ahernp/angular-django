@@ -12,6 +12,7 @@ import {Footer} from "../footer/footer";
     template: `
         <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
         <div id="content">
+            <h2 class="published_date" *ngIf="page && page.published">{{page.published|date:'d MMMM y'}}</h2>
             <ad-markdown-content *ngIf="page" [page]="page"></ad-markdown-content>
             <ad-page-source *ngIf="showSource" [page]="page"></ad-page-source>
         </div>

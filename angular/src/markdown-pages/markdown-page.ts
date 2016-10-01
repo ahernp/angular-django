@@ -4,5 +4,6 @@ export class MarkdownPage {
     url: string;
     parentName: string;
     updated: string;
+    published: string;
     content: string;
 }

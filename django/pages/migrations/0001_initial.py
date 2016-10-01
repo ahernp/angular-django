@@ -21,6 +21,7 @@ class Migration(migrations.Migration):
                 ('title', models.CharField(max_length=250)),
                 ('slug', models.SlugField(max_length=250, unique=True)),
                 ('updated', models.DateTimeField(auto_now=True, verbose_name='Time Updated')),
+                ('published', models.DateField(null=True, verbose_name='Date Published')),
                 ('content', models.TextField(help_text='Use Markdown syntax.', verbose_name='Page body')),
                 ('parent', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='pages.Page')),
             ],

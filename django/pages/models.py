@@ -11,6 +11,10 @@ class Page(models.Model):
                                null=True)
     updated = models.DateTimeField(verbose_name='Time Updated',
                                    auto_now=True)
+    published = models.DateField(verbose_name='Date Published',
+                                 null=True,
+                                 blank=True,
+                                 help_text='dd/mm/yyyy')
     content = models.TextField(verbose_name='Page body',
                                help_text='Use Markdown syntax.')
 

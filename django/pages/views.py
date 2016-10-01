@@ -22,6 +22,7 @@ def read_page(request, slug):
                        'url': '/page/%s' % page.slug,
                        'parentName': page.parent.title,
                        'updated': page.updated.strftime('%Y-%m-%d %H:%M:%S'),
+                       'published': page.published.strftime('%Y-%m-%d') if page.published else '',
                        'content': page.content})
     return HttpResponse(data, content_type='application/json')
 

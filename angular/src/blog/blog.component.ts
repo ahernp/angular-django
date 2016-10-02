@@ -8,7 +8,7 @@ import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
 import {Footer} from "../footer/footer";
 import {MarkdownPage} from "../markdown-pages/markdown-page";
 
-const blogTitle: string = 'Blog';
+const blogTitle: string = 'Blog (recent)';
 const blogUrl: string = '/blog';
 
 const blogArchiveBreadcrumb = new Breadcrumb({title: 'Archive', url: '/sitemap/blog'});

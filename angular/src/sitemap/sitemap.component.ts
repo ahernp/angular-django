@@ -7,12 +7,10 @@ import {Breadcrumb} from "../breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
 
 import {dashboardTitle, dashboardUrl} from "../dashboard/dashboard.component";
-import {homepageTitle, homepageUrl} from "../homepage/homepage.component";
-import {rootTitle, toDateTimeString} from "../app.settings";
+import {rootTitle, toDateTimeString, rootBreadcrumb} from "../app.settings";
 import {Footer} from "../footer/footer";
 
 export const sitemapTitle: string = 'Site Map';
-export const sitemapUrl: string = '/sitemap';
 
 @Component({
     selector: 'ad-sitemap',
@@ -79,11 +77,7 @@ export class SitemapComponent implements OnInit {
             updated: this.now,
             parentName: rootTitle});
         this.sitemap.push(dashboardBreadcrumb);
-        var homepageBreadcrumb = new Breadcrumb({
-            title: homepageTitle,
-            url: homepageUrl,
-            parentName: rootTitle});
-        this.sitemap.push(homepageBreadcrumb);
+        this.sitemap.push(rootBreadcrumb);
     }
 
     populateHeaderAndTitle() {
@@ -106,12 +100,11 @@ export class SitemapComponent implements OnInit {
     }
 
     populateHeader(title:string) {
-        var breadcrumb = new Breadcrumb({
+        this.breadcrumbs = this.breadcrumbService.addBreadcrumb({
             title: title,
             url: this.router.url,
             updated: this.now,
             parentName: rootTitle});
-        this.breadcrumbs = this.breadcrumbService.addBreadcrumb(breadcrumb);
     }
 
     populateFooter() {

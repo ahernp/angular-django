@@ -9,7 +9,6 @@ import {Breadcrumb} from "../breadcrumbs/breadcrumb";
 import {rootTitle} from "../app.settings";
 import {Footer} from "../footer/footer";
 
-export const homepageTitle: string = 'ahernp.com';
 export const homepageUrl: string = '/';
 
 const homepageSlug: string = 'ahernp-com';
@@ -17,7 +16,37 @@ const homepageSlug: string = 'ahernp-com';
 @Component({
     moduleId: module.id,
     selector: 'ad-page',
-    templateUrl: './homepage.component.html',
+    template: `
+        <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
+        
+        <div id="content">
+            <h1 id="personal-website-of-paul-ahern">Personal Website of Paul Ahern</h1>
+        
+            <p>
+                Here you will find a <a routerLink="/blog/" title="Blog">Blog</a>,
+                some Application <a routerLink="/page/applications/" title="Application Guides">Guides</a>,
+                a catalog for my <a routerLink="/page/library/" title="Library">Library</a>
+                and a <a routerLink="/page/gallery/" title="Gallery">Gallery</a> of photographs.
+            </p>
+        
+            <p>See <a routerLink="/page/rooska/" title="Rooska">Rooska</a> for maps and photographs of my mountain.</p>
+        
+            <div class="column-left">
+                <ad-markdown-content *ngIf="homepage" [page]="homepage"></ad-markdown-content>
+            </div>
+        
+            <div class="column-right">
+                <ad-homepage-navigation></ad-homepage-navigation>
+            </div>
+        
+            <div style="clear:both"></div>
+        
+            <ad-page-source *ngIf="showSource" [page]="homepage"></ad-page-source>
+        
+        </div>
+        
+        <ad-footer id="footer" *ngIf="footer" [footer]="footer" (onToggleSource)="onToggleSource($event)"></ad-footer>
+    `,
     providers: []
 })
 
@@ -36,7 +65,7 @@ export class HomepageComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.titleService.setTitle(homepageTitle);
+        this.titleService.setTitle(rootTitle);
         this.getHomepage();
     }
 
@@ -47,7 +76,7 @@ export class HomepageComponent implements OnInit {
                 this.homepage = page;
 
                 var breadcrumb = new Breadcrumb({
-                    title: homepageTitle,
+                    title: rootTitle,
                     url: homepageUrl,
                     updated: this.homepage.updated,
                     parentName: rootTitle});

@@ -19,6 +19,7 @@ import {SpinnerComponent} from "./spinner/spinner.component";
 import {MarkdownToHtmlPipe} from "./markdown-pages/markdown.pipe";
 import {MarkdownContentComponent} from "./markdown-pages/markdown-content.component";
 import {BlogComponent} from "./blog/blog.component";
+import {HomepageNavigationComponent} from "./homepage/homepage-navigation.component";
 
 @NgModule({
     imports: [
@@ -40,6 +41,7 @@ import {BlogComponent} from "./blog/blog.component";
         SpinnerComponent,
         MarkdownToHtmlPipe,
         BlogComponent,
+        HomepageNavigationComponent,
     ],
     providers: [
         MarkdownPageService,

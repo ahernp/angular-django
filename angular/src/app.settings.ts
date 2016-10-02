@@ -1,7 +1,9 @@
 import {Breadcrumb} from "./breadcrumbs/breadcrumb";
 
 export const apiEndpoint: string = '/api';
-export const rootTitle: string = 'ahernp.com';
+export const rootTitle: string = 'ahernp.com Beta';
+export const rootUrl: string = '/';
+export const rootBreadcrumb = new Breadcrumb({title: rootTitle, url: rootUrl});
 export const markdownBreadcrumb = new Breadcrumb({title: 'Markdown', url: '/page/markdown'});
 
 var leadingZero = (number) => number < 10 ? `0${number}` : number;

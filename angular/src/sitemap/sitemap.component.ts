@@ -7,7 +7,7 @@ import {Breadcrumb} from "../breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
 
 import {dashboardTitle, dashboardUrl} from "../dashboard/dashboard.component";
-import {rootTitle, toDateTimeString, rootBreadcrumb} from "../app.settings";
+import {rootTitle, toDateTimeString, rootBreadcrumb, adminBreadcrumb} from "../app.settings";
 import {Footer} from "../footer/footer";
 
 export const sitemapTitle: string = 'Site Map';
@@ -110,7 +110,7 @@ export class SitemapComponent implements OnInit {
     populateFooter() {
         this.footer = new Footer({
             updated: this.now,
-            adminUrl: `/admin/`,
+            links: [adminBreadcrumb],
         });
     }
 

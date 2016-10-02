@@ -60,7 +60,7 @@ export class MarkdownPageDetailComponent implements OnInit {
                     updated: this.page.updated,
                     sourceFlag: true,
                     markdownFlag: true,
-                    adminUrl: `/admin/pages/page/${this.page.id}/change/`,
+                    links: [new Breadcrumb({title: 'Edit', url: `/admin/pages/page/${this.page.id}/change/`})],
                 });
             })
             .catch(error => this.error = error);

@@ -13,8 +13,11 @@ import {markdownBreadcrumb} from "../app.settings";
                 <a routerLink="{{markdown.url}}">{{markdown.title}}</a>
             </span>
             <span *ngIf="footer.adminUrl"><a href="{{footer.adminUrl}}">Edit</a></span>
-            <span *ngFor="let breadcrumb of footer.breadcrumbs">
+            <span *ngFor="let breadcrumb of footer.routerLinks">
                 <a routerLink="{{breadcrumb.url}}">{{breadcrumb.title}}</a>
+            </span>
+            <span *ngFor="let breadcrumb of footer.links">
+                <a href="{{breadcrumb.url}}">{{breadcrumb.title}}</a>
             </span>
         </p>
     `

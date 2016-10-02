@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pages.apps.PagesConfig',
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -127,3 +128,8 @@ STATICFILES_DIRS = (
     os.path.normpath(os.path.join(BASE_DIR, 'site_assets')),
     os.path.normpath(os.path.join(BASE_DIR, 'angularjs')),
 )
+
+
+# ahernp.com application settings
+SITE_NAME = 'ahernp.com'
+BLOG_ROOT_SLUG = 'blog'

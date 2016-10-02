@@ -4,22 +4,22 @@ interface FooterOptions {
     updated?: string;
     sourceFlag?: boolean;
     markdownFlag?: boolean;
-    adminUrl?: string;
-    breadcrumbs?: Breadcrumb[];
+    links?: Breadcrumb[];
+    routerLinks?: Breadcrumb[];
 }
 
 export class Footer {
     updated: string;
     sourceFlag: boolean;
     markdownFlag: boolean;
-    adminUrl: string;
-    breadcrumbs: Breadcrumb[];
+    links: Breadcrumb[];
+    routerLinks: Breadcrumb[];
 
     constructor(args: FooterOptions) {
         this.updated = args.updated;
         this.sourceFlag = args.sourceFlag;
         this.markdownFlag = args.markdownFlag;
-        this.adminUrl = args.adminUrl;
-        this.breadcrumbs = args.breadcrumbs;
+        this.links = args.links;
+        this.routerLinks = args.routerLinks;
     }
 }

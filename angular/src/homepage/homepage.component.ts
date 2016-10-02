@@ -86,7 +86,7 @@ export class HomepageComponent implements OnInit {
                     updated: this.homepage.updated,
                     sourceFlag: true,
                     markdownFlag: true,
-                    adminUrl: `/admin/pages/page/${this.homepage.id}/change/`,
+                    links: [new Breadcrumb({title: 'Edit', url: `/admin/pages/page/${this.homepage.id}/change/`})],
                 });
 
             })

@@ -6,7 +6,7 @@ import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
 
-import {rootTitle, toDateTimeString, rootBreadcrumb} from "../app.settings";
+import {rootTitle, toDateTimeString, rootBreadcrumb, adminBreadcrumb} from "../app.settings";
 import {Footer} from "../footer/footer";
 
 const toolsTitle: string = 'Tools';
@@ -93,7 +93,7 @@ export class ToolsComponent implements OnInit {
     populateFooter(): void {
         this.footer = new Footer({
             updated: this.now,
-            adminUrl: `/admin/`,
+            links: [adminBreadcrumb],
         });
     }
 }

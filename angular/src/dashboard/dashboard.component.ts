@@ -5,7 +5,7 @@ import {Dashboard} from './dashboard';
 import {DashboardService} from './dashboard.service';
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
-import {rootTitle, toDateTimeString} from "../app.settings";
+import {rootTitle, toDateTimeString, adminBreadcrumb} from "../app.settings";
 import {Footer} from "../footer/footer";
 
 export const dashboardTitle: string = 'Dashboard';
@@ -79,7 +79,7 @@ export class DashboardComponent implements OnInit {
     populateFooter() {
         this.footer = new Footer({
             updated: this.now,
-            adminUrl: `/admin/`,
+            links: [adminBreadcrumb],
         });
     }
 

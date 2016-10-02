@@ -22,6 +22,9 @@ import {BlogComponent} from "./blog/blog.component";
 import {HomepageNavigationComponent} from "./homepage/homepage-navigation.component";
 import {ToolsComponent} from "./tools/tools.component";
 import {CardgenComponent} from "./tools/cardgen.component";
+import {CompareComponent} from "./tools/compare.component";
+import {DeduplicateComponent} from "./tools/deduplicate.component";
+import {MatchComponent} from "./tools/match.component";
 
 @NgModule({
     imports: [
@@ -46,6 +49,9 @@ import {CardgenComponent} from "./tools/cardgen.component";
         HomepageNavigationComponent,
         ToolsComponent,
         CardgenComponent,
+        CompareComponent,
+        DeduplicateComponent,
+        MatchComponent,
     ],
     providers: [
         MarkdownPageService,

@@ -30,6 +30,9 @@ const tools = [cardgenBreadcrumb, compareBreadcrumb, deduplicateBreadcrumb, matc
                 </span>
             </p>
             <ad-cardgen *ngIf="tool_slug == 'cardgen'"></ad-cardgen>
+            <ad-compare *ngIf="tool_slug == 'compare'"></ad-compare>
+            <ad-deduplicate *ngIf="tool_slug == 'deduplicate'"></ad-deduplicate>
+            <ad-match *ngIf="tool_slug == 'match'"></ad-match>
         </div>
         <ad-footer id="footer" *ngIf="footer" [footer]="footer"></ad-footer>
         `,

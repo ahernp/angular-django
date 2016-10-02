@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Title} from '@angular/platform-browser';
 
 import {MarkdownPage} from '../markdown-pages/markdown-page';
 import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
@@ -30,10 +31,12 @@ export class HomepageComponent implements OnInit {
 
     constructor(
         private markdownPageService:MarkdownPageService,
-        private breadcrumbService:BreadcrumbService) {
+        private breadcrumbService:BreadcrumbService,
+        private titleService:Title) {
     }
 
     ngOnInit(): void {
+        this.titleService.setTitle(homepageTitle);
         this.getHomepage();
     }
 

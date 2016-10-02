@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Title} from '@angular/platform-browser';
 
 import {Dashboard} from './dashboard';
 import {DashboardService} from './dashboard.service';
@@ -54,10 +55,12 @@ export class DashboardComponent implements OnInit {
 
     constructor(
         private dashboardService:DashboardService,
-        private breadcrumbService:BreadcrumbService) {
+        private breadcrumbService:BreadcrumbService,
+        private titleService:Title) {
     }
 
     ngOnInit(): void {
+        this.titleService.setTitle(dashboardTitle);
         this.now = toDateTimeString(new Date());
         this.populateHeader();
         this.populateFooter();

@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router, ActivatedRoute, Params} from '@angular/router'
+import {Title} from '@angular/platform-browser';
 
 import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
@@ -55,10 +56,12 @@ export class SitemapComponent implements OnInit {
         private markdownPageService:MarkdownPageService,
         private breadcrumbService:BreadcrumbService,
         private route: ActivatedRoute,
-        private router: Router) {
+        private router: Router,
+        private titleService:Title) {
     }
 
     ngOnInit(): void {
+        this.titleService.setTitle(sitemapTitle);
         this.now = toDateTimeString(new Date());
         this.route.params.forEach((params: Params) => {
             this.parent_slug = params['slug'];
@@ -87,6 +90,7 @@ export class SitemapComponent implements OnInit {
         if (this.parent_slug == undefined) {
             this.populateHeader(sitemapTitle);
             this.title = sitemapTitle;
+            this.titleService.setTitle(sitemapTitle);
         }
         else {
             var parent = this.markdownPageService
@@ -94,6 +98,7 @@ export class SitemapComponent implements OnInit {
                 .then(page => {
                     this.populateHeader(page.title);
                     this.title = page.title;
+                    this.titleService.setTitle(page.title);
                 })
                 .catch(error => this.error = error);
         }

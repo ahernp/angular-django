@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Title} from '@angular/platform-browser';
 
 import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
@@ -7,8 +8,8 @@ import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
 import {Footer} from "../footer/footer";
 import {MarkdownPage} from "../markdown-pages/markdown-page";
 
-export const blogTitle: string = 'Blog';
-export const blogUrl: string = '/blog';
+const blogTitle: string = 'Blog';
+const blogUrl: string = '/blog';
 
 const blogArchiveBreadcrumb = new Breadcrumb({title: 'Archive', url: '/sitemap/blog'});
 
@@ -43,10 +44,12 @@ export class BlogComponent implements OnInit {
 
     constructor(
         private markdownPageService:MarkdownPageService,
-        private breadcrumbService:BreadcrumbService) {
+        private breadcrumbService:BreadcrumbService,
+        private titleService:Title) {
     }
 
     ngOnInit(): void {
+        this.titleService.setTitle(blogTitle);
         this.populateHeader();
         this.populateFooter();
         this.getBlogPages();

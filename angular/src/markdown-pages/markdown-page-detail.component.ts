@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router'
+import {Title} from '@angular/platform-browser';
 
 import {MarkdownPage} from './markdown-page';
 import {MarkdownPageService} from './markdown-page.service';
@@ -32,7 +33,8 @@ export class MarkdownPageDetailComponent implements OnInit {
     constructor(
         private markdownPageService:MarkdownPageService,
         private breadcrumbService:BreadcrumbService,
-        private route: ActivatedRoute) {
+        private route: ActivatedRoute,
+        private titleService:Title) {
     }
 
     ngOnInit(): void {
@@ -44,6 +46,8 @@ export class MarkdownPageDetailComponent implements OnInit {
             .getPage(slug)
             .then(page => {
                 this.page = page;
+
+                this.titleService.setTitle(this.page.title);
 
                 var breadcrumb = new Breadcrumb({
                     title: this.page.title,

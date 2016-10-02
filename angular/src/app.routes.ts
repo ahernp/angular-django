@@ -6,6 +6,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {HomepageComponent} from './homepage/homepage.component';
 import {SitemapComponent} from "./sitemap/sitemap.component";
 import {BlogComponent} from "./blog/blog.component";
+import {ToolsComponent} from "./tools/tools.component";
 
 const appRoutes: Routes = [
     {
@@ -31,6 +32,14 @@ const appRoutes: Routes = [
     {
         path: 'blog',
         component: BlogComponent
+    },
+    {
+        path: 'tools',
+        component: ToolsComponent
+    },
+    {
+        path: 'tools/:slug',
+        component: ToolsComponent
     },
     {
         path: '**',

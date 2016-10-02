@@ -20,6 +20,8 @@ import {MarkdownToHtmlPipe} from "./markdown-pages/markdown.pipe";
 import {MarkdownContentComponent} from "./markdown-pages/markdown-content.component";
 import {BlogComponent} from "./blog/blog.component";
 import {HomepageNavigationComponent} from "./homepage/homepage-navigation.component";
+import {ToolsComponent} from "./tools/tools.component";
+import {CardgenComponent} from "./tools/cardgen.component";
 
 @NgModule({
     imports: [
@@ -42,6 +44,8 @@ import {HomepageNavigationComponent} from "./homepage/homepage-navigation.compon
         MarkdownToHtmlPipe,
         BlogComponent,
         HomepageNavigationComponent,
+        ToolsComponent,
+        CardgenComponent,
     ],
     providers: [
         MarkdownPageService,

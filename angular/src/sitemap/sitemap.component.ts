@@ -100,17 +100,20 @@ export class SitemapComponent implements OnInit {
     }
 
     populateHeader(title:string) {
-        this.breadcrumbs = this.breadcrumbService.addBreadcrumb({
-            title: title,
-            url: this.router.url,
-            updated: this.now,
-            parentName: rootTitle});
+        this.breadcrumbs = this.breadcrumbService.addBreadcrumb(<Breadcrumb>
+            {
+                title: title,
+                url: this.router.url,
+                updated: this.now,
+                parentName: rootTitle
+            }
+        );
     }
 
     populateFooter() {
         this.footer = new Footer({
             updated: this.now,
-            links: [adminBreadcrumb],
+            breadcrumbs: [adminBreadcrumb],
         });
     }
 

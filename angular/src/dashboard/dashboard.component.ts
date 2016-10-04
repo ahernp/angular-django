@@ -79,7 +79,7 @@ export class DashboardComponent implements OnInit {
     populateFooter() {
         this.footer = new Footer({
             updated: this.now,
-            links: [adminBreadcrumb],
+            breadcrumbs: [adminBreadcrumb],
         });
     }
 

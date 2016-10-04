@@ -28,7 +28,8 @@ const tools = [cardgenBreadcrumb, compareBreadcrumb, deduplicateBreadcrumb, matc
                 <span *ngFor="let tool of tools">
                     <a routerLink="{{tool.url}}">{{tool.title}}</a>
                 </span>
-                <span><a routerLink="/page/django-tools">Django Tools</a></span>
+                <span>
+                <a routerLink="/page/django-tools">Django</a></span>.
             </p>
             <ad-cardgen *ngIf="tool_slug == 'cardgen'"></ad-cardgen>
             <ad-compare *ngIf="tool_slug == 'compare'"></ad-compare>
@@ -82,18 +83,19 @@ export class ToolsComponent implements OnInit {
     }
 
     populateHeader(title:string): void {
-        this.breadcrumbs = this.breadcrumbService.addBreadcrumb({
-            title: title,
-            url: this.router.url,
-            updated: this.now,
-            parentName: rootBreadcrumb.title,
-        });
+        this.breadcrumbs = this.breadcrumbService.addBreadcrumb(<Breadcrumb>
+            {
+                title: title,
+                url: this.router.url,
+                updated: this.now,
+                parentName: rootBreadcrumb.title,
+            });
     }
 
     populateFooter(): void {
         this.footer = new Footer({
             updated: this.now,
-            links: [adminBreadcrumb],
+            breadcrumbs: [adminBreadcrumb],
         });
     }
 }

@@ -10,6 +10,10 @@ h1, h2, h3, h4, a, th {
     color: #046;
 }
 
+a[ng-reflect-router-link] {
+    text-decoration-line: none;
+}
+
 h1 {
     font-size: 1.5em;
 }
@@ -60,7 +64,6 @@ button {
 
 #source_label {
     color: #046;
-    text-decoration: underline;
     cursor: pointer;
 }
 

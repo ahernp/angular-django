@@ -12,7 +12,7 @@ const blogTitle: string = 'Blog (recent)';
 const blogUrl: string = '/blog';
 
 const blogArchiveBreadcrumb = new Breadcrumb({title: 'Archive', url: '/sitemap/blog'});
-const blogFeedBreadcrumb = new Breadcrumb({title: 'RSS', url: '/blog/feed'});
+export const blogFeedBreadcrumb = new Breadcrumb({title: 'RSS', url: '/blog/feed', linkFlag: true});
 
 @Component({
     selector: 'ad-blog',
@@ -65,8 +65,7 @@ export class BlogComponent implements OnInit {
 
     populateFooter() {
         this.footer = new Footer({
-            links: [blogFeedBreadcrumb],
-            routerLinks: [blogArchiveBreadcrumb]
+            breadcrumbs: [blogFeedBreadcrumb, blogArchiveBreadcrumb],
         });
     }
 

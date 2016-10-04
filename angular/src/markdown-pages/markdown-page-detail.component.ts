@@ -7,6 +7,7 @@ import {MarkdownPageService} from './markdown-page.service';
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
 import {Footer} from "../footer/footer";
+import {markdownBreadcrumb} from "../app.settings";
 
 @Component({
     selector: 'ad-page',
@@ -59,8 +60,14 @@ export class MarkdownPageDetailComponent implements OnInit {
                 this.footer = new Footer({
                     updated: this.page.updated,
                     sourceFlag: true,
-                    markdownFlag: true,
-                    links: [new Breadcrumb({title: 'Edit', url: `/admin/pages/page/${this.page.id}/change/`})],
+                    breadcrumbs: [
+                        markdownBreadcrumb,
+                        new Breadcrumb({
+                            title: 'Edit',
+                            url: `/admin/pages/page/${this.page.id}/change/`,
+                            linkFlag: true,
+                        })
+                    ],
                 });
             })
             .catch(error => this.error = error);

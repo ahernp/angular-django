@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
+import {blogFeedBreadcrumb} from "../blog/blog.component";
 
 const navigationPanel = [
     {
@@ -15,6 +16,7 @@ const navigationPanel = [
         parent: <Breadcrumb> {title: 'Blog', url: '/blog'},
         children: [
             <Breadcrumb> {title: 'Archive', url: '/sitemap/blog'},
+            blogFeedBreadcrumb,
         ]
     },
     {
@@ -88,7 +90,8 @@ const navigationPanel = [
             <span *ngIf="!section.parent.url">{{section.parent.title}}</span>
             &rsaquo;
             <span *ngFor="let breadcrumb of section.children">
-                <a routerLink="{{breadcrumb.url}}">{{breadcrumb.title}}</a>
+                <a *ngIf="breadcrumb.linkFlag" href="{{breadcrumb.url}}">{{breadcrumb.title}}</a>
+                <a *ngIf="!breadcrumb.linkFlag" routerLink="{{breadcrumb.url}}">{{breadcrumb.title}}</a>
             </span>
         </p>
     `,

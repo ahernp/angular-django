@@ -6,7 +6,7 @@ import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
 
 import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
-import {rootTitle} from "../app.settings";
+import {rootTitle, markdownBreadcrumb} from "../app.settings";
 import {Footer} from "../footer/footer";
 
 export const homepageUrl: string = '/';
@@ -85,8 +85,14 @@ export class HomepageComponent implements OnInit {
                 this.footer = new Footer({
                     updated: this.homepage.updated,
                     sourceFlag: true,
-                    markdownFlag: true,
-                    links: [new Breadcrumb({title: 'Edit', url: `/admin/pages/page/${this.homepage.id}/change/`})],
+                    breadcrumbs: [
+                        markdownBreadcrumb,
+                        new Breadcrumb({
+                            title: 'Edit',
+                            url: `/admin/pages/page/${this.homepage.id}/change/`,
+                            linkFlag: true,
+                        })
+                    ],
                 });
 
             })

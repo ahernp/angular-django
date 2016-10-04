@@ -90,8 +90,7 @@ const navigationPanel = [
             <span *ngIf="!section.parent.url">{{section.parent.title}}</span>
             &rsaquo;
             <span *ngFor="let breadcrumb of section.children">
-                <a *ngIf="breadcrumb.linkFlag" href="{{breadcrumb.url}}">{{breadcrumb.title}}</a>
-                <a *ngIf="!breadcrumb.linkFlag" routerLink="{{breadcrumb.url}}">{{breadcrumb.title}}</a>
+                <ad-breadcrumb [breadcrumb]="breadcrumb"></ad-breadcrumb>
             </span>
         </p>
     `,

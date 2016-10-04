@@ -9,8 +9,7 @@ import {Footer} from './footer';
             <span *ngIf="footer.updated">Last Updated: {{footer.updated}}</span>
             <span *ngIf="footer.sourceFlag" id="source_label" (click)="toggleSource()">Source</span>
             <span *ngFor="let breadcrumb of footer.breadcrumbs">
-                <a *ngIf="breadcrumb.linkFlag" href="{{breadcrumb.url}}">{{breadcrumb.title}}</a>
-                <a *ngIf="!breadcrumb.linkFlag" routerLink="{{breadcrumb.url}}">{{breadcrumb.title}}</a>
+                <ad-breadcrumb [breadcrumb]="breadcrumb"></ad-breadcrumb>
             </span>
         </p>
     `

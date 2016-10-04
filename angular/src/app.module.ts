@@ -25,6 +25,7 @@ import {CardgenComponent} from "./tools/cardgen.component";
 import {CompareComponent} from "./tools/compare.component";
 import {DeduplicateComponent} from "./tools/deduplicate.component";
 import {MatchComponent} from "./tools/match.component";
+import {BreadcrumbComponent} from "./breadcrumbs/breadcrumb.component";
 
 @NgModule({
     imports: [
@@ -52,6 +53,7 @@ import {MatchComponent} from "./tools/match.component";
         CompareComponent,
         DeduplicateComponent,
         MatchComponent,
+        BreadcrumbComponent,
     ],
     providers: [
         MarkdownPageService,

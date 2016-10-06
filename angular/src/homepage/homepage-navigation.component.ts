@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 
-import {Breadcrumb} from "../breadcrumbs/breadcrumb";
+import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {blogFeedBreadcrumb} from "../blog/blog.component";
 
 const navigationPanel = [

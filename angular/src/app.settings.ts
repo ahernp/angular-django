@@ -1,4 +1,4 @@
-import {Breadcrumb} from "./breadcrumbs/breadcrumb";
+import {Breadcrumb} from "./core/breadcrumbs/breadcrumb";
 
 export const apiEndpoint: string = '/api';
 export const rootTitle: string = 'ahernp.com Beta';

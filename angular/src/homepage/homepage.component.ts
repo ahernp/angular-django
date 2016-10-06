@@ -4,10 +4,10 @@ import {Title} from '@angular/platform-browser';
 import {MarkdownPage} from '../markdown-pages/markdown-page';
 import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
 
-import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
-import {Breadcrumb} from "../breadcrumbs/breadcrumb";
+import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
+import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {rootTitle, markdownBreadcrumb} from "../app.settings";
-import {Footer} from "../footer/footer";
+import {Footer} from "../core/footer/footer";
 
 export const homepageUrl: string = '/';
 

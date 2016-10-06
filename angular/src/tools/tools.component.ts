@@ -3,11 +3,11 @@ import {Router, ActivatedRoute, Params} from '@angular/router'
 import {Title} from '@angular/platform-browser';
 
 import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
-import {Breadcrumb} from "../breadcrumbs/breadcrumb";
-import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
+import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
+import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 
 import {rootTitle, toDateTimeString, rootBreadcrumb, adminBreadcrumb} from "../app.settings";
-import {Footer} from "../footer/footer";
+import {Footer} from "../core/footer/footer";
 
 const toolsTitle: string = 'Tools';
 
@@ -29,7 +29,7 @@ const tools = [cardgenBreadcrumb, compareBreadcrumb, deduplicateBreadcrumb, matc
                     <a routerLink="{{tool.url}}">{{tool.title}}</a>
                 </span>
                 <span>
-                <a routerLink="/page/django-tools">Django</a></span>.
+                <a routerLink="/page/django-tools">Django Tools</a></span>.
             </p>
             <router-outlet></router-outlet>
         </div>

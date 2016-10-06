@@ -3,10 +3,10 @@ import {Title} from '@angular/platform-browser';
 
 import {Dashboard} from './dashboard';
 import {DashboardService} from './dashboard.service';
-import {Breadcrumb} from "../breadcrumbs/breadcrumb";
-import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
+import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
+import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 import {rootTitle, toDateTimeString, adminBreadcrumb} from "../app.settings";
-import {Footer} from "../footer/footer";
+import {Footer} from "../core/footer/footer";
 
 export const dashboardTitle: string = 'Dashboard';
 export const dashboardUrl: string = '/dashboard';

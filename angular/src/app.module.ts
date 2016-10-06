@@ -9,18 +9,14 @@ import {HomepageComponent} from "./homepage/homepage.component";
 import {MarkdownPageDetailComponent} from "./markdown-pages/markdown-page-detail.component";
 import {MarkdownPageService} from "./markdown-pages/markdown-page.service";
 import {appRouting} from "./app.routing";
-import {FooterComponent} from "./footer/footer.component";
-import {HeaderComponent} from "./header/header.component";
 import {MarkdownPageSourceComponent} from "./markdown-pages/markdown-page-source.component";
-import {BreadcrumbService} from "./breadcrumbs/breadcrumb.service";
+import {BreadcrumbService} from "./core/breadcrumbs/breadcrumb.service";
 import {DashboardService} from "./dashboard/dashboard.service";
 import {SitemapComponent} from "./sitemap/sitemap.component";
-import {SpinnerComponent} from "./spinner/spinner.component";
 import {MarkdownToHtmlPipe} from "./markdown-pages/markdown.pipe";
 import {MarkdownContentComponent} from "./markdown-pages/markdown-content.component";
 import {BlogComponent} from "./blog/blog.component";
 import {HomepageNavigationComponent} from "./homepage/homepage-navigation.component";
-import {BreadcrumbComponent} from "./breadcrumbs/breadcrumb.component";
 import {ToolsModule} from "./tools/tools.module";
 import {CoreModule} from "./core/core.module";
 
@@ -41,7 +37,6 @@ import {CoreModule} from "./core/core.module";
         MarkdownPageDetailComponent,
         MarkdownPageSourceComponent,
         SitemapComponent,
-        SpinnerComponent,
         MarkdownToHtmlPipe,
         BlogComponent,
         HomepageNavigationComponent,

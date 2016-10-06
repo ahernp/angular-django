@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 
 import {Breadcrumb} from './breadcrumb';
 
-import {rootTitle} from "../app.settings";
+import {rootTitle} from "../../app.settings";
 
 @Injectable()
 export class BreadcrumbService {

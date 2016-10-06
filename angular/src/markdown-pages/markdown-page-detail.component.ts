@@ -4,9 +4,9 @@ import {Title} from '@angular/platform-browser';
 
 import {MarkdownPage} from './markdown-page';
 import {MarkdownPageService} from './markdown-page.service';
-import {Breadcrumb} from "../breadcrumbs/breadcrumb";
-import {BreadcrumbService} from "../breadcrumbs/breadcrumb.service";
-import {Footer} from "../footer/footer";
+import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
+import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
+import {Footer} from "../core/footer/footer";
 import {markdownBreadcrumb} from "../app.settings";
 
 @Component({

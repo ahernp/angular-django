@@ -3,10 +3,13 @@ import {Title} from '@angular/platform-browser';
 
 import {Dashboard} from './dashboard';
 import {DashboardService} from './dashboard.service';
+
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
-import {rootTitle, toDateTimeString, adminBreadcrumb} from "../app.settings";
+
 import {Footer} from "../core/footer/footer";
+
+import {rootTitle, toDateTimeString, adminBreadcrumb} from "../app.settings";
 
 export const dashboardTitle: string = 'Dashboard';
 export const dashboardUrl: string = '/dashboard';
@@ -44,7 +47,6 @@ export const dashboardUrl: string = '/dashboard';
         `,
     providers: []
 })
-
 export class DashboardComponent implements OnInit {
     now: string;
     dashboard: Dashboard;

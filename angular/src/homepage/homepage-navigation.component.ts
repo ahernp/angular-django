@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
+
 import {blogFeedBreadcrumb} from "../blog/blog.component";
 
 const navigationPanel = [
@@ -96,8 +97,6 @@ const navigationPanel = [
     `,
     providers: []
 })
-
-
 export class HomepageNavigationComponent {
     navigationPanel = navigationPanel;
 }

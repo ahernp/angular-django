@@ -27,7 +27,6 @@ import {Component} from '@angular/core';
         </p>
     `
 })
-
 export class MatchComponent {
     inputString: string = 'Record3\nRecord4\nRecord4\nRecord1';
     keyString: string = 'Record4\nRecord1';

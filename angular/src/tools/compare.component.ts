@@ -25,7 +25,6 @@ import {Component} from '@angular/core';
         <p>If a line in Second Input is missing from First Input then it is included in Output with the prefix "I:".</p>
     `
 })
-
 export class CompareComponent {
     firstInput: string = 'Record1\nRecord3\nRecord4';
     secondInput: string = 'Record1\nRecord2\nRecord3';

@@ -18,7 +18,6 @@ import {Component} from '@angular/core';
         </p>
     `
 })
-
 export class DeduplicateComponent {
     inputString: string = 'Record3\nRecord4\nRecord4\nRecord1';
     outputString: string = 'Record1\nRecord3\nRecord4';

@@ -2,13 +2,15 @@ import {Component, OnInit} from '@angular/core';
 import {Router, ActivatedRoute, Params} from '@angular/router'
 import {Title} from '@angular/platform-browser';
 
-import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 
+import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
+
+import {Footer} from "../core/footer/footer";
+
 import {dashboardTitle, dashboardUrl} from "../dashboard/dashboard.component";
 import {rootTitle, toDateTimeString, rootBreadcrumb, adminBreadcrumb} from "../app.settings";
-import {Footer} from "../core/footer/footer";
 
 export const sitemapTitle: string = 'Site Map';
 
@@ -39,8 +41,6 @@ export const sitemapTitle: string = 'Site Map';
         `,
     providers: []
 })
-
-
 export class SitemapComponent implements OnInit {
     title: string = sitemapTitle;
     now: string;

@@ -8,7 +8,6 @@ import {Dashboard} from './dashboard';
 import {dashboardUrl} from "./dashboard.component";
 import {apiEndpoint} from "../app.settings";
 
-
 @Injectable()
 export class DashboardService {
 

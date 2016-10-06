@@ -6,8 +6,10 @@ import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
 
 import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
-import {rootTitle, markdownBreadcrumb} from "../app.settings";
+
 import {Footer} from "../core/footer/footer";
+
+import {rootTitle, markdownBreadcrumb} from "../app.settings";
 
 export const homepageUrl: string = '/';
 
@@ -49,8 +51,6 @@ const homepageSlug: string = 'ahernp-com';
     `,
     providers: []
 })
-
-
 export class HomepageComponent implements OnInit {
     @Output() footer: Footer;
 

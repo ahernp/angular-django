@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 
-
 @Component({
     selector: 'ad-spinner',
     template: `
@@ -9,6 +8,5 @@ import {Component} from '@angular/core';
         </div>
     `
 })
-
 export class SpinnerComponent {
 }

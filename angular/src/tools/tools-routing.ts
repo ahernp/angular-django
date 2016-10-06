@@ -1,17 +1,14 @@
 import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
+
 import {ToolsComponent} from "./tools.component";
+
 import {CardgenComponent} from "./cardgen.component";
 import {CompareComponent} from "./compare.component";
 import {DeduplicateComponent} from "./deduplicate.component";
 import {MatchComponent} from "./match.component";
 
 const toolsRoutes: Routes = [
-    // {
-    //     path: '',
-    //     redirectTo: '/tools',
-    //     pathMatch: 'full'
-    // },
     {
         path: 'tools',
         component: ToolsComponent,

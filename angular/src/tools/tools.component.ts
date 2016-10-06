@@ -2,12 +2,12 @@ import {Component, OnInit} from '@angular/core';
 import {Router, ActivatedRoute, Params} from '@angular/router'
 import {Title} from '@angular/platform-browser';
 
-import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 
-import {rootTitle, toDateTimeString, rootBreadcrumb, adminBreadcrumb} from "../app.settings";
 import {Footer} from "../core/footer/footer";
+
+import {toDateTimeString, rootBreadcrumb, adminBreadcrumb} from "../app.settings";
 
 const toolsTitle: string = 'Tools';
 
@@ -29,7 +29,7 @@ const tools = [cardgenBreadcrumb, compareBreadcrumb, deduplicateBreadcrumb, matc
                     <a routerLink="{{tool.url}}">{{tool.title}}</a>
                 </span>
                 <span>
-                <a routerLink="/page/django-tools">Django Tools</a></span>.
+                <a routerLink="/page/django-tools">Django Tools</a></span>
             </p>
             <router-outlet></router-outlet>
         </div>
@@ -37,8 +37,6 @@ const tools = [cardgenBreadcrumb, compareBreadcrumb, deduplicateBreadcrumb, matc
         `,
     providers: []
 })
-
-
 export class ToolsComponent implements OnInit {
     tools: Breadcrumb[] = tools;
     now: string;

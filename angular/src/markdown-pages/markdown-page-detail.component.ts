@@ -2,11 +2,14 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router'
 import {Title} from '@angular/platform-browser';
 
-import {MarkdownPage} from './markdown-page';
-import {MarkdownPageService} from './markdown-page.service';
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
+
+import {MarkdownPage} from './markdown-page';
+import {MarkdownPageService} from './markdown-page.service';
+
 import {Footer} from "../core/footer/footer";
+
 import {markdownBreadcrumb} from "../app.settings";
 
 @Component({
@@ -22,8 +25,6 @@ import {markdownBreadcrumb} from "../app.settings";
         `,
     providers: []
 })
-
-
 export class MarkdownPageDetailComponent implements OnInit {
     page: MarkdownPage;
     breadcrumbs: Breadcrumb[];

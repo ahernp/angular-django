@@ -1,12 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 
-import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 
-import {Footer} from "../core/footer/footer";
+import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
 import {MarkdownPage} from "../markdown-pages/markdown-page";
+
+import {Footer} from "../core/footer/footer";
 
 const blogTitle: string = 'Blog (recent)';
 const blogUrl: string = '/blog';

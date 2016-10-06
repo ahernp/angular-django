@@ -6,6 +6,7 @@ import 'rxjs/add/operator/toPromise';
 import {MarkdownPage} from './markdown-page';
 
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
+
 import {apiEndpoint} from "../app.settings";
 
 @Injectable()

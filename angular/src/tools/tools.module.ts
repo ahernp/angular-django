@@ -27,5 +27,4 @@ import {MatchComponent} from "./match.component";
 
     ]
 })
-
 export class ToolsModule {}

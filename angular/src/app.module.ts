@@ -8,7 +8,7 @@ import {DashboardComponent} from "./dashboard/dashboard.component";
 import {HomepageComponent} from "./homepage/homepage.component";
 import {MarkdownPageDetailComponent} from "./markdown-pages/markdown-page-detail.component";
 import {MarkdownPageService} from "./markdown-pages/markdown-page.service";
-import {routing} from "./app.routing";
+import {appRouting} from "./app.routing";
 import {FooterComponent} from "./footer/footer.component";
 import {HeaderComponent} from "./header/header.component";
 import {MarkdownPageSourceComponent} from "./markdown-pages/markdown-page-source.component";
@@ -29,7 +29,7 @@ import {CoreModule} from "./core/core.module";
         BrowserModule,
         FormsModule,
         HttpModule,
-        routing,
+        appRouting,
         CoreModule,
         ToolsModule,
     ],

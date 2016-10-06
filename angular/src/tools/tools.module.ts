@@ -10,7 +10,7 @@ import {CoreModule} from "../core/core.module";
 @NgModule({
     imports: [
         CoreModule,
-        toolsRouting
+        toolsRouting,
     ],
     declarations: [
         ToolsComponent,

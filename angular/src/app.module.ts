@@ -8,7 +8,7 @@ import {DashboardComponent} from "./dashboard/dashboard.component";
 import {HomepageComponent} from "./homepage/homepage.component";
 import {MarkdownPageDetailComponent} from "./markdown-pages/markdown-page-detail.component";
 import {MarkdownPageService} from "./markdown-pages/markdown-page.service";
-import {routing} from "./app.routes";
+import {routing} from "./app.routing";
 import {FooterComponent} from "./footer/footer.component";
 import {HeaderComponent} from "./header/header.component";
 import {MarkdownPageSourceComponent} from "./markdown-pages/markdown-page-source.component";
@@ -20,12 +20,9 @@ import {MarkdownToHtmlPipe} from "./markdown-pages/markdown.pipe";
 import {MarkdownContentComponent} from "./markdown-pages/markdown-content.component";
 import {BlogComponent} from "./blog/blog.component";
 import {HomepageNavigationComponent} from "./homepage/homepage-navigation.component";
-import {ToolsComponent} from "./tools/tools.component";
-import {CardgenComponent} from "./tools/cardgen.component";
-import {CompareComponent} from "./tools/compare.component";
-import {DeduplicateComponent} from "./tools/deduplicate.component";
-import {MatchComponent} from "./tools/match.component";
 import {BreadcrumbComponent} from "./breadcrumbs/breadcrumb.component";
+import {ToolsModule} from "./tools/tools.module";
+import {CoreModule} from "./core/core.module";
 
 @NgModule({
     imports: [
@@ -33,12 +30,12 @@ import {BreadcrumbComponent} from "./breadcrumbs/breadcrumb.component";
         FormsModule,
         HttpModule,
         routing,
+        CoreModule,
+        ToolsModule,
     ],
     declarations: [
         AppComponent,
         DashboardComponent,
-        FooterComponent,
-        HeaderComponent,
         HomepageComponent,
         MarkdownContentComponent,
         MarkdownPageDetailComponent,
@@ -48,12 +45,6 @@ import {BreadcrumbComponent} from "./breadcrumbs/breadcrumb.component";
         MarkdownToHtmlPipe,
         BlogComponent,
         HomepageNavigationComponent,
-        ToolsComponent,
-        CardgenComponent,
-        CompareComponent,
-        DeduplicateComponent,
-        MatchComponent,
-        BreadcrumbComponent,
     ],
     providers: [
         MarkdownPageService,

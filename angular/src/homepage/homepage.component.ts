@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 
 import {MarkdownPage} from '../markdown-pages/markdown-page';
@@ -52,9 +52,10 @@ const homepageSlug: string = 'ahernp-com';
 
 
 export class HomepageComponent implements OnInit {
+    @Output() footer: Footer;
+
     homepage: MarkdownPage;
     breadcrumbs: Breadcrumb[];
-    footer: Footer;
     showSource: boolean = false;
     error: any;
 

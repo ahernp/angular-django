@@ -11,10 +11,10 @@ import {Footer} from "../footer/footer";
 
 const toolsTitle: string = 'Tools';
 
-const cardgenBreadcrumb = <Breadcrumb> {title: 'Cardgen', url: '/tools/cardgen'};
-const compareBreadcrumb = <Breadcrumb> {title: 'Compare', url: '/tools/compare'};
-const deduplicateBreadcrumb = <Breadcrumb> {title: 'Deduplicate', url: '/tools/deduplicate'};
-const matchBreadcrumb = <Breadcrumb> {title: 'Match', url: '/tools/match'};
+const cardgenBreadcrumb = <Breadcrumb> {title: 'Cardgen', url: 'cardgen'};
+const compareBreadcrumb = <Breadcrumb> {title: 'Compare', url: 'compare'};
+const deduplicateBreadcrumb = <Breadcrumb> {title: 'Deduplicate', url: 'deduplicate'};
+const matchBreadcrumb = <Breadcrumb> {title: 'Match', url: 'match'};
 
 const tools = [cardgenBreadcrumb, compareBreadcrumb, deduplicateBreadcrumb, matchBreadcrumb];
 
@@ -31,10 +31,7 @@ const tools = [cardgenBreadcrumb, compareBreadcrumb, deduplicateBreadcrumb, matc
                 <span>
                 <a routerLink="/page/django-tools">Django</a></span>.
             </p>
-            <ad-cardgen *ngIf="tool_slug == 'cardgen'"></ad-cardgen>
-            <ad-compare *ngIf="tool_slug == 'compare'"></ad-compare>
-            <ad-deduplicate *ngIf="tool_slug == 'deduplicate'"></ad-deduplicate>
-            <ad-match *ngIf="tool_slug == 'match'"></ad-match>
+            <router-outlet></router-outlet>
         </div>
         <ad-footer id="footer" *ngIf="footer" [footer]="footer"></ad-footer>
         `,

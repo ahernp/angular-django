@@ -38,10 +38,6 @@ const appRoutes: Routes = [
         component: ToolsComponent
     },
     {
-        path: 'tools/:slug',
-        component: ToolsComponent
-    },
-    {
         path: '**',
         redirectTo: '',
         pathMatch: 'full'

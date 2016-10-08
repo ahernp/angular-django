@@ -129,6 +129,9 @@ STATICFILES_DIRS = (
     os.path.normpath(os.path.join(BASE_DIR, 'angularjs')),
 )
 
+MEDIA_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'media'))
+
+MEDIA_URL = '/media/'
 
 # ahernp.com application settings
 SITE_NAME = 'ahernp.com'

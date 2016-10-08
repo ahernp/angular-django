@@ -50,6 +50,7 @@ def setup(*args, **kwargs):
         with settings(warn_only=True):
             with lcd(DJANGO_ROOT):
                 local('rm -rf static')
+                local('rm media')
                 local('rm db.sqlite3')
             with lcd(ANGULAR_ROOT):
                 local('rm -rf node_modules')
@@ -80,6 +81,12 @@ def setup(*args, **kwargs):
         with lcd(join(DJANGO_ROOT, 'site_assets')):
             for resource in ANGULAR_RESOURCES:
                 local('ln -s ../../angular/{0} {0}'.format(resource))
+
+    # Link to media
+    with settings(warn_only=True):
+        with lcd(join(DJANGO_ROOT)):
+            for resource in ANGULAR_RESOURCES:
+                local('ln -s ~/Documents/ahernp.com/site/ media')
 
     # Reset database
     manage('migrate')

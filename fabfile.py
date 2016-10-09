@@ -68,8 +68,14 @@ def setup(*args, **kwargs):
 
     # Setup Angular
     with lcd(ANGULAR_ROOT):
-        local('npm install')
-        add_missing_typings()
+        if  args[0] == 'init' and exists('~/code/ad_node_modules') and exists('~/code/ad_typings'):
+            local('cp -r ~/code/ad_node_modules node_modules')
+            local('cp -r ~/code/ad_typings typings')
+        else:
+            local('npm install')
+            local('cp -r node_modules ~/code/ad_node_modules')
+            add_missing_typings()
+            local('cp -r typings ~/code/ad_typings')
         local('npm run tsc')
 
     # Copy templates from src to dist directories
@@ -85,7 +91,7 @@ def setup(*args, **kwargs):
     # Link to media
     with settings(warn_only=True):
         with lcd(join(DJANGO_ROOT)):
-            for resource in ANGULAR_RESOURCES:
+            if not exists('media'):
                 local('ln -s ~/Documents/ahernp.com/site/ media')
 
     # Reset database

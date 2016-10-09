@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:8000/" />
+<title>sanityCheck</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">sanityCheck</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td></td>
+	<td>'/'</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=personal-website-of-paul-ahern</td>
+	<td>Personal Website of Paul Ahern</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Tools</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Match</td>
+	<td>Match</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Cardgen</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=ad-cardgen &gt; h1</td>
+	<td>Generate Card Output</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=ahernp.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Blog')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>New Job 2016</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Archive</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h1</td>
+	<td>Blog</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=ahernp.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Site Map</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h1</td>
+	<td>Site Map</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=ahernp.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h2</td>
+	<td>Settings Flags</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=ahernp.com</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

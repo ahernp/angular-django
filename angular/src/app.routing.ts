@@ -7,6 +7,7 @@ import {HomepageComponent} from './homepage/homepage.component';
 import {MarkdownPageDetailComponent} from './markdown-pages/markdown-page-detail.component';
 import {SitemapComponent} from "./sitemap/sitemap.component";
 import {ToolsComponent} from "./tools/tools.component";
+import {TimersComponent} from "./timers/timers.component";
 
 const appRoutes: Routes = [
     {
@@ -36,6 +37,10 @@ const appRoutes: Routes = [
     {
         path: 'tools',
         component: ToolsComponent
+    },
+    {
+        path: 'timers',
+        component: TimersComponent
     },
     {
         path: '**',

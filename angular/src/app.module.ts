@@ -8,8 +8,9 @@ import {AppComponent} from './app.component';
 import {appRouting} from "./app.routing";
 
 import {CoreModule} from "./core/core.module";
-import {ToolsModule} from "./tools/tools.module";
 import {MarkdownPagesModule} from "./markdown-pages/markdown-pages.module";
+import {TimersModule} from "./timers/timers.module";
+import {ToolsModule} from "./tools/tools.module";
 
 import {BlogComponent} from "./blog/blog.component";
 
@@ -29,6 +30,7 @@ import {SitemapComponent} from "./sitemap/sitemap.component";
         appRouting,
         CoreModule,
         MarkdownPagesModule,
+        TimersModule,
         ToolsModule,
     ],
     declarations: [

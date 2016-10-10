@@ -76,8 +76,11 @@ const navigationPanel = [
             <Breadcrumb> {title: 'Cardgen', url: '/tools/cardgen'},
             <Breadcrumb> {title: 'Deduplicate', url: '/tools/deduplicate'},
             <Breadcrumb> {title: 'Feedreader', url: '/tools/feedreader'},
-            <Breadcrumb> {title: 'Timers', url: '/tools/timers'},
         ]
+    },
+   {
+        parent: <Breadcrumb> {title: 'Timers', url: '/timers'},
+        children: []
     },
 ];
 
@@ -89,9 +92,11 @@ const navigationPanel = [
         <p *ngFor="let section of navigationPanel">
             <a *ngIf="section.parent.url" routerLink="{{section.parent.url}}">{{section.parent.title}}</a>
             <span *ngIf="!section.parent.url">{{section.parent.title}}</span>
-            &rsaquo;
-            <span *ngFor="let breadcrumb of section.children">
-                <ad-breadcrumb [breadcrumb]="breadcrumb"></ad-breadcrumb>
+            <span *ngIf="section.children.length > 0">
+                &rsaquo;
+                <span *ngFor="let breadcrumb of section.children">
+                    <ad-breadcrumb [breadcrumb]="breadcrumb"></ad-breadcrumb>
+                </span>
             </span>
         </p>
     `,

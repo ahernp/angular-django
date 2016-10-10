@@ -33,7 +33,7 @@ def run_shell_command(command, cwd):
     return stdout
 
 
-def dashboard(request):
+def project_state_at_startup():
     """
     Collect information about the state of the system.
     """
@@ -59,6 +59,16 @@ def dashboard(request):
             'expected': expected,
             'actual': actual_setting
         })
+    return data
+
+PROJECT_STATE = project_state_at_startup()
+
+
+def dashboard(request):
+    """
+    Collect information about the state of the system.
+    """
+    data = PROJECT_STATE
 
     data['timeChecked'] = timezone.now().strftime('%Y-%m-%d %H:%M:%S')
     return HttpResponse(json.dumps(data), content_type='application/json')

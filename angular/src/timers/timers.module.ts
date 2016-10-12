@@ -5,6 +5,7 @@ import {CommonModule} from '@angular/common';
 import {CoreModule} from "../core/core.module";
 
 import {TimersComponent} from "./timers.component";
+import {TimerComponent} from "./timer.component";
 
 @NgModule({
     imports: [
@@ -13,6 +14,7 @@ import {TimersComponent} from "./timers.component";
     ],
     declarations: [
         TimersComponent,
+        TimerComponent,
     ],
     providers: [
     ],

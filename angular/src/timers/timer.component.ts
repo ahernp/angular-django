@@ -1,5 +1,13 @@
 import {Component, Input, OnInit} from '@angular/core';
 
+import {leadingZero} from "../app.settings";
+
+const second: number = 1000;
+const minute: number = second * 60;
+const hour: number = minute * 60
+const day: number = hour * 24;
+const week: number = day * 7;
+
 @Component({
     selector: 'ad-timer',
     template: `{{timeDiff}}`
@@ -11,11 +19,11 @@ export class TimerComponent implements OnInit {
     timeDiff: string;
 
     calcTimeDifference(): void {
-        var timeDiff = '';
-        var now = new Date();
+        var timeDiff: string = '';
+        var now: Date = new Date();
 
-        var fromTime = (now < this.targetTime) ? now : this.targetTime;
-        var toTime = (now > this.targetTime) ? now : this.targetTime;
+        var fromTime: Date = (now < this.targetTime) ? now : this.targetTime;
+        var toTime:Date = (now > this.targetTime) ? now : this.targetTime;
 
         var fromYear: number = fromTime.getUTCFullYear();
         var toYear: number = toTime.getUTCFullYear();
@@ -23,9 +31,6 @@ export class TimerComponent implements OnInit {
 
         var fromMonth: number = fromTime.getUTCMonth();
         var toMonth: number = toTime.getUTCMonth();
-
-        var fromMonthDay: number = fromTime.getUTCDate();
-        var toMonthDay: number = toTime.getUTCDate();
 
         var fromMonthDay: number = fromTime.getUTCDate();
         var toMonthDay: number = toTime.getUTCDate();
@@ -40,30 +45,61 @@ export class TimerComponent implements OnInit {
         var toSecond: number = toTime.getUTCSeconds();
 
         if (fromMonth > toMonth ||
-            (fromMonth == toMonth && fromMonthDay > fromMonthDay) ||
-            (fromMonth == toMonth && fromMonthDay == fromMonthDay && fromHour > toHour) ||
-            (fromMonth == toMonth && fromMonthDay == fromMonthDay && fromHour == toHour && fromMinute > toMinute) ||
-            (fromMonth == toMonth && fromMonthDay == fromMonthDay && fromHour == toHour && fromMinute == toMinute && fromSecond > toSecond)) {
-            var monthDiff = 12 + toMonth - fromMonth;
+            (fromMonth == toMonth && fromMonthDay > toMonthDay) ||
+            (fromMonth == toMonth && fromMonthDay == toMonthDay && fromHour > toHour) ||
+            (fromMonth == toMonth && fromMonthDay == toMonthDay && fromHour == toHour && fromMinute > toMinute) ||
+            (fromMonth == toMonth && fromMonthDay == toMonthDay && fromHour == toHour && fromMinute == toMinute && fromSecond > toSecond)) {
+            var monthDiff: number = 11 + toMonth - fromMonth;
             yearDiff -= 1;
         }
         else
-            monthDiff = toMonth - fromMonth;
+            var monthDiff: number = toMonth - fromMonth;
 
-        if (yearDiff > 0) {
-            timeDiff = '' + yearDiff + ' year';
-            if (yearDiff > 1)
-                timeDiff += 's';
+        if (fromMonthDay > toMonthDay ||
+            (fromMonthDay == toMonthDay && fromHour > toHour) ||
+            (fromMonthDay == toMonthDay && fromHour == toHour && fromMinute > toMinute) ||
+            (fromMonthDay == toMonthDay && fromHour == toHour && fromMinute == toMinute && fromSecond > toSecond))
+            monthDiff -= 1;
+
+
+        var fromTimeWithinOneMonth: Date = new Date(`${fromYear+yearDiff}-${leadingZero(fromMonth+monthDiff+1)}-${leadingZero(fromMonthDay)}T${leadingZero(fromHour)}:${leadingZero(fromMinute)}:${leadingZero(fromSecond)}Z`);
+        var difference: number = toTime.valueOf() - fromTimeWithinOneMonth.valueOf();
+
+        var weekDiff: number = Math.floor(difference / week);
+        difference = difference % week;
+
+        var dayDiff: number = Math.floor(difference / day);
+        difference = difference % day;
+
+        var hourDiff: number = Math.floor(difference / hour);
+        difference = difference % hour;
+
+        var minuteDiff: number = Math.floor(difference / minute);
+        difference = difference % minute;
+
+        var secondDiff: number = Math.floor(difference / second);
+
+        var addDiffString = (difference: number, label): string => {
+            var timeDiff: string = '';
+            if (difference > 0) {
+                timeDiff = ', ' + difference + ' ' + label;
+                if (difference > 1)
+                    timeDiff += 's';
+            }
+            return timeDiff
         }
 
-        if (monthDiff > 0) {
-            timeDiff += ' ';
-            timeDiff += monthDiff + ' month';
-            if (monthDiff > 1)
-                timeDiff += 's';
-        }
+        var timeDiff: string = '';
 
-        this.timeDiff = timeDiff;
+        timeDiff += addDiffString(yearDiff, 'year');
+        timeDiff += addDiffString(monthDiff, 'month');
+        timeDiff += addDiffString(weekDiff, 'week');
+        timeDiff += addDiffString(dayDiff, 'day');
+        timeDiff += addDiffString(hourDiff, 'hour');
+        timeDiff += addDiffString(minuteDiff, 'minute');
+        timeDiff += addDiffString(secondDiff, 'second');
+
+        this.timeDiff = timeDiff.substring(2);
 
     }
 

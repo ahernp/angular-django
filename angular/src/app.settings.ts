@@ -7,11 +7,11 @@ export const rootBreadcrumb = new Breadcrumb({title: rootTitle, url: rootUrl});
 export const markdownBreadcrumb = new Breadcrumb({title: 'Markdown', url: '/page/markdown'});
 export const adminBreadcrumb = new Breadcrumb({title: 'Admin', url: '/admin/', linkFlag: true});
 
-function leadingZero(amount: number): string {
+export function leadingZero(amount: number): string {
     return amount < 10 ? `0${amount}` : `${amount}`;
 }
 
-export function toDateTimeString(date: Date):string {
+export function toDateTimeString(date: Date): string {
     return '' +
         date.getFullYear() + '-' +
         leadingZero(date.getUTCMonth()) + '-' +

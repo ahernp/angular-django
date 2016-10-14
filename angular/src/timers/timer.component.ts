@@ -29,8 +29,8 @@ export class TimerComponent implements OnInit {
         var toYear: number = toTime.getUTCFullYear();
         var yearDiff= toYear - fromYear;
 
-        var fromMonth: number = fromTime.getUTCMonth();
-        var toMonth: number = toTime.getUTCMonth();
+        var fromMonth: number = fromTime.getUTCMonth() + 1;
+        var toMonth: number = toTime.getUTCMonth() + 1;
 
         var fromMonthDay: number = fromTime.getUTCDate();
         var toMonthDay: number = toTime.getUTCDate();
@@ -44,25 +44,44 @@ export class TimerComponent implements OnInit {
         var fromSecond: number = fromTime.getUTCSeconds();
         var toSecond: number = toTime.getUTCSeconds();
 
-        if (fromMonth > toMonth ||
+        var fromTimeLaterInYear: boolean = (fromMonth > toMonth ||
             (fromMonth == toMonth && fromMonthDay > toMonthDay) ||
             (fromMonth == toMonth && fromMonthDay == toMonthDay && fromHour > toHour) ||
             (fromMonth == toMonth && fromMonthDay == toMonthDay && fromHour == toHour && fromMinute > toMinute) ||
-            (fromMonth == toMonth && fromMonthDay == toMonthDay && fromHour == toHour && fromMinute == toMinute && fromSecond > toSecond)) {
-            var monthDiff: number = 11 + toMonth - fromMonth;
+            (fromMonth == toMonth && fromMonthDay == toMonthDay && fromHour == toHour && fromMinute == toMinute && fromSecond > toSecond));
+
+        if (fromTimeLaterInYear) {
+            var monthDiff: number = 12 + toMonth - fromMonth;
             yearDiff -= 1;
         }
         else
             var monthDiff: number = toMonth - fromMonth;
 
-        if (fromMonthDay > toMonthDay ||
+        var fromTimeLaterInMonth: boolean = (fromMonthDay > toMonthDay ||
             (fromMonthDay == toMonthDay && fromHour > toHour) ||
             (fromMonthDay == toMonthDay && fromHour == toHour && fromMinute > toMinute) ||
-            (fromMonthDay == toMonthDay && fromHour == toHour && fromMinute == toMinute && fromSecond > toSecond))
+            (fromMonthDay == toMonthDay && fromHour == toHour && fromMinute == toMinute && fromSecond > toSecond));
+
+        if (fromTimeLaterInMonth)
             monthDiff -= 1;
 
+        var fromYearWithinOneMonth = (fromTimeLaterInMonth && toMonth == 1) ? toYear - 1 : toYear;
+        var fromMonthWithinOneMonth = (fromMonth + monthDiff) % 12;
+        var daysInMonth = (year: number, month: number): number => new Date(year, month, 0).getDate();
+        var fromMonthWithinOneMonthEnd: number = daysInMonth(
+            fromYearWithinOneMonth,
+            (fromMonthWithinOneMonth == 12) ? 1 : fromMonthWithinOneMonth);
+        if (fromMonthDay > fromMonthWithinOneMonthEnd)
+            fromMonthDay = fromMonthWithinOneMonthEnd;
 
-        var fromTimeWithinOneMonth: Date = new Date(`${fromYear+yearDiff}-${leadingZero(fromMonth+monthDiff+1)}-${leadingZero(fromMonthDay)}T${leadingZero(fromHour)}:${leadingZero(fromMinute)}:${leadingZero(fromSecond)}Z`);
+        var fromTimeWithinOneMonth: Date = new Date(Date.UTC(
+            fromYearWithinOneMonth,
+            fromMonthWithinOneMonth - 1,
+            fromMonthDay,
+            fromHour,
+            fromMinute,
+            fromSecond));
+
         var difference: number = toTime.valueOf() - fromTimeWithinOneMonth.valueOf();
 
         var weekDiff: number = Math.floor(difference / week);
@@ -79,7 +98,7 @@ export class TimerComponent implements OnInit {
 
         var secondDiff: number = Math.floor(difference / second);
 
-        var addDiffString = (difference: number, label): string => {
+        var addDiffString = (difference: number, label: string): string => {
             var timeDiff: string = '';
             if (difference > 0) {
                 timeDiff = ', ' + difference + ' ' + label;

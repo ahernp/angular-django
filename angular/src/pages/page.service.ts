@@ -3,19 +3,16 @@ import {Http} from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import {MarkdownPage} from './markdown-page';
+import {Page} from './page';
 
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 
 import {apiEndpoint} from "../app.settings";
 
 @Injectable()
-export class MarkdownPageService {
+export class PageService {
 
     constructor(private http:Http) {
-    }
-
-    getAllPageBreadcrumbs() {
     }
 
     getPageBreadcrumbs(slug:string) {
@@ -34,14 +31,14 @@ export class MarkdownPageService {
     getPage(slug:string) {
         return this.http.get(`${apiEndpoint}/pages/read/${slug}`)
             .toPromise()
-            .then(response => response.json() as MarkdownPage)
+            .then(response => response.json() as Page)
             .catch(this.handleError);
     }
 
     getChildPages(slug:string) {
         return this.http.get(`${apiEndpoint}/pages/childpages/${slug}`)
             .toPromise()
-            .then(response => response.json() as MarkdownPage[])
+            .then(response => response.json() as Page[])
             .catch(this.handleError);
     }
 

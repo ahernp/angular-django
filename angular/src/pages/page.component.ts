@@ -5,8 +5,8 @@ import {Title} from '@angular/platform-browser';
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 
-import {MarkdownPage} from './markdown-page';
-import {MarkdownPageService} from './markdown-page.service';
+import {Page} from './page';
+import {PageService} from './page.service';
 
 import {Footer} from "../core/footer/footer";
 
@@ -25,18 +25,18 @@ import {markdownBreadcrumb} from "../app.settings";
         `,
     providers: []
 })
-export class MarkdownPageDetailComponent implements OnInit {
-    page: MarkdownPage;
+export class PageComponent implements OnInit {
+    page: Page;
     breadcrumbs: Breadcrumb[];
     footer: Footer;
     showSource: boolean = false;
     error: any;
 
     constructor(
-        private markdownPageService:MarkdownPageService,
-        private breadcrumbService:BreadcrumbService,
+        private pageService: PageService,
+        private breadcrumbService: BreadcrumbService,
         private route: ActivatedRoute,
-        private titleService:Title) {
+        private titleService: Title) {
     }
 
     ngOnInit(): void {
@@ -44,7 +44,7 @@ export class MarkdownPageDetailComponent implements OnInit {
     }
 
     getCurrentPage(slug:string) {
-        this.markdownPageService
+        this.pageService
             .getPage(slug)
             .then(page => {
                 this.page = page;

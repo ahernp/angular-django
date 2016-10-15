@@ -1,8 +1,8 @@
 import {Component, OnInit, Output} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 
-import {MarkdownPage} from '../markdown-pages/markdown-page';
-import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
+import {Page} from '../pages/page';
+import {PageService} from '../pages/page.service';
 
 import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
@@ -54,14 +54,14 @@ const homepageSlug: string = 'ahernp-com';
 export class HomepageComponent implements OnInit {
     @Output() footer: Footer;
 
-    homepage: MarkdownPage;
+    homepage: Page;
     breadcrumbs: Breadcrumb[];
     showSource: boolean = false;
     error: any;
 
     constructor(
-        private markdownPageService:MarkdownPageService,
-        private breadcrumbService:BreadcrumbService,
+        private pageService: PageService,
+        private breadcrumbService: BreadcrumbService,
         private titleService:Title) {
     }
 
@@ -71,7 +71,7 @@ export class HomepageComponent implements OnInit {
     }
 
     getHomepage() {
-        this.markdownPageService
+        this.pageService
             .getPage(homepageSlug)
             .then(page => {
                 this.homepage = page;

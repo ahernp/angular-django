@@ -4,8 +4,8 @@ import {Title} from '@angular/platform-browser';
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 
-import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
-import {MarkdownPage} from "../markdown-pages/markdown-page";
+import {PageService} from '../pages/page.service';
+import {Page} from "../pages/page";
 
 import {Footer} from "../core/footer/footer";
 
@@ -40,14 +40,14 @@ export const blogFeedBreadcrumb = new Breadcrumb({title: 'RSS', url: '/blog/feed
 export class BlogComponent implements OnInit {
     title: string = blogTitle;
     breadcrumbs: Breadcrumb[];
-    pages: MarkdownPage[];
+    pages: Page[];
     footer: Footer;
     error: any;
 
     constructor(
-        private markdownPageService:MarkdownPageService,
-        private breadcrumbService:BreadcrumbService,
-        private titleService:Title) {
+        private pageService: PageService,
+        private breadcrumbService: BreadcrumbService,
+        private titleService: Title) {
     }
 
     ngOnInit(): void {
@@ -72,7 +72,7 @@ export class BlogComponent implements OnInit {
 
 
     getBlogPages() {
-        this.markdownPageService
+        this.pageService
             .getChildPages('blog')
             .then(blogPages => {
                 this.pages = blogPages;

@@ -5,7 +5,7 @@ import {Title} from '@angular/platform-browser';
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 
-import {MarkdownPageService} from '../markdown-pages/markdown-page.service';
+import {PageService} from '../pages/page.service';
 
 import {Footer} from "../core/footer/footer";
 
@@ -51,11 +51,11 @@ export class SitemapComponent implements OnInit {
     error: any;
 
     constructor(
-        private markdownPageService:MarkdownPageService,
-        private breadcrumbService:BreadcrumbService,
+        private pageService: PageService,
+        private breadcrumbService: BreadcrumbService,
         private route: ActivatedRoute,
         private router: Router,
-        private titleService:Title) {
+        private titleService: Title) {
     }
 
     ngOnInit(): void {
@@ -87,7 +87,7 @@ export class SitemapComponent implements OnInit {
             this.titleService.setTitle(sitemapTitle);
         }
         else {
-            var parent = this.markdownPageService
+            var parent = this.pageService
                 .getPage(this.parent_slug)
                 .then(page => {
                     this.populateHeader(page.title);
@@ -118,7 +118,7 @@ export class SitemapComponent implements OnInit {
     }
 
     getBreadcrumbs() {
-        this.markdownPageService
+        this.pageService
             .getPageBreadcrumbs(this.parent_slug)
             .then(pageBreadcrumbs => {
                 this.sitemap = pageBreadcrumbs;

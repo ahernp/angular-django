@@ -1,14 +1,14 @@
 import {Component, Input} from '@angular/core';
 
-import {MarkdownPage} from './markdown-page';
+import {Page} from './page';
 
 @Component({
     selector: 'ad-page-source',
     template: `
-        <h2>Markdown Source</h2>
+        <h2>Source Code</h2>
         <pre>{{page.content}}</pre>
     `
 })
-export class MarkdownPageSourceComponent {
-    @Input() page: MarkdownPage;
+export class PageSourceComponent {
+    @Input() page: Page;
 }

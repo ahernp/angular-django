@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 
-import {MarkdownPage} from './markdown-page';
+import {Page} from './page';
 
 @Component({
     selector: 'ad-markdown-content',
@@ -8,6 +8,6 @@ import {MarkdownPage} from './markdown-page';
         <div [innerHTML]="page.content|markdown"></div>
     `
 })
-export class MarkdownContentComponent {
-    @Input() page: MarkdownPage;
+export class MarkdownComponent {
+    @Input() page: Page;
 }

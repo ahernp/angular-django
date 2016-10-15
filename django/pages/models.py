@@ -4,6 +4,13 @@ import json
 
 from django.db import models
 
+MARKDOWN = 'Markdown'
+TABLE = 'Table'
+
+CONTENT_TYPE_CHOICES = (
+    (MARKDOWN, 'Markdown'),
+    (TABLE, 'Table'),
+)
 
 class Page(models.Model):
     title = models.CharField(max_length=250)
@@ -17,8 +24,10 @@ class Page(models.Model):
                                  null=True,
                                  blank=True,
                                  help_text='dd/mm/yyyy')
-    content = models.TextField(verbose_name='Page body',
-                               help_text='Use Markdown syntax.')
+    content_type = models.CharField(max_length=10,
+                                    choices=CONTENT_TYPE_CHOICES,
+                                    default=MARKDOWN)
+    content = models.TextField(verbose_name='Page content')
 
     class Meta:
         ordering = ['title']
@@ -33,6 +42,7 @@ class Page(models.Model):
                            'parentName': self.parent.title,
                            'updated': self.updated.strftime('%Y-%m-%d %H:%M:%S'),
                            'published': self.published.strftime('%Y-%m-%d') if self.published else '',
+                           'content_type': self.content_type,
                            'content': self.content})
 
     json = property(_get_json)

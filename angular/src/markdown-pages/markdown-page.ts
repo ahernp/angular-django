@@ -5,5 +5,6 @@ export class MarkdownPage {
     parentName: string;
     updated: string;
     published: string;
+    content_type: string;
     content: string;
 }

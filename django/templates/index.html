@@ -1,24 +1,28 @@
 <html>
-    <head>
-        <base href="/">
-        <title>ahernp.com</title>
-        <meta charset="UTF-8">
-        <link rel="shortcut icon" href="/static/favicon.ico" type="image/ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/static/styles.css">
 
-        <script src="/static/node_modules/core-js/client/shim.min.js"></script>
-        <script src="/static/node_modules/zone.js/dist/zone.js"></script>
-        <script src="/static/node_modules/reflect-metadata/Reflect.js"></script>
-        <script src="/static/node_modules/systemjs/dist/system.src.js"></script>
+<head>
+    <base href="/">
+    <title>ahernp.com</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/styles.css">
 
-        <script src="/static/systemjs.config.js"></script>
-        <script>
-            System.import('app').catch(function (err) { console.error(err); });
-        </script>
-    </head>
+    <script src="/static/node_modules/core-js/client/shim.min.js"></script>
+    <script src="/static/node_modules/zone.js/dist/zone.js"></script>
+    <script src="/static/node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="/static/node_modules/systemjs/dist/system.src.js"></script>
 
-    <body style="background-color: {% if DEBUG %}#ddf{% else %}#fff{% endif %}">
-        <ad-app>Loading...</ad-app>
-    </body>
+    <script src="/static/systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function(err) {
+            console.error(err);
+        });
+    </script>
+</head>
+
+<body style="background-color: {% if DEBUG %}#ddf{% else %}#fff{% endif %}">
+    <ad-app>Loading...</ad-app>
+</body>
+
 </html>

@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 
-import {leadingZero} from "../app.settings";
+import {leadingZero} from '../app.settings';
 
 const second: number = 1000;
 const minute: number = second * 60;
@@ -23,11 +23,11 @@ export class TimerComponent implements OnInit {
         var now: Date = new Date();
 
         var fromTime: Date = (now < this.targetTime) ? now : this.targetTime;
-        var toTime:Date = (now > this.targetTime) ? now : this.targetTime;
+        var toTime: Date = (now > this.targetTime) ? now : this.targetTime;
 
         var fromYear: number = fromTime.getUTCFullYear();
         var toYear: number = toTime.getUTCFullYear();
-        var yearDiff= toYear - fromYear;
+        var yearDiff = toYear - fromYear;
 
         var fromMonth: number = fromTime.getUTCMonth() + 1;
         var toMonth: number = toTime.getUTCMonth() + 1;
@@ -119,7 +119,6 @@ export class TimerComponent implements OnInit {
         timeDiff += addDiffString(secondDiff, 'second');
 
         this.timeDiff = timeDiff.substring(2);
-
     }
 
     ngOnInit(): void {

@@ -1,7 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 
-import {Page} from '../pages/page';
-
 @Component({
     moduleId: module.id,
     selector: 'ad-homepage',

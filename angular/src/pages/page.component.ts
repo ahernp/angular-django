@@ -10,7 +10,7 @@ import {PageService} from './page.service';
 
 import {Footer} from "../core/footer/footer";
 
-import {markdownBreadcrumb} from "../app.settings";
+import {markdownBreadcrumb, rootSlug} from "../app.settings";
 
 @Component({
     selector: 'ad-page',
@@ -18,7 +18,8 @@ import {markdownBreadcrumb} from "../app.settings";
         <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
         <div id="content">
             <h2 class="published_date" *ngIf="page && page.published">{{page.published|date:'d MMMM y'}}</h2>
-            <ad-markdown-content *ngIf="page" [page]="page"></ad-markdown-content>
+            <ad-homepage *ngIf="page && page.contentType == 'homepage'" [content]="page.content"></ad-homepage>
+            <ad-markdown-content *ngIf="page && page.contentType == 'markdown'" [content]="page.content"></ad-markdown-content>
             <ad-page-source *ngIf="showSource" [page]="page"></ad-page-source>
         </div>
         <ad-footer id="footer" *ngIf="footer" [footer]="footer" (onToggleSource)="onToggleSource($event)"></ad-footer>
@@ -43,12 +44,13 @@ export class PageComponent implements OnInit {
         this.route.params.forEach((params: Params) => this.getCurrentPage(params['slug']));
     }
 
-    getCurrentPage(slug:string) {
+    getCurrentPage(slug: string) {
+        if (slug == undefined)
+            slug = rootSlug;
         this.pageService
             .getPage(slug)
             .then(page => {
                 this.page = page;
-
                 this.titleService.setTitle(this.page.title);
 
                 var breadcrumb = new Breadcrumb({

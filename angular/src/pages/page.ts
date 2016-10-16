@@ -5,6 +5,6 @@ export class Page {
     parentName: string;
     updated: string;
     published: string;
-    content_type: string;
+    contentType: string;
     content: string;
 }

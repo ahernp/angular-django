@@ -11,7 +11,7 @@ export class BreadcrumbService {
     addBreadcrumb(newBreadcrumb: Breadcrumb): Breadcrumb[] {
         this.breadcrumbs.push(newBreadcrumb);
         for (var i = 0; i < this.breadcrumbs.length; i++) {
-            if (this.breadcrumbs[i].url == newBreadcrumb.url) {
+            if (this.breadcrumbs[i].title == newBreadcrumb.title) {
                 this.breadcrumbs = this.breadcrumbs.slice(0, i+1);
                 break
             }

@@ -4,10 +4,12 @@ import json
 
 from django.db import models
 
-MARKDOWN = 'Markdown'
-TABLE = 'Table'
+HOMEPAGE = 'homepage'
+MARKDOWN = 'markdown'
+TABLE = 'table'
 
 CONTENT_TYPE_CHOICES = (
+    (HOMEPAGE, 'Homepage'),
     (MARKDOWN, 'Markdown'),
     (TABLE, 'Table'),
 )
@@ -42,7 +44,7 @@ class Page(models.Model):
                            'parentName': self.parent.title,
                            'updated': self.updated.strftime('%Y-%m-%d %H:%M:%S'),
                            'published': self.published.strftime('%Y-%m-%d') if self.published else '',
-                           'content_type': self.content_type,
+                           'contentType': self.content_type,
                            'content': self.content})
 
     json = property(_get_json)

@@ -12,7 +12,7 @@ import {TimersComponent} from "./timers/timers.component";
 const appRoutes: Routes = [
     {
         path: '',
-        component: HomepageComponent
+        component: PageComponent
     },
     {
         path: 'page/:slug',

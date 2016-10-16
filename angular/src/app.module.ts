@@ -17,9 +17,6 @@ import {BlogComponent} from "./blog/blog.component";
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {DashboardService} from "./dashboard/dashboard.service";
 
-import {HomepageComponent} from "./homepage/homepage.component";
-import {HomepageNavigationComponent} from "./homepage/homepage-navigation.component";
-
 import {SitemapComponent} from "./sitemap/sitemap.component";
 
 @NgModule({
@@ -36,10 +33,8 @@ import {SitemapComponent} from "./sitemap/sitemap.component";
     declarations: [
         AppComponent,
         DashboardComponent,
-        HomepageComponent,
         SitemapComponent,
         BlogComponent,
-        HomepageNavigationComponent,
     ],
     providers: [
         DashboardService,

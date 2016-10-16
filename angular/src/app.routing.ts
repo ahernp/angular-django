@@ -3,7 +3,6 @@ import {Routes, RouterModule} from '@angular/router';
 
 import {BlogComponent} from "./blog/blog.component";
 import {DashboardComponent} from './dashboard/dashboard.component';
-import {HomepageComponent} from './homepage/homepage.component';
 import {PageComponent} from './pages/page.component';
 import {SitemapComponent} from "./sitemap/sitemap.component";
 import {ToolsComponent} from "./tools/tools.component";

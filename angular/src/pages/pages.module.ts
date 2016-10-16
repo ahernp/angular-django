@@ -3,13 +3,13 @@ import {RouterModule} from '@angular/router';
 
 import {CoreModule} from "../core/core.module";
 
-import {HomepageComponent} from "./homepage.component";
-import {HomepageNavigationComponent} from "./homepage-navigation.component";
-import {MarkdownComponent} from "./markdown.component";
+import {HomepageComponent} from "./homepage/homepage.component";
+import {HomepageNavigationComponent} from "./homepage/homepage-navigation.component";
+import {MarkdownComponent} from "./markdown/markdown.component";
 import {PageComponent} from "./page.component";
 import {PageSourceComponent} from "./page-source.component";
 import {PageService} from "./page.service";
-import {MarkdownToHtmlPipe} from "./markdown.pipe";
+import {MarkdownToHtmlPipe} from "./markdown/markdown.pipe";
 
 @NgModule({
     imports: [

@@ -12,11 +12,12 @@ import {toDateTimeString, rootBreadcrumb, adminBreadcrumb} from "../app.settings
 const toolsTitle: string = 'Tools';
 
 const cardgenBreadcrumb = <Breadcrumb> {title: 'Cardgen', url: 'cardgen'};
+const coloursBreadcrumb = <Breadcrumb> {title: 'Colours', url: 'colours'};
 const compareBreadcrumb = <Breadcrumb> {title: 'Compare', url: 'compare'};
 const deduplicateBreadcrumb = <Breadcrumb> {title: 'Deduplicate', url: 'deduplicate'};
 const matchBreadcrumb = <Breadcrumb> {title: 'Match', url: 'match'};
 
-const tools = [cardgenBreadcrumb, compareBreadcrumb, deduplicateBreadcrumb, matchBreadcrumb];
+const tools = [cardgenBreadcrumb, coloursBreadcrumb, compareBreadcrumb, deduplicateBreadcrumb, matchBreadcrumb];
 
 @Component({
     selector: 'ad-tools',

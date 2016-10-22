@@ -7,6 +7,7 @@ import {CardgenComponent} from "./cardgen.component";
 import {CompareComponent} from "./compare.component";
 import {DeduplicateComponent} from "./deduplicate.component";
 import {MatchComponent} from "./match.component";
+import {ColoursComponent} from "./colours.component";
 
 const toolsRoutes: Routes = [
     {
@@ -16,6 +17,10 @@ const toolsRoutes: Routes = [
             {
                 path: 'cardgen',
                 component: CardgenComponent,
+            },
+            {
+                path: 'colours',
+                component: ColoursComponent,
             },
             {
                 path: 'compare',

@@ -7,10 +7,9 @@ import {Component} from '@angular/core';
         <p>Sort and remove duplicates from a list:</p>
         <p>
             <label>Input:<br />
-            <textarea [(ngModel)]="inputString" rows="4" cols="56"></textarea>
+            <textarea [(ngModel)]="inputString" (ngModelChange)="deduplicate($event)" rows="4" cols="56"></textarea>
             </label>
         </p>
-        <button (click)="deduplicate()">Run Deduplicate</button>
         <p>
             <label>Output:<br />
             <textarea [(ngModel)]="outputString" rows="4" cols="56"></textarea>

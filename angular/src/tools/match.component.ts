@@ -7,22 +7,21 @@ import {Component} from '@angular/core';
         <p>Keep or exclude matching records.</p>
         <p>
             <label>Input:<br />
-            <textarea [(ngModel)]="inputString" rows="4" cols="56"></textarea>
+            <textarea [(ngModel)]="inputString" (ngModelChange)="match($event)" rows="4" cols="56"></textarea>
             </label>
         </p>
         <p>
             <label>Keys:<br />
-            <textarea [(ngModel)]="keyString" rows="4" cols="56"></textarea>
+            <textarea [(ngModel)]="keyString" (ngModelChange)="match($event)" rows="4" cols="56"></textarea>
             </label>
         </p>
         <p>
-            <button (click)="match()">Check for Matches</button>
-            <input [(ngModel)]="excludeFlag" type="checkbox" name="Exclude matches">
+            <input [(ngModel)]="excludeFlag" (ngModelChange)="match($event)" type="checkbox" name="Exclude matches">
             Exclude matches
         </p>
         <p>
             <label>Output:<br />
-            <textarea [(ngModel)]="output" rows="4" cols="56"></textarea>
+            <textarea [ngModel]="output" rows="4" cols="56"></textarea>
             </label>
         </p>
     `

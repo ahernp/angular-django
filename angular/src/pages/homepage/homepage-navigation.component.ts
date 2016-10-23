@@ -51,7 +51,6 @@ const navigationPanel = [
     {
         parent: <Breadcrumb> {title: 'Ref', url: '/sitemap/reference'},
         children: [
-            <Breadcrumb> {title: 'Colours', url: '/page/html-colours'},
             <Breadcrumb> {title: 'Linux', url: '/page/linux'},
             <Breadcrumb> {title: 'MySQL', url: '/page/mysql'},
             <Breadcrumb> {title: 'Python', url: '/page/python'},

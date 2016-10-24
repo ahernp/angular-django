@@ -18,8 +18,14 @@ import {markdownBreadcrumb, rootSlug} from "../app.settings";
         <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
         <div id="content">
             <h2 class="published_date" *ngIf="page && page.published">{{page.published|date:'d MMMM y'}}</h2>
+            <template [ngIf]="page && page.contentType == 'markdown'">
+                <h1>{{page.title}}</h1>
+                <template ngFor let-breadcrumb [ngForOf]="childBreadcrumbs">
+                    <ad-breadcrumb [breadcrumb]="breadcrumb"></ad-breadcrumb>
+                </template>
+                <ad-markdown-content [content]="page.content"></ad-markdown-content>
+            </template>
             <ad-homepage *ngIf="page && page.contentType == 'homepage'" [content]="page.content"></ad-homepage>
-            <ad-markdown-content *ngIf="page && page.contentType == 'markdown'" [content]="page.content"></ad-markdown-content>
             <ad-page-source *ngIf="showSource" [page]="page"></ad-page-source>
         </div>
         <ad-footer id="footer" *ngIf="footer" [footer]="footer" (onToggleSource)="onToggleSource($event)"></ad-footer>
@@ -29,6 +35,7 @@ import {markdownBreadcrumb, rootSlug} from "../app.settings";
 export class PageComponent implements OnInit {
     page: Page;
     breadcrumbs: Breadcrumb[];
+    childBreadcrumbs: Breadcrumb[];
     footer: Footer;
     showSource: boolean = false;
     error: any;
@@ -72,6 +79,16 @@ export class PageComponent implements OnInit {
                         })
                     ],
                 });
+
+                if (this.page.contentType == 'markdown')
+                    this.pageService
+                        .getPageBreadcrumbs(slug)
+                        .then(pageBreadcrumbs => {
+                            this.childBreadcrumbs = pageBreadcrumbs;
+                        })
+                        .catch(error => this.error = error);
+                else
+                    this.childBreadcrumbs = [];
             })
             .catch(error => this.error = error);
     }

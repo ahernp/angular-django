@@ -124,6 +124,10 @@ export class SitemapComponent implements OnInit {
                 this.sitemap = pageBreadcrumbs;
                 if (this.parent_slug == undefined)
                     this.addClientsideEntries();
+                this.sitemap.sort(function (a, b) {
+                    return a.title.toLowerCase().localeCompare(
+                        b.title, 'en', {'sensitivity': 'base'});
+                });
             })
             .catch(error => this.error = error);
     }

@@ -6,7 +6,8 @@ import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 
 import {Footer} from "../core/footer/footer";
 
-import {toDateTimeString, adminBreadcrumb} from "../app.settings";
+import {adminBreadcrumb} from "../app.settings";
+import {toDateTimeString} from "../utilities";
 
 const timersTitle: string = 'Timers';
 const timersBreadcrumb = new Breadcrumb({title: 'Timers', url: '/timers'});

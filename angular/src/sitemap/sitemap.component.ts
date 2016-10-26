@@ -10,7 +10,8 @@ import {PageService} from '../pages/page.service';
 import {Footer} from "../core/footer/footer";
 
 import {dashboardTitle, dashboardUrl} from "../dashboard/dashboard.component";
-import {rootTitle, toDateTimeString, rootBreadcrumb, adminBreadcrumb} from "../app.settings";
+import {rootTitle, rootBreadcrumb, adminBreadcrumb} from "../app.settings";
+import {toDateTimeString} from "../utilities";
 
 export const sitemapTitle: string = 'Site Map';
 

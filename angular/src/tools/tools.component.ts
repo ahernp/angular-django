@@ -7,7 +7,8 @@ import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 
 import {Footer} from "../core/footer/footer";
 
-import {toDateTimeString, rootBreadcrumb, adminBreadcrumb} from "../app.settings";
+import {rootBreadcrumb, adminBreadcrumb} from "../app.settings";
+import {toDateTimeString} from "../utilities";
 
 const toolsTitle: string = 'Tools';
 

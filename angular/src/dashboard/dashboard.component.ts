@@ -9,7 +9,8 @@ import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 
 import {Footer} from "../core/footer/footer";
 
-import {rootTitle, toDateTimeString, adminBreadcrumb} from "../app.settings";
+import {rootTitle, adminBreadcrumb} from "../app.settings";
+import {toDateTimeString} from "../utilities";
 
 export const dashboardTitle: string = 'Dashboard';
 export const dashboardUrl: string = '/dashboard';

@@ -1,7 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 
-import {leadingZero} from '../app.settings';
-
 const second: number = 1000;
 const minute: number = second * 60;
 const hour: number = minute * 60

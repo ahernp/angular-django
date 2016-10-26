@@ -29,7 +29,8 @@ class Page(models.Model):
     content_type = models.CharField(max_length=10,
                                     choices=CONTENT_TYPE_CHOICES,
                                     default=MARKDOWN)
-    content = models.TextField(verbose_name='Page content')
+    content = models.TextField(verbose_name='Page content',
+                               blank=True)
 
     class Meta:
         ordering = ['title']

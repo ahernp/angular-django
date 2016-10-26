@@ -6,7 +6,7 @@ import {blogFeedBreadcrumb} from "../../blog/blog.component";
 
 const navigationPanel = [
     {
-        parent: <Breadcrumb> {title: 'App', url: '/sitemap/applications'},
+        parent: <Breadcrumb> {title: 'App', url: '/page/applications'},
         children: [
             <Breadcrumb> {title: 'Chrome', url: '/page/google-chrome'},
             <Breadcrumb> {title: 'Firefox', url: '/page/firefox'},
@@ -25,7 +25,7 @@ const navigationPanel = [
         children: []
     },
      {
-        parent: <Breadcrumb> {title: 'Library', url: '/sitemap/library'},
+        parent: <Breadcrumb> {title: 'Library', url: '/page/library'},
         children: [
             <Breadcrumb> {title: 'Books', url: '/page/books'},
             <Breadcrumb> {title: 'CDs', url: '/page/cds'},
@@ -49,7 +49,7 @@ const navigationPanel = [
         ]
     },
     {
-        parent: <Breadcrumb> {title: 'Ref', url: '/sitemap/reference'},
+        parent: <Breadcrumb> {title: 'Ref', url: '/page/reference'},
         children: [
             <Breadcrumb> {title: 'Linux', url: '/page/linux'},
             <Breadcrumb> {title: 'MySQL', url: '/page/mysql'},

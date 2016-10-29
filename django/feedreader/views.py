@@ -1,21 +1,18 @@
-from __future__ import absolute_import
+import json
 
-from django.views.generic import ListView
+from django.conf import settings
+from django.http import HttpResponse
 
-from feedreader.models import Entry
+from .models import Entry
 
 
-class EntryList(ListView):
-    """List of Entries"""
-    model = Entry
-    extra_context = {}
+def get_entries(request):
+    entries = Entry.objects.all().order_by('-published_time')[:settings.MAX_ENTRIES_SHOWN]
 
-    def dispatch(self, request, *args, **kwargs):
-        self.extra_context = build_context(request)
-        self.queryset = self.extra_context['entry_list']
-        return super(EntryList, self).dispatch(request, *args, **kwargs)
+    data = json.dumps([{'title': entry.title,
+                        'link': entry.link,
+                        'description': entry.description,
+                        'published_time': entry.published_time.strftime('%Y-%m-%d %H:%M:%S'),
+                        'feed': entry.feed.title} for entry in entries])
 
-    def get_context_data(self, **kwargs):
-        context = super(EntryList, self).get_context_data(**kwargs)
-        self.extra_context.update(context)
-        return self.extra_context
+    return HttpResponse(data, content_type='application/json')

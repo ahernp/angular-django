@@ -1,7 +1,7 @@
 from django.conf.urls import url
 
-from .views import EntryList
+from .views import get_entries
 
 urlpatterns = [
-    url(regex=r'^$', view=EntryList.as_view(), name='feed_list'),
+    url(regex=r'^$', view=get_entries, name='entries'),
 ]

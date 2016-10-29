@@ -61,10 +61,13 @@ class Feed(models.Model):
 
     def save(self, *args, **kwargs):
         """Poll new Feed"""
-        super(Feed, self).save(*args, **kwargs)
-        from feedreader.utils import poll_feed
-        poll_feed(self)
-
+        try:
+            Feed.objects.get(xml_url=self.xml_url)
+            super(Feed, self).save(*args, **kwargs)
+        except Feed.DoesNotExist:
+            super(Feed, self).save(*args, **kwargs)
+            from feedreader.utils import poll_feed
+            poll_feed(self)
 
 class EntryManager(models.Manager):
     def num_unread(self):

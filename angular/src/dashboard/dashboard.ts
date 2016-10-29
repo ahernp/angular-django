@@ -4,10 +4,16 @@ export class SettingsFlag {
     actual: boolean;
 }
 
+export class LogEntry {
+    level: string;
+    msg: string;
+    datetime: string;
+}
 export class Dashboard {
     timeChecked: string;
     hostname: string;
-    gitversion: number;
-    python_packages: string;
-    settings_flags: SettingsFlag[];
+    gitVersion: number;
+    pythonPackages: string;
+    settingsFlags: SettingsFlag[];
+    logEntries: LogEntry[];
 }

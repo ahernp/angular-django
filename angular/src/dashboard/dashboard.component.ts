@@ -24,22 +24,27 @@ export const dashboardUrl: string = '/dashboard';
                 <div style="width: 47%; float: left; padding-bottom: 1em; word-wrap: break-word;">
                     <p *ngIf="dashboard.hostname"><strong>Hostname:</strong> {{dashboard.hostname}}</p>
                     <h2>Settings Flags</h2>
-                    <span *ngFor="let flag of dashboard.settings_flags"
+                    <span *ngFor="let flag of dashboard.settingsFlags"
                         [class.highlight]="flag.actual != flag.expected">
                             {{flag.name}}: {{flag.actual}}&ensp;
                     </span>
                     <h2>Version Information</h2>
-                    <p *ngIf="dashboard.python_packages"><strong>Python Packages:</strong> {{dashboard.python_packages}}</p>
-                    <p *ngIf="dashboard.npm_packages"><strong>NPM Packages:</strong> {{dashboard.npm_packages}}</p>
-                    <div *ngIf="dashboard.gitversion">
+                    <p *ngIf="dashboard.pythonPackages"><strong>Python Packages:</strong> {{dashboard.pythonPackages}}</p>
+                    <p *ngIf="dashboard.npmPackages"><strong>NPM Packages:</strong> {{dashboard.npmPackages}}</p>
+                    <div *ngIf="dashboard.gitVersion">
                         <strong>Most Recent Commit:</strong><br>
                         <div style="padding-left:1em;">
-                            <code>{{dashboard.gitversion}}</code>
+                            <code>{{dashboard.gitVersion}}</code>
                         </div>
                     </div>
                 </div>
                 <div style="width:47%; float:left; padding-left: 1em;">
                     <h2>Recent Log Entries</h2>
+                    <p *ngFor="let entry of dashboard.logEntries">
+                        <span [class.highlight]="entry.level == 'ERROR'">
+                            {{entry.level}}: {{entry.msg}}<br>Logged {{entry.datetime}}
+                        </span>
+                    </p>
                 </div>
             <div style="clear:both"></div>
         </div>

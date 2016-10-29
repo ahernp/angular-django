@@ -10,10 +10,12 @@ from django.utils import timezone
 
 
 # Shell commands: Name and command
+from core.models import Log
+
 SHELL_COMMANDS = [
     ('hostname', 'hostname'),
-    ('gitversion', 'git log -n 1'),
-    ('python_packages', 'pip freeze'),
+    ('gitVersion', 'git log -n 1'),
+    ('pythonPackages', 'pip freeze'),
 ]
 
 # Flags in settings: Their expected values.
@@ -46,15 +48,15 @@ def project_state_at_startup():
 
     npm_packages = json.loads(run_shell_command('npm list --depth=0 --json',
                                                 os.path.join(os.path.dirname(cwd), 'angular')))
-    data['npm_packages'] = ' '.join(['%s==%s' % (key, value['version'])
+    data['npmPackages'] = ' '.join(['%s==%s' % (key, value['version'])
                                     for key, value in npm_packages['dependencies'].items()])
 
 
     # Settings Flags
-    data['settings_flags'] = []
+    data['settingsFlags'] = []
     for name, expected in SETTINGS_FLAGS:
         actual_setting = getattr(settings, name, None)
-        data['settings_flags'].append({
+        data['settingsFlags'].append({
             'name': name,
             'expected': expected,
             'actual': actual_setting
@@ -69,6 +71,13 @@ def dashboard(request):
     Collect information about the state of the system.
     """
     data = PROJECT_STATE
+
+    entries = Log.objects.all().order_by('-datetime')
+
+    data['logEntries'] = [{'level': entry.level,
+                           'msg': entry.msg,
+                           'datetime': entry.datetime.strftime('%Y-%m-%d %H:%M:%S')}
+                          for entry in entries]
 
     data['timeChecked'] = timezone.now().strftime('%Y-%m-%d %H:%M:%S')
     return HttpResponse(json.dumps(data), content_type='application/json')

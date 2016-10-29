@@ -74,7 +74,7 @@ const navigationPanel = [
         children: [
             <Breadcrumb> {title: 'Cardgen', url: '/tools/cardgen'},
             <Breadcrumb> {title: 'Deduplicate', url: '/tools/deduplicate'},
-            <Breadcrumb> {title: 'Feedreader', url: '/tools/feedreader'},
+            <Breadcrumb> {title: 'Feedreader', url: '/feedreader'},
         ]
     },
    {

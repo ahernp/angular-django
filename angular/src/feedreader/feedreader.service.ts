@@ -3,21 +3,21 @@ import {Http} from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import {Dashboard} from './feedreader';
+import {Entry} from './feedreader';
 
-import {dashboardUrl} from "./feedreader.component";
+import {feedreaderUrl} from "./feedreader.component";
 import {apiEndpoint} from "../app.settings";
 
 @Injectable()
-export class DashboardService {
+export class FeedreaderService {
 
     constructor(private http:Http) {
     }
 
-    getDashboard() {
-        return this.http.get(`${apiEndpoint}${dashboardUrl}/`)
+    getEntries() {
+        return this.http.get(`${apiEndpoint}${feedreaderUrl}/`)
             .toPromise()
-            .then(response => response.json() as Dashboard)
+            .then(response => response.json() as Entry[])
             .catch(this.handleError);
     }
 

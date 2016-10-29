@@ -1,13 +1,7 @@
-export class SettingsFlag {
-    name: string;
-    expected: boolean;
-    actual: boolean;
-}
-
-export class Dashboard {
-    timeChecked: string;
-    hostname: string;
-    gitversion: number;
-    python_packages: string;
-    settings_flags: SettingsFlag[];
+export class Entry {
+    title: string;
+    link: string;
+    description: string;
+    published_time: string;
+    feed: string;
 }

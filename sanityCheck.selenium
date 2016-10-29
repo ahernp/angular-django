@@ -106,6 +106,26 @@
 	<td>link=ahernp.com</td>
 	<td></td>
 </tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Feedreader</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h1</td>
+	<td>Feedreader</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=ahernp.com</td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>

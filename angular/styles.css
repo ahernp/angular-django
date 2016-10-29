@@ -159,3 +159,14 @@ p.blog_info {
 ad-homepage-navigation p > span {
     padding-bottom: 5px;
 }
+
+.feed_entry {
+    padding: 0.2em 0.5em;
+    margin: 0.5em;
+    border: 1px solid #046;
+    border-radius: 1em;
+}
+
+p.feed_entry_subtitle {
+    font-size: small;
+}

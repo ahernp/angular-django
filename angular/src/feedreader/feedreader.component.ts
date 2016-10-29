@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 
-import {Dashboard} from './feedreader';
-import {DashboardService} from './feedreader.service';
+import {Entry} from './feedreader';
+import {FeedreaderService} from './feedreader.service';
 
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
@@ -12,68 +12,52 @@ import {Footer} from "../core/footer/footer";
 import {rootTitle, adminBreadcrumb} from "../app.settings";
 import {toDateTimeString} from "../utilities";
 
-export const dashboardTitle: string = 'Dashboard';
-export const dashboardUrl: string = '/dashboard';
+export const feedreaderTitle: string = 'Feedreader';
+export const feedreaderUrl: string = '/feedreader';
 
 @Component({
-    selector: 'ad-dashboard',
+    selector: 'ad-feedreader',
     template: `
         <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
-        <div *ngIf="dashboard" id="content">
-                <h1>Status <span style="font-size: small;">at {{dashboard.timeChecked}}</span></h1>
-                <div style="width: 47%; float: left; padding-bottom: 1em; word-wrap: break-word;">
-                    <p *ngIf="dashboard.hostname"><strong>Hostname:</strong> {{dashboard.hostname}}</p>
-                    <h2>Settings Flags</h2>
-                    <span *ngFor="let flag of dashboard.settings_flags"
-                        [class.highlight]="flag.actual != flag.expected">
-                            {{flag.name}}: {{flag.actual}}&ensp;
-                    </span>
-                    <h2>Version Information</h2>
-                    <p *ngIf="dashboard.python_packages"><strong>Python Packages:</strong> {{dashboard.python_packages}}</p>
-                    <p *ngIf="dashboard.npm_packages"><strong>NPM Packages:</strong> {{dashboard.npm_packages}}</p>
-                    <div *ngIf="dashboard.gitversion">
-                        <strong>Most Recent Commit:</strong><br>
-                        <div style="padding-left:1em;">
-                            <code>{{dashboard.gitversion}}</code>
-                        </div>
-                    </div>
-                </div>
-                <div style="width:47%; float:left; padding-left: 1em;">
-                    <h2>Recent Log Entries</h2>
-                </div>
-            <div style="clear:both"></div>
+        <div id="content">
+            <h1>Feedreader</h1>
+            <div *ngFor="let entry of entries" class="feed_entry">
+                <h3 class="feed_entry_subtitle">From {{entry.feed}} on {{entry.published_time}}</h3>
+                <p><a href="{{entry.link}}">{{entry.title}}</a></p>
+                <p>{{entry.description}}</p>
+            </div>
         </div>
         <ad-footer id="footer" *ngIf="footer" [footer]="footer"></ad-footer>
         <ad-spinner *ngIf="showSpinner"></ad-spinner>
         `,
     providers: []
 })
-export class DashboardComponent implements OnInit {
+export class FeedreaderComponent implements OnInit {
     now: string;
-    dashboard: Dashboard;
+    entries: Entry[];
     breadcrumbs: Breadcrumb[];
     footer: Footer;
     showSpinner: Boolean = false;
     error: any;
 
     constructor(
-        private dashboardService:DashboardService,
-        private breadcrumbService:BreadcrumbService,
+        private feedreaderService: FeedreaderService,
+        private breadcrumbService: BreadcrumbService,
         private titleService:Title) {
     }
 
     ngOnInit(): void {
-        this.titleService.setTitle(dashboardTitle);
+        this.titleService.setTitle(feedreaderTitle);
         this.now = toDateTimeString(new Date());
         this.populateHeader();
         this.populateFooter();
-        this.getDashboard();
+        this.getEntries();
     }
 
     populateHeader() {
         var dashboardBreadcrumb = new Breadcrumb({
-            title: dashboardTitle,
-            url: dashboardUrl,
+            title: feedreaderTitle,
+            url: feedreaderUrl,
             updated: this.now,
             parentName: rootTitle});
         this.breadcrumbs = this.breadcrumbService.addBreadcrumb(dashboardBreadcrumb);
@@ -86,12 +70,12 @@ export class DashboardComponent implements OnInit {
         });
     }
 
-    getDashboard() {
+    getEntries() {
         this.showSpinner = true;
-        this.dashboardService
-            .getDashboard()
-            .then(dashboard => {
-                this.dashboard = dashboard;
+        this.feedreaderService
+            .getEntries()
+            .then(entries => {
+                this.entries = entries;
                 this.showSpinner = false;
 
             })

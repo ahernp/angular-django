@@ -3,6 +3,7 @@ import {Routes, RouterModule} from '@angular/router';
 
 import {BlogComponent} from "./blog/blog.component";
 import {DashboardComponent} from './dashboard/dashboard.component';
+import {FeedreaderComponent} from "./feedreader/feedreader.component";
 import {PageComponent} from './pages/page.component';
 import {SitemapComponent} from "./sitemap/sitemap.component";
 import {ToolsComponent} from "./tools/tools.component";
@@ -20,6 +21,10 @@ const appRoutes: Routes = [
     {
         path: 'dashboard',
         component: DashboardComponent
+    },
+    {
+        path: 'feedreader',
+        component: FeedreaderComponent
     },
     {
         path: 'sitemap',

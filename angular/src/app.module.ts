@@ -19,6 +19,9 @@ import {DashboardService} from "./dashboard/dashboard.service";
 
 import {SitemapComponent} from "./sitemap/sitemap.component";
 
+import {FeedreaderComponent} from "./feedreader/feedreader.component";
+import {FeedreaderService} from "./feedreader/feedreader.service";
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -33,11 +36,13 @@ import {SitemapComponent} from "./sitemap/sitemap.component";
     declarations: [
         AppComponent,
         DashboardComponent,
+        FeedreaderComponent,
         SitemapComponent,
         BlogComponent,
     ],
     providers: [
         DashboardService,
+        FeedreaderService,
     ],
     bootstrap: [AppComponent]
 })

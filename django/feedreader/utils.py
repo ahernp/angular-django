@@ -26,7 +26,7 @@ def poll_feed(db_feed, verbose=False):
     if hasattr(parsed.feed, 'bozo_exception'):
         # Malformed feed
         msg = 'Feedreader poll_feeds found Malformed feed, "%s": %s' % (db_feed.xml_url, parsed.feed.bozo_exception)
-        logger.warning(msg)
+        logger.error(msg)
         if verbose:
             print(msg)
         return
@@ -79,7 +79,7 @@ def poll_feed(db_feed, verbose=False):
         for attr in ['title', 'title_detail', 'link', 'description']:
             if not hasattr(entry, attr):
                 msg = 'Feedreader poll_feeds. Entry "%s" has no %s' % (entry.link, attr)
-                logger.error(msg)
+                logger.warning(msg)
                 if verbose:
                     print(msg)
                 missing_attr = True

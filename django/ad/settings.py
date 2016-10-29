@@ -81,3 +81,6 @@ MEDIA_URL = '/media/'
 
 SITE_NAME = 'ahernp.com'
 BLOG_ROOT_SLUG = 'blog'
+
+# Feedreader
+MAX_ENTRIES_SAVED = 100

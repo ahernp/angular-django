@@ -1207,5 +1207,66 @@
         "content_type": "markdown",
         "content": "# New Job 2016\r\n\r\nLast Friday was my final day working for [festicket.com](https://festicket.com).\r\n\r\nTomorrow will be my first day working at [affectv](http://affectv.com/).\r\n\r\nI shall be doing the same sort of Web Developer work at Affectv - with a bit more emphasis on backend processing."
     }
+},
+{
+    "model": "feedreader.group",
+    "pk": 1,
+    "fields": {
+        "name": "History"
+    }
+},
+{
+    "model": "feedreader.group",
+    "pk": 2,
+    "fields": {
+        "name": "Leisure"
+    }
+},
+{
+    "model": "feedreader.group",
+    "pk": 3,
+    "fields": {
+        "name": "News"
+    }
+},
+{
+    "model": "feedreader.group",
+    "pk": 4,
+    "fields": {
+        "name": "Podcasts"
+    }
+},
+{
+    "model": "feedreader.group",
+    "pk": 5,
+    "fields": {
+        "name": "Tech"
+    }
+},
+{
+    "model": "feedreader.feed",
+    "pk": 41,
+    "fields": {
+        "title": "Scott Adams&#39; Blog",
+        "xml_url": "http://feedproxy.google.com/typepad/ihdT",
+        "link": "http://blog.dilbert.com/",
+        "description": "",
+        "published_time": "2015-01-12T07:00:01Z",
+        "last_polled_time": "2016-07-30T11:17:19.305Z",
+        "group": 2
+    }
+},
+{
+    "model": "feedreader.feed",
+    "pk": 43,
+    "fields": {
+        "title": "Binge Thinking History Podcast",
+        "xml_url": "http://bingethinkinghistory.blogspot.com/feeds/posts/default",
+        "link": "http://bingethinkinghistory.blogspot.com/",
+        "description": "",
+        "published_time": null,
+        "last_polled_time": "2016-07-30T11:17:04.970Z",
+        "group": 1
+    }
 }
 ]

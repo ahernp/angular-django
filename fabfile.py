@@ -42,6 +42,7 @@ def setup(*args, **kwargs):
                 local('rm media')
                 local('rm db.sqlite3')
             with lcd(ANGULAR_ROOT):
+                local('rm -rf dist')
                 local('rm -rf node_modules')
                 local('rm -rf typings')
                 with lcd(join(DJANGO_ROOT, 'site_assets')):

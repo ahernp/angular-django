@@ -26,7 +26,6 @@
         "zone.js": "0.6.25"
     },
     "devDependencies": {
-        "html-webpack-plugin": "^2.24.1",
         "ts-loader": "1.0.0",
         "typescript": "2.0.7",
         "typings": "1.5.0",

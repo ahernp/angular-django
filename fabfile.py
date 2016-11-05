@@ -33,14 +33,6 @@ def timer(func, *args, **kwargs):
     return result
 
 
-def add_missing_typings():
-    with lcd(join(ANGULAR_ROOT, 'typings', 'globals')):
-        local('mkdir showdown')
-    with lcd(join(ANGULAR_ROOT, 'typings', 'globals', 'showdown')):
-        local('wget https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/showdown/showdown.d.ts')
-    append(join(ANGULAR_ROOT, 'typings', 'index.d.ts'), '/// <reference path=\"globals/showdown/showdown.d.ts\" />')
-
-
 @task
 @hosts('localhost')
 @timer
@@ -68,15 +60,8 @@ def setup(*args, **kwargs):
 
     # Setup Angular
     with lcd(ANGULAR_ROOT):
-        if  args[0] == 'init' and exists('~/code/ad_node_modules') and exists('~/code/ad_typings'):
-            local('cp -r ~/code/ad_node_modules node_modules')
-            local('cp -r ~/code/ad_typings typings')
-        else:
-            local('npm install')
-            local('cp -r node_modules ~/code/ad_node_modules')
-            add_missing_typings()
-            local('cp -r typings ~/code/ad_typings')
-        local('npm run tsc')
+        local('npm install')
+        local('npm run build')
 
     # Copy templates from src to dist directories
     with lcd(ANGULAR_ROOT):

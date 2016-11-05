@@ -15,8 +15,6 @@ DJANGO_ROOT = join(SITE_ROOT, 'django')
 ANGULAR_ROOT = join(SITE_ROOT, 'angular')
 PROJECT_NAME = 'ad'
 
-ANGULAR_RESOURCES = ['node_modules', 'dist', 'styles.css']
-
 env.hosts = ['web']
 
 
@@ -47,8 +45,7 @@ def setup(*args, **kwargs):
                 local('rm -rf node_modules')
                 local('rm -rf typings')
                 with lcd(join(DJANGO_ROOT, 'site_assets')):
-                    for resource in ANGULAR_RESOURCES:
-                        local('rm {0}'.format(resource))
+                    local('rm ad.bundle.js')
 
     with lcd(DJANGO_ROOT):
         local("git pull")
@@ -62,15 +59,10 @@ def setup(*args, **kwargs):
         local('npm install')
         local('npm run build')
 
-    # Copy templates from src to dist directories
-    with lcd(ANGULAR_ROOT):
-        local('rsync -am --include=\'*.html\' --include=\'*/\' --exclude=\'*\' src/ dist/')
-
     # Link to Angular resources
     with settings(warn_only=True):
         with lcd(join(DJANGO_ROOT, 'site_assets')):
-            for resource in ANGULAR_RESOURCES:
-                local('ln -s ../../angular/{0} {0}'.format(resource))
+            local('ln -s ../../angular/dist/ad.bundle.js ad.bundle.js')
 
     # Link to media
     with settings(warn_only=True):

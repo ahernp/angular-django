@@ -13,11 +13,7 @@ secrets.json
 /angular/dist
 
 # Links to Angular resources
-/django/site_assets/dist
-/django/site_assets/index.html
-/django/site_assets/node_modules
-/django/site_assets/styles.css
-/django/site_assets/systemjs.config.js
+/django/site_assets/ad.bundle.js
 
 # Python bytecode:
 *.py[co]
@@ -61,4 +57,3 @@ tramp
 # Windows
 Thumbs.db
 Desktop.ini
-

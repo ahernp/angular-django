@@ -84,7 +84,7 @@ const navigationPanel = [
 ];
 
 @Component({
-    moduleId: module.id,
+    moduleId: 'module.id',
     selector: 'ad-homepage-navigation',
     template: `
         <h2>Internal</h2>

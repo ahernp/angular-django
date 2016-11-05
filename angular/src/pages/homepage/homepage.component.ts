@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-    moduleId: 'module.id',
     selector: 'ad-homepage',
     template: `
         <div id="content">

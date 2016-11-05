@@ -13,7 +13,6 @@ const timersTitle: string = 'Timers';
 const timersBreadcrumb = new Breadcrumb({title: 'Timers', url: '/timers'});
 
 @Component({
-    moduleId: 'module.id',
     selector: 'ad-timers',
     template: `
         <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>

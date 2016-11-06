@@ -45,9 +45,9 @@ def setup(*args, **kwargs):
                 local('rm -rf dist')
                 local('rm -rf node_modules')
                 local('rm -rf typings')
-                with lcd(join(DJANGO_ROOT, 'site_assets')):
-                    local('rm ad.bundle.js')
-                    local('rm styles.css')
+            with lcd(join(DJANGO_ROOT, 'site_assets')):
+                local('rm ad.bundle.js')
+                local('rm styles.css')
 
     with lcd(DJANGO_ROOT):
         local("git pull")

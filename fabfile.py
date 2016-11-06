@@ -47,6 +47,7 @@ def setup(*args, **kwargs):
                 local('rm -rf typings')
                 with lcd(join(DJANGO_ROOT, 'site_assets')):
                     local('rm ad.bundle.js')
+                    local('rm styles.css')
 
     with lcd(DJANGO_ROOT):
         local("git pull")
@@ -64,6 +65,7 @@ def setup(*args, **kwargs):
     with settings(warn_only=True):
         with lcd(join(DJANGO_ROOT, 'site_assets')):
             local('ln -s ../../angular/dist/ad.bundle.js ad.bundle.js')
+            local('ln -s ../../angular/src/styles.css styles.css')
 
     # Link to media
     with settings(warn_only=True):

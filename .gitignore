@@ -14,6 +14,7 @@ secrets.json
 
 # Links to Angular resources
 /django/site_assets/ad.bundle.js
+/django/site_assets/styles.css
 
 # Python bytecode:
 *.py[co]

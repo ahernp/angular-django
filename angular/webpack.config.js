@@ -13,18 +13,5 @@ module.exports = {
     },
     resolve: {
         extensions: ['', '.js', '.ts']
-    },
-    plugins: [
-      new webpack.optimize.UglifyJsPlugin({
-          beautify: false,
-          comments: false,
-          compress: {
-              warnings: false,
-              drop_console: true
-          },
-          mangle: {
-              screw_ie8 : true,
-          }
-      })
-    ]
+    }
 };

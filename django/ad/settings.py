@@ -20,8 +20,8 @@ ADMINS = (
 )
 
 SECRET_KEY = get_secret('SECRET_KEY')
-DEBUG = True
-ALLOWED_HOSTS = []
+DEBUG = False
+ALLOWED_HOSTS = ['.ahernp.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',

@@ -42,14 +42,10 @@ def setup(*args, **kwargs):
             with lcd(DJANGO_ROOT):
                 local('rm -rf static')
                 local('rm media')
-                local('rm db.sqlite3')
             with lcd(ANGULAR_ROOT):
                 local('rm -rf dist')
                 local('rm -rf node_modules')
                 local('rm -rf typings')
-            with lcd(join(DJANGO_ROOT, 'site_assets')):
-                local('rm ad.bundle.js')
-                local('rm styles.css')
 
     with lcd(DJANGO_ROOT):
         local("git pull")
@@ -62,18 +58,16 @@ def setup(*args, **kwargs):
     with lcd(ANGULAR_ROOT):
         local('npm install')
         local('npm run build')
-
-    # Link to Angular resources
-    with settings(warn_only=True):
-        with lcd(join(DJANGO_ROOT, 'site_assets')):
-            local('ln -s ../../angular/dist/ad.bundle.js ad.bundle.js')
-            local('ln -s ../../angular/src/styles.css styles.css')
+        local('cp src/styles.css dist/styles.css')
 
     # Link to media
     with settings(warn_only=True):
         with lcd(join(DJANGO_ROOT)):
             if not exists('media'):
                 local('ln -s ~/Documents/ahernp.com/site/ media')
+
+    # Collect Static resources
+    manage('collectstatic --noinput')
 
     # Reset database
     if args and args[0] == 'init':

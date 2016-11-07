@@ -2,9 +2,10 @@
     <base href="/">
     <title>ahernp.com</title>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="/static/favicon.ico" type="image/ico" />
+    {% load static %}
+    <link rel="shortcut icon" href="{% static "favicon.ico" %}" type="image/ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="{% static "styles.css" %}">
 </head>
 
 <body style="background-color: {% if DEBUG %}#ddf{% else %}#fff{% endif %}">
@@ -270,10 +271,10 @@
             </p>
         </ad-footer>
         <div id="spinner">
-            <img src="/static/spinner.gif" alt="Please Wait" title="Please Wait">
+            <img src="{% static "spinner.gif" %}" alt="Please Wait" title="Please Wait">
         </div>
     </ad-app>
-    <script src="/static/ad.bundle.js"></script>
+    <script src="{% static "ad.bundle.js" %}"></script>
 </body>
 
 </html>

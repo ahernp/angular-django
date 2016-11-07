@@ -16,6 +16,8 @@ DJANGO_ROOT = join(SITE_ROOT, 'django')
 ANGULAR_ROOT = join(SITE_ROOT, 'angular')
 PROJECT_NAME = 'ad'
 DATABASE_NAME = 'dmcm'
+BUNDLE_NAME = 'ad.bundle.js'
+STYLES_NAME = 'styles.css'
 
 env.hosts = ['web']
 
@@ -40,12 +42,14 @@ def setup(*args, **kwargs):
     if args and args[0] == 'init':
         with settings(warn_only=True):
             with lcd(DJANGO_ROOT):
-                local('rm -rf static')
                 local('rm media')
             with lcd(ANGULAR_ROOT):
                 local('rm -rf dist')
                 local('rm -rf node_modules')
                 local('rm -rf typings')
+            with lcd(join(DJANGO_ROOT, 'site_assets')):
+                local('rm %s' % BUNDLE_NAME)
+                local('rm %s' % STYLES_NAME)
 
     with lcd(DJANGO_ROOT):
         local("git pull")
@@ -58,16 +62,18 @@ def setup(*args, **kwargs):
     with lcd(ANGULAR_ROOT):
         local('npm install')
         local('npm run build')
-        local('cp src/styles.css dist/styles.css')
+
+    # Link to Angular resources
+    with settings(warn_only=True):
+        with lcd(join(DJANGO_ROOT, 'site_assets')):
+            local('ln -s ../../angular/dist/{bundle} {bundle}'.format(bundle=BUNDLE_NAME))
+            local('ln -s ../../angular/src/{styles} {styles}'.format(styles=STYLES_NAME))
 
     # Link to media
     with settings(warn_only=True):
         with lcd(join(DJANGO_ROOT)):
             if not exists('media'):
                 local('ln -s ~/Documents/ahernp.com/site/ media')
-
-    # Collect Static resources
-    manage('collectstatic --noinput')
 
     # Reset database
     if args and args[0] == 'init':
@@ -123,7 +129,7 @@ def deploy():
 
     with cd(LIVE_SITE_ROOT):
         run('~/.virtualenvs/ahernp/bin/pip install -r ../requirements/production.txt')
-        run('~/.virtualenvs/ahernp/bin/python manage.py collectstatic --noinput --settings=ahernp.settings.production')
+        run('~/.virtualenvs/ahernp/bin/python manage.py collectstatic --noinput')
         run('touch ahernp/uwsgi.ini')
 
 

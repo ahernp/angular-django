@@ -16,6 +16,10 @@ def get_secret(setting, secrets=secrets):
         error_msg = '"{0}" environment variable missing'.format(setting)
         raise ImproperlyConfigured(error_msg)
 
+ADMINS = (
+    (get_secret('ADMIN_NAME'), get_secret('ADMIN_EMAIL')),
+)
+
 SECRET_KEY = get_secret('SECRET_KEY')
 DEBUG = True
 ALLOWED_HOSTS = []
@@ -92,7 +96,6 @@ STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'static'))
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.normpath(os.path.join(BASE_DIR, 'site_assets')),
-    os.path.normpath(os.path.join(BASE_DIR, '../angular/dist')),
 )
 
 MEDIA_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'media'))

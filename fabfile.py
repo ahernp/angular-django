@@ -102,7 +102,7 @@ def test():
 def runserver():
     """Run Django runserver."""
     with settings(warn_only=True), lcd(DJANGO_ROOT):
-        local('python manage.py runserver')
+        local('python manage.py runserver --settings=ad.settings_local')
 
 
 @task
@@ -123,7 +123,7 @@ def deploy():
 
     with settings(warn_only=True):
         if run("test -d %s" % LIVE_SITE_ROOT).failed:
-            run("git clone git@github.com:ahernp/angular-django.git %s" % '~/code/angular-django')
+            run('git clone https://github.com/ahernp/angular-django.git ~/code/angular-django')
         else:
             with cd(LIVE_SITE_ROOT):
                 run("git pull")
@@ -139,6 +139,7 @@ def deploy():
     with cd(LIVE_SITE_ROOT):
         run('~/.virtualenvs/ahernp/bin/pip install -r ../requirements/production.txt')
         run('~/.virtualenvs/ahernp/bin/python manage.py collectstatic --noinput')
+        run('~/.virtualenvs/ahernp/bin/python manage.py migrate --noinput')
         run('touch ad/uwsgi.ini')
 
 

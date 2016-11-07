@@ -1,4 +1,4 @@
-"""Fabfile for ahernp.com project."""
+"""Fabfile for angular-django project."""
 import codecs
 from datetime import datetime
 from os.path import abspath, dirname, join
@@ -11,7 +11,7 @@ from fabric.colors import magenta
 from fabric.contrib.files import append, exists
 
 SITE_ROOT = dirname(abspath(__file__))
-LIVE_SITE_ROOT = '~/code/django-ahernp/ahernp'
+LIVE_SITE_ROOT = '~/code/angular-django/django'
 DJANGO_ROOT = join(SITE_ROOT, 'django')
 ANGULAR_ROOT = join(SITE_ROOT, 'angular')
 PROJECT_NAME = 'ad'
@@ -66,8 +66,8 @@ def setup(*args, **kwargs):
     # Link to Angular resources
     with settings(warn_only=True):
         with lcd(join(DJANGO_ROOT, 'site_assets')):
-            local('ln -s ../../angular/dist/{bundle} {bundle}'.format(bundle=BUNDLE_NAME))
-            local('ln -s ../../angular/src/{styles} {styles}'.format(styles=STYLES_NAME))
+            local('ln -s ../../angular/dist/{0} {0}'.format(BUNDLE_NAME))
+            local('ln -s ../../angular/src/{0} {0}'.format(STYLES_NAME))
 
     # Link to media
     with settings(warn_only=True):
@@ -120,17 +120,26 @@ def deploy():
     """Deploy project into virtualenv on live server."""
     with lcd(ANGULAR_ROOT):
         local('npm run build:prod')
+
     with settings(warn_only=True):
         if run("test -d %s" % LIVE_SITE_ROOT).failed:
-            run("git clone git@github.com:ahernp/angular-django.git %s" % LIVE_SITE_ROOT)
+            run("git clone git@github.com:ahernp/angular-django.git %s" % '~/code/angular-django')
         else:
             with cd(LIVE_SITE_ROOT):
                 run("git pull")
 
+    with lcd(ANGULAR_ROOT):
+        local('scp dist/{bundle} web:{site_root}/django/site_assets/{bundle}'.format(
+            bundle=BUNDLE_NAME,
+            site_root=LIVE_SITE_ROOT))
+        local('scp src/{styles} web:{site_root}/django/site_assets/{styles}'.format(
+            styles=STYLES_NAME,
+            site_root=LIVE_SITE_ROOT))
+
     with cd(LIVE_SITE_ROOT):
         run('~/.virtualenvs/ahernp/bin/pip install -r ../requirements/production.txt')
         run('~/.virtualenvs/ahernp/bin/python manage.py collectstatic --noinput')
-        run('touch ahernp/uwsgi.ini')
+        run('touch ad/uwsgi.ini')
 
 
 @task

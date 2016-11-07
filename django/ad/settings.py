@@ -7,7 +7,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 with open(os.path.join(BASE_DIR, 'secrets.json')) as f:
     secrets = json.loads(f.read())
 
-
 def get_secret(setting, secrets=secrets):
     """Get the secret variable or return explicit exception"""
     try:

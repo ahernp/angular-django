@@ -3,7 +3,7 @@ import {Component, Input, OnInit} from '@angular/core';
 @Component({
     selector: 'ad-homepage',
     template: `
-        <div id="content">
+        <div id="homepage-content">
             <h1 id="personal-website-of-paul-ahern">Personal Website of Paul Ahern</h1>
 
             <p>

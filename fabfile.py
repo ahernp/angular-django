@@ -11,9 +11,11 @@ from fabric.colors import magenta
 from fabric.contrib.files import append, exists
 
 SITE_ROOT = dirname(abspath(__file__))
+LIVE_SITE_ROOT = '~/code/django-ahernp/ahernp'
 DJANGO_ROOT = join(SITE_ROOT, 'django')
 ANGULAR_ROOT = join(SITE_ROOT, 'angular')
 PROJECT_NAME = 'ad'
+DATABASE_NAME = 'dmcm'
 
 env.hosts = ['web']
 
@@ -74,6 +76,10 @@ def setup(*args, **kwargs):
                 local('ln -s ~/Documents/ahernp.com/site/ media')
 
     # Reset database
+    if args and args[0] == 'init':
+        local('dropdb %s' % (DATABASE_NAME))
+        local('createdb %s' % (DATABASE_NAME))
+
     manage('migrate')
     manage('loaddata %s/fixtures/live_snapshot.json' % PROJECT_NAME)
     manage('loaddata %s/fixtures/auth.json' % PROJECT_NAME)
@@ -106,6 +112,25 @@ def start():
     """Run local Angular server."""
     with settings(warn_only=True), lcd(ANGULAR_ROOT):
         local('npm start')
+
+
+@task
+@timer
+def deploy():
+    """Deploy project into virtualenv on live server."""
+    with lcd(ANGULAR_ROOT):
+        local('npm run build:prod')
+    with settings(warn_only=True):
+        if run("test -d %s" % LIVE_SITE_ROOT).failed:
+            run("git clone git@github.com:ahernp/angular-django.git %s" % LIVE_SITE_ROOT)
+        else:
+            with cd(LIVE_SITE_ROOT):
+                run("git pull")
+
+    with cd(LIVE_SITE_ROOT):
+        run('~/.virtualenvs/ahernp/bin/pip install -r ../requirements/production.txt')
+        run('~/.virtualenvs/ahernp/bin/python manage.py collectstatic --noinput --settings=ahernp.settings.production')
+        run('touch ahernp/uwsgi.ini')
 
 
 @task

@@ -139,6 +139,7 @@ def deploy():
     with cd(LIVE_SITE_ROOT):
         run('~/.virtualenvs/ahernp/bin/pip install -r ../requirements/production.txt')
         run('~/.virtualenvs/ahernp/bin/python manage.py collectstatic --noinput')
+        run('~/.virtualenvs/ahernp/bin/python manage.py migrate --noinput')
         run('touch ad/uwsgi.ini')
 
 

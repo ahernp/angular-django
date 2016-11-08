@@ -5,7 +5,7 @@ from os.path import abspath, dirname, join
 
 from decorator import decorator
 
-from fabric.api import (env, local, lcd,
+from fabric.api import (env, local, lcd, cd, run,
                         task, hosts, settings)
 from fabric.colors import magenta
 from fabric.contrib.files import append, exists
@@ -129,17 +129,16 @@ def deploy():
                 run("git pull")
 
     with lcd(ANGULAR_ROOT):
-        local('scp dist/{bundle} web:{site_root}/django/site_assets/{bundle}'.format(
+        local('scp dist/{bundle} web:{site_root}/site_assets/{bundle}'.format(
             bundle=BUNDLE_NAME,
             site_root=LIVE_SITE_ROOT))
-        local('scp src/{styles} web:{site_root}/django/site_assets/{styles}'.format(
+        local('scp src/{styles} web:{site_root}/site_assets/{styles}'.format(
             styles=STYLES_NAME,
             site_root=LIVE_SITE_ROOT))
 
     with cd(LIVE_SITE_ROOT):
         run('~/.virtualenvs/ahernp/bin/pip install -r ../requirements/production.txt')
         run('~/.virtualenvs/ahernp/bin/python manage.py collectstatic --noinput')
-        run('~/.virtualenvs/ahernp/bin/python manage.py migrate --noinput')
         run('touch ad/uwsgi.ini')
 
 

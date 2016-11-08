@@ -24,6 +24,7 @@ export const blogFeedBreadcrumb = new Breadcrumb({title: 'RSS', url: '/blog/feed
                 <h2 class="published_date" *ngIf="page.published">
                     {{page.published|date:'d MMMM y'}}
                 </h2>
+                <h1>{{page.title}}</h1>
                 <ad-markdown-content [content]="page.content"></ad-markdown-content>
                 <p class="blog_info">
                     Last Updated: {{page.updated}};

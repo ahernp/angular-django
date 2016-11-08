@@ -72,7 +72,7 @@ def dashboard(request):
     """
     data = PROJECT_STATE
 
-    entries = Log.objects.all().order_by('-datetime')
+    entries = Log.objects.all().order_by('-datetime')[:settings.LOG_ENTRIES_TO_SHOW]
 
     data['logEntries'] = [{'level': entry.level,
                            'msg': entry.msg,

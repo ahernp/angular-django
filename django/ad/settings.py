@@ -137,6 +137,9 @@ LOGGING = {
 SITE_NAME = 'ahernp.com'
 BLOG_ROOT_SLUG = 'blog'
 
+# Dashboard
+LOG_ENTRIES_TO_SHOW = 10
+
 # Feedreader
 MAX_ENTRIES_SAVED = 100
 MAX_ENTRIES_SHOWN = 40

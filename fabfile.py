@@ -5,9 +5,9 @@ from os.path import abspath, dirname, join
 
 from decorator import decorator
 
-from fabric.api import (env, local, lcd, cd, run,
-                        task, hosts, settings)
+from fabric.api import cd, env, get, hosts, lcd, local, run, settings, task
 from fabric.colors import magenta
+from fabric.contrib.console import confirm
 from fabric.contrib.files import append, exists
 
 SITE_ROOT = dirname(abspath(__file__))
@@ -33,6 +33,15 @@ def timer(func, *args, **kwargs):
                   .format(func.__name__, duration, start_time, end_time)))
     return result
 
+
+@task
+@timer
+def get_live_data():
+    """ Download snapshot of live data """
+    with cd(LIVE_SITE_ROOT):
+        run('~/.virtualenvs/ahernp/bin/python manage.py dumpdata '
+            '--indent 4 pages feedreader.group feedreader.feed > ~/live_snapshot.json')
+    get('live_snapshot.json', join(DJANGO_ROOT, 'ad', 'fixtures', 'live_snapshot.json'))
 
 @task
 @hosts('localhost')
@@ -79,6 +88,9 @@ def setup(*args, **kwargs):
     if args and args[0] == 'init':
         local('dropdb %s' % (DATABASE_NAME))
         local('createdb %s' % (DATABASE_NAME))
+
+    if confirm('Get data from live system?'):
+        get_live_data()
 
     manage('migrate')
     manage('loaddata %s/fixtures/live_snapshot.json' % PROJECT_NAME)

@@ -46,11 +46,10 @@ def project_state_at_startup():
     for name, shell_command in SHELL_COMMANDS:
         data[name] = run_shell_command(shell_command, cwd)
 
-    #pm_packages = json.loads(run_shell_command('npm list --depth=0 --json',
-    #                                           os.path.join(os.path.dirname(cwd), 'angular')))
-    #ata['npmPackages'] = ' '.join(['%s==%s' % (key, value['version'])
-    #                               for key, value in npm_packages['dependencies'].items()])
-    data['npmPackages'] = 'n/a'
+    with open(os.path.join(settings.BASE_DIR, '../angular/package.json')) as f:
+        package = json.loads(f.read())
+    data['npmPackages'] = ' '.join(['%s==%s' % (key, value)
+                                    for key, value in package['dependencies'].items()])
 
     # Settings Flags
     data['settingsFlags'] = []

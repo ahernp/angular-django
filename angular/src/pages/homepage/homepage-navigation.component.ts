@@ -22,7 +22,11 @@ const navigationPanel = [
     },
     {
         parent: <Breadcrumb> {title: 'Gallery', url: '/page/gallery'},
-        children: []
+        children: [
+            <Breadcrumb> {title: 'Cork', url: '/page/cork'},
+            <Breadcrumb> {title: 'London', url: '/page/london'},
+            <Breadcrumb> {title: 'Wallpaper', url: '/page/wallpaper'},
+        ]
     },
      {
         parent: <Breadcrumb> {title: 'Library', url: '/page/library'},

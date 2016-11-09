@@ -12,13 +12,24 @@ export class Feed {
     groupName: string;
 }
 
-export class FeedCounts {
+export class FeedCountDictionary {
     [feedTitle: string]: number
 }
 
-export class GroupCounts {
+export class GroupCountDictionary {
     [groupName: string]: {
         count: number,
-        feeds: FeedCounts
+        feeds: FeedCountDictionary
     }
+}
+
+export class FeedCount {
+    name: string;
+    count: number;
+}
+
+export class GroupCount {
+    name: string;
+    count: number;
+    feeds: FeedCount[];
 }

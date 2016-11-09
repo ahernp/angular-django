@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 
-import {Entry, Feed, FeedCounts, GroupCounts} from './feedreader';
+import {Entry, Feed, FeedCount, FeedCountDictionary,
+    GroupCount, GroupCountDictionary} from './feedreader';
 import {FeedreaderService} from './feedreader.service';
 
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
@@ -100,31 +101,31 @@ export class FeedreaderComponent implements OnInit {
     }
 
     countEntries() {
-        let groupCounts: GroupCounts = new GroupCounts();
+        let groupCountDictionary: GroupCountDictionary = new GroupCountDictionary();
         for (let i = 0; i < this.feeds.length; i++) {
-            if (groupCounts[this.feeds[i].groupName] == undefined)
-                groupCounts[this.feeds[i].groupName] = {count: 0, feeds: new FeedCounts()};
-            groupCounts[this.feeds[i].groupName].feeds[this.feeds[i].feedTitle] = 0;
+            if (groupCountDictionary[this.feeds[i].groupName] == undefined)
+                groupCountDictionary[this.feeds[i].groupName] = {count: 0, feeds: new FeedCountDictionary()};
+            groupCountDictionary[this.feeds[i].groupName].feeds[this.feeds[i].feedTitle] = 0;
         }
         for (let i = 0; i < this.entries.length; i++) {
-            groupCounts[this.entries[i].groupName].count++;
-            groupCounts[this.entries[i].groupName].feeds[this.entries[i].feedTitle]++;
+            groupCountDictionary[this.entries[i].groupName].count++;
+            groupCountDictionary[this.entries[i].groupName].feeds[this.entries[i].feedTitle]++;
         }
-        let groups = [];
-        let groupNames = Object.keys(groupCounts);
+        let groupCounts: GroupCount[] = [];
+        let groupNames = Object.keys(groupCountDictionary);
         for (let i = 0; i < groupNames.length; i++)
-            if (groupCounts[groupNames[i]].count > 0) {
-                let feeds = [];
-                let feedTitles = Object.keys(groupCounts[groupNames[i]].feeds)
+            if (groupCountDictionary[groupNames[i]].count > 0) {
+                let feedCounts: FeedCount[] = [];
+                let feedTitles = Object.keys(groupCountDictionary[groupNames[i]].feeds)
                 for (let j = 0; j < feedTitles.length; j++)
-                    if (groupCounts[groupNames[i]].feeds[feedTitles[j]] > 0)
-                        feeds.push({name: feedTitles[j], count: groupCounts[groupNames[i]].feeds[feedTitles[j]]});
-                groups.push({
+                    if (groupCountDictionary[groupNames[i]].feeds[feedTitles[j]] > 0)
+                        feedCounts.push({name: feedTitles[j], count: groupCountDictionary[groupNames[i]].feeds[feedTitles[j]]});
+                groupCounts.push({
                     name: groupNames[i],
-                    count: groupCounts[groupNames[i]].count,
-                    feeds: feeds})
+                    count: groupCountDictionary[groupNames[i]].count,
+                    feeds: feedCounts})
             }
-        this.groupCounts = groups;
+        this.groupCounts = groupCounts;
     }
 
     showAll() {

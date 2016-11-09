@@ -27,14 +27,18 @@ export const feedreaderUrl: string = '/feedreader';
                 <h2 *ngIf="entries" (click)="showAll()">All ({{entries.length}})</h2>
                 <div *ngFor="let group of groupCounts">
                     <h3 *ngIf="group.name" (click)="showGroup(group.name)">{{group.name}} ({{group.count}})</h3>
-                    <p *ngFor="let feed of group.feeds" (click)="showFeed(feed.name)">{{feed.name}} ({{feed.count}})</p>
+                    <p *ngFor="let feed of group.feeds" (click)="showFeed(feed.name)">
+                        <span [innerHtml]="feed.name"></span> ({{feed.count}})
+                    </p>
                 </div>
             </div>
             <div id="feedreader-entry-list">
                 <div *ngFor="let entry of shownEntries" class="feed_entry">
-                    <h3 class="feed_entry_subtitle">From {{entry.feedTitle}} on {{entry.publishedTime}}</h3>
-                    <p><a href="{{entry.link}}">{{entry.title}}</a></p>
-                    <p>{{entry.description}}</p>
+                    <h3 class="feed_entry_subtitle">
+                        From <span [innerHtml]="entry.feedTitle"></span> on {{entry.publishedTime}}
+                    </h3>
+                    <p><a href="{{entry.link}}"><span [innerHtml]="entry.title"></span></a></p>
+                    <p [innerHtml]="entry.description"></p>
                 </div>
             </div>
             <div style="clear:both"></div>

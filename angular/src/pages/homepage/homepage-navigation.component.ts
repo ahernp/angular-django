@@ -34,7 +34,7 @@ const navigationPanel = [
             <Breadcrumb> {title: 'Books', url: '/page/books'},
             <Breadcrumb> {title: 'CDs', url: '/page/cds'},
             <Breadcrumb> {title: 'DVDs', url: '/page/dvds'},
-            <Breadcrumb> {title: 'Software', url: '/page/software'},
+            <Breadcrumb> {title: 'Games', url: '/page/games'},
         ]
     },
     {

@@ -14,7 +14,7 @@ def list_pages(request):
         pages = Page.objects.filter(parent=parent)
     else:
         pages = Page.objects.all()
-    data = json.dumps([page.get_breadcrumb_dictionary for page in pages])
+    data = json.dumps([page.breadcrumb_dictionary for page in pages])
     return HttpResponse(data, content_type='application/json')
 
 

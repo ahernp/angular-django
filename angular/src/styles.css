@@ -160,6 +160,17 @@ ad-homepage-navigation p > span {
     padding-bottom: 5px;
 }
 
+#feedreader-entry-counts {
+    width:20%;
+    float:left;
+}
+
+#feedreader-entry-list {
+    width:75%;
+    float:left;
+    padding-left:1em;
+}
+
 .feed_entry {
     padding: 0.2em 0.5em;
     margin: 0.5em;

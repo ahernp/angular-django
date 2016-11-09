@@ -1,9 +1,10 @@
 import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
 
+import {Observable} from 'rxjs';
 import 'rxjs/add/operator/toPromise';
 
-import {Entry} from './feedreader';
+import {Entry, Feed} from './feedreader';
 
 import {feedreaderUrl} from "./feedreader.component";
 import {apiEndpoint} from "../app.settings";
@@ -14,15 +15,12 @@ export class FeedreaderService {
     constructor(private http:Http) {
     }
 
-    getEntries() {
-        return this.http.get(`${apiEndpoint}${feedreaderUrl}/`)
-            .toPromise()
-            .then(response => response.json() as Entry[])
-            .catch(this.handleError);
-    }
-
-    private handleError(error:any) {
-        console.error('An error occurred', error);
-        return Promise.reject(error.message || error);
+    getFeedsAndEntries() {
+        return Observable.forkJoin([
+            this.http.get(`${apiEndpoint}${feedreaderUrl}/feeds`)
+                .map(res => res.json() as Feed[]),
+            this.http.get(`${apiEndpoint}${feedreaderUrl}/entries`)
+                .map(res => res.json() as Entry[])
+        ])
     }
 }

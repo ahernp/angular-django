@@ -10,7 +10,7 @@ import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 
 import {Footer} from "../core/footer/footer";
 
-import {rootTitle, adminBreadcrumb} from "../app.settings";
+import {rootTitle} from "../app.settings";
 import {toDateTimeString} from "../utilities";
 
 export const feedreaderTitle: string = 'Feedreader';
@@ -23,6 +23,7 @@ export const feedreaderUrl: string = '/feedreader';
         <div id="content">
             <h1>Feedreader</h1>
             <div id="feedreader-entry-counts">
+                <p>Click to filter Entries shown.</p>
                 <h3 (click)="showAll()">Show All</h3>
                 <div *ngFor="let group of groupCounts">
                     <h3 *ngIf="group.name" (click)="showGroup(group.name)">{{group.name}} ({{group.count}})</h3>
@@ -80,7 +81,11 @@ export class FeedreaderComponent implements OnInit {
     populateFooter() {
         this.footer = new Footer({
             updated: this.now,
-            breadcrumbs: [adminBreadcrumb],
+            breadcrumbs: [
+                new Breadcrumb({title: 'Admin',
+                                url: `/admin${feedreaderUrl}/`,
+                                linkFlag: true})
+            ],
         });
     }
 

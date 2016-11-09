@@ -1,3 +1,4 @@
+from datetime import datetime, timedelta
 import json
 
 from django.conf import settings
@@ -17,7 +18,10 @@ def get_feeds(request):
 
 
 def get_entries(request):
-    entries = Entry.objects.all().order_by('-published_time')[:settings.MAX_ENTRIES_SHOWN]
+    from_time = datetime.utcnow() - timedelta(days=settings.MAX_DAYS_SHOWN)
+
+    entries = Entry.objects.filter(published_time__gt=from_time)\
+        .order_by('-published_time')[:settings.MAX_ENTRIES_SHOWN]
 
     data = json.dumps([{'title': entry.title,
                         'link': entry.link,

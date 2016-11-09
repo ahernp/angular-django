@@ -38,10 +38,11 @@ def timer(func, *args, **kwargs):
 @timer
 def get_live_data():
     """ Download snapshot of live data """
-    with cd(LIVE_SITE_ROOT):
-        run('~/.virtualenvs/ahernp/bin/python manage.py dumpdata '
-            '--indent 4 pages feedreader.group feedreader.feed > ~/live_snapshot.json')
-    get('live_snapshot.json', join(DJANGO_ROOT, 'ad', 'fixtures', 'live_snapshot.json'))
+    with settings(host_string='web'):
+        with cd(LIVE_SITE_ROOT):
+            run('~/.virtualenvs/ahernp/bin/python manage.py dumpdata '
+                '--indent 4 pages feedreader.group feedreader.feed > ~/live_snapshot.json')
+        get('live_snapshot.json', join(DJANGO_ROOT, 'ad', 'fixtures', 'live_snapshot.json'))
 
 @task
 @hosts('localhost')

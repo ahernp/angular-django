@@ -32,10 +32,10 @@
         "title": "ahernp.com",
         "slug": "ahernp-com",
         "parent": 3,
-        "updated": "2016-11-08T10:38:06.013Z",
+        "updated": "2016-11-09T11:54:13.087Z",
         "published": null,
         "content_type": "homepage",
-        "content": "## External\r\n\r\nFavourite:\r\n[Dictionary](http://dictionary.reference.com \"Dictionary, Thesaurus, etc.\")\r\n[Isabelle](http://isabellebidou.com \"Isabelle Bidou\")\r\n[StartPage](https://startpage.com/uk/? \"Google Search Results, but with privacy\")\r\n[Underground](http://www.tfl.gov.uk/tube-dlr-overground/status/ \"London Underground Status\")\r\n\r\nApps:\r\n[Calibre](http://calibre-ebook.com/ \"Ebook Manager\")\r\n[Geany](http://www.geany.org \"Text editor\")\r\n[Inkscape](http://inkscape.org/ \"SVG editor\")\r\n[LastPass](https://lastpass.com/ \"Password Manager\")\r\n\r\nBooks:\r\n[ABE](http://www.abebooks.co.uk/ \"Advanced Book Exchange\")\r\n[Amazon](http://www.amazon.co.uk/ \"Amazon in the UK\")\r\n([read](http://read.amazon.com \"Cloud Reader - Kindle Books\"))\r\n[Baen](http://www.baen.com/ \"Baen book publisher\")\r\n[O'Reilly](http://oreilly.com/ebooks/ \"IT Books\")\r\n[PG](http://www.gutenberg.org/ \"Project Gutenberg\")\r\n\r\nCartoons:\r\n[Dilbert](http://www.dilbert.com/fast \"Today's Dilbert comic\")\r\n[Doonesbury](http://www.doonesbury.com \"Today's Doonesbury comic\")\r\n[Garfield](http://www.garfield.com/comics/todayscomic.html \"Today's Garfield comic\")\r\n[xkcd](http://xkcd.com/ \"IT Comic\")\r\n\r\nGames:\r\n[BOC](http://www.orienteering.ie/boc \"Bishopstown Orienteering Club\")\r\n[GG](http://www.gamersgate.co.uk \"GamersGate\")\r\n[GOG](http://www.gog.com/ \"Good Old Games\")\r\n[Humble](https://www.humblebundle.com \"Humble Indie Bundles\")\r\n[Steam](http://store.steampowered.com \"Steam Shop\")\r\n\r\nMedia:\r\n[BBC](http://www.bbc.co.uk/weather/2643743?day=0 \"BBC Weather\")\r\n[iPlayer](http://www.bbc.co.uk/iplayer/favourites)\r\n[PC Pro](http://www.pcpro.co.uk/ \"PC Pro magazine\")\r\n[RT](http://www.radiotimes.com/radio/radio-listings \"Radio Times\")\r\n[Revolutions](http://www.revolutionspodcast.com/ \"by Mike Duncan\")\r\n[YouTube](https://www.youtube.com/feed/subscriptions)\r\n\r\nMisc:\r\n[AE](http://academicearth.org \"Academic Earth lectures\")\r\n[Justice](http://www.justiceharvard.org \"Lectures with Michael Sandel\")\r\n[London Walks](http://www.walks.com/ \"Guided walks\")\r\n[Map](http://www.openstreetmap.org/)\r\n[MPS](http://www.mpsonline.org.uk \"Mail and Telephone preference service\")\r\n[gov.uk](https://www.gov.uk/ \"Info from the UK Government\")\r\n\r\nShopping:\r\n[Allwrite](http://www.allwrite.nl/ \"Pens\")\r\n[BM](http://www.britishmuseum.org/ \"The British Museum\")\r\n[M&S](http://www.marksandspencer.com \"Marks and Spencer\")\r\n[Senz](http://www.senzumbrellas.com/ \"Umbrellas\")\r\n\r\nSocial:\r\n[Contacts](https://www.google.com/contacts \"Useful section Google don't provide a link to\")\r\n[Facebook](https://www.facebook.com/ahernp2 \"My Profile on Facebook\")\r\n[LinkedIn](https://www.linkedin.com/in/ahernp \"My Profile on LinkedIn\")\r\n[Twitter](https://twitter.com/ahernp \"My Profile on Twitter\")\r\n\r\nThis Site:\r\n[Angular](https://angular.io/docs/ts/latest/ \"Angular 2 with Typescript\")\r\n[Django](http://www.djangoproject.com/ \"Web development framework\")\r\n[GitHub](https://github.com/ahernp/angular-django)\r\n\r\nWeb:\r\n[CSS](http://www.cookwood.com/ \"HTML & Cascading Style Sheets\")\r\n[Gibson](http://grc.com/default.htm \"PC security checks\")\r\n[PyPI](https://pypi.python.org/pypi \"Python Package Index\")\r\n[W3Schools](http://w3schools.com/ \"Web standards\")"
+        "content": "## External\r\n\r\nFavourite:\r\n[Dictionary](http://dictionary.reference.com \"Dictionary, Thesaurus, etc.\")\r\n[Isabelle](http://isabellebidou.com \"Isabelle Bidou\")\r\n[StartPage](https://startpage.com/uk/? \"Google Search Results, but with privacy\")\r\n[TfL](http://www.tfl.gov.uk/tube-dlr-overground/status/ \"London Underground Status\")\r\n\r\nApps:\r\n[Calibre](http://calibre-ebook.com/ \"Ebook Manager\")\r\n[Geany](http://www.geany.org \"Text editor\")\r\n[Inkscape](http://inkscape.org/ \"SVG editor\")\r\n[LastPass](https://lastpass.com/ \"Password Manager\")\r\n\r\nBooks:\r\n[ABE](http://www.abebooks.co.uk/ \"Advanced Book Exchange\")\r\n[Amazon](http://www.amazon.co.uk/ \"Amazon in the UK\")\r\n([read](http://read.amazon.com \"Cloud Reader - Kindle Books\"))\r\n[Baen](http://www.baen.com/ \"Baen book publisher\")\r\n[O'Reilly](http://oreilly.com/ebooks/ \"IT Books\")\r\n[PG](http://www.gutenberg.org/ \"Project Gutenberg\")\r\n\r\nCartoons:\r\n[Dilbert](http://www.dilbert.com/fast \"Today's Dilbert comic\")\r\n[Doonesbury](http://www.doonesbury.com \"Today's Doonesbury comic\")\r\n[Garfield](http://www.garfield.com/comics/todayscomic.html \"Today's Garfield comic\")\r\n[xkcd](http://xkcd.com/ \"IT Comic\")\r\n\r\nGames:\r\n[BOC](http://www.orienteering.ie/boc \"Bishopstown Orienteering Club\")\r\n[GG](http://www.gamersgate.co.uk \"GamersGate\")\r\n[GOG](http://www.gog.com/ \"Good Old Games\")\r\n[Humble](https://www.humblebundle.com \"Humble Indie Bundles\")\r\n[Steam](http://store.steampowered.com \"Steam Shop\")\r\n\r\nMedia:\r\n[BBC](http://www.bbc.co.uk/weather/2643743?day=0 \"BBC Weather\")\r\n[iPlayer](http://www.bbc.co.uk/iplayer/favourites)\r\n[PC Pro](http://www.pcpro.co.uk/ \"PC Pro magazine\")\r\n[RT](http://www.radiotimes.com/radio/radio-listings \"Radio Times\")\r\n[Revolutions](http://www.revolutionspodcast.com/ \"by Mike Duncan\")\r\n[YouTube](https://www.youtube.com/feed/subscriptions)\r\n\r\nMisc:\r\n[AE](http://academicearth.org \"Academic Earth lectures\")\r\n[Justice](http://www.justiceharvard.org \"Lectures with Michael Sandel\")\r\n[London Walks](http://www.walks.com/ \"Guided walks\")\r\n[Map](http://www.openstreetmap.org/)\r\n[MPS](http://www.mpsonline.org.uk \"Mail and Telephone preference service\")\r\n[gov.uk](https://www.gov.uk/bank-holidays \"UK Bank Holidays\")\r\n\r\nShopping:\r\n[Allwrite](http://www.allwrite.nl/ \"Pens\")\r\n[BM](http://www.britishmuseum.org/ \"The British Museum\")\r\n[M&S](http://www.marksandspencer.com \"Marks and Spencer\")\r\n[Senz](http://www.senzumbrellas.com/ \"Umbrellas\")\r\n\r\nSocial:\r\n[Contacts](https://www.google.com/contacts \"Useful section Google don't provide a link to\")\r\n[Facebook](https://www.facebook.com/ahernp2 \"My Profile on Facebook\")\r\n[LinkedIn](https://www.linkedin.com/in/ahernp \"My Profile on LinkedIn\")\r\n[Twitter](https://twitter.com/ahernp \"My Profile on Twitter\")\r\n\r\nThis Site:\r\n[Angular](https://angular.io/docs/ts/latest/ \"Angular 2 with Typescript\")\r\n[Django](http://www.djangoproject.com/ \"Web development framework\")\r\n[GitHub](https://github.com/ahernp/angular-django)\r\n\r\nWeb:\r\n[CSS](http://www.cookwood.com/ \"HTML & Cascading Style Sheets\")\r\n[Gibson](http://grc.com/default.htm \"PC security checks\")\r\n[PyPI](https://pypi.python.org/pypi \"Python Package Index\")\r\n[W3Schools](http://w3schools.com/ \"Web standards\")"
     }
 },
 {
@@ -786,10 +786,10 @@
         "title": "Delay at Tower Bridge",
         "slug": "delay-at-tower-bridge",
         "parent": 1,
-        "updated": "2011-09-09T08:55:30Z",
+        "updated": "2016-11-09T10:57:06.659Z",
         "published": "2011-09-09",
         "content_type": "markdown",
-        "content": "On my walk to work this morning, Tower Bridge opened before my disbelieving eyes:\r\n\r\n[![Tower Bridge Open](/media/img/thumb/TowerBridge.jpg \r\n\"Tower Bridge Open\")](/media/img/TowerBridge.jpg \r\n\"Tower Bridge: Opened on my walk to work\")\r\n\r\nNot the sort of delay I had on my commutes in Ireland!\r\n\r\nMy employer has been taken over by \r\n[McGraw-Hill](http://www.mcgraw-hill.com/ \"McGraw-Hill Companies\"). \r\nThey don't use Python or indeed do much in-house development. My team and I appear not to have a long-term future. Time to consider my next move."
+        "content": "On my walk to work this morning, Tower Bridge opened before my disbelieving eyes:\r\n\r\n[![Tower Bridge Open](/media/img/thumb/TowerBridge.jpg \"Tower Bridge Open\")](/media/img/TowerBridge.jpg \"Tower Bridge: Opened on my walk to work\")\r\n\r\nNot the sort of delay I had on my commutes in Ireland!\r\n\r\nMy employer has been taken over by \r\n[McGraw-Hill](http://www.mcgraw-hill.com/ \"McGraw-Hill Companies\"). \r\nThey don't use Python or indeed do much in-house development. My team and I appear not to have a long-term future. Time to consider my next move."
     }
 },
 {
@@ -1317,7 +1317,7 @@
         "link": "http://blog.dilbert.com/",
         "description": "",
         "published_time": "2015-01-12T07:00:01Z",
-        "last_polled_time": "2016-11-08T19:17:21.782Z",
+        "last_polled_time": "2016-11-09T12:17:21.791Z",
         "group": 2
     }
 },
@@ -1330,7 +1330,7 @@
         "link": "http://bingethinkinghistory.blogspot.com/",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-08T19:17:04.321Z",
+        "last_polled_time": "2016-11-09T12:17:04.419Z",
         "group": 1
     }
 },
@@ -1356,7 +1356,7 @@
         "link": "http://ancientworldpodcast.blogspot.com/",
         "description": "From the first human civilizations to 500 BC in (around) thirty podcasts",
         "published_time": null,
-        "last_polled_time": "2016-11-08T19:17:23.954Z",
+        "last_polled_time": "2016-11-09T12:17:24.047Z",
         "group": 1
     }
 },
@@ -1394,8 +1394,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/fileon4/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006th08",
         "description": "Award-winning current affairs documentary series investigating major issues at home and abroad",
-        "published_time": "2016-11-01T20:50:00Z",
-        "last_polled_time": "2016-11-08T10:17:13.847Z",
+        "published_time": "2016-11-08T21:00:00Z",
+        "last_polled_time": "2016-11-08T21:17:16.063Z",
         "group": 4
     }
 },
@@ -1550,8 +1550,8 @@
         "xml_url": "http://feedproxy.google.com/linuxtoday/linux",
         "link": "http://www.linuxtoday.com/",
         "description": "",
-        "published_time": "2016-11-08T19:01:16Z",
-        "last_polled_time": "2016-11-08T19:17:15.036Z",
+        "published_time": "2016-11-09T12:14:50Z",
+        "last_polled_time": "2016-11-09T12:17:14.655Z",
         "group": 5
     }
 },
@@ -1564,7 +1564,7 @@
         "link": "https://www.schneier.com/blog/",
         "description": "A blog covering security and security technology.",
         "published_time": null,
-        "last_polled_time": "2016-11-08T19:17:21.555Z",
+        "last_polled_time": "2016-11-09T12:17:21.571Z",
         "group": 5
     }
 },
@@ -1577,7 +1577,7 @@
         "link": "https://inkscapetutorials.org",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-08T19:17:10.912Z",
+        "last_polled_time": "2016-11-09T12:17:11.608Z",
         "group": 5
     }
 },
@@ -1590,7 +1590,7 @@
         "link": "http://www.theregister.co.uk/",
         "description": "Biting the hand that feeds IT",
         "published_time": null,
-        "last_polled_time": "2016-11-08T19:17:32.034Z",
+        "last_polled_time": "2016-11-09T12:17:31.864Z",
         "group": 5
     }
 },
@@ -1629,7 +1629,7 @@
         "link": "http://www.reuters.com",
         "description": "Reuters.com is your source for breaking news, business, financial and investing news, including personal finance and stocks.  Reuters is the leading global provider of news, financial information and technology solutions to the world's media, financial institutions, businesses and individuals.",
         "published_time": "2016-04-01T03:23:32Z",
-        "last_polled_time": "2016-11-08T19:17:19.389Z",
+        "last_polled_time": "2016-11-09T12:17:19.008Z",
         "group": 3
     }
 },
@@ -1668,7 +1668,7 @@
         "link": "https://www.djangoproject.com/weblog/",
         "description": "Latest news about Django, the Python Web framework.",
         "published_time": null,
-        "last_polled_time": "2016-11-08T19:17:27.287Z",
+        "last_polled_time": "2016-11-09T12:17:27.123Z",
         "group": 5
     }
 },
@@ -1746,7 +1746,7 @@
         "link": "http://www.bbc.co.uk/news/",
         "description": "BBC News - UK Politics",
         "published_time": null,
-        "last_polled_time": "2016-11-08T19:17:03.962Z",
+        "last_polled_time": "2016-11-09T12:17:03.938Z",
         "group": 3
     }
 },
@@ -1759,7 +1759,7 @@
         "link": "http://www.anisopteragames.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-08T19:17:18.979Z",
+        "last_polled_time": "2016-11-09T12:17:18.341Z",
         "group": 2
     }
 },
@@ -1785,7 +1785,7 @@
         "link": "http://www.lorerunner.com/podcastgen/",
         "description": "A series of audio ruminations on games, movies, and books.",
         "published_time": null,
-        "last_polled_time": "2016-11-08T19:17:03.763Z",
+        "last_polled_time": "2016-11-09T12:17:03.721Z",
         "group": 2
     }
 },
@@ -1798,7 +1798,7 @@
         "link": "http://slatestarcodex.com",
         "description": "Open threads at the Open Thread tab every Sunday and Wednesday",
         "published_time": null,
-        "last_polled_time": "2016-11-08T19:17:22.495Z",
+        "last_polled_time": "2016-11-09T12:17:22.582Z",
         "group": 2
     }
 },
@@ -1811,7 +1811,7 @@
         "link": "http://www.exurbe.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-08T19:17:09.242Z",
+        "last_polled_time": "2016-11-09T12:17:10.027Z",
         "group": 2
     }
 },
@@ -1824,7 +1824,7 @@
         "link": "http://b5audioguide.com",
         "description": "This is a book club without books, an episode-by-episode walkthrough of one of the most influential and important modern SF series. Each podcast begins with a spoiler-free discussion of the episode for new viewers, then we give listeners a jumping-off point and switch to a discussion of how the episode fits into the five-year history of the show.",
         "published_time": null,
-        "last_polled_time": "2016-11-08T19:17:25.859Z",
+        "last_polled_time": "2016-11-09T12:17:25.914Z",
         "group": 2
     }
 },
@@ -1837,7 +1837,7 @@
         "link": "https://explorminate.net",
         "description": "4X and Strategy Game News",
         "published_time": null,
-        "last_polled_time": "2016-11-08T19:17:06.704Z",
+        "last_polled_time": "2016-11-09T12:17:06.021Z",
         "group": 2
     }
 },
@@ -1850,7 +1850,7 @@
         "link": "https://www.theincomparable.com/theincomparable/",
         "description": "The Incomparable is a weekly dive into geeky media we love, including movies, books, TV, comics, and more, featuring a rotating panel of guests and hosted by Jason Snell.",
         "published_time": null,
-        "last_polled_time": "2016-11-08T19:17:30.684Z",
+        "last_polled_time": "2016-11-09T12:17:30.472Z",
         "group": 2
     }
 },
@@ -1876,7 +1876,7 @@
         "link": "http://whatever.scalzi.com",
         "description": "LET ME STEAL THIS MOMENT FROM YOU NOW",
         "published_time": null,
-        "last_polled_time": "2016-11-08T19:17:34.866Z",
+        "last_polled_time": "2016-11-09T12:17:35.073Z",
         "group": 2
     }
 },
@@ -1889,7 +1889,7 @@
         "link": "http://www.idlethumbs.net/3ma",
         "description": "Three Moves Ahead is the leading strategy game themed podcast on the internet. Every week a panel of knowledgeable gamers with strong opinions meets to talk about the strategy and war games of the day, design issues and games in the wider world.",
         "published_time": null,
-        "last_polled_time": "2016-11-08T19:17:34.039Z",
+        "last_polled_time": "2016-11-09T12:17:34.054Z",
         "group": 2
     }
 },
@@ -1901,8 +1901,8 @@
         "xml_url": "http://feeds.soundcloud.com/users/soundcloud:users:125332894/sounds.rss",
         "link": "http://www.thejimquisition.com",
         "description": "Audio home of The Jimquisition, featuring its lov\u2026",
-        "published_time": "2016-11-03T16:17:09Z",
-        "last_polled_time": "2016-11-08T10:17:16.974Z",
+        "published_time": "2016-11-08T21:52:31Z",
+        "last_polled_time": "2016-11-08T22:17:16.776Z",
         "group": 2
     }
 }

@@ -29,14 +29,9 @@ export const dashboardUrl: string = '/dashboard';
                             {{flag.name}}: {{flag.actual}}&ensp;
                     </span>
                     <h2>Version Information</h2>
+                    <p *ngIf="dashboard.gitVersion"><strong>Most Recent Commit:</strong> {{dashboard.gitVersion}}</p>
                     <p *ngIf="dashboard.pythonPackages"><strong>Python Packages:</strong> {{dashboard.pythonPackages}}</p>
                     <p *ngIf="dashboard.npmPackages"><strong>NPM Packages:</strong> {{dashboard.npmPackages}}</p>
-                    <div *ngIf="dashboard.gitVersion">
-                        <strong>Most Recent Commit:</strong><br>
-                        <div style="padding-left:1em;">
-                            <code>{{dashboard.gitVersion}}</code>
-                        </div>
-                    </div>
                 </div>
                 <div style="width:47%; float:left; padding-left: 1em;">
                     <h2>Recent Log Entries</h2>

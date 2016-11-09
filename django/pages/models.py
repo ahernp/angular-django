@@ -1,7 +1,5 @@
 from __future__ import unicode_literals
 
-import json
-
 from django.db import models
 
 HOMEPAGE = 'homepage'
@@ -38,14 +36,22 @@ class Page(models.Model):
     def __str__(self):
         return self.title
 
-    def _get_json(self):
-        return json.dumps({'id': self.id,
-                           'title': self.title,
-                           'url': '/page/%s' % self.slug,
-                           'parentName': self.parent.title,
-                           'updated': self.updated.strftime('%Y-%m-%d %H:%M:%S'),
-                           'published': self.published.strftime('%Y-%m-%d') if self.published else '',
-                           'contentType': self.content_type,
-                           'content': self.content})
+    def _get_dictionary(self):
+        return {'id': self.id,
+                'title': self.title,
+                'url': '/page/%s' % self.slug,
+                'parentName': self.parent.title,
+                'updated': self.updated.strftime('%Y-%m-%d %H:%M:%S'),
+                'published': self.published.strftime('%Y-%m-%d') if self.published else '',
+                'contentType': self.content_type,
+                'content': self.content}
 
-    json = property(_get_json)
+    dictionary = property(_get_dictionary)
+
+    def _get_breadcrumb_dictionary(self):
+        return {'title': self.title,
+                'url': '/page/%s' % self.slug,
+                'parentName': self.parent.title,
+                'updated': self.updated.strftime('%Y-%m-%d %H:%M:%S')}
+
+    breadcrumb_dictionary = property(_get_breadcrumb_dictionary)

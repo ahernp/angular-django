@@ -14,22 +14,22 @@ def list_pages(request):
         pages = Page.objects.filter(parent=parent)
     else:
         pages = Page.objects.all()
-    data = json.dumps([{'title': page.title,
-                        'url': '/page/%s' % page.slug,
-                        'updated': page.updated.strftime('%Y-%m-%d %H:%M:%S'),
-                        'parentName': page.parent.title} for page in pages])
+    data = json.dumps([page.get_breadcrumb_dictionary for page in pages])
     return HttpResponse(data, content_type='application/json')
 
 
 def read_page(request, slug):
-    page = Page.objects.get(slug=slug)
-    return HttpResponse(page.json, content_type='application/json')
+    parent = Page.objects.get(slug=slug)
+    parent_dictionary = parent.dictionary
+    children = Page.objects.filter(parent=parent).order_by('title')
+    parent_dictionary['children'] = [child.breadcrumb_dictionary for child in children]
+    return HttpResponse(json.dumps(parent_dictionary), content_type='application/json')
 
 
 def child_pages(request, parent_slug, limit=3):
     parent = Page.objects.get(slug=parent_slug)
     pages = Page.objects.filter(parent=parent).order_by('-published')[:limit]
-    data = '[%s]' % ', '.join([page.json for page in pages])
+    data = json.dumps([page.dictionary for page in pages])
     return HttpResponse(data, content_type='application/json')
 
 

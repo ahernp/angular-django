@@ -1,3 +1,5 @@
+import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
+
 export class Page {
     id: number;
     title: string;
@@ -7,4 +9,5 @@ export class Page {
     published: string;
     contentType: string;
     content: string;
+    children: Breadcrumb[];
 }

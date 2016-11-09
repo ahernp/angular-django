@@ -81,12 +81,7 @@ export class PageComponent implements OnInit {
                 });
 
                 if (this.page.contentType == 'markdown')
-                    this.pageService
-                        .getPageBreadcrumbs(slug)
-                        .then(pageBreadcrumbs => {
-                            this.childBreadcrumbs = pageBreadcrumbs;
-                        })
-                        .catch(error => this.error = error);
+                    this.childBreadcrumbs = this.page.children;
                 else
                     this.childBreadcrumbs = [];
             })

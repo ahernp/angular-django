@@ -253,10 +253,10 @@
         "title": "CV",
         "slug": "cv",
         "parent": 3,
-        "updated": "2016-09-21T19:42:47.536Z",
+        "updated": "2016-11-10T11:33:49.843Z",
         "published": null,
         "content_type": "markdown",
-        "content": "Paul Ahern, Python Programmer\r\n\r\n## My Story So Far\r\n\r\nHaving worked at Natwest bank in London for 15 years developing Retail Banking applications, using the COBOL programming language, in 2006 I moved back to Ireland to build a place in the country. While there, I attended an MSc course in Artificial Intelligence and worked on a helpdesk supporting various web meeting products.\r\n\r\nSince September 2010, I have been working in London as a Web Developer mostly using Python and Django. As an Irish citizen I am eligible to work in the UK.\r\n\r\n## Technical Skills\r\n\r\n*Programming:* Python, JavaScript, COBOL, Java\r\n<br>\r\n*Scripting:* Bash, Python\r\n<br>\r\n*Databases:* PostgreSQL, MySQL, DB2\r\n<br>\r\n*Web:* Django, HTML, CSS\r\n<br>\r\n*Version Control:* Git, Mercurial\r\n<br>\r\n*Management:* Pivotal Tracker, Jira\r\n<br>\r\n*IDE:* PyCharm\r\n\r\n## Portfolio\r\n\r\nExamples of my work can be found via links on this page: [ahernp.com/tools.html](http://ahernp.com/tools.html).\r\n\r\n## Education\r\n\r\n**1987-1990** BA Computer Studies, University College Cork: \r\n\r\n* Majored in Information Technology; Minored in Geography. \r\n\r\n**2006-2007** MSc Computer Science, UCC: \r\n\r\n* *Subjects* &ndash; Computer Security, Mobile Applications and various aspects of Artificial Intelligence.\r\n* *Projects* &ndash; Building a University Timetabling tool using Constraint-Based programming techniques and modelling an adaptive Spam filtering system.\r\n\r\n## Experience\r\n\r\n**2016-** at Affectv in London:\r\n\r\n> Working as a Web Developer mostly using Typescript and Javascript in AngularJS 1.5.\r\n\r\n**2014-2016** at Festicket in London:\r\n\r\n> Working as a Web Developer maintaining and enhancing the festicket.com website.\r\n\r\n> * Integrated Booking Protect (Refund Protection) into the Festicket purchase process via an API.\r\n> *Wrote reporting logic to provide B2B communication to suppliers.\r\nWrote and maintained automated Unit Tests using py.test.\r\n> * Used a sprint-based Agile approach to deliver changes to festicket.com.\r\n\r\n> Non-Web work and support:\r\n\r\n> * Provided IT support to staff: Set-up PCs and accounts for new joiners; Offboarded leavers.\r\n> * Created and maintained an internal company wiki to document standards and procedures.\r\n\r\n**2012-2014** at Digitalis Reputations in London:\r\n\r\n> Worked as a Web Developer migrating an existing in-house tool onto the Django web framework. \r\n\r\n> * Reverse-engineered a .NET application to create an integrated system providing the full set of functionality required by our in-house teams.\r\n> * Used a bespoke Agile approach to collect requirements from users and refine prototypes of new systems.\r\n> * Adjusted our parsing of Search Results as the major search engines changed their format.\r\n> * Wrote and maintained automated Unit Tests using Django and Selenium IDE.\r\n> * Wrote Python Fabric scripts to automate testing, delivery and deployment.\r\n> * Languages used: Python, Javascript and Django.\r\nTechnical Environment: CentOS operating system; MySQL database; Subversion and Git version control.\r\n\r\n**2011-2012** at ReportLab in London:\r\n\r\n> Built several web sites which enable organisations to provide links to PDF output which is dynamically generated from their own data sets using the Reportlab core product.\r\n\r\n> My team has also built a Django-based wizard which allows users to buy foreign exchange. This has been rolled out across several financial institutions.\r\n\r\n> * Built web sites in direct collaboration with the Clients.\r\n> * Liaised with Clients to manage the interfaces between their systems and ours.\r\n> * Used Pivotal Tracker tool to manage projects in an Agile fashion.\r\n> * Provided Live Support to the Clients.\r\n> * Wrote and maintained automated Unit Tests using Django and Selenium IDE.\r\n> * Languages used: Python, Javascript and Django.\r\n> * Technical Environment: Ubuntu operating system; MySQL database; Mercurial version control.\r\n\r\n**2010-2011** at Steel Business Briefing in London:\r\n\r\n> Worked as a Web Developer building sites using the Django web framework.\r\n\r\n> * Built a replacement of the company's PHP website using Django.\r\n> * Liaised with the users to identify required enhancements to the existing system.\r\n> * The team worked in a formal Agile/Scrum fashion, e.g. with daily stand-up meetings.\r\n> * Wrote and maintained automated Unit Tests using Django and Selenium IDE.\r\n> * Languages used: Python, Javascript and Django.\r\n> * Technical Environment: Ubuntu operating system; MySQL database; Git version control.\r\n\r\n**2008-2010** at Premiere Global Services in Ireland:\r\n\r\n> Worked as a Web Technical Specialist answering client questions about using web-meeting products (Adobe Connect, Microsoft Live Meeting & Webex).\r\n\r\n**2006-2007** in Ireland:\r\n\r\n> Attended a full-time taught MSc course at UCC titled: Intelligent Systems for Business and Manufacturing.\r\n\r\n> Learned to drive.\r\n\r\n**1990-2006** at Natwest Bank in London:\r\n\r\n> For seven years I worked on the Live Support Team, helping to keep vital bank systems running. This included two years on the Helpdesk dealing with problems reported by non-IT staff across the countrywide branch network.\r\n\r\n> For several of those years I also worked as a duty-programmer. Working at night to see that the batch programs completed successfully and dealing immediately with any problems that arose. \r\n\r\n> The remainder of my time was spent on various application development teams. One of which build a system which automatically sent letters to Customers when changes occurred to the Standing Orders or Direct Debits on their accounts. \r\n\r\n> As a member of Application Development teams I participated in the end-to-end process of designing, documenting, building and implementing systems. From collecting requirements from users through writing design documents and implementation plans as well as coding and testing my role covered the full development process. \r\n\r\n> Apart from the OS390 IBM mainframe environment, much of my time was spent using Microsoft Word and Visio to capture and communicate the requirements and design of new and amended systems."
+        "content": "Paul Ahern, Python Programmer\r\n\r\n## My Story So Far\r\n\r\nHaving worked at Natwest bank in London for 15 years developing Retail Banking applications, using the COBOL programming language, in 2006 I moved back to Ireland to build a place in the country. While there, I attended an MSc course in Artificial Intelligence and worked on a helpdesk supporting various web meeting products.\r\n\r\nSince September 2010, I have been working in London as a Web Developer mostly using Python and Django. As an Irish citizen I am eligible to work in the UK.\r\n\r\n## Technical Skills\r\n\r\n*Programming:* Python, Typescript/JavaScript, COBOL, Java\r\n<br>\r\n*Scripting:* Bash, Python\r\n<br>\r\n*Databases:* PostgreSQL, MySQL, DB2\r\n<br>\r\n*Web:* Django, HTML, CSS\r\n<br>\r\n*Version Control:* Git, Mercurial\r\n<br>\r\n*Management:* Pivotal Tracker, Jira\r\n<br>\r\n*IDE:* PyCharm\r\n\r\n## Portfolio\r\n\r\nExamples of my work can be found via links on this page: [ahernp.com/page/portfolio](http://ahernp.com/page/portfolio).\r\n\r\n## Education\r\n\r\n**1987-1990** BA Computer Studies, University College Cork: \r\n\r\n* Majored in Information Technology; Minored in Geography. \r\n\r\n**2006-2007** MSc Computer Science, UCC: \r\n\r\n* *Subjects* &ndash; Computer Security, Mobile Applications and various aspects of Artificial Intelligence.\r\n* *Projects* &ndash; Building a University Timetabling tool using Constraint-Based programming techniques and modelling an adaptive Spam filtering system.\r\n\r\n## Experience\r\n\r\n**2016-** at Affectv in London:\r\n\r\n> Working as a Web Developer mostly using Typescript and Javascript in AngularJS 1.5.\r\n\r\n**2014-2016** at Festicket in London:\r\n\r\n> Working as a Web Developer maintaining and enhancing the festicket.com website.\r\n\r\n> * Integrated Booking Protect (Refund Protection) into the Festicket purchase process via an API.\r\n> *Wrote reporting logic to provide B2B communication to suppliers.\r\nWrote and maintained automated Unit Tests using py.test.\r\n> * Used a sprint-based Agile approach to deliver changes to festicket.com.\r\n\r\n> Non-Web work and support:\r\n\r\n> * Provided IT support to staff: Set-up PCs and accounts for new joiners; Offboarded leavers.\r\n> * Created and maintained an internal company wiki to document standards and procedures.\r\n\r\n**2012-2014** at Digitalis Reputations in London:\r\n\r\n> Worked as a Web Developer migrating an existing in-house tool onto the Django web framework. \r\n\r\n> * Reverse-engineered a .NET application to create an integrated system providing the full set of functionality required by our in-house teams.\r\n> * Used a bespoke Agile approach to collect requirements from users and refine prototypes of new systems.\r\n> * Adjusted our parsing of Search Results as the major search engines changed their format.\r\n> * Wrote and maintained automated Unit Tests using Django and Selenium IDE.\r\n> * Wrote Python Fabric scripts to automate testing, delivery and deployment.\r\n> * Languages used: Python, Javascript and Django.\r\nTechnical Environment: CentOS operating system; MySQL database; Subversion and Git version control.\r\n\r\n**2011-2012** at ReportLab in London:\r\n\r\n> Built several web sites which enable organisations to provide links to PDF output which is dynamically generated from their own data sets using the Reportlab core product.\r\n\r\n> My team has also built a Django-based wizard which allows users to buy foreign exchange. This has been rolled out across several financial institutions.\r\n\r\n> * Built web sites in direct collaboration with the Clients.\r\n> * Liaised with Clients to manage the interfaces between their systems and ours.\r\n> * Used Pivotal Tracker tool to manage projects in an Agile fashion.\r\n> * Provided Live Support to the Clients.\r\n> * Wrote and maintained automated Unit Tests using Django and Selenium IDE.\r\n> * Languages used: Python, Javascript and Django.\r\n> * Technical Environment: Ubuntu operating system; MySQL database; Mercurial version control.\r\n\r\n**2010-2011** at Steel Business Briefing in London:\r\n\r\n> Worked as a Web Developer building sites using the Django web framework.\r\n\r\n> * Built a replacement of the company's PHP website using Django.\r\n> * Liaised with the users to identify required enhancements to the existing system.\r\n> * The team worked in a formal Agile/Scrum fashion, e.g. with daily stand-up meetings.\r\n> * Wrote and maintained automated Unit Tests using Django and Selenium IDE.\r\n> * Languages used: Python, Javascript and Django.\r\n> * Technical Environment: Ubuntu operating system; MySQL database; Git version control.\r\n\r\n**2008-2010** at Premiere Global Services in Ireland:\r\n\r\n> Worked as a Web Technical Specialist answering client questions about using web-meeting products (Adobe Connect, Microsoft Live Meeting & Webex).\r\n\r\n**2006-2007** in Ireland:\r\n\r\n> Attended a full-time taught MSc course at UCC titled: Intelligent Systems for Business and Manufacturing.\r\n\r\n> Learned to drive.\r\n\r\n**1990-2006** at Natwest Bank in London:\r\n\r\n> For seven years I worked on the Live Support Team, helping to keep vital bank systems running. This included two years on the Helpdesk dealing with problems reported by non-IT staff across the countrywide branch network.\r\n\r\n> For several of those years I also worked as a duty-programmer. Working at night to see that the batch programs completed successfully and dealing immediately with any problems that arose. \r\n\r\n> The remainder of my time was spent on various application development teams. One of which build a system which automatically sent letters to Customers when changes occurred to the Standing Orders or Direct Debits on their accounts. \r\n\r\n> As a member of Application Development teams I participated in the end-to-end process of designing, documenting, building and implementing systems. From collecting requirements from users through writing design documents and implementation plans as well as coding and testing my role covered the full development process. \r\n\r\n> Apart from the OS390 IBM mainframe environment, much of my time was spent using Microsoft Word and Visio to capture and communicate the requirements and design of new and amended systems."
     }
 },
 {
@@ -1134,13 +1134,13 @@
     "model": "pages.page",
     "pk": 135,
     "fields": {
-        "title": "Django Tools",
-        "slug": "django-tools",
-        "parent": 8,
-        "updated": "2015-07-19T09:00:44.313Z",
+        "title": "Portfolio",
+        "slug": "portfolio",
+        "parent": 3,
+        "updated": "2016-11-10T11:33:04.377Z",
         "published": null,
         "content_type": "markdown",
-        "content": "## Django\r\n\r\n###ahernp.com\r\n\r\n[Documentation](http://ahernp.com/media/doc/django-ahernp/)\r\n[Source](https://github.com/ahernp/ahernp.com)\r\n\r\n### Bugtracker\r\n\r\nSimple Django Admin-based ticketing system.\r\n\r\n[Documentation](http://ahernp.com/media/doc/django-bugtracker/)\r\n[Package](https://pypi.python.org/pypi/django-bugtracker)\r\n[Source](https://github.com/ahernp/django-bugtracker)\r\n\r\n### Django Markdown Content Manager\r\n\r\nDMCM is a simple Content Management System in which website pages are served on request by the Django web framework using content stored on a database as text in the [Markdown](/markdown/) format. This site is implemented using DMCM.\r\n\r\n[Documentation](http://ahernp.com/media/doc/django-dmcm/)\r\n[Package](https://pypi.python.org/pypi/django-dmcm)\r\n[Source](https://github.com/ahernp/DMCM)\r\n\r\n### Feedreader\r\n\r\nRSS Aggregator.\r\n\r\n[Documentation](http://ahernp.com/media/doc/django-feedreader/)\r\n[Package](https://pypi.python.org/pypi/django-feedreader)\r\n[Source](https://github.com/ahernp/django-feedreader)\r\n\r\n### Monitoring\r\n\r\nLogging and Dashboard.\r\n\r\n[Documentation](http://ahernp.com/media/doc/django-monitoring/)\r\n[Package](https://pypi.python.org/pypi/django-monitoring-ahernp)\r\n[Source](https://github.com/ahernp/django-monitoring)"
+        "content": "Open source examples of my work.\r\n\r\n## Angular 2\r\n\r\n###Angular-Django\r\n\r\nAngular 2 and Django implementation of my personal website [ahernp.com](https://ahernp.com).\r\n\r\n[Source](https://github.com/ahernp/angular-django)\r\n\r\n## Django\r\n\r\n### Bugtracker\r\n\r\nSimple Django Admin-based ticketing system.\r\n\r\n[Documentation](http://ahernp.com/media/doc/django-bugtracker/)\r\n[Package](https://pypi.python.org/pypi/django-bugtracker)\r\n[Source](https://github.com/ahernp/django-bugtracker)\r\n\r\n### Django Markdown Content Manager\r\n\r\nDMCM is a simple Content Management System in which website pages are served on request by the Django web framework using content stored on a database as text in the [Markdown](/markdown/) format. This site is implemented using DMCM.\r\n\r\n[Documentation](http://ahernp.com/media/doc/django-dmcm/)\r\n[Package](https://pypi.python.org/pypi/django-dmcm)\r\n[Source](https://github.com/ahernp/DMCM)\r\n\r\n### Feedreader\r\n\r\nRSS Aggregator.\r\n\r\n[Documentation](http://ahernp.com/media/doc/django-feedreader/)\r\n[Package](https://pypi.python.org/pypi/django-feedreader)\r\n[Source](https://github.com/ahernp/django-feedreader)\r\n\r\n### Monitoring\r\n\r\nLogging and Dashboard.\r\n\r\n[Documentation](http://ahernp.com/media/doc/django-monitoring/)\r\n[Package](https://pypi.python.org/pypi/django-monitoring-ahernp)\r\n[Source](https://github.com/ahernp/django-monitoring)"
     }
 },
 {
@@ -1317,7 +1317,7 @@
         "link": "http://blog.dilbert.com/",
         "description": "",
         "published_time": "2015-01-12T07:00:01Z",
-        "last_polled_time": "2016-11-09T20:17:22.724Z",
+        "last_polled_time": "2016-11-10T13:17:23.351Z",
         "group": 2
     }
 },
@@ -1330,7 +1330,7 @@
         "link": "http://bingethinkinghistory.blogspot.com/",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-09T20:17:04.626Z",
+        "last_polled_time": "2016-11-10T13:17:05.157Z",
         "group": 1
     }
 },
@@ -1356,7 +1356,7 @@
         "link": "http://ancientworldpodcast.blogspot.com/",
         "description": "From the first human civilizations to 500 BC in (around) thirty podcasts",
         "published_time": null,
-        "last_polled_time": "2016-11-09T20:17:24.713Z",
+        "last_polled_time": "2016-11-10T13:17:25.450Z",
         "group": 1
     }
 },
@@ -1433,8 +1433,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/iot/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qykl",
         "description": "Melvyn Bragg and guests discuss the history of ideas",
-        "published_time": "2016-11-03T11:37:00Z",
-        "last_polled_time": "2016-11-08T10:17:15.697Z",
+        "published_time": "2016-11-10T11:28:00Z",
+        "last_polled_time": "2016-11-10T12:17:11.820Z",
         "group": 4
     }
 },
@@ -1550,8 +1550,8 @@
         "xml_url": "http://feedproxy.google.com/linuxtoday/linux",
         "link": "http://www.linuxtoday.com/",
         "description": "",
-        "published_time": "2016-11-09T20:16:27Z",
-        "last_polled_time": "2016-11-09T20:17:15.087Z",
+        "published_time": "2016-11-10T13:10:58Z",
+        "last_polled_time": "2016-11-10T13:17:14.925Z",
         "group": 5
     }
 },
@@ -1564,7 +1564,7 @@
         "link": "https://www.schneier.com/blog/",
         "description": "A blog covering security and security technology.",
         "published_time": null,
-        "last_polled_time": "2016-11-09T20:17:22.437Z",
+        "last_polled_time": "2016-11-10T13:17:23.069Z",
         "group": 5
     }
 },
@@ -1577,7 +1577,7 @@
         "link": "https://inkscapetutorials.org",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-09T20:17:11.210Z",
+        "last_polled_time": "2016-11-10T13:17:11.076Z",
         "group": 5
     }
 },
@@ -1590,7 +1590,7 @@
         "link": "http://www.theregister.co.uk/",
         "description": "Biting the hand that feeds IT",
         "published_time": null,
-        "last_polled_time": "2016-11-09T20:17:33.507Z",
+        "last_polled_time": "2016-11-10T13:17:33.399Z",
         "group": 5
     }
 },
@@ -1655,7 +1655,7 @@
         "link": "https://www.djangoproject.com/weblog/",
         "description": "Latest news about Django, the Python Web framework.",
         "published_time": null,
-        "last_polled_time": "2016-11-09T20:17:28.436Z",
+        "last_polled_time": "2016-11-10T13:17:28.639Z",
         "group": 5
     }
 },
@@ -1733,7 +1733,7 @@
         "link": "http://www.bbc.co.uk/news/",
         "description": "BBC News - UK Politics",
         "published_time": null,
-        "last_polled_time": "2016-11-09T20:17:04.309Z",
+        "last_polled_time": "2016-11-10T13:17:04.805Z",
         "group": 3
     }
 },
@@ -1746,7 +1746,7 @@
         "link": "http://www.anisopteragames.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-09T20:17:19.606Z",
+        "last_polled_time": "2016-11-10T13:17:20.429Z",
         "group": 2
     }
 },
@@ -1772,7 +1772,7 @@
         "link": "http://www.lorerunner.com/podcastgen/",
         "description": "A series of audio ruminations on games, movies, and books.",
         "published_time": null,
-        "last_polled_time": "2016-11-09T20:17:04.110Z",
+        "last_polled_time": "2016-11-10T13:17:04.227Z",
         "group": 2
     }
 },
@@ -1785,7 +1785,7 @@
         "link": "http://slatestarcodex.com",
         "description": "Open threads at the Open Thread tab every Sunday and Wednesday",
         "published_time": null,
-        "last_polled_time": "2016-11-09T20:17:23.227Z",
+        "last_polled_time": "2016-11-10T13:17:23.866Z",
         "group": 2
     }
 },
@@ -1798,7 +1798,7 @@
         "link": "http://www.exurbe.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-09T20:17:09.384Z",
+        "last_polled_time": "2016-11-10T13:17:09.360Z",
         "group": 2
     }
 },
@@ -1811,7 +1811,7 @@
         "link": "http://b5audioguide.com",
         "description": "This is a book club without books, an episode-by-episode walkthrough of one of the most influential and important modern SF series. Each podcast begins with a spoiler-free discussion of the episode for new viewers, then we give listeners a jumping-off point and switch to a discussion of how the episode fits into the five-year history of the show.",
         "published_time": null,
-        "last_polled_time": "2016-11-09T20:17:26.950Z",
+        "last_polled_time": "2016-11-10T13:17:27.358Z",
         "group": 2
     }
 },
@@ -1824,7 +1824,7 @@
         "link": "https://explorminate.net",
         "description": "4X and Strategy Game News",
         "published_time": null,
-        "last_polled_time": "2016-11-09T20:17:06.642Z",
+        "last_polled_time": "2016-11-10T13:17:06.835Z",
         "group": 2
     }
 },
@@ -1837,7 +1837,7 @@
         "link": "https://www.theincomparable.com/theincomparable/",
         "description": "The Incomparable is a weekly dive into geeky media we love, including movies, books, TV, comics, and more, featuring a rotating panel of guests and hosted by Jason Snell.",
         "published_time": null,
-        "last_polled_time": "2016-11-09T20:17:31.862Z",
+        "last_polled_time": "2016-11-10T13:17:32.045Z",
         "group": 2
     }
 },
@@ -1863,7 +1863,7 @@
         "link": "http://whatever.scalzi.com",
         "description": "LET ME STEAL THIS MOMENT FROM YOU NOW",
         "published_time": null,
-        "last_polled_time": "2016-11-09T20:17:36.285Z",
+        "last_polled_time": "2016-11-10T13:17:36.414Z",
         "group": 2
     }
 },
@@ -1876,7 +1876,7 @@
         "link": "http://www.idlethumbs.net/3ma",
         "description": "Three Moves Ahead is the leading strategy game themed podcast on the internet. Every week a panel of knowledgeable gamers with strong opinions meets to talk about the strategy and war games of the day, design issues and games in the wider world.",
         "published_time": null,
-        "last_polled_time": "2016-11-09T20:17:35.485Z",
+        "last_polled_time": "2016-11-10T13:17:35.492Z",
         "group": 2
     }
 },

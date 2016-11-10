@@ -30,8 +30,6 @@ const tools = [cardgenBreadcrumb, coloursBreadcrumb, compareBreadcrumb, deduplic
                 <span *ngFor="let tool of tools">
                     <a routerLink="{{tool.url}}">{{tool.title}}</a>
                 </span>
-                <span>
-                <a routerLink="/page/django-tools">Django Tools</a></span>
             </p>
             <router-outlet></router-outlet>
         </div>

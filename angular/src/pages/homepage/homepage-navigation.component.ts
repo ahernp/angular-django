@@ -48,8 +48,8 @@ const navigationPanel = [
         parent: <Breadcrumb> {title: 'Personal'},
         children: [
             <Breadcrumb> {title: 'CV', url: '/page/cv'},
+            <Breadcrumb> {title: 'Portfolio', url: '/page/portfolio'},
             <Breadcrumb> {title: 'Profile', url: '/page/profile'},
-            <Breadcrumb> {title: 'Public Key', url: '/page/public-key'},
         ]
     },
     {

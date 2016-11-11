@@ -154,7 +154,7 @@ const colours: string[][] = [
 @Component({
     template: `
         <h1>HTML Colours</h1>
-        <input [(ngModel)]="filterName" (ngModelChange)="nameFilter($event)" placeholder="Name filter">
+        <input [(ngModel)]="filterName" (ngModelChange)="nameFilter()" placeholder="Name filter">
         <table>
             <thead>
                 <tr><th *ngFor="let columnHeading of columnHeadings">{{columnHeading}}</th></tr>

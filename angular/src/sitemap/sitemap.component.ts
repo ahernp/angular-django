@@ -14,6 +14,7 @@ import {rootTitle, rootBreadcrumb, adminBreadcrumb} from "../app.settings";
 import {toDateTimeString} from "../utilities";
 
 export const sitemapTitle: string = 'Site Map';
+const columnHeadings: string[] = ['Title', 'Parent', 'Updated']
 
 @Component({
     selector: 'ad-sitemap',
@@ -21,16 +22,13 @@ export const sitemapTitle: string = 'Site Map';
         <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
         <div id="content">
             <h1>{{title}}</h1>
+            <input [(ngModel)]="filterString" (ngModelChange)="filterRows()" placeholder="Filter">
             <table>
                 <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Parent</th>
-                        <th>Updated</th>
-                    </tr>
+                    <tr><th *ngFor="let columnHeading of columnHeadings">{{columnHeading}}</th></tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let row of sitemap">
+                    <tr *ngFor="let row of currentRows">
                         <td><a routerLink="{{row.url}}">{{row.title}}</a></td>
                         <td>{{row.parentName}}</td>
                         <td>{{row.updated}}</td>
@@ -48,6 +46,12 @@ export class SitemapComponent implements OnInit {
     parent_slug: string;
     breadcrumbs: Breadcrumb[];
     sitemap: Breadcrumb[];
+
+    filterString: string;
+    filterStrings: string[];
+    columnHeadings: string[] = columnHeadings;
+    currentRows: Breadcrumb[];
+
     footer: Footer;
     error: any;
 
@@ -118,6 +122,28 @@ export class SitemapComponent implements OnInit {
         });
     }
 
+    populateFilterStrings() {
+        this.filterStrings = [];
+        for (let breadcrumb of this.sitemap) {
+            let searchableStrings = [];
+            for (let attribute of ['url', 'title', 'parentName', 'updated'])
+                if (breadcrumb[attribute] != undefined)
+                    searchableStrings.push(breadcrumb[attribute].toLocaleLowerCase())
+            this.filterStrings.push(searchableStrings.toString());
+        }
+    }
+
+    filterRows(): void {
+        if (this.filterString.length < 3) {
+            this.currentRows = this.sitemap;
+            return;
+        }
+        var filterString = this.filterString.toLocaleLowerCase();
+        var filterStrings = this.filterStrings;
+        this.currentRows = this.sitemap.filter(
+            function(value, index) {return filterStrings[index].indexOf(filterString) != -1});
+    }
+
     getBreadcrumbs() {
         this.pageService
             .getPageBreadcrumbs(this.parent_slug)
@@ -129,6 +155,8 @@ export class SitemapComponent implements OnInit {
                     return a.title.toLowerCase().localeCompare(
                         b.title, 'en', {'sensitivity': 'base'});
                 });
+                this.currentRows = this.sitemap;
+                this.populateFilterStrings();
             })
             .catch(error => this.error = error);
     }

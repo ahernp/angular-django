@@ -58,7 +58,6 @@ class Feed(models.Model):
     def num_unread_entries(self):
         return Entry.objects.filter(feed=self, read_flag=False).count()
 
-
     def save(self, *args, **kwargs):
         """Poll new Feed"""
         try:
@@ -68,6 +67,7 @@ class Feed(models.Model):
             super(Feed, self).save(*args, **kwargs)
             from feedreader.utils import poll_feed
             poll_feed(self)
+
 
 class EntryManager(models.Manager):
     def num_unread(self):

@@ -1,5 +1,4 @@
 """Fabfile for angular-django project."""
-import codecs
 from datetime import datetime
 from os.path import abspath, dirname, join
 
@@ -8,7 +7,7 @@ from decorator import decorator
 from fabric.api import cd, env, get, hosts, lcd, local, run, settings, task
 from fabric.colors import magenta
 from fabric.contrib.console import confirm
-from fabric.contrib.files import append, exists
+from fabric.contrib.files import exists
 
 SITE_ROOT = dirname(abspath(__file__))
 LIVE_SITE_ROOT = '~/code/angular-django/django'
@@ -43,6 +42,7 @@ def get_live_data():
             run('~/.virtualenvs/ahernp/bin/python manage.py dumpdata '
                 '--indent 4 pages feedreader.group feedreader.feed > ~/live_snapshot.json')
         get('live_snapshot.json', join(DJANGO_ROOT, 'ad', 'fixtures', 'live_snapshot.json'))
+
 
 @task
 @hosts('localhost')
@@ -96,7 +96,6 @@ def setup(*args, **kwargs):
     manage('migrate')
     manage('loaddata %s/fixtures/live_snapshot.json' % PROJECT_NAME)
     manage('loaddata %s/fixtures/auth.json' % PROJECT_NAME)
-
 
 
 @task
@@ -164,4 +163,5 @@ def manage(*args, **kwargs):
     with settings(warn_only=True):
         with lcd(DJANGO_ROOT):
             local('python manage.py %s %s' % (' '.join(args),
-                                              ' '.join(['%s=%s' % (option, kwargs[option]) for option in kwargs])))
+                                              ' '.join(['%s=%s' % (option, kwargs[option])
+                                                        for option in kwargs])))

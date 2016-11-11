@@ -19,7 +19,7 @@ class PageAdmin(admin.ModelAdmin):
                        ('title', 'parent',),
                        ('slug', 'content_type'),
                        ('updated', 'published'),
-            )
+                       )
         }),
     )
     formfield_overrides = {

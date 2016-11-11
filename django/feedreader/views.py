@@ -12,7 +12,7 @@ def get_feeds(request):
 
     data = json.dumps([{'feedTitle': feed.title,
                         'groupName': feed.group.name if feed.group else ''}
-                        for feed in feeds])
+                       for feed in feeds])
 
     return HttpResponse(data, content_type='application/json')
 
@@ -29,6 +29,6 @@ def get_entries(request):
                         'publishedTime': entry.published_time.strftime('%Y-%m-%d %H:%M:%S'),
                         'feedTitle': entry.feed.title,
                         'groupName': entry.feed.group.name if entry.feed.group else ''}
-                        for entry in entries])
+                       for entry in entries])
 
     return HttpResponse(data, content_type='application/json')

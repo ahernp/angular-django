@@ -12,6 +12,7 @@ CONTENT_TYPE_CHOICES = (
     (TABLE, 'Table'),
 )
 
+
 class Page(models.Model):
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250,

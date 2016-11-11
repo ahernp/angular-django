@@ -22,10 +22,10 @@ class Command(BaseCommand):
         Add named (optional) argument
         """
         parser.add_argument('--verbose',
-            action='store_true',
-            dest='verbose',
-            default=False,
-            help='Print progress on command line')
+                            action='store_true',
+                            dest='verbose',
+                            default=False,
+                            help='Print progress on command line')
 
     def handle(self, *args, **options):
         """

@@ -17,7 +17,7 @@ class LogAdmin(admin.ModelAdmin):
         (None, {
             'fields': (('level', 'datetime',),
                        ('msg',),
-            )
+                       )
         }),
     )
 

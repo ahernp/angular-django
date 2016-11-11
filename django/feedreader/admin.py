@@ -23,7 +23,7 @@ class FeedAdmin(admin.ModelAdmin):
                        ('title', 'link',),
                        ('description',),
                        ('published_time', 'last_polled_time',),
-            )
+                       )
         }),
     )
 
@@ -41,7 +41,7 @@ class EntryAdmin(admin.ModelAdmin):
                        ('title', 'feed',),
                        ('description',),
                        ('published_time', 'read_flag'),
-            )
+                       )
         }),
     )
 

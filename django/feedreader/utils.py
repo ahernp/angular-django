@@ -25,7 +25,8 @@ def poll_feed(db_feed, verbose=False):
 
     if hasattr(parsed.feed, 'bozo_exception'):
         # Malformed feed
-        msg = 'Feedreader poll_feeds found Malformed feed, "%s": %s' % (db_feed.xml_url, parsed.feed.bozo_exception)
+        msg = 'Feedreader poll_feeds found Malformed feed, "%s": %s'\
+              % (db_feed.xml_url, parsed.feed.bozo_exception)
         logger.error(msg)
         if verbose:
             print(msg)
@@ -101,7 +102,8 @@ def poll_feed(db_feed, verbose=False):
                 published_time = datetime.fromtimestamp(mktime(entry.published_parsed))
 
                 try:
-                    published_time = pytz.timezone(settings.TIME_ZONE).localize(published_time, is_dst=None)
+                    published_time = pytz.timezone(settings.TIME_ZONE)\
+                        .localize(published_time, is_dst=None)
                 except pytz.exceptions.AmbiguousTimeError:
                     pytz_timezone = pytz.timezone(settings.TIME_ZONE)
                     published_time = pytz_timezone.localize(published_time, is_dst=False)
@@ -118,8 +120,10 @@ def poll_feed(db_feed, verbose=False):
             else:
                 db_entry.title = entry.title
 
-            # Lots of entries are missing descrtion_detail attributes. Escape their content by default
-            if hasattr(entry, 'description_detail') and entry.description_detail.type != 'text/plain':
+            # Lots of entries are missing description_detail attributes.
+            # Escape their content by default
+            if hasattr(entry, 'description_detail')\
+               and entry.description_detail.type != 'text/plain':
                 db_entry.description = entry.description
             else:
                 db_entry.description = html.escape(entry.description)

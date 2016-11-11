@@ -44,8 +44,8 @@
     "fields": {
         "title": "Profile",
         "slug": "profile",
-        "parent": 3,
-        "updated": "2016-10-06T18:27:35.740Z",
+        "parent": 146,
+        "updated": "2016-11-11T09:09:10.984Z",
         "published": null,
         "content_type": "markdown",
         "content": "## Paul Ahern\r\n\r\n<div style=\"float:right;padding-left:1em;padding-bottom:1em;\" markdown=\"1\">\r\n\r\n![Paul Ahern at Gougane Barra](/media/img/ahernp200x200.png \"Paul Ahern at Gougane Barra\")\r\n\r\n</div>\r\n\r\nI was born and educated in Ireland and then came to work in London.\r\n\r\n1990-2006: Worked in the IT department of Natwest Bank, mainly as a COBOL programmer. Returned to Cork in 2006.\r\n\r\n2006-2007: While looking for a mountain by the sea to build my retirement home on, I completed an Artificial Intelligence MSc course at University College Cork.\r\n\r\n2008-2010: Worked in Web Support for Premiere Global Services. My team answered questions from SAP staff about using Adobe Connect.\r\n\r\nIn 2008 I purchased the site for my place in the country at [Rooska](/rooska/ \"Rooska\") \r\non the south side of Bantry Bay. Phase 1, planting trees, building roads, walls and a barn was completed in 2010.\r\n\r\n2010-2011: Returned to London; Worked as a Web Developer for Steel Business Briefing.\r\n\r\n2011-2012: Worked as a Web Developer for [ReportLab](http://www.reportlab.com).\r\n\r\n2012-2014: Worked as a Web Developer for [digitalis](http://digitalisreputation.co.uk/).\r\n\r\n2014-2016: Working as a Python/Full-Stack Developer for [Festicket](http://festicket.com).\r\n\r\n2016-now: Working as a Developer for [affectv](http://affectv.com/)."
@@ -252,8 +252,8 @@
     "fields": {
         "title": "CV",
         "slug": "cv",
-        "parent": 3,
-        "updated": "2016-11-10T11:33:49.843Z",
+        "parent": 146,
+        "updated": "2016-11-11T09:09:10.962Z",
         "published": null,
         "content_type": "markdown",
         "content": "Paul Ahern, Python Programmer\r\n\r\n## My Story So Far\r\n\r\nHaving worked at Natwest bank in London for 15 years developing Retail Banking applications, using the COBOL programming language, in 2006 I moved back to Ireland to build a place in the country. While there, I attended an MSc course in Artificial Intelligence and worked on a helpdesk supporting various web meeting products.\r\n\r\nSince September 2010, I have been working in London as a Web Developer mostly using Python and Django. As an Irish citizen I am eligible to work in the UK.\r\n\r\n## Technical Skills\r\n\r\n*Programming:* Python, Typescript/JavaScript, COBOL, Java\r\n<br>\r\n*Scripting:* Bash, Python\r\n<br>\r\n*Databases:* PostgreSQL, MySQL, DB2\r\n<br>\r\n*Web:* Django, HTML, CSS\r\n<br>\r\n*Version Control:* Git, Mercurial\r\n<br>\r\n*Management:* Pivotal Tracker, Jira\r\n<br>\r\n*IDE:* PyCharm\r\n\r\n## Portfolio\r\n\r\nExamples of my work can be found via links on this page: [ahernp.com/page/portfolio](http://ahernp.com/page/portfolio).\r\n\r\n## Education\r\n\r\n**1987-1990** BA Computer Studies, University College Cork: \r\n\r\n* Majored in Information Technology; Minored in Geography. \r\n\r\n**2006-2007** MSc Computer Science, UCC: \r\n\r\n* *Subjects* &ndash; Computer Security, Mobile Applications and various aspects of Artificial Intelligence.\r\n* *Projects* &ndash; Building a University Timetabling tool using Constraint-Based programming techniques and modelling an adaptive Spam filtering system.\r\n\r\n## Experience\r\n\r\n**2016-** at Affectv in London:\r\n\r\n> Working as a Web Developer mostly using Typescript and Javascript in AngularJS 1.5.\r\n\r\n**2014-2016** at Festicket in London:\r\n\r\n> Working as a Web Developer maintaining and enhancing the festicket.com website.\r\n\r\n> * Integrated Booking Protect (Refund Protection) into the Festicket purchase process via an API.\r\n> *Wrote reporting logic to provide B2B communication to suppliers.\r\nWrote and maintained automated Unit Tests using py.test.\r\n> * Used a sprint-based Agile approach to deliver changes to festicket.com.\r\n\r\n> Non-Web work and support:\r\n\r\n> * Provided IT support to staff: Set-up PCs and accounts for new joiners; Offboarded leavers.\r\n> * Created and maintained an internal company wiki to document standards and procedures.\r\n\r\n**2012-2014** at Digitalis Reputations in London:\r\n\r\n> Worked as a Web Developer migrating an existing in-house tool onto the Django web framework. \r\n\r\n> * Reverse-engineered a .NET application to create an integrated system providing the full set of functionality required by our in-house teams.\r\n> * Used a bespoke Agile approach to collect requirements from users and refine prototypes of new systems.\r\n> * Adjusted our parsing of Search Results as the major search engines changed their format.\r\n> * Wrote and maintained automated Unit Tests using Django and Selenium IDE.\r\n> * Wrote Python Fabric scripts to automate testing, delivery and deployment.\r\n> * Languages used: Python, Javascript and Django.\r\nTechnical Environment: CentOS operating system; MySQL database; Subversion and Git version control.\r\n\r\n**2011-2012** at ReportLab in London:\r\n\r\n> Built several web sites which enable organisations to provide links to PDF output which is dynamically generated from their own data sets using the Reportlab core product.\r\n\r\n> My team has also built a Django-based wizard which allows users to buy foreign exchange. This has been rolled out across several financial institutions.\r\n\r\n> * Built web sites in direct collaboration with the Clients.\r\n> * Liaised with Clients to manage the interfaces between their systems and ours.\r\n> * Used Pivotal Tracker tool to manage projects in an Agile fashion.\r\n> * Provided Live Support to the Clients.\r\n> * Wrote and maintained automated Unit Tests using Django and Selenium IDE.\r\n> * Languages used: Python, Javascript and Django.\r\n> * Technical Environment: Ubuntu operating system; MySQL database; Mercurial version control.\r\n\r\n**2010-2011** at Steel Business Briefing in London:\r\n\r\n> Worked as a Web Developer building sites using the Django web framework.\r\n\r\n> * Built a replacement of the company's PHP website using Django.\r\n> * Liaised with the users to identify required enhancements to the existing system.\r\n> * The team worked in a formal Agile/Scrum fashion, e.g. with daily stand-up meetings.\r\n> * Wrote and maintained automated Unit Tests using Django and Selenium IDE.\r\n> * Languages used: Python, Javascript and Django.\r\n> * Technical Environment: Ubuntu operating system; MySQL database; Git version control.\r\n\r\n**2008-2010** at Premiere Global Services in Ireland:\r\n\r\n> Worked as a Web Technical Specialist answering client questions about using web-meeting products (Adobe Connect, Microsoft Live Meeting & Webex).\r\n\r\n**2006-2007** in Ireland:\r\n\r\n> Attended a full-time taught MSc course at UCC titled: Intelligent Systems for Business and Manufacturing.\r\n\r\n> Learned to drive.\r\n\r\n**1990-2006** at Natwest Bank in London:\r\n\r\n> For seven years I worked on the Live Support Team, helping to keep vital bank systems running. This included two years on the Helpdesk dealing with problems reported by non-IT staff across the countrywide branch network.\r\n\r\n> For several of those years I also worked as a duty-programmer. Working at night to see that the batch programs completed successfully and dealing immediately with any problems that arose. \r\n\r\n> The remainder of my time was spent on various application development teams. One of which build a system which automatically sent letters to Customers when changes occurred to the Standing Orders or Direct Debits on their accounts. \r\n\r\n> As a member of Application Development teams I participated in the end-to-end process of designing, documenting, building and implementing systems. From collecting requirements from users through writing design documents and implementation plans as well as coding and testing my role covered the full development process. \r\n\r\n> Apart from the OS390 IBM mainframe environment, much of my time was spent using Microsoft Word and Visio to capture and communicate the requirements and design of new and amended systems."
@@ -265,8 +265,8 @@
     "fields": {
         "title": "Public Key",
         "slug": "public-key",
-        "parent": 3,
-        "updated": "2014-09-13T10:12:48.578Z",
+        "parent": 146,
+        "updated": "2016-11-11T09:09:11.001Z",
         "published": null,
         "content_type": "markdown",
         "content": "Use this key to send me encrypted emails or to check signed emails I have sent.\r\n\r\n    -----BEGIN PUBLIC KEY-----\r\n    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnXhb0Swpgra+8mm21ak4\r\n    WhooZfnvF5aOsdECGI+r4AGqkuMQhyobfGy7fkMSqeA+dw8nJh8sH5sKbCJpiOSV\r\n    RzklRYQh9oe1CK23iEQe/1/ZHIs4WZfeFcllVfIrj4gCxJIieqSk1hFfzAVk/QpT\r\n    6ORTExl+cmvV0LhFKTkZTI4s+dferS6TPunaZ1v4mveAP+XuG7eY43d4EJm5pnQE\r\n    jtYsSTyYEJG66gM9SHC+TCrzlgpBf4XkNFATb74FLb4e1NxSskT2RHrBQHb++DmX\r\n    cqqiA7khIMLAFYB/Q6PCB9BQ8NaVQepriF1ezkV1GJmDf+D/TCWthlAtP8x+SpvH\r\n    wwIDAQAB\r\n    -----END PUBLIC KEY-----\r\n"
@@ -1136,8 +1136,8 @@
     "fields": {
         "title": "Portfolio",
         "slug": "portfolio",
-        "parent": 3,
-        "updated": "2016-11-10T11:33:04.377Z",
+        "parent": 146,
+        "updated": "2016-11-11T09:09:10.982Z",
         "published": null,
         "content_type": "markdown",
         "content": "Open source examples of my work.\r\n\r\n## Angular 2\r\n\r\n###Angular-Django\r\n\r\nAngular 2 and Django implementation of my personal website [ahernp.com](https://ahernp.com).\r\n\r\n[Source](https://github.com/ahernp/angular-django)\r\n\r\n## Django\r\n\r\n### Bugtracker\r\n\r\nSimple Django Admin-based ticketing system.\r\n\r\n[Documentation](http://ahernp.com/media/doc/django-bugtracker/)\r\n[Package](https://pypi.python.org/pypi/django-bugtracker)\r\n[Source](https://github.com/ahernp/django-bugtracker)\r\n\r\n### Django Markdown Content Manager\r\n\r\nDMCM is a simple Content Management System in which website pages are served on request by the Django web framework using content stored on a database as text in the [Markdown](/markdown/) format. This site is implemented using DMCM.\r\n\r\n[Documentation](http://ahernp.com/media/doc/django-dmcm/)\r\n[Package](https://pypi.python.org/pypi/django-dmcm)\r\n[Source](https://github.com/ahernp/DMCM)\r\n\r\n### Feedreader\r\n\r\nRSS Aggregator.\r\n\r\n[Documentation](http://ahernp.com/media/doc/django-feedreader/)\r\n[Package](https://pypi.python.org/pypi/django-feedreader)\r\n[Source](https://github.com/ahernp/django-feedreader)\r\n\r\n### Monitoring\r\n\r\nLogging and Dashboard.\r\n\r\n[Documentation](http://ahernp.com/media/doc/django-monitoring/)\r\n[Package](https://pypi.python.org/pypi/django-monitoring-ahernp)\r\n[Source](https://github.com/ahernp/django-monitoring)"
@@ -1274,6 +1274,19 @@
     }
 },
 {
+    "model": "pages.page",
+    "pk": 146,
+    "fields": {
+        "title": "Personal",
+        "slug": "personal",
+        "parent": 3,
+        "updated": "2016-11-11T09:08:08.834Z",
+        "published": null,
+        "content_type": "markdown",
+        "content": "Personal details."
+    }
+},
+{
     "model": "feedreader.group",
     "pk": 1,
     "fields": {
@@ -1317,7 +1330,7 @@
         "link": "http://blog.dilbert.com/",
         "description": "",
         "published_time": "2015-01-12T07:00:01Z",
-        "last_polled_time": "2016-11-10T13:17:23.351Z",
+        "last_polled_time": "2016-11-11T08:17:18.451Z",
         "group": 2
     }
 },
@@ -1330,7 +1343,7 @@
         "link": "http://bingethinkinghistory.blogspot.com/",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-10T13:17:05.157Z",
+        "last_polled_time": "2016-11-11T08:17:03.578Z",
         "group": 1
     }
 },
@@ -1356,7 +1369,7 @@
         "link": "http://ancientworldpodcast.blogspot.com/",
         "description": "From the first human civilizations to 500 BC in (around) thirty podcasts",
         "published_time": null,
-        "last_polled_time": "2016-11-10T13:17:25.450Z",
+        "last_polled_time": "2016-11-11T08:17:21.022Z",
         "group": 1
     }
 },
@@ -1498,8 +1511,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/bottomline/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006sz6t",
         "description": "Evan Davis hosts the business conversation show with people at the top giving insight into what matters",
-        "published_time": "2016-11-03T20:45:00Z",
-        "last_polled_time": "2016-11-08T10:17:31.317Z",
+        "published_time": "2016-11-10T20:45:00Z",
+        "last_polled_time": "2016-11-10T21:17:29.806Z",
         "group": 4
     }
 },
@@ -1511,22 +1524,9 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/film/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006r5jt",
         "description": "The latest releases, the hottest stars and the leading directors, plus news and insights from the film world",
-        "published_time": "2016-11-03T16:30:00Z",
-        "last_polled_time": "2016-11-08T10:17:32.788Z",
+        "published_time": "2016-11-10T16:30:00Z",
+        "last_polled_time": "2016-11-10T17:17:24.296Z",
         "group": 4
-    }
-},
-{
-    "model": "feedreader.feed",
-    "pk": 72,
-    "fields": {
-        "title": "The History of Rome",
-        "xml_url": "http://feeds.feedburner.com/TheHistoryOfRome",
-        "link": "http://thehistoryofrome.typepad.com/the_history_of_rome/",
-        "description": "A weekly podcast tracing the rise, decline and fall of the Roman Empire. Now complete! Visit us at http://thehistoryofrome.typepad.com",
-        "published_time": "2013-09-16T15:39:57Z",
-        "last_polled_time": "2013-09-16T16:17:19Z",
-        "group": 1
     }
 },
 {
@@ -1550,8 +1550,8 @@
         "xml_url": "http://feedproxy.google.com/linuxtoday/linux",
         "link": "http://www.linuxtoday.com/",
         "description": "",
-        "published_time": "2016-11-10T13:10:58Z",
-        "last_polled_time": "2016-11-10T13:17:14.925Z",
+        "published_time": "2016-11-11T08:16:27Z",
+        "last_polled_time": "2016-11-11T08:17:10.252Z",
         "group": 5
     }
 },
@@ -1564,7 +1564,7 @@
         "link": "https://www.schneier.com/blog/",
         "description": "A blog covering security and security technology.",
         "published_time": null,
-        "last_polled_time": "2016-11-10T13:17:23.069Z",
+        "last_polled_time": "2016-11-11T08:17:18.215Z",
         "group": 5
     }
 },
@@ -1577,7 +1577,7 @@
         "link": "https://inkscapetutorials.org",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-10T13:17:11.076Z",
+        "last_polled_time": "2016-11-11T08:17:08.849Z",
         "group": 5
     }
 },
@@ -1590,7 +1590,7 @@
         "link": "http://www.theregister.co.uk/",
         "description": "Biting the hand that feeds IT",
         "published_time": null,
-        "last_polled_time": "2016-11-10T13:17:33.399Z",
+        "last_polled_time": "2016-11-11T08:17:28.498Z",
         "group": 5
     }
 },
@@ -1655,7 +1655,7 @@
         "link": "https://www.djangoproject.com/weblog/",
         "description": "Latest news about Django, the Python Web framework.",
         "published_time": null,
-        "last_polled_time": "2016-11-10T13:17:28.639Z",
+        "last_polled_time": "2016-11-11T08:17:24.264Z",
         "group": 5
     }
 },
@@ -1687,19 +1687,6 @@
 },
 {
     "model": "feedreader.feed",
-    "pk": 138,
-    "fields": {
-        "title": "Books and Authors",
-        "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/openbook/rss.xml",
-        "link": "http://www.bbc.co.uk/programmes/p02nrsfl",
-        "description": "This podcast features Open Book and A Good Read. In Open Book Mariella Frostrup talks to authors about their work. In A Good Read Harriett Gilbert discusses favourite books.",
-        "published_time": "2016-11-08T17:00:00Z",
-        "last_polled_time": "2016-11-08T17:17:04.894Z",
-        "group": 4
-    }
-},
-{
-    "model": "feedreader.feed",
     "pk": 140,
     "fields": {
         "title": "Kermode Uncut Feed",
@@ -1713,19 +1700,6 @@
 },
 {
     "model": "feedreader.feed",
-    "pk": 143,
-    "fields": {
-        "title": "TotalBiscuit, The Cynical Brit",
-        "xml_url": "https://www.youtube.com/feeds/videos.xml?user=TotalHalibut",
-        "link": "http://www.youtube.com/user/TotalHalibut",
-        "description": "",
-        "published_time": "2006-07-27T14:19:51Z",
-        "last_polled_time": "2015-04-25T20:10:46.242Z",
-        "group": 2
-    }
-},
-{
-    "model": "feedreader.feed",
     "pk": 145,
     "fields": {
         "title": "BBC News - UK Politics",
@@ -1733,7 +1707,7 @@
         "link": "http://www.bbc.co.uk/news/",
         "description": "BBC News - UK Politics",
         "published_time": null,
-        "last_polled_time": "2016-11-10T13:17:04.805Z",
+        "last_polled_time": "2016-11-11T08:17:03.154Z",
         "group": 3
     }
 },
@@ -1746,7 +1720,7 @@
         "link": "http://www.anisopteragames.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-10T13:17:20.429Z",
+        "last_polled_time": "2016-11-11T08:17:14.106Z",
         "group": 2
     }
 },
@@ -1765,19 +1739,6 @@
 },
 {
     "model": "feedreader.feed",
-    "pk": 155,
-    "fields": {
-        "title": "Archengeia the Lorerunner",
-        "xml_url": "http://www.lorerunner.com/podcastgen/feed.xml",
-        "link": "http://www.lorerunner.com/podcastgen/",
-        "description": "A series of audio ruminations on games, movies, and books.",
-        "published_time": null,
-        "last_polled_time": "2016-11-10T13:17:04.227Z",
-        "group": 2
-    }
-},
-{
-    "model": "feedreader.feed",
     "pk": 157,
     "fields": {
         "title": "Slate Star Codex",
@@ -1785,7 +1746,7 @@
         "link": "http://slatestarcodex.com",
         "description": "Open threads at the Open Thread tab every Sunday and Wednesday",
         "published_time": null,
-        "last_polled_time": "2016-11-10T13:17:23.866Z",
+        "last_polled_time": "2016-11-11T08:17:19.502Z",
         "group": 2
     }
 },
@@ -1798,7 +1759,7 @@
         "link": "http://www.exurbe.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-10T13:17:09.360Z",
+        "last_polled_time": "2016-11-11T08:17:06.933Z",
         "group": 2
     }
 },
@@ -1811,20 +1772,7 @@
         "link": "http://b5audioguide.com",
         "description": "This is a book club without books, an episode-by-episode walkthrough of one of the most influential and important modern SF series. Each podcast begins with a spoiler-free discussion of the episode for new viewers, then we give listeners a jumping-off point and switch to a discussion of how the episode fits into the five-year history of the show.",
         "published_time": null,
-        "last_polled_time": "2016-11-10T13:17:27.358Z",
-        "group": 2
-    }
-},
-{
-    "model": "feedreader.feed",
-    "pk": 164,
-    "fields": {
-        "title": "eXplorminate",
-        "xml_url": "http://explorminate.net/feed/",
-        "link": "https://explorminate.net",
-        "description": "4X and Strategy Game News",
-        "published_time": null,
-        "last_polled_time": "2016-11-10T13:17:06.835Z",
+        "last_polled_time": "2016-11-11T08:17:22.935Z",
         "group": 2
     }
 },
@@ -1837,59 +1785,7 @@
         "link": "https://www.theincomparable.com/theincomparable/",
         "description": "The Incomparable is a weekly dive into geeky media we love, including movies, books, TV, comics, and more, featuring a rotating panel of guests and hosted by Jason Snell.",
         "published_time": null,
-        "last_polled_time": "2016-11-10T13:17:32.045Z",
-        "group": 2
-    }
-},
-{
-    "model": "feedreader.feed",
-    "pk": 166,
-    "fields": {
-        "title": "When Diplomacy Fails Podcast",
-        "xml_url": "http://rss.acast.com/whendiplomacyfails",
-        "link": "http://www.acast.com/whendiplomacyfails",
-        "description": "When Diplomacy Fails is a podcast containing solo informative and dual TALK episodes that cover the build up to, break out of and consequences of various wars throughout history, with a focus on diplomacy and international relations. Zack Twamley is a 24 year old eternal student with big plans and even crazier ambitions for history. He has a BA in History &amp; Politics and a Masters in a History of International Relations. So yes, he is at least somewhat qualified to do this. If you want to lend a hand to what Zack does here then please subscribe, rate or review the podcast here, like the Facebook page, visit the blog: wdfpodcast.blogspot.ie and contact Zack directly at his email address: wdfpodcast@hotmail.com  Thanksss!",
-        "published_time": "2015-11-25T11:46:30Z",
-        "last_polled_time": "2016-04-14T13:25:07.903Z",
-        "group": 1
-    }
-},
-{
-    "model": "feedreader.feed",
-    "pk": 167,
-    "fields": {
-        "title": "Whatever",
-        "xml_url": "http://whatever.scalzi.com/feed/",
-        "link": "http://whatever.scalzi.com",
-        "description": "LET ME STEAL THIS MOMENT FROM YOU NOW",
-        "published_time": null,
-        "last_polled_time": "2016-11-10T13:17:36.414Z",
-        "group": 2
-    }
-},
-{
-    "model": "feedreader.feed",
-    "pk": 168,
-    "fields": {
-        "title": "Three Moves Ahead",
-        "xml_url": "http://www.idlethumbs.net/feeds/3ma",
-        "link": "http://www.idlethumbs.net/3ma",
-        "description": "Three Moves Ahead is the leading strategy game themed podcast on the internet. Every week a panel of knowledgeable gamers with strong opinions meets to talk about the strategy and war games of the day, design issues and games in the wider world.",
-        "published_time": null,
-        "last_polled_time": "2016-11-10T13:17:35.492Z",
-        "group": 2
-    }
-},
-{
-    "model": "feedreader.feed",
-    "pk": 169,
-    "fields": {
-        "title": "Jimquisition",
-        "xml_url": "http://feeds.soundcloud.com/users/soundcloud:users:125332894/sounds.rss",
-        "link": "http://www.thejimquisition.com",
-        "description": "Audio home of The Jimquisition, featuring its lov\u2026",
-        "published_time": "2016-11-08T21:52:31Z",
-        "last_polled_time": "2016-11-08T22:17:16.776Z",
+        "last_polled_time": "2016-11-11T08:17:26.956Z",
         "group": 2
     }
 }

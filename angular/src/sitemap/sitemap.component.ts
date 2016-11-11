@@ -16,6 +16,8 @@ import {toDateTimeString} from "../utilities";
 export const sitemapTitle: string = 'Site Map';
 const columnHeadings: string[] = ['Title', 'Parent', 'Updated']
 
+var filterableStrings: string[];
+
 @Component({
     selector: 'ad-sitemap',
     template: `
@@ -48,7 +50,6 @@ export class SitemapComponent implements OnInit {
     sitemap: Breadcrumb[];
 
     filterString: string;
-    filterStrings: string[];
     columnHeadings: string[] = columnHeadings;
     currentRows: Breadcrumb[];
 
@@ -123,13 +124,13 @@ export class SitemapComponent implements OnInit {
     }
 
     populateFilterStrings() {
-        this.filterStrings = [];
+        filterableStrings = [];
         for (let breadcrumb of this.sitemap) {
             let searchableStrings = [];
             for (let attribute of ['url', 'title', 'parentName', 'updated'])
                 if (breadcrumb[attribute] != undefined)
                     searchableStrings.push(breadcrumb[attribute].toLocaleLowerCase())
-            this.filterStrings.push(searchableStrings.toString());
+            filterableStrings.push(searchableStrings.toString());
         }
     }
 
@@ -139,9 +140,8 @@ export class SitemapComponent implements OnInit {
             return;
         }
         var filterString = this.filterString.toLocaleLowerCase();
-        var filterStrings = this.filterStrings;
         this.currentRows = this.sitemap.filter(
-            function(value, index) {return filterStrings[index].indexOf(filterString) != -1});
+            (value, index) => filterableStrings[index].indexOf(filterString) != -1);
     }
 
     getBreadcrumbs() {

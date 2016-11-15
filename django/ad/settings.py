@@ -129,6 +129,11 @@ LOGGING = {
             'level': 'ERROR',
             'propagate': True,
         },
+        'core': {
+            'handlers': ['db_log', ],
+            'level': 'INFO',
+            'propagate': True,
+        },
         'feedreader': {
             'handlers': ['db_log', ],
             'level': 'INFO',

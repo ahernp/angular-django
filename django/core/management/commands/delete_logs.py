@@ -47,5 +47,4 @@ class Command(BaseCommand):
 
         Log.objects.filter(datetime__lt=delete_before).delete()
 
-        if verbose:
-            logger.info('Log entries deleted successfully')
+        logger.info('Log entries deleted successfully')

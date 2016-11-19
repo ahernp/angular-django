@@ -32,7 +32,7 @@ export class TableContentComponent implements OnInit {
                 if (this.currentColumnHeadings.length == 0)
                     this.currentColumnHeadings = lines[i].split('|');
                 else if (lines[i].indexOf('-----') == -1)
-                    this.currentRows.push(lines[i].split('|'));
+                    this.currentRows.push(lines[i].split('|').map(str => str.trim()));
             }
             else {
                 this.addTableSection();

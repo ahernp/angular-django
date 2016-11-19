@@ -5,11 +5,15 @@ import {CoreModule} from "../core/core.module";
 
 import {HomepageComponent} from "./homepage/homepage.component";
 import {HomepageNavigationComponent} from "./homepage/homepage-navigation.component";
+
 import {MarkdownComponent} from "./markdown/markdown.component";
+import {MarkdownToHtmlPipe} from "./markdown/markdown.pipe";
+
 import {PageComponent} from "./page.component";
 import {PageSourceComponent} from "./page-source.component";
 import {PageService} from "./page.service";
-import {MarkdownToHtmlPipe} from "./markdown/markdown.pipe";
+
+import {TableContentComponent} from "./tablecontent/tablecontent.component";
 
 @NgModule({
     imports: [
@@ -23,6 +27,7 @@ import {MarkdownToHtmlPipe} from "./markdown/markdown.pipe";
         PageComponent,
         PageSourceComponent,
         MarkdownToHtmlPipe,
+        TableContentComponent,
     ],
     providers: [
         PageService,

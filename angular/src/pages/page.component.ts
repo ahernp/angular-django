@@ -26,6 +26,7 @@ import {markdownBreadcrumb, rootSlug} from "../app.settings";
                 <ad-markdown-content [content]="page.content"></ad-markdown-content>
             </template>
             <ad-homepage *ngIf="page && page.contentType == 'homepage'" [content]="page.content"></ad-homepage>
+            <ad-tablecontent *ngIf="page && page.contentType == 'table'" [content]="page.content"></ad-tablecontent>
             <ad-page-source *ngIf="showSource" [page]="page"></ad-page-source>
         </div>
         <ad-footer id="footer" *ngIf="footer" [footer]="footer" (onToggleSource)="onToggleSource($event)"></ad-footer>

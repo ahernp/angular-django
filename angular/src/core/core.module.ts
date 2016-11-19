@@ -7,12 +7,14 @@ import {HeaderComponent} from "./header/header.component";
 import {FooterComponent} from "./footer/footer.component";
 import {BreadcrumbComponent} from "./breadcrumbs/breadcrumb.component";
 import {SpinnerComponent} from "./spinner/spinner.component";
+import {TableComponent} from "./table/table.component";
 import {BreadcrumbService} from "./breadcrumbs/breadcrumb.service";
 
 @NgModule({
     imports: [
         CommonModule,
         RouterModule,
+        FormsModule,
     ],
     declarations: [
         BreadcrumbComponent,
@@ -20,6 +22,7 @@ import {BreadcrumbService} from "./breadcrumbs/breadcrumb.service";
         FooterComponent,
         BreadcrumbComponent,
         SpinnerComponent,
+        TableComponent,
     ],
     providers: [
         BreadcrumbService,
@@ -31,6 +34,7 @@ import {BreadcrumbService} from "./breadcrumbs/breadcrumb.service";
         FooterComponent,
         BreadcrumbComponent,
         SpinnerComponent,
+        TableComponent,
     ]
 })
 export class CoreModule {}

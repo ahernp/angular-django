@@ -9,6 +9,8 @@ import {BreadcrumbComponent} from "./breadcrumbs/breadcrumb.component";
 import {SpinnerComponent} from "./spinner/spinner.component";
 import {TableComponent} from "./table/table.component";
 import {BreadcrumbService} from "./breadcrumbs/breadcrumb.service";
+import {MarkdownComponent} from "./markdown/markdown.component";
+import {MarkdownToHtmlPipe} from "./markdown/markdown.pipe";
 
 @NgModule({
     imports: [
@@ -23,6 +25,8 @@ import {BreadcrumbService} from "./breadcrumbs/breadcrumb.service";
         BreadcrumbComponent,
         SpinnerComponent,
         TableComponent,
+        MarkdownComponent,
+        MarkdownToHtmlPipe,
     ],
     providers: [
         BreadcrumbService,
@@ -35,6 +39,7 @@ import {BreadcrumbService} from "./breadcrumbs/breadcrumb.service";
         BreadcrumbComponent,
         SpinnerComponent,
         TableComponent,
+        MarkdownComponent,
     ]
 })
 export class CoreModule {}

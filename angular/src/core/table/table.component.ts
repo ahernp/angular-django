@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
+var filterableStrings: string[];
+
 @Component({
     selector: 'ad-table',
     template: `
@@ -25,6 +27,14 @@ export class TableComponent implements OnInit {
 
     ngOnInit(): void {
         this.currentRows = this.rows;
+        this.populateFilterStrings();
+    }
+
+    populateFilterStrings(): void {
+        filterableStrings = [];
+        for (let row of this.rows) {
+            filterableStrings.push(row.toString().toLocaleLowerCase());
+        }
     }
 
     filterRows(): void {
@@ -32,8 +42,8 @@ export class TableComponent implements OnInit {
             this.currentRows = this.rows;
             return;
         }
-        var filter = this.filterString.toLocaleLowerCase();
-        this.currentRows = this.rows.filter(row => row[0].toLocaleLowerCase()
-                                                         .indexOf(filter) != -1);
+        let filterString = this.filterString.toLocaleLowerCase();
+        this.currentRows = this.rows.filter(
+            (value, index) => filterableStrings[index].indexOf(filterString) != -1);
     }
 }

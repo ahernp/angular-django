@@ -25,7 +25,6 @@ export class TableContentComponent implements OnInit {
     }
 
     parseContentIntoSections(): void {
-        debugger;
         let lines: string[] = this.content.split('\n');
         for (var i = 0; i < lines.length; i++) {
             if (lines[i].indexOf('|') > -1) {

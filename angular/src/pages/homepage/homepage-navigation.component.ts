@@ -63,7 +63,9 @@ const navigationPanel = [
    {
         parent: <Breadcrumb> {title: 'Rooska', url: '/page/rooska'},
         children: [
-            <Breadcrumb> {title: 'Planting', url: '/page/planting'},
+            <Breadcrumb> {title: 'Before', url: '/page/2008-before'},
+            <Breadcrumb> {title: 'Maps', url: '/page/maps'},
+            <Breadcrumb> {title: 'Planting', url: '/page/2010-planting'},
         ]
     },
    {

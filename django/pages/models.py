@@ -5,11 +5,13 @@ from django.db import models
 HOMEPAGE = 'homepage'
 MARKDOWN = 'markdown'
 TABLE = 'table'
+GALLERY = 'gallery'
 
 CONTENT_TYPE_CHOICES = (
     (HOMEPAGE, 'Homepage'),
     (MARKDOWN, 'Markdown'),
     (TABLE, 'Table'),
+    (GALLERY, 'Gallery'),
 )
 
 

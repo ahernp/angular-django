@@ -18,15 +18,20 @@ import {markdownBreadcrumb, rootSlug} from "../app.settings";
         <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
         <div id="content">
             <h2 class="published_date" *ngIf="page && page.published">{{page.published|date:'d MMMM y'}}</h2>
-            <template [ngIf]="page && page.contentType == 'markdown'">
-                <h1>{{page.title}}</h1>
+
+            <h1 *ngIf="page && page.contentType == 'markdown' && page.title">{{page.title}}</h1>
+
+            <template [ngIf]="page && page.contentType != 'homepage'">
                 <template ngFor let-breadcrumb [ngForOf]="childBreadcrumbs">
                     <ad-breadcrumb [breadcrumb]="breadcrumb"></ad-breadcrumb>
                 </template>
-                <ad-markdown-content [content]="page.content"></ad-markdown-content>
             </template>
+
+            <ad-markdown-content *ngIf="page && page.contentType == 'markdown'" [content]="page.content"></ad-markdown-content>
             <ad-homepage *ngIf="page && page.contentType == 'homepage'" [content]="page.content"></ad-homepage>
             <ad-tablecontent *ngIf="page && page.contentType == 'table'" [content]="page.content"></ad-tablecontent>
+            <ad-gallerycontent *ngIf="page && page.contentType == 'gallery'" [content]="page.content"></ad-gallerycontent>
+
             <ad-page-source *ngIf="showSource" [page]="page"></ad-page-source>
         </div>
         <ad-footer id="footer" *ngIf="footer" [footer]="footer" (onToggleSource)="onToggleSource($event)"></ad-footer>
@@ -81,10 +86,7 @@ export class PageComponent implements OnInit {
                     ],
                 });
 
-                if (this.page.contentType == 'markdown')
-                    this.childBreadcrumbs = this.page.children;
-                else
-                    this.childBreadcrumbs = [];
+                this.childBreadcrumbs = this.page.children;
             })
             .catch(error => this.error = error);
     }

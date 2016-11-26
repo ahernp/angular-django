@@ -12,6 +12,8 @@ import {PageService} from "./page.service";
 
 import {TableContentComponent} from "./tablecontent/tablecontent.component";
 
+import {GalleryContentComponent} from "./gallerycontent/gallerycontent.component";
+
 @NgModule({
     imports: [
         CoreModule,
@@ -23,6 +25,7 @@ import {TableContentComponent} from "./tablecontent/tablecontent.component";
         PageComponent,
         PageSourceComponent,
         TableContentComponent,
+        GalleryContentComponent,
     ],
     providers: [
         PageService,

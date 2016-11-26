@@ -1330,7 +1330,7 @@
         "link": "http://blog.dilbert.com/",
         "description": "",
         "published_time": "2015-01-12T07:00:01Z",
-        "last_polled_time": "2016-11-19T16:17:20.533Z",
+        "last_polled_time": "2016-11-26T08:17:19.475Z",
         "group": 2
     }
 },
@@ -1343,7 +1343,7 @@
         "link": "http://bingethinkinghistory.blogspot.com/",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-19T16:17:04.796Z",
+        "last_polled_time": "2016-11-26T08:17:04.495Z",
         "group": 1
     }
 },
@@ -1369,7 +1369,7 @@
         "link": "http://ancientworldpodcast.blogspot.com/",
         "description": "From the first human civilizations to 500 BC in (around) thirty podcasts",
         "published_time": null,
-        "last_polled_time": "2016-11-19T16:17:23.464Z",
+        "last_polled_time": "2016-11-26T08:17:22.198Z",
         "group": 1
     }
 },
@@ -1394,8 +1394,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/worldservice/discovery/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/p002w557",
         "description": "Explorations in the world of science.",
-        "published_time": "2016-11-14T19:32:00Z",
-        "last_polled_time": "2016-11-14T20:17:04.557Z",
+        "published_time": "2016-11-21T00:00:00Z",
+        "last_polled_time": "2016-11-21T20:17:05.427Z",
         "group": 4
     }
 },
@@ -1420,8 +1420,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/fricomedy/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/p02pc9pj",
         "description": "Download the best new comedy from Radio 4, every Friday. Features The News Quiz, The Now Show, Dead Ringers and The Museum of Curiosity.",
-        "published_time": "2016-11-18T19:00:00Z",
-        "last_polled_time": "2016-11-18T19:17:09.167Z",
+        "published_time": "2016-11-25T19:00:00Z",
+        "last_polled_time": "2016-11-25T19:17:11.294Z",
         "group": 4
     }
 },
@@ -1446,8 +1446,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/iot/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qykl",
         "description": "Melvyn Bragg and guests discuss the history of ideas",
-        "published_time": "2016-11-17T00:00:00Z",
-        "last_polled_time": "2016-11-17T12:17:12.295Z",
+        "published_time": "2016-11-24T00:00:00Z",
+        "last_polled_time": "2016-11-24T13:17:12.592Z",
         "group": 4
     }
 },
@@ -1472,8 +1472,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/media/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b00dv9hq",
         "description": "Steve Hewlett presents a topical programme about the fast-changing media world",
-        "published_time": "2016-11-16T00:00:00Z",
-        "last_polled_time": "2016-11-16T18:17:34.291Z",
+        "published_time": "2016-11-23T00:00:00Z",
+        "last_polled_time": "2016-11-23T18:18:27.878Z",
         "group": 4
     }
 },
@@ -1485,8 +1485,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/moreorless/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/p02nrss1",
         "description": "Tim Harford and the More or Less team try to make sense of the statistics which surround us. From BBC Radio 4",
-        "published_time": "2016-11-18T17:47:00Z",
-        "last_polled_time": "2016-11-18T18:17:15.652Z",
+        "published_time": "2016-11-25T16:51:00Z",
+        "last_polled_time": "2016-11-25T17:17:13.531Z",
         "group": 4
     }
 },
@@ -1498,8 +1498,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/profile/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qjz5",
         "description": "An insight into the character of an influential figure making news headlines",
-        "published_time": "2016-11-12T19:17:00Z",
-        "last_polled_time": "2016-11-12T20:17:23.058Z",
+        "published_time": "2016-11-19T00:00:00Z",
+        "last_polled_time": "2016-11-19T20:17:14.745Z",
         "group": 4
     }
 },
@@ -1524,8 +1524,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/film/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006r5jt",
         "description": "The latest releases, the hottest stars and the leading directors, plus news and insights from the film world",
-        "published_time": "2016-11-17T00:00:00Z",
-        "last_polled_time": "2016-11-17T17:17:28.415Z",
+        "published_time": "2016-11-24T00:00:00Z",
+        "last_polled_time": "2016-11-24T17:17:26.093Z",
         "group": 4
     }
 },
@@ -1550,8 +1550,8 @@
         "xml_url": "http://feedproxy.google.com/linuxtoday/linux",
         "link": "http://www.linuxtoday.com/",
         "description": "",
-        "published_time": "2016-11-19T16:11:47Z",
-        "last_polled_time": "2016-11-19T16:17:12.793Z",
+        "published_time": "2016-11-26T08:12:52Z",
+        "last_polled_time": "2016-11-26T08:17:12.079Z",
         "group": 5
     }
 },
@@ -1564,7 +1564,7 @@
         "link": "https://www.schneier.com/blog/",
         "description": "A blog covering security and security technology.",
         "published_time": null,
-        "last_polled_time": "2016-11-19T16:17:20.308Z",
+        "last_polled_time": "2016-11-26T08:17:19.261Z",
         "group": 5
     }
 },
@@ -1577,7 +1577,7 @@
         "link": "https://inkscapetutorials.org",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-19T16:17:10.242Z",
+        "last_polled_time": "2016-11-26T08:17:09.939Z",
         "group": 5
     }
 },
@@ -1602,8 +1602,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/pov/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qng8",
         "description": "A weekly reflection on a topical issue",
-        "published_time": "2016-11-11T21:00:00Z",
-        "last_polled_time": "2016-11-11T21:17:03.639Z",
+        "published_time": "2016-11-25T15:26:00Z",
+        "last_polled_time": "2016-11-25T16:17:03.656Z",
         "group": 4
     }
 },
@@ -1628,8 +1628,8 @@
         "xml_url": "http://revolutionspodcast.libsyn.com/rss/",
         "link": "http://www.revolutionspodcast.com",
         "description": "A weekly podcast series examining great political revolutions. Now:  The Haitian Revolution Next: Simon Bolivar and Gran Colombia. Visit us at revolutionspodcast.com",
-        "published_time": "2016-11-14T19:07:35Z",
-        "last_polled_time": "2016-11-14T19:17:18.490Z",
+        "published_time": "2016-11-23T22:44:25Z",
+        "last_polled_time": "2016-11-23T23:17:18.013Z",
         "group": 1
     }
 },
@@ -1642,7 +1642,7 @@
         "link": "https://www.djangoproject.com/weblog/",
         "description": "Latest news about Django, the Python Web framework.",
         "published_time": null,
-        "last_polled_time": "2016-11-19T16:17:26.984Z",
+        "last_polled_time": "2016-11-26T08:17:25.402Z",
         "group": 5
     }
 },
@@ -1680,22 +1680,9 @@
         "xml_url": "http://www.bbc.co.uk/blogs/markkermode/rss",
         "link": "http://www.bbc.co.uk/blogs/markkermode",
         "description": "Outspoken, opinionated and never lost for words, Mark is the UK's leading film critic.  This\u00a0twice-weekly video blog is the place where he airs his personal views on the things that most fire him up about cinema - and invites you to give your own opinions.",
-        "published_time": "2016-11-18T10:17:16Z",
-        "last_polled_time": "2016-11-18T11:17:11.854Z",
+        "published_time": "2016-11-25T14:33:12Z",
+        "last_polled_time": "2016-11-25T15:17:10.858Z",
         "group": 2
-    }
-},
-{
-    "model": "feedreader.feed",
-    "pk": 145,
-    "fields": {
-        "title": "BBC News - UK Politics",
-        "xml_url": "http://feeds.bbci.co.uk/news/politics/rss.xml",
-        "link": "http://www.bbc.co.uk/news/",
-        "description": "BBC News - UK Politics",
-        "published_time": null,
-        "last_polled_time": "2016-11-19T16:17:04.314Z",
-        "group": 3
     }
 },
 {
@@ -1707,7 +1694,7 @@
         "link": "http://www.anisopteragames.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-19T16:17:17.925Z",
+        "last_polled_time": "2016-11-26T08:17:17.015Z",
         "group": 2
     }
 },
@@ -1733,7 +1720,7 @@
         "link": "http://slatestarcodex.com",
         "description": "Open threads at the Open Thread tab every Sunday and Wednesday",
         "published_time": null,
-        "last_polled_time": "2016-11-19T16:17:21.394Z",
+        "last_polled_time": "2016-11-26T08:17:20.233Z",
         "group": 2
     }
 },
@@ -1746,7 +1733,7 @@
         "link": "http://www.exurbe.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-19T16:17:08.690Z",
+        "last_polled_time": "2016-11-26T08:17:08.271Z",
         "group": 2
     }
 },
@@ -1759,7 +1746,7 @@
         "link": "http://b5audioguide.com",
         "description": "This is a book club without books, an episode-by-episode walkthrough of one of the most influential and important modern SF series. Each podcast begins with a spoiler-free discussion of the episode for new viewers, then we give listeners a jumping-off point and switch to a discussion of how the episode fits into the five-year history of the show.",
         "published_time": null,
-        "last_polled_time": "2016-11-19T16:17:25.754Z",
+        "last_polled_time": "2016-11-26T08:17:24.157Z",
         "group": 2
     }
 },
@@ -1772,7 +1759,7 @@
         "link": "https://www.theincomparable.com/theincomparable/",
         "description": "The Incomparable is a weekly dive into geeky media we love, including movies, books, TV, comics, and more, featuring a rotating panel of guests and hosted by Jason Snell.",
         "published_time": null,
-        "last_polled_time": "2016-11-19T16:17:30.067Z",
+        "last_polled_time": "2016-11-26T08:17:28.518Z",
         "group": 2
     }
 },
@@ -1785,8 +1772,60 @@
         "link": "http://arstechnica.com",
         "description": "Serving the Technologist for more than a decade. IT news, reviews, and analysis.",
         "published_time": null,
-        "last_polled_time": "2016-11-19T16:17:22.329Z",
+        "last_polled_time": "2016-11-26T08:17:20.943Z",
         "group": 5
+    }
+},
+{
+    "model": "feedreader.feed",
+    "pk": 178,
+    "fields": {
+        "title": "BBC News - UK Politics",
+        "xml_url": "http://feeds.bbci.co.uk/news/politics/rss.xml",
+        "link": "http://www.bbc.co.uk/news/",
+        "description": "BBC News - UK Politics",
+        "published_time": null,
+        "last_polled_time": "2016-11-26T08:17:04.095Z",
+        "group": 3
+    }
+},
+{
+    "model": "feedreader.feed",
+    "pk": 179,
+    "fields": {
+        "title": "News",
+        "xml_url": "http://www.alphr.com/news/feed",
+        "link": "http://www.alphr.com/taxonomy/term/12/all/feed",
+        "description": "",
+        "published_time": null,
+        "last_polled_time": "2016-11-26T08:17:14.383Z",
+        "group": 5
+    }
+},
+{
+    "model": "feedreader.feed",
+    "pk": 180,
+    "fields": {
+        "title": "The Register - Software",
+        "xml_url": "http://www.theregister.co.uk/software/headlines.atom",
+        "link": "http://www.theregister.co.uk/software/",
+        "description": "Biting the hand that feeds IT \u2014 sci/tech news and views for the world",
+        "published_time": null,
+        "last_polled_time": "2016-11-26T08:17:30.270Z",
+        "group": 5
+    }
+},
+{
+    "model": "feedreader.feed",
+    "pk": 181,
+    "fields": {
+        "title": "Newshour",
+        "xml_url": "http://www.bbc.co.uk/programmes/p002vsnk/episodes/downloads.rss",
+        "link": "http://www.bbc.co.uk/programmes/p002vsnk",
+        "description": "Interviews, news and analysis of the day\u2019s global events.",
+        "published_time": "2016-11-25T00:00:00Z",
+        "last_polled_time": "2016-11-26T09:05:40.681Z",
+        "group": 4
     }
 }
 ]

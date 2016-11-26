@@ -214,10 +214,10 @@
         "title": "Gallery",
         "slug": "gallery",
         "parent": 3,
-        "updated": "2016-11-08T19:52:41.819Z",
+        "updated": "2016-11-26T11:14:23.301Z",
         "published": null,
-        "content_type": "markdown",
-        "content": "## X3\r\n\r\n[![HQ at Heron's Nebula](/media/img/thumb/HQ1.jpg \"HQ at Heron's Nebula\")](/media/img/HQ1.jpg \"HQ at Heron's Nebula\")\r\n[![HQ in X3](/media/img/thumb/HQ2.jpg \"HQ in X3\")](/media/img/HQ2.jpg \"HQ in X3\")"
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"X3\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"HQ at Heron's Nebula\",\r\n            \"imageUrl\": \"/media/img/HQ1.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/HQ1.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"HQ in X3\",\r\n            \"imageUrl\": \"/media/img/HQ2.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/HQ2.jpg\"\r\n        }\r\n    ]\r\n}"
     }
 },
 {
@@ -227,23 +227,23 @@
         "title": "Rooska",
         "slug": "rooska",
         "parent": 3,
-        "updated": "2016-04-23T16:08:50.504Z",
+        "updated": "2016-11-26T13:16:36.399Z",
         "published": null,
         "content_type": "markdown",
-        "content": "Rooska is the name of the place, next to Bantry Bay, where I bought 30 acres of mountainside.\r\nMy plan is to build a place in the country for holidays and my eventual retirement.\r\n\r\nSo far I have built a barn and [planted](/planting/) 15 acres with trees.\r\n\r\n## Maps\r\n\r\n[![Map of Southwest Ireland](/media/img/thumb/RooskaMap0.jpg \"Map of Southwest Ireland\")](/media/img/RooskaMap0.jpg \"Map of Southwest Ireland\")\r\n[![Map of Rooska](/media/img/thumb/RooskaMap1.jpg \"Map of Rooska\")](/media/img/RooskaMap1.jpg \"Map of Rooska\")\r\n[![Aerial Photo of Rooska](/media/img/thumb/RooskaSat.jpg \"Aerial Photo of Rooska\")](/media/img/RooskaSat.jpg \"Aerial Photo of Rooska\")\r\n[![Map showing boundaries and subdivisions](/media/img/thumb/RooskaMap2.jpg \"Map showing boundaries and subdivisions\")](/media/img/RooskaMap2.jpg \"Map showing boundaries and subdivisions\")\r\n\r\n## Directions\r\n\r\nTo visit Rooska: Take the from Cork N71 West to Bantry; Just before Bantry take the turn off for Kilkrohane (first photo); Go down this road for 4 miles until you see a church on the right (second photo); At the next left (third photo) stop and walk up to the property at the end of this road.\r\n\r\n[![N71 turn off to Kilkrohane](/media/img/thumb/Directions1.jpg \"N71 turn off to Kilkrohane\")](/media/img/Directions1.jpg \"N71 turn off to Kilkrohane\")\r\n[![Rooska Church](/media/img/thumb/Directions2.jpg \"Rooska Church\")](/media/img/Directions2.jpg \"Rooska Church\")\r\n[![Turnoff to Rooska](/media/img/thumb/Directions3.jpg \"Turnoff to Rooska\")](/media/img/Directions3.jpg \"Turnoff to Rooska\")\r\n\r\n## Before\r\n\r\nWhat the place looked like when I bought it (January 2008).\r\n\r\n[![Map showing boundaries and subdivisions](/media/img/thumb/RooskaMap.jpg \"Map showing boundaries and subdivisions\")](/media/img/RooskaMap.jpg \"Map showing boundaries and subdivisions\")\r\n[![Start of driveway](/media/img/thumb/Panhandle1.jpg \"Start of driveway\")](/media/img/Panhandle1.jpg \"Start of driveway\")\r\n[![Corner on driveway](/media/img/thumb/Panhandle2.jpg \"Corner on driveway\")](/media/img/Panhandle2.jpg \"Corner on driveway\")\r\n[![End of driveway](/media/img/thumb/Panhandle3.jpg \"End of driveway\")](/media/img/Panhandle3.jpg \"End of driveway\")\r\n[![Yard and Stables](/media/img/thumb/Orchard1.jpg \"Yard and Stables\")](/media/img/Orchard1.jpg \"Yard and Stables\")\r\n[![Yard and Stables](/media/img/thumb/Orchard2.jpg \"Yard and Stables\")](/media/img/Orchard2.jpg \"Yard and Stables\")\r\n[![Neighbouring farmyard](/media/img/thumb/Orchard3.jpg \"Neighbouring farmyard\")](/media/img/Orchard3.jpg \"Neighbouring farmyard\")\r\n[![Lower Field looking West](/media/img/thumb/Field1.jpg \"Lower Field looking West\")](/media/img/Field1.jpg \"Lower Field looking West\")\r\n[![Piggery](/media/img/thumb/Field2.jpg \"Piggery\")](/media/img/Field2.jpg \"Piggery\")\r\n[![Lower Field looking East](/media/img/thumb/Field3.jpg \"Lower Field looking East\")](/media/img/Field3.jpg \"Lower Field looking East\")\r\n[![Donkey](/media/img/thumb/Connection1.jpg \"Donkey\")](/media/img/Connection1.jpg \"Donkey\")\r\n[![Bottom of mountain slope](/media/img/thumb/Connection2.jpg \"Bottom of mountain slope\")](/media/img/Connection2.jpg \"Bottom of mountain slope\")\r\n[![Looking down at Connection and Lower Field](/media/img/thumb/Connection3.jpg \"Looking down at Connection and Lower Field\")](/media/img/Connection3.jpg \"Looking down at Connection and Lower Field\")\r\n[![Looking along Connection](/media/img/thumb/Connection4.jpg \"Looking along Connection\")](/media/img/Connection4.jpg \"Looking along Connection\")\r\n[![Lower slopes](/media/img/thumb/Woodland1.jpg \"Lower slopes\")](/media/img/Woodland1.jpg \"Lower slopes\")\r\n[![Looking up the slope](/media/img/thumb/Woodland2.jpg \"Looking up the slope\")](/media/img/Woodland2.jpg \"Looking up the slope\")\r\n[![Pond](/media/img/thumb/Woodland3.jpg \"Pond\")](/media/img/Woodland3.jpg \"Pond\")\r\n[![Grasses on lower slopes](/media/img/thumb/Woodland4.jpg \"Grasses on lower slopes\")](/media/img/Woodland4.jpg \"Grasses on lower slopes\")\r\n[![Looking west from Woodland](/media/img/thumb/Woodland5.jpg \"Looking west from Woodland\")](/media/img/Woodland5.jpg \"Looking west from Woodland\")\r\n[![Platforms looking southwest](/media/img/thumb/Platforms1.jpg \"Platforms looking southwest\")](/media/img/Platforms1.jpg \"Platforms looking southwest\")\r\n[![Platforms looking east](/media/img/thumb/Platforms2.jpg \"Platforms looking east\")](/media/img/Platforms2.jpg \"Platforms looking east\")\r\n[![Looking up slope from Platforms](/media/img/thumb/Platforms3.jpg \"Looking up slope from Platforms\")](/media/img/Platforms3.jpg \"Looking up slope from Platforms\")\r\n[![Looking across the bay Platforms](/media/img/thumb/Platforms4.jpg \"Looking across the bay Platforms\")](/media/img/Platforms4.jpg \"Looking across the bay Platforms\")\r\n[![Looking northeast on Peak](/media/img/thumb/Peak1.jpg \"Looking northeast on Peak\")](/media/img/Peak1.jpg \"Looking northeast on Peak\")\r\n[![Looking east on Mountaintop](/media/img/thumb/Peak2.jpg \"Looking east on Mountaintop\")](/media/img/Peak2.jpg \"Looking east on Mountaintop\")\r\n[![Looking south at Lake](/media/img/thumb/Peak3.jpg \"Looking south at Lake\")](/media/img/Peak3.jpg \"Looking south at Lake\")\r\n[![Looking north at Lower Field](/media/img/thumb/Peak4.jpg \"Looking north at Lower Field\")](/media/img/Peak4.jpg \"Looking north at Lower Field\")\r\n[![Looking north from mountaintop](/media/img/thumb/Peak5.jpg \"Looking north from mountaintop\")](/media/img/Peak5.jpg \"Looking north from mountaintop\")\r\n\r\n## Development - Wall\r\n\r\nIn autumn 2009, a stone wall was built along my new northeast boundary.\r\n\r\n[![Digger Preparing Ground](/media/img/thumb/Digger.jpg \"Digger Preparing Ground\")](/media/img/Digger.jpg \"Digger Preparing Ground\")\r\n[![Trench for Wall foundation](/media/img/thumb/RooskaPhase1Trench.jpg \"Trench for Wall foundation\")](/media/img/RooskaPhase1Trench.jpg \"Trench for Wall foundation\")\r\n[![Stone to build NE wall](/media/img/thumb/NEwallStone.jpg \"Stone to build NE wall\")](/media/img/NEwallStone.jpg \"Stone to build NE wall\")\r\n[![First quarter of NE Wall](/media/img/thumb/RooskaNEWall1.jpg \"First quarter of NE Wall\")](/media/img/RooskaNEWall1.jpg \"First quarter of NE Wall\")\r\n[![Second section under construction](/media/img/thumb/stonewall2.jpg \"Second section under construction\")](/media/img/stonewall2.jpg \"Second section under construction\")\r\n[![Wall detail](/media/img/thumb/stonewall.jpg \"Wall detail\")](/media/img/stonewall.jpg \"Wall detail\")\r\n[![NE Gateway](/media/img/thumb/rooskaNEGate.jpg \"NE Gateway\")](/media/img/rooskaNEGate.jpg \"NE Gateway\")\r\n[![Long Wall](/media/img/thumb/RooskaLongWall.jpg \"Long Wall\")](/media/img/RooskaLongWall.jpg \"Long Wall\")\r\n[![Dismantled fencing](/media/img/thumb/rooskaExFence.jpg \"Dismantled fencing\")](/media/img/rooskaExFence.jpg \"Dismantled fencing\")\r\n\r\n## Development - Mountain\r\n\r\nIn autumn 2009, the mountainside was dug up in preparation for [planting](planting.html) trees\r\nin the spring of 2010.\r\n\r\n[![Digger on Mountain](/media/img/thumb/RooskaPhase1DiggerMtn.jpg \"Digger on Mountain\")](/media/img/RooskaPhase1DiggerMtn.jpg \"Digger on Mountain\")\r\n[![Ground dug up on Mountain](/media/img/thumb/RooskaPhase1DugMtn.jpg \"Ground dug up on Mountain\")](/media/img/RooskaPhase1DugMtn.jpg \"Ground dug up on Mountain\")\r\n[![Turned Soil, Rock and Machine](/media/img/thumb/MountainDigging.jpg \"Turned Soil, Rock and Machine\")](/media/img/MountainDigging.jpg \"Turned Soil, Rock and Machine\")\r\n[![Eastern Firebreak](/media/img/thumb/EastFirebreak.jpg \"Eastern Firebreak\")](/media/img/EastFirebreak.jpg \"Eastern Firebreak\")\r\n[![Eastern Drain](/media/img/thumb/RooskaEastDrain.jpg \"Eastern Drain\")](/media/img/RooskaEastDrain.jpg \"Eastern Drain\")\r\n[![Western drains in action](/media/img/thumb/drains.jpg \"Western drains in action\")](/media/img/drains.jpg \"Western drains in action\")\r\n\r\n## Development - Roads\r\n\r\nIn spring 2010, new roads and bridges were built to provide access to the mountainside and\r\nsite of the barn at the bottom.\r\n\r\n[![Calves blas&eacute](/media/img/thumb/ConstructionAudience.jpg \"Calves blas&eacute\")](/media/img/ConstructionAudience.jpg \"Calves blas&eacute\")\r\n[![New Surface on Entrance Road](/media/img/thumb/NewRoadway.jpg \"New Surface on Entrance Road\")](/media/img/NewRoadway.jpg \"New Surface on Entrance Road\")\r\n[![Car and Machinery](/media/img/thumb/CarMachinery.jpg \"Car and Machinery\")](/media/img/CarMachinery.jpg \"Car and Machinery\")\r\n[![Piers of new Bridge](/media/img/thumb/rooskaBridgePiers.jpg \"Piers of new Bridge\")](/media/img/rooskaBridgePiers.jpg \"Piers of new Bridge\")\r\n[![Completed New Bridge](/media/img/thumb/newBridge.jpg \"Completed New Bridge\")](/media/img/newBridge.jpg \"Completed New Bridge\")\r\n[![Mud Road](/media/img/thumb/rooskaMudRoad.jpg \"Mud Road\")](/media/img/rooskaMudRoad.jpg \"Mud Road\")\r\n[![Stone Road](/media/img/thumb/rooskaStoneRoad.jpg \"Stone Road\")](/media/img/rooskaStoneRoad.jpg \"Stone Road\")\r\n\r\n## Development - Quarrying\r\n\r\nIn spring 2010, a rocky knoll in the field next door was quarried to provide stone for\r\nthe new roads, to build up the site of the barn and for additional walls near the bridges.\r\n\r\n[![Before Quarrying](/media/img/thumb/RooskaLowerField.jpg \"Before Quarrying\")](/media/img/RooskaLowerField.jpg \"Before Quarrying\")\r\n[![Quarrying in next field](/media/img/thumb/rooskaQuarry.jpg \"Quarrying in next field\")](/media/img/rooskaQuarry.jpg \"Quarrying in next field\")\r\n[![Quarrying in Full Swing](/media/img/thumb/rooskaNewRoad.jpg \"Quarrying in Full Swing\")](/media/img/rooskaNewRoad.jpg \"Quarrying in Full Swing\")\r\n[![Truck in action](/media/img/thumb/rooskaTruck.jpg \"Truck in action\")](/media/img/rooskaTruck.jpg \"Truck in action\")\r\n[![Quarrying Continues](/media/img/thumb/rooskaRoadbed.jpg \"Quarrying Continues\")](/media/img/rooskaRoadbed.jpg \"Quarrying Continues\")\r\n[![Maximum Quarrying Mess](/media/img/thumb/rooskaQuarryingMax.jpg \"Maximum Quarrying Mess\")](/media/img/rooskaQuarryingMax.jpg \"Maximum Quarrying Mess\")\r\n[![Quarrying Tidyup](/media/img/thumb/rooskaQuarryingTidyup.jpg \"Quarrying Tidyup\")](/media/img/rooskaQuarryingTidyup.jpg \"Quarrying Tidyup\")\r\n[![Quarrying Completed](/media/img/thumb/rooskaQuarryingDone.jpg \"Quarrying Completed\")](/media/img/rooskaQuarryingDone.jpg \"Quarrying Completed\")\r\n\r\n## Development - Barn\r\n\r\nIn summer 2010, the barn/office was built at the bottom of the mountain slope.\r\n\r\n[![Floorplan of Barn/Office](/media/img/thumb/barnOffice.jpg \"Floorplan of Barn/Office\")](/media/img/barnOffice.jpg \"Floorplan of Barn/Office\")\r\n[![Situation of Barn](/media/img/thumb/rooskaBarnsite.jpg \"Situation of Barn\")](/media/img/rooskaBarnsite.jpg \"Situation of Barn\")\r\n[![Foundation of Barn](/media/img/thumb/barnBase.jpg \"Foundation of Barn\")](/media/img/barnBase.jpg \"Foundation of Barn\")\r\n[![Barn Under Construction](/media/img/thumb/barn1.jpg \"Barn Under Construction\")](/media/img/barn1.jpg \"Barn Under Construction: Note Donkey-supervisor in the next field\")\r\n[![Barn Under Construction](/media/img/thumb/barn2.jpg \"Barn Under Construction\")](/media/img/barn2.jpg \"Barn Under Construction: Note new growth on mountain behind\")\r\n[![Barn Under Construction](/media/img/thumb/barn3.jpg \"Barn Under Construction\")](/media/img/barn3.jpg \"Barn Under Construction: Roof starts to appear\")\r\n[![View from my new office](/media/img/thumb/office_view.jpg \"Barn Under Construction\")](/media/img/office_view.jpg \"View from my new office\")\r\n[![Barn Under Construction](/media/img/thumb/barn4.jpg \"Barn Under Construction\")](/media/img/barn4.jpg \"Barn Under Construction: Roof on\")\r\n[![Finished Barn Exterior](/media/img/thumb/barnFin.jpg \"Finished Barn Exterior\")](/media/img/barnFin.jpg \"Finished Barn: Exterior and Car\")\r\n[![Main Storage Room](/media/img/thumb/RooskaStorage.jpg \"Main Storage Room\")](/media/img/RooskaStorage.jpg \"Barn: Main Storage Room\")\r\n[![Office Desk](/media/img/thumb/RooskaDesk.jpg \"Office Desk\")](/media/img/RooskaDesk.jpg \"Barn/Office: Desk\")\r\n[![Office Window](/media/img/thumb/RooskaOfficeWindow.jpg \"Office Window\")](/media/img/RooskaOfficeWindow.jpg \"Barn: View from Office Window\")\r\n[![Bookcases in Office](/media/img/thumb/RooskaBookcases.jpg \"Bookcases in Office\")](/media/img/RooskaBookcases.jpg \"Barn/Office: Bookcases\")\r\n[![Barn Menaced by Giant Sheep in the Snow](/media/img/thumb/giant_sheep.jpg \"Barn Menaced by Giant Sheep in the Snow\")](/media/img/giant_sheep.jpg \"Barn in the Snow: Menaced by Giant Sheep\")\r\n\r\n## Growth - Spring 2011\r\n\r\nAs of April 2011 the trees are doing well.\r\n\r\n[![Trees protruding from grasses on mountain](/media/img/thumb/trees_2011.jpg \"Trees 1 year after planting\")](/media/img/trees_2011.jpg \"Tree Growth: April 2011\")\r\n[![Flowering Pear Tree](/media/img/thumb/pear_tree.jpg \"Pear tree 1 year after planting\")](/media/img/pear_tree.jpg \"Pear Tree: April 2011\")\r\n[![Stream banks softened by new growth](/media/img/thumb/stream.jpg \"Stream banks 1 year after digging\")](/media/img/stream.jpg \"Growth along Stream: April 2011\")\r\n[![Barn as of April 2011](/media/img/thumb/barn_2011.jpg \"Barn and new growth in April 2011\")](/media/img/barn_2011.jpg \"Barn and Environs: April 2011\")\r\n\r\n## Spring 2012\r\n\r\n[![Frontgate](/media/img/thumb/rooskaFrontgate.png \"Frontgate\")](/media/img/rooskaFrontgate.png \"Frontgate: April 2012\")\r\n[![Barn](/media/img/thumb/rooskaBarn2012.png \"Barn\")](/media/img/rooskaBarn2012.png \"Barn: April 2012\")\r\n[![Footbridge](/media/img/thumb/rooskaFootbridge.png \"Footbridge\")](/media/img/rooskaFootbridge.png \"Footbridge: April 2012\")\r\n[![Trees on the Mountain](/media/img/thumb/rooskaTrees2012.png \"Trees on the Mountain\")](/media/img/rooskaTrees2012.png \"Trees on the Mountain: April 2012\")\r\n\r\n## Spring 2013\r\n\r\n[![Barn Overview](/media/img/thumb/Rooska2013BarnOverview.jpg \"Barn Overview\")](/media/img/Rooska2013BarnOverview.jpg \"Barn Overview: April 2013\")\r\n[![Trees](/media/img/thumb/Rooska2013Trees.jpg \"Trees\")](/media/img/Rooska2013Trees.jpg \"Trees: April 2013\")\r\n[![Redwood](/media/img/thumb/Rooska2013Redwood.jpg \"Redwood\")](/media/img/Rooska2013Redwood.jpg \"Redwood: April 2013\")\r\n[![Wall](/media/img/thumb/Rooska2013Wall.jpg \"Wall\")](/media/img/Rooska2013Wall.jpg \"Wall: April 2013\")\r\n[![Footbridge](/media/img/thumb/Rooska2013Footbridge.jpg \"Footbridge\")](/media/img/Rooska2013Footbridge.jpg \"Footbridge: April 2013\")\r\n\r\n## Spring 2014\r\n\r\n[![Barn Overview](/media/img/thumb/rooska_2014.png \"Barn Overview\")](/media/img/rooska_2014.png \"Barn Overview: April 2014\")\r\n[![Trees](/media/img/thumb/rooska_trees_2014.png \"Trees\")](/media/img/rooska_trees_2014.png \"Trees: April 2014\")\r\n[![Overgrown Gate](/media/img/thumb/gate_overgrown.png \"Overgrown Gate\")](/media/img/gate_overgrown.png \"Overgrown Gate: April 2014\")\r\n[![Cleared Gate](/media/img/thumb/gate_cleared.png \"Cleared Gate\")](/media/img/gate_cleared.png \"Cleared Gate: April 2014\")\r\n[![Barn Interior](/media/img/thumb/dusseldorf_cat.png \"Barn Interior\")](/media/img/dusseldorf_cat.png \"Barn Interior: April 2014\")\r\n\r\n## Autumn 2014\r\n\r\n[![Cleaned Drive](/media/img/thumb/cleaned_drive.jpg \"Cleaned Drive\")](/media/img/cleaned_drive.jpg \"Cleaned Drive: August 2014\")\r\n[![New Drain](/media/img/thumb/new_drain.jpg \"New Drain\")](/media/img/new_drain.jpg \"New Drain: August 2014\")\r\n[![First Apple](/media/img/thumb/first_apple.jpg \"First Apple\")](/media/img/first_apple.jpg \"First Apple: August 2014\")\r\n[![Mountain Stream](/media/img/thumb/mountain_stream.jpg \"Mountain Stream\")](/media/img/mountain_stream.jpg \"Mountain Stream: August 2014\")\r\n\r\n## Spring 2015\r\n\r\n[![Tidy Drive](/media/img/thumb/driveway.jpg \"Tidy Drive\")](/media/img/driveway.jpg \"Tidy Drive: Spring 2015\")\r\n[![Tall Trees](/media/img/thumb/tree_mix.jpg \"Tall Trees\")](/media/img/tree_mix.jpg \"Tall Trees: Spring 2015\")\r\n[![Plant Tree Before](/media/img/thumb/plant1.jpg \"Plant Tree Before\")](/media/img/plant1.jpg \"Plant Tree Before: Spring 2015\")\r\n[![Plant Tree After](/media/img/thumb/plant2.jpg \"Plant Tree After\")](/media/img/plant2.jpg \"Plant Tree After: Spring 2015\")\r\n[![Blue Bantry Bay](/media/img/thumb/blue_bay.jpg \"Blue Bantry Bay\")](/media/img/blue_bay.jpg \"Blue Bantry Bay: Spring 2015\")\r\n\r\n## Spring 2016\r\n\r\n[![Barn 2016](/media/img/thumb/Rooska2016.jpg \"Barn 2016\")](/media/img/Rooska2016.jpg \"Rooska 2016: Barn and Road\")\r\n[![Twees](/media/img/thumb/RooskaTrees.jpg \"Twees\")](/media/img/RooskaTrees.jpg \"Twees: Spring 2016\")\r\n[![Leptospermum Coral Candy](/media/img/thumb/manuka.jpg \"Leptospermum Coral Candy\")](/media/img/manuka.jpg \"Leptospermum Coral Candy: Where Manuka Honey comes from\")\r\n[![Oleander](/media/img/thumb/oleander.jpg \"Oleander\")](/media/img/oleander.jpg \"Oleander: Named after Olli?\")\r\n[![Sheepish Neighbours](/media/img/thumb/Sheeps.jpg \"Sheepish Neighbours\")](/media/img/Sheeps.jpg \"Sheepish: Meet the Neighbours\")"
+        "content": "Rooska is the name of the place, next to Bantry Bay, where I bought 30 acres of mountainside.\r\nMy plan is to build a place in the country for holidays and retirement.\r\n\r\nSo far I have built a barn and planted 15 acres with trees.\r\n\r\nTo visit Rooska: Take the from Cork N71 West to Bantry; Just before Bantry take the turn off for Kilkrohane (first photo); Go down this road for 4 miles until you see a church on the right (second photo); At the next left (third photo) stop and walk up to the property at the end of this road."
     }
 },
 {
     "model": "pages.page",
     "pk": 21,
     "fields": {
-        "title": "Planting",
-        "slug": "planting",
+        "title": "2010-Planting",
+        "slug": "2010-planting",
         "parent": 20,
-        "updated": "2016-11-12T19:17:33.236Z",
+        "updated": "2016-11-26T12:30:20.775Z",
         "published": null,
-        "content_type": "markdown",
-        "content": "Planting at Rooska\r\n\r\n## Plants\r\n\r\n[![Willow Cuttings on mountain before planting](/media/img/thumb/WillowCuttings.jpg \"Willow Cuttings on mountain before planting\")](/media/img/WillowCuttings.jpg \"Willow Cuttings on mountain before planting\")\r\n[![Willow](/media/img/thumb/willow.jpg \"Willow\")](/media/img/willow.jpg \"Willow\")\r\n[![Young Giant Redwoord planted at bottom of mountain slope](/media/img/thumb/BabyGiantRedwood.jpg \"Young Giant Redwoord planted at bottom of mountain slope\")](/media/img/BabyGiantRedwood.jpg \"Young Giant Redwoord planted at bottom of mountain slope\")\r\n[![Scots Pine](/media/img/thumb/scotsPine.jpg \"Scots Pine\")](/media/img/scotsPine.jpg \"Scots Pine\")\r\n[![Lodge Pole Pine](/media/img/thumb/lodgePolePine.jpg \"Lodge Pole Pine\")](/media/img/lodgePolePine.jpg \"Lodge Pole Pine\")\r\n[![Elms from all over the country](/media/img/thumb/elm.jpg \"Elms from all over the country\")](/media/img/elm.jpg \"Elms from all over the country\")\r\n[![First sign of growth after planting](/media/img/thumb/rooskaFirstGrowth.jpg \"First sign of growth after planting\")](/media/img/rooskaFirstGrowth.jpg \"First sign of growth after planting\")\r\n[![Lots of Sprouting on Mountainside](/media/img/thumb/sprouting.jpg \"Lots of Sprouting on Mountainside\")](/media/img/sprouting.jpg \"Lots of Sprouting on Mountainside\")\r\n[![Trees on the mountainside](/media/img/thumb/tree_growth.jpg \"Trees on the Mountainside\")](/media/img/tree_growth.jpg \"Trees: Most of them seem to be growing\")\r\n[![Map Showing Planting of Fruit Trees](/media/img/thumb/rooskaFruitTrees.jpg \"Map Showing Planting of Fruit Trees\")](/media/img/rooskaFruitTrees.jpg \"Map Showing Planting of Fruit Trees\")\r\n\r\n[![Trees protruding from grasses on mountain](/media/img/thumb/trees_2011.jpg \"Trees 1 year after planting\")](/media/img/trees_2011.jpg \"Tree Growth: April 2011\")\r\n[![Flowering Pear Tree](/media/img/thumb/pear_tree.jpg \"Pear tree 1 year after planting\")](/media/img/pear_tree.jpg \"Pear Tree: April 2011\")\r\n[![Stream banks softened by new growth](/media/img/thumb/stream.jpg \"Stream banks 1 year after digging\")](/media/img/stream.jpg \"Growth along Stream: April 2011\")\r\n\r\n## Plant List\r\n\r\nName | Number\r\n-----|-------\r\nAsh | 500\r\nBeech | 20\r\nBird Cherry | 25\r\nBlackthorn | 600\r\nBuddlea | 50\r\nCommon Alder | 1000\r\nCryptomeria | 50\r\nDowny & Silver Birch | 1000\r\nElm | 50\r\nFuschia | 500\r\nGiant Redwood | 10\r\nGuelder Rose | 50\r\nHawthorn | 1000\r\nHazel | 300\r\nHolly | 200\r\nHornbeam | 20\r\nJapanese Elm | 25\r\nLarch | 500\r\nLodgepole Pine | 1000\r\nLondon Plant | 10\r\nNative Dogwood | 50\r\nNative Privet | 25\r\nOak | 500\r\nOlearia (Mix) | 200\r\nOlearia Maerodoata | 200\r\nPlum Leaf Hawthorn | 20\r\nRadiata Pine | 50\r\nRowan | 100\r\nRum Cherry | 20\r\nScots Pine | 1000\r\nSilver Fir | 200\r\nSitka Spruce | 500\r\nSpindle | 25\r\nThuya | 100\r\nWhitelzam | 100\r\nWild Pear | 10\r\nWillow (Large Cuttings) | 3000\r\nWillow (Plants) | 300\r\nTotal | 13310"
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"Planting at Rooska in 2010\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Willow Cuttings on mountain before planting\",\r\n            \"imageUrl\": \"/media/img/WillowCuttings.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/WillowCuttings.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Willow\",\r\n            \"imageUrl\": \"/media/img/willow.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/willow.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Young Giant Redwoord planted at bottom of mountain slope\",\r\n            \"imageUrl\": \"/media/img/BabyGiantRedwood.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/BabyGiantRedwood.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Scots Pine\",\r\n            \"imageUrl\": \"/media/img/scotsPine.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/scotsPine.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Lodge Pole Pine\",\r\n            \"imageUrl\": \"/media/img/lodgePolePine.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/lodgePolePine.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Elms from all over the country\",\r\n            \"imageUrl\": \"/media/img/elm.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/elm.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"First sign of growth after planting\",\r\n            \"imageUrl\": \"/media/img/rooskaFirstGrowth.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rooskaFirstGrowth.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Lots of Sprouting on Mountainside\",\r\n            \"imageUrl\": \"/media/img/sprouting.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/sprouting.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Trees on the mountainside\",\r\n            \"imageUrl\": \"/media/img/tree_growth.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/tree_growth.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Map Showing Planting of Fruit Trees\",\r\n            \"imageUrl\": \"/media/img/rooskaFruitTrees.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rooskaFruitTrees.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Trees protruding from grasses on mountain\",\r\n            \"imageUrl\": \"/media/img/trees_2011.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/trees_2011.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Flowering Pear Tree\",\r\n            \"imageUrl\": \"/media/img/pear_tree.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/pear_tree.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Stream banks softened by new growth\",\r\n            \"imageUrl\": \"/media/img/stream.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/stream.jpg\"\r\n        }\r\n    ]\r\n}"
     }
 },
 {
@@ -1189,10 +1189,10 @@
         "title": "West Cork",
         "slug": "west-cork",
         "parent": 19,
-        "updated": "2016-11-08T19:49:00.822Z",
+        "updated": "2016-11-26T11:20:10.575Z",
         "published": null,
-        "content_type": "markdown",
-        "content": "[![Gougane Barra](/media/img/thumb/Gougane.jpg \"Gougane Barra\")](/media/img/Gougane.jpg \"Gougane Barra\")\r\n[![Big Stone at Cousane Gap](/media/img/thumb/BigStone.jpg \"Big Stone at Cousane Gap\")](/media/img/BigStone.jpg \"Big Stone at Cousane Gap\")\r\n[![View East over Castletownbere](/media/img/thumb/MtnCastletownbere.jpg \"View East over Castletownbere\")](/media/img/MtnCastletownbere.jpg \"View East over Castletownbere\")\r\n[![Sneem](/media/img/thumb/Sneem.jpg \"Sneem\")](/media/img/Sneem.jpg \"Sneem\")\r\n[![Bere Peninsula](/media/img/thumb/MtnBeach.jpg \"Bere Peninsula\")](/media/img/MtnBeach.jpg \"Bere Peninsula\")\r\n[![Cusane Valley](/media/img/thumb/CusaneValley.jpg \"Cusane Valley\")](/media/img/CusaneValley.jpg \"Cusane Valley\")\r\n[![Bantry Bay](/media/img/thumb/bbay.jpg \"Glassy Bantry Bay\")](/media/img/bbay.jpg \"Bantry Bay: Looking like Glass on a calm day\")\r\n[![Sailboat in Bantry Bay](/media/img/thumb/sailboat.jpg \"Spot the Sailboat in Bantry Bay\")](/media/img/sailboat.jpg \"Bantry Bay: Spot the Sailboat\")\r\n\r\n## Rooska\r\n\r\n[![Stables at Rooska](/media/img/thumb/Rooska1.jpg \"Stables at Rooska\")](/media/img/Rooska1.jpg \"Stables at Rooska\")\r\n[![View looking up the ridge at Rooska](/media/img/thumb/RooskaSlope.jpg \"View looking up the ridge at Rooska\")](/media/img/RooskaSlope.jpg \"View looking up the ridge at Rooska\")\r\n[![View looking down from ridge at Rooska](/media/img/thumb/RooskaLowerField.jpg \"View looking down from ridge at Rooska\")](/media/img/RooskaLowerField.jpg \"View looking down from ridge at Rooska\")\r\n[![View looking west from high on the ridge at Rooska](/media/img/thumb/RooskaW.jpg \"View looking west from high on the ridge at Rooska\")](/media/img/RooskaW.jpg \"View looking west from high on the ridge at Rooska\")\r\n[![View from Rooska looking North](/media/img/thumb/RooskaN.jpg \"View from Rooska looking North\")](/media/img/RooskaN.jpg \"View from Rooska looking North\")\r\n[![View from Rooska looking North East](/media/img/thumb/RooskaNE.jpg \"View from Rooska looking North East\")](/media/img/RooskaNE.jpg \"View from Rooska looking North East\")\r\n[![Donkey Junior has arrived](/media/img/thumb/donkey_junior.jpg \"Donkey Junior has arrived\")](/media/img/donkey_junior.jpg \"Donkey Junior: Only 2 days old - with Mum on guard\")\r\n[![Donkey & Junior](/media/img/thumb/donkeys.jpg \"Donkey & Junior\")](/media/img/donkeys.jpg \"Donkey & Junior: Now pay attention 007\")"
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"West Cork\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Gougane Barra\",\r\n            \"imageUrl\": \"/media/img/Gougane.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Gougane.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Big Stone at Cousane Gap\",\r\n            \"imageUrl\": \"/media/img/BigStone.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/BigStone.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"View East over Castletownbere\",\r\n            \"imageUrl\": \"/media/img/MtnCastletownbere.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/MtnCastletownbere.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Sneem\",\r\n            \"imageUrl\": \"/media/img/Sneem.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Sneem.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Bere Peninsula\",\r\n            \"imageUrl\": \"/media/img/MtnBeach.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/MtnBeach.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Cusane Valley\",\r\n            \"imageUrl\": \"/media/img/CusaneValley.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/CusaneValley.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Bantry Bay\",\r\n            \"imageUrl\": \"/media/img/bbay.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/bbay.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Sailboat in Bantry Bay\",\r\n            \"imageUrl\": \"/media/img/sailboat.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/sailboat.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Stables at Rooska\",\r\n            \"imageUrl\": \"/media/img/Rooska1.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Rooska1.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"View looking up the ridge at Rooska\",\r\n            \"imageUrl\": \"/media/img/RooskaSlope.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaSlope.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"View looking down from ridge at Rooska\",\r\n            \"imageUrl\": \"/media/img/RooskaLowerField.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaLowerField.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"View looking west from high on the ridge at Rooska\",\r\n            \"imageUrl\": \"/media/img/RooskaW.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaW.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"View from Rooska looking North\",\r\n            \"imageUrl\": \"/media/img/RooskaN.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaN.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"View from Rooska looking North East\",\r\n            \"imageUrl\": \"/media/img/RooskaNE.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaNE.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Donkey Junior has arrived\",\r\n            \"imageUrl\": \"/media/img/donkey_junior.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/donkey_junior.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Donkey & Junior\",\r\n            \"imageUrl\": \"/media/img/donkeys.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/donkeys.jpg\"\r\n        }\r\n    ]\r\n}"
     }
 },
 {
@@ -1202,10 +1202,10 @@
         "title": "Ovens",
         "slug": "ovens",
         "parent": 19,
-        "updated": "2016-11-08T19:50:08.884Z",
+        "updated": "2016-11-26T11:18:57.875Z",
         "published": null,
-        "content_type": "markdown",
-        "content": "[![99 Corolla](/media/img/thumb/FirstCar.jpg \"99 Corolla\")](/media/img/FirstCar.jpg \"99 Corolla\")\r\n[![Ruined Friary](/media/img/thumb/KilcreaFriary2.jpg \"Ruined Friary\")](/media/img/KilcreaFriary2.jpg \"Ruined Friary\")\r\n[![Mum's dog](/media/img/thumb/shadow.jpg \"Mum's dog\")](/media/img/shadow.jpg \"Mum's dog\")\r\n[![07 C-Class](/media/img/thumb/SecondCar.jpg \"07 C-Class\")](/media/img/SecondCar.jpg \"07 C-Class\")\r\n[![Avondale](/media/img/thumb/Avondale2.jpg \"Avondale\")](/media/img/Avondale2.jpg \"Avondale\")\r\n[![Avondale](/media/img/thumb/Avondale1.jpg \"Avondale\")](/media/img/Avondale1.jpg \"Avondale\")"
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"Ovens\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"99 Corolla\",\r\n            \"imageUrl\": \"/media/img/FirstCar.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/FirstCar.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Ruined Friary\",\r\n            \"imageUrl\": \"/media/img/KilcreaFriary2.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/KilcreaFriary2.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Mum's dog\",\r\n            \"imageUrl\": \"/media/img/shadow.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/shadow.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"07 C-Class\",\r\n            \"imageUrl\": \"/media/img/SecondCar.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/SecondCar.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Avondale\",\r\n            \"imageUrl\": \"/media/img/Avondale2.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Avondale2.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Avondale\",\r\n            \"imageUrl\": \"/media/img/Avondale1.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Avondale1.jpg\"\r\n        }\r\n    ]\r\n}"
     }
 },
 {
@@ -1215,10 +1215,10 @@
         "title": "Clonakilty",
         "slug": "clonakilty",
         "parent": 19,
-        "updated": "2016-11-08T19:50:44.124Z",
+        "updated": "2016-11-26T11:16:11.654Z",
         "published": null,
-        "content_type": "markdown",
-        "content": "[![Cat Stare](/media/img/thumb/CatsCar.jpg \"Cat Stare\")](/media/img/CatsCar.jpg \"Cat Stare\")\r\n[![My Hero](/media/img/thumb/MrCatAsleep.jpg \"My Hero\")](/media/img/MrCatAsleep.jpg \"My Hero\")\r\n[![Windsurfer near Rathbarry](/media/img/thumb/windSurf.jpg \"Windsurfer near Rathbarry\")](/media/img/windSurf.jpg \"Windsurfer near Rathbarry\")\r\n[![Artistic](/media/img/thumb/InchidonneyImpression.jpg \"Artistic\")](/media/img/InchidonneyImpression.jpg \"Artistic\")\r\n[![Clonakilty Post Office](/media/img/thumb/clonPostOffice.jpg \"Clonakilty Post Office\")](/media/img/clonPostOffice.jpg \"Clonakilty Post Office\")\r\n[![Top Floor Flat](/media/img/thumb/TopFloor.jpg \"Top Floor Flat\")](/media/img/TopFloor.jpg \"Top Floor Flat\")\r\n[![Playing it Cool](/media/img/thumb/catToy2.jpg \"Playing it Cool\")](/media/img/catToy2.jpg \"Playing it Cool\")\r\n[![Blurred Motion](/media/img/thumb/catToy.jpg \"Blurred Motion\")](/media/img/catToy.jpg \"Blurred Motion\")\r\n[![On the Beach](/media/img/thumb/beach.jpg \"On the Beach\")](/media/img/beach.jpg \"On the Beach near Rathbarry\")\r\n[![Off to play chess](/media/img/thumb/beach2.jpg \"Off to play chess\")](/media/img/beach2.jpg \"Off to play chess with death\")"
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"Clonakilty\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Cat Stare\",\r\n            \"imageUrl\": \"/media/img/CatsCar.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/CatsCar.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"My Hero\",\r\n            \"imageUrl\": \"/media/img/MrCatAsleep.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/MrCatAsleep.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Windsurfer near Rathbarry\",\r\n            \"imageUrl\": \"/media/img/windSurf.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/windSurf.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Artistic\",\r\n            \"imageUrl\": \"/media/img/InchidonneyImpression.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/InchidonneyImpression.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Clonakilty Post Office\",\r\n            \"imageUrl\": \"/media/img/clonPostOffice.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/clonPostOffice.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Top Floor Flat\",\r\n            \"imageUrl\": \"/media/img/TopFloor.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/TopFloor.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Playing it Cool\",\r\n            \"imageUrl\": \"/media/img/catToy2.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/catToy2.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Blurred Motion\",\r\n            \"imageUrl\": \"/media/img/catToy.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/catToy.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"On the Beach\",\r\n            \"imageUrl\": \"/media/img/beach.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/beach.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Off to play chess\",\r\n            \"imageUrl\": \"/media/img/beach2.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/beach2.jpg\"\r\n        }\r\n    ]\r\n}"
     }
 },
 {
@@ -1228,10 +1228,10 @@
         "title": "London",
         "slug": "london",
         "parent": 19,
-        "updated": "2016-11-08T19:51:17.170Z",
+        "updated": "2016-11-26T11:17:25.633Z",
         "published": null,
-        "content_type": "markdown",
-        "content": "[![Tower Bridge 2006](/media/img/thumb/towerBridge5.jpg \"Tower Bridge 2006\")](/media/img/towerBridge5.jpg \"Tower Bridge 2006\")\r\n[![Gherkin](/media/img/thumb/gherkin.jpg \"Gherkin\")](/media/img/gherkin.jpg \"Gherkin\")\r\n[![St Pauls](/media/img/thumb/StPauls.jpg \"St Pauls\")](/media/img/StPauls.jpg \"St Pauls\")\r\n[![Turbine Hall](/media/img/thumb/TurbineHall.jpg \"Turbine Hall\")](/media/img/TurbineHall.jpg \"Turbine Hall\")\r\n[![Prescott St](/media/img/thumb/PrescottSt.jpg \"Prescott St, my first office\")](/media/img/PrescottSt.jpg \"Prescott St, my first office\")\r\n[![Tower Bridge Open](/media/img/thumb/rivertraffic.jpg \"River and Road Traffic at Tower Bridge\")](/media/img/rivertraffic.jpg \"Tower Bridge: River Traffic wins over Road Traffic\")\r\n[![Goodmans Fields being Demolished](/media/img/thumb/goodmans_demolition.jpg \"My old office at Goodmans Fields being demolished\")](/media/img/goodmans_demolition.jpg \"Goodmans Fields: Demolition\")\r\n[![Palais Royal](/media/img/thumb/Palace.jpg \"Palais Royal\")](/media/img/Palace.jpg \"Palais Royal: I see that the queen is in\")\r\n[![London Bridge](/media/img/thumb/LondonBridge.jpg \"Where have all the buses gone?\")](/media/img/LondonBridge.jpg \"London Bridge: Where all the buses are\")\r\n[![Foggy Day](/media/img/thumb/foggy_tower_bridge.jpg \"A Foggy day in London Town\")](/media/img/foggy_tower_bridge.jpg \"Tower Bridge: A Foggy day in London Town\")\r\n[![Mordor-on-Thames](/media/img/thumb/MordorOnThames.jpg \"Mordor-on-Thames, aka the Shard\")](/media/img/MordorOnThames.jpg \"Mordor-on-Thames: Is that a shard I see before me?\")"
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"London\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Tower Bridge 2006\",\r\n            \"imageUrl\": \"/media/img/towerBridge5.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/towerBridge5.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Gherkin\",\r\n            \"imageUrl\": \"/media/img/gherkin.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/gherkin.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"St Pauls\",\r\n            \"imageUrl\": \"/media/img/StPauls.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/StPauls.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Turbine Hall\",\r\n            \"imageUrl\": \"/media/img/TurbineHall.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/TurbineHall.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Prescott St\",\r\n            \"imageUrl\": \"/media/img/PrescottSt.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/PrescottSt.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Tower Bridge Open\",\r\n            \"imageUrl\": \"/media/img/rivertraffic.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rivertraffic.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Goodmans Fields being Demolished\",\r\n            \"imageUrl\": \"/media/img/goodmans_demolition.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/goodmans_demolition.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Palais Royal\",\r\n            \"imageUrl\": \"/media/img/Palace.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Palace.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"London Bridge\",\r\n            \"imageUrl\": \"/media/img/LondonBridge.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/LondonBridge.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Foggy Day\",\r\n            \"imageUrl\": \"/media/img/foggy_tower_bridge.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/foggy_tower_bridge.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Mordor-on-Thames\",\r\n            \"imageUrl\": \"/media/img/MordorOnThames.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/MordorOnThames.jpg\"\r\n        }\r\n    ]\r\n}"
     }
 },
 {
@@ -1241,10 +1241,10 @@
         "title": "Cork",
         "slug": "cork",
         "parent": 19,
-        "updated": "2016-11-08T19:51:44.660Z",
+        "updated": "2016-11-26T11:16:47.173Z",
         "published": null,
-        "content_type": "markdown",
-        "content": "[![Douglas House](/media/img/thumb/DougHouse.jpg \"Douglas House\")](/media/img/DougHouse.jpg \"Douglas House\")\r\n[![Apt 19 Lounge](/media/img/thumb/Apt19Lounge.jpg \"Apt 19 Lounge\")](/media/img/Apt19Lounge.jpg \"Apt 19 Lounge\")\r\n[![St Finbarr's](/media/img/thumb/StFinbarrs.jpg \"St Finbarr's\")](/media/img/StFinbarrs.jpg \"St Finbarr's\")\r\n[![University Bridge](/media/img/thumb/UniversityBridge.jpg \"University Bridge\")](/media/img/UniversityBridge.jpg \"University Bridge\")"
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"Cork\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Douglas House\",\r\n            \"imageUrl\": \"/media/img/DougHouse.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/DougHouse.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Apt 19 Lounge\",\r\n            \"imageUrl\": \"/media/img/Apt19Lounge.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Apt19Lounge.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"St Finbarr's\",\r\n            \"imageUrl\": \"/media/img/StFinbarrs.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/StFinbarrs.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"University Bridge\",\r\n            \"imageUrl\": \"/media/img/UniversityBridge.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/UniversityBridge.jpg\"\r\n        }\r\n    ]\r\n}"
     }
 },
 {
@@ -1254,10 +1254,10 @@
         "title": "Wallpaper",
         "slug": "wallpaper",
         "parent": 19,
-        "updated": "2016-11-08T19:52:20.226Z",
+        "updated": "2016-11-26T11:19:31.690Z",
         "published": null,
-        "content_type": "markdown",
-        "content": "[![Ready To Retire](/media/img/thumb/retire.jpg \"Ready To Retire\")](/media/img/retire.jpg \"Ready To Retire\")\r\n[![Painting](/media/img/thumb/RiverLee.jpg \"Painting\")](/media/img/RiverLee.jpg \"Painting\")\r\n[![Ahern coat of arms](/media/img/thumb/ahern_arms.png \"Ahernp coat of arms\")](/media/img/ahern_arms.png \"Ahern coat of arms\")"
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"Wallpaper\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Ready To Retire\",\r\n            \"imageUrl\": \"/media/img/retire.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/retire.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Painting\",\r\n            \"imageUrl\": \"/media/img/RiverLee.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RiverLee.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Ahern coat of arms\",\r\n            \"imageUrl\": \"/media/img/ahern_arms.png\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/ahern_arms.png\"\r\n        }\r\n    ]\r\n}"
     }
 },
 {
@@ -1267,10 +1267,10 @@
         "title": "Minecraft",
         "slug": "minecraft",
         "parent": 19,
-        "updated": "2016-11-08T19:53:01.114Z",
+        "updated": "2016-11-26T11:18:13.192Z",
         "published": null,
-        "content_type": "markdown",
-        "content": "[![Minecraft: Tower, Barn and Castle](/media/img/thumb/minecraft1.jpg \"Minecraft: Tower, Barn and Castle\")](/media/img/minecraft1.jpg \"Minecraft: Tower, Barn and Castle\")\r\n[![Minecraft: Castle Approach](/media/img/thumb/minecraft2.jpg \"Minecraft: Castle Approach\")](/media/img/minecraft2.jpg \"Minecraft: Castle Approach\")\r\n[![Minecraft: Castle Bailey](/media/img/thumb/minecraft3.jpg \"Minecraft: Castle Bailey\")](/media/img/minecraft3.jpg \"Minecraft: Castle Bailey\")\r\n[![Minecraft: Bedroom](/media/img/thumb/minecraft6.jpg \"Minecraft: Bedroom\")](/media/img/minecraft6.jpg \"Minecraft: Bedroom\")\r\n[![Minecraft: Obsidian Tower](/media/img/thumb/minecraft7.jpg \"Minecraft: Obsidian Tower\")](/media/img/minecraft7.jpg \"Minecraft: Obsidian Tower\")\r\n[![Minecraft: Meditation Chamber](/media/img/thumb/minecraft5.jpg \"Minecraft: Meditation Chamber\")](/media/img/minecraft5.jpg \"Minecraft: Meditation Chamber\")"
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"Minecraft\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Tower, Barn and Castle\",\r\n            \"imageUrl\": \"/media/img/minecraft1.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/minecraft1.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Castle Approach\",\r\n            \"imageUrl\": \"/media/img/minecraft2.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/minecraft2.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Castle Bailey\",\r\n            \"imageUrl\": \"/media/img/minecraft3.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/minecraft3.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Bedroom\",\r\n            \"imageUrl\": \"/media/img/minecraft6.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/minecraft6.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Obsidian Tower\",\r\n            \"imageUrl\": \"/media/img/minecraft7.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/minecraft7.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Meditation Chamber\",\r\n            \"imageUrl\": \"/media/img/minecraft5.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/minecraft5.jpg\"\r\n        }\r\n    ]\r\n}"
     }
 },
 {
@@ -1284,6 +1284,214 @@
         "published": null,
         "content_type": "markdown",
         "content": "Personal details."
+    }
+},
+{
+    "model": "pages.page",
+    "pk": 147,
+    "fields": {
+        "title": "2010 Plant List",
+        "slug": "2010-plant-list",
+        "parent": 20,
+        "updated": "2016-11-26T12:30:55.215Z",
+        "published": null,
+        "content_type": "markdown",
+        "content": "Initial planting at Rooska in 2010.\r\n\r\nName | Number\r\n-----|-------\r\nAsh | 500\r\nBeech | 20\r\nBird Cherry | 25\r\nBlackthorn | 600\r\nBuddlea | 50\r\nCommon Alder | 1000\r\nCryptomeria | 50\r\nDowny & Silver Birch | 1000\r\nElm | 50\r\nFuschia | 500\r\nGiant Redwood | 10\r\nGuelder Rose | 50\r\nHawthorn | 1000\r\nHazel | 300\r\nHolly | 200\r\nHornbeam | 20\r\nJapanese Elm | 25\r\nLarch | 500\r\nLodgepole Pine | 1000\r\nLondon Plant | 10\r\nNative Dogwood | 50\r\nNative Privet | 25\r\nOak | 500\r\nOlearia (Mix) | 200\r\nOlearia Maerodoata | 200\r\nPlum Leaf Hawthorn | 20\r\nRadiata Pine | 50\r\nRowan | 100\r\nRum Cherry | 20\r\nScots Pine | 1000\r\nSilver Fir | 200\r\nSitka Spruce | 500\r\nSpindle | 25\r\nThuya | 100\r\nWhitelzam | 100\r\nWild Pear | 10\r\nWillow (Large Cuttings) | 3000\r\nWillow (Plants) | 300\r\nTotal | 13310"
+    }
+},
+{
+    "model": "pages.page",
+    "pk": 148,
+    "fields": {
+        "title": "Maps",
+        "slug": "maps",
+        "parent": 20,
+        "updated": "2016-11-26T12:33:22.939Z",
+        "published": null,
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"Maps of Rooska\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Map of Southwest Ireland\",\r\n            \"imageUrl\": \"/media/img/RooskaMap0.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaMap0.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Map of Rooska\",\r\n            \"imageUrl\": \"/media/img/RooskaMap1.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaMap1.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Aerial Photo of Rooska\",\r\n            \"imageUrl\": \"/media/img/RooskaSat.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaSat.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Map showing boundaries and subdivisions\",\r\n            \"imageUrl\": \"/media/img/RooskaMap2.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaMap2.jpg\"\r\n        }\r\n    ]\r\n}"
+    }
+},
+{
+    "model": "pages.page",
+    "pk": 149,
+    "fields": {
+        "title": "Directions",
+        "slug": "directions",
+        "parent": 20,
+        "updated": "2016-11-26T12:36:05.974Z",
+        "published": null,
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"Directions to Rooska\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"N71 turn off to Kilkrohane\",\r\n            \"imageUrl\": \"/media/img/Directions1.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Directions1.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Rooska Church\",\r\n            \"imageUrl\": \"/media/img/Directions2.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Directions2.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Turnoff to Rooska\",\r\n            \"imageUrl\": \"/media/img/Directions3.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Directions3.jpg\"\r\n        }\r\n    ]\r\n}"
+    }
+},
+{
+    "model": "pages.page",
+    "pk": 150,
+    "fields": {
+        "title": "2008 Before",
+        "slug": "2008-before",
+        "parent": 20,
+        "updated": "2016-11-26T12:49:15.216Z",
+        "published": null,
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"Rooska in January 2008\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Map showing boundaries and subdivisions\",\r\n            \"imageUrl\": \"/media/img/RooskaMap.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaMap.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Start of driveway\",\r\n            \"imageUrl\": \"/media/img/Panhandle1.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Panhandle1.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Corner on driveway\",\r\n            \"imageUrl\": \"/media/img/Panhandle2.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Panhandle2.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"End of driveway\",\r\n            \"imageUrl\": \"/media/img/Panhandle3.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Panhandle3.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Yard and Stables\",\r\n            \"imageUrl\": \"/media/img/Orchard1.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Orchard1.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Yard and Stables\",\r\n            \"imageUrl\": \"/media/img/Orchard2.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Orchard2.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Neighbouring farmyard\",\r\n            \"imageUrl\": \"/media/img/Orchard3.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Orchard3.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Lower Field looking West\",\r\n            \"imageUrl\": \"/media/img/Field1.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Field1.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Piggery\",\r\n            \"imageUrl\": \"/media/img/Field2.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Field2.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Lower Field looking East\",\r\n            \"imageUrl\": \"/media/img/Field3.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Field3.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Donkey\",\r\n            \"imageUrl\": \"/media/img/Connection1.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Connection1.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Bottom of mountain slope\",\r\n            \"imageUrl\": \"/media/img/Connection2.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Connection2.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Looking down at Connection and Lower Field\",\r\n            \"imageUrl\": \"/media/img/Connection3.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Connection3.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Looking along Connection\",\r\n            \"imageUrl\": \"/media/img/Connection4.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Connection4.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Lower slopes\",\r\n            \"imageUrl\": \"/media/img/Woodland1.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Woodland1.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Looking up the slope\",\r\n            \"imageUrl\": \"/media/img/Woodland2.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Woodland2.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Pond\",\r\n            \"imageUrl\": \"/media/img/Woodland3.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Woodland3.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Grasses on lower slopes\",\r\n            \"imageUrl\": \"/media/img/Woodland4.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Woodland4.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Looking west from Woodland\",\r\n            \"imageUrl\": \"/media/img/Woodland5.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Woodland5.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Platforms looking southwest\",\r\n            \"imageUrl\": \"/media/img/Platforms1.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Platforms1.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Platforms looking east\",\r\n            \"imageUrl\": \"/media/img/Platforms2.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Platforms2.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Looking up slope from Platforms\",\r\n            \"imageUrl\": \"/media/img/Platforms3.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Platforms3.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Looking across the bay Platforms\",\r\n            \"imageUrl\": \"/media/img/Platforms4.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Platforms4.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Looking northeast on Peak\",\r\n            \"imageUrl\": \"/media/img/Peak1.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Peak1.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Looking east on Mountaintop\",\r\n            \"imageUrl\": \"/media/img/Peak2.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Peak2.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Looking south at Lake\",\r\n            \"imageUrl\": \"/media/img/Peak3.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Peak3.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Looking north at Lower Field\",\r\n            \"imageUrl\": \"/media/img/Peak4.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Peak4.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Looking north from mountaintop\",\r\n            \"imageUrl\": \"/media/img/Peak5.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Peak5.jpg\"\r\n        }\r\n    ]\r\n}"
+    }
+},
+{
+    "model": "pages.page",
+    "pk": 151,
+    "fields": {
+        "title": "2009 Wall",
+        "slug": "2009-wall",
+        "parent": 20,
+        "updated": "2016-11-26T12:51:46.873Z",
+        "published": null,
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"Building the Wall in 2009\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Digger Preparing Ground\",\r\n            \"imageUrl\": \"/media/img/Digger.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Digger.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Trench for Wall foundation\",\r\n            \"imageUrl\": \"/media/img/RooskaPhase1Trench.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaPhase1Trench.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Stone to build NE wall\",\r\n            \"imageUrl\": \"/media/img/NEwallStone.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/NEwallStone.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"First quarter of NE Wall\",\r\n            \"imageUrl\": \"/media/img/RooskaNEWall1.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaNEWall1.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Second section under construction\",\r\n            \"imageUrl\": \"/media/img/stonewall2.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/stonewall2.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Wall detail\",\r\n            \"imageUrl\": \"/media/img/stonewall.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/stonewall.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"NE Gateway\",\r\n            \"imageUrl\": \"/media/img/rooskaNEGate.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rooskaNEGate.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Long Wall\",\r\n            \"imageUrl\": \"/media/img/RooskaLongWall.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaLongWall.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Dismantled fencing\",\r\n            \"imageUrl\": \"/media/img/rooskaExFence.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rooskaExFence.jpg\"\r\n        }\r\n    ]\r\n}"
+    }
+},
+{
+    "model": "pages.page",
+    "pk": 152,
+    "fields": {
+        "title": "2009 Mountain",
+        "slug": "2009-mountain",
+        "parent": 20,
+        "updated": "2016-11-26T12:55:51.620Z",
+        "published": null,
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"Digging up the mountain in 2009\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Digger on Mountain\",\r\n            \"imageUrl\": \"/media/img/RooskaPhase1DiggerMtn.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaPhase1DiggerMtn.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Ground dug up on Mountain\",\r\n            \"imageUrl\": \"/media/img/RooskaPhase1DugMtn.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaPhase1DugMtn.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Turned Soil, Rock and Machine\",\r\n            \"imageUrl\": \"/media/img/MountainDigging.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/MountainDigging.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Eastern Firebreak\",\r\n            \"imageUrl\": \"/media/img/EastFirebreak.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/EastFirebreak.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Eastern Drain\",\r\n            \"imageUrl\": \"/media/img/RooskaEastDrain.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaEastDrain.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Western drains in action\",\r\n            \"imageUrl\": \"/media/img/drains.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/drains.jpg\"\r\n        }\r\n    ]\r\n}"
+    }
+},
+{
+    "model": "pages.page",
+    "pk": 153,
+    "fields": {
+        "title": "2010 Roads",
+        "slug": "2010-roads",
+        "parent": 20,
+        "updated": "2016-11-26T12:59:53.844Z",
+        "published": null,
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"Building Roads in 2010\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Calves Watching\",\r\n            \"imageUrl\": \"/media/img/ConstructionAudience.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/ConstructionAudience.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"New Surface on Entrance Road\",\r\n            \"imageUrl\": \"/media/img/NewRoadway.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/NewRoadway.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Car and Machinery\",\r\n            \"imageUrl\": \"/media/img/CarMachinery.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/CarMachinery.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Piers of new Bridge\",\r\n            \"imageUrl\": \"/media/img/rooskaBridgePiers.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rooskaBridgePiers.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Completed New Bridge\",\r\n            \"imageUrl\": \"/media/img/newBridge.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/newBridge.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Mud Road\",\r\n            \"imageUrl\": \"/media/img/rooskaMudRoad.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rooskaMudRoad.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Stone Road\",\r\n            \"imageUrl\": \"/media/img/rooskaStoneRoad.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rooskaStoneRoad.jpg\"\r\n        }\r\n    ]\r\n}"
+    }
+},
+{
+    "model": "pages.page",
+    "pk": 154,
+    "fields": {
+        "title": "2010 Quarrying",
+        "slug": "2010-quarrying",
+        "parent": 20,
+        "updated": "2016-11-26T13:02:14.793Z",
+        "published": null,
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"Quarrying in 2010\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Before Quarrying\",\r\n            \"imageUrl\": \"/media/img/RooskaLowerField.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaLowerField.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Quarrying in next field\",\r\n            \"imageUrl\": \"/media/img/rooskaQuarry.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rooskaQuarry.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Quarrying in Full Swing\",\r\n            \"imageUrl\": \"/media/img/rooskaNewRoad.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rooskaNewRoad.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Truck in action\",\r\n            \"imageUrl\": \"/media/img/rooskaTruck.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rooskaTruck.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Quarrying Continues\",\r\n            \"imageUrl\": \"/media/img/rooskaRoadbed.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rooskaRoadbed.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Maximum Quarrying Mess\",\r\n            \"imageUrl\": \"/media/img/rooskaQuarryingMax.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rooskaQuarryingMax.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Quarrying Tidyup\",\r\n            \"imageUrl\": \"/media/img/rooskaQuarryingTidyup.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rooskaQuarryingTidyup.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Quarrying Completed\",\r\n            \"imageUrl\": \"/media/img/rooskaQuarryingDone.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rooskaQuarryingDone.jpg\"\r\n        }\r\n    ]\r\n}"
+    }
+},
+{
+    "model": "pages.page",
+    "pk": 155,
+    "fields": {
+        "title": "2010 Barn",
+        "slug": "2010-barn",
+        "parent": 20,
+        "updated": "2016-11-26T13:05:33.018Z",
+        "published": null,
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"Building the Barn in 2010\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Floorplan of Barn/Office\",\r\n            \"imageUrl\": \"/media/img/barnOffice.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/barnOffice.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Situation of Barn\",\r\n            \"imageUrl\": \"/media/img/rooskaBarnsite.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rooskaBarnsite.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Foundation of Barn\",\r\n            \"imageUrl\": \"/media/img/barnBase.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/barnBase.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Barn Under Construction\",\r\n            \"imageUrl\": \"/media/img/barn1.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/barn1.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Barn Under Construction\",\r\n            \"imageUrl\": \"/media/img/barn2.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/barn2.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Barn Under Construction\",\r\n            \"imageUrl\": \"/media/img/barn3.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/barn3.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"View from my new office\",\r\n            \"imageUrl\": \"/media/img/office_view.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/office_view.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Barn Under Construction\",\r\n            \"imageUrl\": \"/media/img/barn4.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/barn4.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Finished Barn Exterior\",\r\n            \"imageUrl\": \"/media/img/barnFin.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/barnFin.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Main Storage Room\",\r\n            \"imageUrl\": \"/media/img/RooskaStorage.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaStorage.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Office Desk\",\r\n            \"imageUrl\": \"/media/img/RooskaDesk.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaDesk.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Office Window\",\r\n            \"imageUrl\": \"/media/img/RooskaOfficeWindow.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaOfficeWindow.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Bookcases in Office\",\r\n            \"imageUrl\": \"/media/img/RooskaBookcases.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaBookcases.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Barn Menaced by Giant Sheep in the Snow\",\r\n            \"imageUrl\": \"/media/img/giant_sheep.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/giant_sheep.jpg\"\r\n        }\r\n    ]\r\n}"
+    }
+},
+{
+    "model": "pages.page",
+    "pk": 156,
+    "fields": {
+        "title": "2011 Spring",
+        "slug": "2011-spring",
+        "parent": 20,
+        "updated": "2016-11-26T13:08:19.320Z",
+        "published": null,
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"Spring 2011\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Trees protruding from grasses on mountain\",\r\n            \"imageUrl\": \"/media/img/trees_2011.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/trees_2011.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Flowering Pear Tree\",\r\n            \"imageUrl\": \"/media/img/pear_tree.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/pear_tree.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Stream banks softened by new growth\",\r\n            \"imageUrl\": \"/media/img/stream.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/stream.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Barn as of April 2011\",\r\n            \"imageUrl\": \"/media/img/barn_2011.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/barn_2011.jpg\"\r\n        }\r\n    ]\r\n}"
+    }
+},
+{
+    "model": "pages.page",
+    "pk": 157,
+    "fields": {
+        "title": "2012 Spring",
+        "slug": "2012-spring",
+        "parent": 20,
+        "updated": "2016-11-26T13:09:48.239Z",
+        "published": null,
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"Spring 2012\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Frontgate\",\r\n            \"imageUrl\": \"/media/img/rooskaFrontgate.png\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rooskaFrontgate.png\"\r\n        },\r\n        {\r\n            \"title\": \"Barn\",\r\n            \"imageUrl\": \"/media/img/rooskaBarn2012.png\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rooskaBarn2012.png\"\r\n        },\r\n        {\r\n            \"title\": \"Footbridge\",\r\n            \"imageUrl\": \"/media/img/rooskaFootbridge.png\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rooskaFootbridge.png\"\r\n        },\r\n        {\r\n            \"title\": \"Trees on the Mountain\",\r\n            \"imageUrl\": \"/media/img/rooskaTrees2012.png\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rooskaTrees2012.png\"\r\n        }\r\n    ]\r\n}"
+    }
+},
+{
+    "model": "pages.page",
+    "pk": 158,
+    "fields": {
+        "title": "2013 Spring",
+        "slug": "2013-spring",
+        "parent": 20,
+        "updated": "2016-11-26T13:11:11.445Z",
+        "published": null,
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"Spring 2013\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Barn Overview\",\r\n            \"imageUrl\": \"/media/img/Rooska2013BarnOverview.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Rooska2013BarnOverview.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Trees\",\r\n            \"imageUrl\": \"/media/img/Rooska2013Trees.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Rooska2013Trees.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Redwood\",\r\n            \"imageUrl\": \"/media/img/Rooska2013Redwood.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Rooska2013Redwood.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Wall\",\r\n            \"imageUrl\": \"/media/img/Rooska2013Wall.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Rooska2013Wall.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Footbridge\",\r\n            \"imageUrl\": \"/media/img/Rooska2013Footbridge.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Rooska2013Footbridge.jpg\"\r\n        }\r\n    ]\r\n}"
+    }
+},
+{
+    "model": "pages.page",
+    "pk": 159,
+    "fields": {
+        "title": "2014 Spring",
+        "slug": "2014-spring",
+        "parent": 20,
+        "updated": "2016-11-26T13:12:33.118Z",
+        "published": null,
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"Spring 2014\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Barn Overview\",\r\n            \"imageUrl\": \"/media/img/rooska_2014.png\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rooska_2014.png\"\r\n        },\r\n        {\r\n            \"title\": \"Trees\",\r\n            \"imageUrl\": \"/media/img/rooska_trees_2014.png\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rooska_trees_2014.png\"\r\n        },\r\n        {\r\n            \"title\": \"Overgrown Gate\",\r\n            \"imageUrl\": \"/media/img/gate_overgrown.png\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/gate_overgrown.png\"\r\n        },\r\n        {\r\n            \"title\": \"Cleared Gate\",\r\n            \"imageUrl\": \"/media/img/gate_cleared.png\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/gate_cleared.png\"\r\n        },\r\n        {\r\n            \"title\": \"Barn Interior\",\r\n            \"imageUrl\": \"/media/img/dusseldorf_cat.png\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/dusseldorf_cat.png\"\r\n        },\r\n        {\r\n            \"title\": \"\",\r\n            \"imageUrl\": \"/media/img/#Image\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/#Image\"\r\n        }\r\n    ]\r\n}"
+    }
+},
+{
+    "model": "pages.page",
+    "pk": 160,
+    "fields": {
+        "title": "2014 Autumn",
+        "slug": "2014-autumn",
+        "parent": 20,
+        "updated": "2016-11-26T13:13:49.348Z",
+        "published": null,
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"Autumn 2014\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Cleaned Drive\",\r\n            \"imageUrl\": \"/media/img/cleaned_drive.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/cleaned_drive.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"New Drain\",\r\n            \"imageUrl\": \"/media/img/new_drain.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/new_drain.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"First Apple\",\r\n            \"imageUrl\": \"/media/img/first_apple.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/first_apple.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Mountain Stream\",\r\n            \"imageUrl\": \"/media/img/mountain_stream.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/mountain_stream.jpg\"\r\n        }\r\n    ]\r\n}"
+    }
+},
+{
+    "model": "pages.page",
+    "pk": 161,
+    "fields": {
+        "title": "2015 Spring",
+        "slug": "2015-spring",
+        "parent": 20,
+        "updated": "2016-11-26T13:15:00.842Z",
+        "published": null,
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"Spring 2015\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Tidy Drive\",\r\n            \"imageUrl\": \"/media/img/driveway.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/driveway.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Tall Trees\",\r\n            \"imageUrl\": \"/media/img/tree_mix.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/tree_mix.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Plant Tree Before\",\r\n            \"imageUrl\": \"/media/img/plant1.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/plant1.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Plant Tree After\",\r\n            \"imageUrl\": \"/media/img/plant2.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/plant2.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Blue Bantry Bay\",\r\n            \"imageUrl\": \"/media/img/blue_bay.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/blue_bay.jpg\"\r\n        }\r\n    ]\r\n}"
+    }
+},
+{
+    "model": "pages.page",
+    "pk": 162,
+    "fields": {
+        "title": "2016 Spring",
+        "slug": "2016-spring",
+        "parent": 20,
+        "updated": "2016-11-26T13:16:14.608Z",
+        "published": null,
+        "content_type": "gallery",
+        "content": "{\r\n    \"heading\": \"Spring 2016\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Barn 2016\",\r\n            \"imageUrl\": \"/media/img/Rooska2016.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Rooska2016.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Twees\",\r\n            \"imageUrl\": \"/media/img/RooskaTrees.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/RooskaTrees.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Leptospermum Coral Candy\",\r\n            \"imageUrl\": \"/media/img/manuka.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/manuka.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Oleander\",\r\n            \"imageUrl\": \"/media/img/oleander.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/oleander.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Sheepish Neighbours\",\r\n            \"imageUrl\": \"/media/img/Sheeps.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Sheeps.jpg\"\r\n        }\r\n    ]\r\n}"
     }
 },
 {
@@ -1330,7 +1538,7 @@
         "link": "http://blog.dilbert.com/",
         "description": "",
         "published_time": "2015-01-12T07:00:01Z",
-        "last_polled_time": "2016-11-26T08:17:19.475Z",
+        "last_polled_time": "2016-11-26T13:17:20.994Z",
         "group": 2
     }
 },
@@ -1343,7 +1551,7 @@
         "link": "http://bingethinkinghistory.blogspot.com/",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-26T08:17:04.495Z",
+        "last_polled_time": "2016-11-26T13:17:06.010Z",
         "group": 1
     }
 },
@@ -1369,7 +1577,7 @@
         "link": "http://ancientworldpodcast.blogspot.com/",
         "description": "From the first human civilizations to 500 BC in (around) thirty podcasts",
         "published_time": null,
-        "last_polled_time": "2016-11-26T08:17:22.198Z",
+        "last_polled_time": "2016-11-26T13:17:23.990Z",
         "group": 1
     }
 },
@@ -1537,8 +1745,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/wpr/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qjfq",
         "description": "Radio 4&#39;s weekly assessment of developments at Westminster",
-        "published_time": "2016-11-19T00:00:00Z",
-        "last_polled_time": "2016-11-19T12:17:30.960Z",
+        "published_time": "2016-11-26T00:00:00Z",
+        "last_polled_time": "2016-11-26T12:17:33.552Z",
         "group": 4
     }
 },
@@ -1550,8 +1758,8 @@
         "xml_url": "http://feedproxy.google.com/linuxtoday/linux",
         "link": "http://www.linuxtoday.com/",
         "description": "",
-        "published_time": "2016-11-26T08:12:52Z",
-        "last_polled_time": "2016-11-26T08:17:12.079Z",
+        "published_time": "2016-11-26T13:14:28Z",
+        "last_polled_time": "2016-11-26T13:17:12.912Z",
         "group": 5
     }
 },
@@ -1564,7 +1772,7 @@
         "link": "https://www.schneier.com/blog/",
         "description": "A blog covering security and security technology.",
         "published_time": null,
-        "last_polled_time": "2016-11-26T08:17:19.261Z",
+        "last_polled_time": "2016-11-26T13:17:20.668Z",
         "group": 5
     }
 },
@@ -1577,7 +1785,7 @@
         "link": "https://inkscapetutorials.org",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-26T08:17:09.939Z",
+        "last_polled_time": "2016-11-26T13:17:11.383Z",
         "group": 5
     }
 },
@@ -1642,7 +1850,7 @@
         "link": "https://www.djangoproject.com/weblog/",
         "description": "Latest news about Django, the Python Web framework.",
         "published_time": null,
-        "last_polled_time": "2016-11-26T08:17:25.402Z",
+        "last_polled_time": "2016-11-26T13:17:27.510Z",
         "group": 5
     }
 },
@@ -1694,7 +1902,7 @@
         "link": "http://www.anisopteragames.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-26T08:17:17.015Z",
+        "last_polled_time": "2016-11-26T13:17:18.323Z",
         "group": 2
     }
 },
@@ -1720,7 +1928,7 @@
         "link": "http://slatestarcodex.com",
         "description": "Open threads at the Open Thread tab every Sunday and Wednesday",
         "published_time": null,
-        "last_polled_time": "2016-11-26T08:17:20.233Z",
+        "last_polled_time": "2016-11-26T13:17:21.865Z",
         "group": 2
     }
 },
@@ -1733,7 +1941,7 @@
         "link": "http://www.exurbe.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-26T08:17:08.271Z",
+        "last_polled_time": "2016-11-26T13:17:09.680Z",
         "group": 2
     }
 },
@@ -1746,7 +1954,7 @@
         "link": "http://b5audioguide.com",
         "description": "This is a book club without books, an episode-by-episode walkthrough of one of the most influential and important modern SF series. Each podcast begins with a spoiler-free discussion of the episode for new viewers, then we give listeners a jumping-off point and switch to a discussion of how the episode fits into the five-year history of the show.",
         "published_time": null,
-        "last_polled_time": "2016-11-26T08:17:24.157Z",
+        "last_polled_time": "2016-11-26T13:17:26.183Z",
         "group": 2
     }
 },
@@ -1759,7 +1967,7 @@
         "link": "https://www.theincomparable.com/theincomparable/",
         "description": "The Incomparable is a weekly dive into geeky media we love, including movies, books, TV, comics, and more, featuring a rotating panel of guests and hosted by Jason Snell.",
         "published_time": null,
-        "last_polled_time": "2016-11-26T08:17:28.518Z",
+        "last_polled_time": "2016-11-26T13:17:30.941Z",
         "group": 2
     }
 },
@@ -1772,7 +1980,7 @@
         "link": "http://arstechnica.com",
         "description": "Serving the Technologist for more than a decade. IT news, reviews, and analysis.",
         "published_time": null,
-        "last_polled_time": "2016-11-26T08:17:20.943Z",
+        "last_polled_time": "2016-11-26T13:17:22.671Z",
         "group": 5
     }
 },
@@ -1785,7 +1993,7 @@
         "link": "http://www.bbc.co.uk/news/",
         "description": "BBC News - UK Politics",
         "published_time": null,
-        "last_polled_time": "2016-11-26T08:17:04.095Z",
+        "last_polled_time": "2016-11-26T13:17:05.458Z",
         "group": 3
     }
 },
@@ -1798,7 +2006,7 @@
         "link": "http://www.alphr.com/taxonomy/term/12/all/feed",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-26T08:17:14.383Z",
+        "last_polled_time": "2016-11-26T13:17:15.646Z",
         "group": 5
     }
 },
@@ -1811,7 +2019,7 @@
         "link": "http://www.theregister.co.uk/software/",
         "description": "Biting the hand that feeds IT \u2014 sci/tech news and views for the world",
         "published_time": null,
-        "last_polled_time": "2016-11-26T08:17:30.270Z",
+        "last_polled_time": "2016-11-26T12:17:33.422Z",
         "group": 5
     }
 },

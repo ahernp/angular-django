@@ -1,4 +1,4 @@
-class Image {
+export class Image {
     title: string;
     imageUrl: string;
     thumbnailUrl: string;

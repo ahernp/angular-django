@@ -19,10 +19,10 @@
         "title": "Markdown",
         "slug": "markdown",
         "parent": 3,
-        "updated": "2014-03-29T18:44:55.571Z",
+        "updated": "2016-11-26T20:26:46.480Z",
         "published": null,
         "content_type": "markdown",
-        "content": "Examples of Markdown and corresponding output used on this site.\r\n\r\nThe full Markdown syntax specification is available at \r\n<http://daringfireball.net/projects/markdown/syntax>. ([viewer](http://www.markdownviewer.com/))\r\n\r\nThis site uses the\r\n[python-markdown](http://www.freewisdom.org/projects/python-markdown/) \r\nimplementation with the \r\n[tables](http://www.freewisdom.org/projects/python-markdown/Tables)\r\nand [table of contents](http://www.freewisdom.org/projects/python-markdown/Table_of_Contents) extras.\r\n\r\n## Inline\r\n\r\nElement |Markdown    | Output\r\n--------|------------|------------------------\r\nEmphasis|`*Emphasis*`|*Emphasis*\r\nString  |`**Strong**`|**Strong**\r\nCode    |<code>\\`Code\\`</code>    |`Code`\r\nLink    |`[ahernp.com](http://ahernp.com \"Ahern, Paul\")`|[ahernp.com](http://ahernp.com \"Ahern, Paul\")\r\nImage   |`![Paul Ahern](/media/img/ahernp200x200.png \"Paul Ahern at Gougane Barra\")`|![Paul Ahern](/media/img/ahernp200x200.png \"Paul Ahern at Gougane Barra\")\r\nThumbnail|`[![Gougane](/media/img/thumb/Gougane.jpg \"Church at Gougane Barra\")](/media/img/Gougane.jpg)`|[![Gougane](/media/img/thumb/Gougane.jpg \"Church at Gougane Barra\")](/media/img/Gougane.jpg)\r\nTitle   |`# Title`|<h1>Title</h1>\r\nHeading|`## Heading`|<h2>Heading</h2>\r\n\r\n## Lists\r\n\r\n    * Item\r\n\r\n* Item\r\n\r\n   `1. Item`\r\n\r\n1. Item\r\n\r\n### Nested\r\n\r\nIndent each level by an additional 4 spaces.\r\n\r\n    1.  Install package **numlockx**.\r\n    1.  Setup Local LAMP server for development:\r\n        1. `sudo tasksel install lamp-server`\r\n        1. `sudo apt-get install phpmyadmin`\r\n\r\n1.  Install package **numlockx**.\r\n1.  Setup Local LAMP server for development:\r\n    1. `sudo tasksel install lamp-server`\r\n    1. `sudo apt-get install phpmyadmin`\r\n\r\n## Block\r\n\r\n### Code\r\n\r\n    Indent by a tab or 4 spaces.\r\n\r\n### Block Quote\r\n\r\n    > In a hole in the ground there lived a hobbit. \r\n    > Not a nasty damp smelly hole filled with the\r\n    > ends of worms and things. Nor a dry sandy hole \r\n    > with nothing in it to sit down on or eat. \r\n    > This was a hobbit-hole and that means comfort.\r\n\r\n> In a hole in the ground there lived a hobbit. Not a nasty damp smelly hole filled with the\r\n> ends of worms and things. Nor a dry sandy hole with nothing in it to sit down on or eat. \r\n> This was a hobbit-hole and that means comfort.\r\n\r\n## Extras\r\n\r\n### Table of Contents\r\n\r\n<pre>[TOC]</pre>\r\n\r\n[TOC]\r\n\r\n### Tables\r\n\r\n    Header 1 | Header 2\r\n    ---------|---------\r\n    Cell 1,1 | Cell 1,2\r\n    Cell 2,1 | Cell 2,2\r\n\r\nHeader 1 | Header 2\r\n---------|---------\r\nCell 1,1 | Cell 1,2\r\nCell 2,1 | Cell 2,2"
+        "content": "Examples of Markdown and corresponding output used on this site.\r\n\r\nThe full Markdown syntax specification is available at \r\n<http://daringfireball.net/projects/markdown/syntax>. ([viewer](http://www.markdownviewer.com/))\r\n\r\nThis site uses the\r\n[python-markdown](http://www.freewisdom.org/projects/python-markdown/) \r\nimplementation with the \r\n[tables](http://www.freewisdom.org/projects/python-markdown/Tables)\r\nand [table of contents](http://www.freewisdom.org/projects/python-markdown/Table_of_Contents) extras.\r\n\r\n## Inline\r\n\r\nElement |Markdown    | Output\r\n--------|------------|------------------------\r\nEmphasis|`*Emphasis*`|*Emphasis*\r\nString  |`**Strong**`|**Strong**\r\nCode    |<code>\\`Code\\`</code>    |`Code`\r\nLink    |`[ahernp.com](http://ahernp.com \"Ahern, Paul\")`|[ahernp.com](http://ahernp.com \"Ahern, Paul\")\r\nImage   |`![Paul Ahern](/media/img/ahernp200x200.png \"Paul Ahern at Gougane Barra\")`|![Paul Ahern](/media/img/ahernp200x200.png \"Paul Ahern at Gougane Barra\")\r\nThumbnail|`[![Gougane](/media/img/thumb/Gougane.jpg \"Church at Gougane Barra\")](/media/img/Gougane.jpg)`|[![Gougane](/media/img/thumb/Gougane.jpg \"Church at Gougane Barra\")](/media/img/Gougane.jpg)\r\nTitle   |`# Title`|<h1>Title</h1>\r\nHeading|`## Heading`|<h2>Heading</h2>\r\n\r\n## Lists\r\n\r\n`* Item`\r\n\r\n* Item\r\n\r\n`1. Item`\r\n\r\n1. Item\r\n\r\n### Nested\r\n\r\nIndent each level by an additional 4 spaces.\r\n\r\n    1.  Install package **numlockx**.\r\n    1.  Setup Local LAMP server for development:\r\n        1. `sudo tasksel install lamp-server`\r\n        1. `sudo apt-get install phpmyadmin`\r\n\r\n1.  Install package **numlockx**.\r\n1.  Setup Local LAMP server for development:\r\n    1. `sudo tasksel install lamp-server`\r\n    1. `sudo apt-get install phpmyadmin`\r\n\r\n## Block\r\n\r\n### Code\r\n\r\n    Indent by a tab or 4 spaces.\r\n\r\n### Block Quote\r\n\r\n    > In a hole in the ground there lived a hobbit. \r\n    > Not a nasty damp smelly hole filled with the\r\n    > ends of worms and things. Nor a dry sandy hole \r\n    > with nothing in it to sit down on or eat. \r\n    > This was a hobbit-hole and that means comfort.\r\n\r\n> In a hole in the ground there lived a hobbit. Not a nasty damp smelly hole filled with the\r\n> ends of worms and things. Nor a dry sandy hole with nothing in it to sit down on or eat. \r\n> This was a hobbit-hole and that means comfort.\r\n\r\n### Tables\r\n\r\n    Header 1 | Header 2\r\n    ---------|---------\r\n    Cell 1,1 | Cell 1,2\r\n    Cell 2,1 | Cell 2,2\r\n\r\nHeader 1 | Header 2\r\n---------|---------\r\nCell 1,1 | Cell 1,2\r\nCell 2,1 | Cell 2,2"
     }
 },
 {
@@ -227,10 +227,10 @@
         "title": "Rooska",
         "slug": "rooska",
         "parent": 3,
-        "updated": "2016-11-26T13:16:36.399Z",
+        "updated": "2016-11-26T20:17:02.268Z",
         "published": null,
         "content_type": "markdown",
-        "content": "Rooska is the name of the place, next to Bantry Bay, where I bought 30 acres of mountainside.\r\nMy plan is to build a place in the country for holidays and retirement.\r\n\r\nSo far I have built a barn and planted 15 acres with trees.\r\n\r\nTo visit Rooska: Take the from Cork N71 West to Bantry; Just before Bantry take the turn off for Kilkrohane (first photo); Go down this road for 4 miles until you see a church on the right (second photo); At the next left (third photo) stop and walk up to the property at the end of this road."
+        "content": "Rooska is the name of the place, next to Bantry Bay, where I bought 30 acres of mountainside.\r\nMy plan is to build a place in the country for holidays and retirement.\r\n\r\nSo far I have built a barn and planted 15 acres with trees.\r\n\r\nTo visit Rooska: Take the from Cork N71 West to Bantry; Just before Bantry take the turn off for Kilkrohane; Go down this road for 4 miles until you see a church on the right; At the next left stop and walk up to the property at the end of this road."
     }
 },
 {
@@ -1538,7 +1538,7 @@
         "link": "http://blog.dilbert.com/",
         "description": "",
         "published_time": "2015-01-12T07:00:01Z",
-        "last_polled_time": "2016-11-26T13:17:20.994Z",
+        "last_polled_time": "2016-11-27T09:17:19.553Z",
         "group": 2
     }
 },
@@ -1551,7 +1551,7 @@
         "link": "http://bingethinkinghistory.blogspot.com/",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-26T13:17:06.010Z",
+        "last_polled_time": "2016-11-27T09:17:04.774Z",
         "group": 1
     }
 },
@@ -1577,7 +1577,7 @@
         "link": "http://ancientworldpodcast.blogspot.com/",
         "description": "From the first human civilizations to 500 BC in (around) thirty podcasts",
         "published_time": null,
-        "last_polled_time": "2016-11-26T13:17:23.990Z",
+        "last_polled_time": "2016-11-27T09:17:22.016Z",
         "group": 1
     }
 },
@@ -1706,8 +1706,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/profile/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qjz5",
         "description": "An insight into the character of an influential figure making news headlines",
-        "published_time": "2016-11-19T00:00:00Z",
-        "last_polled_time": "2016-11-19T20:17:14.745Z",
+        "published_time": "2016-11-26T00:00:00Z",
+        "last_polled_time": "2016-11-26T20:17:18.550Z",
         "group": 4
     }
 },
@@ -1758,8 +1758,8 @@
         "xml_url": "http://feedproxy.google.com/linuxtoday/linux",
         "link": "http://www.linuxtoday.com/",
         "description": "",
-        "published_time": "2016-11-26T13:14:28Z",
-        "last_polled_time": "2016-11-26T13:17:12.912Z",
+        "published_time": "2016-11-27T09:14:20Z",
+        "last_polled_time": "2016-11-27T09:17:12.167Z",
         "group": 5
     }
 },
@@ -1772,7 +1772,7 @@
         "link": "https://www.schneier.com/blog/",
         "description": "A blog covering security and security technology.",
         "published_time": null,
-        "last_polled_time": "2016-11-26T13:17:20.668Z",
+        "last_polled_time": "2016-11-27T09:17:19.335Z",
         "group": 5
     }
 },
@@ -1785,7 +1785,7 @@
         "link": "https://inkscapetutorials.org",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-26T13:17:11.383Z",
+        "last_polled_time": "2016-11-27T09:17:09.837Z",
         "group": 5
     }
 },
@@ -1850,7 +1850,7 @@
         "link": "https://www.djangoproject.com/weblog/",
         "description": "Latest news about Django, the Python Web framework.",
         "published_time": null,
-        "last_polled_time": "2016-11-26T13:17:27.510Z",
+        "last_polled_time": "2016-11-27T09:17:25.256Z",
         "group": 5
     }
 },
@@ -1875,8 +1875,8 @@
         "xml_url": "http://mythandhistory.podbean.com/feed/",
         "link": "http://mythandhistory.podbean.com",
         "description": "A journey through the myths and history of Ancient Greece and Rome for all the family.",
-        "published_time": "2016-11-13T08:14:13Z",
-        "last_polled_time": "2016-11-13T08:17:13.012Z",
+        "published_time": "2016-11-27T07:18:57Z",
+        "last_polled_time": "2016-11-27T08:17:13.284Z",
         "group": 1
     }
 },
@@ -1902,7 +1902,7 @@
         "link": "http://www.anisopteragames.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-26T13:17:18.323Z",
+        "last_polled_time": "2016-11-27T09:17:17.115Z",
         "group": 2
     }
 },
@@ -1928,7 +1928,7 @@
         "link": "http://slatestarcodex.com",
         "description": "Open threads at the Open Thread tab every Sunday and Wednesday",
         "published_time": null,
-        "last_polled_time": "2016-11-26T13:17:21.865Z",
+        "last_polled_time": "2016-11-27T09:17:20.325Z",
         "group": 2
     }
 },
@@ -1941,7 +1941,7 @@
         "link": "http://www.exurbe.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-26T13:17:09.680Z",
+        "last_polled_time": "2016-11-27T09:17:08.237Z",
         "group": 2
     }
 },
@@ -1954,7 +1954,7 @@
         "link": "http://b5audioguide.com",
         "description": "This is a book club without books, an episode-by-episode walkthrough of one of the most influential and important modern SF series. Each podcast begins with a spoiler-free discussion of the episode for new viewers, then we give listeners a jumping-off point and switch to a discussion of how the episode fits into the five-year history of the show.",
         "published_time": null,
-        "last_polled_time": "2016-11-26T13:17:26.183Z",
+        "last_polled_time": "2016-11-27T09:17:23.985Z",
         "group": 2
     }
 },
@@ -1967,7 +1967,7 @@
         "link": "https://www.theincomparable.com/theincomparable/",
         "description": "The Incomparable is a weekly dive into geeky media we love, including movies, books, TV, comics, and more, featuring a rotating panel of guests and hosted by Jason Snell.",
         "published_time": null,
-        "last_polled_time": "2016-11-26T13:17:30.941Z",
+        "last_polled_time": "2016-11-27T09:17:28.326Z",
         "group": 2
     }
 },
@@ -1980,7 +1980,7 @@
         "link": "http://arstechnica.com",
         "description": "Serving the Technologist for more than a decade. IT news, reviews, and analysis.",
         "published_time": null,
-        "last_polled_time": "2016-11-26T13:17:22.671Z",
+        "last_polled_time": "2016-11-27T09:17:20.903Z",
         "group": 5
     }
 },
@@ -1993,7 +1993,7 @@
         "link": "http://www.bbc.co.uk/news/",
         "description": "BBC News - UK Politics",
         "published_time": null,
-        "last_polled_time": "2016-11-26T13:17:05.458Z",
+        "last_polled_time": "2016-11-27T09:17:04.389Z",
         "group": 3
     }
 },
@@ -2006,7 +2006,7 @@
         "link": "http://www.alphr.com/taxonomy/term/12/all/feed",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-26T13:17:15.646Z",
+        "last_polled_time": "2016-11-27T09:17:14.495Z",
         "group": 5
     }
 },
@@ -2019,7 +2019,7 @@
         "link": "http://www.theregister.co.uk/software/",
         "description": "Biting the hand that feeds IT \u2014 sci/tech news and views for the world",
         "published_time": null,
-        "last_polled_time": "2016-11-26T12:17:33.422Z",
+        "last_polled_time": "2016-11-27T09:17:30.141Z",
         "group": 5
     }
 },
@@ -2031,8 +2031,8 @@
         "xml_url": "http://www.bbc.co.uk/programmes/p002vsnk/episodes/downloads.rss",
         "link": "http://www.bbc.co.uk/programmes/p002vsnk",
         "description": "Interviews, news and analysis of the day\u2019s global events.",
-        "published_time": "2016-11-25T00:00:00Z",
-        "last_polled_time": "2016-11-26T09:05:40.681Z",
+        "published_time": "2016-11-26T00:00:00Z",
+        "last_polled_time": "2016-11-26T15:17:17.888Z",
         "group": 4
     }
 }

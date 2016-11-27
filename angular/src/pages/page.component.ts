@@ -21,11 +21,9 @@ import {markdownBreadcrumb, rootSlug} from "../app.settings";
 
             <h1 *ngIf="page && page.contentType == 'markdown' && page.title">{{page.title}}</h1>
 
-            <template [ngIf]="page && page.contentType != 'homepage'">
-                <template ngFor let-breadcrumb [ngForOf]="childBreadcrumbs">
-                    <ad-breadcrumb [breadcrumb]="breadcrumb"></ad-breadcrumb>
-                </template>
-            </template>
+            <p *ngIf="page && page.contentType != 'homepage'">
+                <ad-breadcrumb *ngFor="let breadcrumb of childBreadcrumbs" [breadcrumb]="breadcrumb"></ad-breadcrumb>
+            </p>
 
             <ad-markdown-content *ngIf="page && page.contentType == 'markdown'" [content]="page.content"></ad-markdown-content>
             <ad-homepage *ngIf="page && page.contentType == 'homepage'" [content]="page.content"></ad-homepage>
@@ -57,7 +55,7 @@ export class PageComponent implements OnInit {
         this.route.params.forEach((params: Params) => this.getCurrentPage(params['slug']));
     }
 
-    getCurrentPage(slug: string) {
+    getCurrentPage(slug: string): void {
         if (slug == undefined)
             slug = rootSlug;
         this.pageService

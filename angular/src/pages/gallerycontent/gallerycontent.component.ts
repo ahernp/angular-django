@@ -14,7 +14,10 @@ import {Gallery, Image} from "./gallery";
             <span (click)="previousImage()" class="lightbox-control lightbox-previous-next" style="border-radius: 0 3px 3px 0;">&#10094;</span>
             <span (click)="nextImage()" class="lightbox-control lightbox-previous-next" style="right: 0; border-radius: 3px 0 0 3px;">&#10095;</span>
             <img src="{{gallery.images[currentIndex].imageUrl}}" style="display: block; margin-left: auto; margin-right: auto; max-height:90%; max-width:90%">
-            <p style="text-align: center; color: white;">{{gallery.images[currentIndex].title}}</p>
+            <p style="text-align: center; color: white;">
+                {{gallery.images[currentIndex].title}}
+                ({{currentIndex + 1}} of {{gallery.images.length}})
+            </p>
         </div>
         `,
     providers: []

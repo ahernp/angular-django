@@ -1,6 +1,6 @@
 from __future__ import absolute_import
 
-from datetime import datetime
+from datetime import datetime, timedelta
 from time import mktime
 
 import feedparser
@@ -15,6 +15,8 @@ from .models import Entry
 import logging
 
 logger = logging.getLogger('feedreader')
+
+HOUR = timedelta(hours=1)
 
 
 def poll_feed(db_feed, verbose=False):
@@ -110,7 +112,7 @@ def poll_feed(db_feed, verbose=False):
 
                 now = timezone.now()
 
-                if published_time > now:
+                if published_time > now or published_time < now - HOUR:
                     published_time = now
 
                 db_entry.published_time = published_time

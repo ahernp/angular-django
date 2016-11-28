@@ -17,6 +17,7 @@ import logging
 logger = logging.getLogger('feedreader')
 
 HOUR = timedelta(hours=1)
+DAY = timedelta(days=1)
 
 
 def poll_feed(db_feed, verbose=False):
@@ -111,8 +112,11 @@ def poll_feed(db_feed, verbose=False):
                     published_time = pytz_timezone.localize(published_time, is_dst=False)
 
                 now = timezone.now()
+                hour_ago = now - HOUR
+                day_ago = now - DAY
 
-                if published_time > now or published_time < now - HOUR:
+                if (published_time > now or (published_time > day_ago and
+                                             published_time < hour_ago)):
                     published_time = now
 
                 db_entry.published_time = published_time

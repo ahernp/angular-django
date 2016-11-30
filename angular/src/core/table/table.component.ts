@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 
-import {Table} from '../../utilities'
+import {Table} from './table'
 
 @Component({
     selector: 'ad-table',

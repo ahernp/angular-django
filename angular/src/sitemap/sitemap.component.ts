@@ -11,7 +11,8 @@ import {Footer} from "../core/footer/footer";
 
 import {dashboardTitle, dashboardUrl} from "../dashboard/dashboard.component";
 import {rootTitle, rootBreadcrumb, adminBreadcrumb} from "../app.settings";
-import {Table, toDateTimeString} from "../utilities";
+import {Table} from "../core/table/table";
+import {toDateTimeString} from "../utilities";
 
 export const sitemapTitle: string = 'Site Map';
 const columnHeadings: string[] = ['Title', 'Parent', 'Updated']

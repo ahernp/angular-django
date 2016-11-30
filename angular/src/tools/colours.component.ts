@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 
-import {Table} from '../utilities';
+import {Table} from "../core/table/table";
 
 const columnHeadings = ['Name', 'Hex', 'Red', 'Green', 'Blue', 'Colour'];
 const colours: string[][] = [

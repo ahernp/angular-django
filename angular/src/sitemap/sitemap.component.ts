@@ -11,12 +11,10 @@ import {Footer} from "../core/footer/footer";
 
 import {dashboardTitle, dashboardUrl} from "../dashboard/dashboard.component";
 import {rootTitle, rootBreadcrumb, adminBreadcrumb} from "../app.settings";
-import {toDateTimeString} from "../utilities";
+import {Table, toDateTimeString} from "../utilities";
 
 export const sitemapTitle: string = 'Site Map';
 const columnHeadings: string[] = ['Title', 'Parent', 'Updated']
-
-var filterableStrings: string[];
 
 @Component({
     selector: 'ad-sitemap',
@@ -25,15 +23,15 @@ var filterableStrings: string[];
         <div id="content">
             <h1>{{title}}</h1>
             <input [(ngModel)]="filterString" (ngModelChange)="filterRows()" placeholder="Filter">
-            <table>
+            <table *ngIf="table">
                 <thead>
-                    <tr><th *ngFor="let columnHeading of columnHeadings">{{columnHeading}}</th></tr>
+                    <tr><th *ngFor="let columnHeading of table.columnHeadings; let i = index" (click)="table.sortRows(i)">{{columnHeading}}</th></tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let row of currentRows">
-                        <td><a routerLink="{{row.url}}">{{row.title}}</a></td>
-                        <td>{{row.parentName}}</td>
-                        <td>{{row.updated}}</td>
+                    <tr *ngFor="let row of table.currentRows">
+                        <td><a routerLink="{{row[3]}}">{{row[0]}}</a></td>
+                        <td>{{row[1]}}</td>
+                        <td>{{row[2]}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -47,11 +45,10 @@ export class SitemapComponent implements OnInit {
     now: string;
     parent_slug: string;
     breadcrumbs: Breadcrumb[];
-    sitemap: Breadcrumb[];
 
+    sitemap: Breadcrumb[];
+    table: Table;
     filterString: string;
-    columnHeadings: string[] = columnHeadings;
-    currentRows: Breadcrumb[];
 
     footer: Footer;
     error: any;
@@ -123,27 +120,6 @@ export class SitemapComponent implements OnInit {
         });
     }
 
-    populateFilterStrings() {
-        filterableStrings = [];
-        for (let breadcrumb of this.sitemap) {
-            let searchableStrings = [];
-            for (let attribute of ['url', 'title', 'parentName', 'updated'])
-                if (breadcrumb[attribute] != undefined)
-                    searchableStrings.push(breadcrumb[attribute].toLocaleLowerCase())
-            filterableStrings.push(searchableStrings.toString());
-        }
-    }
-
-    filterRows(): void {
-        if (this.filterString.length < 3) {
-            this.currentRows = this.sitemap;
-            return;
-        }
-        var filterString = this.filterString.toLocaleLowerCase();
-        this.currentRows = this.sitemap.filter(
-            (value, index) => filterableStrings[index].indexOf(filterString) != -1);
-    }
-
     getBreadcrumbs() {
         this.pageService
             .getPageBreadcrumbs(this.parent_slug)
@@ -155,9 +131,15 @@ export class SitemapComponent implements OnInit {
                     return a.title.toLowerCase().localeCompare(
                         b.title, 'en', {'sensitivity': 'base'});
                 });
-                this.currentRows = this.sitemap;
-                this.populateFilterStrings();
+                let row: string[][] = [];
+                for (let breadcrumb of this.sitemap)
+                    row.push([breadcrumb.title, breadcrumb.parentName, breadcrumb.updated, breadcrumb.url]);
+                this.table = new Table(columnHeadings, row);
             })
             .catch(error => this.error = error);
+    }
+
+    filterRows(): void {
+        this.table.setFilterString(this.filterString);
     }
 }

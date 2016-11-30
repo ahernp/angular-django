@@ -20,7 +20,6 @@ export class Table {
     private sortOrders: boolean[] = [];
     private filterableStrings: string[];
 
-    private sortColumn: number;
     private filterString: string = '';
 
     constructor(columnHeadings: string[], rows: string[][]) {
@@ -37,21 +36,23 @@ export class Table {
     }
 
     public sortRows(index: number): void {
-        this.sortColumn = index;
-        var self = this;
+        var sortColumn: number = index;
+        var self: Table = this;
         this.rows.sort((rowA: string[], rowB: string[]): number => {
-            if (rowA[self.sortColumn] === rowB[self.sortColumn])
+            let valueA = rowA[sortColumn] == undefined ? '' : rowA[sortColumn].toLocaleLowerCase();
+            let valueB = rowB[sortColumn] == undefined ? '' : rowB[sortColumn].toLocaleLowerCase();
+            if (valueA == valueB)
                 return 0;
             else
-                if (self.sortOrders[self.sortColumn])
-                    return (rowA[self.sortColumn] > rowB[self.sortColumn]) ? -1 : 1;
+                if (self.sortOrders[sortColumn])
+                    return (valueA > valueB) ? -1 : 1;
                 else
-                return (rowA[self.sortColumn] < rowB[self.sortColumn]) ? -1 : 1;
+                    return (valueA < valueB) ? -1 : 1;
             })
         this.populateFilterStrings();
         if (this.filterString != undefined)
             this.filterRows();
-        this.sortOrders[this.sortColumn] = !this.sortOrders[this.sortColumn];
+        this.sortOrders[sortColumn] = !this.sortOrders[sortColumn];
     }
 
     private initialiseSortOrders(numberOfHeadings: number): void {
@@ -74,15 +75,5 @@ export class Table {
         this.currentRows = this.rows.filter(
             (value, index) => this.filterableStrings[index].indexOf(filterStringLowercase) != -1);
         return this.currentRows;
-    }
-
-    private compareRows(rowA: string[], rowB: string[]): number {
-        if (rowA[this.sortColumn] === rowB[this.sortColumn])
-            return 0;
-        else
-            if (this.sortOrders[this.sortColumn])
-                return (rowA[this.sortColumn] > rowB[this.sortColumn]) ? -1 : 1;
-            else
-            return (rowA[this.sortColumn] < rowB[this.sortColumn]) ? -1 : 1;
     }
 }

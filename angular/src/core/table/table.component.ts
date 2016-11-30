@@ -23,7 +23,6 @@ export class TableComponent implements OnInit {
     @Input() rows: string[][];
 
     table: Table;
-
     filterString: string;
 
     ngOnInit(): void {

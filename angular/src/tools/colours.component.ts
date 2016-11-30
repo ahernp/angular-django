@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 
+import {Table} from '../utilities';
+
 const columnHeadings = ['Name', 'Hex', 'Red', 'Green', 'Blue', 'Colour'];
 const colours: string[][] = [
     ['AliceBlue', '#F0F8FF', 'F0', 'F8', 'FF'],
@@ -154,13 +156,13 @@ const colours: string[][] = [
 @Component({
     template: `
         <h1>HTML Colours</h1>
-        <input [(ngModel)]="filterName" (ngModelChange)="nameFilter()" placeholder="Name filter">
+        <input [(ngModel)]="filterString" (ngModelChange)="filterRows()" placeholder="Filter">
         <table>
             <thead>
-                <tr><th *ngFor="let columnHeading of columnHeadings">{{columnHeading}}</th></tr>
+                <tr><th *ngFor="let columnHeading of table.columnHeadings; let i = index" (click)="table.sortRows(i)">{{columnHeading}}</th></tr>
             </thead>
             <tbody>
-                <tr *ngFor="let row of rows">
+                <tr *ngFor="let row of table.currentRows">
                     <td *ngFor="let column of row">{{column}}</td>
                     <td *ngIf="row" [style.background-color]="row[1]"></td>
                 </tr>
@@ -169,16 +171,10 @@ const colours: string[][] = [
     `,
 })
 export class ColoursComponent {
-    filterName: string;
-    columnHeadings: string[] = columnHeadings;
-    rows: string[][] = colours;
+    table: Table = new Table(columnHeadings, colours);
+    filterString: string;
 
-    nameFilter(): void {
-        if (this.filterName.length < 2) {
-            this.rows = colours;
-            return;
-        }
-        var filterName = this.filterName.toLocaleLowerCase();
-        this.rows = colours.filter(row => row[0].toLocaleLowerCase().indexOf(filterName) != -1);
+    filterRows(): void {
+        this.table.setFilterString(this.filterString);
     }
 }

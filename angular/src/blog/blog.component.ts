@@ -9,7 +9,7 @@ import {Page} from "../pages/page";
 
 import {Footer} from "../core/footer/footer";
 
-const blogTitle: string = 'Blog (recent)';
+const blogTitle: string = 'Blog';
 const blogUrl: string = '/blog';
 
 const blogArchiveBreadcrumb = new Breadcrumb({title: 'Archive', url: '/sitemap/blog'});

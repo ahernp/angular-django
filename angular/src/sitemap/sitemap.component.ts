@@ -93,12 +93,11 @@ export class SitemapComponent implements OnInit {
         else {
             var parent = this.pageService
                 .getPage(this.parent_slug)
-                .then(page => {
+                .subscribe(page => {
                     this.populateHeader(page.title);
                     this.title = page.title;
                     this.titleService.setTitle(page.title);
-                })
-                .catch(error => this.error = error);
+                });
         }
 
     }

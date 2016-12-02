@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router'
 import {Title} from '@angular/platform-browser';
 
+import {Observable} from 'rxjs/Observable';
+
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 
@@ -52,41 +54,37 @@ export class PageComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.route.params.forEach((params: Params) => this.getCurrentPage(params['slug']));
+        this.route.params
+            .map(params => params['slug'] ? params['slug'] : rootSlug)
+            .switchMap(slug => this.pageService.getPage(slug))
+            .subscribe(page => this.populatePage(page));
     }
 
-    getCurrentPage(slug: string): void {
-        if (slug == undefined)
-            slug = rootSlug;
-        this.pageService
-            .getPage(slug)
-            .then(page => {
-                this.page = page;
-                this.titleService.setTitle(this.page.title);
+    populatePage(page: Page): void {
+        this.page = page;
+        this.titleService.setTitle(page.title);
 
-                var breadcrumb = new Breadcrumb({
-                    title: this.page.title,
-                    url: this.page.url,
-                    updated: this.page.updated,
-                    parentName: this.page.parentName});
-                this.breadcrumbs = this.breadcrumbService.addBreadcrumb(breadcrumb);
+        var breadcrumb = new Breadcrumb({
+            title: page.title,
+            url: page.url,
+            updated: page.updated,
+            parentName: page.parentName});
+        this.breadcrumbs = this.breadcrumbService.addBreadcrumb(breadcrumb);
 
-                this.footer = new Footer({
-                    updated: this.page.updated,
-                    sourceFlag: true,
-                    breadcrumbs: [
-                        markdownBreadcrumb,
-                        new Breadcrumb({
-                            title: 'Edit',
-                            url: `/admin/pages/page/${this.page.id}/change/`,
-                            linkFlag: true,
-                        })
-                    ],
-                });
+        this.footer = new Footer({
+            updated: page.updated,
+            sourceFlag: true,
+            breadcrumbs: [
+                markdownBreadcrumb,
+                new Breadcrumb({
+                    title: 'Edit',
+                    url: `/admin/pages/page/${page.id}/change/`,
+                    linkFlag: true,
+                })
+            ],
+        });
 
-                this.childBreadcrumbs = this.page.children;
-            })
-            .catch(error => this.error = error);
+        this.childBreadcrumbs = page.children;
     }
 
     onToggleSource(showSource: boolean) {

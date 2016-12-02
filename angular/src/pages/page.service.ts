@@ -1,7 +1,8 @@
 import {Injectable} from '@angular/core';
-import {Http} from '@angular/http';
+import {Http, Response} from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
+import {Observable} from 'rxjs/Observable';
 
 import {Page} from './page';
 
@@ -11,6 +12,8 @@ import {apiEndpoint} from "../app.settings";
 
 @Injectable()
 export class PageService {
+
+    cache: Page[] = [];
 
     constructor(private http:Http) {
     }
@@ -28,11 +31,18 @@ export class PageService {
                 .catch(this.handleError);
     }
 
-    getPage(slug:string) {
-        return this.http.get(`${apiEndpoint}/pages/read/${slug}`)
-            .toPromise()
-            .then(response => response.json() as Page)
-            .catch(this.handleError);
+    getPage(slug:string): Observable<Page> {
+        debugger;
+        let pages = this.cache.filter(page => page.url == `/page/${slug}`);
+        if (pages.length > 0)
+            return Observable.of(pages[0]);
+        else
+            return this.http.get(`${apiEndpoint}/pages/read/${slug}`)
+                .map((response: Response) => {
+                    let page: Page = response.json() as Page;
+                    this.cache.push(page);
+                    return page;
+                });
     }
 
     getChildPages(slug:string) {

@@ -69,7 +69,7 @@
 <tr>
 	<td>waitForText</td>
 	<td>css=h1</td>
-	<td>Blog</td>
+	<td>Blog Root</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -128,8 +128,8 @@
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>css=h1</td>
-	<td>Gallery</td>
+	<td>css=h2</td>
+	<td>X3</td>
 </tr>
 <tr>
 	<td>click</td>

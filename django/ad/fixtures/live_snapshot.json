@@ -3,13 +3,13 @@
     "model": "pages.page",
     "pk": 1,
     "fields": {
-        "title": "Blog",
+        "title": "Blog Root",
         "slug": "blog",
         "parent": 3,
-        "updated": "2012-03-26T16:37:57Z",
+        "updated": "2016-12-01T07:26:10.176Z",
         "published": null,
         "content_type": "markdown",
-        "content": "Root (parent) for all blog pages on the site.\r\n\r\n[archive](/blog/archive)"
+        "content": "Root (parent) for all blog pages on the site."
     }
 },
 {
@@ -1538,7 +1538,7 @@
         "link": "http://blog.dilbert.com/",
         "description": "",
         "published_time": "2015-01-12T07:00:01Z",
-        "last_polled_time": "2016-11-30T19:17:25.130Z",
+        "last_polled_time": "2016-12-02T19:17:22.034Z",
         "group": 2
     }
 },
@@ -1551,7 +1551,7 @@
         "link": "http://bingethinkinghistory.blogspot.com/",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-30T19:17:09.337Z",
+        "last_polled_time": "2016-12-02T19:17:05.278Z",
         "group": 1
     }
 },
@@ -1577,7 +1577,7 @@
         "link": "http://ancientworldpodcast.blogspot.com/",
         "description": "From the first human civilizations to 500 BC in (around) thirty podcasts",
         "published_time": null,
-        "last_polled_time": "2016-11-30T19:17:28.127Z",
+        "last_polled_time": "2016-12-02T19:17:24.653Z",
         "group": 1
     }
 },
@@ -1628,8 +1628,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/fricomedy/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/p02pc9pj",
         "description": "Download the best new comedy from Radio 4, every Friday. Features The News Quiz, The Now Show, Dead Ringers and The Museum of Curiosity.",
-        "published_time": "2016-11-25T19:00:00Z",
-        "last_polled_time": "2016-11-25T19:17:11.294Z",
+        "published_time": "2016-12-02T19:00:00Z",
+        "last_polled_time": "2016-12-02T19:17:10.490Z",
         "group": 4
     }
 },
@@ -1641,8 +1641,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/greatlives/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qxsb",
         "description": "Biographical series in which guests choose someone who has inspired their lives.",
-        "published_time": "2016-09-27T15:58:00Z",
-        "last_polled_time": "2016-11-08T10:17:14.486Z",
+        "published_time": "2016-12-06T00:00:00Z",
+        "last_polled_time": "2016-12-02T19:17:11.037Z",
         "group": 4
     }
 },
@@ -1654,8 +1654,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/iot/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qykl",
         "description": "Melvyn Bragg and guests discuss the history of ideas",
-        "published_time": "2016-11-24T00:00:00Z",
-        "last_polled_time": "2016-11-24T13:17:12.592Z",
+        "published_time": "2016-12-01T00:00:00Z",
+        "last_polled_time": "2016-12-01T12:17:09.946Z",
         "group": 4
     }
 },
@@ -1680,8 +1680,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/media/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b00dv9hq",
         "description": "Steve Hewlett presents a topical programme about the fast-changing media world",
-        "published_time": "2016-11-23T00:00:00Z",
-        "last_polled_time": "2016-11-23T18:18:27.878Z",
+        "published_time": "2016-11-30T00:00:00Z",
+        "last_polled_time": "2016-12-01T11:17:35.530Z",
         "group": 4
     }
 },
@@ -1719,8 +1719,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/film/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006r5jt",
         "description": "The latest releases, the hottest stars and the leading directors, plus news and insights from the film world",
-        "published_time": "2016-11-24T00:00:00Z",
-        "last_polled_time": "2016-11-24T17:17:26.093Z",
+        "published_time": "2016-12-01T00:00:00Z",
+        "last_polled_time": "2016-12-01T17:17:27.220Z",
         "group": 4
     }
 },
@@ -1745,8 +1745,8 @@
         "xml_url": "http://feedproxy.google.com/linuxtoday/linux",
         "link": "http://www.linuxtoday.com/",
         "description": "",
-        "published_time": "2016-11-30T19:09:59Z",
-        "last_polled_time": "2016-11-30T19:17:16.661Z",
+        "published_time": "2016-12-02T19:13:43Z",
+        "last_polled_time": "2016-12-02T19:17:13.914Z",
         "group": 5
     }
 },
@@ -1759,7 +1759,7 @@
         "link": "https://www.schneier.com/blog/",
         "description": "A blog covering security and security technology.",
         "published_time": null,
-        "last_polled_time": "2016-11-30T19:17:24.868Z",
+        "last_polled_time": "2016-12-02T19:17:21.783Z",
         "group": 5
     }
 },
@@ -1772,7 +1772,7 @@
         "link": "https://inkscapetutorials.org",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-30T19:17:14.333Z",
+        "last_polled_time": "2016-12-02T19:17:11.799Z",
         "group": 5
     }
 },
@@ -1837,7 +1837,7 @@
         "link": "https://www.djangoproject.com/weblog/",
         "description": "Latest news about Django, the Python Web framework.",
         "published_time": null,
-        "last_polled_time": "2016-11-30T19:17:31.514Z",
+        "last_polled_time": "2016-12-02T19:17:27.879Z",
         "group": 5
     }
 },
@@ -1875,8 +1875,8 @@
         "xml_url": "http://www.bbc.co.uk/blogs/markkermode/rss",
         "link": "http://www.bbc.co.uk/blogs/markkermode",
         "description": "Outspoken, opinionated and never lost for words, Mark is the UK's leading film critic.  This\u00a0twice-weekly video blog is the place where he airs his personal views on the things that most fire him up about cinema - and invites you to give your own opinions.",
-        "published_time": "2016-11-29T12:11:18Z",
-        "last_polled_time": "2016-11-29T13:17:13.283Z",
+        "published_time": "2016-12-02T11:57:54Z",
+        "last_polled_time": "2016-12-02T12:17:12.414Z",
         "group": 2
     }
 },
@@ -1889,7 +1889,7 @@
         "link": "http://www.anisopteragames.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-30T19:17:22.313Z",
+        "last_polled_time": "2016-12-02T19:17:19.382Z",
         "group": 2
     }
 },
@@ -1901,8 +1901,8 @@
         "xml_url": "http://thehistoryofbyzantium.libsyn.com/rss",
         "link": "http://www.thehistoryofbyzantium.com",
         "description": "A podcast telling the story of the Roman (Byzantine) Empire from 476 AD to 1453",
-        "published_time": "2016-11-17T18:29:25Z",
-        "last_polled_time": "2016-11-17T19:17:25.788Z",
+        "published_time": "2016-11-30T22:32:18Z",
+        "last_polled_time": "2016-11-30T23:17:30.244Z",
         "group": 1
     }
 },
@@ -1915,7 +1915,7 @@
         "link": "http://slatestarcodex.com",
         "description": "Open threads at the Open Thread tab every Sunday and Wednesday",
         "published_time": null,
-        "last_polled_time": "2016-11-30T19:17:26.124Z",
+        "last_polled_time": "2016-12-02T19:17:22.821Z",
         "group": 2
     }
 },
@@ -1928,7 +1928,7 @@
         "link": "http://www.exurbe.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-11-30T19:17:12.708Z",
+        "last_polled_time": "2016-12-02T19:17:09.792Z",
         "group": 2
     }
 },
@@ -1941,7 +1941,7 @@
         "link": "http://b5audioguide.com",
         "description": "This is a book club without books, an episode-by-episode walkthrough of one of the most influential and important modern SF series. Each podcast begins with a spoiler-free discussion of the episode for new viewers, then we give listeners a jumping-off point and switch to a discussion of how the episode fits into the five-year history of the show.",
         "published_time": null,
-        "last_polled_time": "2016-11-30T19:17:30.184Z",
+        "last_polled_time": "2016-12-02T19:17:26.660Z",
         "group": 2
     }
 },
@@ -1954,7 +1954,7 @@
         "link": "https://www.theincomparable.com/theincomparable/",
         "description": "The Incomparable is a weekly dive into geeky media we love, including movies, books, TV, comics, and more, featuring a rotating panel of guests and hosted by Jason Snell.",
         "published_time": null,
-        "last_polled_time": "2016-11-30T19:17:34.563Z",
+        "last_polled_time": "2016-12-02T19:17:30.933Z",
         "group": 2
     }
 },
@@ -1967,20 +1967,7 @@
         "link": "http://arstechnica.com",
         "description": "Serving the Technologist for more than a decade. IT news, reviews, and analysis.",
         "published_time": null,
-        "last_polled_time": "2016-11-30T19:17:26.836Z",
-        "group": 5
-    }
-},
-{
-    "model": "feedreader.feed",
-    "pk": 180,
-    "fields": {
-        "title": "The Register - Software",
-        "xml_url": "http://www.theregister.co.uk/software/headlines.atom",
-        "link": "http://www.theregister.co.uk/software/",
-        "description": "Biting the hand that feeds IT \u2014 sci/tech news and views for the world",
-        "published_time": null,
-        "last_polled_time": "2016-11-30T19:17:36.424Z",
+        "last_polled_time": "2016-12-02T19:17:23.528Z",
         "group": 5
     }
 },
@@ -1992,8 +1979,8 @@
         "xml_url": "http://www.bbc.co.uk/programmes/p02dbd4m/episodes/downloads.rss",
         "link": "http://www.bbc.co.uk/programmes/p02dbd4m",
         "description": "Owen Bennett Jones and guests take an in-depth look at a topic in the week&#39;s news",
-        "published_time": "2016-11-25T00:00:00Z",
-        "last_polled_time": "2016-11-27T17:13:10.724Z",
+        "published_time": "2016-12-02T00:00:00Z",
+        "last_polled_time": "2016-12-02T10:17:13.970Z",
         "group": 4
     }
 },
@@ -2012,15 +1999,41 @@
 },
 {
     "model": "feedreader.feed",
-    "pk": 188,
+    "pk": 189,
     "fields": {
-        "title": "BBC News - UK",
-        "xml_url": "http://feeds.bbci.co.uk/news/uk/rss.xml",
+        "title": "BBC News - UK Politics",
+        "xml_url": "http://feeds.bbci.co.uk/news/politics/rss.xml?edition=uk",
         "link": "http://www.bbc.co.uk/news/",
-        "description": "BBC News - UK",
+        "description": "BBC News - UK Politics",
         "published_time": null,
-        "last_polled_time": "2016-11-30T19:17:08.795Z",
+        "last_polled_time": "2016-12-02T19:17:04.898Z",
         "group": 3
+    }
+},
+{
+    "model": "feedreader.feed",
+    "pk": 190,
+    "fields": {
+        "title": "The Register",
+        "xml_url": "http://www.theregister.co.uk/headlines.atom",
+        "link": "http://www.theregister.co.uk/",
+        "description": "Biting the hand that feeds IT \u2014 sci/tech news and views for the world",
+        "published_time": null,
+        "last_polled_time": "2016-12-02T19:17:32.700Z",
+        "group": 5
+    }
+},
+{
+    "model": "feedreader.feed",
+    "pk": 191,
+    "fields": {
+        "title": "Yield Thought",
+        "xml_url": "http://yieldthought.com/rss",
+        "link": "http://yieldthought.com/",
+        "description": "Mark O\u2019Connor is a programmer, irregular writer and part-time technical fellow. He believes in dynamic typing, first-class functions, working in the cloud and the immortal essence of the human soul. He also likes tea.\n\n\n\n  var _gaq = _gaq || [];\n  _gaq.push(['_setAccount', 'UA-29608497-1']);\n  _gaq.push(['_trackPageview']);\n\n  (function() {\n    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;\n    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);\n  })();",
+        "published_time": null,
+        "last_polled_time": "2016-12-02T19:17:33.559Z",
+        "group": 5
     }
 }
 ]

@@ -32,7 +32,6 @@ export class PageService {
     }
 
     getPage(slug:string): Observable<Page> {
-        debugger;
         let pages = this.cache.filter(page => page.url == `/page/${slug}`);
         if (pages.length > 0)
             return Observable.of(pages[0]);

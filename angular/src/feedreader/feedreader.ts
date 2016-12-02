@@ -5,6 +5,7 @@ export class Entry {
     publishedTime: string;
     feedTitle: string;
     groupName: string;
+    readFlag: boolean;
 }
 
 export class Feed {

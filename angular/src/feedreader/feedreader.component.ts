@@ -23,7 +23,7 @@ export const feedreaderUrl: string = '/feedreader';
         <div id="content">
             <h1>Feedreader</h1>
             <div id="feedreader-entry-counts">
-                <p>Recent Entries:</p>
+                <p (click)="toggleShowReadEntries()">Recent Entries:</p>
                 <h2 *ngIf="entries" (click)="showAll()">All ({{entries.length}})</h2>
                 <div *ngFor="let group of groupCounts">
                     <h3 *ngIf="group.name" (click)="showGroup(group.name)">{{group.name}} ({{group.count}})</h3>
@@ -52,6 +52,8 @@ export class FeedreaderComponent implements OnInit {
     now: string;
     feeds: Feed[];
     entries: Entry[];
+    showReadEntries: Boolean;
+    unreadEntries: Entry[];
     shownEntries: Entry[];
     groupCounts: any[];
     breadcrumbs: Breadcrumb[];
@@ -66,6 +68,7 @@ export class FeedreaderComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        this.showReadEntries = false;
         this.titleService.setTitle(feedreaderTitle);
         this.now = toDateTimeString(new Date());
         this.populateHeader();
@@ -101,24 +104,25 @@ export class FeedreaderComponent implements OnInit {
                 data => {
                     this.feeds = <Feed[]>data[0];
                     this.entries = <Entry[]>data[1];
-                    this.countEntries();
-                    this.shownEntries = this.entries;
+                    this.unreadEntries = this.entries.filter(entry => !entry.readFlag);
+                    this.shownEntries = this.showReadEntries ? this.entries : this.unreadEntries;
+                    this.countEntries(this.shownEntries);
                     this.showSpinner = false;
                 },
                 err => console.error(err)
             );
     }
 
-    countEntries() {
+    countEntries(entries: Entry[]) {
         let groupCountDictionary: GroupCountDictionary = new GroupCountDictionary();
         for (let i = 0; i < this.feeds.length; i++) {
             if (groupCountDictionary[this.feeds[i].groupName] == undefined)
                 groupCountDictionary[this.feeds[i].groupName] = {count: 0, feeds: new FeedCountDictionary()};
             groupCountDictionary[this.feeds[i].groupName].feeds[this.feeds[i].feedTitle] = 0;
         }
-        for (let i = 0; i < this.entries.length; i++) {
-            groupCountDictionary[this.entries[i].groupName].count++;
-            groupCountDictionary[this.entries[i].groupName].feeds[this.entries[i].feedTitle]++;
+        for (let i = 0; i < entries.length; i++) {
+            groupCountDictionary[entries[i].groupName].count++;
+            groupCountDictionary[entries[i].groupName].feeds[entries[i].feedTitle]++;
         }
         let groupCounts: GroupCount[] = [];
         let groupNames = Object.keys(groupCountDictionary);
@@ -137,18 +141,32 @@ export class FeedreaderComponent implements OnInit {
         this.groupCounts = groupCounts;
     }
 
+    toggleShowReadEntries() {
+        debugger;
+        this.showReadEntries = !this.showReadEntries;
+        this.shownEntries = this.showReadEntries ? this.entries : this.unreadEntries;
+        this.countEntries(this.shownEntries);
+    }
     showAll() {
-        this.shownEntries = this.entries;
+        this.shownEntries = this.showReadEntries ? this.entries : this.unreadEntries;
     }
 
     showGroup(groupName) {
         let matchingGroupName = (value) => value.groupName == groupName;
-        this.shownEntries = this.entries.filter(
-            (value) => value.groupName == groupName);
+        if (this.showReadEntries)
+            this.shownEntries = this.entries.filter(
+                (value) => value.groupName == groupName);
+        else
+            this.shownEntries = this.unreadEntries.filter(
+                (value) => value.groupName == groupName);
     }
 
     showFeed(feedTitle) {
-        this.shownEntries = this.entries.filter(
-            (value) => value.feedTitle == feedTitle);
+        if (this.showReadEntries)
+            this.shownEntries = this.entries.filter(
+                (value) => value.feedTitle == feedTitle);
+        else
+            this.shownEntries = this.unreadEntries.filter(
+                (value) => value.feedTitle == feedTitle);
     }
 }

@@ -28,7 +28,13 @@ def get_entries(request):
                         'description': entry.description,
                         'publishedTime': entry.published_time.strftime('%Y-%m-%d %H:%M:%S'),
                         'feedTitle': entry.feed.title,
-                        'groupName': entry.feed.group.name if entry.feed.group else ''}
+                        'groupName': entry.feed.group.name if entry.feed.group else '',
+                        'readFlag': entry.read_flag}
                        for entry in entries])
+
+    for entry in entries:
+        if not entry.read_flag:
+            entry.read_flag = True
+            entry.save()
 
     return HttpResponse(data, content_type='application/json')

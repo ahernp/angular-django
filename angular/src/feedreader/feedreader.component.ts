@@ -142,7 +142,6 @@ export class FeedreaderComponent implements OnInit {
     }
 
     toggleShowReadEntries() {
-        debugger;
         this.showReadEntries = !this.showReadEntries;
         this.shownEntries = this.showReadEntries ? this.entries : this.unreadEntries;
         this.countEntries(this.shownEntries);

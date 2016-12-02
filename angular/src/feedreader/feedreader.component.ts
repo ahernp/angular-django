@@ -105,6 +105,8 @@ export class FeedreaderComponent implements OnInit {
                     this.feeds = <Feed[]>data[0];
                     this.entries = <Entry[]>data[1];
                     this.unreadEntries = this.entries.filter(entry => !entry.readFlag);
+                    if (this.unreadEntries.length == 0)
+                        this.showReadEntries = true;
                     this.shownEntries = this.showReadEntries ? this.entries : this.unreadEntries;
                     this.countEntries(this.shownEntries);
                     this.showSpinner = false;

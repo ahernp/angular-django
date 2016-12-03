@@ -125,22 +125,17 @@ export class SitemapComponent implements OnInit {
     }
 
     getBreadcrumbs() {
-        this.pageService
-            .getPageBreadcrumbs(this.parent_slug)
-            .then(pageBreadcrumbs => {
-                this.sitemap = pageBreadcrumbs;
-                if (this.parent_slug == undefined)
-                    this.addClientsideEntries();
-                this.sitemap.sort(function (a, b) {
-                    return a.title.toLowerCase().localeCompare(
-                        b.title, 'en', {'sensitivity': 'base'});
-                });
-                let row: string[][] = [];
-                for (let breadcrumb of this.sitemap)
-                    row.push([breadcrumb.title, breadcrumb.parentName, breadcrumb.updated, breadcrumb.url]);
-                this.table = new Table(columnHeadings, row);
-            })
-            .catch(error => this.error = error);
+        this.sitemap = this.pageService.getPageBreadcrumbs(this.parent_slug);
+        if (this.parent_slug == undefined)
+            this.addClientsideEntries();
+        this.sitemap.sort(function (a, b) {
+            return a.title.toLowerCase().localeCompare(
+                b.title, 'en', {'sensitivity': 'base'});
+        });
+        let row: string[][] = [];
+        for (let breadcrumb of this.sitemap)
+            row.push([breadcrumb.title, breadcrumb.parentName, breadcrumb.updated, breadcrumb.url]);
+        this.table = new Table(columnHeadings, row);
     }
 
     filterRows(): void {

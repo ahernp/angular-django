@@ -9,9 +9,9 @@ import {Page} from "../pages/page";
 
 import {Footer} from "../core/footer/footer";
 
-const blogTitle: string = 'Blog';
-const blogUrl: string = '/blog';
+import {blogRootTitle, blogUrl} from "../app.settings";
 
+const numberOfBlogPages: number = 3;
 const blogArchiveBreadcrumb = new Breadcrumb({title: 'Archive', url: '/sitemap/blog'});
 export const blogFeedBreadcrumb = new Breadcrumb({title: 'RSS', url: '/blog/feed', linkFlag: true});
 
@@ -39,7 +39,7 @@ export const blogFeedBreadcrumb = new Breadcrumb({title: 'RSS', url: '/blog/feed
 
 
 export class BlogComponent implements OnInit {
-    title: string = blogTitle;
+    title: string = blogRootTitle;
     breadcrumbs: Breadcrumb[];
     pages: Page[];
     footer: Footer;
@@ -52,15 +52,15 @@ export class BlogComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.titleService.setTitle(blogTitle);
+        this.titleService.setTitle(blogRootTitle);
         this.populateHeader();
         this.populateFooter();
-        this.getBlogPages();
+        this.getRecentBlogPages();
     }
 
     populateHeader() {
         var blogBreadcrumb = new Breadcrumb({
-            title: blogTitle,
+            title: blogRootTitle,
             url: blogUrl});
         this.breadcrumbs = this.breadcrumbService.addBreadcrumb(blogBreadcrumb);
     }
@@ -72,12 +72,7 @@ export class BlogComponent implements OnInit {
     }
 
 
-    getBlogPages() {
-        this.pageService
-            .getRecentBlogPages()
-            .then(blogPages => {
-                this.pages = blogPages;
-            })
-            .catch(error => this.error = error);
+    getRecentBlogPages() {
+        this.pages = this.pageService.getRecentBlogPages(numberOfBlogPages);
     }
 }

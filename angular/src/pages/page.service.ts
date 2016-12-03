@@ -8,33 +8,29 @@ import {Page} from './page';
 
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 
-import {apiEndpoint} from "../app.settings";
+import {apiEndpoint, blogRootTitle, pageUrl} from "../app.settings";
 
 @Injectable()
 export class PageService {
 
     pageCache: Page[] = [];
+    breadcrumbCache: Breadcrumb[] = [];
     allCached: boolean = false;
 
     constructor(private http:Http) {
         this.cacheAllPages();
     }
 
-    getPageBreadcrumbs(slug:string) {
+    getPageBreadcrumbs(slug: string) {
+        let parent = this.pageCache.filter(page => page.url == `${pageUrl}/${slug}`)[0];
         if (slug == undefined)
-            return this.http.get(`${apiEndpoint}/pages/list/`)
-                .toPromise()
-                .then(response => response.json() as Breadcrumb[])
-                .catch(this.handleError);
+            return this.breadcrumbCache;
         else
-            return this.http.get(`${apiEndpoint}/pages/list/?parent_slug=${slug}`)
-                .toPromise()
-                .then(response => response.json() as Breadcrumb[])
-                .catch(this.handleError);
+            return this.breadcrumbCache.filter(breadcrumb => breadcrumb.parentName == parent.title);
     }
 
     getPage(slug:string): Observable<Page> {
-        let pages = this.pageCache.filter(page => page.url == `/page/${slug}`);
+        let pages = this.pageCache.filter(page => page.url == `${pageUrl}/${slug}`);
         if (pages.length > 0)
             return Observable.of(pages[0]);
         else
@@ -46,16 +42,36 @@ export class PageService {
                 });
     }
 
-    cacheAllPages(): void {
-        this.http.get(`${apiEndpoint}/pages/all/`)
-            .subscribe((response: Response) => this.pageCache = response.json() as Page[]);
+    populateBreadcrumbCache() {
+        this.breadcrumbCache = [];
+        for (let page of this.pageCache)
+            this.breadcrumbCache.push({
+                title: page.title,
+                url: page.url,
+                updated: page.updated,
+                parentName: page.parentName,
+                linkFlag: true
+            })
+
     }
 
-    getRecentBlogPages() {
-        return this.http.get(`${apiEndpoint}/pages/blogpages/`)
-            .toPromise()
-            .then(response => response.json() as Page[])
-            .catch(this.handleError);
+    cacheAllPages(): void {
+        this.http.get(`${apiEndpoint}/pages/all/`)
+            .subscribe((response: Response) => {
+                this.pageCache = response.json() as Page[];
+                this.populateBreadcrumbCache();
+            });
+    }
+
+    getRecentBlogPages(limit:number) {
+        let pages = this.pageCache.filter(page => page.parentName == blogRootTitle);
+        pages.sort((pageA: Page, pageB: Page): number => {
+            if (pageA.published == pageB.published)
+                return 0;
+            else
+                return (pageA.published > pageB.published) ? -1 : 1;
+        });
+        return pages.slice(0, limit);
     }
 
     private handleError(error:any) {

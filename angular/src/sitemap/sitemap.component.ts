@@ -69,13 +69,14 @@ export class SitemapComponent implements OnInit {
     ngOnInit(): void {
         this.titleService.setTitle(sitemapTitle);
         this.now = toDateTimeString(new Date());
-        this.route.params.forEach((params: Params) => {
-            this.parent_slug = params['slug'];
-            this.now = toDateTimeString(new Date());
-            this.getBreadcrumbs();
-            this.populateHeaderAndTitle();
-            this.populateFooter();
-        });
+        this.route.params
+            .subscribe((params: Params) => {
+                this.parent_slug = params['slug'];
+                this.now = toDateTimeString(new Date());
+                this.getBreadcrumbs();
+                this.populateHeaderAndTitle();
+                this.populateFooter();
+            });
     }
 
     addClientsideEntries() {

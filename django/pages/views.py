@@ -44,9 +44,9 @@ def read_page(request, slug):
     return HttpResponse(json.dumps(data), content_type='application/json')
 
 
-def child_pages(request, parent_slug, limit=3):
+def recent_blog_pages(request, limit=3):
     try:
-        parent = Page.objects.get(slug=parent_slug)
+        parent = Page.objects.get(slug=settings.BLOG_ROOT_SLUG)
         pages = Page.objects.filter(parent=parent).order_by('-published')[:limit]
         data = json.dumps([page.dictionary for page in pages])
     except Page.DoesNotExist:

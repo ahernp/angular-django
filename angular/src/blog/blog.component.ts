@@ -74,7 +74,7 @@ export class BlogComponent implements OnInit {
 
     getBlogPages() {
         this.pageService
-            .getChildPages('blog')
+            .getRecentBlogPages()
             .then(blogPages => {
                 this.pages = blogPages;
             })

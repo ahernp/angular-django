@@ -51,8 +51,8 @@ export class PageService {
             .subscribe((response: Response) => this.pageCache = response.json() as Page[]);
     }
 
-    getChildPages(slug:string) {
-        return this.http.get(`${apiEndpoint}/pages/childpages/${slug}`)
+    getRecentBlogPages() {
+        return this.http.get(`${apiEndpoint}/pages/blogpages/`)
             .toPromise()
             .then(response => response.json() as Page[])
             .catch(this.handleError);

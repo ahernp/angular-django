@@ -24,7 +24,7 @@ export const feedreaderUrl: string = '/feedreader';
             <h1>Feedreader</h1>
             <div id="feedreader-entry-counts">
                 <p (click)="toggleShowReadEntries()">Recent Entries:</p>
-                <h2 *ngIf="entries" (click)="showAll()">All ({{shownEntries.length}})</h2>
+                <h2 *ngIf="entries" (click)="showAll()">All ({{totalEntryCount}})</h2>
                 <div *ngFor="let group of groupCounts">
                     <h3 *ngIf="group.name" (click)="showGroup(group.name)">{{group.name}} ({{group.count}})</h3>
                     <p *ngFor="let feed of group.feeds" (click)="showFeed(feed.name)">
@@ -55,6 +55,7 @@ export class FeedreaderComponent implements OnInit {
     showReadEntries: Boolean;
     unreadEntries: Entry[];
     shownEntries: Entry[];
+    totalEntryCount: number;
     groupCounts: any[];
     breadcrumbs: Breadcrumb[];
     footer: Footer;
@@ -85,6 +86,12 @@ export class FeedreaderComponent implements OnInit {
         this.breadcrumbs = this.breadcrumbService.addBreadcrumb(dashboardBreadcrumb);
     }
 
+    populatePage() {
+        this.shownEntries = this.showReadEntries ? this.entries : this.unreadEntries;
+        this.totalEntryCount = this.shownEntries.length;
+        this.countEntries(this.shownEntries);
+    }
+
     populateFooter() {
         this.footer = new Footer({
             updated: this.now,
@@ -107,8 +114,7 @@ export class FeedreaderComponent implements OnInit {
                     this.unreadEntries = this.entries.filter(entry => !entry.readFlag);
                     if (this.unreadEntries.length == 0)
                         this.showReadEntries = true;
-                    this.shownEntries = this.showReadEntries ? this.entries : this.unreadEntries;
-                    this.countEntries(this.shownEntries);
+                    this.populatePage();
                     this.showSpinner = false;
                 },
                 err => console.error(err)
@@ -145,8 +151,7 @@ export class FeedreaderComponent implements OnInit {
 
     toggleShowReadEntries() {
         this.showReadEntries = !this.showReadEntries;
-        this.shownEntries = this.showReadEntries ? this.entries : this.unreadEntries;
-        this.countEntries(this.shownEntries);
+        this.populatePage();
     }
     showAll() {
         this.shownEntries = this.showReadEntries ? this.entries : this.unreadEntries;

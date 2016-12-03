@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Params} from '@angular/router'
+import {ActivatedRoute} from '@angular/router'
 import {Title} from '@angular/platform-browser';
-
-import {Observable} from 'rxjs/Observable';
 
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";

@@ -13,9 +13,11 @@ import {apiEndpoint} from "../app.settings";
 @Injectable()
 export class PageService {
 
-    cache: Page[] = [];
+    pageCache: Page[] = [];
+    allCached: boolean = false;
 
     constructor(private http:Http) {
+        this.cacheAllPages();
     }
 
     getPageBreadcrumbs(slug:string) {
@@ -32,16 +34,21 @@ export class PageService {
     }
 
     getPage(slug:string): Observable<Page> {
-        let pages = this.cache.filter(page => page.url == `/page/${slug}`);
+        let pages = this.pageCache.filter(page => page.url == `/page/${slug}`);
         if (pages.length > 0)
             return Observable.of(pages[0]);
         else
             return this.http.get(`${apiEndpoint}/pages/read/${slug}`)
                 .map((response: Response) => {
                     let page: Page = response.json() as Page;
-                    this.cache.push(page);
+                    this.pageCache.push(page);
                     return page;
                 });
+    }
+
+    cacheAllPages(): void {
+        this.http.get(`${apiEndpoint}/pages/all/`)
+            .subscribe((response: Response) => this.pageCache = response.json() as Page[]);
     }
 
     getChildPages(slug:string) {

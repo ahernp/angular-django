@@ -7,6 +7,18 @@ from django.views.generic import TemplateView
 from pages.models import Page
 
 
+def all_pages(request):
+    pages = Page.objects.all()
+    page_dicts = []
+    for page in pages:
+        page_dict = page.dictionary
+        children = Page.objects.filter(parent=page).order_by('title')
+        page_dict['children'] = [child.breadcrumb_dictionary for child in children]
+        page_dicts.append(page_dict)
+    data = json.dumps(page_dicts)
+    return HttpResponse(data, content_type='application/json')
+
+
 def list_pages(request):
     parent_slug = request.GET.get('parent_slug')
     if parent_slug:

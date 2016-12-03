@@ -23,7 +23,11 @@ export const feedreaderUrl: string = '/feedreader';
         <div id="content">
             <h1>Feedreader</h1>
             <div id="feedreader-entry-counts">
-                <p (click)="toggleShowReadEntries()">Recent Entries:</p>
+                <p (click)="toggleShowReadEntries()">
+                    <span *ngIf="!showReadEntries">Unread</span>
+                    <span *ngIf="showReadEntries">Recent</span>
+                    Entries:
+                </p>
                 <h2 *ngIf="entries" (click)="showAll()">All ({{totalEntryCount}})</h2>
                 <div *ngFor="let group of groupCounts">
                     <h3 *ngIf="group.name" (click)="showGroup(group.name)">{{group.name}} ({{group.count}})</h3>

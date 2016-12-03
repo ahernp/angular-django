@@ -6,6 +6,8 @@ import {Table} from './table'
     selector: 'ad-table',
     template: `
         <input [(ngModel)]="filterString" (ngModelChange)="filterRows()" placeholder="Filter">
+        <span *ngIf="table.currentRows.length != table.rows.length">{{table.currentRows.length}} of</span>
+        {{table.rows.length}} rows
         <table>
             <thead>
                 <tr><th *ngFor="let columnHeading of table.columnHeadings; let i = index" (click)="table.sortRows(i)">{{columnHeading}}</th></tr>

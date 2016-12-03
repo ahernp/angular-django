@@ -23,19 +23,23 @@ const columnHeadings: string[] = ['Title', 'Parent', 'Updated']
         <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
         <div id="content">
             <h1>{{title}}</h1>
-            <input [(ngModel)]="filterString" (ngModelChange)="filterRows()" placeholder="Filter">
-            <table *ngIf="table">
-                <thead>
-                    <tr><th *ngFor="let columnHeading of table.columnHeadings; let i = index" (click)="table.sortRows(i)">{{columnHeading}}</th></tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let row of table.currentRows">
-                        <td><a routerLink="{{row[3]}}">{{row[0]}}</a></td>
-                        <td>{{row[1]}}</td>
-                        <td>{{row[2]}}</td>
-                    </tr>
-                </tbody>
-            </table>
+            <template [ngIf]="table">
+                <input [(ngModel)]="filterString" (ngModelChange)="filterRows()" placeholder="Filter">
+                <span *ngIf="table.currentRows.length != table.rows.length">{{table.currentRows.length}} of</span>
+                {{table.rows.length}} rows
+                <table>
+                    <thead>
+                        <tr><th *ngFor="let columnHeading of table.columnHeadings; let i = index" (click)="table.sortRows(i)">{{columnHeading}}</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let row of table.currentRows">
+                            <td><a routerLink="{{row[3]}}">{{row[0]}}</a></td>
+                            <td>{{row[1]}}</td>
+                            <td>{{row[2]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </template>
         </div>
         <ad-footer id="footer" *ngIf="footer" [footer]="footer"></ad-footer>
         `,

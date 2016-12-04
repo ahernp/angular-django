@@ -72,7 +72,6 @@ export class FeedreaderComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.showReadEntries = false;
         this.titleService.setTitle(feedreaderTitle);
         this.now = toDateTimeString(new Date());
         this.populateHeader();
@@ -109,6 +108,7 @@ export class FeedreaderComponent implements OnInit {
 
     getFeedsAndEntries() {
         this.showSpinner = true;
+        this.showReadEntries = false;
         this.feedreaderService
             .getFeedsAndEntries()
             .subscribe(

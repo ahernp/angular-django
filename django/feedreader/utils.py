@@ -17,115 +17,127 @@ import logging
 logger = logging.getLogger('feedreader')
 
 
-def poll_feed(db_feed, verbose=False):
-    """
-    Read through a feed looking for new entries.
-    """
-    parsed = feedparser.parse(db_feed.xml_url)
-
-    if hasattr(parsed.feed, 'bozo_exception'):
-        # Malformed feed
+def update_feed_on_database(feed_from_database, feed_from_xml, verbose):
+    if hasattr(feed_from_xml.feed, 'bozo_exception'):
         msg = 'Feedreader poll_feeds found Malformed feed, "%s": %s'\
-              % (db_feed.xml_url, parsed.feed.bozo_exception)
+              % (feed_from_database.xml_url, feed_from_xml.feed.bozo_exception)
         logger.error(msg)
         if verbose:
             print(msg)
         return
 
-    if hasattr(parsed.feed, 'published_parsed'):
-        published_time = datetime.fromtimestamp(mktime(parsed.feed.published_parsed))
+    if hasattr(feed_from_xml.feed, 'published_parsed'):
+        published_time = datetime.fromtimestamp(mktime(feed_from_xml.feed.published_parsed))
         try:
             published_time = pytz.timezone(settings.TIME_ZONE).localize(published_time, is_dst=None)
         except pytz.exceptions.AmbiguousTimeError:
             pytz_timezone = pytz.timezone(settings.TIME_ZONE)
             published_time = pytz_timezone.localize(published_time, is_dst=False)
-        if db_feed.published_time and db_feed.published_time >= published_time:
-            return
-        db_feed.published_time = published_time
+        if feed_from_database.published_time and feed_from_database.published_time >= published_time:
+                return
+        feed_from_database.published_time = published_time
 
     for attr in ['title', 'title_detail', 'link']:
-        if not hasattr(parsed.feed, attr):
-            msg = 'Feedreader poll_feeds. Feed "%s" has no %s' % (db_feed.xml_url, attr)
+        if not hasattr(feed_from_xml.feed, attr):
+            msg = 'Feedreader poll_feeds. Feed "%s" has no %s' % (feed_from_database.xml_url, attr)
             logger.error(msg)
             if verbose:
                 print(msg)
             return
 
-    if parsed.feed.title_detail.type == 'text/plain':
-        db_feed.title = html.escape(parsed.feed.title)
+    if feed_from_xml.feed.title_detail.type == 'text/plain':
+        feed_from_database.title = html.escape(feed_from_xml.feed.title)
     else:
-        db_feed.title = parsed.feed.title
+        feed_from_database.title = feed_from_xml.feed.title
 
-    db_feed.link = parsed.feed.link
+    feed_from_database.link = feed_from_xml.feed.link
 
-    if hasattr(parsed.feed, 'description_detail') and hasattr(parsed.feed, 'description'):
-        if parsed.feed.description_detail.type == 'text/plain':
-            db_feed.description = html.escape(parsed.feed.description)
+    if hasattr(feed_from_xml.feed, 'description_detail') and hasattr(feed_from_xml.feed, 'description'):
+        if feed_from_xml.feed.description_detail.type == 'text/plain':
+            feed_from_database.description = html.escape(feed_from_xml.feed.description)
         else:
-            db_feed.description = parsed.feed.description
+            feed_from_database.description = feed_from_xml.feed.description
     else:
-        db_feed.description = ''
+        feed_from_database.description = ''
 
-    db_feed.last_polled_time = timezone.now()
-    db_feed.save()
+    feed_from_database.last_polled_time = timezone.now()
+    feed_from_database.save()
 
-    if verbose:
-        print('%d entries to process in %s' % (len(parsed.entries), db_feed.title))
+    return feed_from_database
 
-    parsed_entries = parsed.entries[:settings.MAX_ENTRIES_SAVED]
 
-    for i, entry in enumerate(parsed_entries):
-        missing_attr = False
-
-        for attr in ['title', 'title_detail', 'link', 'description']:
-            if not hasattr(entry, attr):
-                msg = 'Feedreader poll_feeds. Entry "%s" has no %s' % (entry.link, attr)
-                logger.warning(msg)
-                if verbose:
-                    print(msg)
-                missing_attr = True
-
-        if missing_attr:
-            continue
-
-        if entry.title == "":
-            msg = 'Feedreader poll_feeds. Entry "%s" has a blank title' % (entry.link)
+def skip_entry(entry_from_xml, verbose):
+    for attr in ['title', 'title_detail', 'link', 'description']:
+        if not hasattr(entry_from_xml, attr):
+            msg = 'Feedreader poll_feeds. Entry "%s" has no %s' % (entry_from_xml.link, attr)
+            logger.warning(msg)
             if verbose:
                 print(msg)
-            logger.warning(msg)
-            continue
+            return True
 
-        db_entry, created = Entry.objects.get_or_create(feed=db_feed, link=entry.link)
+    if entry_from_xml.title == "":
+        msg = 'Feedreader poll_feeds. Entry "%s" has a blank title' % (entry_from_xml.link)
+        if verbose:
+            print(msg)
+        logger.warning(msg)
+        return True
 
-        if created:
-            if hasattr(entry, 'published_parsed'):
-                published_time = datetime.fromtimestamp(mktime(entry.published_parsed))
 
-                try:
-                    published_time = pytz.timezone(settings.TIME_ZONE)\
-                        .localize(published_time, is_dst=None)
-                except pytz.exceptions.AmbiguousTimeError:
-                    pytz_timezone = pytz.timezone(settings.TIME_ZONE)
-                    published_time = pytz_timezone.localize(published_time, is_dst=False)
+def update_entry_on_database(entry_on_database, entry_from_xml):
+    if hasattr(entry_from_xml, 'published_parsed'):
+        published_time = datetime.fromtimestamp(mktime(entry_from_xml.published_parsed))
 
-                now = timezone.now()
+        try:
+            published_time = pytz.timezone(settings.TIME_ZONE)\
+                .localize(published_time, is_dst=None)
+        except pytz.exceptions.AmbiguousTimeError:
+            pytz_timezone = pytz.timezone(settings.TIME_ZONE)
+            published_time = pytz_timezone.localize(published_time, is_dst=False)
 
-                if published_time > now:
-                    published_time = now
+        now = timezone.now()
 
-                db_entry.published_time = published_time
+        if published_time > now:
+            published_time = now
 
-            if entry.title_detail.type == 'text/plain':
-                db_entry.title = html.escape(entry.title)
-            else:
-                db_entry.title = entry.title
+        entry_on_database.published_time = published_time
 
-            # Lots of entries are missing description_detail attributes.
-            # Escape their content by default
-            if hasattr(entry, 'description_detail')\
-               and entry.description_detail.type != 'text/plain':
-                db_entry.description = entry.description
-            else:
-                db_entry.description = html.escape(entry.description)
+    if entry_from_xml.title_detail.type == 'text/plain':
+        entry_on_database.title = html.escape(entry_from_xml.title)
+    else:
+        entry_on_database.title = entry_from_xml.title
 
-            db_entry.save()
+    # Lots of entries lack description_detail attributes.
+    # Escape their content by default
+    if hasattr(entry_from_xml, 'description_detail')\
+       and entry_from_xml.description_detail.type != 'text/plain':
+        entry_on_database.description = entry_from_xml.description
+    else:
+        entry_on_database.description = html.escape(entry_from_xml.description)
+
+    entry_on_database.save()
+
+
+def poll_feed(feed_from_database, verbose=False):
+    """
+    Read through a feed looking for new entries.
+    """
+    feed_from_xml = feedparser.parse(feed_from_database.xml_url)
+    updated_feed = update_feed_on_database(feed_from_database, feed_from_xml, verbose)
+
+    if updated_feed:
+        if verbose:
+            print('%d entries to process in %s' % (len(feed_from_xml.entries),
+                                                   updated_feed.title))
+
+        entries_from_xml = feed_from_xml.entries[:settings.MAX_ENTRIES_SAVED]
+
+        for i, entry_from_xml in enumerate(entries_from_xml):
+            if skip_entry(entry_from_xml, verbose):
+                continue
+
+            entry_on_database, created = Entry.objects.get_or_create(
+                feed=updated_feed,
+                link=entry_from_xml.link)
+
+            if created:
+                update_entry_on_database(entry_on_database, entry_from_xml)

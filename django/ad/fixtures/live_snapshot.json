@@ -79,19 +79,6 @@
 },
 {
     "model": "pages.page",
-    "pk": 8,
-    "fields": {
-        "title": "Tools",
-        "slug": "tools",
-        "parent": 3,
-        "updated": "2016-11-08T10:48:42.294Z",
-        "published": null,
-        "content_type": "markdown",
-        "content": ""
-    }
-},
-{
-    "model": "pages.page",
     "pk": 9,
     "fields": {
         "title": "Libre Office",
@@ -1228,10 +1215,10 @@
         "title": "London",
         "slug": "london",
         "parent": 19,
-        "updated": "2016-11-26T11:17:25.633Z",
+        "updated": "2016-12-04T11:07:57.676Z",
         "published": null,
         "content_type": "gallery",
-        "content": "{\r\n    \"heading\": \"London\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Tower Bridge 2006\",\r\n            \"imageUrl\": \"/media/img/towerBridge5.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/towerBridge5.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Gherkin\",\r\n            \"imageUrl\": \"/media/img/gherkin.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/gherkin.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"St Pauls\",\r\n            \"imageUrl\": \"/media/img/StPauls.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/StPauls.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Turbine Hall\",\r\n            \"imageUrl\": \"/media/img/TurbineHall.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/TurbineHall.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Prescott St\",\r\n            \"imageUrl\": \"/media/img/PrescottSt.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/PrescottSt.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Tower Bridge Open\",\r\n            \"imageUrl\": \"/media/img/rivertraffic.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rivertraffic.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Goodmans Fields being Demolished\",\r\n            \"imageUrl\": \"/media/img/goodmans_demolition.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/goodmans_demolition.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Palais Royal\",\r\n            \"imageUrl\": \"/media/img/Palace.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Palace.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"London Bridge\",\r\n            \"imageUrl\": \"/media/img/LondonBridge.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/LondonBridge.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Foggy Day\",\r\n            \"imageUrl\": \"/media/img/foggy_tower_bridge.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/foggy_tower_bridge.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Mordor-on-Thames\",\r\n            \"imageUrl\": \"/media/img/MordorOnThames.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/MordorOnThames.jpg\"\r\n        }\r\n    ]\r\n}"
+        "content": "{\r\n    \"heading\": \"London\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Tower Bridge 2006\",\r\n            \"imageUrl\": \"/media/img/towerBridge5.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/towerBridge5.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Gherkin\",\r\n            \"imageUrl\": \"/media/img/gherkin.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/gherkin.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"St Pauls\",\r\n            \"imageUrl\": \"/media/img/StPauls.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/StPauls.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Turbine Hall\",\r\n            \"imageUrl\": \"/media/img/TurbineHall.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/TurbineHall.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Prescott St\",\r\n            \"imageUrl\": \"/media/img/PrescottSt.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/PrescottSt.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Tower Bridge Open\",\r\n            \"imageUrl\": \"/media/img/rivertraffic.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rivertraffic.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Goodmans Fields being Demolished\",\r\n            \"imageUrl\": \"/media/img/goodmans_demolition.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/goodmans_demolition.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Palais Royal\",\r\n            \"imageUrl\": \"/media/img/Palace.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Palace.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"London Bridge\",\r\n            \"imageUrl\": \"/media/img/LondonBridge.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/LondonBridge.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Foggy Day\",\r\n            \"imageUrl\": \"/media/img/foggy_tower_bridge.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/foggy_tower_bridge.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Mordor-on-Thames\",\r\n            \"imageUrl\": \"/media/img/MordorOnThames.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/MordorOnThames.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Rosy-fingered Dawn\",\r\n            \"imageUrl\": \"/media/img/rosyFingeredDawn.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rosyFingeredDawn.jpg\"\r\n        }\r\n    ]\r\n}"
     }
 },
 {
@@ -1538,7 +1525,7 @@
         "link": "http://blog.dilbert.com/",
         "description": "",
         "published_time": "2015-01-12T07:00:01Z",
-        "last_polled_time": "2016-12-04T09:17:20.287Z",
+        "last_polled_time": "2016-12-04T20:17:20.721Z",
         "group": 2
     }
 },
@@ -1551,7 +1538,7 @@
         "link": "http://bingethinkinghistory.blogspot.com/",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-12-04T09:17:04.681Z",
+        "last_polled_time": "2016-12-04T20:17:04.847Z",
         "group": 1
     }
 },
@@ -1577,7 +1564,7 @@
         "link": "http://ancientworldpodcast.blogspot.com/",
         "description": "From the first human civilizations to 500 BC in (around) thirty podcasts",
         "published_time": null,
-        "last_polled_time": "2016-12-04T09:17:22.892Z",
+        "last_polled_time": "2016-12-04T20:17:23.279Z",
         "group": 1
     }
 },
@@ -1745,8 +1732,8 @@
         "xml_url": "http://feedproxy.google.com/linuxtoday/linux",
         "link": "http://www.linuxtoday.com/",
         "description": "",
-        "published_time": "2016-12-04T09:12:15Z",
-        "last_polled_time": "2016-12-04T09:17:12.416Z",
+        "published_time": "2016-12-04T20:14:08Z",
+        "last_polled_time": "2016-12-04T20:17:13.037Z",
         "group": 5
     }
 },
@@ -1759,7 +1746,7 @@
         "link": "https://www.schneier.com/blog/",
         "description": "A blog covering security and security technology.",
         "published_time": null,
-        "last_polled_time": "2016-12-04T09:17:20.056Z",
+        "last_polled_time": "2016-12-04T20:17:20.491Z",
         "group": 5
     }
 },
@@ -1772,7 +1759,7 @@
         "link": "https://inkscapetutorials.org",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-12-04T09:17:09.989Z",
+        "last_polled_time": "2016-12-04T20:17:10.975Z",
         "group": 5
     }
 },
@@ -1837,7 +1824,7 @@
         "link": "https://www.djangoproject.com/weblog/",
         "description": "Latest news about Django, the Python Web framework.",
         "published_time": null,
-        "last_polled_time": "2016-12-04T09:17:26.127Z",
+        "last_polled_time": "2016-12-04T20:17:26.870Z",
         "group": 5
     }
 },
@@ -1889,7 +1876,7 @@
         "link": "http://www.anisopteragames.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-12-04T09:17:17.544Z",
+        "last_polled_time": "2016-12-04T20:17:17.927Z",
         "group": 2
     }
 },
@@ -1915,7 +1902,7 @@
         "link": "http://slatestarcodex.com",
         "description": "Open threads at the Open Thread tab every Sunday and Wednesday",
         "published_time": null,
-        "last_polled_time": "2016-12-04T09:17:21.068Z",
+        "last_polled_time": "2016-12-04T20:17:21.501Z",
         "group": 2
     }
 },
@@ -1928,7 +1915,7 @@
         "link": "http://www.exurbe.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-12-04T09:17:08.408Z",
+        "last_polled_time": "2016-12-04T20:17:09.197Z",
         "group": 2
     }
 },
@@ -1941,7 +1928,7 @@
         "link": "http://b5audioguide.com",
         "description": "This is a book club without books, an episode-by-episode walkthrough of one of the most influential and important modern SF series. Each podcast begins with a spoiler-free discussion of the episode for new viewers, then we give listeners a jumping-off point and switch to a discussion of how the episode fits into the five-year history of the show.",
         "published_time": null,
-        "last_polled_time": "2016-12-04T09:17:24.890Z",
+        "last_polled_time": "2016-12-04T20:17:25.636Z",
         "group": 2
     }
 },
@@ -1954,7 +1941,7 @@
         "link": "https://www.theincomparable.com/theincomparable/",
         "description": "The Incomparable is a weekly dive into geeky media we love, including movies, books, TV, comics, and more, featuring a rotating panel of guests and hosted by Jason Snell.",
         "published_time": null,
-        "last_polled_time": "2016-12-04T09:17:29.163Z",
+        "last_polled_time": "2016-12-04T20:17:29.804Z",
         "group": 2
     }
 },
@@ -1967,7 +1954,7 @@
         "link": "http://arstechnica.com",
         "description": "Serving the Technologist for more than a decade. IT news, reviews, and analysis.",
         "published_time": null,
-        "last_polled_time": "2016-12-04T09:17:21.656Z",
+        "last_polled_time": "2016-12-04T20:17:22.092Z",
         "group": 5
     }
 },
@@ -2006,7 +1993,7 @@
         "link": "http://www.bbc.co.uk/news/",
         "description": "BBC News - UK Politics",
         "published_time": null,
-        "last_polled_time": "2016-12-04T09:17:04.327Z",
+        "last_polled_time": "2016-12-04T20:17:04.485Z",
         "group": 3
     }
 },
@@ -2019,7 +2006,7 @@
         "link": "http://www.theregister.co.uk/",
         "description": "Biting the hand that feeds IT \u2014 sci/tech news and views for the world",
         "published_time": null,
-        "last_polled_time": "2016-12-04T09:17:31.036Z",
+        "last_polled_time": "2016-12-04T20:17:31.664Z",
         "group": 5
     }
 },
@@ -2032,7 +2019,7 @@
         "link": "http://yieldthought.com/",
         "description": "Mark O\u2019Connor is a programmer, irregular writer and part-time technical fellow. He believes in dynamic typing, first-class functions, working in the cloud and the immortal essence of the human soul. He also likes tea.\n\n\n\n  var _gaq = _gaq || [];\n  _gaq.push(['_setAccount', 'UA-29608497-1']);\n  _gaq.push(['_trackPageview']);\n\n  (function() {\n    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;\n    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);\n  })();",
         "published_time": null,
-        "last_polled_time": "2016-12-04T09:17:31.819Z",
+        "last_polled_time": "2016-12-04T20:17:32.417Z",
         "group": 5
     }
 }

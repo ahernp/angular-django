@@ -18,7 +18,13 @@ const compareBreadcrumb = <Breadcrumb> {title: 'Compare', url: 'compare'};
 const deduplicateBreadcrumb = <Breadcrumb> {title: 'Deduplicate', url: 'deduplicate'};
 const matchBreadcrumb = <Breadcrumb> {title: 'Match', url: 'match'};
 
-const tools = [cardgenBreadcrumb, coloursBreadcrumb, compareBreadcrumb, deduplicateBreadcrumb, matchBreadcrumb];
+export const toolBreadcrumbs = [
+    cardgenBreadcrumb,
+    coloursBreadcrumb,
+    compareBreadcrumb,
+    deduplicateBreadcrumb,
+    matchBreadcrumb
+];
 
 @Component({
     selector: 'ad-tools',
@@ -27,7 +33,7 @@ const tools = [cardgenBreadcrumb, coloursBreadcrumb, compareBreadcrumb, deduplic
         <div id="content">
             <h1>Tools</h1>
             <p>
-                <span *ngFor="let tool of tools">
+                <span *ngFor="let tool of toolBreadcrumbs">
                     <a routerLink="{{tool.url}}">{{tool.title}}</a>
                 </span>
             </p>
@@ -38,7 +44,7 @@ const tools = [cardgenBreadcrumb, coloursBreadcrumb, compareBreadcrumb, deduplic
     providers: []
 })
 export class ToolsComponent implements OnInit {
-    tools: Breadcrumb[] = tools;
+    toolBreadcrumbs: Breadcrumb[] = toolBreadcrumbs;
     now: string;
     tool_slug: string;
     breadcrumbs: Breadcrumb[];
@@ -67,10 +73,10 @@ export class ToolsComponent implements OnInit {
             this.populateHeader(toolsTitle);
         }
         else {
-            for (var i = 0; i < this.tools.length; i++) {
-                if (this.tools[i].url == this.router.url) {
-                    this.titleService.setTitle(this.tools[i].title);
-                    this.populateHeader(this.tools[i].title);
+            for (var i = 0; i < this.toolBreadcrumbs.length; i++) {
+                if (this.toolBreadcrumbs[i].url == this.router.url) {
+                    this.titleService.setTitle(this.toolBreadcrumbs[i].title);
+                    this.populateHeader(this.toolBreadcrumbs[i].title);
                     break;
                 }
             }

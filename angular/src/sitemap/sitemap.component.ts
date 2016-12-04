@@ -2,17 +2,19 @@ import {Component, OnInit} from '@angular/core';
 import {Router, ActivatedRoute, Params} from '@angular/router'
 import {Title} from '@angular/platform-browser';
 
-import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
-import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
+import {Breadcrumb} from '../core/breadcrumbs/breadcrumb';
+import {BreadcrumbService} from '../core/breadcrumbs/breadcrumb.service';
 
 import {PageService} from '../pages/page.service';
 
 import {Footer} from "../core/footer/footer";
 
-import {dashboardTitle, dashboardUrl} from "../dashboard/dashboard.component";
-import {rootTitle, rootBreadcrumb, adminBreadcrumb} from "../app.settings";
-import {Table} from "../core/table/table";
-import {toDateTimeString} from "../utilities";
+import {dashboardTitle, dashboardUrl} from '../dashboard/dashboard.component';
+import {adminBreadcrumb, rootBreadcrumb,
+    rootTitle, timersBreadcrumb, toolsBreadcrumb} from '../app.settings';
+import {toolBreadcrumbs} from '../tools/tools.component'
+import {Table} from '../core/table/table';
+import {toDateTimeString} from '../utilities';
 
 export const sitemapTitle: string = 'Site Map';
 const columnHeadings: string[] = ['Title', 'Parent', 'Updated'];
@@ -84,8 +86,16 @@ export class SitemapComponent implements OnInit {
             url: dashboardUrl,
             updated: this.now,
             parentName: rootTitle});
+
         this.sitemap.push(dashboardBreadcrumb);
         this.sitemap.push(rootBreadcrumb);
+        this.sitemap.push(timersBreadcrumb);
+        this.sitemap.push(toolsBreadcrumb);
+
+        for (let toolBreadcrumb of toolBreadcrumbs) {
+            toolBreadcrumb.parentName = 'Tools';
+            this.sitemap.push(toolBreadcrumb);
+        }
     }
 
     populateHeaderAndTitle() {

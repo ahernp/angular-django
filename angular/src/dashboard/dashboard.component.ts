@@ -43,7 +43,7 @@ export const dashboardUrl: string = '/dashboard';
                 </div>
             <div style="clear:both"></div>
         </div>
-        <ad-footer id="footer" *ngIf="footer" [footer]="footer"></ad-footer>
+        <ad-footer id="footer" *ngIf="footer" [footer]="footer" (onRefresh)="onRefresh()"></ad-footer>
         <ad-spinner *ngIf="showSpinner"></ad-spinner>
         `,
     providers: []
@@ -83,6 +83,7 @@ export class DashboardComponent implements OnInit {
         this.footer = new Footer({
             updated: this.now,
             breadcrumbs: [adminBreadcrumb],
+            refreshFlag: true,
         });
     }
 
@@ -94,5 +95,9 @@ export class DashboardComponent implements OnInit {
                 this.dashboard = dashboard;
                 this.showSpinner = false;
             });
+    }
+
+    onRefresh() {
+        this.getDashboard();
     }
 }

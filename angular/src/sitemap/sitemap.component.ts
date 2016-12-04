@@ -125,8 +125,8 @@ export class SitemapComponent implements OnInit {
         });
     }
 
-    getBreadcrumbs() {
-        this.sitemap = this.pageService.getPageBreadcrumbs(this.parent_slug);
+    populateTable(breadcrumbs: Breadcrumb[]): void {
+        this.sitemap = breadcrumbs;
         if (this.parent_slug == undefined)
             this.addClientsideEntries();
         this.sitemap.sort(function (a, b) {
@@ -137,6 +137,11 @@ export class SitemapComponent implements OnInit {
         for (let breadcrumb of this.sitemap)
             row.push([breadcrumb.title, breadcrumb.parentName, breadcrumb.updated, breadcrumb.url]);
         this.table = new Table(columnHeadings, row);
+    }
+
+    getBreadcrumbs() {
+        this.pageService.getPageBreadcrumbs(this.parent_slug)
+            .subscribe(breadcrumbs => this.populateTable(breadcrumbs));
     }
 
     filterRows(): void {

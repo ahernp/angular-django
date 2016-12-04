@@ -3,6 +3,7 @@ import {Http, Response} from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 import {Observable} from 'rxjs/Observable';
+import {ReplaySubject} from "rxjs/ReplaySubject";
 
 import {Page} from './page';
 
@@ -15,18 +16,12 @@ export class PageService {
 
     pageCache: Page[] = [];
     breadcrumbCache: Breadcrumb[] = [];
+    breadcrumbs$: ReplaySubject<any> = new ReplaySubject(1);
     allCached: boolean = false;
 
     constructor(private http:Http) {
+        this.breadcrumbs$.next([]);
         this.cacheAllPages();
-    }
-
-    getPageBreadcrumbs(slug: string) {
-        let parent = this.pageCache.filter(page => page.url == `${pageUrl}/${slug}`)[0];
-        if (slug == undefined)
-            return this.breadcrumbCache;
-        else
-            return this.breadcrumbCache.filter(breadcrumb => breadcrumb.parentName == parent.title);
     }
 
     getPage(slug:string): Observable<Page> {
@@ -42,17 +37,14 @@ export class PageService {
                 });
     }
 
-    populateBreadcrumbCache() {
-        this.breadcrumbCache = [];
-        for (let page of this.pageCache)
-            this.breadcrumbCache.push({
-                title: page.title,
-                url: page.url,
-                updated: page.updated,
-                parentName: page.parentName,
-                linkFlag: true
-            })
-
+    getPageBreadcrumbs(slug: string) {
+        let breadcrumbs = this.breadcrumbCache.slice(0);
+        if (slug != undefined) {
+            var parent = this.pageCache.filter(page => page.url == `${pageUrl}/${slug}`)[0];
+            breadcrumbs = this.breadcrumbCache.filter(breadcrumb => breadcrumb.parentName == parent.title);
+        }
+        this.breadcrumbs$.next(breadcrumbs);
+        return this.breadcrumbs$;
     }
 
     cacheAllPages(): void {
@@ -61,6 +53,20 @@ export class PageService {
                 this.pageCache = response.json() as Page[];
                 this.populateBreadcrumbCache();
             });
+    }
+
+    populateBreadcrumbCache() {
+        let breadcrumbs = [];
+        for (let page of this.pageCache)
+            breadcrumbs.push({
+                title: page.title,
+                url: page.url,
+                updated: page.updated,
+                parentName: page.parentName,
+                linkFlag: true
+            })
+        this.breadcrumbCache = breadcrumbs;
+        this.breadcrumbs$.next(breadcrumbs);
     }
 
     getRecentBlogPages(limit:number) {

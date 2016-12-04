@@ -52,6 +52,11 @@ export class PageService {
         return this.breadcrumbs$;
     }
 
+    refresh(url: string): Observable<Page> {
+        this.pageCache = this.pageCache.filter(page => page.url != url);
+        return this.getPage(url.replace(`${pageUrl}/`, ''));
+    }
+
     cacheAllPages(): void {
         this.http.get(`${apiEndpoint}/pages/all/`)
             .subscribe((response: Response) => {

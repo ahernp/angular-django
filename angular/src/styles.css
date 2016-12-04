@@ -62,7 +62,7 @@ button {
     font-size: 1em;
 }
 
-#source_label {
+.footer_label {
     color: #046;
     cursor: pointer;
 }

@@ -32,7 +32,7 @@ import {markdownBreadcrumb, rootSlug} from "../app.settings";
 
             <ad-page-source *ngIf="showSource" [page]="page"></ad-page-source>
         </div>
-        <ad-footer id="footer" *ngIf="footer" [footer]="footer" (onToggleSource)="onToggleSource($event)"></ad-footer>
+        <ad-footer id="footer" *ngIf="footer" [footer]="footer" (onToggleSource)="onToggleSource($event)" (onRefresh)="onRefresh()"></ad-footer>
         `,
     providers: []
 })
@@ -71,6 +71,7 @@ export class PageComponent implements OnInit {
         this.footer = new Footer({
             updated: page.updated,
             sourceFlag: true,
+            refreshFlag: true,
             breadcrumbs: [
                 markdownBreadcrumb,
                 new Breadcrumb({
@@ -87,4 +88,10 @@ export class PageComponent implements OnInit {
     onToggleSource(showSource: boolean) {
         this.showSource = showSource;
     }
+
+    onRefresh() {
+        this.pageService.refresh(this.page.url)
+            .subscribe(page => this.populatePage(page));
+    }
+
 }

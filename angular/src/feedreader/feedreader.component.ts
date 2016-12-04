@@ -47,7 +47,7 @@ export const feedreaderUrl: string = '/feedreader';
             </div>
             <div style="clear:both"></div>
         </div>
-        <ad-footer id="footer" *ngIf="footer" [footer]="footer"></ad-footer>
+        <ad-footer id="footer" *ngIf="footer" [footer]="footer" (onRefresh)="onRefresh()"></ad-footer>
         <ad-spinner *ngIf="showSpinner"></ad-spinner>
         `,
     providers: []
@@ -103,6 +103,7 @@ export class FeedreaderComponent implements OnInit {
                                 url: `/admin${feedreaderUrl}/`,
                                 linkFlag: true})
             ],
+            refreshFlag: true,
         });
     }
 
@@ -176,5 +177,9 @@ export class FeedreaderComponent implements OnInit {
         else
             this.shownEntries = this.unreadEntries.filter(
                 (value) => value.feedTitle == feedTitle);
+    }
+
+    onRefresh() {
+        this.getFeedsAndEntries();
     }
 }

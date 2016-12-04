@@ -1,5 +1,5 @@
 """
-This command polls all of the Feeds and inserts any new entries found.
+This command polls all of the Feeds and removes old entries.
 """
 from __future__ import absolute_import
 

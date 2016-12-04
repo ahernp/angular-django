@@ -43,7 +43,6 @@ export class BlogComponent implements OnInit {
     breadcrumbs: Breadcrumb[];
     pages: Page[];
     footer: Footer;
-    error: any;
 
     constructor(
         private pageService: PageService,
@@ -73,13 +72,13 @@ export class BlogComponent implements OnInit {
 
     populateRecentBlogPages(pages) {
         let blogPages = pages.filter(page => page.parentName == blogRootTitle);
-        pages.sort((pageA: Page, pageB: Page): number => {
+        blogPages.sort((pageA: Page, pageB: Page): number => {
             if (pageA.published == pageB.published)
                 return 0;
             else
                 return (pageA.published > pageB.published) ? -1 : 1;
         });
-        this.pages = pages.slice(0, numberOfBlogPages);
+        this.pages = blogPages.slice(0, numberOfBlogPages);
     }
 
     getRecentBlogPages() {

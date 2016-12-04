@@ -61,6 +61,5 @@ export class TableContentComponent implements OnInit {
             this.currentColumnHeadings = [];
             this.currentRows = [];
         }
-
     }
 }

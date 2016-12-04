@@ -24,21 +24,21 @@ import {FeedreaderService} from "./feedreader/feedreader.service";
 
 @NgModule({
     imports: [
+        appRouting,
         BrowserModule,
+        CoreModule,
         FormsModule,
         HttpModule,
-        appRouting,
-        CoreModule,
         PagesModule,
         TimersModule,
         ToolsModule,
     ],
     declarations: [
+        BlogComponent,
         AppComponent,
         DashboardComponent,
         FeedreaderComponent,
         SitemapComponent,
-        BlogComponent,
     ],
     providers: [
         DashboardService,

@@ -30,7 +30,6 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
     @Input() content: string;
-    error: any;
 
     ngOnInit(): void {
     }

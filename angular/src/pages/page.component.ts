@@ -42,7 +42,6 @@ export class PageComponent implements OnInit {
     childBreadcrumbs: Breadcrumb[];
     footer: Footer;
     showSource: boolean = false;
-    error: any;
 
     constructor(
         private pageService: PageService,

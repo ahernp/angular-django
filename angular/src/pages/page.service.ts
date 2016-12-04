@@ -8,7 +8,7 @@ import {Page} from './page';
 
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 
-import {apiEndpoint, blogRootTitle, pageUrl} from "../app.settings";
+import {apiEndpoint, pageUrl} from "../app.settings";
 
 @Injectable()
 export class PageService {
@@ -73,10 +73,5 @@ export class PageService {
             })
         this.breadcrumbCache = breadcrumbs;
         this.breadcrumbs$.next(breadcrumbs);
-    }
-
-    private handleError(error:any) {
-        console.error('An error occurred', error);
-        return Promise.reject(error.message || error);
     }
 }

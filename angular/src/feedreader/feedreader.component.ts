@@ -64,7 +64,6 @@ export class FeedreaderComponent implements OnInit {
     breadcrumbs: Breadcrumb[];
     footer: Footer;
     showSpinner: Boolean = false;
-    error: any;
 
     constructor(
         private feedreaderService: FeedreaderService,
@@ -162,7 +161,6 @@ export class FeedreaderComponent implements OnInit {
     }
 
     showGroup(groupName) {
-        let matchingGroupName = (value) => value.groupName == groupName;
         if (this.showReadEntries)
             this.shownEntries = this.entries.filter(
                 (value) => value.groupName == groupName);

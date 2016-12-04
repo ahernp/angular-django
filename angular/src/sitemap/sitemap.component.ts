@@ -15,7 +15,7 @@ import {Table} from "../core/table/table";
 import {toDateTimeString} from "../utilities";
 
 export const sitemapTitle: string = 'Site Map';
-const columnHeadings: string[] = ['Title', 'Parent', 'Updated']
+const columnHeadings: string[] = ['Title', 'Parent', 'Updated'];
 
 @Component({
     selector: 'ad-sitemap',
@@ -56,7 +56,6 @@ export class SitemapComponent implements OnInit {
     filterString: string;
 
     footer: Footer;
-    error: any;
 
     constructor(
         private pageService: PageService,
@@ -104,7 +103,6 @@ export class SitemapComponent implements OnInit {
                     this.titleService.setTitle(page.title);
                 });
         }
-
     }
 
     populateHeader(title:string) {

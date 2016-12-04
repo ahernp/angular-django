@@ -90,11 +90,9 @@ export class DashboardComponent implements OnInit {
         this.showSpinner = true;
         this.dashboardService
             .getDashboard()
-            .then(dashboard => {
+            .subscribe(dashboard => {
                 this.dashboard = dashboard;
                 this.showSpinner = false;
-
-            })
-            .catch(error => this.error = error);
+            });
     }
 }

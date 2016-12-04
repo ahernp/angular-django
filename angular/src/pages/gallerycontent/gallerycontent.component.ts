@@ -53,5 +53,4 @@ export class GalleryContentComponent {
         else
             this.currentIndex++;
     }
-
 }

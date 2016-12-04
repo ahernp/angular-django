@@ -24,5 +24,4 @@ export class FooterComponent {
         this.showSource = !this.showSource;
         this.onToggleSource.emit(this.showSource);
     }
-
 }

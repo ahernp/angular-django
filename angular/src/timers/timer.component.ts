@@ -104,7 +104,7 @@ export class TimerComponent implements OnInit {
                     timeDiff += 's';
             }
             return timeDiff
-        }
+        };
 
         var timeDiff: string = '';
 

@@ -6,9 +6,6 @@ from django.db import models
 class Group(models.Model):
     """
     Group of feeds.
-    :Fields:
-        name : char
-            Name of group.
     """
     name = models.CharField(max_length=250, unique=True)
 
@@ -25,21 +22,6 @@ class Group(models.Model):
 class Feed(models.Model):
     """
     Feed information.
-    :Fields:
-        title : char
-            Title of feed.
-        xml_url : char
-            URL of xml feed.
-        link : char
-            URL of feed site.
-        description : text
-            Description of feed.
-        updated_time : date_time
-            When feed was last updated.
-        last_polled_time : date_time
-            When feed was last polled.
-        group : ForeignKey
-            Group this feed is a part of.
     """
     title = models.CharField(max_length=2000, blank=True, null=True)
     xml_url = models.CharField(max_length=255, unique=True)
@@ -59,7 +41,6 @@ class Feed(models.Model):
         return Entry.objects.filter(feed=self, read_flag=False).count()
 
     def save(self, *args, **kwargs):
-        """Poll new Feed"""
         try:
             Feed.objects.get(xml_url=self.xml_url)
             super(Feed, self).save(*args, **kwargs)
@@ -77,17 +58,6 @@ class EntryManager(models.Manager):
 class Entry(models.Model):
     """
     Feed entry information.
-    :Fields:
-        feed : ForeignKey
-            Feed this entry is a part of.
-        title : char
-            Title of entry.
-        link : char
-            URL of entry.
-        description : text
-            Description of entry.
-        updated_time : date_time
-            When entry was last updated.
     """
     feed = models.ForeignKey(Feed)
     title = models.CharField(max_length=2000, blank=True, null=True)

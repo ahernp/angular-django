@@ -8,10 +8,9 @@ from django.conf import settings
 from django.http import HttpResponse
 from django.utils import timezone
 
-
-# Shell commands: Name and command
 from core.models import Log
 
+# Shell commands: Name and command
 SHELL_COMMANDS = [
     ('hostname', 'hostname'),
     ('gitVersion', 'git log -n 1'),
@@ -41,7 +40,6 @@ def project_state_at_startup():
     """
     data = {}
 
-    # Versions
     cwd = settings.BASE_DIR
     for name, shell_command in SHELL_COMMANDS:
         data[name] = run_shell_command(shell_command, cwd)
@@ -51,7 +49,6 @@ def project_state_at_startup():
     data['npmPackages'] = ' '.join(['%s==%s' % (key, value)
                                     for key, value in package['dependencies'].items()])
 
-    # Settings Flags
     data['settingsFlags'] = []
     for name, expected in SETTINGS_FLAGS:
         actual_setting = getattr(settings, name, None)
@@ -79,4 +76,5 @@ def dashboard(request):
                           for entry in entries]
 
     data['timeChecked'] = timezone.now().strftime('%Y-%m-%d %H:%M:%S')
+
     return HttpResponse(json.dumps(data), content_type='application/json')

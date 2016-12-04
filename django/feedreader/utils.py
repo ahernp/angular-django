@@ -1,6 +1,6 @@
 from __future__ import absolute_import
 
-from datetime import datetime, timedelta
+from datetime import datetime
 from time import mktime
 
 import feedparser

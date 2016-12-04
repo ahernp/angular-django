@@ -1538,7 +1538,7 @@
         "link": "http://blog.dilbert.com/",
         "description": "",
         "published_time": "2015-01-12T07:00:01Z",
-        "last_polled_time": "2016-12-02T19:17:22.034Z",
+        "last_polled_time": "2016-12-04T09:17:20.287Z",
         "group": 2
     }
 },
@@ -1551,7 +1551,7 @@
         "link": "http://bingethinkinghistory.blogspot.com/",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-12-02T19:17:05.278Z",
+        "last_polled_time": "2016-12-04T09:17:04.681Z",
         "group": 1
     }
 },
@@ -1577,7 +1577,7 @@
         "link": "http://ancientworldpodcast.blogspot.com/",
         "description": "From the first human civilizations to 500 BC in (around) thirty podcasts",
         "published_time": null,
-        "last_polled_time": "2016-12-02T19:17:24.653Z",
+        "last_polled_time": "2016-12-04T09:17:22.892Z",
         "group": 1
     }
 },
@@ -1693,8 +1693,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/profile/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qjz5",
         "description": "An insight into the character of an influential figure making news headlines",
-        "published_time": "2016-11-26T00:00:00Z",
-        "last_polled_time": "2016-11-26T20:17:18.550Z",
+        "published_time": "2016-12-03T00:00:00Z",
+        "last_polled_time": "2016-12-03T20:17:25.148Z",
         "group": 4
     }
 },
@@ -1732,8 +1732,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/wpr/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qjfq",
         "description": "Radio 4&#39;s weekly assessment of developments at Westminster",
-        "published_time": "2016-11-26T00:00:00Z",
-        "last_polled_time": "2016-11-26T12:17:33.552Z",
+        "published_time": "2016-12-03T00:00:00Z",
+        "last_polled_time": "2016-12-03T12:17:31.766Z",
         "group": 4
     }
 },
@@ -1745,8 +1745,8 @@
         "xml_url": "http://feedproxy.google.com/linuxtoday/linux",
         "link": "http://www.linuxtoday.com/",
         "description": "",
-        "published_time": "2016-12-02T19:13:43Z",
-        "last_polled_time": "2016-12-02T19:17:13.914Z",
+        "published_time": "2016-12-04T09:12:15Z",
+        "last_polled_time": "2016-12-04T09:17:12.416Z",
         "group": 5
     }
 },
@@ -1759,7 +1759,7 @@
         "link": "https://www.schneier.com/blog/",
         "description": "A blog covering security and security technology.",
         "published_time": null,
-        "last_polled_time": "2016-12-02T19:17:21.783Z",
+        "last_polled_time": "2016-12-04T09:17:20.056Z",
         "group": 5
     }
 },
@@ -1772,7 +1772,7 @@
         "link": "https://inkscapetutorials.org",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-12-02T19:17:11.799Z",
+        "last_polled_time": "2016-12-04T09:17:09.989Z",
         "group": 5
     }
 },
@@ -1797,8 +1797,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/pov/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qng8",
         "description": "A weekly reflection on a topical issue",
-        "published_time": "2016-11-25T15:26:00Z",
-        "last_polled_time": "2016-11-25T16:17:03.656Z",
+        "published_time": "2016-12-02T00:00:00Z",
+        "last_polled_time": "2016-12-02T21:17:04.222Z",
         "group": 4
     }
 },
@@ -1837,7 +1837,7 @@
         "link": "https://www.djangoproject.com/weblog/",
         "description": "Latest news about Django, the Python Web framework.",
         "published_time": null,
-        "last_polled_time": "2016-12-02T19:17:27.879Z",
+        "last_polled_time": "2016-12-04T09:17:26.127Z",
         "group": 5
     }
 },
@@ -1889,7 +1889,7 @@
         "link": "http://www.anisopteragames.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-12-02T19:17:19.382Z",
+        "last_polled_time": "2016-12-04T09:17:17.544Z",
         "group": 2
     }
 },
@@ -1915,7 +1915,7 @@
         "link": "http://slatestarcodex.com",
         "description": "Open threads at the Open Thread tab every Sunday and Wednesday",
         "published_time": null,
-        "last_polled_time": "2016-12-02T19:17:22.821Z",
+        "last_polled_time": "2016-12-04T09:17:21.068Z",
         "group": 2
     }
 },
@@ -1928,7 +1928,7 @@
         "link": "http://www.exurbe.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-12-02T19:17:09.792Z",
+        "last_polled_time": "2016-12-04T09:17:08.408Z",
         "group": 2
     }
 },
@@ -1941,7 +1941,7 @@
         "link": "http://b5audioguide.com",
         "description": "This is a book club without books, an episode-by-episode walkthrough of one of the most influential and important modern SF series. Each podcast begins with a spoiler-free discussion of the episode for new viewers, then we give listeners a jumping-off point and switch to a discussion of how the episode fits into the five-year history of the show.",
         "published_time": null,
-        "last_polled_time": "2016-12-02T19:17:26.660Z",
+        "last_polled_time": "2016-12-04T09:17:24.890Z",
         "group": 2
     }
 },
@@ -1954,7 +1954,7 @@
         "link": "https://www.theincomparable.com/theincomparable/",
         "description": "The Incomparable is a weekly dive into geeky media we love, including movies, books, TV, comics, and more, featuring a rotating panel of guests and hosted by Jason Snell.",
         "published_time": null,
-        "last_polled_time": "2016-12-02T19:17:30.933Z",
+        "last_polled_time": "2016-12-04T09:17:29.163Z",
         "group": 2
     }
 },
@@ -1967,7 +1967,7 @@
         "link": "http://arstechnica.com",
         "description": "Serving the Technologist for more than a decade. IT news, reviews, and analysis.",
         "published_time": null,
-        "last_polled_time": "2016-12-02T19:17:23.528Z",
+        "last_polled_time": "2016-12-04T09:17:21.656Z",
         "group": 5
     }
 },
@@ -1992,8 +1992,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/moreorless/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/p02nrss1",
         "description": "Tim Harford and the More or Less team try to make sense of the statistics which surround us. From BBC Radio 4",
-        "published_time": "2016-11-28T11:22:00Z",
-        "last_polled_time": "2016-11-28T19:32:39.676Z",
+        "published_time": "2016-12-02T20:10:00Z",
+        "last_polled_time": "2016-12-02T21:17:13.676Z",
         "group": 4
     }
 },
@@ -2006,7 +2006,7 @@
         "link": "http://www.bbc.co.uk/news/",
         "description": "BBC News - UK Politics",
         "published_time": null,
-        "last_polled_time": "2016-12-02T19:17:04.898Z",
+        "last_polled_time": "2016-12-04T09:17:04.327Z",
         "group": 3
     }
 },
@@ -2019,7 +2019,7 @@
         "link": "http://www.theregister.co.uk/",
         "description": "Biting the hand that feeds IT \u2014 sci/tech news and views for the world",
         "published_time": null,
-        "last_polled_time": "2016-12-02T19:17:32.700Z",
+        "last_polled_time": "2016-12-04T09:17:31.036Z",
         "group": 5
     }
 },
@@ -2032,7 +2032,7 @@
         "link": "http://yieldthought.com/",
         "description": "Mark O\u2019Connor is a programmer, irregular writer and part-time technical fellow. He believes in dynamic typing, first-class functions, working in the cloud and the immortal essence of the human soul. He also likes tea.\n\n\n\n  var _gaq = _gaq || [];\n  _gaq.push(['_setAccount', 'UA-29608497-1']);\n  _gaq.push(['_trackPageview']);\n\n  (function() {\n    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;\n    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);\n  })();",
         "published_time": null,
-        "last_polled_time": "2016-12-02T19:17:33.559Z",
+        "last_polled_time": "2016-12-04T09:17:31.819Z",
         "group": 5
     }
 }

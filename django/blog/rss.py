@@ -7,9 +7,6 @@ from pages.models import Page
 
 
 class LatestBlogPostsFeed(Feed):
-    """
-    RSS feed containing the latest blog entries.
-    """
     title = '%s blog' % (settings.SITE_NAME)
     link = '/blog/'
     description = 'Recent Blog Entries.'

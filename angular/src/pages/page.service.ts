@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
 
-import 'rxjs/add/operator/toPromise';
 import {Observable} from 'rxjs/Observable';
 import {ReplaySubject} from "rxjs/ReplaySubject";
 
@@ -15,11 +14,13 @@ import {apiEndpoint, blogRootTitle, pageUrl} from "../app.settings";
 export class PageService {
 
     pageCache: Page[] = [];
+    pages$: ReplaySubject<any> = new ReplaySubject(1);
+
     breadcrumbCache: Breadcrumb[] = [];
     breadcrumbs$: ReplaySubject<any> = new ReplaySubject(1);
-    allCached: boolean = false;
 
     constructor(private http:Http) {
+        this.pages$.next([]);
         this.breadcrumbs$.next([]);
         this.cacheAllPages();
     }
@@ -37,7 +38,11 @@ export class PageService {
                 });
     }
 
-    getPageBreadcrumbs(slug: string) {
+    getPages(): ReplaySubject<any> {
+        return this.pages$;
+    }
+
+    getPageBreadcrumbs(slug: string): ReplaySubject<any> {
         let breadcrumbs = this.breadcrumbCache;
         if (slug != undefined) {
             var parent = this.pageCache.filter(page => page.url == `${pageUrl}/${slug}`)[0];
@@ -51,6 +56,7 @@ export class PageService {
         this.http.get(`${apiEndpoint}/pages/all/`)
             .subscribe((response: Response) => {
                 this.pageCache = response.json() as Page[];
+                this.pages$.next(this.pageCache);
                 this.populateBreadcrumbCache();
             });
     }
@@ -67,17 +73,6 @@ export class PageService {
             })
         this.breadcrumbCache = breadcrumbs;
         this.breadcrumbs$.next(breadcrumbs);
-    }
-
-    getRecentBlogPages(limit:number) {
-        let pages = this.pageCache.filter(page => page.parentName == blogRootTitle);
-        pages.sort((pageA: Page, pageB: Page): number => {
-            if (pageA.published == pageB.published)
-                return 0;
-            else
-                return (pageA.published > pageB.published) ? -1 : 1;
-        });
-        return pages.slice(0, limit);
     }
 
     private handleError(error:any) {

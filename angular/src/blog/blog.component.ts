@@ -71,8 +71,19 @@ export class BlogComponent implements OnInit {
         });
     }
 
+    populateRecentBlogPages(pages) {
+        let blogPages = pages.filter(page => page.parentName == blogRootTitle);
+        pages.sort((pageA: Page, pageB: Page): number => {
+            if (pageA.published == pageB.published)
+                return 0;
+            else
+                return (pageA.published > pageB.published) ? -1 : 1;
+        });
+        this.pages = pages.slice(0, numberOfBlogPages);
+    }
 
     getRecentBlogPages() {
-        this.pages = this.pageService.getRecentBlogPages(numberOfBlogPages);
+        this.pageService.getPages()
+            .subscribe(pages => this.populateRecentBlogPages(pages));
     }
 }

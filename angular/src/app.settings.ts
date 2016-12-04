@@ -5,8 +5,19 @@ export const adminBreadcrumb = new Breadcrumb(
 
 export const apiEndpoint: string = '/api';
 
+export const blogArchiveBreadcrumb = new Breadcrumb(
+    {title: 'Archive', url: '/sitemap/blog', parentName: 'ahernp.com'});
+
 export const blogRootTitle: string = 'Blog Root';
 export const blogUrl: string = '/blog';
+export const blogBreadcrumb = new Breadcrumb(
+    {title: 'Blog', url: '/blog', parentName: 'ahernp.com'});
+
+export const dashboardBreadcrumb = new Breadcrumb(
+    {title: 'Dashboard', url: '/dashboard', parentName: 'ahernp.com'});
+
+export const feedreaderBreadcrumb = new Breadcrumb(
+    {title: 'Feedreader', url: '/feedreader', parentName: 'ahernp.com'});
 
 export const markdownBreadcrumb = new Breadcrumb(
     {title: 'Markdown', url: '/page/markdown'});

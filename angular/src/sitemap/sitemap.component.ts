@@ -10,8 +10,9 @@ import {PageService} from '../pages/page.service';
 import {Footer} from "../core/footer/footer";
 
 import {dashboardTitle, dashboardUrl} from '../dashboard/dashboard.component';
-import {adminBreadcrumb, rootBreadcrumb,
-    rootTitle, timersBreadcrumb, toolsBreadcrumb} from '../app.settings';
+import {adminBreadcrumb, blogArchiveBreadcrumb, blogBreadcrumb, dashboardBreadcrumb,
+    feedreaderBreadcrumb, rootBreadcrumb, rootTitle, timersBreadcrumb,
+    toolsBreadcrumb} from '../app.settings';
 import {toolBreadcrumbs} from '../tools/tools.component'
 import {Table} from '../core/table/table';
 import {toDateTimeString} from '../utilities';
@@ -81,13 +82,10 @@ export class SitemapComponent implements OnInit {
     }
 
     addClientsideEntries() {
-        var dashboardBreadcrumb = new Breadcrumb({
-            title: dashboardTitle,
-            url: dashboardUrl,
-            updated: this.now,
-            parentName: rootTitle});
-
+        this.sitemap.push(blogBreadcrumb);
+        this.sitemap.push(blogArchiveBreadcrumb);
         this.sitemap.push(dashboardBreadcrumb);
+        this.sitemap.push(feedreaderBreadcrumb);
         this.sitemap.push(rootBreadcrumb);
         this.sitemap.push(timersBreadcrumb);
         this.sitemap.push(toolsBreadcrumb);

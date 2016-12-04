@@ -126,7 +126,7 @@ export class SitemapComponent implements OnInit {
     }
 
     populateTable(breadcrumbs: Breadcrumb[]): void {
-        this.sitemap = breadcrumbs;
+        this.sitemap = breadcrumbs.slice(0);
         if (this.parent_slug == undefined)
             this.addClientsideEntries();
         this.sitemap.sort(function (a, b) {

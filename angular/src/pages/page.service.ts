@@ -38,7 +38,7 @@ export class PageService {
     }
 
     getPageBreadcrumbs(slug: string) {
-        let breadcrumbs = this.breadcrumbCache.slice(0);
+        let breadcrumbs = this.breadcrumbCache;
         if (slug != undefined) {
             var parent = this.pageCache.filter(page => page.url == `${pageUrl}/${slug}`)[0];
             breadcrumbs = this.breadcrumbCache.filter(breadcrumb => breadcrumb.parentName == parent.title);

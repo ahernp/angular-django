@@ -19,6 +19,7 @@ const timersBreadcrumb = new Breadcrumb({title: 'Timers', url: '/timers'});
 
         <div id="content">
             <h2>Paul Ahern</h2>
+            <p>Age: <ad-timer targetTimeString="1969-12-05T14:00:00Z"></ad-timer>.
             <p>Time at Affectv: <ad-timer targetTimeString="2016-02-17T10:00:00Z"></ad-timer>.
             <p>Time since I left Festicket: <ad-timer targetTimeString="2016-02-12T18:00:00Z"></ad-timer>.
             <p>Live expectancy: <ad-timer targetTimeString="2039-12-05T14:00:00Z"></ad-timer>.

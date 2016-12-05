@@ -62,9 +62,8 @@ export class TimerComponent implements OnInit {
 
         if (fromTimeLaterInMonth)
             monthDiff -= 1;
-
         var fromYearWithinOneMonth = (fromTimeLaterInMonth && toMonth == 1) ? toYear - 1 : toYear;
-        var fromMonthWithinOneMonth = (fromMonth + monthDiff) % 12;
+        var fromMonthWithinOneMonth = (fromMonth + monthDiff - 1) % 12;
         var daysInMonth = (year: number, month: number): number => new Date(year, month, 0).getDate();
         var fromMonthWithinOneMonthEnd: number = daysInMonth(
             fromYearWithinOneMonth,
@@ -74,7 +73,7 @@ export class TimerComponent implements OnInit {
 
         var fromTimeWithinOneMonth: Date = new Date(Date.UTC(
             fromYearWithinOneMonth,
-            fromMonthWithinOneMonth - 1,
+            fromMonthWithinOneMonth,
             fromMonthDay,
             fromHour,
             fromMinute,

@@ -24,8 +24,8 @@ export const feedreaderUrl: string = '/feedreader';
             <h1>Feedreader</h1>
             <div id="feedreader-entry-counts">
                 <p *ngIf="entries" (click)="toggleShowReadEntries()">
-                    <span *ngIf="!showReadEntries" class="ad_control" title="Toggle Shown">Unread</span>
-                    <span *ngIf="showReadEntries" class="ad_control">Recent</span>
+                    <span *ngIf="!showReadEntries" class="ad_control" title="Show all entries">Unread</span>
+                    <span *ngIf="showReadEntries" class="ad_control" title="Show unread entries">Recent</span>
                     Entries:
                 </p>
                 <h2 *ngIf="entries" (click)="showAll()">All ({{totalEntryCount}})</h2>

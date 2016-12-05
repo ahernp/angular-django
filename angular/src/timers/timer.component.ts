@@ -121,6 +121,7 @@ export class TimerComponent implements OnInit {
 
     ngOnInit(): void {
         this.targetTime = new Date(this.targetTimeString);
+        this.calcTimeDifference();
         setInterval(() => this.calcTimeDifference(), 1000);
     }
 }

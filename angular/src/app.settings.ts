@@ -8,7 +8,7 @@ export const apiEndpoint: string = '/api';
 export const blogArchiveBreadcrumb = new Breadcrumb(
     {title: 'Archive', url: '/sitemap/blog', parentName: 'ahernp.com'});
 
-export const blogRootTitle: string = 'Blog Root';
+export const blogRootTitle: string = 'Blog';
 export const blogUrl: string = '/blog';
 export const blogBreadcrumb = new Breadcrumb(
     {title: 'Blog', url: '/blog', parentName: 'ahernp.com'});

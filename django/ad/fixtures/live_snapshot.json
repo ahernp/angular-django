@@ -3,10 +3,10 @@
     "model": "pages.page",
     "pk": 1,
     "fields": {
-        "title": "Blog Root",
+        "title": "Blog",
         "slug": "blog",
         "parent": 3,
-        "updated": "2016-12-01T07:26:10.176Z",
+        "updated": "2016-12-06T21:53:04.413Z",
         "published": null,
         "content_type": "markdown",
         "content": "Root (parent) for all blog pages on the site."
@@ -58,10 +58,10 @@
         "title": "Applications",
         "slug": "applications",
         "parent": 3,
-        "updated": "2014-05-06T09:10:09.358Z",
+        "updated": "2016-12-06T10:02:06.756Z",
         "published": null,
         "content_type": "markdown",
-        "content": "## In Brief\r\n\r\n### TiddlyWiki\r\n\r\nA [TiddlyWiki](http://classic.tiddlywiki.com) consists of a single HTML page which contains all of the text as well as CSS and JavaScript which provide the functionality of a Wiki.\r\n\r\n[Here](/media/download/tw.html) is one to get started. It contains some sample content, additional help text and my favourite plugins.\r\n\r\nSecurity changes in Firefox 15 mean you will need the\r\n[TiddlyFox](https://addons.mozilla.org/en-US/firefox/addon/tiddlyfox/)\r\nadd-on to save new TiddlyWikis.\r\n\r\n[Here](/media/download/twahernp.html) is an old \r\nTiddlyWiki version of this site.\r\n\r\n### GRand Unified Bootloader version 2\r\n\r\nChange menu defaults, such as timeout, by editing `/etc/default/grub`.\r\n\r\nGRUB2 automatically includes installed Linux kernel versions on its menu. \r\nRemove older entries from the menu by uninstalling the older `linux-image` packages.\r\n\r\nUpdate the menu by issuing the command `sudo update-grub`.\r\n\r\n### Pandoc\r\n\r\n[Pandoc](http://johnmacfarlane.net/pandoc/) converts files from one markup format into another. Including, as of version 1.6, from Markdown to [epub](http://johnmacfarlane.net/pandoc/epub.html)."
+        "content": "## In Brief\r\n\r\n### TiddlyWiki\r\n\r\nA [TiddlyWiki](http://classic.tiddlywiki.com) consists of a single HTML page which contains all of the text as well as CSS and JavaScript which provide the functionality of a Wiki.\r\n\r\n[Here](/media/download/tw.html) is one to get started. It contains some sample content, additional help text and my favourite plugins.\r\n\r\nFirefox Security means the\r\n[TiddlyFox](https://addons.mozilla.org/en-US/firefox/addon/tiddlyfox/)\r\nadd-on is needed to save TiddlyWikis.\r\n\r\n[Here](/media/download/twahernp.html) is an old \r\nTiddlyWiki version of this site. Things have changed a lot around here!\r\n\r\n### GRand Unified Bootloader version 2\r\n\r\nChange menu defaults, such as timeout, by editing `/etc/default/grub`.\r\n\r\nGRUB2 automatically includes installed Linux kernel versions on its menu. \r\nRemove older entries from the menu by uninstalling the older `linux-image` packages.\r\n\r\nUpdate the menu by issuing the command `sudo update-grub`.\r\n\r\n### Pandoc\r\n\r\n[Pandoc](http://johnmacfarlane.net/pandoc/) converts files from one markup format into another. Including, as of version 1.6, from Markdown to [epub](http://johnmacfarlane.net/pandoc/epub.html)."
     }
 },
 {
@@ -240,10 +240,10 @@
         "title": "CV",
         "slug": "cv",
         "parent": 146,
-        "updated": "2016-11-11T09:09:10.962Z",
+        "updated": "2016-12-06T09:32:50.773Z",
         "published": null,
         "content_type": "markdown",
-        "content": "Paul Ahern, Python Programmer\r\n\r\n## My Story So Far\r\n\r\nHaving worked at Natwest bank in London for 15 years developing Retail Banking applications, using the COBOL programming language, in 2006 I moved back to Ireland to build a place in the country. While there, I attended an MSc course in Artificial Intelligence and worked on a helpdesk supporting various web meeting products.\r\n\r\nSince September 2010, I have been working in London as a Web Developer mostly using Python and Django. As an Irish citizen I am eligible to work in the UK.\r\n\r\n## Technical Skills\r\n\r\n*Programming:* Python, Typescript/JavaScript, COBOL, Java\r\n<br>\r\n*Scripting:* Bash, Python\r\n<br>\r\n*Databases:* PostgreSQL, MySQL, DB2\r\n<br>\r\n*Web:* Django, HTML, CSS\r\n<br>\r\n*Version Control:* Git, Mercurial\r\n<br>\r\n*Management:* Pivotal Tracker, Jira\r\n<br>\r\n*IDE:* PyCharm\r\n\r\n## Portfolio\r\n\r\nExamples of my work can be found via links on this page: [ahernp.com/page/portfolio](http://ahernp.com/page/portfolio).\r\n\r\n## Education\r\n\r\n**1987-1990** BA Computer Studies, University College Cork: \r\n\r\n* Majored in Information Technology; Minored in Geography. \r\n\r\n**2006-2007** MSc Computer Science, UCC: \r\n\r\n* *Subjects* &ndash; Computer Security, Mobile Applications and various aspects of Artificial Intelligence.\r\n* *Projects* &ndash; Building a University Timetabling tool using Constraint-Based programming techniques and modelling an adaptive Spam filtering system.\r\n\r\n## Experience\r\n\r\n**2016-** at Affectv in London:\r\n\r\n> Working as a Web Developer mostly using Typescript and Javascript in AngularJS 1.5.\r\n\r\n**2014-2016** at Festicket in London:\r\n\r\n> Working as a Web Developer maintaining and enhancing the festicket.com website.\r\n\r\n> * Integrated Booking Protect (Refund Protection) into the Festicket purchase process via an API.\r\n> *Wrote reporting logic to provide B2B communication to suppliers.\r\nWrote and maintained automated Unit Tests using py.test.\r\n> * Used a sprint-based Agile approach to deliver changes to festicket.com.\r\n\r\n> Non-Web work and support:\r\n\r\n> * Provided IT support to staff: Set-up PCs and accounts for new joiners; Offboarded leavers.\r\n> * Created and maintained an internal company wiki to document standards and procedures.\r\n\r\n**2012-2014** at Digitalis Reputations in London:\r\n\r\n> Worked as a Web Developer migrating an existing in-house tool onto the Django web framework. \r\n\r\n> * Reverse-engineered a .NET application to create an integrated system providing the full set of functionality required by our in-house teams.\r\n> * Used a bespoke Agile approach to collect requirements from users and refine prototypes of new systems.\r\n> * Adjusted our parsing of Search Results as the major search engines changed their format.\r\n> * Wrote and maintained automated Unit Tests using Django and Selenium IDE.\r\n> * Wrote Python Fabric scripts to automate testing, delivery and deployment.\r\n> * Languages used: Python, Javascript and Django.\r\nTechnical Environment: CentOS operating system; MySQL database; Subversion and Git version control.\r\n\r\n**2011-2012** at ReportLab in London:\r\n\r\n> Built several web sites which enable organisations to provide links to PDF output which is dynamically generated from their own data sets using the Reportlab core product.\r\n\r\n> My team has also built a Django-based wizard which allows users to buy foreign exchange. This has been rolled out across several financial institutions.\r\n\r\n> * Built web sites in direct collaboration with the Clients.\r\n> * Liaised with Clients to manage the interfaces between their systems and ours.\r\n> * Used Pivotal Tracker tool to manage projects in an Agile fashion.\r\n> * Provided Live Support to the Clients.\r\n> * Wrote and maintained automated Unit Tests using Django and Selenium IDE.\r\n> * Languages used: Python, Javascript and Django.\r\n> * Technical Environment: Ubuntu operating system; MySQL database; Mercurial version control.\r\n\r\n**2010-2011** at Steel Business Briefing in London:\r\n\r\n> Worked as a Web Developer building sites using the Django web framework.\r\n\r\n> * Built a replacement of the company's PHP website using Django.\r\n> * Liaised with the users to identify required enhancements to the existing system.\r\n> * The team worked in a formal Agile/Scrum fashion, e.g. with daily stand-up meetings.\r\n> * Wrote and maintained automated Unit Tests using Django and Selenium IDE.\r\n> * Languages used: Python, Javascript and Django.\r\n> * Technical Environment: Ubuntu operating system; MySQL database; Git version control.\r\n\r\n**2008-2010** at Premiere Global Services in Ireland:\r\n\r\n> Worked as a Web Technical Specialist answering client questions about using web-meeting products (Adobe Connect, Microsoft Live Meeting & Webex).\r\n\r\n**2006-2007** in Ireland:\r\n\r\n> Attended a full-time taught MSc course at UCC titled: Intelligent Systems for Business and Manufacturing.\r\n\r\n> Learned to drive.\r\n\r\n**1990-2006** at Natwest Bank in London:\r\n\r\n> For seven years I worked on the Live Support Team, helping to keep vital bank systems running. This included two years on the Helpdesk dealing with problems reported by non-IT staff across the countrywide branch network.\r\n\r\n> For several of those years I also worked as a duty-programmer. Working at night to see that the batch programs completed successfully and dealing immediately with any problems that arose. \r\n\r\n> The remainder of my time was spent on various application development teams. One of which build a system which automatically sent letters to Customers when changes occurred to the Standing Orders or Direct Debits on their accounts. \r\n\r\n> As a member of Application Development teams I participated in the end-to-end process of designing, documenting, building and implementing systems. From collecting requirements from users through writing design documents and implementation plans as well as coding and testing my role covered the full development process. \r\n\r\n> Apart from the OS390 IBM mainframe environment, much of my time was spent using Microsoft Word and Visio to capture and communicate the requirements and design of new and amended systems."
+        "content": "Paul Ahern, Python Programmer\r\n\r\n## My Story So Far\r\n\r\nHaving worked at Natwest bank in London for 15 years developing Retail Banking applications, using the COBOL programming language, in 2006 I moved back to Ireland to build a place in the country. While there, I attended an MSc course in Artificial Intelligence and worked on a helpdesk supporting various web meeting products.\r\n\r\nSince September 2010, I have been working in London as a Web Developer mostly using Python and Django. As an Irish citizen I am eligible to work in the UK.\r\n\r\n## Technical Skills\r\n\r\n*Programming:* Python, Typescript/JavaScript, COBOL, Java\r\n<br>\r\n*Scripting:* Bash, Python\r\n<br>\r\n*Databases:* PostgreSQL, MySQL, DB2\r\n<br>\r\n*Web:* Django, HTML, CSS\r\n<br>\r\n*Version Control:* Git, Mercurial\r\n<br>\r\n*Management:* Pivotal Tracker, Jira\r\n<br>\r\n*IDE:* PyCharm\r\n\r\n## Portfolio\r\n\r\nExamples of my work can be found via links on this page: [ahernp.com/page/portfolio](http://ahernp.com/page/portfolio).\r\n\r\n## Education\r\n\r\n**1987-1990** BA Computer Studies, University College Cork: \r\n\r\n* Majored in Information Technology; Minored in Geography. \r\n\r\n**2006-2007** MSc Computer Science, UCC: \r\n\r\n* *Subjects* &ndash; Computer Security, Mobile Applications and various aspects of Artificial Intelligence.\r\n* *Projects* &ndash; Building a University Timetabling tool using Constraint-Based programming techniques and modelling an adaptive Spam filtering system.\r\n\r\n## Experience\r\n\r\n**2016-** at Affectv in London:\r\n\r\n> Working as a Web Developer mostly using Typescript and Javascript in AngularJS 1.5.\r\n\r\n**2014-2016** at Festicket in London:\r\n\r\n> Working as a Web Developer maintaining and enhancing the festicket.com website.\r\n\r\n> * Integrated Booking Protect (Refund Protection) into the Festicket purchase process via an API.\r\n> * Wrote reporting logic to provide B2B communication to suppliers.\r\nWrote and maintained automated Unit Tests using py.test.\r\n> * Used a sprint-based Agile approach to deliver changes to festicket.com.\r\n\r\n> Non-Web work and support:\r\n\r\n> * Provided IT support to staff: Set-up PCs and accounts for new joiners; Offboarded leavers.\r\n> * Created and maintained an internal company wiki to document standards and procedures.\r\n\r\n**2012-2014** at Digitalis Reputations in London:\r\n\r\n> Worked as a Web Developer migrating an existing in-house tool onto the Django web framework. \r\n\r\n> * Reverse-engineered a .NET application to create an integrated system providing the full set of functionality required by our in-house teams.\r\n> * Used a bespoke Agile approach to collect requirements from users and refine prototypes of new systems.\r\n> * Adjusted our parsing of Search Results as the major search engines changed their format.\r\n> * Wrote and maintained automated Unit Tests using Django and Selenium IDE.\r\n> * Wrote Python Fabric scripts to automate testing, delivery and deployment.\r\n> * Languages used: Python, Javascript and Django.\r\nTechnical Environment: CentOS operating system; MySQL database; Subversion and Git version control.\r\n\r\n**2011-2012** at ReportLab in London:\r\n\r\n> Built several web sites which enable organisations to provide links to PDF output which is dynamically generated from their own data sets using the Reportlab core product.\r\n\r\n> My team has also built a Django-based wizard which allows users to buy foreign exchange. This has been rolled out across several financial institutions.\r\n\r\n> * Built web sites in direct collaboration with the Clients.\r\n> * Liaised with Clients to manage the interfaces between their systems and ours.\r\n> * Used Pivotal Tracker tool to manage projects in an Agile fashion.\r\n> * Provided Live Support to the Clients.\r\n> * Wrote and maintained automated Unit Tests using Django and Selenium IDE.\r\n> * Languages used: Python, Javascript and Django.\r\n> * Technical Environment: Ubuntu operating system; MySQL database; Mercurial version control.\r\n\r\n**2010-2011** at Steel Business Briefing in London:\r\n\r\n> Worked as a Web Developer building sites using the Django web framework.\r\n\r\n> * Built a replacement of the company's PHP website using Django.\r\n> * Liaised with the users to identify required enhancements to the existing system.\r\n> * The team worked in a formal Agile/Scrum fashion, e.g. with daily stand-up meetings.\r\n> * Wrote and maintained automated Unit Tests using Django and Selenium IDE.\r\n> * Languages used: Python, Javascript and Django.\r\n> * Technical Environment: Ubuntu operating system; MySQL database; Git version control.\r\n\r\n**2008-2010** at Premiere Global Services in Ireland:\r\n\r\n> Worked as a Web Technical Specialist answering client questions about using web-meeting products (Adobe Connect, Microsoft Live Meeting & Webex).\r\n\r\n**2006-2007** in Ireland:\r\n\r\n> Attended a full-time taught MSc course at UCC titled: Intelligent Systems for Business and Manufacturing.\r\n\r\n> Learned to drive.\r\n\r\n**1990-2006** at Natwest Bank in London:\r\n\r\n> For seven years I worked on the Live Support Team, helping to keep vital bank systems running. This included two years on the Helpdesk dealing with problems reported by non-IT staff across the countrywide branch network.\r\n\r\n> For several of those years I also worked as a duty-programmer. Working at night to see that the batch programs completed successfully and dealing immediately with any problems that arose. \r\n\r\n> The remainder of my time was spent on various application development teams. One of which build a system which automatically sent letters to Customers when changes occurred to the Standing Orders or Direct Debits on their accounts. \r\n\r\n> As a member of Application Development teams I participated in the end-to-end process of designing, documenting, building and implementing systems. From collecting requirements from users through writing design documents and implementation plans as well as coding and testing my role covered the full development process. \r\n\r\n> Apart from the OS390 IBM mainframe environment, much of my time was spent using Microsoft Word and Visio to capture and communicate the requirements and design of new and amended systems."
     }
 },
 {
@@ -266,10 +266,10 @@
         "title": "MSc",
         "slug": "msc",
         "parent": 3,
-        "updated": "2013-01-24T09:53:19Z",
+        "updated": "2016-12-06T09:51:13.837Z",
         "published": null,
         "content_type": "markdown",
-        "content": "Links for 2006-2007 Intelligent Systems for Business and Manufacturing MSc at UCC\r\n\r\n## Subjects\r\n\r\nProject: \r\n[UCC Timetables](http://timetable.ucc.ie)\r\n[CS Courses](http://www.ucc.ie/academic/calendar/science/sci006.html)\r\n[Working group on Automated TimeTabling](http://www.asap.cs.nott.ac.uk/watt/resources/resources.html)\r\n[Presentation](/media/doc/msc/CS5001presentation.pdf)\r\n[Report](/media/doc/msc/CS5001report.pdf)\r\n[Files](/media/doc/msc/CS5001.zip)\r\n\r\nAI:\r\n[CS5201](http://www.4c.ucc.ie/%7Eaholland/CS5201.htm)\r\n[lectureNotes](/media/doc/msc/CS5201_lecture_notes.pdf)\r\n[Trading Agent Competition](http://www.sics.se/tac/page.php?id=13)\r\n[Java](http://www.jessrules.com/jess%20Rule%20Engine%20for)\r\n[FuzzyJ ToolKit](http://www.iit.nrc.ca/IR_public/fuzzy/fuzzyJToolkit2.html)\r\n[Machine Learning](http://www.cs.cmu.edu/%7Etom/mlbook.html)\r\n[Bayesian](http://yudkowsky.net/bayes/bayes.html)\r\n[Genetic Algorithms](http://cs.felk.cvut.cz/%7Exobitko/ga/)\r\n[Artificial Neural Networks](http://www-128.ibm.com/developerworks/library/l-neural)\r\n[Java Object Oriented Neural Engine](http://www.jooneworld.com/index.html)\r\n[Bayesian Text Classifier](http://dbacl.sourceforge.net/introduction.html)\r\n\r\nConstraints:\r\n[CS5202](http://csweb.ucc.ie/%7Edongen/)\r\n[lectureNotes](/media/doc/msc/CS5202_lecture_notes.pdf)\r\n[Krzysztof R. Apt's books](http://homepages.cwi.nl/%7Eapt/books.html)\r\n[Tutorial by Roman Bartak](http://ktiml.mff.cuni.cz/%7Ebartak/constraints/index.html)\r\n[Arc Consistency](http://en.wikipedia.org/wiki/Arc_consistency)\r\n\r\nOptimisation: CS5203\r\n[lectureNotes](/media/doc/msc/CS5203_lecture_notes.pdf)\r\n[Operations Research by Jansen](http://www.me.utexas.edu/%7Ejensen/ORMM/)\r\n[Operations Research](http://en.wikipedia.org/wiki/Operations_research)\r\n[LP and Lindo FAQ](http://www.mang.canterbury.ac.nz/people/jfraffen/faqs/LPfaq.htm)\r\n\r\nGame Theory:\r\n[CS5204](http://www.4c.ucc.ie/%7Eaholland/CS5204.htm)\r\n[lectureNotes](/media/doc/msc/CS5204_lecture_notes.pdf)\r\n[Notes for presentation on Deep Maize](/media/doc/msc/CS5204presentation.pdf)\r\n[Auction theory by Klemperer](http://www.paulklemperer.org)\r\n\r\nComplexity:\r\n[CS5205: Complex systems](http://www.cs.ucc.ie/%7Egprovan/CS5205/CS5205-ComplexSystems.htm)\r\n[lectureNotes](/media/doc/msc/CS5205_lecture_notes.pdf)\r\n[Jon Kleinberg's Homepage](http://www.cs.cornell.edu/home/kleinber/)\r\n[GeNIe](http://genie.sis.pitt.edu/)\r\n[Better Bayesian Filtering](http://www.paulgraham.com/better.html)\r\n[CRM114](http://crm114.sourceforge.net)\r\n[Algorithm Design](http://www2.toki.or.id/book/AlgDesignManual/BOOK/BOOK/BOOK.HTM)\r\n[Spam Filtering project report](/media/doc/msc/CS5205report.pdf)\r\n[projectArchive](/media/doc/msc/CS5205.zip)\r\n\r\nSecurity:\r\n[CS567](http://kargellan.ucc.ie/modules/cs567/index.html)\r\n[lectureNotes](/media/doc/msc/CS567_lecture_notes.pdf)\r\n[KeyNote Trust Management system](http://kargellan.ucc.ie/JKeyNote/)\r\n[IPSEC](http://www.unixwiz.net/techtips/iguide-ipsec.html)\r\n[Hash](http://www.unixwiz.net/techtips/iguide-crypto-hashes.html)\r\n[PPTP Version 2](http://www.schneier.com/pptp.html%20Analysis%20of%20Microsoft)\r\n[SecurityFocus](http://www.securityfocus.com)\r\n\r\nMobile:\r\n[CS5014](http://www.cs.ucc.ie/%7Estabirca/cs5014)\r\n[lectureNotes](/media/doc/msc/CS5014_lecture_notes.pdf)\r\n[Code Snippets](http://www.bigbold.com/snippets/tag/j2me)\r\n\r\nJava:\r\n[CS565](http://www.cs.ucc.ie/%7Eadrian/cs565.html)\r\n[Java: How to Program](http://www.deitel.com/books/jhtp6/)\r\n\r\nModelling:\r\n[CS560](http://people.hofstra.edu/faculty/Stefan_Waner/RealWorld/logic/logicex7.html)\r\n\r\n## Other Topics\r\n\r\nUCC:\r\n[UCC Student Web](http://www.ucc.ie/en/sit/)\r\n[Boole Library](http://booleweb.ucc.ie/)\r\n[UCC-CS](http://www.cs.ucc.ie/)\r\n[SquirrelMail](http://www.cs.ucc.ie/squirrelmail)\r\n[Exam Timetable](http://www.ucc.ie/admin/registrar/examsrec/examtt.shtml)\r\n[OpenLectures](http://www.universityscience.ie/pages/events_04.php)\r\n\r\nReference:\r\n[UML](http://www.csci.csusb.edu/dick/samples/uml.html)\r\n[LaTeX](http://www.latex-project.org/)\r\n[GnuPlot](http://www.gnuplot.info/)\r\n[Version Control](http://www-128.ibm.com/developerworks/linux/library/l-vercon/index.html)\r\n[Linuxshortcuts](http://www.unixguide.net/linux/linuxshortcuts.shtml)\r\n[LinuxGuide](http://linuxguide.sourceforge.net/)\r\n[Moodle](http://moodle.org)\r\n\r\nSocial:\r\n[UCCO](http://www.ucc.ie/students/socs/orient/layout.php?NAME=home)\r\n[BOC](http://homepage.eircom.net/%7Ebishopstownohc/boc.html)\r\n[Chinese](http://www.wku.edu/%7Eyuanh/AudioChinese)"
+        "content": "Links related to 2006-2007 Intelligent Systems for Business and Manufacturing MSc courses at UCC.\r\n\r\n## Subjects\r\n\r\nProject: \r\nUniversity Timetabling\r\n[Presentation](/media/doc/msc/CS5001presentation.pdf)\r\n[Report](/media/doc/msc/CS5001report.pdf)\r\n[Files](/media/doc/msc/CS5001.zip)\r\n\r\nAI:\r\nCS5201\r\n[lectureNotes](/media/doc/msc/CS5201_lecture_notes.pdf)\r\n[Machine Learning](http://www.cs.cmu.edu/%7Etom/mlbook.html)\r\n[Java Object Oriented Neural Engine](http://www.jooneworld.com/index.html)\r\n[Bayesian Text Classifier](http://dbacl.sourceforge.net/introduction.html)\r\n\r\nConstraints:\r\n[CS5202](http://csweb.ucc.ie/%7Edongen/)\r\n[lectureNotes](/media/doc/msc/CS5202_lecture_notes.pdf)\r\n[Krzysztof R. Apt's books](http://homepages.cwi.nl/%7Eapt/books.html)\r\n[Tutorial by Roman Bartak](http://ktiml.mff.cuni.cz/%7Ebartak/constraints/index.html)\r\n[Arc Consistency](http://en.wikipedia.org/wiki/Arc_consistency)\r\n\r\nOptimisation: CS5203\r\n[lectureNotes](/media/doc/msc/CS5203_lecture_notes.pdf)\r\n[Operations Research by Jansen](http://www.me.utexas.edu/%7Ejensen/ORMM/)\r\n[Operations Research](http://en.wikipedia.org/wiki/Operations_research)\r\n\r\nGame Theory:\r\nCS5204\r\n[lectureNotes](/media/doc/msc/CS5204_lecture_notes.pdf)\r\n[Notes for presentation on Deep Maize](/media/doc/msc/CS5204presentation.pdf)\r\n[Auction theory by Klemperer](http://www.paulklemperer.org)\r\n\r\nComplexity:\r\nCS5205\r\n[lectureNotes](/media/doc/msc/CS5205_lecture_notes.pdf)\r\n[Jon Kleinberg's Homepage](http://www.cs.cornell.edu/home/kleinber/)\r\n[GeNIe](http://genie.sis.pitt.edu/)\r\n[Better Bayesian Filtering](http://www.paulgraham.com/better.html)\r\n[CRM114](http://crm114.sourceforge.net)\r\n[Spam Filtering project report](/media/doc/msc/CS5205report.pdf)\r\n[projectArchive](/media/doc/msc/CS5205.zip)\r\n\r\nSecurity:\r\nCS567\r\n[lectureNotes](/media/doc/msc/CS567_lecture_notes.pdf)\r\n[IPSEC](http://www.unixwiz.net/techtips/iguide-ipsec.html)\r\n[Hash](http://www.unixwiz.net/techtips/iguide-crypto-hashes.html)\r\n[SecurityFocus](http://www.securityfocus.com)\r\n\r\nMobile:\r\nCS5014\r\n[lectureNotes](/media/doc/msc/CS5014_lecture_notes.pdf)\r\n\r\nJava:\r\n[CS565](http://www.cs.ucc.ie/%7Eadrian/cs565.html)\r\n[Java: How to Program](http://www.deitel.com/books/jhtp6/)\r\n\r\nModelling:\r\nCS560\r\n\r\n## Other Topics\r\n\r\nUCC:\r\n[UCC Student Web](http://www.ucc.ie/en/sit/)\r\n[Boole Library](http://booleweb.ucc.ie/)\r\n[UCC-CS](http://www.cs.ucc.ie/)\r\n\r\nReference:\r\n[UML](http://www.csci.csusb.edu/dick/samples/uml.html)\r\n[LaTeX](http://www.latex-project.org/)\r\n[GnuPlot](http://www.gnuplot.info/)\r\n[Linuxshortcuts](http://www.unixguide.net/linux/linuxshortcuts.shtml)\r\n[LinuxGuide](http://linuxguide.sourceforge.net/)\r\n[Moodle](http://moodle.org)\r\n\r\nSocial:\r\n[BOC](http://homepage.eircom.net/%7Ebishopstownohc/boc.html)"
     }
 },
 {
@@ -292,10 +292,10 @@
         "title": "emacs",
         "slug": "emacs",
         "parent": 5,
-        "updated": "2012-05-20T12:45:20Z",
+        "updated": "2016-12-06T21:40:59.327Z",
         "published": null,
         "content_type": "markdown",
-        "content": "Ref:\r\n[GNU Emacs Manual](http://www.gnu.org/software/emacs/manual/html_node/emacs/index.html), [EmacsWiki](http://www.emacswiki.org/), [Shortcuts](http://www.math.uh.edu/~bgb/emacs_keys.html), [Emacs](http://xahlee.org/emacs/emacs.html), [Elisp Tutorial](http://xahlee.org/emacs/elisp.html).\r\nStart in terminal: `emacs -nw`.\r\n\r\n## Keyboard Shortcuts\r\n\r\n* `C-/`: Undo.\r\n* `C-z`: Suspend emacs and return to the shell. Resume with the command `%emacs`.\r\n* `C-c >`: Indent the block 4 spaces (Python mode). `C-c <` will remove 4 spaces of indentation.\r\n* `F10`: Access Menu bar.\r\n* `C-x C-e`: Evaluate previous [elisp](http://www.gnu.org/software/emacs/manual/html_node/elisp/index.html) expression.\r\n* In the minibuffer:\r\n    * `C-q C-j`: Carriage return.\r\n    * `C-q TAB`: TAB character.\r\n* `C-x 1`: Hide other windows.\r\n* `C-x 2`: Split window into two windows positioned one above the other.\r\n* `C-x 3`: Split window into two windows positioned side by side.\r\n* `C-x o`: Select other window.\r\n* `M-x ielm`: Start Emacs-Lisp interactive interpreter.\r\n\r\n### Movement\r\n\r\n* `C-l`: Toggle scroll current line to middle, top & bottom of window. (`C-L`)\r\n* `M-g g`: Jump to specified line.\r\n\r\n### Search\r\n\r\n* `C-s`: Incremental search forward.\r\n    * `C-w`: Adds the word following point to the search buffer.\r\n    * `C-y`: Adds the rest of the current line to the search buffer.\r\n* `C-r`: Incremental search backward.\r\n* `M-x occur`: Show all matches for regex.\r\n* `M-%`: Query replace.\r\n* `C-M-s`: Regular expression incremental search.\r\n* `M-x replace-regexp`: Regular expression replacement ([regex](http://www.gnu.org/software/emacs/manual/html_node/elisp/Regular-Expressions.html)).\r\n* Replace in several files at once:\r\n    * `M-x find-grep-dired`: This gives us a buffer of files containing the string (includes subdirectories).\r\n    * `% m .json$ RET`: Mark the **.json** files.\r\n    * `Q`: Query replace in all marked files. At this point, Emacs will cycle through every match in every file and ask you to confirm the replacement. If you press `!`, it will replace the rest of the matches in the current file, and start prompting you for the next; `Y` will replace every match in every file with no further prompting.\r\n    * `C-x s`: Save every modified file.\r\n\r\n### File\r\n\r\n* `C-x C-w`: Save the current buffer as a specified file name (write-file). \r\n* `C-x d`: File Manager. Followed by `C-x C-q` for editable dired mode.\r\n* `C-x C-v RET`: Reload buffer from disk.\r\n* `C-x C-b`: List open buffers.\r\n\r\n### Marking\r\n\r\n* `C-SPC`: Set mark to the current location.\r\n* `C-x C-x`: Swap point and mark.\r\n* `C-u C-SPC`: Cycle through mark ring.\r\n* `C-x h`: Make region contain the entire buffer (\"Select all\").\r\n* `M-h`: Make region contain the current paragraph.\r\n* `C-x n n`: Narrow buffer to the current region.\r\n* `C-x n w`: Restore (\"widen\") buffer.\r\n\r\n### Yank and Kill\r\n\r\n* `C-k`: Kill line.\r\n* `C-x k`: Kill buffer.\r\n* `C-w`: Kill region (\"cut\").\r\n* `M-w`: Save region to kill ring without deleting (\"copy\").\r\n* `M-d`: Kill next word.\r\n* `M-k`: Kill to end of sentence.\r\n* `C-y`: Yanks last killed text.\r\n* `M-y`: Replace yanked text with previously killed text.\r\n\r\n## Commands\r\n\r\n* `M-x ediff`: Compare two files and highlight their differences.\r\n* `M-x eval-buffer`: Run emacs lisp file in current buffer.\r\n* `M-x shell`: Start shell.\r\n* `M-x grep`: Run grep.\r\n* `M-x man`: Show man pages.\r\n\r\n## Remote/Sudo Editing\r\n\r\n* Enter filename in the form `/[server]:[filename]` or `/[user@server]:[filename]`. Will be prompted for remote password.\r\n* Need to have added `(setq tramp-default-method \"ssh\")` to the `.emacs.el` file.\r\n* `C-x +`: Sudo find file.\r\n* `C-x !`: Sudo reopen file.\r\n\r\n## Modes\r\n\r\n### Org-mode\r\n\r\n* [orgmode.org](http://orgmode.org): [Compact Guide](http://orgmode.org/guide/index.html), [Tutorials](http://orgmode.org/worg/org-tutorials/index.html).\r\n* `C-u C-c .`: Insert Date * Time.\r\n* `C-c .`: Insert Date.\r\n\r\n### ibuffer\r\n\r\n* `m`: Mark.\r\n* `u`: Unmark.\r\n* `*u`: Mark unsaved.\r\n* `S`: Save marked buffer.\r\n* `D`: Close marked buffers.\r\n* `**`: Unmark all.\r\n* `%m`: Mark by mode name (e.g. all html files, all java files).\r\n* `%f`: Mark by file path (e.g. all files in a dir).\r\n\r\n### dired\r\n\r\n* `Enter`: Open the file.\r\n* `a`: Open the file and close the dired buffer.\r\n* `o`: Open the file in a split window, so the dir is still visible.\r\n* `q`: Close the dir.\r\n* `C`: Copy file.\r\n* `R`: Rename file.\r\n* `D`: Delete file.\r\n* `m`: mark a file.\r\n* `u`: unmark.\r\n* `U`: unmark all marked.\r\n* `t`: switch marked/unmarked.\r\n* `%m`: mark by regular expression.\r\n* `g`: refresh dir listing.\r\n* `^`: Go to parent dir..\r\n* `+`: create a dir.\r\n* `Z`: compress/decompress the file by gzip.\r\n\r\n### bookmark-list\r\n\r\n* `C-x r m <RET>`: Set the bookmark for the visited file, at point. \r\n* `C-x r m bookmark <RET>`: Set the bookmark named bookmark at point (bookmark-set). \r\n* `C-x r b bookmark <RET>`: Jump to the bookmark named bookmark (bookmark-jump). \r\n* `C-x r l`: List all bookmarks (list-bookmarks). \r\n* `M-x bookmark-delete`: Delete a named bookmark.\r\n\r\n## Macros\r\n\r\n* `F3`: Start recording macro.\r\n* `F4`: Stop recording macro.\r\n* `F4`: Play back macro once.\r\n* `M-5 F4`: Play back macro 5 times.\r\n* `M-0 F4`: Play back macro over and over until it fails.\r\n\r\n## .emacs.el\r\n\r\n    ; Start in *scratch* buffer\r\n    (setq inhibit-startup-screen t)\r\n\r\n    ; Remember recently accessed files\r\n    (require 'recentf)\r\n    (recentf-mode 1)\r\n\r\n    ; Add directory to load path\r\n    (add-to-list 'load-path (expand-file-name \"~/elisp\"))\r\n\r\n    ; Add bespoke functions\r\n    (load \"ahernp\")\r\n\r\n    ; Add icicles directory to list\r\n    (add-to-list 'load-path \"~/elisp/icicles/\")\r\n    (require 'icicles)\r\n    (icy-mode 1)\r\n\r\n    ; Activate crosshairs cursor\r\n    (require 'crosshairs)\r\n    (global-set-key (kbd \"M-+\") 'crosshairs-mode)\r\n\r\n    ; turn on highlight matching parens when cursor is on one\r\n    (show-paren-mode 1)\r\n\r\n    ; Use ibuffer instead of the default list-buffers\r\n    (defalias 'list-buffers 'ibuffer)\r\n\r\n    ; Find and Exclude\r\n    (defalias 'lml 'list-matching-lines)\r\n    (defalias 'dml 'delete-matching-lines)\r\n    (defalias 'dnm 'delete-non-matching-lines)\r\n\r\n    ; Markdown\r\n    (autoload 'markdown-mode \"markdown-mode.el\"\r\n      \"Major mode for editing Markdown files\" t)\r\n    (setq auto-mode-alist\r\n          (cons '(\"\\\\.text\" . markdown-mode) auto-mode-alist))\r\n\r\n    ; Org-mode: Enable flyspell mode\r\n    (add-hook 'org-mode-hook\r\n              (lambda ()\r\n                ;; flyspell mode for spell checking everywhere\r\n                (flyspell-mode 1)))\r\n\r\n    (global-set-key (kbd \"C-c j\") 'flyspell-check-previous-highlighted-word)\r\n\r\n    ; Tramp mode to access remote files\r\n    (setq tramp-default-method \"ssh\")\r\n\r\n    ; Allow save as root\r\n    (eval-after-load \"tramp\"\r\n      '(progn\r\n         (defvar sudo-tramp-prefix \r\n           \"/sudo::\" \r\n           (concat \"Prefix to be used by sudo commands when building tramp path \"))\r\n\r\n         (defun sudo-file-name (filename) (concat sudo-tramp-prefix filename))\r\n\r\n         (defun sudo-find-file (filename &optional wildcards)\r\n           \"Calls find-file with filename with sudo-tramp-prefix prepended\"\r\n           (interactive \"fFind file with sudo \")      \r\n           (let ((sudo-name (sudo-file-name filename)))\r\n             (apply 'find-file \r\n                    (cons sudo-name (if (boundp 'wildcards) '(wildcards))))))\r\n\r\n         (defun sudo-reopen-file ()\r\n           \"Reopen file as root by prefixing its name with sudo-tramp-prefix and by clearing buffer-read-only\"\r\n           (interactive)\r\n           (let* \r\n               ((file-name (expand-file-name buffer-file-name))\r\n                (sudo-name (sudo-file-name file-name)))\r\n             (progn           \r\n               (setq buffer-file-name sudo-name)\r\n               (rename-buffer sudo-name)\r\n               (setq buffer-read-only nil)\r\n               (message (concat \"Set file name to \" sudo-name)))))\r\n\r\n         (global-set-key \"\\C-x+\" 'sudo-find-file)\r\n         (global-set-key \"\\C-x!\" 'sudo-reopen-file)))\r\n\r\n## ahernp.el\r\n\r\n\t; sql select results reformatter\r\n\t(defun mysql-sel-reformat (firstcol delim)\r\n\t  \" Reformat results of a series of MySQL select statements.\r\n\tRemove formatting and column names.\"\r\n  \t  (defun replace-all (search-regex replace-regex)\r\n  \t    \" Go to the start of the buffer; \r\n\t  Replace all occurances of search-regex with replace-regex.\"\r\n\t    (goto-char 1)\r\n\t    (while (re-search-forward search-regex nil t)\r\n\t\t     (replace-match replace-regex))\r\n\t  )\r\n\t  (interactive \"sEnter first column name: \\nsEnter delimiter: \")\r\n\t  ; Blank out horizontal lines\r\n\t  (replace-all \"^\\+.*\" \"\")\r\n\t  ; Blank out column names lines\r\n\t  (replace-all (concat \"^| \" firstcol \" |.*\") \"\")\r\n\t  ; Blank out numbers of rows lines\r\n\t  (replace-all \"^[0-9].*\" \"\")\r\n\t  ; Remove \"| \" from beginning of lines\r\n\t  (replace-all \"^| \" \"\")\r\n\t  ; Remove \" |\" from end of lines\r\n\t  (replace-all \" |$\" \"\")\r\n\t  ; Replace remaining \"|\" with the chosen delimiter\r\n\t  (replace-all \" *| *\" delim)\r\n\t  ; Remove blank lines\r\n\t  (replace-all \"^\\n\" \"\")\r\n\t)\r\n\r\n## Download\r\n\r\nDownload from [ftp.gnu.org/pub/gnu/emacs/](http://ftp.gnu.org/pub/gnu/emacs).\r\n\r\nInstall under Ubuntu using the following commands in the directory where you unpacked emacs:\r\n\r\n 1. `sudo apt-get install libncurses5-dev`\r\n 1. `./configure --with-xpm=no --with-jpeg=no --with-png=no --with-gif=no --without-x`\r\n 1. `make`\r\n 1. `sudo make install`\r\n\r\nThe `libncurses5-dev` package is needed to avoid the `emacs: Cannot open termcap database file` error when running emacs in a terminal (`emacs -nw`)."
+        "content": "Ref:\r\n[GNU Emacs Manual](http://www.gnu.org/software/emacs/manual/html_node/emacs/index.html), [EmacsWiki](http://www.emacswiki.org/), [Shortcuts](http://www.math.uh.edu/~bgb/emacs_keys.html), [Emacs](http://xahlee.org/emacs/emacs.html), [Elisp Tutorial](http://xahlee.org/emacs/elisp.html).\r\n\r\nStart in terminal: `emacs -nw`.\r\n\r\n## Keyboard Shortcuts\r\n\r\n* `C-/`: Undo.\r\n* `C-z`: Suspend emacs and return to the shell. Resume with the command `%emacs`.\r\n* `C-c >`: Indent the block 4 spaces (Python mode). `C-c <` will remove 4 spaces of indentation.\r\n* `F10`: Access Menu bar.\r\n* `C-x C-e`: Evaluate previous [elisp](http://www.gnu.org/software/emacs/manual/html_node/elisp/index.html) expression.\r\n* In the minibuffer:\r\n    * `C-q C-j`: Carriage return.\r\n    * `C-q TAB`: TAB character.\r\n* `C-x 1`: Hide other windows.\r\n* `C-x 2`: Split window into two windows positioned one above the other.\r\n* `C-x 3`: Split window into two windows positioned side by side.\r\n* `C-x o`: Select other window.\r\n* `M-x ielm`: Start Emacs-Lisp interactive interpreter.\r\n\r\n### Movement\r\n\r\n* `C-l`: Toggle scroll current line to middle, top & bottom of window. (`C-L`)\r\n* `M-g g`: Jump to specified line.\r\n\r\n### Search\r\n\r\n* `C-s`: Incremental search forward.\r\n    * `C-w`: Adds the word following point to the search buffer.\r\n    * `C-y`: Adds the rest of the current line to the search buffer.\r\n* `C-r`: Incremental search backward.\r\n* `M-x occur`: Show all matches for regex.\r\n* `M-%`: Query replace.\r\n* `C-M-s`: Regular expression incremental search.\r\n* `M-x replace-regexp`: Regular expression replacement ([regex](http://www.gnu.org/software/emacs/manual/html_node/elisp/Regular-Expressions.html)).\r\n* Replace in several files at once:\r\n    * `M-x find-grep-dired`: This gives us a buffer of files containing the string (includes subdirectories).\r\n    * `% m .json$ RET`: Mark the **.json** files.\r\n    * `Q`: Query replace in all marked files. At this point, Emacs will cycle through every match in every file and ask you to confirm the replacement. If you press `!`, it will replace the rest of the matches in the current file, and start prompting you for the next; `Y` will replace every match in every file with no further prompting.\r\n    * `C-x s`: Save every modified file.\r\n\r\n### File\r\n\r\n* `C-x C-w`: Save the current buffer as a specified file name (write-file). \r\n* `C-x d`: File Manager. Followed by `C-x C-q` for editable dired mode.\r\n* `C-x C-v RET`: Reload buffer from disk.\r\n* `C-x C-b`: List open buffers.\r\n\r\n### Marking\r\n\r\n* `C-SPC`: Set mark to the current location.\r\n* `C-x C-x`: Swap point and mark.\r\n* `C-u C-SPC`: Cycle through mark ring.\r\n* `C-x h`: Make region contain the entire buffer (\"Select all\").\r\n* `M-h`: Make region contain the current paragraph.\r\n* `C-x n n`: Narrow buffer to the current region.\r\n* `C-x n w`: Restore (\"widen\") buffer.\r\n\r\n### Yank and Kill\r\n\r\n* `C-k`: Kill line.\r\n* `C-x k`: Kill buffer.\r\n* `C-w`: Kill region (\"cut\").\r\n* `M-w`: Save region to kill ring without deleting (\"copy\").\r\n* `M-d`: Kill next word.\r\n* `M-k`: Kill to end of sentence.\r\n* `C-y`: Yanks last killed text.\r\n* `M-y`: Replace yanked text with previously killed text.\r\n\r\n## Commands\r\n\r\n* `M-x ediff`: Compare two files and highlight their differences.\r\n* `M-x eval-buffer`: Run emacs lisp file in current buffer.\r\n* `M-x shell`: Start shell.\r\n* `M-x grep`: Run grep.\r\n* `M-x man`: Show man pages.\r\n\r\n## Remote/Sudo Editing\r\n\r\n* Enter filename in the form `/[server]:[filename]` or `/[user@server]:[filename]`. Will be prompted for remote password.\r\n* Need to have added `(setq tramp-default-method \"ssh\")` to the `.emacs.el` file.\r\n* `C-x +`: Sudo find file.\r\n* `C-x !`: Sudo reopen file.\r\n\r\n## Modes\r\n\r\n### Org-mode\r\n\r\n* [orgmode.org](http://orgmode.org): [Compact Guide](http://orgmode.org/guide/index.html), [Tutorials](http://orgmode.org/worg/org-tutorials/index.html).\r\n* `C-u C-c .`: Insert Date * Time.\r\n* `C-c .`: Insert Date.\r\n\r\n### ibuffer\r\n\r\n* `m`: Mark.\r\n* `u`: Unmark.\r\n* `*u`: Mark unsaved.\r\n* `S`: Save marked buffer.\r\n* `D`: Close marked buffers.\r\n* `**`: Unmark all.\r\n* `%m`: Mark by mode name (e.g. all html files, all java files).\r\n* `%f`: Mark by file path (e.g. all files in a dir).\r\n\r\n### dired\r\n\r\n* `Enter`: Open the file.\r\n* `a`: Open the file and close the dired buffer.\r\n* `o`: Open the file in a split window, so the dir is still visible.\r\n* `q`: Close the dir.\r\n* `C`: Copy file.\r\n* `R`: Rename file.\r\n* `D`: Delete file.\r\n* `m`: mark a file.\r\n* `u`: unmark.\r\n* `U`: unmark all marked.\r\n* `t`: switch marked/unmarked.\r\n* `%m`: mark by regular expression.\r\n* `g`: refresh dir listing.\r\n* `^`: Go to parent dir..\r\n* `+`: create a dir.\r\n* `Z`: compress/decompress the file by gzip.\r\n\r\n### bookmark-list\r\n\r\n* `C-x r m <RET>`: Set the bookmark for the visited file, at point. \r\n* `C-x r m bookmark <RET>`: Set the bookmark named bookmark at point (bookmark-set). \r\n* `C-x r b bookmark <RET>`: Jump to the bookmark named bookmark (bookmark-jump). \r\n* `C-x r l`: List all bookmarks (list-bookmarks). \r\n* `M-x bookmark-delete`: Delete a named bookmark.\r\n\r\n## Macros\r\n\r\n* `F3`: Start recording macro.\r\n* `F4`: Stop recording macro.\r\n* `F4`: Play back macro once.\r\n* `M-5 F4`: Play back macro 5 times.\r\n* `M-0 F4`: Play back macro over and over until it fails.\r\n\r\n## .emacs.el\r\n\r\n    ; Start in *scratch* buffer\r\n    (setq inhibit-startup-screen t)\r\n\r\n    ; Remember recently accessed files\r\n    (require 'recentf)\r\n    (recentf-mode 1)\r\n\r\n    ; Add directory to load path\r\n    (add-to-list 'load-path (expand-file-name \"~/elisp\"))\r\n\r\n    ; Add bespoke functions\r\n    (load \"ahernp\")\r\n\r\n    ; Add icicles directory to list\r\n    (add-to-list 'load-path \"~/elisp/icicles/\")\r\n    (require 'icicles)\r\n    (icy-mode 1)\r\n\r\n    ; Activate crosshairs cursor\r\n    (require 'crosshairs)\r\n    (global-set-key (kbd \"M-+\") 'crosshairs-mode)\r\n\r\n    ; turn on highlight matching parens when cursor is on one\r\n    (show-paren-mode 1)\r\n\r\n    ; Use ibuffer instead of the default list-buffers\r\n    (defalias 'list-buffers 'ibuffer)\r\n\r\n    ; Find and Exclude\r\n    (defalias 'lml 'list-matching-lines)\r\n    (defalias 'dml 'delete-matching-lines)\r\n    (defalias 'dnm 'delete-non-matching-lines)\r\n\r\n    ; Markdown\r\n    (autoload 'markdown-mode \"markdown-mode.el\"\r\n      \"Major mode for editing Markdown files\" t)\r\n    (setq auto-mode-alist\r\n          (cons '(\"\\\\.text\" . markdown-mode) auto-mode-alist))\r\n\r\n    ; Org-mode: Enable flyspell mode\r\n    (add-hook 'org-mode-hook\r\n              (lambda ()\r\n                ;; flyspell mode for spell checking everywhere\r\n                (flyspell-mode 1)))\r\n\r\n    (global-set-key (kbd \"C-c j\") 'flyspell-check-previous-highlighted-word)\r\n\r\n    ; Tramp mode to access remote files\r\n    (setq tramp-default-method \"ssh\")\r\n\r\n    ; Allow save as root\r\n    (eval-after-load \"tramp\"\r\n      '(progn\r\n         (defvar sudo-tramp-prefix \r\n           \"/sudo::\" \r\n           (concat \"Prefix to be used by sudo commands when building tramp path \"))\r\n\r\n         (defun sudo-file-name (filename) (concat sudo-tramp-prefix filename))\r\n\r\n         (defun sudo-find-file (filename &optional wildcards)\r\n           \"Calls find-file with filename with sudo-tramp-prefix prepended\"\r\n           (interactive \"fFind file with sudo \")      \r\n           (let ((sudo-name (sudo-file-name filename)))\r\n             (apply 'find-file \r\n                    (cons sudo-name (if (boundp 'wildcards) '(wildcards))))))\r\n\r\n         (defun sudo-reopen-file ()\r\n           \"Reopen file as root by prefixing its name with sudo-tramp-prefix and by clearing buffer-read-only\"\r\n           (interactive)\r\n           (let* \r\n               ((file-name (expand-file-name buffer-file-name))\r\n                (sudo-name (sudo-file-name file-name)))\r\n             (progn           \r\n               (setq buffer-file-name sudo-name)\r\n               (rename-buffer sudo-name)\r\n               (setq buffer-read-only nil)\r\n               (message (concat \"Set file name to \" sudo-name)))))\r\n\r\n         (global-set-key \"\\C-x+\" 'sudo-find-file)\r\n         (global-set-key \"\\C-x!\" 'sudo-reopen-file)))\r\n\r\n## ahernp.el\r\n\r\n\t; sql select results reformatter\r\n\t(defun mysql-sel-reformat (firstcol delim)\r\n\t  \" Reformat results of a series of MySQL select statements.\r\n\tRemove formatting and column names.\"\r\n  \t  (defun replace-all (search-regex replace-regex)\r\n  \t    \" Go to the start of the buffer; \r\n\t  Replace all occurances of search-regex with replace-regex.\"\r\n\t    (goto-char 1)\r\n\t    (while (re-search-forward search-regex nil t)\r\n\t\t     (replace-match replace-regex))\r\n\t  )\r\n\t  (interactive \"sEnter first column name: \\nsEnter delimiter: \")\r\n\t  ; Blank out horizontal lines\r\n\t  (replace-all \"^\\+.*\" \"\")\r\n\t  ; Blank out column names lines\r\n\t  (replace-all (concat \"^| \" firstcol \" |.*\") \"\")\r\n\t  ; Blank out numbers of rows lines\r\n\t  (replace-all \"^[0-9].*\" \"\")\r\n\t  ; Remove \"| \" from beginning of lines\r\n\t  (replace-all \"^| \" \"\")\r\n\t  ; Remove \" |\" from end of lines\r\n\t  (replace-all \" |$\" \"\")\r\n\t  ; Replace remaining \"|\" with the chosen delimiter\r\n\t  (replace-all \" *| *\" delim)\r\n\t  ; Remove blank lines\r\n\t  (replace-all \"^\\n\" \"\")\r\n\t)\r\n\r\n## Download\r\n\r\nDownload from [ftp.gnu.org/pub/gnu/emacs/](http://ftp.gnu.org/pub/gnu/emacs).\r\n\r\nInstall under Ubuntu using the following commands in the directory where you unpacked emacs:\r\n\r\n 1. `sudo apt-get install libncurses5-dev`\r\n 1. `./configure --with-xpm=no --with-jpeg=no --with-png=no --with-gif=no --without-x`\r\n 1. `make`\r\n 1. `sudo make install`\r\n\r\nThe `libncurses5-dev` package is needed to avoid the `emacs: Cannot open termcap database file` error when running emacs in a terminal (`emacs -nw`)."
     }
 },
 {
@@ -1518,19 +1518,6 @@
 },
 {
     "model": "feedreader.feed",
-    "pk": 41,
-    "fields": {
-        "title": "Scott Adams&#39; Blog",
-        "xml_url": "http://feedproxy.google.com/typepad/ihdT",
-        "link": "http://blog.dilbert.com/",
-        "description": "",
-        "published_time": "2015-01-12T07:00:01Z",
-        "last_polled_time": "2016-12-04T20:17:20.721Z",
-        "group": 2
-    }
-},
-{
-    "model": "feedreader.feed",
     "pk": 43,
     "fields": {
         "title": "Binge Thinking History Podcast",
@@ -1538,7 +1525,7 @@
         "link": "http://bingethinkinghistory.blogspot.com/",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-12-04T20:17:04.847Z",
+        "last_polled_time": "2016-12-06T21:17:05.356Z",
         "group": 1
     }
 },
@@ -1564,7 +1551,7 @@
         "link": "http://ancientworldpodcast.blogspot.com/",
         "description": "From the first human civilizations to 500 BC in (around) thirty podcasts",
         "published_time": null,
-        "last_polled_time": "2016-12-04T20:17:23.279Z",
+        "last_polled_time": "2016-12-06T21:17:24.214Z",
         "group": 1
     }
 },
@@ -1589,8 +1576,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/worldservice/discovery/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/p002w557",
         "description": "Explorations in the world of science.",
-        "published_time": "2016-11-28T00:00:00Z",
-        "last_polled_time": "2016-11-28T22:17:05.512Z",
+        "published_time": "2016-12-05T00:00:00Z",
+        "last_polled_time": "2016-12-05T20:17:06.820Z",
         "group": 4
     }
 },
@@ -1732,8 +1719,8 @@
         "xml_url": "http://feedproxy.google.com/linuxtoday/linux",
         "link": "http://www.linuxtoday.com/",
         "description": "",
-        "published_time": "2016-12-04T20:14:08Z",
-        "last_polled_time": "2016-12-04T20:17:13.037Z",
+        "published_time": "2016-12-06T21:15:25Z",
+        "last_polled_time": "2016-12-06T21:17:12.685Z",
         "group": 5
     }
 },
@@ -1746,7 +1733,7 @@
         "link": "https://www.schneier.com/blog/",
         "description": "A blog covering security and security technology.",
         "published_time": null,
-        "last_polled_time": "2016-12-04T20:17:20.491Z",
+        "last_polled_time": "2016-12-06T21:17:21.317Z",
         "group": 5
     }
 },
@@ -1759,7 +1746,7 @@
         "link": "https://inkscapetutorials.org",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-12-04T20:17:10.975Z",
+        "last_polled_time": "2016-12-06T21:17:10.563Z",
         "group": 5
     }
 },
@@ -1810,8 +1797,8 @@
         "xml_url": "http://revolutionspodcast.libsyn.com/rss/",
         "link": "http://www.revolutionspodcast.com",
         "description": "A weekly podcast series examining great political revolutions. Now:  The Haitian Revolution Next: Simon Bolivar and Gran Colombia. Visit us at revolutionspodcast.com",
-        "published_time": "2016-11-23T22:44:25Z",
-        "last_polled_time": "2016-11-23T23:17:18.013Z",
+        "published_time": "2016-12-04T23:55:31Z",
+        "last_polled_time": "2016-12-05T00:17:17.875Z",
         "group": 1
     }
 },
@@ -1824,7 +1811,7 @@
         "link": "https://www.djangoproject.com/weblog/",
         "description": "Latest news about Django, the Python Web framework.",
         "published_time": null,
-        "last_polled_time": "2016-12-04T20:17:26.870Z",
+        "last_polled_time": "2016-12-06T21:17:27.645Z",
         "group": 5
     }
 },
@@ -1876,7 +1863,7 @@
         "link": "http://www.anisopteragames.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-12-04T20:17:17.927Z",
+        "last_polled_time": "2016-12-06T21:17:17.949Z",
         "group": 2
     }
 },
@@ -1902,7 +1889,7 @@
         "link": "http://slatestarcodex.com",
         "description": "Open threads at the Open Thread tab every Sunday and Wednesday",
         "published_time": null,
-        "last_polled_time": "2016-12-04T20:17:21.501Z",
+        "last_polled_time": "2016-12-06T21:17:22.385Z",
         "group": 2
     }
 },
@@ -1915,7 +1902,7 @@
         "link": "http://www.exurbe.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2016-12-04T20:17:09.197Z",
+        "last_polled_time": "2016-12-06T21:17:08.982Z",
         "group": 2
     }
 },
@@ -1928,7 +1915,7 @@
         "link": "http://b5audioguide.com",
         "description": "This is a book club without books, an episode-by-episode walkthrough of one of the most influential and important modern SF series. Each podcast begins with a spoiler-free discussion of the episode for new viewers, then we give listeners a jumping-off point and switch to a discussion of how the episode fits into the five-year history of the show.",
         "published_time": null,
-        "last_polled_time": "2016-12-04T20:17:25.636Z",
+        "last_polled_time": "2016-12-06T21:17:26.211Z",
         "group": 2
     }
 },
@@ -1941,7 +1928,7 @@
         "link": "https://www.theincomparable.com/theincomparable/",
         "description": "The Incomparable is a weekly dive into geeky media we love, including movies, books, TV, comics, and more, featuring a rotating panel of guests and hosted by Jason Snell.",
         "published_time": null,
-        "last_polled_time": "2016-12-04T20:17:29.804Z",
+        "last_polled_time": "2016-12-06T21:17:30.638Z",
         "group": 2
     }
 },
@@ -1954,7 +1941,7 @@
         "link": "http://arstechnica.com",
         "description": "Serving the Technologist for more than a decade. IT news, reviews, and analysis.",
         "published_time": null,
-        "last_polled_time": "2016-12-04T20:17:22.092Z",
+        "last_polled_time": "2016-12-06T21:17:23.070Z",
         "group": 5
     }
 },
@@ -1993,7 +1980,7 @@
         "link": "http://www.bbc.co.uk/news/",
         "description": "BBC News - UK Politics",
         "published_time": null,
-        "last_polled_time": "2016-12-04T20:17:04.485Z",
+        "last_polled_time": "2016-12-06T21:17:04.912Z",
         "group": 3
     }
 },
@@ -2006,7 +1993,7 @@
         "link": "http://www.theregister.co.uk/",
         "description": "Biting the hand that feeds IT \u2014 sci/tech news and views for the world",
         "published_time": null,
-        "last_polled_time": "2016-12-04T20:17:31.664Z",
+        "last_polled_time": "2016-12-06T21:17:32.540Z",
         "group": 5
     }
 },
@@ -2019,8 +2006,34 @@
         "link": "http://yieldthought.com/",
         "description": "Mark O\u2019Connor is a programmer, irregular writer and part-time technical fellow. He believes in dynamic typing, first-class functions, working in the cloud and the immortal essence of the human soul. He also likes tea.\n\n\n\n  var _gaq = _gaq || [];\n  _gaq.push(['_setAccount', 'UA-29608497-1']);\n  _gaq.push(['_trackPageview']);\n\n  (function() {\n    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;\n    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);\n  })();",
         "published_time": null,
-        "last_polled_time": "2016-12-04T20:17:32.417Z",
+        "last_polled_time": "2016-12-06T21:17:33.182Z",
         "group": 5
+    }
+},
+{
+    "model": "feedreader.feed",
+    "pk": 192,
+    "fields": {
+        "title": "Scott Adams&#39; Blog",
+        "xml_url": "http://feed.dilbert.com/dilbert/blog",
+        "link": "http://blog.dilbert.com/",
+        "description": "",
+        "published_time": null,
+        "last_polled_time": "2016-12-06T21:17:21.539Z",
+        "group": 2
+    }
+},
+{
+    "model": "feedreader.feed",
+    "pk": 194,
+    "fields": {
+        "title": "ahernp.com blog",
+        "xml_url": "http://ahernp.com/blog/feed",
+        "link": "http://ahernp.com/blog/",
+        "description": "Recent Blog Entries.",
+        "published_time": null,
+        "last_polled_time": "2016-12-06T21:17:02.963Z",
+        "group": null
     }
 }
 ]

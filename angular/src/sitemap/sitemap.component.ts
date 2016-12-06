@@ -18,7 +18,7 @@ import {Table} from '../core/table/table';
 import {toDateTimeString} from '../utilities';
 
 export const sitemapTitle: string = 'Site Map';
-const columnHeadings: string[] = ['Title', 'Parent', 'Updated'];
+const columnHeadings: string[] = ['Title', 'Parent', 'Published', 'Updated'];
 
 @Component({
     selector: 'ad-sitemap',
@@ -36,9 +36,10 @@ const columnHeadings: string[] = ['Title', 'Parent', 'Updated'];
                     </thead>
                     <tbody>
                         <tr *ngFor="let row of table.currentRows">
-                            <td><a routerLink="{{row[3]}}">{{row[0]}}</a></td>
+                            <td><a routerLink="{{row[4]}}">{{row[0]}}</a></td>
                             <td>{{row[1]}}</td>
                             <td>{{row[2]}}</td>
+                            <td>{{row[3]}}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -141,7 +142,7 @@ export class SitemapComponent implements OnInit {
         });
         let row: string[][] = [];
         for (let breadcrumb of this.sitemap)
-            row.push([breadcrumb.title, breadcrumb.parentName, breadcrumb.updated, breadcrumb.url]);
+            row.push([breadcrumb.title, breadcrumb.parentName, breadcrumb.published, breadcrumb.updated, breadcrumb.url]);
         this.table = new Table(columnHeadings, row);
     }
 

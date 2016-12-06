@@ -72,6 +72,7 @@ export class PageService {
             breadcrumbs.push({
                 title: page.title,
                 url: page.url,
+                published: page.published,
                 updated: page.updated,
                 parentName: page.parentName,
                 linkFlag: true

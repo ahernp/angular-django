@@ -23,11 +23,12 @@ export const feedreaderUrl: string = '/feedreader';
         <div id="content">
             <h1>Feedreader</h1>
             <div id="feedreader-entry-counts">
-                <p *ngIf="entries" (click)="toggleShowReadEntries()">
+                <p *ngIf="unreadEntriesFound" (click)="toggleShowReadEntries()">
                     <span *ngIf="!showReadEntries" class="ad_control" title="Show all entries">Unread</span>
                     <span *ngIf="showReadEntries" class="ad_control" title="Show unread entries">Recent</span>
                     Entries:
                 </p>
+                <p *ngIf="!unreadEntriesFound">Recent Entries:</p>
                 <h2 *ngIf="entries" (click)="showAll()">All ({{totalEntryCount}})</h2>
                 <div *ngFor="let group of groupCounts">
                     <h3 *ngIf="group.name" (click)="showGroup(group.name)">{{group.name}} ({{group.count}})</h3>
@@ -57,6 +58,7 @@ export class FeedreaderComponent implements OnInit {
     feeds: Feed[];
     entries: Entry[];
     showReadEntries: Boolean;
+    unreadEntriesFound: Boolean = false;
     unreadEntries: Entry[];
     shownEntries: Entry[];
     totalEntryCount: number;
@@ -116,8 +118,12 @@ export class FeedreaderComponent implements OnInit {
                     this.feeds = <Feed[]>data[0];
                     this.entries = <Entry[]>data[1];
                     this.unreadEntries = this.entries.filter(entry => !entry.readFlag);
-                    if (this.unreadEntries.length == 0)
+                    if (this.unreadEntries.length == 0) {
                         this.showReadEntries = true;
+                        this.unreadEntriesFound = false;
+                    }
+                    else
+                        this.unreadEntriesFound = true;
                     this.populatePage();
                     this.showSpinner = false;
                 },

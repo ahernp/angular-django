@@ -77,7 +77,7 @@ export class PageService {
                 published: page.published,
                 updated: page.updated,
                 parentName: page.parentName,
-                linkFlag: true
+                linkFlag: false
             })
         this.breadcrumbCache = breadcrumbs;
         this.breadcrumbs$.next(breadcrumbs);
@@ -85,10 +85,6 @@ export class PageService {
 
     search(searchString: string): SearchResults {
         let searchResults: SearchResults = new SearchResults();
-
-        if (searchString.length < 3)
-            return searchResults;
-
         let searchStringLower = searchString.toLocaleLowerCase();
 
         for (let breadcrumb of this.breadcrumbCache) {

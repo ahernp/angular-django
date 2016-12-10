@@ -79,12 +79,13 @@ button {
     z-index: 9;
 }
 
-#header p {
+#header p.breadcrumbs {
     width: 69%;
     margin: 8px;
 }
 
 #header ad-page-search {
+    width: 30%;
     position: absolute;
     right: 5px;
     top: 2px;

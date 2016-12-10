@@ -5,7 +5,7 @@ import {Breadcrumb} from '../breadcrumbs/breadcrumb';
 @Component({
     selector: 'ad-header',
     template: `
-        <p>
+        <p class="breadcrumbs">
             <span *ngFor="let breadcrumb of breadcrumbs; let first = first; let last = last">
                 <span *ngIf="!first">&rsaquo; </span>
                 <span *ngIf="!last"><ad-breadcrumb [breadcrumb]="breadcrumb"></ad-breadcrumb></span>

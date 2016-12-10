@@ -69,7 +69,7 @@
 <tr>
 	<td>waitForText</td>
 	<td>css=h1</td>
-	<td>Blog Root</td>
+	<td>Blog</td>
 </tr>
 <tr>
 	<td>click</td>

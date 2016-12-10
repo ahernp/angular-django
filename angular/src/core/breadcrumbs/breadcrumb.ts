@@ -4,7 +4,7 @@ interface BreadcrumbOptions {
     published?: string;
     updated?: string;
     parentName?: string;
-    linkFlag?: boolean;
+    externalLinkFlag?: boolean;
 }
 
 export class Breadcrumb {
@@ -13,7 +13,7 @@ export class Breadcrumb {
     published: string;
     updated: string;
     parentName: string;
-    linkFlag: boolean;
+    externalLinkFlag: boolean;
 
     constructor(args: BreadcrumbOptions) {
         this.title = args.title;
@@ -21,6 +21,6 @@ export class Breadcrumb {
         this.published = args.published;
         this.updated = args.updated;
         this.parentName = args.parentName;
-        this.linkFlag = args.linkFlag;
+        this.externalLinkFlag = args.externalLinkFlag;
     }
 }

@@ -13,7 +13,7 @@ import {blogRootTitle, blogUrl} from "../app.settings";
 
 const numberOfBlogPages: number = 3;
 const blogArchiveBreadcrumb = new Breadcrumb({title: 'Archive', url: '/sitemap/blog'});
-export const blogFeedBreadcrumb = new Breadcrumb({title: 'RSS', url: '/blog/feed', linkFlag: true});
+export const blogFeedBreadcrumb = new Breadcrumb({title: 'RSS', url: '/blog/feed', externalLinkFlag: true});
 
 @Component({
     selector: 'ad-blog',

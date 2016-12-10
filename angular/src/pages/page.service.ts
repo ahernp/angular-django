@@ -77,7 +77,7 @@ export class PageService {
                 published: page.published,
                 updated: page.updated,
                 parentName: page.parentName,
-                linkFlag: false
+                externalLinkFlag: false
             })
         this.breadcrumbCache = breadcrumbs;
         this.breadcrumbs$.next(breadcrumbs);

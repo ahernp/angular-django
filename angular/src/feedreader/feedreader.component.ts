@@ -102,7 +102,7 @@ export class FeedreaderComponent implements OnInit {
             breadcrumbs: [
                 new Breadcrumb({title: 'Admin',
                                 url: `/admin${feedreaderUrl}/`,
-                                linkFlag: true})
+                                externalLinkFlag: true})
             ],
             refreshFlag: true,
         });

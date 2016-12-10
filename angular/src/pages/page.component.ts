@@ -77,7 +77,7 @@ export class PageComponent implements OnInit {
                 new Breadcrumb({
                     title: 'Edit',
                     url: `/admin/pages/page/${page.id}/change/`,
-                    linkFlag: true,
+                    externalLinkFlag: true,
                 })
             ],
         });

@@ -1,7 +1,7 @@
 import {Breadcrumb} from "./core/breadcrumbs/breadcrumb";
 
 export const adminBreadcrumb = new Breadcrumb(
-    {title: 'Admin', url: '/admin/', linkFlag: true});
+    {title: 'Admin', url: '/admin/', externalLinkFlag: true});
 
 export const apiEndpoint: string = '/api';
 

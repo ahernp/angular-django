@@ -14,6 +14,8 @@ import {MarkdownToHtmlPipe} from "./markdown/markdown.pipe";
 import {SpinnerComponent} from "./spinner/spinner.component";
 import {TableComponent} from "./table/table.component";
 
+import {SearchComponent} from "../pages/search/search.component";
+
 @NgModule({
     imports: [
         CommonModule,
@@ -26,6 +28,7 @@ import {TableComponent} from "./table/table.component";
         FooterComponent,
         BreadcrumbComponent,
         SpinnerComponent,
+        SearchComponent,
         TableComponent,
         MarkdownComponent,
         MarkdownToHtmlPipe,

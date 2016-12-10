@@ -12,6 +12,7 @@ import {Breadcrumb} from '../breadcrumbs/breadcrumb';
                 <span *ngIf="last">{{breadcrumb.title}}</span>
             </span>
         </p>
+        <ad-page-search></ad-page-search>
 `
 })
 export class HeaderComponent {

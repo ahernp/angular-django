@@ -6,6 +6,8 @@ import {ReplaySubject} from "rxjs/ReplaySubject";
 
 import {Page} from './page';
 
+import {SearchResult, SearchResults} from "./search/search-results";
+
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 
 import {apiEndpoint, pageUrl} from "../app.settings";
@@ -79,5 +81,30 @@ export class PageService {
             })
         this.breadcrumbCache = breadcrumbs;
         this.breadcrumbs$.next(breadcrumbs);
+    }
+
+    search(searchString: string): SearchResults {
+        let searchResults: SearchResults = new SearchResults();
+
+        if (searchString.length < 3)
+            return searchResults;
+
+        let searchStringLower = searchString.toLocaleLowerCase();
+
+        for (let breadcrumb of this.breadcrumbCache) {
+            let matchPosition = breadcrumb.title.toLocaleLowerCase().indexOf(searchStringLower);
+            if (matchPosition == -1)
+                continue
+            let searchResult: SearchResult = new SearchResult();
+            searchResult.match = breadcrumb.title.substr(0, matchPosition) +
+                '<span class="search-match">' +
+                breadcrumb.title.substr(matchPosition, matchPosition + searchString.length) +
+                '</span>' +
+                breadcrumb.title.substr(matchPosition + searchString.length, breadcrumb.title.length);
+            searchResult.breadcrumb = breadcrumb;
+            searchResults.titleMatches.push(searchResult);
+        }
+
+        return searchResults;
     }
 }

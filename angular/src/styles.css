@@ -80,7 +80,14 @@ button {
 }
 
 #header p {
+    width: 69%;
     margin: 8px;
+}
+
+#header ad-page-search {
+    position: absolute;
+    right: 5px;
+    top: 2px;
 }
 
 #content {

@@ -90,15 +90,39 @@ export class PageService {
         for (let breadcrumb of this.breadcrumbCache) {
             let matchPosition = breadcrumb.title.toLocaleLowerCase().indexOf(searchStringLower);
             if (matchPosition == -1)
-                continue
+                continue;
             let searchResult: SearchResult = new SearchResult();
-            searchResult.match = breadcrumb.title.substr(0, matchPosition) +
-                '<span class="search-match">' +
-                breadcrumb.title.substr(matchPosition, matchPosition + searchString.length) +
-                '</span>' +
-                breadcrumb.title.substr(matchPosition + searchString.length, breadcrumb.title.length);
             searchResult.breadcrumb = breadcrumb;
             searchResults.titleMatches.push(searchResult);
+        }
+
+        for (let i = 0; i < this.pageCache.length; i++) {
+            let content = this.pageCache[i].content;
+            let matchPosition = content.toLocaleLowerCase().indexOf(searchStringLower);
+
+            if (matchPosition == -1)
+                continue;
+            let searchResult: SearchResult = new SearchResult();
+            let lineStartPosition = content.substr(0, matchPosition).lastIndexOf('\n');
+            if (lineStartPosition == -1)
+                lineStartPosition = 0;
+            let lineEndPosition = content.substr(matchPosition, content.length).indexOf('\n');
+            if (lineEndPosition == -1)
+                lineEndPosition = content.length;
+            else
+                lineEndPosition = lineEndPosition + matchPosition;
+
+            let matchContext = content.slice(lineStartPosition, lineEndPosition).trim();
+
+            matchPosition = matchContext.toLocaleLowerCase().indexOf(searchStringLower);
+            searchResult.match = matchContext.substr(0, matchPosition) +
+                '<span class="highlight">' +
+                matchContext.substr(matchPosition, searchString.length) +
+                '</span>' +
+                matchContext.substr(matchPosition + searchString.length, matchContext.length);
+            searchResult.breadcrumb = this.breadcrumbCache[i];
+
+            searchResults.contentMatches.push(searchResult);
         }
 
         return searchResults;

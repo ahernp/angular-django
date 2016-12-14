@@ -10,6 +10,7 @@ import {Page} from "../pages/page";
 import {Footer} from "../core/footer/footer";
 
 import {blogRootTitle, blogUrl} from "../app.settings";
+import {toDateTimeString} from "../utilities";
 
 const numberOfBlogPages: number = 3;
 const blogArchiveBreadcrumb = new Breadcrumb({title: 'Archive', url: '/sitemap/blog'});
@@ -39,6 +40,7 @@ export const blogFeedBreadcrumb = new Breadcrumb({title: 'RSS', url: '/blog/feed
 
 
 export class BlogComponent implements OnInit {
+    now: string;
     title: string = blogRootTitle;
     breadcrumbs: Breadcrumb[];
     pages: Page[];
@@ -52,6 +54,7 @@ export class BlogComponent implements OnInit {
 
     ngOnInit(): void {
         this.titleService.setTitle(blogRootTitle);
+        this.now = toDateTimeString(new Date());
         this.populateHeader();
         this.populateFooter();
         this.getRecentBlogPages();
@@ -66,6 +69,7 @@ export class BlogComponent implements OnInit {
 
     populateFooter() {
         this.footer = new Footer({
+            updated: this.now,
             breadcrumbs: [blogFeedBreadcrumb, blogArchiveBreadcrumb],
         });
     }

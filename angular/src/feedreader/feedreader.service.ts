@@ -11,6 +11,7 @@ import {apiEndpoint} from "../app.settings";
 
 const feedreaderPollMinute: number = 18;
 const microsecondsPerMinute: number = 1000 * 60;
+const microsecondsPerHour: number = microsecondsPerMinute * 60;
 
 @Injectable()
 export class FeedreaderService {
@@ -57,10 +58,13 @@ export class FeedreaderService {
         console.log('checked for updates');
         console.log(now);
         let currentMinute: number = now.getUTCMinutes();
-        let interval = (currentMinute >= feedreaderPollMinute) ?
+        let initialTimeout = (currentMinute >= feedreaderPollMinute) ?
             ((60 - (currentMinute - feedreaderPollMinute)) * microsecondsPerMinute) :
             ((feedreaderPollMinute - currentMinute) * microsecondsPerMinute)
-        console.log(interval / microsecondsPerMinute);
-        setInterval(() => this.refreshCaches(), interval);
+        console.log(initialTimeout / microsecondsPerMinute);
+        setTimeout(() => {
+            this.refreshCaches();
+            setInterval(() => this.refreshCaches(), microsecondsPerHour)
+        }, initialTimeout);
     }
 }

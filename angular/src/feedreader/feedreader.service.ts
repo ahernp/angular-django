@@ -10,6 +10,7 @@ import {feedreaderUrl} from "./feedreader.component";
 import {apiEndpoint} from "../app.settings";
 
 const feedreaderPollMinute: number = 18;
+const microsecondsPerMinute: number = 1000 * 60;
 
 @Injectable()
 export class FeedreaderService {
@@ -57,9 +58,9 @@ export class FeedreaderService {
         console.log(now);
         let currentMinute: number = now.getUTCMinutes();
         let interval = (currentMinute > feedreaderPollMinute) ?
-            ((60 - (currentMinute - feedreaderPollMinute)) * 1000 * 60 * 60) :
-            ((feedreaderPollMinute - currentMinute) * 1000 * 60 * 60)
-        console.log(interval);
+            ((60 - (currentMinute - feedreaderPollMinute)) * microsecondsPerMinute) :
+            ((feedreaderPollMinute - currentMinute) * microsecondsPerMinute)
+        console.log(interval / microsecondsPerMinute);
         setInterval(() => this.checkForUpdates(), interval);
     }
 }

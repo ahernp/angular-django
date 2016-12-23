@@ -46,4 +46,4 @@ import {FeedreaderService} from "./feedreader/feedreader.service";
     ],
     bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

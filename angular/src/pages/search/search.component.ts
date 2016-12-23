@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 
 import {PageService} from "../page.service";
+import {FeedreaderService} from "../../feedreader/feedreader.service";
 
 import {SearchResults} from "./search-results";
 
@@ -30,7 +31,10 @@ export class SearchComponent {
     showResults: Boolean = false;
     pageSearchResults: SearchResults;
 
-    constructor(private pageService: PageService) {}
+    constructor(
+        private pageService: PageService,
+        private FeedreaderService: FeedreaderService
+    ) {}
 
     searchPage(): void {
         if (this.searchString.length > 2) {

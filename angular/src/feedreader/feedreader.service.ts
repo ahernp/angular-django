@@ -57,10 +57,10 @@ export class FeedreaderService {
         console.log('checked for updates');
         console.log(now);
         let currentMinute: number = now.getUTCMinutes();
-        let interval = (currentMinute > feedreaderPollMinute) ?
+        let interval = (currentMinute >= feedreaderPollMinute) ?
             ((60 - (currentMinute - feedreaderPollMinute)) * microsecondsPerMinute) :
             ((feedreaderPollMinute - currentMinute) * microsecondsPerMinute)
         console.log(interval / microsecondsPerMinute);
-        setInterval(() => this.checkForUpdates(), interval);
+        setInterval(() => this.refreshCaches(), interval);
     }
 }

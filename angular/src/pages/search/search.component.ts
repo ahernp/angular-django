@@ -30,9 +30,7 @@ export class SearchComponent {
     showResults: Boolean = false;
     pageSearchResults: SearchResults;
 
-    constructor(
-        private pageService: PageService
-    ) {}
+    constructor(private pageService: PageService) {}
 
     searchPage(): void {
         if (this.searchString.length > 2) {

@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 
+import {Observable} from 'rxjs';
+
 import {Entry, Feed, FeedCount, FeedCountDictionary,
     GroupCount, GroupCountDictionary} from './feedreader';
 import {FeedreaderService} from './feedreader.service';
@@ -111,12 +113,11 @@ export class FeedreaderComponent implements OnInit {
     getFeedsAndEntries() {
         this.showSpinner = true;
         this.showReadEntries = false;
-        this.feedreaderService
-            .getFeedsAndEntries()
+        Observable.combineLatest(
+            this.feedreaderService.getFeeds().map(feeds => this.feeds = <Feed[]>feeds),
+            this.feedreaderService.getEntries().map(entries => this.entries = <Entry[]>entries))
             .subscribe(
                 data => {
-                    this.feeds = <Feed[]>data[0];
-                    this.entries = <Entry[]>data[1];
                     this.unreadEntries = this.entries.filter(entry => !entry.readFlag);
                     if (this.unreadEntries.length == 0) {
                         this.showReadEntries = true;
@@ -186,6 +187,6 @@ export class FeedreaderComponent implements OnInit {
     }
 
     onRefresh() {
-        this.getFeedsAndEntries();
+        this.feedreaderService.refreshCaches();
     }
 }

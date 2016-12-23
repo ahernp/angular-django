@@ -55,13 +55,11 @@ export class FeedreaderService {
         this.refreshCaches();
 
         let now: Date = new Date();
-        console.log('checked for updates');
-        console.log(now);
         let currentMinute: number = now.getUTCMinutes();
         let initialTimeout = (currentMinute >= feedreaderPollMinute) ?
             ((60 - (currentMinute - feedreaderPollMinute)) * microsecondsPerMinute) :
             ((feedreaderPollMinute - currentMinute) * microsecondsPerMinute)
-        console.log(initialTimeout / microsecondsPerMinute);
+
         setTimeout(() => {
             this.refreshCaches();
             setInterval(() => this.refreshCaches(), microsecondsPerHour)

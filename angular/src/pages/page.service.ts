@@ -11,6 +11,7 @@ import {SearchResult, SearchResults} from "../core/search/search-results";
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 
 import {apiEndpoint, pageUrl} from "../app.settings";
+import {findStringContext} from "../utilities";
 
 @Injectable()
 export class PageService {
@@ -98,31 +99,15 @@ export class PageService {
 
         for (let i = 0; i < this.pageCache.length; i++) {
             let content = this.pageCache[i].content;
-            let matchPosition = content.toLocaleLowerCase().indexOf(searchStringLower);
+            let matchContext: string = findStringContext(searchStringLower, content);
 
-            if (matchPosition == -1)
-                continue;
-            let searchResult: SearchResult = new SearchResult();
-            let lineStartPosition = content.substr(0, matchPosition).lastIndexOf('\n');
-            if (lineStartPosition == -1)
-                lineStartPosition = 0;
-            let lineEndPosition = content.substr(matchPosition, content.length).indexOf('\n');
-            if (lineEndPosition == -1)
-                lineEndPosition = content.length;
-            else
-                lineEndPosition = lineEndPosition + matchPosition;
+            if (matchContext) {
+                let searchResult: SearchResult = new SearchResult();
+                searchResult.match = matchContext;
+                searchResult.breadcrumb = this.breadcrumbCache[i];
 
-            let matchContext = content.slice(lineStartPosition, lineEndPosition).trim();
-
-            matchPosition = matchContext.toLocaleLowerCase().indexOf(searchStringLower);
-            searchResult.match = matchContext.substr(0, matchPosition) +
-                '<span class="highlight">' +
-                matchContext.substr(matchPosition, searchString.length) +
-                '</span>' +
-                matchContext.substr(matchPosition + searchString.length, matchContext.length);
-            searchResult.breadcrumb = this.breadcrumbCache[i];
-
-            searchResults.contentMatches.push(searchResult);
+                searchResults.contentMatches.push(searchResult);
+            }
         }
 
         return searchResults;

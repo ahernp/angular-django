@@ -4,10 +4,15 @@ import {Http} from '@angular/http';
 import {Observable} from 'rxjs';
 import {ReplaySubject} from "rxjs/ReplaySubject";
 
+import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
+import {SearchResult, SearchResults} from "../core/search/search-results";
+
 import {Entry, Feed} from './feedreader';
 
 import {feedreaderUrl} from "./feedreader.component";
 import {apiEndpoint} from "../app.settings";
+
+import {findStringContext} from "../utilities";
 
 const feedreaderPollMinute: number = 18;
 const microsecondsPerMinute: number = 1000 * 60;
@@ -65,4 +70,25 @@ export class FeedreaderService {
             setInterval(() => this.refreshCaches(), microsecondsPerHour)
         }, initialTimeout);
     }
+
+    search(searchString: string): SearchResults {
+        let searchResults: SearchResults = new SearchResults();
+
+        for (let i = 0; i < this.entryCache.length; i++) {
+            let entry: Entry = this.entryCache[i];
+            let matchContext: string = findStringContext(searchString, entry.description);
+
+            if (matchContext) {
+                let searchResult = new SearchResult();
+                searchResult.match = matchContext;
+                searchResult.breadcrumb = new Breadcrumb({
+                    title: entry.title, url: entry.link, externalLinkFlag: true});
+
+                searchResults.contentMatches.push(searchResult);
+            }
+        }
+
+        return searchResults;
+    }
+
 }

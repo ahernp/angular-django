@@ -14,7 +14,7 @@ import {MarkdownToHtmlPipe} from "./markdown/markdown.pipe";
 import {SpinnerComponent} from "./spinner/spinner.component";
 import {TableComponent} from "./table/table.component";
 
-import {SearchComponent} from "../pages/search/search.component";
+import {SearchComponent} from "./search/search.component";
 
 @NgModule({
     imports: [

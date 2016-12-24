@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 
-import {PageService} from "../page.service";
+import {PageService} from "../../pages/page.service";
 import {FeedreaderService} from "../../feedreader/feedreader.service";
 
 import {SearchResults} from "./search-results";

@@ -6,7 +6,7 @@ import {ReplaySubject} from "rxjs/ReplaySubject";
 
 import {Page} from './page';
 
-import {SearchResult, SearchResults} from "./search/search-results";
+import {SearchResult, SearchResults} from "../core/search/search-results";
 
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 

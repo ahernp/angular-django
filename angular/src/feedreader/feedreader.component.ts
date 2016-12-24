@@ -187,6 +187,7 @@ export class FeedreaderComponent implements OnInit {
     }
 
     onRefresh() {
+        this.showSpinner = true;
         this.feedreaderService.refreshCaches();
     }
 }

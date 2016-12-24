@@ -119,6 +119,7 @@ export class DashboardComponent implements OnInit {
     }
 
     onRefresh() {
+        this.showSpinner = true;
         this.dashboardService.populateDashboard();
     }
 }

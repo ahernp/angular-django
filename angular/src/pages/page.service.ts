@@ -10,6 +10,11 @@ import {SearchResult, SearchResults} from "../core/search/search-results";
 
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 
+import {adminBreadcrumb, blogArchiveBreadcrumb, blogBreadcrumb, dashboardBreadcrumb,
+    feedreaderBreadcrumb, rootBreadcrumb, rootTitle, timersBreadcrumb,
+    toolsBreadcrumb} from '../app.settings';
+import {toolBreadcrumbs} from '../tools/tools.component'
+
 import {apiEndpoint, pageUrl} from "../app.settings";
 import {findStringContext} from "../utilities";
 
@@ -45,6 +50,10 @@ export class PageService {
         return this.pages$;
     }
 
+    getBreadcrumbs(): ReplaySubject<any> {
+        return this.breadcrumbs$;
+    }
+
     getPageBreadcrumbs(slug: string): ReplaySubject<any> {
         let breadcrumbs = this.breadcrumbCache;
         if (slug != undefined) {
@@ -69,8 +78,26 @@ export class PageService {
             });
     }
 
-    populateBreadcrumbCache() {
+    getDynamicPageBreadcrumbs(): Breadcrumb[] {
         let breadcrumbs = [];
+        breadcrumbs.push(blogBreadcrumb);
+        breadcrumbs.push(blogArchiveBreadcrumb);
+        breadcrumbs.push(dashboardBreadcrumb);
+        breadcrumbs.push(feedreaderBreadcrumb);
+        breadcrumbs.push(rootBreadcrumb);
+        breadcrumbs.push(timersBreadcrumb);
+        breadcrumbs.push(toolsBreadcrumb);
+
+        for (let toolBreadcrumb of toolBreadcrumbs) {
+            toolBreadcrumb.parentName = 'Tools';
+            breadcrumbs.push(toolBreadcrumb);
+        }
+
+        return breadcrumbs;
+    }
+
+    populateBreadcrumbCache() {
+        let breadcrumbs: Breadcrumb[] = this.getDynamicPageBreadcrumbs();
         for (let page of this.pageCache)
             breadcrumbs.push({
                 title: page.title,

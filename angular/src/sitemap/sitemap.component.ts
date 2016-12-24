@@ -10,9 +10,7 @@ import {PageService} from '../pages/page.service';
 import {Footer} from "../core/footer/footer";
 
 import {dashboardTitle, dashboardUrl} from '../dashboard/dashboard.component';
-import {adminBreadcrumb, blogArchiveBreadcrumb, blogBreadcrumb, dashboardBreadcrumb,
-    feedreaderBreadcrumb, rootBreadcrumb, rootTitle, timersBreadcrumb,
-    toolsBreadcrumb} from '../app.settings';
+import {adminBreadcrumb, rootTitle} from '../app.settings';
 import {toolBreadcrumbs} from '../tools/tools.component'
 import {Table} from '../core/table/table';
 import {toDateTimeString} from '../utilities';
@@ -82,21 +80,6 @@ export class SitemapComponent implements OnInit {
             });
     }
 
-    addClientsideEntries() {
-        this.sitemap.push(blogBreadcrumb);
-        this.sitemap.push(blogArchiveBreadcrumb);
-        this.sitemap.push(dashboardBreadcrumb);
-        this.sitemap.push(feedreaderBreadcrumb);
-        this.sitemap.push(rootBreadcrumb);
-        this.sitemap.push(timersBreadcrumb);
-        this.sitemap.push(toolsBreadcrumb);
-
-        for (let toolBreadcrumb of toolBreadcrumbs) {
-            toolBreadcrumb.parentName = 'Tools';
-            this.sitemap.push(toolBreadcrumb);
-        }
-    }
-
     populateHeaderAndTitle() {
         if (this.parent_slug == undefined) {
             this.populateHeader(sitemapTitle);
@@ -134,12 +117,12 @@ export class SitemapComponent implements OnInit {
 
     populateTable(breadcrumbs: Breadcrumb[]): void {
         this.sitemap = breadcrumbs.slice(0);
-        if (this.parent_slug == undefined)
-            this.addClientsideEntries();
+
         this.sitemap.sort(function (a, b) {
             return a.title.toLowerCase().localeCompare(
                 b.title, 'en', {'sensitivity': 'base'});
         });
+
         let row: string[][] = [];
         for (let breadcrumb of this.sitemap)
             row.push([breadcrumb.title, breadcrumb.parentName, breadcrumb.published, breadcrumb.updated, breadcrumb.url]);

@@ -12,17 +12,22 @@ import {SearchResults} from "./search-results";
         <div *ngIf="showResults"  (click)="clear()" style="float:right; background-color: white; border: 1px solid #046; margin-top: 30px; padding-left: 5px; width: 100%; max-height: 90vh; overflow: scroll;">
             <p *ngIf="pageSearchResults.titleMatches.length == 0 && pageSearchResults.contentMatches.length == 0">No matches found</p>
             <p *ngIf="pageSearchResults.titleMatches.length > 0">
-                Page title matches:
+                <span class="label">Page title matches:</span>
                 <span *ngFor="let searchResult of pageSearchResults.titleMatches;">
                     <ad-breadcrumb [breadcrumb]="searchResult.breadcrumb"></ad-breadcrumb>
                 </span>
             </p>
-            <p *ngIf="pageSearchResults.contentMatches.length > 0">Page content matches:</p>
+            <p *ngIf="pageSearchResults.contentMatches.length > 0" class="label">Page content matches:</p>
             <p *ngFor="let searchResult of pageSearchResults.contentMatches;">
                 <ad-breadcrumb [breadcrumb]="searchResult.breadcrumb"></ad-breadcrumb>
                 <span [innerHTML]=searchResult.match></span>
             </p>
-            <p *ngIf="entrySearchResults.contentMatches.length > 0">Feedreader entry matches:</p>
+            <p *ngIf="entrySearchResults.titleMatches.length > 0" class="label">Feedreader entry title matches:</p>
+            <p *ngFor="let searchResult of entrySearchResults.titleMatches;">
+                <ad-breadcrumb [breadcrumb]="searchResult.breadcrumb"></ad-breadcrumb>
+                <span [innerHTML]=searchResult.match></span>
+            </p>
+            <p *ngIf="entrySearchResults.contentMatches.length > 0" class="label">Feedreader entry matches:</p>
             <p *ngFor="let searchResult of entrySearchResults.contentMatches;">
                 <ad-breadcrumb [breadcrumb]="searchResult.breadcrumb"></ad-breadcrumb>
                 <span [innerHTML]=searchResult.match></span>

@@ -197,6 +197,10 @@ p.blog_info {
     padding-top: 16px;
 }
 
+p.label, span.label {
+    font-style: italic;
+    font-weight: bold;
+}
 ad-homepage-navigation p > span {
     padding-bottom: 5px;
 }

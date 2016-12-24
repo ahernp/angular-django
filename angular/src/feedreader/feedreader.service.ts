@@ -73,9 +73,19 @@ export class FeedreaderService {
 
     search(searchString: string): SearchResults {
         let searchResults: SearchResults = new SearchResults();
+        let searchStringLower: string = searchString.toLocaleLowerCase();
 
         for (let i = 0; i < this.entryCache.length; i++) {
             let entry: Entry = this.entryCache[i];
+
+            let matchPosition = entry.title.toLocaleLowerCase().indexOf(searchStringLower);
+            if (matchPosition > -1) {
+                let searchResult: SearchResult = new SearchResult();
+                searchResult.breadcrumb = new Breadcrumb({
+                    title: entry.title, url: entry.link, externalLinkFlag: true});
+                searchResults.titleMatches.push(searchResult);
+            }
+
             let matchContext: string = findStringContext(searchString, entry.description);
 
             if (matchContext) {

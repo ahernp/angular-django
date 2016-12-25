@@ -23,12 +23,12 @@ import {adminBreadcrumb, dashboardBreadcrumb, dashboardTitle} from "../app.setti
             <h1>Status <span style="font-size: small;">at {{dashboard.timeChecked}}</span></h1>
             <div style="width: 47%; float: left; padding-bottom: 1em; word-wrap: break-word;">
                 <p *ngIf="dashboard.hostname"><strong>Hostname:</strong> {{dashboard.hostname}}</p>
-                <h2>Cache</h2>
+                <h2>Caches</h2>
                 <table>
                     <thead><tr><th>Type</th><th>Size</th></tr></thead>
                     <tbody>
                         <tr *ngIf="numberOfPages"><td>Database Pages</td><td>{{numberOfPages}}</td></tr>
-                        <tr *ngIf="numberOfDynamicPages"><td>Dynamic Pages</td><td>{{numberOfDynamicPages}}</td></tr>
+                        <tr *ngIf="numberOfDynamicPages"><td>Generated Pages</td><td>{{numberOfDynamicPages}}</td></tr>
                         <tr *ngIf="numberOfEntries"><td>Feedreader Entries</td><td>{{numberOfEntries}}</td></tr>
                         <tr *ngIf="numberOfUnreadEntries"><td>Unread Entries</td><td>{{numberOfUnreadEntries}}</td></tr>
                     </tbody>

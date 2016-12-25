@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 import {Breadcrumb} from "../../core/breadcrumbs/breadcrumb";
 
-import {blogFeedBreadcrumb} from "../../blog/blog.component";
+import {blogRSSBreadcrumb} from "../../blog/blog.component";
 
 const navigationPanel = [
     {
@@ -17,7 +17,7 @@ const navigationPanel = [
         parent: <Breadcrumb> {title: 'Blog', url: '/blog'},
         children: [
             <Breadcrumb> {title: 'Archive', url: '/sitemap/blog'},
-            blogFeedBreadcrumb,
+            blogRSSBreadcrumb,
         ]
     },
     {

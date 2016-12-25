@@ -99,7 +99,7 @@
 <tr>
 	<td>waitForText</td>
 	<td>css=h2</td>
-	<td>Cache</td>
+	<td>Caches</td>
 </tr>
 <tr>
 	<td>click</td>

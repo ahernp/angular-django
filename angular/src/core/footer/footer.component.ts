@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 import {Footer} from './footer';
 
@@ -7,6 +7,7 @@ import {Footer} from './footer';
     template: `
         <p>
             <span *ngIf="footer.updated">Last Updated: {{footer.updated}}</span>
+            <span *ngIf="!footer.updated">Generated: {{now}}</span>
             <span *ngIf="footer.sourceFlag" class="ad_control" (click)="toggleSource()">Source</span>
             <span *ngFor="let breadcrumb of footer.breadcrumbs">
                 <ad-breadcrumb [breadcrumb]="breadcrumb"></ad-breadcrumb>
@@ -15,12 +16,27 @@ import {Footer} from './footer';
         </p>
     `
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit {
     @Input() footer: Footer;
     @Output() onToggleSource = new EventEmitter<boolean>();
     @Output() onRefresh = new EventEmitter<boolean>();
 
+    now: string;
     showSource: boolean = false;
+
+    ngOnInit(): void {
+        let leadingZero = (amount: number): string => amount < 10 ? `0${amount}` : `${amount}`;
+
+        let toDateTimeString = (date: Date): string => '' +
+            date.getFullYear() + '-' +
+            leadingZero(date.getUTCMonth()) + '-' +
+            leadingZero(date.getUTCDate()) + ' ' +
+            leadingZero(date.getUTCHours()) + ':' +
+            leadingZero(date.getUTCMinutes()) + ':' +
+            leadingZero(date.getUTCSeconds());
+
+        this.now = toDateTimeString(new Date());
+    }
 
     toggleSource() {
         this.showSource = !this.showSource;

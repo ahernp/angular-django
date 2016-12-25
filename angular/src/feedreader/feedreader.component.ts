@@ -13,7 +13,6 @@ import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 import {Footer} from "../core/footer/footer";
 
 import {rootTitle} from "../app.settings";
-import {toDateTimeString} from "../utilities";
 
 export const feedreaderTitle: string = 'Feedreader';
 export const feedreaderUrl: string = '/feedreader';
@@ -56,7 +55,6 @@ export const feedreaderUrl: string = '/feedreader';
     providers: []
 })
 export class FeedreaderComponent implements OnInit {
-    now: string;
     feeds: Feed[];
     entries: Entry[];
     showReadEntries: Boolean;
@@ -77,7 +75,6 @@ export class FeedreaderComponent implements OnInit {
 
     ngOnInit(): void {
         this.titleService.setTitle(feedreaderTitle);
-        this.now = toDateTimeString(new Date());
         this.populateHeader();
         this.populateFooter();
         this.getFeedsAndEntries();
@@ -87,7 +84,6 @@ export class FeedreaderComponent implements OnInit {
         var dashboardBreadcrumb = new Breadcrumb({
             title: feedreaderTitle,
             url: feedreaderUrl,
-            updated: this.now,
             parentName: rootTitle});
         this.breadcrumbs = this.breadcrumbService.addBreadcrumb(dashboardBreadcrumb);
     }
@@ -100,7 +96,6 @@ export class FeedreaderComponent implements OnInit {
 
     populateFooter() {
         this.footer = new Footer({
-            updated: this.now,
             breadcrumbs: [
                 new Breadcrumb({title: 'Admin',
                                 url: `/admin${feedreaderUrl}/`,

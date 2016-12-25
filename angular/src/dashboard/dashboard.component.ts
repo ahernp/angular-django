@@ -4,7 +4,6 @@ import {Title} from '@angular/platform-browser';
 import {Dashboard} from './dashboard';
 import {DashboardService} from './dashboard.service';
 
-import {Page} from "../pages/page";
 import {PageService} from "../pages/page.service";
 
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
@@ -13,7 +12,6 @@ import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 import {Footer} from "../core/footer/footer";
 
 import {rootTitle, adminBreadcrumb} from "../app.settings";
-import {toDateTimeString} from "../utilities";
 
 export const dashboardTitle: string = 'Dashboard';
 export const dashboardUrl: string = '/dashboard';
@@ -60,14 +58,12 @@ export const dashboardUrl: string = '/dashboard';
     providers: []
 })
 export class DashboardComponent implements OnInit {
-    now: string;
     dashboard: Dashboard;
     numberOfPages: number;
     numberOfDynamicPages: number;
     breadcrumbs: Breadcrumb[];
     footer: Footer;
     showSpinner: Boolean = false;
-    error: any;
 
     constructor(
         private dashboardService: DashboardService,
@@ -78,7 +74,6 @@ export class DashboardComponent implements OnInit {
 
     ngOnInit(): void {
         this.titleService.setTitle(dashboardTitle);
-        this.now = toDateTimeString(new Date());
         this.populateHeader();
         this.populateFooter();
         this.getDashboard();
@@ -89,14 +84,12 @@ export class DashboardComponent implements OnInit {
         var dashboardBreadcrumb = new Breadcrumb({
             title: dashboardTitle,
             url: dashboardUrl,
-            updated: this.now,
             parentName: rootTitle});
         this.breadcrumbs = this.breadcrumbService.addBreadcrumb(dashboardBreadcrumb);
     }
 
     populateFooter() {
         this.footer = new Footer({
-            updated: this.now,
             breadcrumbs: [adminBreadcrumb],
             refreshFlag: true,
         });

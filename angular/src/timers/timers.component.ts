@@ -7,7 +7,6 @@ import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {Footer} from "../core/footer/footer";
 
 import {adminBreadcrumb} from "../app.settings";
-import {toDateTimeString} from "../utilities";
 
 const timersTitle: string = 'Timers';
 const timersBreadcrumb = new Breadcrumb({title: 'Timers', url: '/timers'});
@@ -32,7 +31,6 @@ const timersBreadcrumb = new Breadcrumb({title: 'Timers', url: '/timers'});
     providers: []
 })
 export class TimersComponent implements OnInit {
-    now: string;
     breadcrumbs: Breadcrumb[];
     footer: Footer;
 
@@ -42,11 +40,9 @@ export class TimersComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.now = toDateTimeString(new Date());
         this.titleService.setTitle(timersTitle);
         this.breadcrumbs = this.breadcrumbService.addBreadcrumb(timersBreadcrumb);
         this.footer = new Footer({
-            updated: this.now,
             breadcrumbs: [adminBreadcrumb],
         });
     }

@@ -8,7 +8,6 @@ import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 import {Footer} from "../core/footer/footer";
 
 import {rootBreadcrumb, adminBreadcrumb} from "../app.settings";
-import {toDateTimeString} from "../utilities";
 
 const toolsTitle: string = 'Tools';
 
@@ -45,7 +44,6 @@ export const toolBreadcrumbs = [
 })
 export class ToolsComponent implements OnInit {
     toolBreadcrumbs: Breadcrumb[] = toolBreadcrumbs;
-    now: string;
     tool_slug: string;
     breadcrumbs: Breadcrumb[];
     footer: Footer;
@@ -62,7 +60,6 @@ export class ToolsComponent implements OnInit {
         this.route.params.forEach((params: Params) => {
             this.tool_slug = params['slug'];
             this.populateHeaderAndTitle();
-            this.now = toDateTimeString(new Date());
             this.populateFooter();
         });
     }
@@ -88,14 +85,12 @@ export class ToolsComponent implements OnInit {
             {
                 title: title,
                 url: this.router.url,
-                updated: this.now,
                 parentName: rootBreadcrumb.title,
             });
     }
 
     populateFooter(): void {
         this.footer = new Footer({
-            updated: this.now,
             breadcrumbs: [adminBreadcrumb],
         });
     }

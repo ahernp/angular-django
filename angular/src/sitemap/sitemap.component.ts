@@ -9,11 +9,8 @@ import {PageService} from '../pages/page.service';
 
 import {Footer} from "../core/footer/footer";
 
-import {dashboardTitle, dashboardUrl} from '../dashboard/dashboard.component';
 import {adminBreadcrumb, rootTitle} from '../app.settings';
-import {toolBreadcrumbs} from '../tools/tools.component'
 import {Table} from '../core/table/table';
-import {toDateTimeString} from '../utilities';
 
 export const sitemapTitle: string = 'Site Map';
 const columnHeadings: string[] = ['Title', 'Parent', 'Published', 'Updated'];
@@ -49,7 +46,6 @@ const columnHeadings: string[] = ['Title', 'Parent', 'Published', 'Updated'];
 })
 export class SitemapComponent implements OnInit {
     title: string = sitemapTitle;
-    now: string;
     parent_slug: string;
     breadcrumbs: Breadcrumb[];
 
@@ -69,11 +65,9 @@ export class SitemapComponent implements OnInit {
 
     ngOnInit(): void {
         this.titleService.setTitle(sitemapTitle);
-        this.now = toDateTimeString(new Date());
         this.route.params
             .subscribe((params: Params) => {
                 this.parent_slug = params['slug'];
-                this.now = toDateTimeString(new Date());
                 this.getBreadcrumbs();
                 this.populateHeaderAndTitle();
                 this.populateFooter();
@@ -102,7 +96,6 @@ export class SitemapComponent implements OnInit {
             {
                 title: title,
                 url: this.router.url,
-                updated: this.now,
                 parentName: rootTitle
             }
         );
@@ -110,7 +103,6 @@ export class SitemapComponent implements OnInit {
 
     populateFooter() {
         this.footer = new Footer({
-            updated: this.now,
             breadcrumbs: [adminBreadcrumb],
         });
     }

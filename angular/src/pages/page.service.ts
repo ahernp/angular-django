@@ -125,13 +125,14 @@ export class PageService {
         }
 
         for (let i = 0; i < this.pageCache.length; i++) {
-            let content = this.pageCache[i].content;
+            let page = this.pageCache[i];
+            let content = page.content;
             let matchContext: string = findStringContext(searchStringLower, content);
 
             if (matchContext) {
                 let searchResult: SearchResult = new SearchResult();
                 searchResult.match = matchContext;
-                searchResult.breadcrumb = this.breadcrumbCache[i];
+                searchResult.breadcrumb = new Breadcrumb({title: page.title, url: page.url});
 
                 searchResults.contentMatches.push(searchResult);
             }

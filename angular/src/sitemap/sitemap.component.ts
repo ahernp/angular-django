@@ -22,7 +22,7 @@ const columnHeadings: string[] = ['Title', 'Parent', 'Published', 'Updated'];
         <div id="content">
             <h1>{{title}}</h1>
             <template [ngIf]="table">
-                <input [(ngModel)]="filterString" (ngModelChange)="filterRows()" placeholder="Filter">
+                <input [(ngModel)]="filterString" (ngModelChange)="filterRows()" placeholder="Filter" tabindex="2">
                 <span *ngIf="table.currentRows.length != table.rows.length">{{table.currentRows.length}} of</span>
                 {{table.rows.length}} rows
                 <table>
@@ -30,7 +30,7 @@ const columnHeadings: string[] = ['Title', 'Parent', 'Published', 'Updated'];
                         <tr><th *ngFor="let columnHeading of table.columnHeadings; let i = index" (click)="table.sortRows(i)">{{columnHeading}}</th></tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let row of table.currentRows">
+                        <tr *ngFor="let row of table.currentRows; let odd=odd; let even=even;" [ngClass]="{ odd: odd, even: even }">
                             <td><a routerLink="{{row[4]}}">{{row[0]}}</a></td>
                             <td>{{row[1]}}</td>
                             <td>{{row[2]}}</td>

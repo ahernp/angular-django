@@ -11,10 +11,7 @@ import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 
 import {Footer} from "../core/footer/footer";
 
-import {rootTitle, adminBreadcrumb} from "../app.settings";
-
-export const dashboardTitle: string = 'Dashboard';
-export const dashboardUrl: string = '/dashboard';
+import {adminBreadcrumb, dashboardBreadcrumb, dashboardTitle} from "../app.settings";
 
 @Component({
     selector: 'ad-dashboard',
@@ -81,10 +78,6 @@ export class DashboardComponent implements OnInit {
     }
 
     populateHeader() {
-        var dashboardBreadcrumb = new Breadcrumb({
-            title: dashboardTitle,
-            url: dashboardUrl,
-            parentName: rootTitle});
         this.breadcrumbs = this.breadcrumbService.addBreadcrumb(dashboardBreadcrumb);
     }
 

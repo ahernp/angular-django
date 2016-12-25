@@ -9,11 +9,16 @@ import {Page} from "../pages/page";
 
 import {Footer} from "../core/footer/footer";
 
-import {blogRootTitle, blogUrl} from "../app.settings";
-
+const blogRootTitle: string = 'Blog';
+const blogUrl: string = '/blog';
 const numberOfBlogPages: number = 3;
-const blogArchiveBreadcrumb = new Breadcrumb({title: 'Archive', url: '/sitemap/blog'});
-export const blogRSSBreadcrumb = new Breadcrumb({title: 'RSS', url: '/blog/feed', externalLinkFlag: true});
+
+export const blogBreadcrumb = new Breadcrumb(
+    {title: 'Blog', url: '/blog', parentName: 'ahernp.com'});
+export const blogRSSBreadcrumb = new Breadcrumb(
+    {title: 'RSS', url: '/blog/feed', externalLinkFlag: true});
+export const blogArchiveBreadcrumb = new Breadcrumb(
+    {title: 'Archive', url: '/sitemap/blog', parentName: 'ahernp.com'});
 
 @Component({
     selector: 'ad-blog',
@@ -65,9 +70,6 @@ export class BlogComponent implements OnInit {
     }
 
     populateHeader() {
-        var blogBreadcrumb = new Breadcrumb({
-            title: blogRootTitle,
-            url: blogUrl});
         this.breadcrumbs = this.breadcrumbService.addBreadcrumb(blogBreadcrumb);
     }
 

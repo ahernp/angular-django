@@ -5,8 +5,7 @@ import {ReplaySubject} from "rxjs/ReplaySubject";
 
 import {Dashboard} from './dashboard';
 
-import {dashboardUrl} from "./dashboard.component";
-import {apiEndpoint} from "../app.settings";
+import {apiEndpoint, dashboardUrl} from "../app.settings";
 
 @Injectable()
 export class DashboardService {

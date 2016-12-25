@@ -14,8 +14,10 @@ import {Footer} from "../core/footer/footer";
 
 import {rootTitle} from "../app.settings";
 
-export const feedreaderTitle: string = 'Feedreader';
+const feedreaderTitle: string = 'Feedreader';
 export const feedreaderUrl: string = '/feedreader';
+export const feedreaderBreadcrumb = new Breadcrumb(
+    {title: feedreaderTitle, url: feedreaderUrl, parentName: rootTitle});
 
 @Component({
     selector: 'ad-feedreader',
@@ -101,11 +103,7 @@ export class FeedreaderComponent implements OnInit {
     }
 
     populateHeader() {
-        var dashboardBreadcrumb = new Breadcrumb({
-            title: feedreaderTitle,
-            url: feedreaderUrl,
-            parentName: rootTitle});
-        this.breadcrumbs = this.breadcrumbService.addBreadcrumb(dashboardBreadcrumb);
+        this.breadcrumbs = this.breadcrumbService.addBreadcrumb(feedreaderBreadcrumb);
     }
 
     populatePage() {

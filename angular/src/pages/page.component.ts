@@ -10,7 +10,10 @@ import {PageService} from './page.service';
 
 import {Footer} from "../core/footer/footer";
 
-import {markdownBreadcrumb, rootSlug} from "../app.settings";
+import {rootSlug} from "../app.settings";
+
+const markdownBreadcrumb = new Breadcrumb(
+    {title: 'Markdown', url: '/page/markdown'});
 
 @Component({
     selector: 'ad-page',

@@ -10,13 +10,18 @@ import {SearchResult, SearchResults} from "../core/search/search-results";
 
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 
-import {adminBreadcrumb, blogArchiveBreadcrumb, blogBreadcrumb, dashboardBreadcrumb,
-    feedreaderBreadcrumb, rootBreadcrumb, rootTitle, timersBreadcrumb,
-    toolsBreadcrumb} from '../app.settings';
-import {toolBreadcrumbs} from '../tools/tools.component'
-
-import {apiEndpoint, pageUrl} from "../app.settings";
 import {findStringContext} from "../utilities";
+
+import {rootBreadcrumb} from '../app.settings';
+import {toolsBreadcrumb, toolBreadcrumbs} from '../tools/tools.component'
+
+import {apiEndpoint, dashboardBreadcrumb} from "../app.settings";
+
+import {blogBreadcrumb, blogArchiveBreadcrumb} from "../blog/blog.component";
+import {feedreaderBreadcrumb} from "../feedreader/feedreader.component";
+import {timersBreadcrumb} from "../timers/timers.component";
+
+const pageUrl: string = '/page';
 
 @Injectable()
 export class PageService {

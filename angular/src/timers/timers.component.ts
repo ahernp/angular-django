@@ -6,10 +6,12 @@ import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 
 import {Footer} from "../core/footer/footer";
 
-import {adminBreadcrumb} from "../app.settings";
+import {adminBreadcrumb, rootTitle} from "../app.settings";
 
 const timersTitle: string = 'Timers';
-const timersBreadcrumb = new Breadcrumb({title: 'Timers', url: '/timers'});
+const timersUrl: string = '/timers';
+export const timersBreadcrumb = new Breadcrumb(
+    {title: timersTitle, url: timersUrl, parentName: rootTitle});
 
 @Component({
     selector: 'ad-timers',

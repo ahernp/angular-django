@@ -7,15 +7,18 @@ import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 
 import {Footer} from "../core/footer/footer";
 
-import {rootBreadcrumb, adminBreadcrumb} from "../app.settings";
+import {rootTitle, adminBreadcrumb} from "../app.settings";
 
 const toolsTitle: string = 'Tools';
+const toolsUrl: string = '/tools';
+export const toolsBreadcrumb = new Breadcrumb(
+    {title: toolsTitle, url: toolsUrl, parentName: rootTitle});
 
-const cardgenBreadcrumb = <Breadcrumb> {title: 'Cardgen', url: '/tools/cardgen'};
-const coloursBreadcrumb = <Breadcrumb> {title: 'Colours', url: '/tools/colours'};
-const compareBreadcrumb = <Breadcrumb> {title: 'Compare', url: '/tools/compare'};
-const deduplicateBreadcrumb = <Breadcrumb> {title: 'Deduplicate', url: '/tools/deduplicate'};
-const matchBreadcrumb = <Breadcrumb> {title: 'Match', url: '/tools/match'};
+const cardgenBreadcrumb = <Breadcrumb> {title: 'Cardgen', url: '/tools/cardgen', parentName: toolsTitle};
+const coloursBreadcrumb = <Breadcrumb> {title: 'Colours', url: '/tools/colours', parentName: toolsTitle};
+const compareBreadcrumb = <Breadcrumb> {title: 'Compare', url: '/tools/compare', parentName: toolsTitle};
+const deduplicateBreadcrumb = <Breadcrumb> {title: 'Deduplicate', url: '/tools/deduplicate', parentName: toolsTitle};
+const matchBreadcrumb = <Breadcrumb> {title: 'Match', url: '/tools/match', parentName: toolsTitle};
 
 export const toolBreadcrumbs = [
     cardgenBreadcrumb,
@@ -85,7 +88,7 @@ export class ToolsComponent implements OnInit {
             {
                 title: title,
                 url: this.router.url,
-                parentName: rootBreadcrumb.title,
+                parentName: rootTitle,
             });
     }
 

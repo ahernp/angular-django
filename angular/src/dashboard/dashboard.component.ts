@@ -9,6 +9,8 @@ import {PageService} from "../pages/page.service";
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 
+import {FeedreaderService} from "../feedreader/feedreader.service";
+
 import {Footer} from "../core/footer/footer";
 
 import {adminBreadcrumb, dashboardBreadcrumb, dashboardTitle} from "../app.settings";
@@ -27,6 +29,8 @@ import {adminBreadcrumb, dashboardBreadcrumb, dashboardTitle} from "../app.setti
                     <tbody>
                         <tr *ngIf="numberOfPages"><td>Database Pages</td><td>{{numberOfPages}}</td></tr>
                         <tr *ngIf="numberOfDynamicPages"><td>Dynamic Pages</td><td>{{numberOfDynamicPages}}</td></tr>
+                        <tr *ngIf="numberOfEntries"><td>Feedreader Entries</td><td>{{numberOfEntries}}</td></tr>
+                        <tr *ngIf="numberOfUnreadEntries"><td>Unread Entries</td><td>{{numberOfUnreadEntries}}</td></tr>
                     </tbody>
                 </table>
                 <h2>Settings Flags</h2>
@@ -58,6 +62,8 @@ export class DashboardComponent implements OnInit {
     dashboard: Dashboard;
     numberOfPages: number;
     numberOfDynamicPages: number;
+    numberOfEntries: number;
+    numberOfUnreadEntries: number;
     breadcrumbs: Breadcrumb[];
     footer: Footer;
     showSpinner: Boolean = false;
@@ -66,6 +72,7 @@ export class DashboardComponent implements OnInit {
         private dashboardService: DashboardService,
         private breadcrumbService: BreadcrumbService,
         private pageService: PageService,
+        private feedreaderService: FeedreaderService,
         private titleService: Title) {
     }
 
@@ -102,6 +109,11 @@ export class DashboardComponent implements OnInit {
         this.pageService.getPages()
             .subscribe(pages => this.numberOfPages = pages.length);
         this.numberOfDynamicPages = this.pageService.getDynamicPageBreadcrumbs().length;
+        this.feedreaderService.getEntries()
+            .subscribe(entries => {
+                this.numberOfEntries = entries.length;
+                this.numberOfUnreadEntries = entries.filter(entry => !entry.readFlag).length;
+            })
     }
 
     onRefresh() {

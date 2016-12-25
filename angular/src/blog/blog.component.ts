@@ -34,6 +34,13 @@ export const blogFeedBreadcrumb = new Breadcrumb({title: 'RSS', url: '/blog/feed
         </div>
         <ad-footer id="footer" *ngIf="footer" [footer]="footer"></ad-footer>
         `,
+    styles: [`
+        p.blog_info {
+            border-top: 1px #ccc solid;
+            margin: 16px 0;
+            padding-top: 16px;
+        }
+    `],
     providers: []
 })
 

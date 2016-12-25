@@ -11,11 +11,11 @@ import {rootBreadcrumb, adminBreadcrumb} from "../app.settings";
 
 const toolsTitle: string = 'Tools';
 
-const cardgenBreadcrumb = <Breadcrumb> {title: 'Cardgen', url: 'cardgen'};
-const coloursBreadcrumb = <Breadcrumb> {title: 'Colours', url: 'colours'};
-const compareBreadcrumb = <Breadcrumb> {title: 'Compare', url: 'compare'};
-const deduplicateBreadcrumb = <Breadcrumb> {title: 'Deduplicate', url: 'deduplicate'};
-const matchBreadcrumb = <Breadcrumb> {title: 'Match', url: 'match'};
+const cardgenBreadcrumb = <Breadcrumb> {title: 'Cardgen', url: '/tools/cardgen'};
+const coloursBreadcrumb = <Breadcrumb> {title: 'Colours', url: '/tools/colours'};
+const compareBreadcrumb = <Breadcrumb> {title: 'Compare', url: '/tools/compare'};
+const deduplicateBreadcrumb = <Breadcrumb> {title: 'Deduplicate', url: '/tools/deduplicate'};
+const matchBreadcrumb = <Breadcrumb> {title: 'Match', url: '/tools/match'};
 
 export const toolBreadcrumbs = [
     cardgenBreadcrumb,

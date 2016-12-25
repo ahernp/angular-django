@@ -108,6 +108,11 @@ const navigationPanel = [
             </span>
         </p>
     `,
+    styles: [`
+        p > span {
+            padding-bottom: 5px;
+        }
+    `],
     providers: []
 })
 export class HomepageNavigationComponent {

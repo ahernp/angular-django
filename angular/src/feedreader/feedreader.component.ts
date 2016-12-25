@@ -25,8 +25,8 @@ export const feedreaderUrl: string = '/feedreader';
             <h1>Feedreader</h1>
             <div id="feedreader-entry-counts">
                 <p *ngIf="unreadEntriesFound" (click)="toggleShowReadEntries()">
-                    <span *ngIf="!showReadEntries" class="ad_control" title="Show all entries">Unread</span>
-                    <span *ngIf="showReadEntries" class="ad_control" title="Show unread entries">Recent</span>
+                    <span *ngIf="!showReadEntries" class="ad-control" title="Show all entries">Unread</span>
+                    <span *ngIf="showReadEntries" class="ad-control" title="Show unread entries">Recent</span>
                     Entries:
                 </p>
                 <p *ngIf="!unreadEntriesFound">Recent Entries:</p>
@@ -52,6 +52,26 @@ export const feedreaderUrl: string = '/feedreader';
         <ad-footer id="footer" *ngIf="footer" [footer]="footer" (onRefresh)="onRefresh()"></ad-footer>
         <ad-spinner *ngIf="showSpinner"></ad-spinner>
         `,
+    styles: [`
+        #feedreader-entry-counts {
+            width:20%;
+            float:left;
+        }
+        #feedreader-entry-list {
+            width:75%;
+            float:left;
+            padding-left:1em;
+        }
+        .feed_entry {
+            padding: 0.2em 0.5em;
+            margin: 0.5em;
+            border: 1px solid #046;
+            border-radius: 1em;
+        }
+        p.feed_entry_subtitle {
+            font-size: small;
+        }
+    `],
     providers: []
 })
 export class FeedreaderComponent implements OnInit {

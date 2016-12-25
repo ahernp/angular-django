@@ -5,7 +5,7 @@ import {Table} from './table'
 @Component({
     selector: 'ad-table',
     template: `
-        <input [(ngModel)]="filterString" (ngModelChange)="filterRows()" placeholder="Filter">
+        <input [(ngModel)]="filterString" (ngModelChange)="filterRows()" placeholder="Filter" tabindex="2">
         <span *ngIf="table.currentRows.length != table.rows.length">{{table.currentRows.length}} of</span>
         {{table.rows.length}} rows
         <table>
@@ -13,7 +13,7 @@ import {Table} from './table'
                 <tr><th *ngFor="let columnHeading of table.columnHeadings; let i = index" (click)="table.sortRows(i)">{{columnHeading}}</th></tr>
             </thead>
             <tbody>
-                <tr *ngFor="let row of table.currentRows">
+                <tr *ngFor="let row of table.currentRows; let odd=odd; let even=even;" [ngClass]="{ odd: odd, even: even }">
                     <td *ngFor="let column of row">{{column}}</td>
                 </tr>
             </tbody>

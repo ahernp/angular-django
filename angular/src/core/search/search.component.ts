@@ -34,6 +34,12 @@ import {SearchResults} from "./search-results";
             </p>
         </div>
         `,
+    styles: [`
+        p.label, span.label {
+            font-style: italic;
+            font-weight: bold;
+        }
+    `],
     providers: []
 })
 export class SearchComponent {

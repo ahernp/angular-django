@@ -137,7 +137,7 @@ export class PageService {
             if (matchContext) {
                 let searchResult: SearchResult = new SearchResult();
                 searchResult.match = matchContext;
-                searchResult.breadcrumb = new Breadcrumb({title: page.title, url: page.url});
+                searchResult.breadcrumb = <Breadcrumb>{title: page.title, url: page.url};
 
                 searchResults.contentMatches.push(searchResult);
             }

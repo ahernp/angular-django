@@ -11,8 +11,8 @@ import {rootTitle, adminBreadcrumb} from "../app.settings";
 
 const toolsTitle: string = 'Tools';
 const toolsUrl: string = '/tools';
-export const toolsBreadcrumb = new Breadcrumb(
-    {title: toolsTitle, url: toolsUrl, parentName: rootTitle});
+export const toolsBreadcrumb = <Breadcrumb>
+    {title: toolsTitle, url: toolsUrl, parentName: rootTitle};
 
 const cardgenBreadcrumb = <Breadcrumb> {title: 'Cardgen', url: '/tools/cardgen', parentName: toolsTitle};
 const coloursBreadcrumb = <Breadcrumb> {title: 'Colours', url: '/tools/colours', parentName: toolsTitle};
@@ -93,8 +93,6 @@ export class ToolsComponent implements OnInit {
     }
 
     populateFooter(): void {
-        this.footer = new Footer({
-            breadcrumbs: [adminBreadcrumb],
-        });
+        this.footer = <Footer>{breadcrumbs: [adminBreadcrumb]};
     }
 }

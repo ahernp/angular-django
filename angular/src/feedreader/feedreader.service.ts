@@ -81,8 +81,8 @@ export class FeedreaderService {
             let matchPosition = entry.title.toLocaleLowerCase().indexOf(searchStringLower);
             if (matchPosition > -1) {
                 let searchResult: SearchResult = new SearchResult();
-                searchResult.breadcrumb = new Breadcrumb({
-                    title: entry.title, url: entry.link, externalLinkFlag: true});
+                searchResult.breadcrumb = <Breadcrumb>{
+                    title: entry.title, url: entry.link, externalLinkFlag: true};
                 searchResults.titleMatches.push(searchResult);
             }
 
@@ -91,8 +91,8 @@ export class FeedreaderService {
             if (matchContext) {
                 let searchResult = new SearchResult();
                 searchResult.match = matchContext;
-                searchResult.breadcrumb = new Breadcrumb({
-                    title: entry.title, url: entry.link, externalLinkFlag: true});
+                searchResult.breadcrumb = <Breadcrumb>
+                    {title: entry.title, url: entry.link, externalLinkFlag: true};
 
                 searchResults.contentMatches.push(searchResult);
             }

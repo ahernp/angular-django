@@ -12,8 +12,7 @@ import {Footer} from "../core/footer/footer";
 
 import {rootSlug} from "../app.settings";
 
-const markdownBreadcrumb = new Breadcrumb(
-    {title: 'Markdown', url: '/page/markdown'});
+const markdownBreadcrumb = <Breadcrumb>{title: 'Markdown', url: '/page/markdown'};
 
 @Component({
     selector: 'ad-page',
@@ -64,26 +63,26 @@ export class PageComponent implements OnInit {
         this.page = page;
         this.titleService.setTitle(page.title);
 
-        var breadcrumb = new Breadcrumb({
+        var breadcrumb = <Breadcrumb>{
             title: page.title,
             url: page.url,
             updated: page.updated,
-            parentName: page.parentName});
+            parentName: page.parentName};
         this.breadcrumbs = this.breadcrumbService.addBreadcrumb(breadcrumb);
 
-        this.footer = new Footer({
+        this.footer = <Footer>{
             updated: page.updated,
             sourceFlag: true,
             refreshFlag: true,
             breadcrumbs: [
                 markdownBreadcrumb,
-                new Breadcrumb({
+                <Breadcrumb>{
                     title: 'Edit',
                     url: `/admin/pages/page/${page.id}/change/`,
                     externalLinkFlag: true,
-                })
+                }
             ],
-        });
+        };
 
         this.childBreadcrumbs = page.children;
     }

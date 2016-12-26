@@ -16,8 +16,7 @@ import {rootTitle} from "../app.settings";
 
 const feedreaderTitle: string = 'Feedreader';
 export const feedreaderUrl: string = '/feedreader';
-export const feedreaderBreadcrumb = new Breadcrumb(
-    {title: feedreaderTitle, url: feedreaderUrl, parentName: rootTitle});
+export const feedreaderBreadcrumb = <Breadcrumb>{title: feedreaderTitle, url: feedreaderUrl, parentName: rootTitle};
 
 @Component({
     selector: 'ad-feedreader',
@@ -113,14 +112,13 @@ export class FeedreaderComponent implements OnInit {
     }
 
     populateFooter() {
-        this.footer = new Footer({
-            breadcrumbs: [
-                new Breadcrumb({title: 'Admin',
-                                url: `/admin${feedreaderUrl}/`,
-                                externalLinkFlag: true})
-            ],
+        this.footer = <Footer>{
+            breadcrumbs: [<Breadcrumb>{
+                title: 'Admin',
+                url: `/admin${feedreaderUrl}/`,
+                externalLinkFlag: true}],
             refreshFlag: true,
-        });
+        };
     }
 
     getFeedsAndEntries() {

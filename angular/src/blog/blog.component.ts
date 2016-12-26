@@ -13,12 +13,12 @@ const blogRootTitle: string = 'Blog';
 const blogUrl: string = '/blog';
 const numberOfBlogPages: number = 3;
 
-export const blogBreadcrumb = new Breadcrumb(
-    {title: 'Blog', url: '/blog', parentName: 'ahernp.com'});
-export const blogRSSBreadcrumb = new Breadcrumb(
-    {title: 'RSS', url: '/blog/feed', externalLinkFlag: true});
-export const blogArchiveBreadcrumb = new Breadcrumb(
-    {title: 'Archive', url: '/sitemap/blog', parentName: 'ahernp.com'});
+export const blogBreadcrumb = <Breadcrumb>
+    {title: 'Blog', url: '/blog', parentName: 'ahernp.com'};
+export const blogRSSBreadcrumb = <Breadcrumb>
+    {title: 'RSS', url: '/blog/feed', externalLinkFlag: true};
+export const blogArchiveBreadcrumb = <Breadcrumb>
+    {title: 'Archive', url: '/sitemap/blog', parentName: 'ahernp.com'};
 
 @Component({
     selector: 'ad-blog',
@@ -74,9 +74,7 @@ export class BlogComponent implements OnInit {
     }
 
     populateFooter() {
-        this.footer = new Footer({
-            breadcrumbs: [blogArchiveBreadcrumb, blogRSSBreadcrumb],
-        });
+        this.footer = <Footer>{breadcrumbs: [blogArchiveBreadcrumb, blogRSSBreadcrumb]};
     }
 
     populateRecentBlogPages(pages) {

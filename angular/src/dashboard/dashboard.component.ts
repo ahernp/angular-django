@@ -89,10 +89,7 @@ export class DashboardComponent implements OnInit {
     }
 
     populateFooter() {
-        this.footer = new Footer({
-            breadcrumbs: [adminBreadcrumb],
-            refreshFlag: true,
-        });
+        this.footer = <Footer>{breadcrumbs: [adminBreadcrumb], refreshFlag: true};
     }
 
     getDashboard() {

@@ -10,8 +10,8 @@ import {adminBreadcrumb, rootTitle} from "../app.settings";
 
 const timersTitle: string = 'Timers';
 const timersUrl: string = '/timers';
-export const timersBreadcrumb = new Breadcrumb(
-    {title: timersTitle, url: timersUrl, parentName: rootTitle});
+export const timersBreadcrumb = <Breadcrumb>
+    {title: timersTitle, url: timersUrl, parentName: rootTitle};
 
 @Component({
     selector: 'ad-timers',
@@ -44,8 +44,6 @@ export class TimersComponent implements OnInit {
     ngOnInit(): void {
         this.titleService.setTitle(timersTitle);
         this.breadcrumbs = this.breadcrumbService.addBreadcrumb(timersBreadcrumb);
-        this.footer = new Footer({
-            breadcrumbs: [adminBreadcrumb],
-        });
+        this.footer = <Footer>{breadcrumbs: [adminBreadcrumb]};
     }
 }

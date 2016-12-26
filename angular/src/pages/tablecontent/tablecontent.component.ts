@@ -45,7 +45,7 @@ export class TableContentComponent implements OnInit {
 
     addContentSection(): void {
         if (this.currentContent != '') {
-            this.sections.push({
+            this.sections.push(<Section>{
                 type: 'markdown',
                 content: this.currentContent});
             this.currentContent = '';
@@ -54,7 +54,7 @@ export class TableContentComponent implements OnInit {
 
     addTableSection(): void{
         if (this.currentRows.length > 0) {
-            this.sections.push( {
+            this.sections.push(<Section>{
                 type: 'table',
                 columnHeadings: this.currentColumnHeadings,
                 rows: this.currentRows});

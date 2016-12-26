@@ -102,9 +102,7 @@ export class SitemapComponent implements OnInit {
     }
 
     populateFooter() {
-        this.footer = new Footer({
-            breadcrumbs: [adminBreadcrumb],
-        });
+        this.footer = <Footer>{breadcrumbs: [adminBreadcrumb]};
     }
 
     populateTable(breadcrumbs: Breadcrumb[]): void {

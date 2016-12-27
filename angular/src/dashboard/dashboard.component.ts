@@ -82,6 +82,7 @@ export class DashboardComponent implements OnInit {
         this.populateFooter();
         this.getDashboard();
         this.getCaches();
+
     }
 
     populateHeader() {
@@ -98,7 +99,8 @@ export class DashboardComponent implements OnInit {
             .getDashboard()
             .subscribe(dashboard => {
                 this.dashboard = dashboard;
-                this.showSpinner = false;
+                if (dashboard.settingsFlags != undefined)
+                    this.showSpinner = false;
             });
     }
 

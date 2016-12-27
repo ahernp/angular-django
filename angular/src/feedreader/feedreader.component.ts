@@ -38,11 +38,13 @@ export const feedreaderBreadcrumb = <Breadcrumb>{title: feedreaderTitle, url: fe
                         <span [innerHtml]="feed.name"></span> ({{feed.count}})
                     </p>
                 </div>
+                <p class="ad-control" (click)="markAllRead()">Mark All Read</p>
             </div>
             <div id="feedreader-entry-list">
-                <div *ngFor="let entry of shownEntries" class="feed_entry">
+                <div *ngFor="let entry of shownEntries" class="feed_entry" (click)="toggleRead(entry.id)">
                     <h3 class="feed_entry_subtitle">
                         From <span [innerHtml]="entry.feedTitle"></span> on {{entry.publishedTime}}
+                        <span *ngIf="!entry.readFlag">(unread)</span>
                     </h3>
                     <p><a href="{{entry.link}}"><span [innerHtml]="entry.title"></span></a></p>
                     <p [innerHtml]="entry.description"></p>
@@ -141,6 +143,14 @@ export class FeedreaderComponent implements OnInit {
                 },
                 err => console.error(err)
             );
+    }
+
+    toggleRead(entryId: number): void {
+        this.feedreaderService.toggleRead(entryId);
+    }
+
+    markAllRead(): void {
+        this.feedreaderService.markAllRead();
     }
 
     countEntries(entries: Entry[]) {

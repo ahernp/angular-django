@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Http} from '@angular/http';
+import {Http, Headers, RequestOptions} from '@angular/http';
 
 import {Observable} from 'rxjs';
 import {ReplaySubject} from "rxjs/ReplaySubject";
@@ -39,6 +39,18 @@ export class FeedreaderService {
 
     getEntries(): ReplaySubject<any> {
         return this.entries$;
+    }
+
+    toggleRead(entryId: number): void {
+        let headers = new Headers({'Content-Type': 'application/json'});
+        let options = new RequestOptions({headers: headers});
+        this.http.post(`${apiEndpoint}${feedreaderUrl}/toggleread`, {entry_id: entryId}, options).subscribe();
+    }
+
+    markAllRead(): void {
+        let headers = new Headers({'Content-Type': 'application/json'});
+        let options = new RequestOptions({headers: headers});
+        this.http.post(`${apiEndpoint}${feedreaderUrl}/markallread`, {}, options).subscribe();
     }
 
     refreshCaches(): void {

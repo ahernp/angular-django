@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 import json
 
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 
 from .models import Entry, Feed
@@ -23,7 +24,8 @@ def get_entries(request):
     entries = Entry.objects.filter(published_time__gt=from_time)\
         .order_by('-published_time')[:settings.MAX_ENTRIES_SHOWN]
 
-    data = json.dumps([{'title': entry.title,
+    data = json.dumps([{'id': entry.id,
+                        'title': entry.title,
                         'link': entry.link,
                         'description': entry.description,
                         'publishedTime': entry.published_time.strftime('%Y-%m-%d %H:%M:%S'),
@@ -32,9 +34,24 @@ def get_entries(request):
                         'readFlag': entry.read_flag}
                        for entry in entries])
 
-    for entry in entries:
-        if not entry.read_flag:
-            entry.read_flag = True
-            entry.save()
-
     return HttpResponse(data, content_type='application/json')
+
+
+@login_required
+def toggle_read(request):
+    json_data=json.loads(request.body)
+
+    if 'entry_id' in json_data:
+        try:
+            entry = Entry.objects.get(pk=json_data['entry_id'])
+            entry.read_flag = not entry.read_flag
+            entry.save()
+        except Entry.DoesNotExist:
+            pass
+    return HttpResponse('')
+
+
+@login_required
+def mark_all_read(request):
+    Entry.objects.filter(read_flag=False).update(read_flag=True)
+    return HttpResponse('')

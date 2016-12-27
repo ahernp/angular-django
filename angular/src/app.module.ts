@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
-import {HttpModule} from '@angular/http';
+import {HttpModule, XSRFStrategy, CookieXSRFStrategy} from '@angular/http';
 
 import {AppComponent} from './app.component';
 
@@ -43,6 +43,7 @@ import {FeedreaderService} from "./feedreader/feedreader.service";
     providers: [
         DashboardService,
         FeedreaderService,
+        {provide: XSRFStrategy, useValue: new CookieXSRFStrategy('csrftoken', 'X-CSRFToken')},
     ],
     bootstrap: [AppComponent]
 })

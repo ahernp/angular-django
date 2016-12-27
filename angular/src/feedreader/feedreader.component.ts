@@ -146,10 +146,12 @@ export class FeedreaderComponent implements OnInit {
     }
 
     toggleRead(entryId: number): void {
+        this.showSpinner = true;
         this.feedreaderService.toggleRead(entryId);
     }
 
     markAllRead(): void {
+        this.showSpinner = true;
         this.feedreaderService.markAllRead();
     }
 

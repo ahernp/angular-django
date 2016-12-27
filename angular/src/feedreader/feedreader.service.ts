@@ -44,13 +44,23 @@ export class FeedreaderService {
     toggleRead(entryId: number): void {
         let headers = new Headers({'Content-Type': 'application/json'});
         let options = new RequestOptions({headers: headers});
-        this.http.post(`${apiEndpoint}${feedreaderUrl}/toggleread`, {entry_id: entryId}, options).subscribe();
+        this.http.post(`${apiEndpoint}${feedreaderUrl}/toggleread`, {entry_id: entryId}, options)
+            .subscribe(() => {
+                let entry = this.entryCache.filter(entry => entry.id == entryId)[0];
+                entry.readFlag = !entry.readFlag;
+                this.entries$.next(this.entryCache);
+            });
     }
 
     markAllRead(): void {
         let headers = new Headers({'Content-Type': 'application/json'});
         let options = new RequestOptions({headers: headers});
-        this.http.post(`${apiEndpoint}${feedreaderUrl}/markallread`, {}, options).subscribe();
+        this.http.post(`${apiEndpoint}${feedreaderUrl}/markallread`, {}, options)
+            .subscribe(() => {
+                for (let entry of this.entryCache.filter(entry => !entry.readFlag))
+                    entry.readFlag = true;
+                this.entries$.next(this.entryCache);
+            });
     }
 
     refreshCaches(): void {

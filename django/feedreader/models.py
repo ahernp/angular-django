@@ -49,6 +49,12 @@ class Feed(models.Model):
             from feedreader.utils import poll_feed
             poll_feed(self)
 
+    def _get_dictionary(self):
+        return {'feedTitle': self.title,
+                'groupName': self.group.name if self.group else ''}
+
+    dictionary = property(_get_dictionary)
+
 
 class EntryManager(models.Manager):
     def num_unread(self):
@@ -72,6 +78,18 @@ class Entry(models.Model):
 
     def __unicode__(self):
         return self.title
+
+    def _get_dictionary(self):
+        return {'id': self.id,
+                'title': self.title,
+                'link': self.link,
+                'description': self.description,
+                'publishedTime': self.published_time.strftime('%Y-%m-%d %H:%M:%S'),
+                'feedTitle': self.feed.title,
+                'groupName': self.feed.group.name if self.feed.group else '',
+                'readFlag': self.read_flag}
+
+    dictionary = property(_get_dictionary)
 
     objects = models.Manager()
     manager = EntryManager()

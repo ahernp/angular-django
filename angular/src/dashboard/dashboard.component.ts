@@ -7,11 +7,9 @@ import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 import {Dashboard} from './dashboard';
 import {DashboardService} from './dashboard.service';
 
-import {FeedreaderService, feedreaderPollMinute} from "../feedreader/feedreader.service";
+import {FeedreaderService} from "../feedreader/feedreader.service";
 
 import {PageService} from "../pages/page.service";
-
-import {SchedulerService} from "../core/scheduler/scheduler.service";
 
 import {Footer} from "../core/footer/footer";
 
@@ -75,7 +73,6 @@ export class DashboardComponent implements OnInit {
         private dashboardService: DashboardService,
         private feedreaderService: FeedreaderService,
         private pageService: PageService,
-        private schedulerService: SchedulerService,
         private titleService: Title) {
     }
 
@@ -85,9 +82,6 @@ export class DashboardComponent implements OnInit {
         this.populateFooter();
         this.getDashboard();
         this.getCaches();
-        var boundPopulateDashboard = this.dashboardService.populateDashboard.bind(this);
-        this.schedulerService.hourly(feedreaderPollMinute, boundPopulateDashboard);
-
     }
 
     populateHeader() {
@@ -122,6 +116,6 @@ export class DashboardComponent implements OnInit {
 
     onRefresh() {
         this.showSpinner = true;
-        this.dashboardService.populateDashboard();
+        this.dashboardService.initialPopulateDashboard();
     }
 }

@@ -25,7 +25,7 @@ export class DashboardService {
     populateDashboard() {
         this.http.get(`${apiEndpoint}${dashboardUrl}/`)
             .subscribe(response => {
-                this.dashboardCache = response.json() as Dashboard;
+                this.dashboardCache = <Dashboard>response.json();
                 this.dashboard$.next(this.dashboardCache);
             });
     }

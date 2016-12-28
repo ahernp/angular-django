@@ -43,18 +43,10 @@ class Page(models.Model):
         return {'id': self.id,
                 'title': self.title,
                 'url': '/page/%s' % self.slug,
-                'parentName': self.parent.title,
+                'parentId': self.parent_id,
                 'updated': self.updated.strftime('%Y-%m-%d %H:%M:%S'),
                 'published': self.published.strftime('%Y-%m-%d') if self.published else '',
                 'contentType': self.content_type,
                 'content': self.content}
 
     dictionary = property(_get_dictionary)
-
-    def _get_breadcrumb_dictionary(self):
-        return {'title': self.title,
-                'url': '/page/%s' % self.slug,
-                'parentName': self.parent.title,
-                'updated': self.updated.strftime('%Y-%m-%d %H:%M:%S')}
-
-    breadcrumb_dictionary = property(_get_breadcrumb_dictionary)

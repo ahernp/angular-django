@@ -13,7 +13,7 @@ import {Breadcrumb} from '../breadcrumbs/breadcrumb';
             </span>
         </p>
         <ad-page-search></ad-page-search>
-`
+    `
 })
 export class HeaderComponent {
     @Input() breadcrumbs: Breadcrumb[];

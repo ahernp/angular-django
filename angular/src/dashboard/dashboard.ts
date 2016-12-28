@@ -9,6 +9,7 @@ export class LogEntry {
     msg: string;
     datetime: string;
 }
+
 export class Dashboard {
     timeChecked: string;
     hostname: string;

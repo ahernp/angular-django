@@ -45,7 +45,7 @@ export class PageService {
         else
             return this.http.get(`${apiEndpoint}/pages/read/${slug}`)
                 .map((response: Response) => {
-                    let page: Page = response.json() as Page;
+                    let page: Page = <Page>response.json();
                     this.pageCache.push(page);
                     return page;
                 });
@@ -77,10 +77,39 @@ export class PageService {
     cacheAllPages(): void {
         this.http.get(`${apiEndpoint}/pages/all/`)
             .subscribe((response: Response) => {
-                this.pageCache = response.json() as Page[];
+                this.pageCache = <Page[]>response.json();
+                this.populatePageCache();
                 this.pages$.next(this.pageCache);
                 this.populateBreadcrumbCache();
             });
+    }
+
+    populatePageCache() {
+        for (let page of this.pageCache) {
+            if (page.parentId) {
+                let parent = this.pageCache.filter(parent => parent.id == page.parentId)[0];
+                page.parentName = parent.title;
+            }
+            let children = this.pageCache.filter(child => child.parentId == page.id);
+            debugger;
+            page.children = children.map(child => <Breadcrumb>{title: child.title,
+                url: child.url, parentName: child.parentName, updated: child.updated});
+        }
+    }
+
+    populateBreadcrumbCache() {
+        let breadcrumbs: Breadcrumb[] = this.getDynamicPageBreadcrumbs();
+        for (let page of this.pageCache)
+            breadcrumbs.push({
+                title: page.title,
+                url: page.url,
+                published: page.published,
+                updated: page.updated,
+                parentName: page.parentName,
+                externalLinkFlag: false
+            })
+        this.breadcrumbCache = breadcrumbs;
+        this.breadcrumbs$.next(breadcrumbs);
     }
 
     getDynamicPageBreadcrumbs(): Breadcrumb[] {
@@ -99,21 +128,6 @@ export class PageService {
         }
 
         return breadcrumbs;
-    }
-
-    populateBreadcrumbCache() {
-        let breadcrumbs: Breadcrumb[] = this.getDynamicPageBreadcrumbs();
-        for (let page of this.pageCache)
-            breadcrumbs.push({
-                title: page.title,
-                url: page.url,
-                published: page.published,
-                updated: page.updated,
-                parentName: page.parentName,
-                externalLinkFlag: false
-            })
-        this.breadcrumbCache = breadcrumbs;
-        this.breadcrumbs$.next(breadcrumbs);
     }
 
     search(searchString: string): SearchResults {

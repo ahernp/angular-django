@@ -67,12 +67,12 @@ export class FeedreaderService {
         Observable.forkJoin([
             this.http.get(`${apiEndpoint}${feedreaderUrl}/feeds`)
                 .map(res => {
-                    this.feedCache = res.json() as Feed[];
+                    this.feedCache = <Feed[]>res.json();
                     this.feeds$.next(this.feedCache);
                 }),
             this.http.get(`${apiEndpoint}${feedreaderUrl}/entries`)
                 .map(res => {
-                    this.entryCache = res.json() as Entry[];
+                    this.entryCache = <Entry[]>res.json();
                     this.entries$.next(this.entryCache);
                 })
         ]).subscribe()

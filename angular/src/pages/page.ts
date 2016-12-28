@@ -4,6 +4,7 @@ export class Page {
     id: number;
     title: string;
     url: string;
+    parentId: number;
     parentName: string;
     updated: string;
     published: string;

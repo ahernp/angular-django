@@ -1,15 +1,17 @@
 import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 
-import {Dashboard} from './dashboard';
-import {DashboardService} from './dashboard.service';
-
-import {PageService} from "../pages/page.service";
-
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 
-import {FeedreaderService} from "../feedreader/feedreader.service";
+import {Dashboard} from './dashboard';
+import {DashboardService} from './dashboard.service';
+
+import {FeedreaderService, feedreaderPollMinute} from "../feedreader/feedreader.service";
+
+import {PageService} from "../pages/page.service";
+
+import {SchedulerService} from "../core/scheduler/scheduler.service";
 
 import {Footer} from "../core/footer/footer";
 
@@ -69,10 +71,11 @@ export class DashboardComponent implements OnInit {
     showSpinner: Boolean = false;
 
     constructor(
-        private dashboardService: DashboardService,
         private breadcrumbService: BreadcrumbService,
-        private pageService: PageService,
+        private dashboardService: DashboardService,
         private feedreaderService: FeedreaderService,
+        private pageService: PageService,
+        private schedulerService: SchedulerService,
         private titleService: Title) {
     }
 
@@ -82,6 +85,8 @@ export class DashboardComponent implements OnInit {
         this.populateFooter();
         this.getDashboard();
         this.getCaches();
+        var boundPopulateDashboard = this.dashboardService.populateDashboard.bind(this);
+        this.schedulerService.hourly(feedreaderPollMinute, boundPopulateDashboard);
 
     }
 

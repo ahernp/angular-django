@@ -10,6 +10,8 @@ import {SearchResult, SearchResults} from "../core/search/search-results";
 import {Message} from "../core/message/message";
 import {MessageService} from "../core/message/message.service";
 
+import {SchedulerService} from "../core/scheduler/scheduler.service";
+
 import {Entry, Feed} from './feedreader';
 
 import {feedreaderUrl} from "./feedreader.component";
@@ -17,9 +19,7 @@ import {apiEndpoint} from "../app.settings";
 
 import {findStringContext} from "../utilities";
 
-const feedreaderPollMinute: number = 18;
-const microsecondsPerMinute: number = 1000 * 60;
-const microsecondsPerHour: number = microsecondsPerMinute * 60;
+export const feedreaderPollMinute: number = 18;
 
 @Injectable()
 export class FeedreaderService {
@@ -30,10 +30,14 @@ export class FeedreaderService {
     entryCache: Entry[] = [];
     entries$: ReplaySubject<any> = new ReplaySubject(1);
 
-    constructor(private http: Http, private messageService: MessageService) {
+    constructor(
+        private http: Http,
+        private messageService: MessageService,
+        private schedulerService: SchedulerService
+    ) {
         this.feeds$.next([]);
         this.entries$.next([]);
-        this.checkForUpdates();
+        this.initialCheckForUpdates();
     }
 
     getFeeds(): ReplaySubject<any> {
@@ -84,19 +88,10 @@ export class FeedreaderService {
         ]).subscribe()
     }
 
-    checkForUpdates(): void {
+    initialCheckForUpdates(): void {
         this.refreshCaches();
-
-        let now: Date = new Date();
-        let currentMinute: number = now.getUTCMinutes();
-        let initialTimeout = (currentMinute >= feedreaderPollMinute) ?
-            ((60 - (currentMinute - feedreaderPollMinute)) * microsecondsPerMinute) :
-            ((feedreaderPollMinute - currentMinute) * microsecondsPerMinute)
-
-        setTimeout(() => {
-            this.refreshCaches();
-            setInterval(() => this.refreshCaches(), microsecondsPerHour)
-        }, initialTimeout);
+        var boundRefreshCaches = this.refreshCaches.bind(this);
+        this.schedulerService.hourly(feedreaderPollMinute, boundRefreshCaches);
     }
 
     messageUnread() {

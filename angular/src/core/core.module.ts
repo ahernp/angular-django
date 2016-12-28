@@ -15,6 +15,8 @@ import {MarkdownToHtmlPipe} from "./markdown/markdown.pipe";
 import {MessageComponent} from "./message/message.component";
 import {MessageService} from "./message/message.service";
 
+import {SchedulerService} from "./scheduler/scheduler.service";
+
 import {SearchComponent} from "./search/search.component";
 
 import {SpinnerComponent} from "./spinner/spinner.component";
@@ -42,6 +44,7 @@ import {TableComponent} from "./table/table.component";
     providers: [
         BreadcrumbService,
         MessageService,
+        SchedulerService,
     ],
     exports: [
         CommonModule,

@@ -20,8 +20,8 @@ import {adminBreadcrumb, dashboardBreadcrumb, dashboardTitle} from "../app.setti
     template: `
         <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
         <div *ngIf="dashboard"id="content">
-            <h1>Status <span style="font-size: small;">at {{dashboard.timeChecked}}</span></h1>
             <div style="width: 47%; float: left; padding-bottom: 1em; word-wrap: break-word;">
+                <h1>Status <span style="font-size: small;">at {{dashboard.timeChecked}}</span></h1>
                 <p *ngIf="dashboard.hostname"><strong>Hostname:</strong> {{dashboard.hostname}}</p>
                 <h2>Caches</h2>
                 <table>
@@ -33,17 +33,17 @@ import {adminBreadcrumb, dashboardBreadcrumb, dashboardTitle} from "../app.setti
                         <tr *ngIf="numberOfUnreadEntries"><td>Unread Entries</td><td>{{numberOfUnreadEntries}}</td></tr>
                     </tbody>
                 </table>
-                <h2>Settings Flags</h2>
-                <span *ngFor="let flag of dashboard.settingsFlags"
-                    [class.highlight]="flag.actual != flag.expected">
-                        {{flag.name}}: {{flag.actual}}&ensp;
-                </span>
                 <h2>Version Information</h2>
                 <p *ngIf="dashboard.gitVersion"><strong>Most Recent Commit:</strong> {{dashboard.gitVersion}}</p>
                 <p *ngIf="dashboard.pythonPackages"><strong>Python Packages:</strong> {{dashboard.pythonPackages}}</p>
                 <p *ngIf="dashboard.npmPackages"><strong>NPM Packages:</strong> {{dashboard.npmPackages}}</p>
             </div>
             <div style="width:47%; float:left; padding-left: 1em;">
+                <h2>Settings Flags</h2>
+                <span *ngFor="let flag of dashboard.settingsFlags"
+                    [class.highlight]="flag.actual != flag.expected">
+                        {{flag.name}}: {{flag.actual}}&ensp;
+                </span>
                 <h2>Recent Log Entries</h2>
                 <p *ngFor="let entry of dashboard.logEntries">
                     <span [class.highlight]="entry.level == 'ERROR'">

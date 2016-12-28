@@ -11,10 +11,15 @@ import {HeaderComponent} from "./header/header.component";
 
 import {MarkdownComponent} from "./markdown/markdown.component";
 import {MarkdownToHtmlPipe} from "./markdown/markdown.pipe";
-import {SpinnerComponent} from "./spinner/spinner.component";
-import {TableComponent} from "./table/table.component";
+
+import {MessageComponent} from "./message/message.component";
+import {MessageService} from "./message/message.service";
 
 import {SearchComponent} from "./search/search.component";
+
+import {SpinnerComponent} from "./spinner/spinner.component";
+
+import {TableComponent} from "./table/table.component";
 
 @NgModule({
     imports: [
@@ -32,9 +37,11 @@ import {SearchComponent} from "./search/search.component";
         TableComponent,
         MarkdownComponent,
         MarkdownToHtmlPipe,
+        MessageComponent,
     ],
     providers: [
         BreadcrumbService,
+        MessageService,
     ],
     exports: [
         CommonModule,

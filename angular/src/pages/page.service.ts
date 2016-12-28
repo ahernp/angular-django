@@ -91,7 +91,6 @@ export class PageService {
                 page.parentName = parent.title;
             }
             let children = this.pageCache.filter(child => child.parentId == page.id);
-            debugger;
             page.children = children.map(child => <Breadcrumb>{title: child.title,
                 url: child.url, parentName: child.parentName, updated: child.updated});
         }

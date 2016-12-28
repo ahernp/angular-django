@@ -7,6 +7,9 @@ import {ReplaySubject} from "rxjs/ReplaySubject";
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {SearchResult, SearchResults} from "../core/search/search-results";
 
+import {Message} from "../core/message/message";
+import {MessageService} from "../core/message/message.service";
+
 import {Entry, Feed} from './feedreader';
 
 import {feedreaderUrl} from "./feedreader.component";
@@ -27,7 +30,7 @@ export class FeedreaderService {
     entryCache: Entry[] = [];
     entries$: ReplaySubject<any> = new ReplaySubject(1);
 
-    constructor(private http:Http) {
+    constructor(private http: Http, private messageService: MessageService) {
         this.feeds$.next([]);
         this.entries$.next([]);
         this.checkForUpdates();
@@ -49,6 +52,7 @@ export class FeedreaderService {
                 let entry = this.entryCache.filter(entry => entry.id == entryId)[0];
                 entry.readFlag = !entry.readFlag;
                 this.entries$.next(this.entryCache);
+                this.messageUnread();
             });
     }
 
@@ -60,6 +64,7 @@ export class FeedreaderService {
                 for (let entry of this.entryCache.filter(entry => !entry.readFlag))
                     entry.readFlag = true;
                 this.entries$.next(this.entryCache);
+                this.messageUnread();
             });
     }
 
@@ -74,6 +79,7 @@ export class FeedreaderService {
                 .map(res => {
                     this.entryCache = <Entry[]>res.json();
                     this.entries$.next(this.entryCache);
+                    this.messageUnread();
                 })
         ]).subscribe()
     }
@@ -91,6 +97,16 @@ export class FeedreaderService {
             this.refreshCaches();
             setInterval(() => this.refreshCaches(), microsecondsPerHour)
         }, initialTimeout);
+    }
+
+    messageUnread() {
+        this.messageService.clearMessagesBySource('feedreader');
+        let unread: Entry[] = this.entryCache.filter(entry => !entry.readFlag);
+        if (unread.length > 0)
+            this.messageService.addMessage(<Message>{type: 'info', source: 'feedreader',
+                text: unread.length == 1
+                    ? '1 unread Feedreader entry'
+                    : `${unread.length} unread Feedreader entries`});
     }
 
     search(searchString: string): SearchResults {

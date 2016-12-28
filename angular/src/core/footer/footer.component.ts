@@ -14,7 +14,16 @@ import {Footer} from './footer';
             </span>
             <span *ngIf="footer.refreshFlag" class="ad-control" (click)="refresh()">Refresh</span>
         </p>
-    `
+        <ad-message></ad-message>
+    `,
+    styles: [`
+        ad-message {
+            position: absolute;
+            right: 10px;
+            bottom: 0px;
+            width: 50%;
+        }
+    `]
 })
 export class FooterComponent implements OnInit {
     @Input() footer: Footer;

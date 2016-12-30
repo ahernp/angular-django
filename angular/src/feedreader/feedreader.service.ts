@@ -7,7 +7,7 @@ import {ReplaySubject} from "rxjs/ReplaySubject";
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {SearchResult, SearchResults} from "../core/search/search-results";
 
-import {Message} from "../core/message/message";
+import {Message, messageTypeInfo, messageTypeError} from "../core/message/message";
 import {MessageService} from "../core/message/message.service";
 
 import {SchedulerService} from "../core/scheduler/scheduler.service";
@@ -20,6 +20,7 @@ import {apiEndpoint} from "../app.settings";
 import {findStringContext} from "../utilities";
 
 export const feedreaderPollMinute: number = 18;
+const messageSource: string = 'feedreader';
 
 @Injectable()
 export class FeedreaderService {
@@ -49,27 +50,43 @@ export class FeedreaderService {
     }
 
     toggleRead(entryId: number): void {
-        let headers = new Headers({'Content-Type': 'application/json'});
-        let options = new RequestOptions({headers: headers});
-        this.http.post(`${apiEndpoint}${feedreaderUrl}/toggleread`, {entry_id: entryId}, options)
-            .subscribe(() => {
-                let entry = this.entryCache.filter(entry => entry.id == entryId)[0];
-                entry.readFlag = !entry.readFlag;
-                this.entries$.next(this.entryCache);
-                this.messageUnread();
-            });
+        let headers: Headers = new Headers({'Content-Type': 'application/json'});
+        let options: RequestOptions = new RequestOptions({headers: headers});
+        let url: string = `${apiEndpoint}${feedreaderUrl}/toggleread`;
+        this.http.post(url, {entry_id: entryId}, options)
+            .subscribe(
+                () => {
+                    let entry = this.entryCache.filter(entry => entry.id == entryId)[0];
+                    entry.readFlag = !entry.readFlag;
+                    this.entries$.next(this.entryCache);
+                    this.messageUnread();
+                },
+                error => {
+                    this.messageService.addMessage(<Message>{type: messageTypeError, source: messageSource,
+                        text: `Feedreader error: From ${url}; Status Code ${error.status}; ${error.statusText}`});
+                    console.log(error);
+                }
+            );
     }
 
     markAllRead(): void {
-        let headers = new Headers({'Content-Type': 'application/json'});
-        let options = new RequestOptions({headers: headers});
-        this.http.post(`${apiEndpoint}${feedreaderUrl}/markallread`, {}, options)
-            .subscribe(() => {
-                for (let entry of this.entryCache.filter(entry => !entry.readFlag))
-                    entry.readFlag = true;
-                this.entries$.next(this.entryCache);
-                this.messageUnread();
-            });
+        let headers: Headers = new Headers({'Content-Type': 'application/json'});
+        let options: RequestOptions = new RequestOptions({headers: headers});
+        let url: string = `${apiEndpoint}${feedreaderUrl}/markallread`;
+        this.http.post(url, {}, options)
+            .subscribe(
+                () => {
+                    for (let entry of this.entryCache.filter(entry => !entry.readFlag))
+                        entry.readFlag = true;
+                    this.entries$.next(this.entryCache);
+                    this.messageUnread();
+                },
+                error => {
+                    this.messageService.addMessage(<Message>{type: messageTypeError, source: messageSource,
+                        text: `Feedreader error: From ${url}; Status Code ${error.status}; ${error.statusText}`});
+                    console.log(error);
+                }
+            );
     }
 
     refreshCaches(): void {
@@ -85,7 +102,14 @@ export class FeedreaderService {
                     this.entries$.next(this.entryCache);
                     this.messageUnread();
                 })
-        ]).subscribe()
+        ]).subscribe(
+            () => {},
+            error => {
+                this.messageService.addMessage(<Message>{type: messageTypeError, source: messageSource,
+                    text: `Feedreader error; Status Code ${error.status}; ${error.statusText}`});
+                console.log(error);
+            }
+        )
     }
 
     initialCheckForUpdates(): void {
@@ -95,10 +119,10 @@ export class FeedreaderService {
     }
 
     messageUnread() {
-        this.messageService.clearMessagesBySource('feedreader');
+        this.messageService.clearMessagesBySource(messageSource);
         let unread: Entry[] = this.entryCache.filter(entry => !entry.readFlag);
         if (unread.length > 0)
-            this.messageService.addMessage(<Message>{type: 'info', source: 'feedreader',
+            this.messageService.addMessage(<Message>{type: messageTypeInfo, source: messageSource,
                 text: unread.length == 1
                     ? '1 unread Feedreader entry'
                     : `${unread.length} unread Feedreader entries`});

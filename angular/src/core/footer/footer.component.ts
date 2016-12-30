@@ -19,9 +19,13 @@ import {Footer} from './footer';
     styles: [`
         ad-message {
             position: absolute;
+            z-index: 2;
             right: 10px;
             bottom: 0px;
-            width: 50%;
+            max-width: 50%;
+            background-color: white;
+            max-height: 50vh;
+            overflow: auto;
         }
     `]
 })

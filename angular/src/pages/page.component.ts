@@ -5,8 +5,10 @@ import {Title} from '@angular/platform-browser';
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 
+import {MessageService} from "../core/message/message.service";
+
 import {Page} from './page';
-import {PageService} from './page.service';
+import {PageService, messageSource} from './page.service';
 
 import {Footer} from "../core/footer/footer";
 
@@ -48,6 +50,7 @@ export class PageComponent implements OnInit {
     constructor(
         private pageService: PageService,
         private breadcrumbService: BreadcrumbService,
+        private messageService: MessageService,
         private route: ActivatedRoute,
         private titleService: Title) {
     }
@@ -56,7 +59,15 @@ export class PageComponent implements OnInit {
         this.route.params
             .map(params => params['slug'] ? params['slug'] : rootSlug)
             .switchMap(slug => this.pageService.getPage(slug))
-            .subscribe(page => this.populatePage(page));
+            .subscribe(
+                page => this.populatePage(page),
+                error => {
+                    this.messageService.addErrorMessage(
+                        messageSource,
+                        `Page error: Status Code ${error.status}; ${error.statusText}`);
+                    console.log(error);
+                }
+            );
     }
 
     populatePage(page: Page): void {

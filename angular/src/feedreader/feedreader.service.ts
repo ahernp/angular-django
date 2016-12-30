@@ -7,7 +7,6 @@ import {ReplaySubject} from "rxjs/ReplaySubject";
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {SearchResult, SearchResults} from "../core/search/search-results";
 
-import {Message, messageTypeInfo, messageTypeError} from "../core/message/message";
 import {MessageService} from "../core/message/message.service";
 
 import {SchedulerService} from "../core/scheduler/scheduler.service";
@@ -20,7 +19,7 @@ import {apiEndpoint} from "../app.settings";
 import {findStringContext} from "../utilities";
 
 export const feedreaderPollMinute: number = 18;
-const messageSource: string = 'feedreader';
+const messageSource: string = 'Feedreader';
 
 @Injectable()
 export class FeedreaderService {
@@ -62,8 +61,9 @@ export class FeedreaderService {
                     this.messageUnread();
                 },
                 error => {
-                    this.messageService.addMessage(<Message>{type: messageTypeError, source: messageSource,
-                        text: `Feedreader error: From ${url}; Status Code ${error.status}; ${error.statusText}`});
+                    this.messageService.addErrorMessage(
+                        messageSource,
+                        `${messageSource} error: From ${url}; Status Code ${error.status}; ${error.statusText}`);
                     console.log(error);
                 }
             );
@@ -82,8 +82,9 @@ export class FeedreaderService {
                     this.messageUnread();
                 },
                 error => {
-                    this.messageService.addMessage(<Message>{type: messageTypeError, source: messageSource,
-                        text: `Feedreader error: From ${url}; Status Code ${error.status}; ${error.statusText}`});
+                    this.messageService.addErrorMessage(
+                        messageSource,
+                        `${messageSource} error: From ${url}; Status Code ${error.status}; ${error.statusText}`);
                     console.log(error);
                 }
             );
@@ -105,8 +106,9 @@ export class FeedreaderService {
         ]).subscribe(
             () => {},
             error => {
-                this.messageService.addMessage(<Message>{type: messageTypeError, source: messageSource,
-                    text: `Feedreader error; Status Code ${error.status}; ${error.statusText}`});
+                this.messageService.addErrorMessage(
+                    messageSource,
+                    `${messageSource} error; Status Code ${error.status}; ${error.statusText}`);
                 console.log(error);
             }
         )
@@ -122,10 +124,11 @@ export class FeedreaderService {
         this.messageService.clearMessagesBySource(messageSource);
         let unread: Entry[] = this.entryCache.filter(entry => !entry.readFlag);
         if (unread.length > 0)
-            this.messageService.addMessage(<Message>{type: messageTypeInfo, source: messageSource,
-                text: unread.length == 1
+            this.messageService.addInfoMessage(
+                messageSource,
+                unread.length == 1
                     ? '1 unread Feedreader entry'
-                    : `${unread.length} unread Feedreader entries`});
+                    : `${unread.length} unread Feedreader entries`);
     }
 
     search(searchString: string): SearchResults {

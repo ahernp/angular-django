@@ -4,11 +4,13 @@ import {Http, Response} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import {ReplaySubject} from "rxjs/ReplaySubject";
 
+import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
+
 import {Page} from './page';
 
 import {SearchResult, SearchResults} from "../core/search/search-results";
 
-import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
+import {MessageService} from "../core/message/message.service";
 
 import {findStringContext} from "../utilities";
 
@@ -22,6 +24,7 @@ import {feedreaderBreadcrumb} from "../feedreader/feedreader.component";
 import {timersBreadcrumb} from "../timers/timers.component";
 
 const pageUrl: string = '/page';
+export const messageSource: string = 'Page';
 
 @Injectable()
 export class PageService {
@@ -32,7 +35,10 @@ export class PageService {
     breadcrumbCache: Breadcrumb[] = [];
     breadcrumbs$: ReplaySubject<any> = new ReplaySubject(1);
 
-    constructor(private http:Http) {
+    constructor(
+        private http: Http,
+        private messageService: MessageService
+    ) {
         this.pages$.next([]);
         this.breadcrumbs$.next([]);
         this.cacheAllPages();
@@ -75,13 +81,22 @@ export class PageService {
     }
 
     cacheAllPages(): void {
-        this.http.get(`${apiEndpoint}/pages/all/`)
-            .subscribe((response: Response) => {
-                this.pageCache = <Page[]>response.json();
-                this.populatePageCache();
-                this.pages$.next(this.pageCache);
-                this.populateBreadcrumbCache();
-            });
+        let url: string = `${apiEndpoint}/pages/all/`;
+        this.http.get(url)
+            .subscribe(
+                (response: Response) => {
+                    this.pageCache = <Page[]>response.json();
+                    this.populatePageCache();
+                    this.pages$.next(this.pageCache);
+                    this.populateBreadcrumbCache();
+                },
+                error => {
+                    this.messageService.addErrorMessage(
+                        messageSource,
+                        `${messageSource} error: From ${url}; Status Code ${error.status}; ${error.statusText}`);
+                    console.log(error);
+                }
+            );
     }
 
     populatePageCache() {

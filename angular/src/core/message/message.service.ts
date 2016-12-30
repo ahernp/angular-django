@@ -4,6 +4,9 @@ import {ReplaySubject} from "rxjs/ReplaySubject";
 
 import {Message} from './message';
 
+export const messageTypeError: string = 'error';
+export const messageTypeInfo: string = 'info';
+
 @Injectable()
 export class MessageService {
     messageCache: Message[] = [];
@@ -17,8 +20,13 @@ export class MessageService {
         return this.messages$;
     }
 
-    addMessage(newMessage: Message): void {
-        this.messageCache.push(newMessage);
+    addErrorMessage(source: string, text: string): void {
+        this.messageCache.push(<Message>{type: messageTypeError, source: source, text: text});
+        this.messages$.next(this.messageCache);
+    }
+
+    addInfoMessage(source: string, text: string): void {
+        this.messageCache.push(<Message>{type: messageTypeInfo, source: source, text: text});
         this.messages$.next(this.messageCache);
     }
 

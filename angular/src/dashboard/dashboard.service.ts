@@ -12,7 +12,8 @@ import {SchedulerService} from "../core/scheduler/scheduler.service";
 import {apiEndpoint, dashboardUrl} from "../app.settings";
 
 import {feedreaderPollMinute} from "../feedreader/feedreader.service";
-import {Message, messageTypeError} from "../core/message/message";
+
+const messageSource: string = 'Dashboard';
 
 @Injectable()
 export class DashboardService {
@@ -42,8 +43,9 @@ export class DashboardService {
                     this.dashboard$.next(this.dashboardCache);
                 },
                 error => {
-                    this.messageService.addMessage(<Message>{type: messageTypeError, source: 'dashboard',
-                        text: `Bad response from ${url}; Status Code ${error.status}; ${error.statusText}`});
+                    this.messageService.addErrorMessage(
+                        messageSource,
+                        `${messageSource} Error: Url ${url}; Status Code ${error.status}; ${error.statusText}`);
                     console.log(error);
                 }
             );

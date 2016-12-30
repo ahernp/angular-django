@@ -29,6 +29,8 @@ export const messageSource: string = 'Page';
 @Injectable()
 export class PageService {
 
+    currentPage$: ReplaySubject<any> = new ReplaySubject(1);
+
     pageCache: Page[] = [];
     pages$: ReplaySubject<any> = new ReplaySubject(1);
 
@@ -45,16 +47,26 @@ export class PageService {
     }
 
     getPage(slug:string): Observable<Page> {
+        let url = `${apiEndpoint}/pages/read/${slug}`;
         let pages = this.pageCache.filter(page => page.url == `${pageUrl}/${slug}`);
         if (pages.length > 0)
-            return Observable.of(pages[0]);
+            this.currentPage$.next(pages[0]);
         else
-            return this.http.get(`${apiEndpoint}/pages/read/${slug}`)
-                .map((response: Response) => {
-                    let page: Page = <Page>response.json();
-                    this.pageCache.push(page);
-                    return page;
-                });
+            this.http.get(url)
+                .subscribe(
+                    (response: Response) => {
+                        let page: Page = <Page>response.json();
+                        this.pageCache.push(page);
+                        this.currentPage$.next(page);
+                    },
+                    error => {
+                        this.messageService.addErrorMessage(
+                            messageSource,
+                            `${messageSource} error: From ${url}; Status Code ${error.status}; ${error.statusText}`);
+                        console.log(error);
+                    }
+                );
+        return this.currentPage$;
     }
 
     getPages(): ReplaySubject<any> {

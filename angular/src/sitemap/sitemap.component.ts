@@ -81,8 +81,7 @@ export class SitemapComponent implements OnInit {
             this.titleService.setTitle(sitemapTitle);
         }
         else {
-            var parent = this.pageService
-                .getPage(this.parent_slug)
+            var parent = this.pageService.getPage(this.parent_slug)
                 .subscribe(page => {
                     this.populateHeader(page.title);
                     this.title = page.title;

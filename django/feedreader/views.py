@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 import json
 
 from django.conf import settings
-from django.contrib.auth.decorators import login_required
+from django.core.exceptions import PermissionDenied
 from django.http import HttpResponse
 
 from .models import Entry, Feed
@@ -27,8 +27,10 @@ def get_entries(request):
     return HttpResponse(data, content_type='application/json')
 
 
-@login_required
 def toggle_read(request):
+    if not request.user.is_authenticated:
+        raise PermissionDenied
+
     json_data=json.loads(request.body)
 
     if 'entry_id' in json_data:
@@ -38,10 +40,14 @@ def toggle_read(request):
             entry.save()
         except Entry.DoesNotExist:
             pass
+
     return HttpResponse('')
 
 
-@login_required
 def mark_all_read(request):
+    if not request.user.is_authenticated:
+        raise PermissionDenied
+
     Entry.objects.filter(read_flag=False).update(read_flag=True)
+
     return HttpResponse('')

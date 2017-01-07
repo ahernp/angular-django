@@ -136,8 +136,10 @@ export class FeedreaderComponent implements OnInit {
                         this.showReadEntries = true;
                         this.unreadEntriesFound = false;
                     }
-                    else
+                    else {
+                        this.showReadEntries = false;
                         this.unreadEntriesFound = true;
+                    }
                     this.populatePage();
                     this.showSpinner = false;
                 },

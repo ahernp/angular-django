@@ -1,6 +1,6 @@
 import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 
 import {AuthService} from "./auth/auth.service";
@@ -29,8 +29,9 @@ import {TableComponent} from "./table/table.component";
 @NgModule({
     imports: [
         CommonModule,
-        RouterModule,
         FormsModule,
+        ReactiveFormsModule,
+        RouterModule,
     ],
     declarations: [
         BreadcrumbComponent,

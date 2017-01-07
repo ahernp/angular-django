@@ -1,11 +1,14 @@
 import {Injectable} from '@angular/core';
-import {Http} from '@angular/http';
+import {Http, Headers, RequestOptions} from '@angular/http';
 
 import {ReplaySubject} from "rxjs/ReplaySubject";
 
+import {MessageService} from "../message/message.service";
+
 import {apiEndpoint} from "../../app.settings";
 
-const checkLoggedInUrl: string = '/core/checkloggedin';
+const coreUrl: string = '/core';
+const messageSource: string = 'Auth';
 
 @Injectable()
 export class AuthService {
@@ -13,7 +16,8 @@ export class AuthService {
     loggedInStatus$: ReplaySubject<any> = new ReplaySubject(1);
 
     constructor(
-        private http: Http
+        private http: Http,
+        private messageService: MessageService
     ) {
         this.loggedInStatus$.next(false);
         this.checkLoggedIn();
@@ -24,7 +28,7 @@ export class AuthService {
     }
 
     checkLoggedIn() {
-        let url = `${apiEndpoint}${checkLoggedInUrl}/`;
+        let url = `${apiEndpoint}${coreUrl}/checkloggedin`;
         this.http.get(url)
             .subscribe(
                 response => {
@@ -32,6 +36,41 @@ export class AuthService {
                 },
                 error => {
                     this.loggedInStatus$.next(false);
+                }
+            );
+    }
+
+    login(username: string, password: string): void {
+        let url = `${apiEndpoint}${coreUrl}/login`;
+        let headers: Headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded'});
+        let options: RequestOptions = new RequestOptions({headers: headers});
+        let credentials = 'username=' + username + '&password=' + encodeURIComponent(password);
+
+        this.http.post(url, credentials, options)
+            .subscribe(
+                () => this.checkLoggedIn(),
+                error => {
+                    this.messageService.addErrorMessage(
+                        messageSource,
+                        `${messageSource} login error: Url ${url}; Status Code ${error.status}; ${error.statusText}`);
+                    console.log(error);
+                }
+            );
+    }
+
+    logout(): void {
+        let url = `${apiEndpoint}${coreUrl}/logout`;
+        let headers: Headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded'});
+        let options: RequestOptions = new RequestOptions({headers: headers});
+
+        this.http.post(url, {}, options)
+            .subscribe(
+                () => this.checkLoggedIn(),
+                error => {
+                    this.messageService.addErrorMessage(
+                        messageSource,
+                        `${messageSource} logout error: Url ${url}; Status Code ${error.status}; ${error.statusText}`);
+                    console.log(error);
                 }
             );
     }

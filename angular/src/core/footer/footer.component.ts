@@ -13,6 +13,7 @@ import {Footer} from './footer';
             <span *ngFor="let breadcrumb of footer.breadcrumbs">
                 <ad-breadcrumb [breadcrumb]="breadcrumb"></ad-breadcrumb>
             </span>
+            <span *ngIf="loggedIn" class="ad-control" (click)="logout()">Login</span>
             <span *ngIf="!loggedIn" class="ad-control" (click)="toggleLogin()">Login</span>
             <ad-login *ngIf="showLogin"></ad-login>
             <span *ngIf="footer.sourceFlag" class="ad-control" (click)="toggleSource()">Source</span>
@@ -65,6 +66,10 @@ export class FooterComponent implements OnInit {
 
     toggleLogin() {
         this.showLogin = !this.showLogin;
+    }
+
+    logout() {
+        this.authService.logout();
     }
 
     toggleSource() {

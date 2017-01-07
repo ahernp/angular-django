@@ -55,7 +55,7 @@ export class FooterComponent implements OnInit {
 
         let toDateTimeString = (date: Date): string => '' +
             date.getFullYear() + '-' +
-            leadingZero(date.getUTCMonth()) + '-' +
+            leadingZero(date.getUTCMonth()+1) + '-' +
             leadingZero(date.getUTCDate()) + ' ' +
             leadingZero(date.getUTCHours()) + ':' +
             leadingZero(date.getUTCMinutes()) + ':' +

@@ -1,5 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
+import {AuthService} from "../auth/auth.service";
+
 import {Footer} from './footer';
 
 @Component({
@@ -11,6 +13,7 @@ import {Footer} from './footer';
             <span *ngFor="let breadcrumb of footer.breadcrumbs">
                 <ad-breadcrumb [breadcrumb]="breadcrumb"></ad-breadcrumb>
             </span>
+            <span *ngIf="!loggedIn">Login</span>
             <span *ngIf="footer.sourceFlag" class="ad-control" (click)="toggleSource()">Source</span>
             <span *ngIf="footer.refreshFlag" class="ad-control" (click)="refresh()">Refresh</span>
         </p>
@@ -36,8 +39,18 @@ export class FooterComponent implements OnInit {
 
     now: string;
     showSource: boolean = false;
+    loggedIn: Boolean;
+
+    constructor(
+        private authService: AuthService) {
+    }
 
     ngOnInit(): void {
+        this.authService.getLoggedInStatus().subscribe(loggedInFlag => {
+            console.log(loggedInFlag);
+            this.loggedIn = loggedInFlag
+        });
+
         let leadingZero = (amount: number): string => amount < 10 ? `0${amount}` : `${amount}`;
 
         let toDateTimeString = (date: Date): string => '' +

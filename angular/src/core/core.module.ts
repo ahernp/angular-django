@@ -3,6 +3,8 @@ import {CommonModule} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 
+import {AuthService} from "./auth/auth.service";
+
 import {BreadcrumbComponent} from "./breadcrumbs/breadcrumb.component";
 import {BreadcrumbService} from "./breadcrumbs/breadcrumb.service";
 
@@ -42,6 +44,7 @@ import {TableComponent} from "./table/table.component";
         MessageComponent,
     ],
     providers: [
+        AuthService,
         BreadcrumbService,
         MessageService,
         SchedulerService,

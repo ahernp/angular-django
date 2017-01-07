@@ -5,8 +5,6 @@ import {Title} from '@angular/platform-browser';
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 
-import {MessageService} from "../core/message/message.service";
-
 import {Page} from './page';
 import {PageService} from './page.service';
 
@@ -50,7 +48,6 @@ export class PageComponent implements OnInit {
     constructor(
         private pageService: PageService,
         private breadcrumbService: BreadcrumbService,
-        private messageService: MessageService,
         private route: ActivatedRoute,
         private titleService: Title) {
     }

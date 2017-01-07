@@ -4,6 +4,7 @@ import {FormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 
 import {AuthService} from "./auth/auth.service";
+import {LoginComponent} from "./auth/login.component";
 
 import {BreadcrumbComponent} from "./breadcrumbs/breadcrumb.component";
 import {BreadcrumbService} from "./breadcrumbs/breadcrumb.service";
@@ -39,6 +40,7 @@ import {TableComponent} from "./table/table.component";
         SpinnerComponent,
         SearchComponent,
         TableComponent,
+        LoginComponent,
         MarkdownComponent,
         MarkdownToHtmlPipe,
         MessageComponent,

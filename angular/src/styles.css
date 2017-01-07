@@ -56,6 +56,8 @@ button {
     color: #fff;
     background-color: #046;
     font-size: 1em;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 .ad-control {

@@ -11,7 +11,6 @@ def check_logged_in(request):
 
 
 def do_login(request):
-    print(request.POST)
     username = request.POST.get(u'username')
     password = request.POST.get(u'password')
 
@@ -25,3 +24,4 @@ def do_login(request):
 
 def do_logout(request):
     logout(request)
+    return HttpResponse('')

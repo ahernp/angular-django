@@ -16,33 +16,45 @@ export class TimerComponent implements OnInit {
     targetTime: Date;
     timeDiff: string;
 
-    calcTimeDifference(): void {
-        var timeDiff: string = '';
-        var now: Date = new Date();
+    getTimeDifference(): void {
+        let timeDiff: string = '';
+        let now: Date = new Date();
 
-        var fromTime: Date = (now < this.targetTime) ? now : this.targetTime;
-        var toTime: Date = (now > this.targetTime) ? now : this.targetTime;
+        let fromTime: Date = (now < this.targetTime) ? now : this.targetTime;
+        let toTime: Date = (now > this.targetTime) ? now : this.targetTime;
 
-        var fromYear: number = fromTime.getUTCFullYear();
-        var toYear: number = toTime.getUTCFullYear();
-        var yearDiff = toYear - fromYear;
+        this.timeDiff = calcTimeDifference(fromTime, toTime);
+    }
 
-        var fromMonth: number = fromTime.getUTCMonth() + 1;
-        var toMonth: number = toTime.getUTCMonth() + 1;
+    ngOnInit(): void {
+        this.targetTime = new Date(this.targetTimeString);
+        this.getTimeDifference();
+        setInterval(() => this.getTimeDifference(), 1000);
+    }
+}
 
-        var fromMonthDay: number = fromTime.getUTCDate();
-        var toMonthDay: number = toTime.getUTCDate();
+function calcTimeDifference(fromTime: Date, toTime: Date): string {
 
-        var fromHour: number = fromTime.getUTCHours();
-        var toHour: number = toTime.getUTCHours();
+        let fromYear: number = fromTime.getUTCFullYear();
+        let toYear: number = toTime.getUTCFullYear();
+        let yearDiff = toYear - fromYear;
 
-        var fromMinute: number = fromTime.getUTCMinutes();
-        var toMinute: number = toTime.getUTCMinutes();
+        let fromMonth: number = fromTime.getUTCMonth() + 1;
+        let toMonth: number = toTime.getUTCMonth() + 1;
 
-        var fromSecond: number = fromTime.getUTCSeconds();
-        var toSecond: number = toTime.getUTCSeconds();
+        let fromMonthDay: number = fromTime.getUTCDate();
+        let toMonthDay: number = toTime.getUTCDate();
 
-        var fromTimeLaterInYear: boolean = (fromMonth > toMonth ||
+        let fromHour: number = fromTime.getUTCHours();
+        let toHour: number = toTime.getUTCHours();
+
+        let fromMinute: number = fromTime.getUTCMinutes();
+        let toMinute: number = toTime.getUTCMinutes();
+
+        let fromSecond: number = fromTime.getUTCSeconds();
+        let toSecond: number = toTime.getUTCSeconds();
+
+        let fromTimeLaterInYear: boolean = (fromMonth > toMonth ||
             (fromMonth == toMonth && fromMonthDay > toMonthDay) ||
             (fromMonth == toMonth && fromMonthDay == toMonthDay && fromHour > toHour) ||
             (fromMonth == toMonth && fromMonthDay == toMonthDay && fromHour == toHour && fromMinute > toMinute) ||
@@ -55,23 +67,23 @@ export class TimerComponent implements OnInit {
         else
             var monthDiff: number = toMonth - fromMonth;
 
-        var fromTimeLaterInMonth: boolean = (fromMonthDay > toMonthDay ||
+        let fromTimeLaterInMonth: boolean = (fromMonthDay > toMonthDay ||
             (fromMonthDay == toMonthDay && fromHour > toHour) ||
             (fromMonthDay == toMonthDay && fromHour == toHour && fromMinute > toMinute) ||
             (fromMonthDay == toMonthDay && fromHour == toHour && fromMinute == toMinute && fromSecond > toSecond));
 
         if (fromTimeLaterInMonth)
             monthDiff -= 1;
-        var fromYearWithinOneMonth = (fromTimeLaterInMonth && toMonth == 1) ? toYear - 1 : toYear;
-        var fromMonthWithinOneMonth = (fromMonth + monthDiff - 1) % 12;
-        var daysInMonth = (year: number, month: number): number => new Date(year, month, 0).getDate();
-        var fromMonthWithinOneMonthEnd: number = daysInMonth(
+        let fromYearWithinOneMonth = (fromTimeLaterInMonth && toMonth == 1) ? toYear - 1 : toYear;
+        let fromMonthWithinOneMonth = (fromMonth + monthDiff - 1) % 12;
+        let daysInMonth = (year: number, month: number): number => new Date(year, month, 0).getDate();
+        let fromMonthWithinOneMonthEnd: number = daysInMonth(
             fromYearWithinOneMonth,
             (fromMonthWithinOneMonth == 12) ? 1 : fromMonthWithinOneMonth);
         if (fromMonthDay > fromMonthWithinOneMonthEnd)
             fromMonthDay = fromMonthWithinOneMonthEnd;
 
-        var fromTimeWithinOneMonth: Date = new Date(Date.UTC(
+        let fromTimeWithinOneMonth: Date = new Date(Date.UTC(
             fromYearWithinOneMonth,
             fromMonthWithinOneMonth,
             fromMonthDay,
@@ -79,24 +91,24 @@ export class TimerComponent implements OnInit {
             fromMinute,
             fromSecond));
 
-        var difference: number = toTime.valueOf() - fromTimeWithinOneMonth.valueOf();
+        let difference: number = toTime.valueOf() - fromTimeWithinOneMonth.valueOf();
 
-        var weekDiff: number = Math.floor(difference / week);
+        let weekDiff: number = Math.floor(difference / week);
         difference = difference % week;
 
-        var dayDiff: number = Math.floor(difference / day);
+        let dayDiff: number = Math.floor(difference / day);
         difference = difference % day;
 
-        var hourDiff: number = Math.floor(difference / hour);
+        let hourDiff: number = Math.floor(difference / hour);
         difference = difference % hour;
 
-        var minuteDiff: number = Math.floor(difference / minute);
+        let minuteDiff: number = Math.floor(difference / minute);
         difference = difference % minute;
 
-        var secondDiff: number = Math.floor(difference / second);
+        let secondDiff: number = Math.floor(difference / second);
 
-        var addDiffString = (difference: number, label: string): string => {
-            var timeDiff: string = '';
+        let addDiffString = (difference: number, label: string): string => {
+            let timeDiff: string = '';
             if (difference > 0) {
                 timeDiff = ', ' + difference + ' ' + label;
                 if (difference > 1)
@@ -105,7 +117,7 @@ export class TimerComponent implements OnInit {
             return timeDiff
         };
 
-        var timeDiff: string = '';
+        let timeDiff: string = '';
 
         timeDiff += addDiffString(yearDiff, 'year');
         timeDiff += addDiffString(monthDiff, 'month');
@@ -115,12 +127,5 @@ export class TimerComponent implements OnInit {
         timeDiff += addDiffString(minuteDiff, 'minute');
         timeDiff += addDiffString(secondDiff, 'second');
 
-        this.timeDiff = timeDiff.substring(2);
+        return timeDiff.substring(2);
     }
-
-    ngOnInit(): void {
-        this.targetTime = new Date(this.targetTimeString);
-        this.calcTimeDifference();
-        setInterval(() => this.calcTimeDifference(), 1000);
-    }
-}

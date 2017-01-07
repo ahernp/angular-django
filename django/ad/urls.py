@@ -9,6 +9,7 @@ from pages.views import HomePageView
 urlpatterns = [
     url(r'^$', HomePageView.as_view(), name='homepage'),
     url(r'^admin/', admin.site.urls),
+    url(r'^core/', include('core.urls')),
     url(r'^api/dashboard/', include('dashboard.urls')),
     url(r'^api/feedreader/', include('feedreader.urls')),
     url(r'^api/pages/', include('pages.urls')),

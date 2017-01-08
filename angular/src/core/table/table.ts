@@ -1,3 +1,10 @@
+const sizeMultiplier: any = {
+    KB: 1000,
+    MB: 1000000,
+    GB: 1000000000
+};
+const sizeRegExp: RegExp = /^\d*\.?\d+(KB|MB|GB)$/i;
+
 export class Table {
     public columnHeadings: string[];
     private rows: string[][];
@@ -22,19 +29,40 @@ export class Table {
     }
 
     public sortRows(index: number): void {
-        var sortColumn: number = index;
+        let sortColumn: number = index;
         var self: Table = this;
+
+        let calcSize = (size: string): number => {
+            let amountLength: number = size.length - 2;
+            let sizeAmount: string = size.substring(0, amountLength);
+            let sizeUnit: string = size.substring(amountLength);
+            let numericSize: number = parseFloat(sizeAmount) * sizeMultiplier[sizeUnit.toUpperCase()];
+            return numericSize;
+        };
+
         this.rows.sort((rowA: string[], rowB: string[]): number => {
-            let valueA = rowA[sortColumn] == undefined ? '' : rowA[sortColumn].toLocaleLowerCase();
-            let valueB = rowB[sortColumn] == undefined ? '' : rowB[sortColumn].toLocaleLowerCase();
-            if (valueA == valueB)
-                return 0;
-            else
-                if (self.sortOrders[sortColumn])
+            debugger;
+            if (sizeRegExp.test(rowA[sortColumn]) && sizeRegExp.test(rowB[sortColumn])) {
+                let valueA: number = calcSize(rowA[sortColumn]);
+                let valueB: number = calcSize(rowB[sortColumn]);
+                if (valueA == valueB)
+                    return 0;
+                else if (self.sortOrders[sortColumn])
                     return (valueA > valueB) ? -1 : 1;
                 else
                     return (valueA < valueB) ? -1 : 1;
-            })
+            }
+            else {
+                let valueA: string = rowA[sortColumn] == undefined ? '' : rowA[sortColumn].toLocaleLowerCase();
+                let valueB: string = rowB[sortColumn] == undefined ? '' : rowB[sortColumn].toLocaleLowerCase();
+                if (valueA == valueB)
+                    return 0;
+                else if (self.sortOrders[sortColumn])
+                    return (valueA > valueB) ? -1 : 1;
+                else
+                    return (valueA < valueB) ? -1 : 1;
+            }
+        });
         this.populateFilterStrings();
         if (this.filterString != undefined)
             this.filterRows();

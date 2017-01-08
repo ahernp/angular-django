@@ -39,28 +39,25 @@ export class Table {
             let numericSize: number = parseFloat(sizeAmount) * sizeMultiplier[sizeUnit.toUpperCase()];
             return numericSize;
         };
+        let compareValues = (valueA: any, valueB: any): number => {
+            if (valueA == valueB)
+                return 0;
+            else if (self.sortOrders[sortColumn])
+                return (valueA > valueB) ? -1 : 1;
+            else
+                return (valueA < valueB) ? -1 : 1;
+        };
 
         this.rows.sort((rowA: string[], rowB: string[]): number => {
-            debugger;
             if (sizeRegExp.test(rowA[sortColumn]) && sizeRegExp.test(rowB[sortColumn])) {
                 let valueA: number = calcSize(rowA[sortColumn]);
                 let valueB: number = calcSize(rowB[sortColumn]);
-                if (valueA == valueB)
-                    return 0;
-                else if (self.sortOrders[sortColumn])
-                    return (valueA > valueB) ? -1 : 1;
-                else
-                    return (valueA < valueB) ? -1 : 1;
+                return compareValues(valueA, valueB);
             }
             else {
                 let valueA: string = rowA[sortColumn] == undefined ? '' : rowA[sortColumn].toLocaleLowerCase();
                 let valueB: string = rowB[sortColumn] == undefined ? '' : rowB[sortColumn].toLocaleLowerCase();
-                if (valueA == valueB)
-                    return 0;
-                else if (self.sortOrders[sortColumn])
-                    return (valueA > valueB) ? -1 : 1;
-                else
-                    return (valueA < valueB) ? -1 : 1;
+                return compareValues(valueA, valueB);
             }
         });
         this.populateFilterStrings();

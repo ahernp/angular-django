@@ -38,7 +38,7 @@ export const feedreaderBreadcrumb = <Breadcrumb>{title: feedreaderTitle, url: fe
                         <span [innerHtml]="feed.name"></span> ({{feed.count}})
                     </p>
                 </div>
-                <p class="ad-control" (click)="markAllRead()">Mark All Read</p>
+                <p *ngIf="unreadEntriesFound" class="ad-control" (click)="markAllRead()">Mark All Read</p>
             </div>
             <div id="feedreader-entry-list">
                 <div *ngFor="let entry of shownEntries" class="feed_entry" (click)="toggleRead(entry.id)">

@@ -3,6 +3,8 @@ import {Title} from '@angular/platform-browser';
 
 import {Observable} from 'rxjs';
 
+import {AuthService} from "../core/auth/auth.service";
+
 import {Entry, Feed, FeedCount, FeedCountDictionary,
     GroupCount, GroupCountDictionary} from './feedreader';
 import {FeedreaderService} from './feedreader.service';
@@ -40,7 +42,7 @@ export const feedreaderBreadcrumb = <Breadcrumb>{title: feedreaderTitle, url: fe
                         <span [innerHtml]="feedCount.name"></span> ({{feedCount.count}})
                     </p>
                 </div>
-                <p *ngIf="unreadEntriesFound" class="ad-control" (click)="markAllRead()">Mark All Read</p>
+                <p *ngIf="unreadEntriesFound && loggedIn" class="ad-control" (click)="markAllRead()">Mark All Read</p>
             </div>
             <div id="feedreader-entry-list">
                 <div *ngFor="let entry of shownEntries" class="feed_entry" (click)="toggleRead(entry.id)">
@@ -83,6 +85,7 @@ export const feedreaderBreadcrumb = <Breadcrumb>{title: feedreaderTitle, url: fe
     providers: []
 })
 export class FeedreaderComponent implements OnInit {
+    loggedIn: Boolean;
     feeds: Feed[];
     entries: Entry[];
     showReadEntries: Boolean;
@@ -97,11 +100,13 @@ export class FeedreaderComponent implements OnInit {
 
     constructor(
         private feedreaderService: FeedreaderService,
+        private authService: AuthService,
         private breadcrumbService: BreadcrumbService,
         private titleService:Title) {
     }
 
     ngOnInit(): void {
+        this.authService.getLoggedInStatus().subscribe(loggedInFlag => this.loggedIn = loggedInFlag);
         this.titleService.setTitle(feedreaderTitle);
         this.populateHeader();
         this.populateFooter();
@@ -153,13 +158,17 @@ export class FeedreaderComponent implements OnInit {
     }
 
     toggleRead(entryId: number): void {
-        this.showSpinner = true;
-        this.feedreaderService.toggleRead(entryId);
+        if (this.loggedIn) {
+            this.showSpinner = true;
+            this.feedreaderService.toggleRead(entryId);
+        }
     }
 
     markAllRead(): void {
-        this.showSpinner = true;
-        this.feedreaderService.markAllRead();
+        if (this.loggedIn) {
+            this.showSpinner = true;
+            this.feedreaderService.markAllRead();
+        }
     }
 
     countEntries(entries: Entry[]) {

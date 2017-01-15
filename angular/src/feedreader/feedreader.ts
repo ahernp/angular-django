@@ -21,17 +21,19 @@ export class FeedCountDictionary {
 export class GroupCountDictionary {
     [groupName: string]: {
         count: number,
-        feeds: FeedCountDictionary
+        feedCounts: FeedCountDictionary
     }
 }
 
 export class FeedCount {
     name: string;
     count: number;
+    selected: boolean;
 }
 
 export class GroupCount {
     name: string;
     count: number;
-    feeds: FeedCount[];
+    selected: boolean;
+    feedCounts: FeedCount[];
 }

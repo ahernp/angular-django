@@ -32,10 +32,12 @@ export const feedreaderBreadcrumb = <Breadcrumb>{title: feedreaderTitle, url: fe
                 </p>
                 <p *ngIf="!unreadEntriesFound">Recent Entries:</p>
                 <h2 *ngIf="entries" (click)="showAll()">All ({{totalEntryCount}})</h2>
-                <div *ngFor="let group of groupCounts">
-                    <h3 *ngIf="group.name" (click)="showGroup(group.name)">{{group.name}} ({{group.count}})</h3>
-                    <p *ngFor="let feed of group.feeds" (click)="showFeed(feed.name)">
-                        <span [innerHtml]="feed.name"></span> ({{feed.count}})
+                <div *ngFor="let groupCount of groupCounts">
+                    <h3 *ngIf="groupCount.name" [class.selected]="groupCount.selected" (click)="showGroup(groupCount.name)">
+                        {{groupCount.name}} ({{groupCount.count}})
+                    </h3>
+                    <p *ngFor="let feedCount of groupCount.feedCounts" [class.selected]="feedCount.selected" (click)="showFeed(feedCount.name)">
+                        <span [innerHtml]="feedCount.name"></span> ({{feedCount.count}})
                     </p>
                 </div>
                 <p *ngIf="unreadEntriesFound" class="ad-control" (click)="markAllRead()">Mark All Read</p>
@@ -74,6 +76,9 @@ export const feedreaderBreadcrumb = <Breadcrumb>{title: feedreaderTitle, url: fe
         p.feed_entry_subtitle {
             font-size: small;
         }
+        .selected {
+            text-decoration: underline;
+        }
     `],
     providers: []
 })
@@ -85,7 +90,7 @@ export class FeedreaderComponent implements OnInit {
     unreadEntries: Entry[];
     shownEntries: Entry[];
     totalEntryCount: number;
-    groupCounts: any[];
+    groupCounts: GroupCount[];
     breadcrumbs: Breadcrumb[];
     footer: Footer;
     showSpinner: Boolean = false;
@@ -161,26 +166,31 @@ export class FeedreaderComponent implements OnInit {
         let groupCountDictionary: GroupCountDictionary = new GroupCountDictionary();
         for (let i = 0; i < this.feeds.length; i++) {
             if (groupCountDictionary[this.feeds[i].groupName] == undefined)
-                groupCountDictionary[this.feeds[i].groupName] = {count: 0, feeds: new FeedCountDictionary()};
-            groupCountDictionary[this.feeds[i].groupName].feeds[this.feeds[i].feedTitle] = 0;
+                groupCountDictionary[this.feeds[i].groupName] = {count: 0, feedCounts: new FeedCountDictionary()};
+            groupCountDictionary[this.feeds[i].groupName].feedCounts[this.feeds[i].feedTitle] = 0;
         }
         for (let i = 0; i < entries.length; i++) {
             groupCountDictionary[entries[i].groupName].count++;
-            groupCountDictionary[entries[i].groupName].feeds[entries[i].feedTitle]++;
+            groupCountDictionary[entries[i].groupName].feedCounts[entries[i].feedTitle]++;
         }
         let groupCounts: GroupCount[] = [];
         let groupNames = Object.keys(groupCountDictionary);
         for (let i = 0; i < groupNames.length; i++)
             if (groupCountDictionary[groupNames[i]].count > 0) {
                 let feedCounts: FeedCount[] = [];
-                let feedTitles = Object.keys(groupCountDictionary[groupNames[i]].feeds)
+                let feedTitles = Object.keys(groupCountDictionary[groupNames[i]].feedCounts)
                 for (let j = 0; j < feedTitles.length; j++)
-                    if (groupCountDictionary[groupNames[i]].feeds[feedTitles[j]] > 0)
-                        feedCounts.push({name: feedTitles[j], count: groupCountDictionary[groupNames[i]].feeds[feedTitles[j]]});
-                groupCounts.push({
+                    if (groupCountDictionary[groupNames[i]].feedCounts[feedTitles[j]] > 0)
+                        feedCounts.push(<FeedCount>{
+                            name: feedTitles[j],
+                            count: groupCountDictionary[groupNames[i]].feedCounts[feedTitles[j]],
+                            selected: false
+                        });
+                groupCounts.push(<GroupCount>{
                     name: groupNames[i],
                     count: groupCountDictionary[groupNames[i]].count,
-                    feeds: feedCounts})
+                    selected: false,
+                    feedCounts: feedCounts})
             }
         this.groupCounts = groupCounts;
     }
@@ -193,25 +203,41 @@ export class FeedreaderComponent implements OnInit {
         this.shownEntries = this.showReadEntries ? this.entries : this.unreadEntries;
     }
 
-    showGroup(groupName) {
+    showGroup(groupName: string): void {
         if (this.showReadEntries)
             this.shownEntries = this.entries.filter(
                 (value) => value.groupName == groupName);
         else
             this.shownEntries = this.unreadEntries.filter(
                 (value) => value.groupName == groupName);
+        for (let groupPos = 0; groupPos < this.groupCounts.length; groupPos++) {
+            if (this.groupCounts[groupPos].name == groupName)
+                this.groupCounts[groupPos].selected = true;
+            else
+                this.groupCounts[groupPos].selected = false;
+            for (let feedPos = 0; feedPos < this.groupCounts[groupPos].feedCounts.length; feedPos++)
+                this.groupCounts[groupPos].feedCounts[feedPos].selected = false;
+        }
     }
 
-    showFeed(feedTitle) {
+    showFeed(feedName: string): void {
         if (this.showReadEntries)
             this.shownEntries = this.entries.filter(
-                (value) => value.feedTitle == feedTitle);
+                (value) => value.feedTitle == feedName);
         else
             this.shownEntries = this.unreadEntries.filter(
-                (value) => value.feedTitle == feedTitle);
+                (value) => value.feedTitle == feedName);
+        for (let groupPos = 0; groupPos < this.groupCounts.length; groupPos++) {
+            this.groupCounts[groupPos].selected = false;
+            for (let feedPos = 0; feedPos < this.groupCounts[groupPos].feedCounts.length; feedPos++)
+                if (this.groupCounts[groupPos].feedCounts[feedPos].name == feedName)
+                    this.groupCounts[groupPos].feedCounts[feedPos].selected = true;
+                else
+                    this.groupCounts[groupPos].feedCounts[feedPos].selected = false;
+        }
     }
 
-    onRefresh() {
+    onRefresh(): void {
         this.showSpinner = true;
         this.feedreaderService.refreshCaches();
     }

@@ -25,14 +25,8 @@ export const feedreaderBreadcrumb = <Breadcrumb>{title: feedreaderTitle, url: fe
     template: `
         <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
         <div id="content">
-            <h1>Feedreader</h1>
+            <h1>Recent Entries</h1>
             <div id="feedreader-entry-counts">
-                <p *ngIf="unreadEntriesFound" (click)="toggleShowReadEntries()">
-                    <span *ngIf="!showReadEntries" class="ad-control" title="Show all entries">Unread</span>
-                    <span *ngIf="showReadEntries" class="ad-control" title="Show unread entries">Recent</span>
-                    Entries:
-                </p>
-                <p *ngIf="!unreadEntriesFound">Recent Entries:</p>
                 <h2 *ngIf="entries" (click)="showAll()">All ({{totalEntryCount}})</h2>
                 <div *ngFor="let groupCount of groupCounts">
                     <h3 *ngIf="groupCount.name" [class.selected]="groupCount.selected" (click)="showGroup(groupCount.name)">
@@ -42,6 +36,11 @@ export const feedreaderBreadcrumb = <Breadcrumb>{title: feedreaderTitle, url: fe
                         <span [innerHtml]="feedCount.name"></span> ({{feedCount.count}})
                     </p>
                 </div>
+                <p *ngIf="unreadEntriesFound" class="ad-control" (click)="toggleShowReadEntries()">
+                    Show
+                    <span *ngIf="showReadEntries">only unread</span>
+                    <span *ngIf="!showReadEntries">all</span>
+                </p>
                 <p *ngIf="unreadEntriesFound && loggedIn" class="ad-control" (click)="markAllRead()">Mark All Read</p>
             </div>
             <div id="feedreader-entry-list">
@@ -209,8 +208,24 @@ export class FeedreaderComponent implements OnInit {
         this.showReadEntries = !this.showReadEntries;
         this.populatePage();
     }
-    showAll() {
+
+    updateCountSelects = (groupName: string = '', feedName: string = ''): void => {
+        for (let groupPos = 0; groupPos < this.groupCounts.length; groupPos++) {
+            if (this.groupCounts[groupPos].name == groupName)
+                this.groupCounts[groupPos].selected = true;
+            else
+                this.groupCounts[groupPos].selected = false;
+            for (let feedPos = 0; feedPos < this.groupCounts[groupPos].feedCounts.length; feedPos++)
+                if (this.groupCounts[groupPos].feedCounts[feedPos].name == feedName)
+                    this.groupCounts[groupPos].feedCounts[feedPos].selected = true;
+                else
+                    this.groupCounts[groupPos].feedCounts[feedPos].selected = false;
+        }
+    };
+
+    showAll(): void {
         this.shownEntries = this.showReadEntries ? this.entries : this.unreadEntries;
+        this.updateCountSelects();
     }
 
     showGroup(groupName: string): void {
@@ -220,14 +235,7 @@ export class FeedreaderComponent implements OnInit {
         else
             this.shownEntries = this.unreadEntries.filter(
                 (value) => value.groupName == groupName);
-        for (let groupPos = 0; groupPos < this.groupCounts.length; groupPos++) {
-            if (this.groupCounts[groupPos].name == groupName)
-                this.groupCounts[groupPos].selected = true;
-            else
-                this.groupCounts[groupPos].selected = false;
-            for (let feedPos = 0; feedPos < this.groupCounts[groupPos].feedCounts.length; feedPos++)
-                this.groupCounts[groupPos].feedCounts[feedPos].selected = false;
-        }
+        this.updateCountSelects(groupName);
     }
 
     showFeed(feedName: string): void {
@@ -237,14 +245,7 @@ export class FeedreaderComponent implements OnInit {
         else
             this.shownEntries = this.unreadEntries.filter(
                 (value) => value.feedTitle == feedName);
-        for (let groupPos = 0; groupPos < this.groupCounts.length; groupPos++) {
-            this.groupCounts[groupPos].selected = false;
-            for (let feedPos = 0; feedPos < this.groupCounts[groupPos].feedCounts.length; feedPos++)
-                if (this.groupCounts[groupPos].feedCounts[feedPos].name == feedName)
-                    this.groupCounts[groupPos].feedCounts[feedPos].selected = true;
-                else
-                    this.groupCounts[groupPos].feedCounts[feedPos].selected = false;
-        }
+        this.updateCountSelects('', feedName);
     }
 
     onRefresh(): void {

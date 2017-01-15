@@ -11,7 +11,8 @@ import {Footer} from './footer';
             <span *ngIf="footer.updated">Last Updated: {{footer.updated}}</span>
             <span *ngIf="!footer.updated">Generated: {{now}}</span>
             <span *ngFor="let breadcrumb of footer.breadcrumbs">
-                <ad-breadcrumb [breadcrumb]="breadcrumb"></ad-breadcrumb>
+                <ad-breadcrumb *ngIf="!breadcrumb.loggedInRequiredFlag || (breadcrumb.loggedInRequiredFlag && loggedIn)"
+                    [breadcrumb]="breadcrumb"></ad-breadcrumb>
             </span>
             <span *ngIf="loggedIn" class="ad-control" (click)="logout()">Logout</span>
             <span *ngIf="!loggedIn" class="ad-control" (click)="setShowLogin()">Login</span>

@@ -80,6 +80,7 @@ export class PageComponent implements OnInit {
                     title: 'Edit',
                     url: `/admin/pages/page/${page.id}/change/`,
                     externalLinkFlag: true,
+                    loggedInRequiredFlag: true
                 }
             ],
         };

@@ -5,4 +5,5 @@ export class Breadcrumb {
     updated: string;
     parentName: string;
     externalLinkFlag: boolean;
+    loggedInRequiredFlag: boolean;
 }

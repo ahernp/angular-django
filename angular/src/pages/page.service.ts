@@ -111,7 +111,7 @@ export class PageService {
             );
     }
 
-    populatePageCache() {
+    populatePageCache(): void {
         for (let page of this.pageCache) {
             if (page.parentId) {
                 let parent = this.pageCache.filter(parent => parent.id == page.parentId)[0];
@@ -123,10 +123,10 @@ export class PageService {
         }
     }
 
-    populateBreadcrumbCache() {
+    populateBreadcrumbCache(): void {
         let breadcrumbs: Breadcrumb[] = this.getDynamicPageBreadcrumbs();
         for (let page of this.pageCache)
-            breadcrumbs.push({
+            breadcrumbs.push(<Breadcrumb>{
                 title: page.title,
                 url: page.url,
                 published: page.published,

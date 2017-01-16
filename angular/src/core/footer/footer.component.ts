@@ -16,9 +16,9 @@ import {Footer} from './footer';
             </span>
             <span *ngIf="loggedIn" class="ad-control" (click)="logout()">Logout</span>
             <span *ngIf="!loggedIn" class="ad-control" (click)="setShowLogin()">Login</span>
-            <ad-login *ngIf="showLogin && !loggedIn"></ad-login>
             <span *ngIf="footer.sourceFlag" class="ad-control" (click)="toggleSource()">Source</span>
             <span *ngIf="footer.refreshFlag" class="ad-control" (click)="refresh()">Refresh</span>
+            <ad-login *ngIf="showLogin && !loggedIn"></ad-login>
         </p>
         <ad-message></ad-message>
     `,

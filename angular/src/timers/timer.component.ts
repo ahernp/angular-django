@@ -23,7 +23,7 @@ export class TimerComponent implements OnInit {
         let fromTime: Date = (now < this.targetTime) ? now : this.targetTime;
         let toTime: Date = (now > this.targetTime) ? now : this.targetTime;
 
-        this.timeDiff = calcTimeDifference(fromTime, toTime);
+        this.timeDiff = this.calcTimeDifference(fromTime, toTime);
     }
 
     ngOnInit(): void {
@@ -31,10 +31,8 @@ export class TimerComponent implements OnInit {
         this.getTimeDifference();
         setInterval(() => this.getTimeDifference(), 1000);
     }
-}
 
-function calcTimeDifference(fromTime: Date, toTime: Date): string {
-
+    calcTimeDifference(fromTime: Date, toTime: Date): string {
         let fromYear: number = fromTime.getUTCFullYear();
         let toYear: number = toTime.getUTCFullYear();
         let yearDiff = toYear - fromYear;
@@ -129,3 +127,4 @@ function calcTimeDifference(fromTime: Date, toTime: Date): string {
 
         return timeDiff.substring(2);
     }
+}

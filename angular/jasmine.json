@@ -1,0 +1,9 @@
+{
+    "spec_dir": "dist",
+    "spec_files": [
+        "ad.test.bundle.js"
+    ],
+    "helpers": [],
+    "stopSpecOnExpectationFailure": false,
+    "random": false
+}

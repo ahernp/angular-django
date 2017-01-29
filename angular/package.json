@@ -24,7 +24,7 @@
         "reflect-metadata": "0.1.9",
         "rxjs": "5.0.3",
         "showdown": "1.6",
-        "zone.js": "0.6.25"
+        "zone.js": "0.7.6"
     },
     "devDependencies": {
         "jasmine": "2.5.3",

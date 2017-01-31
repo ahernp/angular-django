@@ -11,28 +11,29 @@ const week: number = day * 7;
     template: `{{timeDiff}}`
 })
 export class TimerComponent implements OnInit {
-    @Input() targetTimeString: string;
+    @Input() targetTimeString:string;
 
-    targetTime: Date;
-    timeDiff: string;
+    targetTime:Date;
+    timeDiff:string;
 
-    getTimeDifference(): void {
-        let timeDiff: string = '';
-        let now: Date = new Date();
+    getTimeDifference():void {
+        let timeDiff:string = '';
+        let now:Date = new Date();
 
-        let fromTime: Date = (now < this.targetTime) ? now : this.targetTime;
-        let toTime: Date = (now > this.targetTime) ? now : this.targetTime;
+        let fromTime:Date = (now < this.targetTime) ? now : this.targetTime;
+        let toTime:Date = (now > this.targetTime) ? now : this.targetTime;
 
-        this.timeDiff = this.calcTimeDifference(fromTime, toTime);
+        this.timeDiff = calcTimeDifference(fromTime, toTime);
     }
 
-    ngOnInit(): void {
+    ngOnInit():void {
         this.targetTime = new Date(this.targetTimeString);
         this.getTimeDifference();
         setInterval(() => this.getTimeDifference(), 1000);
     }
+}
 
-    calcTimeDifference(fromTime: Date, toTime: Date): string {
+export function calcTimeDifference(fromTime: Date, toTime: Date): string {
         let fromYear: number = fromTime.getUTCFullYear();
         let toYear: number = toTime.getUTCFullYear();
         let yearDiff = toYear - fromYear;
@@ -127,4 +128,3 @@ export class TimerComponent implements OnInit {
 
         return timeDiff.substring(2);
     }
-}

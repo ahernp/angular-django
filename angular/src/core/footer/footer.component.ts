@@ -18,7 +18,7 @@ import {Footer} from './footer';
             <span *ngIf="footer.sourceFlag" class="ad-control" (click)="toggleSource()">Source</span>
             <span *ngIf="footer.refreshFlag" class="ad-control" (click)="refresh()">Refresh</span>
             <span *ngIf="loggedIn" class="ad-control" (click)="logout()">Logout</span>
-            <span *ngIf="!loggedIn" class="ad-control" (click)="setShowLogin()">Login</span>
+            <span *ngIf="!loggedIn" class="ad-control" (click)="toggleShowLogin()">Login</span>
             <ad-login *ngIf="showLogin && !loggedIn"></ad-login>
         </p>
         <ad-message></ad-message>
@@ -75,8 +75,8 @@ export class FooterComponent implements OnInit {
         this.onRefresh.emit();
     }
 
-    setShowLogin() {
-        this.showLogin = true;
+    toggleShowLogin() {
+        this.showLogin = !this.showLogin;
     }
 
     showEdit() {

@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
 
 import {AuthService} from "./auth.service";
@@ -8,6 +8,9 @@ import {AuthService} from "./auth.service";
     selector: 'ad-login',
     template: `
         <div>
+            <span id="close" class="ad-control" (click)="close()" title="Close">
+                &times;
+            </span>
             <h3>Login</h3>
             <form [formGroup]="loginForm" (ngSubmit)="doLogin()">
                 <p><input formControlName="username" type="username" placeholder="Username"></p>
@@ -24,9 +27,17 @@ import {AuthService} from "./auth.service";
             background: white;
             padding: 5px;
         }
+        span#close {
+            position: absolute;
+            top: -5px;
+            right: 0px;
+            padding: 5px;
+        }
     `]
 })
 export class LoginComponent {
+    @Output() onHideLogin = new EventEmitter<boolean>();
+    
     public loginForm = this.formBuilder.group({
         username: ["", Validators.required],
         password: ["", Validators.required]
@@ -39,5 +50,9 @@ export class LoginComponent {
     doLogin() {
         let formData: any = this.loginForm.value;
         this.authService.login(formData['username'], formData['password']);
+    }
+    
+    close() {
+        this.onHideLogin.emit(false);
     }
 }

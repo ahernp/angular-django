@@ -10,9 +10,9 @@ import {AuthService} from "./auth.service";
         <div>
             <h3>Login</h3>
             <form [formGroup]="loginForm" (ngSubmit)="doLogin()">
-                <input formControlName="username" type="username" placeholder="Username">
-                <input formControlName="password" type="password" placeholder="Password">
-                <button type="submit">Log in</button>
+                <p><input formControlName="username" type="username" placeholder="Username"></p>
+                <p><input formControlName="password" type="password" placeholder="Password"></p>
+                <p><button type="submit">Log in</button></p>
             </form>
         </div>
     `,

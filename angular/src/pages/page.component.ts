@@ -34,7 +34,9 @@ const markdownBreadcrumb = <Breadcrumb>{title: 'Markdown', url: '/page/markdown'
 
             <ad-page-source *ngIf="showSource" [page]="page"></ad-page-source>
         </div>
-        <ad-footer id="footer" *ngIf="footer" [footer]="footer" (onToggleSource)="onToggleSource($event)" (onRefresh)="onRefresh()"></ad-footer>
+        <ad-footer id="footer" *ngIf="footer" [footer]="footer" (onToggleSource)="onToggleSource($event)" (onRefresh)="onRefresh()" (onShowEdit)="onShowEdit($event)"></ad-footer>
+
+        <ad-page-edit *ngIf="showEdit" [page]="page" (onShowEdit)="onShowEdit($event)"></ad-page-edit>
         `,
     providers: []
 })
@@ -44,6 +46,7 @@ export class PageComponent implements OnInit {
     childBreadcrumbs: Breadcrumb[];
     footer: Footer;
     showSource: boolean = false;
+    showEdit: boolean = false;
 
     constructor(
         private pageService: PageService,
@@ -71,25 +74,22 @@ export class PageComponent implements OnInit {
         this.breadcrumbs = this.breadcrumbService.addBreadcrumb(breadcrumb);
 
         this.footer = <Footer>{
-            updated: page.updated,
-            sourceFlag: true,
-            refreshFlag: true,
             breadcrumbs: [
                 markdownBreadcrumb,
                 <Breadcrumb>{
-                    title: 'Edit',
+                    title: 'Admin',
                     url: `/admin/pages/page/${page.id}/change/`,
                     externalLinkFlag: true,
                     loggedInRequiredFlag: true
                 }
             ],
+            editFlag: true,
+            refreshFlag: true,
+            sourceFlag: true,
+            updated: page.updated,
         };
 
         this.childBreadcrumbs = page.children;
-    }
-
-    onToggleSource(showSource: boolean) {
-        this.showSource = showSource;
     }
 
     onRefresh() {
@@ -97,4 +97,11 @@ export class PageComponent implements OnInit {
             .subscribe(page => this.populatePage(page));
     }
 
+    onShowEdit(showEdit: boolean) {
+        this.showEdit = showEdit;
+    }
+
+    onToggleSource(showSource: boolean) {
+        this.showSource = showSource;
+    }
 }

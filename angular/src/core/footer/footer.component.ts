@@ -14,6 +14,7 @@ import {Footer} from './footer';
                 <ad-breadcrumb *ngIf="!breadcrumb.loggedInRequiredFlag || (breadcrumb.loggedInRequiredFlag && loggedIn)"
                     [breadcrumb]="breadcrumb"></ad-breadcrumb>
             </span>
+            <span *ngIf="footer.editFlag" class="ad-control" (click)="showEdit()">Edit</span>
             <span *ngIf="footer.sourceFlag" class="ad-control" (click)="toggleSource()">Source</span>
             <span *ngIf="footer.refreshFlag" class="ad-control" (click)="refresh()">Refresh</span>
             <span *ngIf="loggedIn" class="ad-control" (click)="logout()">Logout</span>
@@ -37,13 +38,14 @@ import {Footer} from './footer';
 })
 export class FooterComponent implements OnInit {
     @Input() footer: Footer;
-    @Output() onToggleSource = new EventEmitter<boolean>();
     @Output() onRefresh = new EventEmitter<boolean>();
+    @Output() onShowEdit = new EventEmitter<boolean>();
+    @Output() onToggleSource = new EventEmitter<boolean>();
 
+    loggedIn: Boolean;
     now: string;
     showLogin: boolean = false;
     showSource: boolean = false;
-    loggedIn: Boolean;
 
     constructor(
         private authService: AuthService) {
@@ -65,20 +67,24 @@ export class FooterComponent implements OnInit {
         this.now = toDateTimeString(new Date());
     }
 
+    logout() {
+        this.authService.logout();
+    }
+
+    refresh() {
+        this.onRefresh.emit();
+    }
+
     setShowLogin() {
         this.showLogin = true;
     }
 
-    logout() {
-        this.authService.logout();
+    showEdit() {
+        this.onShowEdit.emit(true);
     }
 
     toggleSource() {
         this.showSource = !this.showSource;
         this.onToggleSource.emit(this.showSource);
-    }
-
-    refresh() {
-        this.onRefresh.emit();
     }
 }

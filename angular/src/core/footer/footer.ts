@@ -1,8 +1,9 @@
 import {Breadcrumb} from "../breadcrumbs/breadcrumb";
 
 export class Footer {
-    updated: string;
-    sourceFlag: boolean;
-    refreshFlag: boolean;
     breadcrumbs: Breadcrumb[];
+    editFlag: boolean;
+    refreshFlag: boolean;
+    sourceFlag: boolean;
+    updated: string;
 }

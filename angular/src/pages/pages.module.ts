@@ -7,6 +7,7 @@ import {HomepageComponent} from "./homepage/homepage.component";
 import {HomepageNavigationComponent} from "./homepage/homepage-navigation.component";
 
 import {PageComponent} from "./page.component";
+import {PageEditComponent} from "./page-edit.component";
 import {PageSourceComponent} from "./page-source.component";
 import {PageService} from "./page.service";
 
@@ -23,6 +24,7 @@ import {GalleryContentComponent} from "./gallerycontent/gallerycontent.component
         HomepageComponent,
         HomepageNavigationComponent,
         PageComponent,
+        PageEditComponent,
         PageSourceComponent,
         TableContentComponent,
         GalleryContentComponent,

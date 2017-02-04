@@ -24,7 +24,7 @@ import {PageService} from './page.service';
 
             <div id="controls">
                 <span class="ad-control" (click)="cancel()">Cancel</span>
-                <span class="ad-control" (click)="save()">Save</span>
+                <button (click)="save()">Save</button>
                 <ad-breadcrumb [breadcrumb]="adminBreadcrumb"></ad-breadcrumb>
             </div>
         </div>

@@ -36,12 +36,13 @@ const markdownBreadcrumb = <Breadcrumb>{title: 'Markdown', url: '/page/markdown'
         </div>
         <ad-footer id="footer" *ngIf="footer" [footer]="footer" (onToggleSource)="onToggleSource($event)" (onRefresh)="onRefresh()" (onShowEdit)="onShowEdit($event)"></ad-footer>
 
-        <ad-page-edit *ngIf="showEdit" [page]="page" (onShowEdit)="onShowEdit($event)"></ad-page-edit>
+        <ad-page-edit *ngIf="showEdit" [page]="page" [adminBreadcrumb]="adminBreadcrumb" (onShowEdit)="onShowEdit($event)"></ad-page-edit>
         `,
     providers: []
 })
 export class PageComponent implements OnInit {
     page: Page;
+    adminBreadcrumb: Breadcrumb;
     breadcrumbs: Breadcrumb[];
     childBreadcrumbs: Breadcrumb[];
     footer: Footer;
@@ -76,12 +77,6 @@ export class PageComponent implements OnInit {
         this.footer = <Footer>{
             breadcrumbs: [
                 markdownBreadcrumb,
-                <Breadcrumb>{
-                    title: 'Admin',
-                    url: `/admin/pages/page/${page.id}/change/`,
-                    externalLinkFlag: true,
-                    loggedInRequiredFlag: true
-                }
             ],
             editFlag: true,
             refreshFlag: true,
@@ -90,6 +85,13 @@ export class PageComponent implements OnInit {
         };
 
         this.childBreadcrumbs = page.children;
+
+        this.adminBreadcrumb = <Breadcrumb>{
+            title: 'Admin',
+            url: `/admin/pages/page/${page.id}/change/`,
+            externalLinkFlag: true,
+            loggedInRequiredFlag: true
+        }
     }
 
     onRefresh() {

@@ -14,7 +14,7 @@ import {Footer} from './footer';
                 <ad-breadcrumb *ngIf="!breadcrumb.loggedInRequiredFlag || (breadcrumb.loggedInRequiredFlag && loggedIn)"
                     [breadcrumb]="breadcrumb"></ad-breadcrumb>
             </span>
-            <span *ngIf="footer.editFlag" class="ad-control" (click)="showEdit()">Edit</span>
+            <span *ngIf="loggedIn && footer.editFlag" class="ad-control" (click)="showEdit()">Edit</span>
             <span *ngIf="footer.sourceFlag" class="ad-control" (click)="toggleSource()">Source</span>
             <span *ngIf="footer.refreshFlag" class="ad-control" (click)="refresh()">Refresh</span>
             <span *ngIf="loggedIn" class="ad-control" (click)="logout()">Logout</span>

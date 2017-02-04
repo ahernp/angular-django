@@ -1,6 +1,7 @@
 import json
 
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.views.generic import TemplateView
 
@@ -22,6 +23,7 @@ def read_page(request, slug):
     return HttpResponse(json.dumps(data), content_type='application/json')
 
 
+@login_required
 def save_page(request):
     new_page = json.loads(request.body)
     try:

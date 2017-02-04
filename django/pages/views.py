@@ -22,6 +22,18 @@ def read_page(request, slug):
     return HttpResponse(json.dumps(data), content_type='application/json')
 
 
+def save_page(request):
+    new_page = json.loads(request.body)
+    try:
+        old_page = Page.objects.get(pk=new_page['id'])
+        old_page.content = new_page['content']
+        old_page.save()
+        data = {}
+    except Page.DoesNotExist:
+        data = {'title': 'Page Not Found'}
+    return HttpResponse(json.dumps(data), content_type='application/json')
+
+
 class HomePageView(TemplateView):
     template_name = 'index.html'
 

@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Http, Response} from '@angular/http';
+import {Http, Headers, RequestOptions, Response} from '@angular/http';
 
 import {Observable} from 'rxjs/Observable';
 import {ReplaySubject} from "rxjs/ReplaySubject";
@@ -24,6 +24,7 @@ import {feedreaderBreadcrumb} from "../feedreader/feedreader.component";
 import {timersBreadcrumb} from "../timers/timers.component";
 
 const pageUrl: string = '/page';
+const pagesApiUrl: string = '/pages';
 export const messageSource: string = 'Page';
 
 @Injectable()
@@ -47,7 +48,7 @@ export class PageService {
     }
 
     getPage(slug:string): Observable<Page> {
-        let url = `${apiEndpoint}/pages/read/${slug}`;
+        let url = `${apiEndpoint}${pagesApiUrl}/read/${slug}`;
         let pages = this.pageCache.filter(page => page.url == `${pageUrl}/${slug}`);
         if (pages.length > 0)
             this.currentPage$.next(pages[0]);
@@ -56,8 +57,7 @@ export class PageService {
                 .subscribe(
                     (response: Response) => {
                         let page: Page = <Page>response.json();
-                        this.pageCache.push(page);
-                        this.currentPage$.next(page);
+                        this.updateCache(page);
                     },
                     error => {
                         this.messageService.addErrorMessage(
@@ -67,6 +67,25 @@ export class PageService {
                     }
                 );
         return this.currentPage$;
+    }
+
+    save(page: Page): void {
+        let url = `${apiEndpoint}${pagesApiUrl}/save`;
+        let headers = new Headers({'Content-Type': 'application/json'});
+        let options = new RequestOptions({ headers: headers });
+
+        this.http.post(url, page, options)
+            .subscribe(
+                () => {
+                    this.updateCache(page);
+                },
+                error => {
+                    this.messageService.addErrorMessage(
+                        messageSource,
+                        `${messageSource} save Page error: Url ${url}; Status Code ${error.status}; ${error.statusText}`);
+                    console.log(error);
+                }
+            );
     }
 
     getPages(): ReplaySubject<any> {
@@ -136,6 +155,15 @@ export class PageService {
             })
         this.breadcrumbCache = breadcrumbs;
         this.breadcrumbs$.next(breadcrumbs);
+    }
+
+    updateCache(page: Page): void {
+        let pages = this.pageCache.filter(cachedPage => cachedPage.url == page.url);
+        if (pages.length > 0)
+            pages[0] = page;
+        else
+            this.pageCache.push(page);
+        this.currentPage$.next(page);
     }
 
     getDynamicPageBreadcrumbs(): Breadcrumb[] {

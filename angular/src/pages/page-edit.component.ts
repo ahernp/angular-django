@@ -1,7 +1,9 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
+
 import {Page} from './page';
+import {PageService} from './page.service';
 
 @Component({
     selector: 'ad-page-edit',
@@ -21,7 +23,8 @@ import {Page} from './page';
             <div style="clear:both"></div>
 
             <div id="controls">
-                <span class="ad-control" (click)="hideEdit()">Done</span>
+                <span class="ad-control" (click)="cancel()">Cancel</span>
+                <span class="ad-control" (click)="save()">Save</span>
                 <ad-breadcrumb [breadcrumb]="adminBreadcrumb"></ad-breadcrumb>
             </div>
         </div>
@@ -58,7 +61,14 @@ export class PageEditComponent {
     @Input() adminBreadcrumb: Breadcrumb;
     @Output() onShowEdit = new EventEmitter<boolean>();
 
-    hideEdit() {
+    constructor(private pageService: PageService) {}
+
+    cancel() {
+        this.onShowEdit.emit(false);
+    }
+
+    save() {
+        this.pageService.save(this.page);
         this.onShowEdit.emit(false);
     }
 }

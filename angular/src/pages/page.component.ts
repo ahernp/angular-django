@@ -19,7 +19,7 @@ const markdownBreadcrumb = <Breadcrumb>{title: 'Markdown', url: '/page/markdown'
     template: `
         <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
         <div id="content">
-            <h2 class="published_date" *ngIf="page && page.published">{{page.published|date:'d MMMM y'}}</h2>
+            <h2 class="published_date" *ngIf="page && page.published">Published: {{page.published}}</h2>
 
             <h1 *ngIf="page && page.contentType == 'markdown' && page.title">{{page.title}}</h1>
 

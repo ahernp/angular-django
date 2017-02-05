@@ -9,7 +9,7 @@ import {Page} from "../pages/page";
 
 import {Footer} from "../core/footer/footer";
 
-const blogRootTitle: string = 'Blog';
+export const blogRootTitle: string = 'Blog';
 const blogUrl: string = '/blog';
 const numberOfBlogPages: number = 3;
 
@@ -26,9 +26,7 @@ export const blogArchiveBreadcrumb = <Breadcrumb>
         <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
         <div id="content">
             <div *ngFor="let page of pages">
-                <h2 class="published_date" *ngIf="page.published">
-                    {{page.published|date:'d MMMM y'}}
-                </h2>
+                <h2 class="published_date" *ngIf="page.published">Published: {{page.published}}</h2>
                 <h1>{{page.title}}</h1>
                 <ad-markdown-content [content]="page.content"></ad-markdown-content>
                 <p class="blog_info">

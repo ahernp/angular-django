@@ -40,6 +40,10 @@ def save_page(request):
         old_page.slug = new_page_dict['slug']
         old_page.parent_id = new_page_dict['parentId']
         old_page.content_type = new_page_dict['contentType']
+        if 'published' in new_page_dict and new_page_dict['published']:
+            old_page.published = datetime.strptime(new_page_dict['published'], '%Y-%m-%d').date()
+        else:
+            old_page.published = None
         old_page.updated = datetime.now()
         old_page.save()
         data = {}

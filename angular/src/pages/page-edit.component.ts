@@ -4,6 +4,7 @@ import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 
 import {ContentType, Page} from './page';
 import {pageUrl, PageService} from './page.service';
+import {blogRootTitle} from '../blog/blog.component';
 
 @Component({
     selector: 'ad-page-edit',
@@ -29,14 +30,18 @@ import {pageUrl, PageService} from './page.service';
                 <p>
                     Parent:
                     <select [(ngModel)]="page.parentId">
-                        <option *ngFor="let page of pages" [ngValue]="page.id">{{ page.title }}</option>
+                        <option *ngFor="let page of pages" [ngValue]="page.id">{{page.title}}</option>
                     </select>
                 </p>
                 <p>
                     Content Type:
                     <select [(ngModel)]="page.contentType">
-                        <option *ngFor="let contentType of contentTypes" [ngValue]="contentType.value">{{ contentType.label }}</option>
+                        <option *ngFor="let contentType of contentTypes" [ngValue]="contentType.value">{{contentType.label}}</option>
                     </select>
+                </p>
+                <p *ngIf="page.parentName == blogRootTitle">
+                    Published Date:
+                    <input [(ngModel)]="page.published" placeholder="yyyy-mm-dd">
                 </p>
             </div>
         </div>
@@ -90,6 +95,7 @@ export class PageEditComponent implements OnInit {
     @Output() onShowEdit = new EventEmitter<boolean>();
 
     contentTypes: ContentType[];
+    blogRootTitle: string = blogRootTitle;
     pages: Page[];
     showAdvanced: boolean = false;
 

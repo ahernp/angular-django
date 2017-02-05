@@ -2,7 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 
-import {Page} from './page';
+import {ContentType, Page} from './page';
 import {pageUrl, PageService} from './page.service';
 
 @Component({
@@ -30,6 +30,12 @@ import {pageUrl, PageService} from './page.service';
                     Parent:
                     <select [(ngModel)]="page.parentId">
                         <option *ngFor="let page of pages" [ngValue]="page.id">{{ page.title }}</option>
+                    </select>
+                </p>
+                <p>
+                    Content Type:
+                    <select [(ngModel)]="page.contentType">
+                        <option *ngFor="let contentType of contentTypes" [ngValue]="contentType.value">{{ contentType.label }}</option>
                     </select>
                 </p>
             </div>
@@ -83,6 +89,7 @@ export class PageEditComponent implements OnInit {
     @Input() adminBreadcrumb: Breadcrumb;
     @Output() onShowEdit = new EventEmitter<boolean>();
 
+    contentTypes: ContentType[];
     pages: Page[];
     showAdvanced: boolean = false;
 
@@ -93,6 +100,8 @@ export class PageEditComponent implements OnInit {
             .subscribe(pages => this.pages = pages.sort(
                 function (a, b) {return b.children.length - a.children.length}
             ));
+        this.pageService.getContentTypes()
+            .subscribe(contentTypes => this.contentTypes = contentTypes)
     }
 
     cancel(): void {

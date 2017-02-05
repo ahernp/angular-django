@@ -7,12 +7,17 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.views.generic import TemplateView
 
-from pages.models import Page
+from pages.models import CONTENT_TYPE_CHOICES, Page
 
 
 def all_pages(request):
     pages = Page.objects.all()
     data = [page.dictionary for page in pages]
+    return HttpResponse(json.dumps(data), content_type='application/json')
+
+
+def content_types(request):
+    data = [{'value': value, 'label': label} for value, label in CONTENT_TYPE_CHOICES]
     return HttpResponse(json.dumps(data), content_type='application/json')
 
 
@@ -34,6 +39,7 @@ def save_page(request):
         old_page.title = new_page_dict['title']
         old_page.slug = new_page_dict['slug']
         old_page.parent_id = new_page_dict['parentId']
+        old_page.content_type = new_page_dict['contentType']
         old_page.updated = datetime.now()
         old_page.save()
         data = {}

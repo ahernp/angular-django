@@ -6,7 +6,7 @@ import {ReplaySubject} from "rxjs/ReplaySubject";
 
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 
-import {Page} from './page';
+import {ContentType, Page} from './page';
 
 import {SearchResult, SearchResults} from "../core/search/search-results";
 
@@ -38,13 +38,18 @@ export class PageService {
     breadcrumbCache: Breadcrumb[] = [];
     breadcrumbs$: ReplaySubject<any> = new ReplaySubject(1);
 
+    contentTypeCache: ContentType[] = [];
+    contentTypes$: ReplaySubject<any> = new ReplaySubject(1);
+
     constructor(
         private http: Http,
         private messageService: MessageService
     ) {
         this.pages$.next([]);
         this.breadcrumbs$.next([]);
+        this.contentTypes$.next([]);
         this.cacheAllPages();
+        this.cacheContentTypes();
     }
 
     getPage(slug:string): Observable<Page> {
@@ -97,6 +102,10 @@ export class PageService {
         return this.breadcrumbs$;
     }
 
+    getContentTypes(): ReplaySubject<any> {
+        return this.contentTypes$;
+    }
+
     getPageBreadcrumbs(slug: string): ReplaySubject<any> {
         let breadcrumbs = this.breadcrumbCache;
         if (slug != undefined) {
@@ -121,6 +130,23 @@ export class PageService {
                     this.populatePageCache();
                     this.pages$.next(this.pageCache);
                     this.populateBreadcrumbCache();
+                },
+                error => {
+                    this.messageService.addErrorMessage(
+                        messageSource,
+                        `${messageSource} error: From ${url}; Status Code ${error.status}; ${error.statusText}`);
+                    console.log(error);
+                }
+            );
+    }
+
+    cacheContentTypes(): void {
+        let url: string = `${apiEndpoint}/pages/contenttypes/`;
+        this.http.get(url)
+            .subscribe(
+                (response: Response) => {
+                    this.contentTypeCache = <ContentType[]>response.json();
+                    this.contentTypes$.next(this.contentTypeCache);
                 },
                 error => {
                     this.messageService.addErrorMessage(

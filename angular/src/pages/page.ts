@@ -13,3 +13,8 @@ export class Page {
     content: string;
     children: Breadcrumb[];
 }
+
+export class ContentType {
+    value: string;
+    label: string;
+}

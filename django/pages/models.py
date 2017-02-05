@@ -42,7 +42,7 @@ class Page(models.Model):
     def _get_dictionary(self):
         return {'id': self.id,
                 'title': self.title,
-                'url': '/page/%s' % self.slug,
+                'slug': self.slug,
                 'parentId': self.parent_id,
                 'updated': self.updated.strftime('%Y-%m-%d %H:%M:%S'),
                 'published': self.published.strftime('%Y-%m-%d') if self.published else '',

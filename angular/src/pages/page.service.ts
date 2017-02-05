@@ -57,6 +57,7 @@ export class PageService {
                 .subscribe(
                     (response: Response) => {
                         let page: Page = <Page>response.json();
+                        page.url = `${pageUrl}/${page.slug}`;
                         this.updateCache(page);
                     },
                     error => {
@@ -132,6 +133,7 @@ export class PageService {
 
     populatePageCache(): void {
         for (let page of this.pageCache) {
+            page.url = `${pageUrl}/${page.slug}`;
             if (page.parentId) {
                 let parent = this.pageCache.filter(parent => parent.id == page.parentId)[0];
                 page.parentName = parent.title;

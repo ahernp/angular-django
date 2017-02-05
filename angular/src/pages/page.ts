@@ -3,6 +3,7 @@ import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 export class Page {
     id: number;
     title: string;
+    slug: string;
     url: string;
     parentId: number;
     parentName: string;

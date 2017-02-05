@@ -1,5 +1,7 @@
 import json
 
+from datetime import datetime
+
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
@@ -32,6 +34,7 @@ def save_page(request):
         old_page.title = new_page_dict['title']
         old_page.slug = new_page_dict['slug']
         old_page.parent_id = new_page_dict['parentId']
+        old_page.updated = datetime.now()
         old_page.save()
         data = {}
     except Page.DoesNotExist:

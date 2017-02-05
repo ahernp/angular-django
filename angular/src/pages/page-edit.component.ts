@@ -24,6 +24,7 @@ import {blogRootTitle} from '../blog/blog.component';
             <div style="clear:both"></div>
 
             <div id="advanced" *ngIf="showAdvanced">
+                <span id="close" class="ad-control" (click)="toggleShowAdvanced()" title="Close">&times;</span>
                 <h3>Other Editable Fields</h3>
                 <p>Title: <input [(ngModel)]="page.title" (keyup)="titleChange()"></p>
                 <p>Slug: <input [(ngModel)]="page.slug"></p>
@@ -85,6 +86,12 @@ import {blogRootTitle} from '../blog/blog.component';
             z-index: 12;
             background: white;
             border: solid 1px black;
+            padding: 5px;
+        }
+        span#close {
+            position: absolute;
+            top: -5px;
+            right: 0px;
             padding: 5px;
         }
     `]

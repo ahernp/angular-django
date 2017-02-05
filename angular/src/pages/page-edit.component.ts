@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 
@@ -26,6 +26,12 @@ import {pageUrl, PageService} from './page.service';
                 <h3>Other Editable Fields</h3>
                 <p>Title: <input [(ngModel)]="page.title" (keyup)="titleChange()"></p>
                 <p>Slug: <input [(ngModel)]="page.slug"></p>
+                <p>
+                    Parent:
+                    <select [(ngModel)]="page.parentId">
+                        <option *ngFor="let page of pages" [ngValue]="page.id">{{ page.title }}</option>
+                    </select>
+                </p>
             </div>
         </div>
         <div id="controls">
@@ -72,14 +78,22 @@ import {pageUrl, PageService} from './page.service';
         }
     `]
 })
-export class PageEditComponent {
+export class PageEditComponent implements OnInit {
     @Input() page: Page;
     @Input() adminBreadcrumb: Breadcrumb;
     @Output() onShowEdit = new EventEmitter<boolean>();
 
+    pages: Page[];
     showAdvanced: boolean = false;
 
     constructor(private pageService: PageService) {}
+
+    ngOnInit(): void {
+        this.pageService.getPages()
+            .subscribe(pages => this.pages = pages.sort(
+                function (a, b) {return b.children.length - a.children.length}
+            ));
+    }
 
     cancel(): void {
         this.onShowEdit.emit(false);

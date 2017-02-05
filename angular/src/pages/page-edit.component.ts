@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Title} from '@angular/platform-browser';
 
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 
@@ -11,7 +12,11 @@ import {toDateTimeString} from '../utilities';
     selector: 'ad-page-edit',
     template: `
         <div id="editor">
-            <h2>Edit Page {{page.title}}</h2>
+            <h2>
+                <span *ngIf="page.id">Edit</span> 
+                <span *ngIf="!page.id">Add</span> 
+                Page {{page.title}}
+            </h2>
 
             <div class="editpreview" style="left: 0;">
                 <textarea [(ngModel)]="page.content" style="height: 100%; width: 100%"></textarea>
@@ -26,7 +31,7 @@ import {toDateTimeString} from '../utilities';
 
             <div id="advanced" *ngIf="showAdvanced">
                 <span id="close" class="ad-control" (click)="toggleShowAdvanced()" title="Close">&times;</span>
-                <h3>Other Editable Fields</h3>
+                <h3>Advanced</h3>
                 <p>Title: <input [(ngModel)]="page.title" (keyup)="titleChange()"></p>
                 <p>Slug: <input [(ngModel)]="page.slug"></p>
                 <p>
@@ -107,7 +112,10 @@ export class PageEditComponent implements OnInit {
     pages: Page[];
     showAdvanced: boolean = false;
 
-    constructor(private pageService: PageService) {}
+    constructor(
+        private pageService: PageService,
+        private titleService: Title
+    ) {}
 
     ngOnInit(): void {
         this.pageService.getPages()
@@ -116,8 +124,12 @@ export class PageEditComponent implements OnInit {
             ));
         this.pageService.getContentTypes()
             .subscribe(contentTypes => this.contentTypes = contentTypes)
-        if (this.page.id == undefined)
+        if (this.page.id == undefined) {
             this.showAdvanced = true;
+            this.titleService.setTitle('Add Page');
+        }
+        else
+            this.titleService.setTitle('Edit Page');
     }
 
     cancel(): void {

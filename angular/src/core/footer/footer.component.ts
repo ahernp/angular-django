@@ -4,6 +4,8 @@ import {AuthService} from "../auth/auth.service";
 
 import {Footer} from './footer';
 
+import {toDateTimeString} from '../../utilities';
+
 @Component({
     selector: 'ad-footer',
     template: `
@@ -54,16 +56,6 @@ export class FooterComponent implements OnInit {
     ngOnInit(): void {
         this.authService.getLoggedInStatus().subscribe(loggedInFlag => this.loggedIn = loggedInFlag);
 
-        let leadingZero = (amount: number): string => amount < 10 ? `0${amount}` : `${amount}`;
-
-        let toDateTimeString = (date: Date): string => '' +
-            date.getFullYear() + '-' +
-            leadingZero(date.getUTCMonth()+1) + '-' +
-            leadingZero(date.getUTCDate()) + ' ' +
-            leadingZero(date.getUTCHours()) + ':' +
-            leadingZero(date.getUTCMinutes()) + ':' +
-            leadingZero(date.getUTCSeconds());
-
         this.now = toDateTimeString(new Date());
     }
 
@@ -82,6 +74,7 @@ export class FooterComponent implements OnInit {
     onHideLogin() {
         this.showLogin = false;
     }
+
     showEdit() {
         this.onShowEdit.emit(true);
     }

@@ -34,22 +34,26 @@ def read_page(request, slug):
 def save_page(request):
     new_page_dict = json.loads(request.body)
 
-    try:
-        old_page = Page.objects.get(pk=new_page_dict['id'])
-    except Page.DoesNotExist:
-        data = {'title': 'Page Not Found'}
-
-    old_page.content = new_page_dict['content']
-    old_page.title = new_page_dict['title']
-    old_page.slug = new_page_dict['slug']
-    old_page.parent_id = new_page_dict['parentId']
-    old_page.content_type = new_page_dict['contentType']
-    if 'published' in new_page_dict and new_page_dict['published']:
-        old_page.published = datetime.strptime(new_page_dict['published'], '%Y-%m-%d').date()
+    if 'id' in new_page_dict and new_page_dict['id']:
+        try:
+            page = Page.objects.get(pk=new_page_dict['id'])
+        except Page.DoesNotExist:
+            data = {'title': 'Page Not Found'}
     else:
-        old_page.published = None
-    old_page.updated = datetime.now()
-    old_page.save()
+        page = Page.objects.create()
+
+    page.content = new_page_dict['content']
+    page.title = new_page_dict['title']
+    page.slug = new_page_dict['slug']
+    page.parent_id = new_page_dict['parentId']
+    page.content_type = new_page_dict['contentType']
+    if 'published' in new_page_dict and new_page_dict['published']:
+        page.published = datetime.strptime(new_page_dict['published'], '%Y-%m-%d').date()
+    else:
+        page.published = None
+    page.updated = datetime.now()
+    page.save()
+
     data = {}
 
     return HttpResponse(json.dumps(data), content_type='application/json')

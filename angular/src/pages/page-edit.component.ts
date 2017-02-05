@@ -5,6 +5,7 @@ import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {ContentType, Page} from './page';
 import {pageUrl, PageService} from './page.service';
 import {blogRootTitle} from '../blog/blog.component';
+import {toDateTimeString} from '../utilities';
 
 @Component({
     selector: 'ad-page-edit',
@@ -115,6 +116,8 @@ export class PageEditComponent implements OnInit {
             ));
         this.pageService.getContentTypes()
             .subscribe(contentTypes => this.contentTypes = contentTypes)
+        if (this.page.id == undefined)
+            this.showAdvanced = true;
     }
 
     cancel(): void {
@@ -123,6 +126,13 @@ export class PageEditComponent implements OnInit {
 
     save(): void {
         this.page.url = `${pageUrl}/${this.page.slug}`;
+        if (this.page.children == undefined)
+            this.page.children = [];
+        let parentPages = this.pages.filter(parentPage => parentPage.id == this.page.parentId);
+        if (parentPages.length > 0)
+            this.page.parentName = parentPages[0].parentName;
+        let now = new Date();
+        this.page.updated = toDateTimeString(now);
         this.pageService.save(this.page);
         this.onShowEdit.emit(false);
     }

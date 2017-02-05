@@ -5,6 +5,7 @@ import {Title} from '@angular/platform-browser';
 import {Breadcrumb} from '../core/breadcrumbs/breadcrumb';
 import {BreadcrumbService} from '../core/breadcrumbs/breadcrumb.service';
 
+import {Page} from '../pages/page';
 import {PageService} from '../pages/page.service';
 
 import {Footer} from "../core/footer/footer";
@@ -40,7 +41,9 @@ const columnHeadings: string[] = ['Title', 'Parent', 'Published', 'Updated'];
                 </table>
             </template>
         </div>
-        <ad-footer id="footer" *ngIf="footer" [footer]="footer"></ad-footer>
+        <ad-footer id="footer" *ngIf="footer" [footer]="footer" (onShowEdit)="onShowEdit($event)"></ad-footer>
+
+        <ad-page-edit *ngIf="showEdit" [page]="newPage" [adminBreadcrumb]="newPageAdminBreadcrumb" (onShowEdit)="onShowEdit($event)"></ad-page-edit>
         `,
     providers: []
 })
@@ -54,6 +57,10 @@ export class SitemapComponent implements OnInit {
     filterString: string;
 
     footer: Footer;
+
+    showEdit: boolean = false;
+    newPage: Page;
+    newPageAdminBreadcrumb: Breadcrumb;
 
     constructor(
         private pageService: PageService,
@@ -72,6 +79,14 @@ export class SitemapComponent implements OnInit {
                 this.populateHeaderAndTitle();
                 this.populateFooter();
             });
+
+        this.newPage = new Page();
+        this.newPageAdminBreadcrumb = <Breadcrumb>{
+            title: 'Admin',
+            url: `/admin/pages/add/`,
+            externalLinkFlag: true,
+            loggedInRequiredFlag: true
+        }
     }
 
     populateHeaderAndTitle() {
@@ -101,7 +116,9 @@ export class SitemapComponent implements OnInit {
     }
 
     populateFooter() {
-        this.footer = <Footer>{breadcrumbs: [adminBreadcrumb]};
+        this.footer = <Footer>{
+            editFlag: true,
+        };
     }
 
     populateTable(breadcrumbs: Breadcrumb[]): void {
@@ -125,5 +142,9 @@ export class SitemapComponent implements OnInit {
 
     filterRows(): void {
         this.table.setFilterString(this.filterString);
+    }
+
+    onShowEdit(showEdit: boolean) {
+        this.showEdit = showEdit;
     }
 }

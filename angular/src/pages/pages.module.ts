@@ -33,6 +33,7 @@ import {GalleryContentComponent} from "./gallerycontent/gallerycontent.component
         PageService,
     ],
     exports: [
+        PageEditComponent,
         PageSourceComponent,
     ]
 })

@@ -84,6 +84,7 @@ export class PageService {
             .subscribe(
                 () => {
                     this.updateCache(page);
+                    this.populateBreadcrumbCache();
                 },
                 error => {
                     this.messageService.addErrorMessage(

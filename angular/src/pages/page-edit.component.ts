@@ -22,11 +22,15 @@ import {PageService} from './page.service';
 
             <div style="clear:both"></div>
 
-            <div id="controls">
-                <span class="ad-control" (click)="cancel()">Cancel</span>
-                <button (click)="save()">Save</button>
-                <ad-breadcrumb [breadcrumb]="adminBreadcrumb"></ad-breadcrumb>
+            <div id="advanced" *ngIf="showAdvanced">
+                <p>Title: <input [(ngModel)]="page.title"></p>
             </div>
+        </div>
+        <div id="controls">
+            <span class="ad-control" (click)="cancel()">Cancel</span>
+            <span class="ad-control" (click)="toggleShowAdvanced()">Advanced</span>
+            <button (click)="save()">Save</button>
+            <ad-breadcrumb [breadcrumb]="adminBreadcrumb"></ad-breadcrumb>
         </div>
     `,
     styles: [`
@@ -37,7 +41,7 @@ import {PageService} from './page.service';
             height: 100%;
             width: 100%;
             background: white;
-            padding: 0;
+            padding: 5px 5px 45px 5px;
             overflow: scroll;
         }
         div.editpreview {
@@ -49,6 +53,16 @@ import {PageService} from './page.service';
         div#controls {
             position: fixed;
             bottom: 0px;
+            height: 40px;
+            width: 100%;
+            z-index: 12;
+            background: white;
+            border-top: solid 1px #ccc;
+            padding: 5px 0 0 8px;
+        }
+        div#advanced {
+            position: absolute;
+            bottom: 85px;
             z-index: 12;
             background: white;
             border: solid 1px black;
@@ -61,14 +75,20 @@ export class PageEditComponent {
     @Input() adminBreadcrumb: Breadcrumb;
     @Output() onShowEdit = new EventEmitter<boolean>();
 
+    showAdvanced: boolean = false;
+
     constructor(private pageService: PageService) {}
 
-    cancel() {
+    cancel(): void {
         this.onShowEdit.emit(false);
     }
 
-    save() {
+    save(): void {
         this.pageService.save(this.page);
         this.onShowEdit.emit(false);
+    }
+
+    toggleShowAdvanced(): void {
+        this.showAdvanced = !this.showAdvanced;
     }
 }

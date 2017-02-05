@@ -25,10 +25,11 @@ def read_page(request, slug):
 
 @login_required
 def save_page(request):
-    new_page = json.loads(request.body)
+    new_page_dict = json.loads(request.body)
     try:
-        old_page = Page.objects.get(pk=new_page['id'])
-        old_page.content = new_page['content']
+        old_page = Page.objects.get(pk=new_page_dict['id'])
+        old_page.content = new_page_dict['content']
+        old_page.title = new_page_dict['title']
         old_page.save()
         data = {}
     except Page.DoesNotExist:

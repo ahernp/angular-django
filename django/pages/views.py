@@ -30,6 +30,7 @@ def save_page(request):
         old_page = Page.objects.get(pk=new_page_dict['id'])
         old_page.content = new_page_dict['content']
         old_page.title = new_page_dict['title']
+        old_page.slug = new_page_dict['slug']
         old_page.save()
         data = {}
     except Page.DoesNotExist:

@@ -3,7 +3,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 
 import {Page} from './page';
-import {PageService} from './page.service';
+import {pageUrl, PageService} from './page.service';
 
 @Component({
     selector: 'ad-page-edit',
@@ -23,13 +23,15 @@ import {PageService} from './page.service';
             <div style="clear:both"></div>
 
             <div id="advanced" *ngIf="showAdvanced">
-                <p>Title: <input [(ngModel)]="page.title"></p>
+                <h3>Other Editable Fields</h3>
+                <p>Title: <input [(ngModel)]="page.title" (keyup)="titleChange()"></p>
+                <p>Slug: <input [(ngModel)]="page.slug"></p>
             </div>
         </div>
         <div id="controls">
+            <button (click)="save()">Save</button>
             <span class="ad-control" (click)="cancel()">Cancel</span>
             <span class="ad-control" (click)="toggleShowAdvanced()">Advanced</span>
-            <button (click)="save()">Save</button>
             <ad-breadcrumb [breadcrumb]="adminBreadcrumb"></ad-breadcrumb>
         </div>
     `,
@@ -84,8 +86,13 @@ export class PageEditComponent {
     }
 
     save(): void {
+        this.page.url = `${pageUrl}/${this.page.slug}`;
         this.pageService.save(this.page);
         this.onShowEdit.emit(false);
+    }
+
+    titleChange(): void {
+        this.page.slug = this.page.title.replace(/[^\w\s-]/g, '').trim().toLocaleLowerCase().replace(/[-\s]+/g, '-');
     }
 
     toggleShowAdvanced(): void {

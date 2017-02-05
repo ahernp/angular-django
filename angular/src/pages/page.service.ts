@@ -23,9 +23,9 @@ import {blogBreadcrumb, blogArchiveBreadcrumb} from "../blog/blog.component";
 import {feedreaderBreadcrumb} from "../feedreader/feedreader.component";
 import {timersBreadcrumb} from "../timers/timers.component";
 
-const pageUrl: string = '/page';
-const pagesApiUrl: string = '/pages';
+export const pageUrl: string = '/page';
 export const messageSource: string = 'Page';
+const pagesApiUrl: string = '/pages';
 
 @Injectable()
 export class PageService {
@@ -160,7 +160,7 @@ export class PageService {
     }
 
     updateCache(page: Page): void {
-        let pages = this.pageCache.filter(cachedPage => cachedPage.url == page.url);
+        let pages = this.pageCache.filter(cachedPage => cachedPage.slug == page.slug);
         if (pages.length > 0)
             pages[0] = page;
         else

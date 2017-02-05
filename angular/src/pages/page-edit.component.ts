@@ -133,6 +133,7 @@ export class PageEditComponent implements OnInit {
     }
 
     cancel(): void {
+        this.titleService.setTitle(this.page.title)
         this.onShowEdit.emit(false);
     }
 
@@ -146,6 +147,7 @@ export class PageEditComponent implements OnInit {
         let now = new Date();
         this.page.updated = toDateTimeString(now);
         this.pageService.save(this.page);
+        this.titleService.setTitle(this.page.title)
         this.onShowEdit.emit(false);
     }
 

@@ -5,15 +5,7 @@ from django.conf import settings
 from django.core.exceptions import PermissionDenied
 from django.http import HttpResponse
 
-from .models import Entry, Feed
-
-
-def get_feeds(request):
-    feeds = Feed.objects.all()
-
-    data = json.dumps([feed.dictionary for feed in feeds])
-
-    return HttpResponse(data, content_type='application/json')
+from .models import Entry, Feed, Group
 
 
 def get_entries(request):
@@ -23,6 +15,21 @@ def get_entries(request):
         .order_by('-published_time')[:settings.MAX_ENTRIES_SHOWN]
 
     data = json.dumps([entry.dictionary for entry in entries])
+
+    return HttpResponse(data, content_type='application/json')
+
+
+def get_groups(request):
+    groups = Group.objects.all()
+
+    data = json.dumps([group.dictionary for group in groups])
+
+    return HttpResponse(data, content_type='application/json')
+
+def get_feeds(request):
+    feeds = Feed.objects.all()
+
+    data = json.dumps([feed.dictionary for feed in feeds])
 
     return HttpResponse(data, content_type='application/json')
 

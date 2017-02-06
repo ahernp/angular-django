@@ -15,8 +15,13 @@ class Group(models.Model):
     def __unicode__(self):
         return self.name
 
-    def num_unread_entries(self):
-        return Entry.objects.filter(feed__group=self, read_flag=False).count()
+    def _get_dictionary(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+        }
+
+    dictionary = property(_get_dictionary)
 
 
 class Feed(models.Model):
@@ -37,9 +42,6 @@ class Feed(models.Model):
     def __unicode__(self):
         return self.title or self.xml_url
 
-    def num_unread_entries(self):
-        return Entry.objects.filter(feed=self, read_flag=False).count()
-
     def save(self, *args, **kwargs):
         try:
             Feed.objects.get(xml_url=self.xml_url)
@@ -50,15 +52,14 @@ class Feed(models.Model):
             poll_feed(self)
 
     def _get_dictionary(self):
-        return {'feedTitle': self.title,
-                'groupName': self.group.name if self.group else ''}
+        return {
+            'id': self.id,
+            'feedTitle': self.title,
+            'groupId': self.group_id,
+            'groupName': self.group.name if self.group else ''
+        }
 
     dictionary = property(_get_dictionary)
-
-
-class EntryManager(models.Manager):
-    def num_unread(self):
-        return Entry.objects.filter(read_flag=False).count()
 
 
 class Entry(models.Model):
@@ -80,16 +81,15 @@ class Entry(models.Model):
         return self.title
 
     def _get_dictionary(self):
-        return {'id': self.id,
-                'title': self.title,
-                'link': self.link,
-                'description': self.description,
-                'publishedTime': self.published_time.strftime('%Y-%m-%d %H:%M:%S'),
-                'feedTitle': self.feed.title,
-                'groupName': self.feed.group.name if self.feed.group else '',
-                'readFlag': self.read_flag}
+        return {
+            'id': self.id,
+            'title': self.title,
+            'link': self.link,
+            'description': self.description,
+            'publishedTime': self.published_time.strftime('%Y-%m-%d %H:%M:%S'),
+            'feedTitle': self.feed.title,
+            'groupName': self.feed.group.name if self.feed.group else '',
+            'readFlag': self.read_flag
+        }
 
     dictionary = property(_get_dictionary)
-
-    objects = models.Manager()
-    manager = EntryManager()

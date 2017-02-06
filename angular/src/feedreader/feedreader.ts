@@ -10,8 +10,15 @@ export class Entry {
 }
 
 export class Feed {
+    id: number;
     feedTitle: string;
+    groupId: number;
     groupName: string;
+}
+
+export class Group {
+    id: number;
+    name: string;
 }
 
 export class FeedCountDictionary {

@@ -1,10 +1,11 @@
 from django.conf.urls import url
 
-from .views import get_entries, get_feeds, toggle_read, mark_all_read
+from . import views
 
 urlpatterns = [
-    url(regex=r'^feeds$', view=get_feeds, name='feeds'),
-    url(regex=r'^entries$', view=get_entries, name='entries'),
-    url(regex=r'^toggleread$', view=toggle_read, name='toggle_read'),
-    url(regex=r'^markallread$', view=mark_all_read, name='mark_all_read'),
+    url(regex=r'^entries$', view=views.get_entries, name='entries'),
+    url(regex=r'^feeds$', view=views.get_feeds, name='feeds'),
+    url(regex=r'^groups$', view=views.get_groups, name='groups'),
+    url(regex=r'^markallread$', view=views.mark_all_read, name='mark_all_read'),
+    url(regex=r'^toggleread$', view=views.toggle_read, name='toggle_read'),
 ]

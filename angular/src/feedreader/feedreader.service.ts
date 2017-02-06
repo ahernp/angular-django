@@ -27,8 +27,8 @@ export class FeedreaderService {
     feedCache: Feed[] = [];
     feeds$: ReplaySubject<any> = new ReplaySubject(1);
 
-    entryCache: Entry[] = [];
-    entries$: ReplaySubject<any> = new ReplaySubject(1);
+    recentEntryCache: Entry[] = [];
+    recentEntries$: ReplaySubject<any> = new ReplaySubject(1);
 
     constructor(
         private http: Http,
@@ -36,7 +36,7 @@ export class FeedreaderService {
         private schedulerService: SchedulerService
     ) {
         this.feeds$.next([]);
-        this.entries$.next([]);
+        this.recentEntries$.next([]);
         this.initialCheckForUpdates();
     }
 
@@ -45,7 +45,7 @@ export class FeedreaderService {
     }
 
     getEntries(): ReplaySubject<any> {
-        return this.entries$;
+        return this.recentEntries$;
     }
 
     toggleRead(entryId: number): void {
@@ -55,9 +55,9 @@ export class FeedreaderService {
         this.http.post(url, {entry_id: entryId}, options)
             .subscribe(
                 () => {
-                    let entry = this.entryCache.filter(entry => entry.id == entryId)[0];
+                    let entry = this.recentEntryCache.filter(entry => entry.id == entryId)[0];
                     entry.readFlag = !entry.readFlag;
-                    this.entries$.next(this.entryCache);
+                    this.recentEntries$.next(this.recentEntryCache);
                     this.messageUnread();
                 },
                 error => {
@@ -76,9 +76,9 @@ export class FeedreaderService {
         this.http.post(url, {}, options)
             .subscribe(
                 () => {
-                    for (let entry of this.entryCache.filter(entry => !entry.readFlag))
+                    for (let entry of this.recentEntryCache.filter(entry => !entry.readFlag))
                         entry.readFlag = true;
-                    this.entries$.next(this.entryCache);
+                    this.recentEntries$.next(this.recentEntryCache);
                     this.messageUnread();
                 },
                 error => {
@@ -97,10 +97,10 @@ export class FeedreaderService {
                     this.feedCache = <Feed[]>res.json();
                     this.feeds$.next(this.feedCache);
                 }),
-            this.http.get(`${apiEndpoint}${feedreaderUrl}/entries`)
+            this.http.get(`${apiEndpoint}${feedreaderUrl}/recententries`)
                 .map(res => {
-                    this.entryCache = <Entry[]>res.json();
-                    this.entries$.next(this.entryCache);
+                    this.recentEntryCache = <Entry[]>res.json();
+                    this.recentEntries$.next(this.recentEntryCache);
                     this.messageUnread();
                 })
         ]).subscribe(
@@ -122,7 +122,7 @@ export class FeedreaderService {
 
     messageUnread() {
         this.messageService.clearMessagesBySource(messageSource);
-        let unread: Entry[] = this.entryCache.filter(entry => !entry.readFlag);
+        let unread: Entry[] = this.recentEntryCache.filter(entry => !entry.readFlag);
         if (unread.length > 0)
             this.messageService.addInfoMessage(
                 messageSource,
@@ -135,8 +135,8 @@ export class FeedreaderService {
         let searchResults: SearchResults = new SearchResults();
         let searchStringLower: string = searchString.toLocaleLowerCase();
 
-        for (let i = 0; i < this.entryCache.length; i++) {
-            let entry: Entry = this.entryCache[i];
+        for (let i = 0; i < this.recentEntryCache.length; i++) {
+            let entry: Entry = this.recentEntryCache[i];
 
             let matchPosition = entry.title.toLocaleLowerCase().indexOf(searchStringLower);
             if (matchPosition > -1) {

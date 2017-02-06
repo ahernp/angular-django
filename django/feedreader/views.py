@@ -8,11 +8,14 @@ from django.http import HttpResponse
 from .models import Entry, Feed, Group
 
 
-def get_entries(request):
+def get_recent_entries(request):
     from_time = datetime.utcnow() - timedelta(days=settings.MAX_DAYS_SHOWN)
 
     entries = Entry.objects.filter(published_time__gt=from_time)\
         .order_by('-published_time')[:settings.MAX_ENTRIES_SHOWN]
+
+    if not entries:
+        entries = Entry.objects.all().order_by('-published_time')[:settings.MAX_ENTRIES_SHOWN]
 
     data = json.dumps([entry.dictionary for entry in entries])
 

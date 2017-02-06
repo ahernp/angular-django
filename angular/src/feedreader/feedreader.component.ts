@@ -16,7 +16,7 @@ import {Footer} from "../core/footer/footer";
 
 import {rootTitle} from "../app.settings";
 
-const feedreaderTitle: string = 'Feedreader';
+export const feedreaderTitle: string = 'Feedreader';
 export const feedreaderUrl: string = '/feedreader';
 export const feedreaderBreadcrumb = <Breadcrumb>{title: feedreaderTitle, url: feedreaderUrl, parentName: rootTitle};
 
@@ -55,8 +55,9 @@ export const feedreaderBreadcrumb = <Breadcrumb>{title: feedreaderTitle, url: fe
             </div>
             <div style="clear:both"></div>
         </div>
-        <ad-footer id="footer" *ngIf="footer" [footer]="footer" (onRefresh)="onRefresh()"></ad-footer>
+        <ad-footer id="footer" *ngIf="footer" [footer]="footer" (onRefresh)="onRefresh()" (onShowEdit)="onShowEdit($event)"></ad-footer>
         <ad-spinner *ngIf="showSpinner"></ad-spinner>
+        <ad-feedreader-edit *ngIf="showEdit" [feeds]="feeds" [adminBreadcrumb]="adminBreadcrumb" (onShowEdit)="onShowEdit($event)"></ad-feedreader-edit>
         `,
     styles: [`
         #feedreader-entry-counts {
@@ -84,18 +85,25 @@ export const feedreaderBreadcrumb = <Breadcrumb>{title: feedreaderTitle, url: fe
     providers: []
 })
 export class FeedreaderComponent implements OnInit {
-    loggedIn: Boolean;
-    feeds: Feed[];
-    entries: Entry[];
-    showReadEntries: Boolean;
-    unreadEntriesFound: Boolean = false;
-    unreadEntries: Entry[];
-    shownEntries: Entry[];
-    totalEntryCount: number;
-    groupCounts: GroupCount[];
+    adminBreadcrumb: Breadcrumb = <Breadcrumb>{
+        title: 'Admin',
+        url: `/admin${feedreaderUrl}/`,
+        externalLinkFlag: true,
+        loggedInRequiredFlag: true
+    };
     breadcrumbs: Breadcrumb[];
+    entries: Entry[];
+    feeds: Feed[];
     footer: Footer;
+    groupCounts: GroupCount[];
+    loggedIn: Boolean;
+    showEdit: boolean = false;
+    shownEntries: Entry[];
+    showReadEntries: Boolean;
     showSpinner: Boolean = false;
+    totalEntryCount: number;
+    unreadEntries: Entry[];
+    unreadEntriesFound: Boolean = false;
 
     constructor(
         private feedreaderService: FeedreaderService,
@@ -124,11 +132,7 @@ export class FeedreaderComponent implements OnInit {
 
     populateFooter() {
         this.footer = <Footer>{
-            breadcrumbs: [<Breadcrumb>{
-                title: 'Admin',
-                url: `/admin${feedreaderUrl}/`,
-                externalLinkFlag: true,
-                loggedInRequiredFlag: true}],
+            editFlag: true,
             refreshFlag: true,
         };
     }
@@ -251,5 +255,9 @@ export class FeedreaderComponent implements OnInit {
     onRefresh(): void {
         this.showSpinner = true;
         this.feedreaderService.refreshCaches();
+    }
+
+    onShowEdit(showEdit: boolean) {
+        this.showEdit = showEdit;
     }
 }

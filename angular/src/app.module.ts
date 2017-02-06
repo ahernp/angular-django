@@ -8,6 +8,7 @@ import {AppComponent} from './app.component';
 import {appRouting} from "./app.routing";
 
 import {CoreModule} from "./core/core.module";
+import {FeedreaderModule} from "./feedreader/feedreader.module";
 import {PagesModule} from "./pages/pages.module";
 import {TimersModule} from "./timers/timers.module";
 import {ToolsModule} from "./tools/tools.module";
@@ -19,14 +20,13 @@ import {DashboardService} from "./dashboard/dashboard.service";
 
 import {SitemapComponent} from "./sitemap/sitemap.component";
 
-import {FeedreaderComponent} from "./feedreader/feedreader.component";
-import {FeedreaderService} from "./feedreader/feedreader.service";
 
 @NgModule({
     imports: [
         appRouting,
         BrowserModule,
         CoreModule,
+        FeedreaderModule,
         FormsModule,
         HttpModule,
         PagesModule,
@@ -37,12 +37,10 @@ import {FeedreaderService} from "./feedreader/feedreader.service";
         BlogComponent,
         AppComponent,
         DashboardComponent,
-        FeedreaderComponent,
         SitemapComponent,
     ],
     providers: [
         DashboardService,
-        FeedreaderService,
         {provide: XSRFStrategy, useValue: new CookieXSRFStrategy('csrftoken', 'X-CSRFToken')},
     ],
     bootstrap: [AppComponent]

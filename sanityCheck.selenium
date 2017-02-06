@@ -114,7 +114,7 @@
 <tr>
 	<td>waitForText</td>
 	<td>css=h1</td>
-	<td>Feedreader</td>
+	<td>Recent Entries</td>
 </tr>
 <tr>
 	<td>click</td>

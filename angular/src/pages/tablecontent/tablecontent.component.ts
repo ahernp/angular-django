@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 import {Section} from "./section";
+import {Row} from "../../core/table/table";
 
 @Component({
     selector: 'ad-tablecontent',
@@ -18,7 +19,7 @@ export class TableContentComponent implements OnInit {
 
     currentContent: string = '';
     currentColumnHeadings: string[] = [];
-    currentRows: string[][] = [];
+    currentRows: Row[] = [];
 
     ngOnInit(): void {
         this.parseContentIntoSections();
@@ -32,7 +33,7 @@ export class TableContentComponent implements OnInit {
                 if (this.currentColumnHeadings.length == 0)
                     this.currentColumnHeadings = lines[i].split('|');
                 else if (lines[i].indexOf('-----') == -1)
-                    this.currentRows.push(lines[i].split('|').map(str => str.trim()));
+                    this.currentRows.push(<Row>{columns: lines[i].split('|').map(str => str.trim())});
             }
             else {
                 this.addTableSection();

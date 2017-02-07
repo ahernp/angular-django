@@ -7,7 +7,7 @@ import {feedreaderTitle} from './feedreader.component';
 
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 
-import {Table} from "../core/table/table";
+import {Table, Row} from "../core/table/table";
 
 const columnHeadings: string[] = ['Group', 'Feed', 'Site'];
 
@@ -30,10 +30,12 @@ const columnHeadings: string[] = ['Group', 'Feed', 'Site'];
                 </thead>
                 <tbody>
                     <tr *ngFor="let row of table.currentRows; let odd=odd; let even=even;" [ngClass]="{odd: odd, even: even}">
-                        <td>{{row[3].groupName}}</td>
-                        <td><a href="{{row[3].feedUrl}}">{{row[3].feedTitle}}</a></td>
-                        <td title="{{row[3].feedDescription}}"><a href="{{row[3].siteUrl}}">{{row[3].siteUrl|trimurl}}</a></td>
-                        <td><input type="checkbox" (click)="delete(row[3].id)"></td>
+                        <td>{{row.item.groupName}}</td>
+                        <td><a href="{{row.item.feedUrl}}">{{row.item.feedTitle}}</a></td>
+                        <td title="{{row.item.feedDescription}}">
+                            <a href="{{row.item.siteUrl}}">{{row.item.siteUrl|trimurl}}</a>
+                        </td>
+                        <td><input type="checkbox" (click)="delete(row.item.id)"></td>
                     </tr>
                 </tbody>
             </table>
@@ -122,9 +124,12 @@ export class FeedreaderEditComponent implements OnInit {
             return a.feedTitle.toLowerCase().localeCompare(b.feedTitle, 'en', {'sensitivity': 'base'});
         });
 
-        let rows: any[][] = [];
+        let rows: Row[] = [];
         for (let feed of this.feeds)
-            rows.push([feed.groupName, feed.feedTitle, feed.siteUrl, feed]);
+            rows.push(<Row>{
+                columns: [feed.groupName, feed.feedTitle, feed.siteUrl],
+                item: feed
+            });
         this.table = new Table(columnHeadings, rows);
     }
 

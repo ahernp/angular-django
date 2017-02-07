@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 
-import {Table} from './table'
+import {Table, Row} from './table'
 
 @Component({
     selector: 'ad-table',
@@ -14,7 +14,7 @@ import {Table} from './table'
             </thead>
             <tbody>
                 <tr *ngFor="let row of table.currentRows; let odd=odd; let even=even;" [ngClass]="{ odd: odd, even: even }">
-                    <td *ngFor="let column of row">{{column}}</td>
+                    <td *ngFor="let column of row.columns">{{column}}</td>
                 </tr>
             </tbody>
         </table>
@@ -22,7 +22,7 @@ import {Table} from './table'
 })
 export class TableComponent implements OnInit {
     @Input() columnHeadings: string[];
-    @Input() rows: string[][];
+    @Input() rows: Row[];
 
     table: Table;
     filterString: string;

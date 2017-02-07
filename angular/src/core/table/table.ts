@@ -5,17 +5,22 @@ const sizeMultiplier: any = {
 };
 const sizeRegExp: RegExp = /^\d*\.?\d+(KB|MB|GB)$/i;
 
+export class Row {
+    columns: string[];
+    item: any;
+}
+
 export class Table {
     public columnHeadings: string[];
-    private rows: any[][];
-    public currentRows: any[][];
+    private rows: Row[];
+    public currentRows: Row[];
 
     private sortOrders: boolean[] = [];
     private filterableStrings: string[];
 
     private filterString: string = '';
 
-    constructor(columnHeadings: string[], rows: string[][]) {
+    constructor(columnHeadings: string[], rows: Row[]) {
         this.columnHeadings = columnHeadings;
         this.rows = rows;
         this.currentRows = rows;
@@ -48,15 +53,15 @@ export class Table {
                 return (valueA < valueB) ? -1 : 1;
         };
 
-        this.rows.sort((rowA: string[], rowB: string[]): number => {
-            if (sizeRegExp.test(rowA[sortColumn]) && sizeRegExp.test(rowB[sortColumn])) {
-                let valueA: number = calcSize(rowA[sortColumn]);
-                let valueB: number = calcSize(rowB[sortColumn]);
+        this.rows.sort((rowA: Row, rowB: Row): number => {
+            if (sizeRegExp.test(rowA.columns[sortColumn]) && sizeRegExp.test(rowB.columns[sortColumn])) {
+                let valueA: number = calcSize(rowA.columns[sortColumn]);
+                let valueB: number = calcSize(rowB.columns[sortColumn]);
                 return compareValues(valueA, valueB);
             }
             else {
-                let valueA: string = rowA[sortColumn] == undefined ? '' : rowA[sortColumn].toLocaleLowerCase();
-                let valueB: string = rowB[sortColumn] == undefined ? '' : rowB[sortColumn].toLocaleLowerCase();
+                let valueA: string = rowA.columns[sortColumn] == undefined ? '' : rowA.columns[sortColumn].toLocaleLowerCase();
+                let valueB: string = rowB.columns[sortColumn] == undefined ? '' : rowB.columns[sortColumn].toLocaleLowerCase();
                 return compareValues(valueA, valueB);
             }
         });
@@ -74,10 +79,10 @@ export class Table {
     private populateFilterStrings(): void {
         this.filterableStrings = [];
         for (let row of this.rows)
-            this.filterableStrings.push(row.toString().toLocaleLowerCase());
+            this.filterableStrings.push(row.columns.toString().toLocaleLowerCase());
     }
 
-    private filterRows(): string[][] {
+    private filterRows(): Row[] {
         if (this.filterString.length < 2) {
             this.currentRows = this.rows;
             return this.currentRows;

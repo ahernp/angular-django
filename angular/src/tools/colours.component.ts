@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 
-import {Table} from "../core/table/table";
+import {Table, Row} from "../core/table/table";
 
 const columnHeadings = ['Name', 'Hex', 'Red', 'Green', 'Blue', 'Colour'];
 const colours: string[][] = [
@@ -173,7 +173,7 @@ const colours: string[][] = [
     `,
 })
 export class ColoursComponent {
-    table: Table = new Table(columnHeadings, colours);
+    table: Table = new Table(columnHeadings, colours.map(colour => <Row>{columns:colour}));
     filterString: string;
 
     filterRows(): void {

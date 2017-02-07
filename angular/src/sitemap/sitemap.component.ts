@@ -11,7 +11,7 @@ import {PageService} from '../pages/page.service';
 import {Footer} from "../core/footer/footer";
 
 import {rootTitle} from '../app.settings';
-import {Table} from '../core/table/table';
+import {Table, Row} from '../core/table/table';
 
 export const sitemapTitle: string = 'Site Map';
 const columnHeadings: string[] = ['Title', 'Parent', 'Published', 'Updated'];
@@ -32,10 +32,10 @@ const columnHeadings: string[] = ['Title', 'Parent', 'Published', 'Updated'];
                     </thead>
                     <tbody>
                         <tr *ngFor="let row of table.currentRows; let odd=odd; let even=even;" [ngClass]="{odd: odd, even: even}">
-                            <td><a routerLink="{{row[4]}}">{{row[0]}}</a></td>
-                            <td>{{row[1]}}</td>
-                            <td>{{row[2]}}</td>
-                            <td>{{row[3]}}</td>
+                            <td><a routerLink="{{row.item.url}}">{{row.item.title}}</a></td>
+                            <td>{{row.item.parentName}}</td>
+                            <td>{{row.item.published}}</td>
+                            <td>{{row.item.updated}}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -128,10 +128,13 @@ export class SitemapComponent implements OnInit {
             return a.title.toLowerCase().localeCompare(b.title, 'en', {'sensitivity': 'base'});
         });
 
-        let row: string[][] = [];
+        let rows: Row[] = [];
         for (let breadcrumb of this.sitemap)
-            row.push([breadcrumb.title, breadcrumb.parentName, breadcrumb.published, breadcrumb.updated, breadcrumb.url]);
-        this.table = new Table(columnHeadings, row);
+            rows.push(<Row>{
+                columns: [breadcrumb.title, breadcrumb.parentName, breadcrumb.published, breadcrumb.updated],
+                item: breadcrumb
+            });
+        this.table = new Table(columnHeadings, rows);
     }
 
     getBreadcrumbs() {

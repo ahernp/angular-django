@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 
-import {Feed} from './feedreader';
+import {Feed, Group} from './feedreader';
 import {FeedreaderService} from './feedreader.service';
 import {feedreaderTitle} from './feedreader.component';
 
@@ -16,6 +16,15 @@ const columnHeadings: string[] = ['Group', 'Feed', 'Site'];
     template: `
         <div id="editor">
             <h2>Edit Feeds and Groups</h2>
+            <p>
+                Add Feed:
+                <input [(ngModel)]="newFeedUrl" placeholder="Url">
+                <select [(ngModel)]="newFeedGroupId">
+                    <option [ngValue]="">None</option>
+                    <option *ngFor="let group of groups" [ngValue]="group.id">{{group.name}}</option>
+                </select>
+                <button (click)="addFeed()">Add</button>
+            </p>
             <input [(ngModel)]="filterString" (ngModelChange)="filterRows()" placeholder="Filter" tabindex="2">
             <span *ngIf="table.currentRows.length != table.rows.length">{{table.currentRows.length}} of</span>
             {{table.rows.length}} rows
@@ -35,7 +44,7 @@ const columnHeadings: string[] = ['Group', 'Feed', 'Site'];
                         <td title="{{row.item.feedDescription}}">
                             <a href="{{row.item.siteUrl}}">{{row.item.siteUrl|trimurl}}</a>
                         </td>
-                        <td><input type="checkbox" (click)="delete(row.item.id)"></td>
+                        <td><input type="checkbox" (click)="deleteFeed(row.item)"></td>
                     </tr>
                 </tbody>
             </table>
@@ -90,12 +99,16 @@ const columnHeadings: string[] = ['Group', 'Feed', 'Site'];
 })
 export class FeedreaderEditComponent implements OnInit {
     @Input() feeds: Feed[];
+    @Input() groups: Group[];
     @Input() adminBreadcrumb: Breadcrumb;
     @Output() onShowEdit = new EventEmitter<boolean>();
 
     filterString: string;
     table: Table;
     showAdvanced: boolean = false;
+
+    newFeedUrl: string;
+    newFeedGroupId: number;
 
     constructor(
         private feedreaderService: FeedreaderService,
@@ -112,7 +125,15 @@ export class FeedreaderEditComponent implements OnInit {
         this.onShowEdit.emit(false);
     }
 
-    delete(): void {
+    addFeed(): void {
+        let newFeed: Feed = new Feed();
+        newFeed.feedUrl = this.newFeedUrl;
+        newFeed.groupId = this.newFeedGroupId;
+        this.feedreaderService.saveFeed(newFeed);
+    }
+
+    deleteFeed(feed: Feed): void {
+        this.feedreaderService.deleteFeed(feed);
     }
 
     filterRows(): void {

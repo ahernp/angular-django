@@ -11,7 +11,7 @@ import {MessageService} from "../core/message/message.service";
 
 import {SchedulerService} from "../core/scheduler/scheduler.service";
 
-import {Entry, Feed} from './feedreader';
+import {Entry, Feed, Group} from './feedreader';
 
 import {feedreaderUrl} from "./feedreader.component";
 import {apiEndpoint} from "../app.settings";
@@ -26,6 +26,9 @@ export class FeedreaderService {
 
     feedCache: Feed[] = [];
     feeds$: ReplaySubject<any> = new ReplaySubject(1);
+
+    groupCache: Group[] = [];
+    groups$: ReplaySubject<any> = new ReplaySubject(1);
 
     recentEntryCache: Entry[] = [];
     recentEntries$: ReplaySubject<any> = new ReplaySubject(1);
@@ -46,6 +49,10 @@ export class FeedreaderService {
 
     getEntries(): ReplaySubject<any> {
         return this.recentEntries$;
+    }
+
+    getGroups(): ReplaySubject<any> {
+        return this.groups$;
     }
 
     toggleRead(entryId: number): void {
@@ -92,14 +99,19 @@ export class FeedreaderService {
 
     refreshCaches(): void {
         Observable.forkJoin([
+            this.http.get(`${apiEndpoint}${feedreaderUrl}/groups`)
+                .map(response => {
+                    this.groupCache = <Group[]>response.json();
+                    this.groups$.next(this.groupCache);
+                }),
             this.http.get(`${apiEndpoint}${feedreaderUrl}/feeds`)
-                .map(res => {
-                    this.feedCache = <Feed[]>res.json();
+                .map(response => {
+                    this.feedCache = <Feed[]>response.json();
                     this.feeds$.next(this.feedCache);
                 }),
             this.http.get(`${apiEndpoint}${feedreaderUrl}/recententries`)
-                .map(res => {
-                    this.recentEntryCache = <Entry[]>res.json();
+                .map(response => {
+                    this.recentEntryCache = <Entry[]>response.json();
                     this.recentEntries$.next(this.recentEntryCache);
                     this.messageUnread();
                 })
@@ -129,6 +141,59 @@ export class FeedreaderService {
                 unread.length == 1
                     ? '1 unread Feedreader entry'
                     : `${unread.length} unread Feedreader entries`);
+    }
+
+    deleteFeed(feed: Feed): void {
+        let url = `${apiEndpoint}${feedreaderUrl}/deletefeed`;
+        let headers = new Headers({'Content-Type': 'application/json'});
+        let options = new RequestOptions({ headers: headers });
+
+        this.http.post(url, feed, options)
+            .subscribe(
+                (response) => {
+                    this.deleteFeedFromCache(feed);
+                },
+                error => {
+                    this.messageService.addErrorMessage(
+                        messageSource,
+                        `${messageSource} save Feed error: Url ${url}; Status Code ${error.status}; ${error.statusText}`);
+                    console.log(error);
+                }
+            );
+    }
+
+    saveFeed(feed: Feed): void {
+        let url = `${apiEndpoint}${feedreaderUrl}/savefeed`;
+        let headers = new Headers({'Content-Type': 'application/json'});
+        let options = new RequestOptions({ headers: headers });
+
+        this.http.post(url, feed, options)
+            .subscribe(
+                (response) => {
+                    this.updateFeedCache(<Feed>response.json());
+                },
+                error => {
+                    this.messageService.addErrorMessage(
+                        messageSource,
+                        `${messageSource} save Feed error: Url ${url}; Status Code ${error.status}; ${error.statusText}`);
+                    console.log(error);
+                }
+            );
+    }
+
+    deleteFeedFromCache(feed: Feed): void {
+        for (let i = 0; i < this.feedCache.length; i++) {
+            this.feedCache.splice(i, 1);
+            break;
+        }
+    }
+
+    updateFeedCache(feed: Feed): void {
+        let feeds = this.feedCache.filter(cachedFeed => cachedFeed.feedUrl == feed.feedUrl);
+        if (feeds.length > 0)
+            feeds[0] = feed;
+        else
+            this.feedCache.push(feed);
     }
 
     search(searchString: string): SearchResults {

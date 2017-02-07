@@ -6,7 +6,7 @@ import {Observable} from 'rxjs';
 import {AuthService} from "../core/auth/auth.service";
 
 import {Entry, Feed, FeedCount, FeedCountDictionary,
-    GroupCount, GroupCountDictionary} from './feedreader';
+    GroupCount, GroupCountDictionary, Group} from './feedreader';
 import {FeedreaderService} from './feedreader.service';
 
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
@@ -61,7 +61,8 @@ export const feedreaderBreadcrumb = <Breadcrumb>{title: feedreaderTitle, url: fe
 
         <ad-spinner *ngIf="showSpinner"></ad-spinner>
 
-        <ad-feedreader-edit *ngIf="showEdit" [feeds]="feeds" [adminBreadcrumb]="adminBreadcrumb" (onShowEdit)="onShowEdit($event)"></ad-feedreader-edit>
+        <ad-feedreader-edit *ngIf="showEdit" [feeds]="feeds" [groups]="groups" [adminBreadcrumb]="adminBreadcrumb"
+            (onShowEdit)="onShowEdit($event)"></ad-feedreader-edit>
         `,
     styles: [`
         #feedreader-entry-counts {
@@ -100,6 +101,7 @@ export class FeedreaderComponent implements OnInit {
     feeds: Feed[];
     footer: Footer;
     groupCounts: GroupCount[];
+    groups: Group[];
     loggedIn: Boolean;
     showEdit: boolean = false;
     shownEntries: Entry[];
@@ -146,6 +148,7 @@ export class FeedreaderComponent implements OnInit {
         this.showReadEntries = false;
         Observable.combineLatest(
             this.feedreaderService.getFeeds().map(feeds => this.feeds = <Feed[]>feeds),
+            this.feedreaderService.getGroups().map(groups => this.groups = <Group[]>groups),
             this.feedreaderService.getEntries().map(entries => this.entries = <Entry[]>entries))
             .subscribe(
                 data => {

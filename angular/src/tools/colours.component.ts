@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 import {Table, Row} from "../core/table/table";
 
-const columnHeadings = ['Name', 'Hex', 'Red', 'Green', 'Blue', 'Colour'];
+const columnHeadings = ['Name', 'Hex', 'Red', 'Green', 'Blue'];
 const colours: string[][] = [
     ['AliceBlue', '#F0F8FF', 'F0', 'F8', 'FF'],
     ['AntiqueWhite', '#FAEBD7', 'FA', 'EB', 'D7'],
@@ -161,12 +161,17 @@ const colours: string[][] = [
         {{table.rows.length}} rows
         <table>
             <thead>
-                <tr><th *ngFor="let columnHeading of table.columnHeadings; let i = index" (click)="table.sortRows(i)">{{columnHeading}}</th></tr>
+                <tr>
+                    <th *ngFor="let columnHeading of table.columnHeadings; let i = index" (click)="table.sortRows(i)">
+                        {{columnHeading}}
+                    </th>
+                    <th>Colour</th>
+                </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let row of table.currentRows">
-                    <td *ngFor="let column of row">{{column}}</td>
-                    <td *ngIf="row" [style.background-color]="row[1]"></td>
+                    <td *ngFor="let column of row.columns">{{column}}</td>
+                    <td *ngIf="row" [style.background-color]="row.columns[1]"></td>
                 </tr>
             </tbody>
         </table>

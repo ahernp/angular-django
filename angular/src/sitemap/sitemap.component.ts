@@ -10,7 +10,7 @@ import {PageService} from '../pages/page.service';
 
 import {Footer} from "../core/footer/footer";
 
-import {adminBreadcrumb, rootTitle} from '../app.settings';
+import {rootTitle} from '../app.settings';
 import {Table} from '../core/table/table';
 
 export const sitemapTitle: string = 'Site Map';
@@ -125,8 +125,7 @@ export class SitemapComponent implements OnInit {
         this.sitemap = breadcrumbs.slice(0);
 
         this.sitemap.sort(function (a, b) {
-            return a.title.toLowerCase().localeCompare(
-                b.title, 'en', {'sensitivity': 'base'});
+            return a.title.toLowerCase().localeCompare(b.title, 'en', {'sensitivity': 'base'});
         });
 
         let row: string[][] = [];

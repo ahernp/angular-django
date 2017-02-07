@@ -7,8 +7,8 @@ const sizeRegExp: RegExp = /^\d*\.?\d+(KB|MB|GB)$/i;
 
 export class Table {
     public columnHeadings: string[];
-    private rows: string[][];
-    public currentRows: string[][];
+    private rows: any[][];
+    public currentRows: any[][];
 
     private sortOrders: boolean[] = [];
     private filterableStrings: string[];

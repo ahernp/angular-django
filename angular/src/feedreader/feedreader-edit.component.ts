@@ -7,21 +7,33 @@ import {feedreaderTitle} from './feedreader.component';
 
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 
+import {Table} from "../core/table/table";
+
+const columnHeadings: string[] = ['Group', 'Feed', 'Site'];
+
 @Component({
     selector: 'ad-feedreader-edit',
     template: `
         <div id="editor">
             <h2>Edit Feeds and Groups</h2>
+            <input [(ngModel)]="filterString" (ngModelChange)="filterRows()" placeholder="Filter" tabindex="2">
+            <span *ngIf="table.currentRows.length != table.rows.length">{{table.currentRows.length}} of</span>
+            {{table.rows.length}} rows
             <table>
                 <thead>
-                    <tr><th>Group</th><th>Feed</th><th>Site</th><th>Delete</th></tr>
+                    <tr>
+                        <th *ngFor="let columnHeading of table.columnHeadings; let i = index" (click)="table.sortRows(i)">
+                            {{columnHeading}}
+                        </th>
+                        <th>Delete</th>
+                    </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let feed of feeds; let odd=odd; let even=even;" [ngClass]="{odd: odd, even: even}">
-                        <td>{{feed.groupName}}</td>
-                        <td><a href="{{feed.feedUrl}}">{{feed.feedTitle}}</a></td>
-                        <td title="{{feed.feedDescription}}"><a href="{{feed.siteUrl}}">{{feed.siteUrl|trimurl}}</a></td>
-                        <td><input type="checkbox" (click)="delete(feed.id)"></td>
+                    <tr *ngFor="let row of table.currentRows; let odd=odd; let even=even;" [ngClass]="{odd: odd, even: even}">
+                        <td>{{row[3].groupName}}</td>
+                        <td><a href="{{row[3].feedUrl}}">{{row[3].feedTitle}}</a></td>
+                        <td title="{{row[3].feedDescription}}"><a href="{{row[3].siteUrl}}">{{row[3].siteUrl|trimurl}}</a></td>
+                        <td><input type="checkbox" (click)="delete(row[3].id)"></td>
                     </tr>
                 </tbody>
             </table>
@@ -80,6 +92,7 @@ export class FeedreaderEditComponent implements OnInit {
     @Output() onShowEdit = new EventEmitter<boolean>();
 
     filterString: string;
+    table: Table;
     showAdvanced: boolean = false;
 
     constructor(
@@ -89,6 +102,7 @@ export class FeedreaderEditComponent implements OnInit {
 
     ngOnInit(): void {
         this.titleService.setTitle('Edit Feedreader');
+        this.populateTable();
     }
 
     done(): void {
@@ -97,6 +111,21 @@ export class FeedreaderEditComponent implements OnInit {
     }
 
     delete(): void {
+    }
+
+    filterRows(): void {
+        this.table.setFilterString(this.filterString);
+    }
+
+    populateTable(): void {
+        this.feeds.sort(function (a, b) {
+            return a.feedTitle.toLowerCase().localeCompare(b.feedTitle, 'en', {'sensitivity': 'base'});
+        });
+
+        let rows: any[][] = [];
+        for (let feed of this.feeds)
+            rows.push([feed.groupName, feed.feedTitle, feed.siteUrl, feed]);
+        this.table = new Table(columnHeadings, rows);
     }
 
     toggleShowAdvanced(): void {

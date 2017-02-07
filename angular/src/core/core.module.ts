@@ -26,6 +26,8 @@ import {SpinnerComponent} from "./spinner/spinner.component";
 
 import {TableComponent} from "./table/table.component";
 
+import {TrimUrlPipe} from "./pipes/trimurl.pipe";
+
 @NgModule({
     imports: [
         CommonModule,
@@ -45,6 +47,7 @@ import {TableComponent} from "./table/table.component";
         MarkdownComponent,
         MarkdownToHtmlPipe,
         MessageComponent,
+        TrimUrlPipe,
     ],
     providers: [
         AuthService,
@@ -53,14 +56,15 @@ import {TableComponent} from "./table/table.component";
         SchedulerService,
     ],
     exports: [
+        BreadcrumbComponent,
         CommonModule,
+        FooterComponent,
         FormsModule,
         HeaderComponent,
-        FooterComponent,
-        BreadcrumbComponent,
+        MarkdownComponent,
         SpinnerComponent,
         TableComponent,
-        MarkdownComponent,
+        TrimUrlPipe,
     ]
 })
 export class CoreModule {}

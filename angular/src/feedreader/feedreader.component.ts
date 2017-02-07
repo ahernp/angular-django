@@ -24,6 +24,7 @@ export const feedreaderBreadcrumb = <Breadcrumb>{title: feedreaderTitle, url: fe
     selector: 'ad-feedreader',
     template: `
         <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
+
         <div id="content">
             <h1>Recent Entries</h1>
             <div id="feedreader-entry-counts">
@@ -55,8 +56,11 @@ export const feedreaderBreadcrumb = <Breadcrumb>{title: feedreaderTitle, url: fe
             </div>
             <div style="clear:both"></div>
         </div>
+
         <ad-footer id="footer" *ngIf="footer" [footer]="footer" (onRefresh)="onRefresh()" (onShowEdit)="onShowEdit($event)"></ad-footer>
+
         <ad-spinner *ngIf="showSpinner"></ad-spinner>
+
         <ad-feedreader-edit *ngIf="showEdit" [feeds]="feeds" [adminBreadcrumb]="adminBreadcrumb" (onShowEdit)="onShowEdit($event)"></ad-feedreader-edit>
         `,
     styles: [`

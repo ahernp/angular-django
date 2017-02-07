@@ -12,7 +12,19 @@ import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
     template: `
         <div id="editor">
             <h2>Edit Feeds and Groups</h2>
-            <p *ngFor="let feed of feeds">{{feed.feedTitle}}</p>
+            <table>
+                <thead>
+                    <tr><th>Group</th><th>Feed</th><th>Site</th><th>Delete</th></tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let feed of feeds; let odd=odd; let even=even;" [ngClass]="{odd: odd, even: even}">
+                        <td>{{feed.groupName}}</td>
+                        <td><a href="{{feed.feedUrl}}">{{feed.feedTitle}}</a></td>
+                        <td title="{{feed.feedDescription}}"><a href="{{feed.siteUrl}}">{{feed.siteUrl|trimurl}}</a></td>
+                        <td><input type="checkbox" (click)="delete(feed.id)"></td>
+                    </tr>
+                </tbody>
+            </table>
 
             <div id="advanced" *ngIf="showAdvanced">
                 <span id="close" class="ad-control" (click)="toggleShowAdvanced()" title="Close">&times;</span>
@@ -20,8 +32,7 @@ import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
             </div>
         </div>
         <div id="controls">
-            <button (click)="save()">Save</button>
-            <span class="ad-control" (click)="cancel()">Cancel</span>
+            <span class="ad-control" (click)="done()">Done</span>
             <span class="ad-control" (click)="toggleShowAdvanced()">Advanced</span>
             <ad-breadcrumb [breadcrumb]="adminBreadcrumb"></ad-breadcrumb>
         </div>
@@ -68,6 +79,7 @@ export class FeedreaderEditComponent implements OnInit {
     @Input() adminBreadcrumb: Breadcrumb;
     @Output() onShowEdit = new EventEmitter<boolean>();
 
+    filterString: string;
     showAdvanced: boolean = false;
 
     constructor(
@@ -79,14 +91,12 @@ export class FeedreaderEditComponent implements OnInit {
         this.titleService.setTitle('Edit Feedreader');
     }
 
-    cancel(): void {
+    done(): void {
         this.titleService.setTitle(feedreaderTitle);
         this.onShowEdit.emit(false);
     }
 
-    save(): void {
-    this.titleService.setTitle(feedreaderTitle);
-        this.onShowEdit.emit(false);
+    delete(): void {
     }
 
     toggleShowAdvanced(): void {

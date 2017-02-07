@@ -12,6 +12,9 @@ export class Entry {
 export class Feed {
     id: number;
     feedTitle: string;
+    feedUrl: string;
+    siteUrl: string;
+    feedDescription: string;
     groupId: number;
     groupName: string;
 }

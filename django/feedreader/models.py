@@ -55,6 +55,9 @@ class Feed(models.Model):
         return {
             'id': self.id,
             'feedTitle': self.title,
+            'feedUrl': self.xml_url,
+            'siteUrl': self.link,
+            'feedDescription': self.description,
             'groupId': self.group_id,
             'groupName': self.group.name if self.group else ''
         }

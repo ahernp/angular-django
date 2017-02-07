@@ -31,7 +31,7 @@ const columnHeadings: string[] = ['Title', 'Parent', 'Published', 'Updated'];
                         <tr><th *ngFor="let columnHeading of table.columnHeadings; let i = index" (click)="table.sortRows(i)">{{columnHeading}}</th></tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let row of table.currentRows; let odd=odd; let even=even;" [ngClass]="{ odd: odd, even: even }">
+                        <tr *ngFor="let row of table.currentRows; let odd=odd; let even=even;" [ngClass]="{odd: odd, even: even}">
                             <td><a routerLink="{{row[4]}}">{{row[0]}}</a></td>
                             <td>{{row[1]}}</td>
                             <td>{{row[2]}}</td>

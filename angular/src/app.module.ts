@@ -15,8 +15,7 @@ import {ToolsModule} from "./tools/tools.module";
 
 import {BlogComponent} from "./blog/blog.component";
 
-import {DashboardComponent} from "./dashboard/dashboard.component";
-import {DashboardService} from "./dashboard/dashboard.service";
+import {DashboardModule} from "./dashboard/dashboard.module";
 
 import {SitemapComponent} from "./sitemap/sitemap.component";
 
@@ -26,6 +25,7 @@ import {SitemapComponent} from "./sitemap/sitemap.component";
         appRouting,
         BrowserModule,
         CoreModule,
+        DashboardModule,
         FeedreaderModule,
         FormsModule,
         HttpModule,
@@ -36,11 +36,9 @@ import {SitemapComponent} from "./sitemap/sitemap.component";
     declarations: [
         BlogComponent,
         AppComponent,
-        DashboardComponent,
         SitemapComponent,
     ],
     providers: [
-        DashboardService,
         {provide: XSRFStrategy, useValue: new CookieXSRFStrategy('csrftoken', 'X-CSRFToken')},
     ],
     bootstrap: [AppComponent]

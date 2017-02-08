@@ -169,7 +169,9 @@ export class FeedreaderService {
 
         this.http.post(url, group, options)
             .subscribe(
-                () => {},
+                (response) => {
+                    this.deleteGroupFromCache(group);
+                },
                 error => {
                     this.messageService.addErrorMessage(
                         messageSource,
@@ -219,8 +221,21 @@ export class FeedreaderService {
 
     deleteFeedFromCache(feed: Feed): void {
         for (let i = 0; i < this.feedCache.length; i++) {
-            this.feedCache.splice(i, 1);
-            break;
+            if (this.feedCache[i].id == feed.id) {
+                this.feedCache.splice(i, 1);
+                this.feeds$.next(this.feedCache);
+                break;
+            }
+        }
+    }
+
+    deleteGroupFromCache(group: Group): void {
+        for (let i = 0; i < this.groupCache.length; i++) {
+            if (this.groupCache[i].id == group.id) {
+                this.groupCache.splice(i, 1);
+                this.groups$.next(this.groupCache);
+                break;
+            }
         }
     }
 

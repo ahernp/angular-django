@@ -61,7 +61,7 @@ export const feedreaderBreadcrumb = <Breadcrumb>{title: feedreaderTitle, url: fe
 
         <ad-spinner *ngIf="showSpinner"></ad-spinner>
 
-        <ad-feedreader-edit *ngIf="showEdit" [feeds]="feeds" [groups]="groups" [adminBreadcrumb]="adminBreadcrumb"
+        <ad-feedreader-edit *ngIf="showEdit" [groups]="groups" [adminBreadcrumb]="adminBreadcrumb"
             (onShowEdit)="onShowEdit($event)"></ad-feedreader-edit>
         `,
     styles: [`

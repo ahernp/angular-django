@@ -1,5 +1,7 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, } from '@angular/core';
 import {Title} from '@angular/platform-browser';
+
+import {Subscription}   from 'rxjs/Subscription';
 
 import {Feed, Group} from './feedreader';
 import {FeedreaderService} from './feedreader.service';
@@ -112,10 +114,11 @@ const columnHeadings: string[] = ['Group', 'Feed', 'Site'];
     `]
 })
 export class FeedreaderEditComponent implements OnInit {
-    @Input() feeds: Feed[];
     @Input() groups: Group[];
     @Input() adminBreadcrumb: Breadcrumb;
     @Output() onShowEdit = new EventEmitter<boolean>();
+
+    subscription: Subscription;
 
     filterString: string;
     table: Table;
@@ -129,11 +132,16 @@ export class FeedreaderEditComponent implements OnInit {
     constructor(
         private feedreaderService: FeedreaderService,
         private titleService: Title
-    ) {}
+    ) {
+        this.subscription = feedreaderService.feeds$.subscribe(
+            feeds => {
+                this.populateTable(feeds);
+            }
+        );
+    }
 
     ngOnInit(): void {
         this.titleService.setTitle('Edit Feedreader');
-        this.populateTable();
     }
 
     done(): void {
@@ -166,13 +174,13 @@ export class FeedreaderEditComponent implements OnInit {
         this.table.setFilterString(this.filterString);
     }
 
-    populateTable(): void {
-        this.feeds.sort(function (a, b) {
+    populateTable(feeds: Feed[]): void {
+        feeds.sort(function (a, b) {
             return a.feedTitle.toLowerCase().localeCompare(b.feedTitle, 'en', {'sensitivity': 'base'});
         });
 
         let rows: Row[] = [];
-        for (let feed of this.feeds)
+        for (let feed of feeds)
             rows.push(<Row>{
                 columns: [feed.groupName, feed.feedTitle, feed.siteUrl],
                 item: feed

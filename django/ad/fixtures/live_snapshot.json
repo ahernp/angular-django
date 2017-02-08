@@ -331,10 +331,10 @@
         "title": "Google Chrome",
         "slug": "google-chrome",
         "parent": 5,
-        "updated": "2016-05-20T13:20:17.323Z",
+        "updated": "2017-02-04T16:30:52.763Z",
         "published": null,
         "content_type": "markdown",
-        "content": "Download from [www.google.com/chrome](http://www.google.com/chrome).\r\n\r\n## Extensions\r\n\r\n1. [Docs PDF/PowerPoint Viewer](https://chrome.google.com/extensions/detail/nnbmlagghjjcbdhgmkedmbmedengocbn): \r\nAutomatically previews pdfs, powerpoint presentations, and other documents in Google Docs Viewer.\r\n1. [Firebug Lite](https://chrome.google.com/extensions/search?itemlang=&hl=en-gb&q=firebug): \r\nJavascript Debugger.\r\n1. [iReader](https://chrome.google.com/webstore/detail/ireader/ppelffpjgkifjfgnbaaldcehkpajlmbc):\r\nMakes web pages more readable by eliminating boilerplate.\r\n1. [No More Windows](https://chrome.google.com/webstore/detail/no-more-windows/ppljpblaiplljblignkngnkpnhdilkmd): \r\nStop links opening new tabs or windows.\r\n1. [Search Results Blacklist](https://chrome.google.com/webstore/detail/nolijncfnkgaikbjbdaogikpmpbdcdef):\r\nPersonal Blocklist from Google.\r\n1. [Switcheroo](https://chrome.google.com/webstore/detail/switcheroo-redirector/cnmciclhnghalnpfhhleggldniplelbg):\r\nAll URL redirections.\r\n1. [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo):\r\nOverride site behaviour with Javascript (equivalent of Firefox's Greasemonkey).\r\n1. [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm):\r\nBlocks ads, trackers and malware sites.\r\n1. [Visual Event](https://chrome.google.com/webstore/detail/visual-event/pbmmieigblcbldgdokdjpioljjninaim):\r\nShow what event is bound on each DOM element.\r\n\r\nNeed to select Settings > Extensions > Developer Mode to allow synchronising of Extensions and Themes.\r\n\r\n## Search\r\n\r\nDefault to getting Last Year's results:\r\n\r\n1. Open Chrome's Settings Manage Search Engines\r\n1. Add a new search engine under the list of ''Other search engines'' with the following values.\r\n    * Name: *Google (recent)*\r\n    * Keyword: *recent*\r\n    * URL: `http://www.google.com/search?q=%s&tbs=qdr:y&tbo=1`\r\n1. Change this to be your default search\r\nTo use `encrypted.google.com` the URL is `https://encrypted.google.com/search?q=%s`.\r\n\r\n## Clear Cache\r\n\r\n1. Click the Chrome menu  on the browser toolbar.\r\n1. Select Tools.\r\n1. Select Clear browsing data.\r\n1. In the dialogue that appears, select the tickboxes for the types of information that you want to remove.\r\n1. Use the menu at the top to select the amount of data that you want to delete. Select beginning of time to delete everything.\r\n1. Click Clear browsing data."
+        "content": "Download from [www.google.com/chrome](http://www.google.com/chrome).\n\n## Extensions\n\n1. [Docs PDF/PowerPoint Viewer](https://chrome.google.com/extensions/detail/nnbmlagghjjcbdhgmkedmbmedengocbn): \nAutomatically previews pdfs, powerpoint presentations, and other documents in Google Docs Viewer.\n1. [Firebug Lite](https://chrome.google.com/extensions/search?itemlang=&hl=en-gb&q=firebug): \nJavascript Debugger.\n1. [iReader](https://chrome.google.com/webstore/detail/ireader/ppelffpjgkifjfgnbaaldcehkpajlmbc):\nMakes web pages more readable by eliminating boilerplate.\n1. [No More Windows](https://chrome.google.com/webstore/detail/no-more-windows/ppljpblaiplljblignkngnkpnhdilkmd): \nStop links opening new tabs or windows.\n1. [Search Results Blacklist](https://chrome.google.com/webstore/detail/nolijncfnkgaikbjbdaogikpmpbdcdef):\nPersonal Blocklist from Google.\n1. [Switcheroo](https://chrome.google.com/webstore/detail/switcheroo-redirector/cnmciclhnghalnpfhhleggldniplelbg):\nAll URL redirections.\n1. [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo):\nOverride site behaviour with Javascript (equivalent of Firefox's Greasemonkey).\n1. [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm):\nBlocks ads, trackers and malware sites.\n1. [Visual Event](https://chrome.google.com/webstore/detail/visual-event/pbmmieigblcbldgdokdjpioljjninaim):\nShow what event is bound on each DOM element.\n\nNeed to select Settings > Extensions > Developer Mode to allow synchronising of Extensions and Themes.\n\n## Search\n\nDefault to getting Last Year's results:\n\n1. Open Chrome's Settings Manage Search Engines\n1. Add a new search engine under the list of ''Other search engines'' with the following values.\n    * Name: *Google (recent)*\n    * Keyword: *recent*\n    * URL: `http://www.google.com/search?q=%s&tbs=qdr:y&tbo=1`\n1. Change this to be your default search\nTo use `encrypted.google.com` the URL is `https://encrypted.google.com/search?q=%s`.\n\n## Clear Cache\n\n1. Click the Chrome menu  on the browser toolbar.\n1. Select Tools.\n1. Select Clear browsing data.\n1. In the dialogue that appears, select the tickboxes for the types of information that you want to remove.\n1. Use the menu at the top to select the amount of data that you want to delete. Select beginning of time to delete everything.\n1. Click Clear browsing data."
     }
 },
 {
@@ -1280,9 +1280,9 @@
         "title": "2010 Plant List",
         "slug": "2010-plant-list",
         "parent": 20,
-        "updated": "2016-11-26T12:30:55.215Z",
+        "updated": "2017-02-05T18:25:43.576Z",
         "published": null,
-        "content_type": "markdown",
+        "content_type": "table",
         "content": "Initial planting at Rooska in 2010.\r\n\r\nName | Number\r\n-----|-------\r\nAsh | 500\r\nBeech | 20\r\nBird Cherry | 25\r\nBlackthorn | 600\r\nBuddlea | 50\r\nCommon Alder | 1000\r\nCryptomeria | 50\r\nDowny & Silver Birch | 1000\r\nElm | 50\r\nFuschia | 500\r\nGiant Redwood | 10\r\nGuelder Rose | 50\r\nHawthorn | 1000\r\nHazel | 300\r\nHolly | 200\r\nHornbeam | 20\r\nJapanese Elm | 25\r\nLarch | 500\r\nLodgepole Pine | 1000\r\nLondon Plant | 10\r\nNative Dogwood | 50\r\nNative Privet | 25\r\nOak | 500\r\nOlearia (Mix) | 200\r\nOlearia Maerodoata | 200\r\nPlum Leaf Hawthorn | 20\r\nRadiata Pine | 50\r\nRowan | 100\r\nRum Cherry | 20\r\nScots Pine | 1000\r\nSilver Fir | 200\r\nSitka Spruce | 500\r\nSpindle | 25\r\nThuya | 100\r\nWhitelzam | 100\r\nWild Pear | 10\r\nWillow (Large Cuttings) | 3000\r\nWillow (Plants) | 300\r\nTotal | 13310"
     }
 },
@@ -1525,7 +1525,7 @@
         "link": "http://bingethinkinghistory.blogspot.com/",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-01-27T19:17:09.709Z",
+        "last_polled_time": "2017-02-08T10:17:04.572Z",
         "group": 1
     }
 },
@@ -1551,7 +1551,7 @@
         "link": "http://ancientworldpodcast.blogspot.com/",
         "description": "From the first human civilizations to 500 BC in (around) thirty podcasts",
         "published_time": null,
-        "last_polled_time": "2017-01-27T19:17:33.703Z",
+        "last_polled_time": "2017-02-08T10:17:21.913Z",
         "group": 1
     }
 },
@@ -1563,8 +1563,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/analysis/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006r4vz",
         "description": "Programme examining the ideas and forces which shape public policy in Britain and abroad, presented by distinguished writers, journalists and academics",
-        "published_time": "2017-01-23T00:00:00Z",
-        "last_polled_time": "2017-01-23T21:17:07.498Z",
+        "published_time": "2017-02-06T00:00:00Z",
+        "last_polled_time": "2017-02-06T21:17:02.835Z",
         "group": 4
     }
 },
@@ -1576,8 +1576,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/worldservice/discovery/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/p002w557",
         "description": "Explorations in the world of science.",
-        "published_time": "2017-01-23T00:00:00Z",
-        "last_polled_time": "2017-01-23T20:17:07.000Z",
+        "published_time": "2017-02-06T00:00:00Z",
+        "last_polled_time": "2017-02-06T20:17:08.151Z",
         "group": 4
     }
 },
@@ -1589,8 +1589,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/fileon4/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006th08",
         "description": "Award-winning current affairs documentary series investigating major issues at home and abroad",
-        "published_time": "2017-01-24T00:00:00Z",
-        "last_polled_time": "2017-01-24T21:17:14.665Z",
+        "published_time": "2017-02-07T00:00:00Z",
+        "last_polled_time": "2017-02-07T20:17:09.162Z",
         "group": 4
     }
 },
@@ -1602,8 +1602,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/fricomedy/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/p02pc9pj",
         "description": "Download the best new comedy from Radio 4, every Friday. Features The News Quiz, The Now Show, Dead Ringers and The Museum of Curiosity.",
-        "published_time": "2017-01-27T18:56:00Z",
-        "last_polled_time": "2017-01-27T19:17:15.402Z",
+        "published_time": "2017-02-03T18:57:00Z",
+        "last_polled_time": "2017-02-03T20:17:15.765Z",
         "group": 4
     }
 },
@@ -1628,8 +1628,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/iot/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qykl",
         "description": "Melvyn Bragg and guests discuss the history of ideas",
-        "published_time": "2017-01-26T00:00:00Z",
-        "last_polled_time": "2017-01-26T12:17:21.022Z",
+        "published_time": "2017-02-02T00:00:00Z",
+        "last_polled_time": "2017-02-02T12:17:32.457Z",
         "group": 4
     }
 },
@@ -1654,8 +1654,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/media/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b00dv9hq",
         "description": "Steve Hewlett presents a topical programme about the fast-changing media world",
-        "published_time": "2017-01-25T00:00:00Z",
-        "last_polled_time": "2017-01-25T18:17:43.076Z",
+        "published_time": "2017-02-01T00:00:00Z",
+        "last_polled_time": "2017-02-01T18:17:52.488Z",
         "group": 4
     }
 },
@@ -1667,8 +1667,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/profile/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qjz5",
         "description": "An insight into the character of an influential figure making news headlines",
-        "published_time": "2017-01-21T00:00:00Z",
-        "last_polled_time": "2017-01-22T06:17:24.900Z",
+        "published_time": "2017-01-28T00:00:00Z",
+        "last_polled_time": "2017-01-28T20:17:17.313Z",
         "group": 4
     }
 },
@@ -1680,8 +1680,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/bottomline/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006sz6t",
         "description": "Evan Davis hosts the business conversation show with people at the top giving insight into what matters",
-        "published_time": "2017-01-26T00:00:00Z",
-        "last_polled_time": "2017-01-27T14:17:35.624Z",
+        "published_time": "2017-02-02T00:00:00Z",
+        "last_polled_time": "2017-02-02T21:17:36.138Z",
         "group": 4
     }
 },
@@ -1693,8 +1693,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/film/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006r5jt",
         "description": "The latest releases, the hottest stars and the leading directors, plus news and insights from the film world",
-        "published_time": "2017-01-26T00:00:00Z",
-        "last_polled_time": "2017-01-26T19:17:37.153Z",
+        "published_time": "2017-02-02T00:00:00Z",
+        "last_polled_time": "2017-02-02T19:17:34.822Z",
         "group": 4
     }
 },
@@ -1706,8 +1706,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/wpr/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qjfq",
         "description": "Radio 4&#39;s weekly assessment of developments at Westminster",
-        "published_time": "2017-01-21T00:00:00Z",
-        "last_polled_time": "2017-01-21T15:19:07.798Z",
+        "published_time": "2017-02-04T00:00:00Z",
+        "last_polled_time": "2017-02-04T12:17:56.034Z",
         "group": 4
     }
 },
@@ -1719,8 +1719,8 @@
         "xml_url": "http://feedproxy.google.com/linuxtoday/linux",
         "link": "http://www.linuxtoday.com/",
         "description": "",
-        "published_time": "2017-01-27T19:14:45Z",
-        "last_polled_time": "2017-01-27T19:17:19.989Z",
+        "published_time": "2017-02-08T10:14:38Z",
+        "last_polled_time": "2017-02-08T10:17:11.084Z",
         "group": 5
     }
 },
@@ -1733,7 +1733,7 @@
         "link": "https://www.schneier.com/blog/",
         "description": "A blog covering security and security technology.",
         "published_time": null,
-        "last_polled_time": "2017-01-27T19:17:29.795Z",
+        "last_polled_time": "2017-02-08T10:17:18.526Z",
         "group": 5
     }
 },
@@ -1746,7 +1746,7 @@
         "link": "https://inkscapetutorials.org",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-01-27T19:17:16.590Z",
+        "last_polled_time": "2017-02-08T10:17:09.809Z",
         "group": 5
     }
 },
@@ -1771,8 +1771,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/pov/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qng8",
         "description": "A weekly reflection on a topical issue",
-        "published_time": "2017-01-20T00:00:00Z",
-        "last_polled_time": "2017-01-20T21:17:12.153Z",
+        "published_time": "2017-02-03T00:00:00Z",
+        "last_polled_time": "2017-02-03T21:17:10.871Z",
         "group": 4
     }
 },
@@ -1797,8 +1797,8 @@
         "xml_url": "http://revolutionspodcast.libsyn.com/rss/",
         "link": "http://www.revolutionspodcast.com",
         "description": "A weekly podcast series examining great political revolutions. Now:  The Haitian Revolution Next: Simon Bolivar and Gran Colombia. Visit us at revolutionspodcast.com",
-        "published_time": "2017-01-23T01:57:32Z",
-        "last_polled_time": "2017-01-23T02:17:25.817Z",
+        "published_time": "2017-02-05T23:34:19Z",
+        "last_polled_time": "2017-02-06T00:17:22.968Z",
         "group": 1
     }
 },
@@ -1811,7 +1811,7 @@
         "link": "https://www.djangoproject.com/weblog/",
         "description": "Latest news about Django, the Python Web framework.",
         "published_time": null,
-        "last_polled_time": "2017-01-27T19:17:37.449Z",
+        "last_polled_time": "2017-02-08T10:17:25.472Z",
         "group": 5
     }
 },
@@ -1849,8 +1849,8 @@
         "xml_url": "http://www.bbc.co.uk/blogs/markkermode/rss",
         "link": "http://www.bbc.co.uk/blogs/markkermode",
         "description": "Outspoken, opinionated and never lost for words, Mark is the UK's leading film critic.  This\u00a0twice-weekly video blog is the place where he airs his personal views on the things that most fire him up about cinema - and invites you to give your own opinions.",
-        "published_time": "2017-01-27T13:39:58Z",
-        "last_polled_time": "2017-01-27T14:17:18.509Z",
+        "published_time": "2017-02-07T10:20:25Z",
+        "last_polled_time": "2017-02-07T11:17:12.056Z",
         "group": 2
     }
 },
@@ -1863,7 +1863,7 @@
         "link": "http://www.anisopteragames.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-01-27T19:17:25.457Z",
+        "last_polled_time": "2017-02-08T10:17:15.990Z",
         "group": 2
     }
 },
@@ -1875,8 +1875,8 @@
         "xml_url": "http://thehistoryofbyzantium.libsyn.com/rss",
         "link": "http://www.thehistoryofbyzantium.com",
         "description": "A podcast telling the story of the Roman (Byzantine) Empire from 476 AD to 1453",
-        "published_time": "2017-01-27T15:23:34Z",
-        "last_polled_time": "2017-01-27T16:17:55.970Z",
+        "published_time": "2017-02-03T18:26:18Z",
+        "last_polled_time": "2017-02-03T20:17:39.082Z",
         "group": 1
     }
 },
@@ -1889,7 +1889,7 @@
         "link": "http://slatestarcodex.com",
         "description": "Open threads at the Open Thread tab every Sunday and Wednesday",
         "published_time": null,
-        "last_polled_time": "2017-01-27T19:17:30.985Z",
+        "last_polled_time": "2017-02-08T10:17:19.689Z",
         "group": 2
     }
 },
@@ -1902,7 +1902,7 @@
         "link": "http://www.exurbe.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-01-27T19:17:14.317Z",
+        "last_polled_time": "2017-02-08T10:17:08.284Z",
         "group": 2
     }
 },
@@ -1915,7 +1915,7 @@
         "link": "http://b5audioguide.com",
         "description": "This is a book club without books, an episode-by-episode walkthrough of one of the most influential and important modern SF series. Each podcast begins with a spoiler-free discussion of the episode for new viewers, then we give listeners a jumping-off point and switch to a discussion of how the episode fits into the five-year history of the show.",
         "published_time": null,
-        "last_polled_time": "2017-01-27T19:17:36.137Z",
+        "last_polled_time": "2017-02-08T10:17:24.205Z",
         "group": 2
     }
 },
@@ -1928,7 +1928,7 @@
         "link": "https://www.theincomparable.com/theincomparable/",
         "description": "The Incomparable is a weekly dive into geeky media we love, including movies, books, TV, comics, and more, featuring a rotating panel of guests and hosted by Jason Snell.",
         "published_time": null,
-        "last_polled_time": "2017-01-27T18:17:37.637Z",
+        "last_polled_time": "2017-02-08T10:17:28.840Z",
         "group": 2
     }
 },
@@ -1941,7 +1941,7 @@
         "link": "https://arstechnica.com",
         "description": "Serving the Technologist for more than a decade. IT news, reviews, and analysis.",
         "published_time": null,
-        "last_polled_time": "2017-01-27T19:17:32.013Z",
+        "last_polled_time": "2017-02-08T10:17:20.301Z",
         "group": 5
     }
 },
@@ -1953,8 +1953,8 @@
         "xml_url": "http://www.bbc.co.uk/programmes/p02dbd4m/episodes/downloads.rss",
         "link": "http://www.bbc.co.uk/programmes/p02dbd4m",
         "description": "Owen Bennett Jones and guests take an in-depth look at a topic in the week&#39;s news",
-        "published_time": "2017-01-27T00:00:00Z",
-        "last_polled_time": "2017-01-27T09:17:18.608Z",
+        "published_time": "2017-02-03T00:00:00Z",
+        "last_polled_time": "2017-02-03T20:17:22.566Z",
         "group": 4
     }
 },
@@ -1966,8 +1966,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/moreorless/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/p02nrss1",
         "description": "Tim Harford and the More or Less team try to make sense of the statistics which surround us. From BBC Radio 4",
-        "published_time": "2017-01-20T20:00:00Z",
-        "last_polled_time": "2017-01-20T20:17:23.549Z",
+        "published_time": "2017-02-03T20:00:00Z",
+        "last_polled_time": "2017-02-03T20:17:20.642Z",
         "group": 4
     }
 },
@@ -1980,7 +1980,7 @@
         "link": "http://www.bbc.co.uk/news/",
         "description": "BBC News - UK Politics",
         "published_time": null,
-        "last_polled_time": "2017-01-27T19:17:08.913Z",
+        "last_polled_time": "2017-02-08T10:17:04.158Z",
         "group": 3
     }
 },
@@ -1993,7 +1993,7 @@
         "link": "https://www.theregister.co.uk/",
         "description": "Biting the hand that feeds IT \u2014 sci/tech news and views for the world",
         "published_time": null,
-        "last_polled_time": "2017-01-27T17:17:38.597Z",
+        "last_polled_time": "2017-02-08T10:17:30.834Z",
         "group": 5
     }
 },
@@ -2006,7 +2006,7 @@
         "link": "http://yieldthought.com/",
         "description": "Mark O\u2019Connor is a programmer, irregular writer and part-time technical fellow. He believes in dynamic typing, first-class functions, working in the cloud and the immortal essence of the human soul. He also likes tea.\n\n\n\n  var _gaq = _gaq || [];\n  _gaq.push(['_setAccount', 'UA-29608497-1']);\n  _gaq.push(['_trackPageview']);\n\n  (function() {\n    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;\n    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);\n  })();",
         "published_time": null,
-        "last_polled_time": "2017-01-27T19:17:45.290Z",
+        "last_polled_time": "2017-02-08T10:17:32.130Z",
         "group": 5
     }
 },
@@ -2019,7 +2019,7 @@
         "link": "http://blog.dilbert.com/",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-01-27T19:17:30.290Z",
+        "last_polled_time": "2017-02-08T10:17:18.767Z",
         "group": 2
     }
 },
@@ -2032,7 +2032,7 @@
         "link": "http://ahernp.com/blog/",
         "description": "Recent Blog Entries.",
         "published_time": null,
-        "last_polled_time": "2017-01-27T19:17:04.163Z",
+        "last_polled_time": "2017-02-08T10:17:02.513Z",
         "group": null
     }
 },
@@ -2045,7 +2045,7 @@
         "link": "http://uncannymagazine.com",
         "description": "A Magazine of Science Fiction and Fantasy",
         "published_time": null,
-        "last_polled_time": "2017-01-27T18:17:40.571Z",
+        "last_polled_time": "2017-02-08T10:17:31.309Z",
         "group": 2
     }
 },
@@ -2058,7 +2058,7 @@
         "link": "https://thehistoryofdenmark.wordpress.com",
         "description": "A podcast about the history of the oldest kingdom in Europe!",
         "published_time": null,
-        "last_polled_time": "2017-01-27T19:17:40.221Z",
+        "last_polled_time": "2017-02-08T10:17:27.731Z",
         "group": 1
     }
 },
@@ -2070,8 +2070,8 @@
         "xml_url": "http://www.bbc.co.uk/programmes/b00snr0w/episodes/downloads.rss",
         "link": "http://www.bbc.co.uk/programmes/b00snr0w",
         "description": "Witty, irreverent look at the world through scientists&#39; eyes. With Brian Cox and Robin Ince",
-        "published_time": "2017-01-30T00:00:00Z",
-        "last_polled_time": "2017-01-23T21:54:14.359Z",
+        "published_time": "2017-02-13T00:00:00Z",
+        "last_polled_time": "2017-02-06T11:17:30.381Z",
         "group": 4
     }
 }

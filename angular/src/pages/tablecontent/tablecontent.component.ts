@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 import {Section} from "./section";
 import {Row} from "../../core/table/table";
@@ -13,20 +13,20 @@ import {Row} from "../../core/table/table";
         `,
     providers: []
 })
-export class TableContentComponent implements OnInit {
-    @Input() content: string;
+export class TableContentComponent {
+    @Input()
+    set content(content: string) {
+        this.parseContentIntoSections(content);
+    }
     sections: Section[] = [];
 
     currentContent: string = '';
     currentColumnHeadings: string[] = [];
     currentRows: Row[] = [];
 
-    ngOnInit(): void {
-        this.parseContentIntoSections();
-    }
-
-    parseContentIntoSections(): void {
-        let lines: string[] = this.content.split('\n');
+    parseContentIntoSections(content: string): void {
+        this.sections = [];
+        let lines: string[] = content.split('\n');
         for (var i = 0; i < lines.length; i++) {
             if (lines[i].indexOf('|') > -1) {
                 this.addContentSection();

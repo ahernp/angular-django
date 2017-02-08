@@ -54,9 +54,9 @@ class Feed(models.Model):
     def _get_dictionary(self):
         return {
             'id': self.id,
-            'feedTitle': self.title,
+            'feedTitle': self.title if self.title else '',
             'feedUrl': self.xml_url,
-            'siteUrl': self.link,
+            'siteUrl': self.link if self.link else '',
             'feedDescription': self.description,
             'groupId': self.group_id,
             'groupName': self.group.name if self.group else ''

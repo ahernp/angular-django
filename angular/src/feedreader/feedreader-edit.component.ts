@@ -42,9 +42,14 @@ const columnHeadings: string[] = ['Group', 'Feed', 'Site'];
                 <tbody>
                     <tr *ngFor="let row of table.currentRows; let odd=odd; let even=even;" [ngClass]="{odd: odd, even: even}">
                         <td>{{row.item.groupName}}</td>
-                        <td><a href="{{row.item.feedUrl}}">{{row.item.feedTitle}}</a></td>
+                        <td>
+                            <a *ngIf="row.item.feedTitle" href="{{row.item.feedUrl}}">{{row.item.feedTitle}}</a>
+                            <a *ngIf="!row.item.feedTitle && row.item.feedUrl" href="{{row.item.feedUrl}}">{{row.item.feedUrl|trimurl}}</a>
+                            <a *ngIf="!row.item.feedTitle && !row.item.feedUrl" href="{{row.item.feedUrl}}">No Title</a>
+                         </td>
                         <td title="{{row.item.feedDescription}}">
-                            <a href="{{row.item.siteUrl}}">{{row.item.siteUrl|trimurl}}</a>
+                            <a *ngIf="row.item.siteUrl" href="{{row.item.siteUrl}}">{{row.item.siteUrl|trimurl}}</a>
+                            <span *ngIf="!row.item.siteUrl">No Url</span>
                         </td>
                         <td><input type="checkbox" (click)="deleteFeed(row.item)"></td>
                     </tr>
@@ -71,10 +76,13 @@ const columnHeadings: string[] = ['Group', 'Feed', 'Site'];
             </div>
         </div>
         <div id="controls">
-            <span class="ad-control" (click)="done()">Done</span>
-            <span class="ad-control" (click)="toggleShowGroups()">Groups</span>
-            <ad-breadcrumb [breadcrumb]="adminBreadcrumb"></ad-breadcrumb>
+            <p style="margin-top: 10px;">
+                <span class="ad-control" (click)="done()">Done</span>
+                <span class="ad-control" (click)="toggleShowGroups()">Groups</span>
+                <ad-breadcrumb [breadcrumb]="adminBreadcrumb"></ad-breadcrumb>
+            </p>
         </div>
+        <ad-message></ad-message>
     `,
     styles: [`
         div#editor {
@@ -84,7 +92,7 @@ const columnHeadings: string[] = ['Group', 'Feed', 'Site'];
             height: 100%;
             width: 100%;
             background: white;
-            padding: 5px 5px 45px 5px;
+            padding: 5px 5px 45px 45px;
             overflow: scroll;
         }
         div#controls {
@@ -110,6 +118,16 @@ const columnHeadings: string[] = ['Group', 'Feed', 'Site'];
             top: -5px;
             right: 0px;
             padding: 5px;
+        }
+        ad-message {
+            position: absolute;
+            z-index: 15;
+            right: 10px;
+            bottom: 0px;
+            max-width: 50%;
+            background-color: white;
+            max-height: 50vh;
+            overflow: auto;
         }
     `]
 })

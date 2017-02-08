@@ -62,6 +62,7 @@ import {TrimUrlPipe} from "./pipes/trimurl.pipe";
         FormsModule,
         HeaderComponent,
         MarkdownComponent,
+        MessageComponent,
         SpinnerComponent,
         TableComponent,
         TrimUrlPipe,

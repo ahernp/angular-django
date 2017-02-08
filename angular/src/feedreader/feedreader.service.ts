@@ -156,7 +156,24 @@ export class FeedreaderService {
                 error => {
                     this.messageService.addErrorMessage(
                         messageSource,
-                        `${messageSource} save Feed error: Url ${url}; Status Code ${error.status}; ${error.statusText}`);
+                        `${messageSource} delete Feed error: Url ${url}; Status Code ${error.status}; ${error.statusText}`);
+                    console.log(error);
+                }
+            );
+    }
+
+    deleteGroup(group: Group): void {
+        let url = `${apiEndpoint}${feedreaderUrl}/deletegroup`;
+        let headers = new Headers({'Content-Type': 'application/json'});
+        let options = new RequestOptions({ headers: headers });
+
+        this.http.post(url, group, options)
+            .subscribe(
+                () => {},
+                error => {
+                    this.messageService.addErrorMessage(
+                        messageSource,
+                        `${messageSource} delete Group error: Url ${url}; Status Code ${error.status}; ${error.statusText}`);
                     console.log(error);
                 }
             );
@@ -181,6 +198,25 @@ export class FeedreaderService {
             );
     }
 
+    saveGroup(group: Group): void {
+        let url = `${apiEndpoint}${feedreaderUrl}/savegroup`;
+        let headers = new Headers({'Content-Type': 'application/json'});
+        let options = new RequestOptions({ headers: headers });
+
+        this.http.post(url, group, options)
+            .subscribe(
+                (response) => {
+                    this.updateGroupCache(<Group>response.json());
+                },
+                error => {
+                    this.messageService.addErrorMessage(
+                        messageSource,
+                        `${messageSource} save Group error: Url ${url}; Status Code ${error.status}; ${error.statusText}`);
+                    console.log(error);
+                }
+            );
+    }
+
     deleteFeedFromCache(feed: Feed): void {
         for (let i = 0; i < this.feedCache.length; i++) {
             this.feedCache.splice(i, 1);
@@ -194,6 +230,14 @@ export class FeedreaderService {
             feeds[0] = feed;
         else
             this.feedCache.push(feed);
+    }
+
+    updateGroupCache(group: Group): void {
+        let groups = this.groupCache.filter(cachedFeed => cachedFeed.id == group.id);
+        if (groups.length > 0)
+            groups[0] = group;
+        else
+            this.groupCache.push(group);
     }
 
     search(searchString: string): SearchResults {

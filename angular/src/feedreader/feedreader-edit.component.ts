@@ -49,14 +49,28 @@ const columnHeadings: string[] = ['Group', 'Feed', 'Site'];
                 </tbody>
             </table>
 
-            <div id="advanced" *ngIf="showAdvanced">
-                <span id="close" class="ad-control" (click)="toggleShowAdvanced()" title="Close">&times;</span>
-                <h3>Advanced</h3>
+            <div id="groups" *ngIf="showGroups">
+                <span id="close" class="ad-control" (click)="toggleShowGroups()" title="Close">&times;</span>
+                <h3>Groups</h3>
+                <p>
+                    Add Group:
+                    <input [(ngModel)]="newGroupName" placeholder="Name">
+                    <button (click)="addGroup()">Add</button>
+                </p>
+                <table>
+                    <thead><tr><th>Name</th><th>Delete</th></tr></thead>
+                    <tbody>
+                        <tr *ngFor="let group of groups; let odd=odd; let even=even;" [ngClass]="{odd: odd, even: even}">
+                            <td>{{group.name}}</td>
+                            <td><input type="checkbox" (click)="deleteGroup(group)"></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
         <div id="controls">
             <span class="ad-control" (click)="done()">Done</span>
-            <span class="ad-control" (click)="toggleShowAdvanced()">Advanced</span>
+            <span class="ad-control" (click)="toggleShowGroups()">Groups</span>
             <ad-breadcrumb [breadcrumb]="adminBreadcrumb"></ad-breadcrumb>
         </div>
     `,
@@ -81,7 +95,7 @@ const columnHeadings: string[] = ['Group', 'Feed', 'Site'];
             border-top: solid 1px #ccc;
             padding: 5px 0 0 8px;
         }
-        div#advanced {
+        div#groups {
             position: absolute;
             bottom: 85px;
             z-index: 12;
@@ -105,10 +119,12 @@ export class FeedreaderEditComponent implements OnInit {
 
     filterString: string;
     table: Table;
-    showAdvanced: boolean = false;
+    showGroups: boolean = false;
 
     newFeedUrl: string;
     newFeedGroupId: number;
+
+    newGroupName: string;
 
     constructor(
         private feedreaderService: FeedreaderService,
@@ -132,8 +148,18 @@ export class FeedreaderEditComponent implements OnInit {
         this.feedreaderService.saveFeed(newFeed);
     }
 
+    addGroup(): void {
+        let newGroup: Group = new Group();
+        newGroup.name = this.newGroupName;
+        this.feedreaderService.saveGroup(newGroup);
+    }
+
     deleteFeed(feed: Feed): void {
         this.feedreaderService.deleteFeed(feed);
+    }
+
+    deleteGroup(group: Group): void {
+        this.feedreaderService.deleteGroup(group);
     }
 
     filterRows(): void {
@@ -154,7 +180,7 @@ export class FeedreaderEditComponent implements OnInit {
         this.table = new Table(columnHeadings, rows);
     }
 
-    toggleShowAdvanced(): void {
-        this.showAdvanced = !this.showAdvanced;
+    toggleShowGroups(): void {
+        this.showGroups = !this.showGroups;
     }
 }

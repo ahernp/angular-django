@@ -17,7 +17,6 @@ const messageSource: string = 'Dashboard';
 
 @Injectable()
 export class DashboardService {
-
     dashboardCache: Dashboard;
     dashboard$: ReplaySubject<any> = new ReplaySubject(1);
 
@@ -34,8 +33,8 @@ export class DashboardService {
         return this.dashboard$;
     }
 
-    populateCache() {
-        let url = `${apiEndpoint}${dashboardUrl}/`;
+    populateCache = (): void => {
+        let url: string = `${apiEndpoint}${dashboardUrl}/`;
         this.http.get(url)
             .subscribe(
                 response => {
@@ -49,10 +48,9 @@ export class DashboardService {
                     console.log(error);
                 }
             );
-    }
-    initialPopulateDashboard() {
+    };
+    initialPopulateDashboard(): void {
         this.populateCache();
-        var boundPopulateCache = this.populateCache.bind(this);
-        this.schedulerService.hourly(feedreaderPollMinute, boundPopulateCache);
+        this.schedulerService.hourly(feedreaderPollMinute, this.populateCache);
     }
 }

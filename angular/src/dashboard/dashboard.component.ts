@@ -9,9 +9,9 @@ import {DashboardService} from './dashboard.service';
 
 import {FeedreaderService} from "../feedreader/feedreader.service";
 
-import {PageService} from "../pages/page.service";
-
 import {Footer} from "../core/footer/footer";
+
+import {PageService} from "../pages/page.service";
 
 import {adminBreadcrumb, dashboardBreadcrumb, dashboardTitle} from "../app.settings";
 
@@ -59,13 +59,13 @@ import {adminBreadcrumb, dashboardBreadcrumb, dashboardTitle} from "../app.setti
     providers: []
 })
 export class DashboardComponent implements OnInit {
+    breadcrumbs: Breadcrumb[];
     dashboard: Dashboard;
-    numberOfPages: number;
+    footer: Footer;
     numberOfDynamicPages: number;
     numberOfEntries: number;
+    numberOfPages: number;
     numberOfUnreadEntries: number;
-    breadcrumbs: Breadcrumb[];
-    footer: Footer;
     showSpinner: Boolean = false;
 
     constructor(
@@ -84,15 +84,15 @@ export class DashboardComponent implements OnInit {
         this.getCaches();
     }
 
-    populateHeader() {
+    populateHeader(): void  {
         this.breadcrumbs = this.breadcrumbService.addBreadcrumb(dashboardBreadcrumb);
     }
 
-    populateFooter() {
+    populateFooter(): void  {
         this.footer = <Footer>{breadcrumbs: [adminBreadcrumb], refreshFlag: true};
     }
 
-    getDashboard() {
+    getDashboard(): void  {
         this.showSpinner = true;
         this.dashboardService
             .getDashboard()
@@ -103,7 +103,7 @@ export class DashboardComponent implements OnInit {
             });
     }
 
-    getCaches() {
+    getCaches(): void  {
         this.pageService.getPages()
             .subscribe(pages => this.numberOfPages = pages.length);
         this.numberOfDynamicPages = this.pageService.getDynamicPageBreadcrumbs().length;
@@ -114,7 +114,7 @@ export class DashboardComponent implements OnInit {
             })
     }
 
-    onRefresh() {
+    onRefresh(): void  {
         this.showSpinner = true;
         this.dashboardService.initialPopulateDashboard();
     }

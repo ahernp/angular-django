@@ -38,8 +38,8 @@ export class TimersComponent implements OnInit {
 
     constructor(
         private breadcrumbService:BreadcrumbService,
-        private titleService:Title) {
-    }
+        private titleService:Title
+    ) {}
 
     ngOnInit(): void {
         this.titleService.setTitle(timersTitle);

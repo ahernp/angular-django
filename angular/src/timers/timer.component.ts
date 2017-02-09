@@ -11,32 +11,32 @@ const week: number = day * 7;
     template: `{{timeDiff}}`
 })
 export class TimerComponent implements OnInit {
-    @Input() targetTimeString:string;
+    @Input() targetTimeString: string;
 
-    targetTime:Date;
-    timeDiff:string;
+    targetTime: Date;
+    timeDiff: string;
 
-    getTimeDifference():void {
-        let timeDiff:string = '';
-        let now:Date = new Date();
-
-        let fromTime:Date = (now < this.targetTime) ? now : this.targetTime;
-        let toTime:Date = (now > this.targetTime) ? now : this.targetTime;
-
-        this.timeDiff = calcTimeDifference(fromTime, toTime);
-    }
-
-    ngOnInit():void {
+    ngOnInit(): void {
         this.targetTime = new Date(this.targetTimeString);
         this.getTimeDifference();
         setInterval(() => this.getTimeDifference(), 1000);
+    }
+
+    getTimeDifference(): void {
+        let timeDiff: string = '';
+        let now: Date = new Date();
+
+        let fromTime: Date = (now < this.targetTime) ? now : this.targetTime;
+        let toTime: Date = (now > this.targetTime) ? now : this.targetTime;
+
+        this.timeDiff = calcTimeDifference(fromTime, toTime);
     }
 }
 
 export function calcTimeDifference(fromTime: Date, toTime: Date): string {
         let fromYear: number = fromTime.getUTCFullYear();
         let toYear: number = toTime.getUTCFullYear();
-        let yearDiff = toYear - fromYear;
+        let yearDiff: number = toYear - fromYear;
 
         let fromMonth: number = fromTime.getUTCMonth() + 1;
         let toMonth: number = toTime.getUTCMonth() + 1;
@@ -59,12 +59,13 @@ export function calcTimeDifference(fromTime: Date, toTime: Date): string {
             (fromMonth == toMonth && fromMonthDay == toMonthDay && fromHour == toHour && fromMinute > toMinute) ||
             (fromMonth == toMonth && fromMonthDay == toMonthDay && fromHour == toHour && fromMinute == toMinute && fromSecond > toSecond));
 
+        let monthDiff: number;
         if (fromTimeLaterInYear) {
-            var monthDiff: number = 12 + toMonth - fromMonth;
+            monthDiff = 12 + toMonth - fromMonth;
             yearDiff -= 1;
         }
         else
-            var monthDiff: number = toMonth - fromMonth;
+            monthDiff = toMonth - fromMonth;
 
         let fromTimeLaterInMonth: boolean = (fromMonthDay > toMonthDay ||
             (fromMonthDay == toMonthDay && fromHour > toHour) ||
@@ -73,8 +74,8 @@ export function calcTimeDifference(fromTime: Date, toTime: Date): string {
 
         if (fromTimeLaterInMonth)
             monthDiff -= 1;
-        let fromYearWithinOneMonth = (fromTimeLaterInMonth && toMonth == 1) ? toYear - 1 : toYear;
-        let fromMonthWithinOneMonth = (fromMonth + monthDiff - 1) % 12;
+        let fromYearWithinOneMonth: number = (fromTimeLaterInMonth && toMonth == 1) ? toYear - 1 : toYear;
+        let fromMonthWithinOneMonth: number = (fromMonth + monthDiff - 1) % 12;
         let daysInMonth = (year: number, month: number): number => new Date(year, month, 0).getDate();
         let fromMonthWithinOneMonthEnd: number = daysInMonth(
             fromYearWithinOneMonth,

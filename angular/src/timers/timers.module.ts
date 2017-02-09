@@ -4,8 +4,8 @@ import {CommonModule} from '@angular/common';
 
 import {CoreModule} from "../core/core.module";
 
-import {TimersComponent} from "./timers.component";
 import {TimerComponent} from "./timer.component";
+import {TimersComponent} from "./timers.component";
 
 @NgModule({
     imports: [

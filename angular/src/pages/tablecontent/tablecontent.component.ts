@@ -18,33 +18,14 @@ export class TableContentComponent {
     set content(content: string) {
         this.parseContentIntoSections(content);
     }
-    sections: Section[] = [];
 
-    currentContent: string = '';
     currentColumnHeadings: string[] = [];
+    currentContent: string = '';
     currentRows: Row[] = [];
 
-    parseContentIntoSections(content: string): void {
-        this.sections = [];
-        let lines: string[] = content.split('\n');
-        for (var i = 0; i < lines.length; i++) {
-            if (lines[i].indexOf('|') > -1) {
-                this.addContentSection();
-                if (this.currentColumnHeadings.length == 0)
-                    this.currentColumnHeadings = lines[i].split('|');
-                else if (lines[i].indexOf('-----') == -1)
-                    this.currentRows.push(<Row>{columns: lines[i].split('|').map(str => str.trim())});
-            }
-            else {
-                this.addTableSection();
-                this.currentContent = this.currentContent + '\n' + lines[i];
-            }
-        }
-        this.addContentSection();
-        this.addTableSection();
-    }
+    sections: Section[] = [];
 
-    addContentSection(): void {
+    addMarkdownSection(): void {
         if (this.currentContent != '') {
             this.sections.push(<Section>{
                 type: 'markdown',
@@ -62,5 +43,25 @@ export class TableContentComponent {
             this.currentColumnHeadings = [];
             this.currentRows = [];
         }
+    }
+
+    parseContentIntoSections(content: string): void {
+        this.sections = [];
+        let lines: string[] = content.split('\n');
+        for (var i = 0; i < lines.length; i++) {
+            if (lines[i].indexOf('|') > -1) {
+                this.addMarkdownSection();
+                if (this.currentColumnHeadings.length == 0)
+                    this.currentColumnHeadings = lines[i].split('|');
+                else if (lines[i].indexOf('-----') == -1)
+                    this.currentRows.push(<Row>{columns: lines[i].split('|').map(str => str.trim())});
+            }
+            else {
+                this.addTableSection();
+                this.currentContent = this.currentContent + '\n' + lines[i];
+            }
+        }
+        this.addMarkdownSection();
+        this.addTableSection();
     }
 }

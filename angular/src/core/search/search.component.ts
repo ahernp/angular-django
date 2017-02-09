@@ -1,7 +1,8 @@
 import {Component} from '@angular/core';
 
-import {PageService} from "../../pages/page.service";
 import {FeedreaderService} from "../../feedreader/feedreader.service";
+
+import {PageService} from "../../pages/page.service";
 
 import {SearchResults} from "./search-results";
 
@@ -43,10 +44,10 @@ import {SearchResults} from "./search-results";
     providers: []
 })
 export class SearchComponent {
+    entrySearchResults: SearchResults;
     searchString: string;
     showResults: Boolean = false;
     pageSearchResults: SearchResults;
-    entrySearchResults: SearchResults;
 
     constructor(
         private pageService: PageService,

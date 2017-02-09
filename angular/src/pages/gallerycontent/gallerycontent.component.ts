@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 
-import {Gallery, Image} from "./gallery";
+import {Gallery} from "./gallery";
 
 @Component({
     selector: 'ad-gallerycontent',
@@ -63,17 +63,20 @@ export class GalleryContentComponent {
     set content(content: string) {
         this.gallery = JSON.parse(content);
     }
-    gallery: Gallery;
-    currentIndex: number;
-    showLightboxFlag: boolean = false;
 
-    showImage(index: number): void {
-        this.currentIndex = index;
-        this.showLightboxFlag = true;
-    }
+    currentIndex: number;
+    gallery: Gallery;
+    showLightboxFlag: boolean = false;
 
     closeLightbox(): void {
         this.showLightboxFlag = false;
+    }
+
+    nextImage(): void {
+        if (this.currentIndex == (this.gallery.images.length - 1))
+            this.currentIndex = 0;
+        else
+            this.currentIndex++;
     }
 
     previousImage(): void {
@@ -83,10 +86,8 @@ export class GalleryContentComponent {
             this.currentIndex = this.gallery.images.length - 1;
     }
 
-    nextImage(): void {
-        if (this.currentIndex == (this.gallery.images.length - 1))
-            this.currentIndex = 0;
-        else
-            this.currentIndex++;
+    showImage(index: number): void {
+        this.currentIndex = index;
+        this.showLightboxFlag = true;
     }
 }

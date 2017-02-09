@@ -5,13 +5,14 @@ import {Title} from '@angular/platform-browser';
 import {Breadcrumb} from '../core/breadcrumbs/breadcrumb';
 import {BreadcrumbService} from '../core/breadcrumbs/breadcrumb.service';
 
+import {Footer} from "../core/footer/footer";
+
 import {Page} from '../pages/page';
 import {PageService} from '../pages/page.service';
 
-import {Footer} from "../core/footer/footer";
+import {Table, Row} from '../core/table/table';
 
 import {rootTitle} from '../app.settings';
-import {Table, Row} from '../core/table/table';
 
 export const sitemapTitle: string = 'Site Map';
 const columnHeadings: string[] = ['Title', 'Parent', 'Published', 'Updated'];
@@ -48,27 +49,24 @@ const columnHeadings: string[] = ['Title', 'Parent', 'Published', 'Updated'];
     providers: []
 })
 export class SitemapComponent implements OnInit {
-    title: string = sitemapTitle;
-    parent_slug: string;
     breadcrumbs: Breadcrumb[];
-
-    sitemap: Breadcrumb[];
-    table: Table;
     filterString: string;
-
     footer: Footer;
-
-    showEdit: boolean = false;
     newPage: Page;
     newPageAdminBreadcrumb: Breadcrumb;
+    parent_slug: string;
+    showEdit: boolean = false;
+    sitemap: Breadcrumb[];
+    table: Table;
+    title: string = sitemapTitle;
 
     constructor(
         private pageService: PageService,
         private breadcrumbService: BreadcrumbService,
         private route: ActivatedRoute,
         private router: Router,
-        private titleService: Title) {
-    }
+        private titleService: Title
+    ) {}
 
     ngOnInit(): void {
         this.titleService.setTitle(sitemapTitle);
@@ -89,23 +87,26 @@ export class SitemapComponent implements OnInit {
         }
     }
 
-    populateHeaderAndTitle() {
-        if (this.parent_slug == undefined) {
-            this.populateHeader(sitemapTitle);
-            this.title = sitemapTitle;
-            this.titleService.setTitle(sitemapTitle);
-        }
-        else {
-            var parent = this.pageService.getPage(this.parent_slug)
-                .subscribe(page => {
-                    this.populateHeader(page.title);
-                    this.title = page.title;
-                    this.titleService.setTitle(page.title);
-                });
-        }
+    getBreadcrumbs(): void {
+        this.pageService.getPageBreadcrumbs(this.parent_slug)
+            .subscribe(breadcrumbs => this.populateTable(breadcrumbs));
     }
 
-    populateHeader(title:string) {
+    filterRows(): void {
+        this.table.setFilterString(this.filterString);
+    }
+
+    onShowEdit(showEdit: boolean): void {
+        this.showEdit = showEdit;
+    }
+
+    populateFooter(): void {
+        this.footer = <Footer>{
+            editFlag: true,
+        };
+    }
+
+    populateHeader(title:string): void {
         this.breadcrumbs = this.breadcrumbService.addBreadcrumb(<Breadcrumb>
             {
                 title: title,
@@ -115,10 +116,20 @@ export class SitemapComponent implements OnInit {
         );
     }
 
-    populateFooter() {
-        this.footer = <Footer>{
-            editFlag: true,
-        };
+    populateHeaderAndTitle(): void {
+        if (this.parent_slug == undefined) {
+            this.populateHeader(sitemapTitle);
+            this.title = sitemapTitle;
+            this.titleService.setTitle(sitemapTitle);
+        }
+        else {
+            this.pageService.getPage(this.parent_slug)
+                .subscribe(page => {
+                    this.populateHeader(page.title);
+                    this.title = page.title;
+                    this.titleService.setTitle(page.title);
+                });
+        }
     }
 
     populateTable(breadcrumbs: Breadcrumb[]): void {
@@ -135,18 +146,5 @@ export class SitemapComponent implements OnInit {
                 item: breadcrumb
             });
         this.table = new Table(columnHeadings, rows);
-    }
-
-    getBreadcrumbs() {
-        this.pageService.getPageBreadcrumbs(this.parent_slug)
-            .subscribe(breadcrumbs => this.populateTable(breadcrumbs));
-    }
-
-    filterRows(): void {
-        this.table.setFilterString(this.filterString);
-    }
-
-    onShowEdit(showEdit: boolean) {
-        this.showEdit = showEdit;
     }
 }

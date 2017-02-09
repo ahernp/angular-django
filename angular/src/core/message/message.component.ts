@@ -32,10 +32,13 @@ import {MessageService} from "./message.service";
 export class MessageComponent implements OnInit {
     messages: Message[];
 
-    constructor(private messageService: MessageService) {}
+    constructor(
+        private messageService: MessageService
+    ) {}
 
     ngOnInit(): void {
-        this.messageService.getMessages().subscribe(messages => this.messages = messages);
+        this.messageService.getMessages()
+            .subscribe(messages => this.messages = messages);
     }
 
     clearMessages(): void {

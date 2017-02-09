@@ -40,9 +40,9 @@ import {toDateTimeString} from '../../utilities';
 })
 export class FooterComponent implements OnInit {
     @Input() footer: Footer;
-    @Output() onRefresh = new EventEmitter<boolean>();
-    @Output() onShowEdit = new EventEmitter<boolean>();
-    @Output() onToggleSource = new EventEmitter<boolean>();
+    @Output() onRefresh: EventEmitter<boolean> = new EventEmitter<boolean>();
+    @Output() onShowEdit: EventEmitter<boolean> = new EventEmitter<boolean>();
+    @Output() onToggleSource: EventEmitter<boolean> = new EventEmitter<boolean>();
 
     loggedIn: Boolean;
     now: string;
@@ -50,36 +50,36 @@ export class FooterComponent implements OnInit {
     showSource: boolean = false;
 
     constructor(
-        private authService: AuthService) {
-    }
+        private authService: AuthService
+    ) {}
 
     ngOnInit(): void {
-        this.authService.getLoggedInStatus().subscribe(loggedInFlag => this.loggedIn = loggedInFlag);
-
+        this.authService.getLoggedInStatus()
+            .subscribe(loggedInFlag => this.loggedIn = loggedInFlag);
         this.now = toDateTimeString(new Date());
     }
 
-    logout() {
+    logout(): void {
         this.authService.logout();
     }
 
-    refresh() {
-        this.onRefresh.emit();
-    }
-
-    toggleShowLogin() {
-        this.showLogin = !this.showLogin;
-    }
-
-    onHideLogin() {
+    onHideLogin(): void {
         this.showLogin = false;
     }
 
-    showEdit() {
+    refresh(): void {
+        this.onRefresh.emit();
+    }
+
+    showEdit(): void {
         this.onShowEdit.emit(true);
     }
 
-    toggleSource() {
+    toggleShowLogin(): void {
+        this.showLogin = !this.showLogin;
+    }
+
+    toggleSource(): void {
         this.showSource = !this.showSource;
         this.onToggleSource.emit(this.showSource);
     }

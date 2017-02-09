@@ -19,9 +19,10 @@ const markdownBreadcrumb = <Breadcrumb>{title: 'Markdown', url: '/page/markdown'
     template: `
         <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
         <div id="content">
-            <h2 class="published_date" *ngIf="page && page.published">Published: {{page.published}}</h2>
-
-            <h1 *ngIf="page && page.contentType == 'markdown' && page.title">{{page.title}}</h1>
+            <div style="width: 100%">
+                <h1 *ngIf="page && page.contentType == 'markdown' && page.title" style="display:inline;">{{page.title}}</h1>
+                <h2 *ngIf="page && page.published" class="published">Published: {{page.published}}</h2>
+            </div>
 
             <p *ngIf="page && page.contentType != 'homepage'">
                 <ad-breadcrumb *ngFor="let breadcrumb of childBreadcrumbs" [breadcrumb]="breadcrumb"></ad-breadcrumb>

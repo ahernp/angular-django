@@ -25,8 +25,10 @@ export const blogArchiveBreadcrumb: Breadcrumb = <Breadcrumb>
         <ad-header id="header" *ngIf="breadcrumbs" [breadcrumbs]="breadcrumbs"></ad-header>
         <div id="content">
             <div *ngFor="let page of pages" class="entry">
-                <h2 class="published_date" *ngIf="page.published">Published: {{page.published}}</h2>
-                <h1>{{page.title}}</h1>
+                <div style="width: 100%">
+                    <h1 style="display:inline;">{{page.title}}</h1>
+                    <h2 *ngIf="page.published" class="published" style="display:inline;">Published: {{page.published}}</h2>
+                </div>
                 <ad-markdown-content [content]="page.content"></ad-markdown-content>
                 <p class="entry-meta">
                     Last Updated: {{page.updated}};
@@ -39,7 +41,7 @@ export const blogArchiveBreadcrumb: Breadcrumb = <Breadcrumb>
     styles: [`
         div.entry {
             border: 1px #046 solid;
-            border-radius: 10px
+            border-radius: 10px;
             margin: 5px 0;
             padding: 5px;
         }

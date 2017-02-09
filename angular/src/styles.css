@@ -153,6 +153,8 @@ div.column-left p, div.column-right p {
     margin: 4px 0;
 }
 
-h2.published_date {
-    text-align: right;
+h2.published {
+    display:inline;
+    float: right;
+    margin: 0;
 }

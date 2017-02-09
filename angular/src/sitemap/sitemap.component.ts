@@ -24,8 +24,8 @@ const columnHeadings: string[] = ['Title', 'Parent', 'Published', 'Updated'];
             <h1>{{title}}</h1>
             <template [ngIf]="table">
                 <input [(ngModel)]="filterString" (ngModelChange)="filterRows()" placeholder="Filter" tabindex="2">
-                <span *ngIf="table.currentRows.length != table.rows.length">{{table.currentRows.length}} of</span>
-                {{table.rows.length}} rows
+                <span *ngIf="table.currentRows.length != table.allRows.length">{{table.currentRows.length}} of</span>
+                {{table.allRows.length}} rows
                 <table>
                     <thead>
                         <tr><th *ngFor="let columnHeading of table.columnHeadings; let i = index" (click)="table.sortRows(i)">{{columnHeading}}</th></tr>

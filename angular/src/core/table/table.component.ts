@@ -6,11 +6,15 @@ import {Table, Row} from './table'
     selector: 'ad-table',
     template: `
         <input [(ngModel)]="filterString" (ngModelChange)="filterRows()" placeholder="Filter" tabindex="2">
-        <span *ngIf="table.currentRows.length != table.rows.length">{{table.currentRows.length}} of</span>
-        {{table.rows.length}} rows
+        <span *ngIf="table.currentRows.length != table.allRows.length">{{table.currentRows.length}} of</span>
+        {{table.allRows.length}} rows
         <table>
             <thead>
-                <tr><th *ngFor="let columnHeading of table.columnHeadings; let i = index" (click)="table.sortRows(i)">{{columnHeading}}</th></tr>
+                <tr>
+                    <th *ngFor="let columnHeading of table.columnHeadings; let i = index" (click)="table.sortRows(i)">
+                        {{columnHeading}}
+                    </th>
+                </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let row of table.currentRows; let odd=odd; let even=even;" [ngClass]="{ odd: odd, even: even }">
@@ -24,8 +28,8 @@ export class TableComponent implements OnInit {
     @Input() columnHeadings: string[];
     @Input() rows: Row[];
 
-    table: Table;
     filterString: string;
+    table: Table;
 
     ngOnInit(): void {
         this.table = new Table(this.columnHeadings, this.rows);

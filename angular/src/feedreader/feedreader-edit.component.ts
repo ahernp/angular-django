@@ -28,8 +28,8 @@ const columnHeadings: string[] = ['Group', 'Feed', 'Site'];
                 <button (click)="addFeed()">Add</button>
             </p>
             <input [(ngModel)]="filterString" (ngModelChange)="filterRows()" placeholder="Filter" tabindex="2">
-            <span *ngIf="table.currentRows.length != table.rows.length">{{table.currentRows.length}} of</span>
-            {{table.rows.length}} rows
+            <span *ngIf="table.currentRows.length != table.allRows.length">{{table.currentRows.length}} of</span>
+            {{table.allRows.length}} rows
             <table>
                 <thead>
                     <tr>

@@ -9,8 +9,8 @@ import {LoginComponent} from "./auth/login.component";
 import {BreadcrumbComponent} from "./breadcrumbs/breadcrumb.component";
 import {BreadcrumbService} from "./breadcrumbs/breadcrumb.service";
 
-import {FooterComponent} from "./footer/footer.component";
 import {HeaderComponent} from "./header/header.component";
+import {FooterComponent} from "./footer/footer.component";
 
 import {MarkdownComponent} from "./markdown/markdown.component";
 import {MarkdownToHtmlPipe} from "./markdown/markdown.pipe";
@@ -37,16 +37,15 @@ import {TrimUrlPipe} from "./pipes/trimurl.pipe";
     ],
     declarations: [
         BreadcrumbComponent,
-        HeaderComponent,
         FooterComponent,
-        BreadcrumbComponent,
-        SpinnerComponent,
-        SearchComponent,
-        TableComponent,
+        HeaderComponent,
         LoginComponent,
         MarkdownComponent,
         MarkdownToHtmlPipe,
         MessageComponent,
+        SearchComponent,
+        SpinnerComponent,
+        TableComponent,
         TrimUrlPipe,
     ],
     providers: [

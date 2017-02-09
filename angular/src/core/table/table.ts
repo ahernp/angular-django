@@ -12,7 +12,7 @@ export class Row {
 
 export class Table {
     public columnHeadings: string[];
-    private rows: Row[];
+    private allRows: Row[];
     public currentRows: Row[];
 
     private sortOrders: boolean[] = [];
@@ -22,7 +22,7 @@ export class Table {
 
     constructor(columnHeadings: string[], rows: Row[]) {
         this.columnHeadings = columnHeadings;
-        this.rows = rows;
+        this.allRows = rows;
         this.currentRows = rows;
         this.initialiseSortOrders(this.columnHeadings.length);
         this.populateFilterStrings();
@@ -53,7 +53,7 @@ export class Table {
                 return (valueA < valueB) ? -1 : 1;
         };
 
-        this.rows.sort((rowA: Row, rowB: Row): number => {
+        this.allRows.sort((rowA: Row, rowB: Row): number => {
             if (sizeRegExp.test(rowA.columns[sortColumn]) && sizeRegExp.test(rowB.columns[sortColumn])) {
                 let valueA: number = calcSize(rowA.columns[sortColumn]);
                 let valueB: number = calcSize(rowB.columns[sortColumn]);
@@ -78,17 +78,17 @@ export class Table {
 
     private populateFilterStrings(): void {
         this.filterableStrings = [];
-        for (let row of this.rows)
+        for (let row of this.allRows)
             this.filterableStrings.push(row.columns.toString().toLocaleLowerCase());
     }
 
     private filterRows(): Row[] {
         if (this.filterString.length < 2) {
-            this.currentRows = this.rows;
+            this.currentRows = this.allRows;
             return this.currentRows;
         }
-        let filterStringLowercase = this.filterString.toLocaleLowerCase();
-        this.currentRows = this.rows.filter(
+        let filterStringLowercase: string = this.filterString.toLocaleLowerCase();
+        this.currentRows = this.allRows.filter(
             (value, index) => this.filterableStrings[index].indexOf(filterStringLowercase) != -1);
         return this.currentRows;
     }

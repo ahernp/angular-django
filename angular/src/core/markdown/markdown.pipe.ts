@@ -7,7 +7,9 @@ var converter = new showdown.Converter({'tables': true});
 
 @Pipe({name: 'markdown'})
 export class MarkdownToHtmlPipe implements PipeTransform {
-    constructor(private _sanitizer: DomSanitizer){}
+    constructor(
+        private _sanitizer: DomSanitizer
+    ) {}
 
     transform(markdown: string): SafeHtml {
       return this._sanitizer.bypassSecurityTrustHtml(converter.makeHtml(markdown));

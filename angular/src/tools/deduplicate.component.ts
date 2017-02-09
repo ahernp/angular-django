@@ -22,10 +22,9 @@ export class DeduplicateComponent {
     outputString: string = 'Record1\nRecord3\nRecord4';
 
     deduplicate(): void {
-        var inputRecords: string[] = this.inputString.split('\n').sort();
-        var outputRecords: string = "";
-        for (var i = 0; i < inputRecords.length - 1; i++) {
-            // If next record is different add current to output
+        let inputRecords: string[] = this.inputString.split('\n').sort();
+        let outputRecords: string = "";
+        for (let i = 0; i < inputRecords.length - 1; i++) {
             if (inputRecords[i] != inputRecords[i + 1])
                 outputRecords = outputRecords + inputRecords[i] + "\n";
         }

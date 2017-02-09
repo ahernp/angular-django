@@ -27,24 +27,24 @@ import {Component} from '@angular/core';
     `
 })
 export class MatchComponent {
+    excludeFlag: Boolean;
     inputString: string = 'Record3\nRecord4\nRecord4\nRecord1';
     keyString: string = 'Record4\nRecord1';
-    excludeFlag: Boolean;
     output: string = 'Record4\nRecord4\nRecord1';
 
     match(): void {
-        var inputRecords: string[] = this.inputString.split('\n');
-        var keyRecords: string[] = this.keyString.split('\n');
-        var outputString: string = "";
-        for (var i = 0; i < inputRecords.length; i++) {
-            var match_found = false;
-            for (var j = 0; j < keyRecords.length; j++) {
+        let inputRecords: string[] = this.inputString.split('\n');
+        let keyRecords: string[] = this.keyString.split('\n');
+        let outputString: string = "";
+        for (let i = 0; i < inputRecords.length; i++) {
+            let matchFound: boolean = false;
+            for (let j = 0; j < keyRecords.length; j++) {
                 if (inputRecords[i].indexOf(keyRecords[j]) > -1) {
-                    match_found = true;
+                    matchFound = true;
                     break;
                 }
             }
-            if ((!match_found && this.excludeFlag) || (match_found && !this.excludeFlag))
+            if ((!matchFound && this.excludeFlag) || (matchFound && !this.excludeFlag))
                 outputString = outputString + inputRecords[i] + "\n";
         }
         this.output = outputString;

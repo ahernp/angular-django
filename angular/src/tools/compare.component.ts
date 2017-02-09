@@ -31,10 +31,14 @@ export class CompareComponent {
     result: string = 'Results: 2 matches; 1 inserts; 1 deletes.\nI:Record2\nD:Record4';
 
     sortAndCompare(): void {
-        var inputLines1 = this.firstInput.split('\n').sort();
-        var inputLines2 = this.secondInput.split('\n').sort();
-        var resultString = "", position1 = 0, position2 = 0;
-        var matchCount = 0; var insertCount = 0; var deleteCount = 0;
+        let inputLines1: string[] = this.firstInput.split('\n').sort();
+        let inputLines2: string[] = this.secondInput.split('\n').sort();
+        let resultString: string = "",
+            position1: number = 0,
+            position2: number = 0,
+            matchCount: number = 0,
+            insertCount: number = 0,
+            deleteCount: number = 0;
         while (position1 < inputLines1.length && position2 < inputLines2.length) {
             if (inputLines1[position1] > inputLines2[position2]) {
                 resultString = resultString + "I:" + inputLines2[position2] + "\n";
@@ -56,7 +60,6 @@ export class CompareComponent {
             resultString = resultString + "I:" + inputLines2[position2] + "\n";
             position1 = position2 + 2; insertCount++;
         }
-        resultString = "Results: " + matchCount + " matches; " + insertCount + " inserts; " + deleteCount + " deletes.\n" + resultString;
-        this.result = resultString;
+        this.result = "Results: " + matchCount + " matches; " + insertCount + " inserts; " + deleteCount + " deletes.\n" + resultString;
     }
 }

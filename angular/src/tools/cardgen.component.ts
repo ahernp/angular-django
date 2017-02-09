@@ -28,26 +28,24 @@ import {Component} from '@angular/core';
     `
 })
 export class CardgenComponent {
+    cardTemplate: string = '<li>#Name <a href="https://#URL" title="#Description"> #URL</a> #Description</li>';
     dataRecords: string = '#Name,#URL,#Description\nGoogle,www.google.com,Search engine.\nAmazon,www.amazon.co.uk,Bookshop.';
     delimiter: string = ',';
-    cardTemplate: string = '<li>#Name <a href="https://#URL" title="#Description"> #URL</a> #Description</li>';
     generatedCards: string = '<li>Google <a href="https://www.google.com" title="Search engine."> www.google.com</a> Search engine.</li>\n<li>Amazon <a href="https://www.amazon.co.uk" title="Bookshop."> www.amazon.co.uk</a> Bookshop.</li>';
 
     generateCards(): void {
-        // First data record contains labels
-        var data_records = this.dataRecords.split('\n');
-        var labels = data_records[0].split(this.delimiter);
-        var output_string = '';
-        for (var i = 1; i < data_records.length; i++) {
-            var curr_card = this.cardTemplate;
-            var curr_data = data_records[i].split(this.delimiter);
-            for (var j = 0; j < curr_data.length; j++) {
-                var curr_label = new RegExp(labels[j], "g");
-                // Replace all occurrances of label with the equivalent data
-                curr_card = curr_card.replace(curr_label, curr_data[j]);
+        let dataRecords: string[] = this.dataRecords.split('\n');
+        let labels: string[] = dataRecords[0].split(this.delimiter);
+        let outputString: string = '';
+        for (let i = 1; i < dataRecords.length; i++) {
+            let currentCard: string = this.cardTemplate;
+            let currentData: string[] = dataRecords[i].split(this.delimiter);
+            for (let j = 0; j < currentData.length; j++) {
+                let currentLabel: RegExp = new RegExp(labels[j], "g");
+                currentCard = currentCard.replace(currentLabel, currentData[j]);
             }
-            output_string = output_string + curr_card + "\n";
+            outputString = outputString + currentCard + "\n";
         }
-        this.generatedCards = output_string;
+        this.generatedCards = outputString;
     }
 }

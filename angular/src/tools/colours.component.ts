@@ -158,7 +158,7 @@ const colours: string[][] = [
         <h1>HTML Colours</h1>
         <input [(ngModel)]="filterString" (ngModelChange)="filterRows()" placeholder="Filter">
         <span *ngIf="table.currentRows.length != table.allRows.length">{{table.currentRows.length}} of</span>
-        {{table.allRrows.length}} rows
+        {{table.allRows.length}} rows
         <table>
             <thead>
                 <tr>
@@ -178,8 +178,8 @@ const colours: string[][] = [
     `,
 })
 export class ColoursComponent {
-    table: Table = new Table(columnHeadings, colours.map(colour => <Row>{columns:colour}));
     filterString: string;
+    table: Table = new Table(columnHeadings, colours.map(colour => <Row>{columns:colour}));
 
     filterRows(): void {
         this.table.setFilterString(this.filterString);

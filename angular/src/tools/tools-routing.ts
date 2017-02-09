@@ -4,10 +4,10 @@ import {Routes, RouterModule} from '@angular/router';
 import {ToolsComponent} from "./tools.component";
 
 import {CardgenComponent} from "./cardgen.component";
+import {ColoursComponent} from "./colours.component";
 import {CompareComponent} from "./compare.component";
 import {DeduplicateComponent} from "./deduplicate.component";
 import {MatchComponent} from "./match.component";
-import {ColoursComponent} from "./colours.component";
 
 const toolsRoutes: Routes = [
     {

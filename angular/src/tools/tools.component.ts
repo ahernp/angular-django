@@ -11,16 +11,21 @@ import {rootTitle, adminBreadcrumb} from "../app.settings";
 
 const toolsTitle: string = 'Tools';
 const toolsUrl: string = '/tools';
-export const toolsBreadcrumb = <Breadcrumb>
+export const toolsBreadcrumb: Breadcrumb = <Breadcrumb>
     {title: toolsTitle, url: toolsUrl, parentName: rootTitle};
 
-const cardgenBreadcrumb = <Breadcrumb> {title: 'Cardgen', url: '/tools/cardgen', parentName: toolsTitle};
-const coloursBreadcrumb = <Breadcrumb> {title: 'Colours', url: '/tools/colours', parentName: toolsTitle};
-const compareBreadcrumb = <Breadcrumb> {title: 'Compare', url: '/tools/compare', parentName: toolsTitle};
-const deduplicateBreadcrumb = <Breadcrumb> {title: 'Deduplicate', url: '/tools/deduplicate', parentName: toolsTitle};
-const matchBreadcrumb = <Breadcrumb> {title: 'Match', url: '/tools/match', parentName: toolsTitle};
+const cardgenBreadcrumb: Breadcrumb = <Breadcrumb>
+    {title: 'Cardgen', url: '/tools/cardgen', parentName: toolsTitle};
+const coloursBreadcrumb: Breadcrumb = <Breadcrumb>
+    {title: 'Colours', url: '/tools/colours', parentName: toolsTitle};
+const compareBreadcrumb: Breadcrumb = <Breadcrumb>
+    {title: 'Compare', url: '/tools/compare', parentName: toolsTitle};
+const deduplicateBreadcrumb: Breadcrumb = <Breadcrumb>
+    {title: 'Deduplicate', url: '/tools/deduplicate', parentName: toolsTitle};
+const matchBreadcrumb: Breadcrumb = <Breadcrumb>
+    {title: 'Match', url: '/tools/match', parentName: toolsTitle};
 
-export const toolBreadcrumbs = [
+export const toolBreadcrumbs: Breadcrumb[] = [
     cardgenBreadcrumb,
     coloursBreadcrumb,
     compareBreadcrumb,
@@ -46,41 +51,29 @@ export const toolBreadcrumbs = [
     providers: []
 })
 export class ToolsComponent implements OnInit {
-    toolBreadcrumbs: Breadcrumb[] = toolBreadcrumbs;
-    tool_slug: string;
     breadcrumbs: Breadcrumb[];
     footer: Footer;
+    toolBreadcrumbs: Breadcrumb[] = toolBreadcrumbs;
+    toolSlug: string;
 
     constructor(
         private breadcrumbService:BreadcrumbService,
         private route: ActivatedRoute,
         private router: Router,
-        private titleService:Title) {
-    }
+        private titleService:Title
+    ) {}
 
     ngOnInit(): void {
         this.titleService.setTitle(toolsTitle);
         this.route.params.forEach((params: Params) => {
-            this.tool_slug = params['slug'];
+            this.toolSlug = params['slug'];
             this.populateHeaderAndTitle();
             this.populateFooter();
         });
     }
 
-    populateHeaderAndTitle(): void {
-        if (this.tool_slug == undefined) {
-            this.titleService.setTitle(toolsTitle);
-            this.populateHeader(toolsTitle);
-        }
-        else {
-            for (var i = 0; i < this.toolBreadcrumbs.length; i++) {
-                if (this.toolBreadcrumbs[i].url == this.router.url) {
-                    this.titleService.setTitle(this.toolBreadcrumbs[i].title);
-                    this.populateHeader(this.toolBreadcrumbs[i].title);
-                    break;
-                }
-            }
-        }
+    populateFooter(): void {
+        this.footer = <Footer>{breadcrumbs: [adminBreadcrumb]};
     }
 
     populateHeader(title:string): void {
@@ -92,7 +85,19 @@ export class ToolsComponent implements OnInit {
             });
     }
 
-    populateFooter(): void {
-        this.footer = <Footer>{breadcrumbs: [adminBreadcrumb]};
+    populateHeaderAndTitle(): void {
+        if (this.toolSlug == undefined) {
+            this.titleService.setTitle(toolsTitle);
+            this.populateHeader(toolsTitle);
+        }
+        else {
+            for (let i = 0; i < this.toolBreadcrumbs.length; i++) {
+                if (this.toolBreadcrumbs[i].url == this.router.url) {
+                    this.titleService.setTitle(this.toolBreadcrumbs[i].title);
+                    this.populateHeader(this.toolBreadcrumbs[i].title);
+                    break;
+                }
+            }
+        }
     }
 }

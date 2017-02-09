@@ -5,8 +5,9 @@ import {Observable} from 'rxjs';
 
 import {AuthService} from "../core/auth/auth.service";
 
-import {Entry, Feed, FeedCount, FeedCountDictionary,
-    GroupCount, GroupCountDictionary, Group} from './feedreader';
+import {Entry,
+    Feed, FeedCount, FeedCountDictionary,
+    Group, GroupCount, GroupCountDictionary} from './feedreader';
 import {FeedreaderService} from './feedreader.service';
 
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
@@ -115,8 +116,8 @@ export class FeedreaderComponent implements OnInit {
         private feedreaderService: FeedreaderService,
         private authService: AuthService,
         private breadcrumbService: BreadcrumbService,
-        private titleService:Title) {
-    }
+        private titleService:Title
+    ) {}
 
     ngOnInit(): void {
         this.authService.getLoggedInStatus().subscribe(loggedInFlag => this.loggedIn = loggedInFlag);
@@ -124,6 +125,39 @@ export class FeedreaderComponent implements OnInit {
         this.populateHeader();
         this.populateFooter();
         this.getFeedsAndEntries();
+    }
+
+    countEntries(entries: Entry[]) {
+        let groupCountDictionary: GroupCountDictionary = new GroupCountDictionary();
+        for (let i = 0; i < this.feeds.length; i++) {
+            if (groupCountDictionary[this.feeds[i].groupName] == undefined)
+                groupCountDictionary[this.feeds[i].groupName] = {count: 0, feedCounts: new FeedCountDictionary()};
+            groupCountDictionary[this.feeds[i].groupName].feedCounts[this.feeds[i].feedTitle] = 0;
+        }
+        for (let i = 0; i < entries.length; i++) {
+            groupCountDictionary[entries[i].groupName].count++;
+            groupCountDictionary[entries[i].groupName].feedCounts[entries[i].feedTitle]++;
+        }
+        let groupCounts: GroupCount[] = [];
+        let groupNames: any = Object.keys(groupCountDictionary);
+        for (let i = 0; i < groupNames.length; i++)
+            if (groupCountDictionary[groupNames[i]].count > 0) {
+                let feedCounts: FeedCount[] = [];
+                let feedTitles = Object.keys(groupCountDictionary[groupNames[i]].feedCounts);
+                for (let j = 0; j < feedTitles.length; j++)
+                    if (groupCountDictionary[groupNames[i]].feedCounts[feedTitles[j]] > 0)
+                        feedCounts.push(<FeedCount>{
+                            name: feedTitles[j],
+                            count: groupCountDictionary[groupNames[i]].feedCounts[feedTitles[j]],
+                            selected: false
+                        });
+                groupCounts.push(<GroupCount>{
+                    name: groupNames[i],
+                    count: groupCountDictionary[groupNames[i]].count,
+                    selected: false,
+                    feedCounts: feedCounts})
+            }
+        this.groupCounts = groupCounts;
     }
 
     populateHeader() {
@@ -168,13 +202,6 @@ export class FeedreaderComponent implements OnInit {
             );
     }
 
-    toggleRead(entryId: number): void {
-        if (this.loggedIn) {
-            this.showSpinner = true;
-            this.feedreaderService.toggleRead(entryId);
-        }
-    }
-
     markAllRead(): void {
         if (this.loggedIn) {
             this.showSpinner = true;
@@ -182,37 +209,45 @@ export class FeedreaderComponent implements OnInit {
         }
     }
 
-    countEntries(entries: Entry[]) {
-        let groupCountDictionary: GroupCountDictionary = new GroupCountDictionary();
-        for (let i = 0; i < this.feeds.length; i++) {
-            if (groupCountDictionary[this.feeds[i].groupName] == undefined)
-                groupCountDictionary[this.feeds[i].groupName] = {count: 0, feedCounts: new FeedCountDictionary()};
-            groupCountDictionary[this.feeds[i].groupName].feedCounts[this.feeds[i].feedTitle] = 0;
+    onRefresh(): void {
+        this.showSpinner = true;
+        this.feedreaderService.refreshCaches();
+    }
+
+    onShowEdit(showEdit: boolean) {
+        this.showEdit = showEdit;
+    }
+
+    showAll(): void {
+        this.shownEntries = this.showReadEntries ? this.entries : this.unreadEntries;
+        this.updateCountSelects();
+    }
+
+    showFeed(feedName: string): void {
+        if (this.showReadEntries)
+            this.shownEntries = this.entries.filter(
+                (value) => value.feedTitle == feedName);
+        else
+            this.shownEntries = this.unreadEntries.filter(
+                (value) => value.feedTitle == feedName);
+        this.updateCountSelects('', feedName);
+    }
+
+    showGroup(groupName: string): void {
+        if (this.showReadEntries)
+            this.shownEntries = this.entries.filter(
+                (value) => value.groupName == groupName);
+        else
+            this.shownEntries = this.unreadEntries.filter(
+                (value) => value.groupName == groupName);
+        this.updateCountSelects(groupName);
+    }
+
+    toggleRead(entryId: number): void {
+        if (this.loggedIn) {
+            this.showSpinner = true;
+            this.feedreaderService.toggleRead(entryId);
         }
-        for (let i = 0; i < entries.length; i++) {
-            groupCountDictionary[entries[i].groupName].count++;
-            groupCountDictionary[entries[i].groupName].feedCounts[entries[i].feedTitle]++;
-        }
-        let groupCounts: GroupCount[] = [];
-        let groupNames = Object.keys(groupCountDictionary);
-        for (let i = 0; i < groupNames.length; i++)
-            if (groupCountDictionary[groupNames[i]].count > 0) {
-                let feedCounts: FeedCount[] = [];
-                let feedTitles = Object.keys(groupCountDictionary[groupNames[i]].feedCounts)
-                for (let j = 0; j < feedTitles.length; j++)
-                    if (groupCountDictionary[groupNames[i]].feedCounts[feedTitles[j]] > 0)
-                        feedCounts.push(<FeedCount>{
-                            name: feedTitles[j],
-                            count: groupCountDictionary[groupNames[i]].feedCounts[feedTitles[j]],
-                            selected: false
-                        });
-                groupCounts.push(<GroupCount>{
-                    name: groupNames[i],
-                    count: groupCountDictionary[groupNames[i]].count,
-                    selected: false,
-                    feedCounts: feedCounts})
-            }
-        this.groupCounts = groupCounts;
     }
 
     toggleShowReadEntries() {
@@ -233,38 +268,4 @@ export class FeedreaderComponent implements OnInit {
                     this.groupCounts[groupPos].feedCounts[feedPos].selected = false;
         }
     };
-
-    showAll(): void {
-        this.shownEntries = this.showReadEntries ? this.entries : this.unreadEntries;
-        this.updateCountSelects();
-    }
-
-    showGroup(groupName: string): void {
-        if (this.showReadEntries)
-            this.shownEntries = this.entries.filter(
-                (value) => value.groupName == groupName);
-        else
-            this.shownEntries = this.unreadEntries.filter(
-                (value) => value.groupName == groupName);
-        this.updateCountSelects(groupName);
-    }
-
-    showFeed(feedName: string): void {
-        if (this.showReadEntries)
-            this.shownEntries = this.entries.filter(
-                (value) => value.feedTitle == feedName);
-        else
-            this.shownEntries = this.unreadEntries.filter(
-                (value) => value.feedTitle == feedName);
-        this.updateCountSelects('', feedName);
-    }
-
-    onRefresh(): void {
-        this.showSpinner = true;
-        this.feedreaderService.refreshCaches();
-    }
-
-    onShowEdit(showEdit: boolean) {
-        this.showEdit = showEdit;
-    }
 }

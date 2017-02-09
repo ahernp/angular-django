@@ -43,6 +43,64 @@ export class FeedreaderService {
         this.initialCheckForUpdates();
     }
 
+    deleteFeed(feed: Feed): void {
+        let url: string = `${apiEndpoint}${feedreaderUrl}/deletefeed`;
+        let headers: Headers = new Headers({'Content-Type': 'application/json'});
+        let options: RequestOptions = new RequestOptions({ headers: headers });
+
+        this.http.post(url, feed, options)
+            .subscribe(
+                (response) => {
+                    this.deleteFeedFromCache(feed);
+                },
+                error => {
+                    this.messageService.addErrorMessage(
+                        messageSource,
+                        `${messageSource} delete Feed error: Url ${url}; Status Code ${error.status}; ${error.statusText}`);
+                    console.log(error);
+                }
+            );
+    }
+
+    deleteFeedFromCache(feed: Feed): void {
+        for (let i = 0; i < this.feedCache.length; i++) {
+            if (this.feedCache[i].id == feed.id) {
+                this.feedCache.splice(i, 1);
+                this.feeds$.next(this.feedCache);
+                break;
+            }
+        }
+    }
+
+    deleteGroup(group: Group): void {
+        let url: string = `${apiEndpoint}${feedreaderUrl}/deletegroup`;
+        let headers: Headers = new Headers({'Content-Type': 'application/json'});
+        let options: RequestOptions = new RequestOptions({ headers: headers });
+
+        this.http.post(url, group, options)
+            .subscribe(
+                (response) => {
+                    this.deleteGroupFromCache(group);
+                },
+                error => {
+                    this.messageService.addErrorMessage(
+                        messageSource,
+                        `${messageSource} delete Group error: Url ${url}; Status Code ${error.status}; ${error.statusText}`);
+                    console.log(error);
+                }
+            );
+    }
+
+    deleteGroupFromCache(group: Group): void {
+        for (let i = 0; i < this.groupCache.length; i++) {
+            if (this.groupCache[i].id == group.id) {
+                this.groupCache.splice(i, 1);
+                this.groups$.next(this.groupCache);
+                break;
+            }
+        }
+    }
+
     getFeeds(): ReplaySubject<any> {
         return this.feeds$;
     }
@@ -55,25 +113,10 @@ export class FeedreaderService {
         return this.groups$;
     }
 
-    toggleRead(entryId: number): void {
-        let headers: Headers = new Headers({'Content-Type': 'application/json'});
-        let options: RequestOptions = new RequestOptions({headers: headers});
-        let url: string = `${apiEndpoint}${feedreaderUrl}/toggleread`;
-        this.http.post(url, {entry_id: entryId}, options)
-            .subscribe(
-                () => {
-                    let entry = this.recentEntryCache.filter(entry => entry.id == entryId)[0];
-                    entry.readFlag = !entry.readFlag;
-                    this.recentEntries$.next(this.recentEntryCache);
-                    this.messageUnread();
-                },
-                error => {
-                    this.messageService.addErrorMessage(
-                        messageSource,
-                        `${messageSource} error: From ${url}; Status Code ${error.status}; ${error.statusText}`);
-                    console.log(error);
-                }
-            );
+    initialCheckForUpdates(): void {
+        this.refreshCaches();
+        var boundRefreshCaches = this.refreshCaches.bind(this);
+        this.schedulerService.hourly(feedreaderPollMinute, boundRefreshCaches);
     }
 
     markAllRead(): void {
@@ -95,6 +138,17 @@ export class FeedreaderService {
                     console.log(error);
                 }
             );
+    }
+
+    messageUnread() {
+        this.messageService.clearMessagesBySource(messageSource);
+        let unread: Entry[] = this.recentEntryCache.filter(entry => !entry.readFlag);
+        if (unread.length > 0)
+            this.messageService.addInfoMessage(
+                messageSource,
+                unread.length == 1
+                    ? '1 unread Feedreader entry'
+                    : `${unread.length} unread Feedreader entries`);
     }
 
     refreshCaches(): void {
@@ -124,61 +178,6 @@ export class FeedreaderService {
                 console.log(error);
             }
         )
-    }
-
-    initialCheckForUpdates(): void {
-        this.refreshCaches();
-        var boundRefreshCaches = this.refreshCaches.bind(this);
-        this.schedulerService.hourly(feedreaderPollMinute, boundRefreshCaches);
-    }
-
-    messageUnread() {
-        this.messageService.clearMessagesBySource(messageSource);
-        let unread: Entry[] = this.recentEntryCache.filter(entry => !entry.readFlag);
-        if (unread.length > 0)
-            this.messageService.addInfoMessage(
-                messageSource,
-                unread.length == 1
-                    ? '1 unread Feedreader entry'
-                    : `${unread.length} unread Feedreader entries`);
-    }
-
-    deleteFeed(feed: Feed): void {
-        let url = `${apiEndpoint}${feedreaderUrl}/deletefeed`;
-        let headers = new Headers({'Content-Type': 'application/json'});
-        let options = new RequestOptions({ headers: headers });
-
-        this.http.post(url, feed, options)
-            .subscribe(
-                (response) => {
-                    this.deleteFeedFromCache(feed);
-                },
-                error => {
-                    this.messageService.addErrorMessage(
-                        messageSource,
-                        `${messageSource} delete Feed error: Url ${url}; Status Code ${error.status}; ${error.statusText}`);
-                    console.log(error);
-                }
-            );
-    }
-
-    deleteGroup(group: Group): void {
-        let url = `${apiEndpoint}${feedreaderUrl}/deletegroup`;
-        let headers = new Headers({'Content-Type': 'application/json'});
-        let options = new RequestOptions({ headers: headers });
-
-        this.http.post(url, group, options)
-            .subscribe(
-                (response) => {
-                    this.deleteGroupFromCache(group);
-                },
-                error => {
-                    this.messageService.addErrorMessage(
-                        messageSource,
-                        `${messageSource} delete Group error: Url ${url}; Status Code ${error.status}; ${error.statusText}`);
-                    console.log(error);
-                }
-            );
     }
 
     saveFeed(feed: Feed): void {
@@ -219,42 +218,6 @@ export class FeedreaderService {
             );
     }
 
-    deleteFeedFromCache(feed: Feed): void {
-        for (let i = 0; i < this.feedCache.length; i++) {
-            if (this.feedCache[i].id == feed.id) {
-                this.feedCache.splice(i, 1);
-                this.feeds$.next(this.feedCache);
-                break;
-            }
-        }
-    }
-
-    deleteGroupFromCache(group: Group): void {
-        for (let i = 0; i < this.groupCache.length; i++) {
-            if (this.groupCache[i].id == group.id) {
-                this.groupCache.splice(i, 1);
-                this.groups$.next(this.groupCache);
-                break;
-            }
-        }
-    }
-
-    updateFeedCache(feed: Feed): void {
-        let feeds = this.feedCache.filter(cachedFeed => cachedFeed.feedUrl == feed.feedUrl);
-        if (feeds.length > 0)
-            feeds[0] = feed;
-        else
-            this.feedCache.push(feed);
-    }
-
-    updateGroupCache(group: Group): void {
-        let groups = this.groupCache.filter(cachedFeed => cachedFeed.id == group.id);
-        if (groups.length > 0)
-            groups[0] = group;
-        else
-            this.groupCache.push(group);
-    }
-
     search(searchString: string): SearchResults {
         let searchResults: SearchResults = new SearchResults();
         let searchStringLower: string = searchString.toLocaleLowerCase();
@@ -281,8 +244,43 @@ export class FeedreaderService {
                 searchResults.contentMatches.push(searchResult);
             }
         }
-
         return searchResults;
     }
 
+    toggleRead(entryId: number): void {
+        let headers: Headers = new Headers({'Content-Type': 'application/json'});
+        let options: RequestOptions = new RequestOptions({headers: headers});
+        let url: string = `${apiEndpoint}${feedreaderUrl}/toggleread`;
+        this.http.post(url, {entry_id: entryId}, options)
+            .subscribe(
+                () => {
+                    let entry: Entry = this.recentEntryCache.filter(entry => entry.id == entryId)[0];
+                    entry.readFlag = !entry.readFlag;
+                    this.recentEntries$.next(this.recentEntryCache);
+                    this.messageUnread();
+                },
+                error => {
+                    this.messageService.addErrorMessage(
+                        messageSource,
+                        `${messageSource} error: From ${url}; Status Code ${error.status}; ${error.statusText}`);
+                    console.log(error);
+                }
+            );
+    }
+
+    updateFeedCache(feed: Feed): void {
+        let feeds = this.feedCache.filter(cachedFeed => cachedFeed.feedUrl == feed.feedUrl);
+        if (feeds.length > 0)
+            feeds[0] = feed;
+        else
+            this.feedCache.push(feed);
+    }
+
+    updateGroupCache(group: Group): void {
+        let groups = this.groupCache.filter(cachedFeed => cachedFeed.id == group.id);
+        if (groups.length > 0)
+            groups[0] = group;
+        else
+            this.groupCache.push(group);
+    }
 }

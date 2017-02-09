@@ -3,11 +3,11 @@ import {Title} from '@angular/platform-browser';
 
 import {Subscription}   from 'rxjs/Subscription';
 
+import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
+
 import {Feed, Group} from './feedreader';
 import {FeedreaderService} from './feedreader.service';
 import {feedreaderTitle} from './feedreader.component';
-
-import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 
 import {Table, Row} from "../core/table/table";
 
@@ -88,8 +88,8 @@ const columnHeadings: string[] = ['Group', 'Feed', 'Site'];
         div#editor {
             position: fixed;
             top: 0;
+            bottom: 45px;
             z-index: 10;
-            height: 100%;
             width: 100%;
             background: white;
             padding: 5px 5px 45px 45px;
@@ -132,8 +132,8 @@ const columnHeadings: string[] = ['Group', 'Feed', 'Site'];
     `]
 })
 export class FeedreaderEditComponent implements OnInit {
-    @Input() groups: Group[];
     @Input() adminBreadcrumb: Breadcrumb;
+    @Input() groups: Group[];
     @Output() onShowEdit = new EventEmitter<boolean>();
 
     subscription: Subscription;
@@ -162,11 +162,6 @@ export class FeedreaderEditComponent implements OnInit {
         this.titleService.setTitle('Edit Feedreader');
     }
 
-    done(): void {
-        this.titleService.setTitle(feedreaderTitle);
-        this.onShowEdit.emit(false);
-    }
-
     addFeed(): void {
         let newFeed: Feed = new Feed();
         newFeed.feedUrl = this.newFeedUrl;
@@ -186,6 +181,11 @@ export class FeedreaderEditComponent implements OnInit {
 
     deleteGroup(group: Group): void {
         this.feedreaderService.deleteGroup(group);
+    }
+
+    done(): void {
+        this.titleService.setTitle(feedreaderTitle);
+        this.onShowEdit.emit(false);
     }
 
     filterRows(): void {

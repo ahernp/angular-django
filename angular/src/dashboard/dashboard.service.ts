@@ -49,6 +49,7 @@ export class DashboardService {
                 }
             );
     };
+
     initialPopulateDashboard(): void {
         this.populateCache();
         this.schedulerService.hourly(feedreaderPollMinute, this.populateCache);

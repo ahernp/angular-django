@@ -15,8 +15,8 @@ const appRoutes: Routes = [
         component: PageComponent
     },
     {
-        path: 'page/:slug',
-        component: PageComponent
+        path: 'blog',
+        component: BlogComponent
     },
     {
         path: 'dashboard',
@@ -27,6 +27,10 @@ const appRoutes: Routes = [
         component: FeedreaderComponent
     },
     {
+        path: 'page/:slug',
+        component: PageComponent
+    },
+    {
         path: 'sitemap',
         component: SitemapComponent
     },
@@ -35,16 +39,12 @@ const appRoutes: Routes = [
         component: SitemapComponent
     },
     {
-        path: 'blog',
-        component: BlogComponent
+        path: 'timers',
+        component: TimersComponent
     },
     {
         path: 'tools',
         component: ToolsComponent
-    },
-    {
-        path: 'timers',
-        component: TimersComponent
     },
     {
         path: '**',

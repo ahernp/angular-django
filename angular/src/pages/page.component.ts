@@ -5,10 +5,10 @@ import {Title} from '@angular/platform-browser';
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 
+import {Footer} from "../core/footer/footer";
+
 import {Page} from './page';
 import {PageService} from './page.service';
-
-import {Footer} from "../core/footer/footer";
 
 import {rootSlug} from "../app.settings";
 
@@ -42,11 +42,11 @@ const markdownBreadcrumb = <Breadcrumb>{title: 'Markdown', url: '/page/markdown'
     providers: []
 })
 export class PageComponent implements OnInit {
-    page: Page;
     adminBreadcrumb: Breadcrumb;
     breadcrumbs: Breadcrumb[];
     childBreadcrumbs: Breadcrumb[];
     footer: Footer;
+    page: Page;
     showSource: boolean = false;
     showEdit: boolean = false;
 
@@ -54,8 +54,8 @@ export class PageComponent implements OnInit {
         private pageService: PageService,
         private breadcrumbService: BreadcrumbService,
         private route: ActivatedRoute,
-        private titleService: Title) {
-    }
+        private titleService: Title
+    ) {}
 
     ngOnInit(): void {
         this.route.params

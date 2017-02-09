@@ -5,6 +5,7 @@ import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 
 import {ContentType, Page} from './page';
 import {pageUrl, PageService} from './page.service';
+
 import {blogRootTitle} from '../blog/blog.component';
 import {toDateTimeString} from '../utilities';
 
@@ -103,12 +104,11 @@ import {toDateTimeString} from '../utilities';
     `]
 })
 export class PageEditComponent implements OnInit {
-    @Input() page: Page;
     @Input() adminBreadcrumb: Breadcrumb;
+    @Input() page: Page;
     @Output() onShowEdit = new EventEmitter<boolean>();
 
     contentTypes: ContentType[];
-    blogRootTitle: string = blogRootTitle;
     pages: Page[];
     showAdvanced: boolean = false;
 
@@ -141,10 +141,10 @@ export class PageEditComponent implements OnInit {
         this.page.url = `${pageUrl}/${this.page.slug}`;
         if (this.page.children == undefined)
             this.page.children = [];
-        let parentPages = this.pages.filter(parentPage => parentPage.id == this.page.parentId);
+        let parentPages: Page[] = this.pages.filter(parentPage => parentPage.id == this.page.parentId);
         if (parentPages.length > 0)
             this.page.parentName = parentPages[0].parentName;
-        let now = new Date();
+        let now: Date = new Date();
         this.page.updated = toDateTimeString(now);
         this.pageService.save(this.page);
         this.titleService.setTitle(this.page.title)

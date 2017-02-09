@@ -8,20 +8,17 @@ import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 
 import {ContentType, Page} from './page';
 
-import {SearchResult, SearchResults} from "../core/search/search-results";
-
 import {MessageService} from "../core/message/message.service";
 
 import {findStringContext} from "../utilities";
 
-import {rootBreadcrumb} from '../app.settings';
-import {toolsBreadcrumb, toolBreadcrumbs} from '../tools/tools.component'
+import {SearchResult, SearchResults} from "../core/search/search-results";
 
-import {apiEndpoint, dashboardBreadcrumb} from "../app.settings";
-
+import {apiEndpoint, dashboardBreadcrumb, rootBreadcrumb} from "../app.settings";
 import {blogBreadcrumb, blogArchiveBreadcrumb} from "../blog/blog.component";
 import {feedreaderBreadcrumb} from "../feedreader/feedreader.component";
 import {timersBreadcrumb} from "../timers/timers.component";
+import {toolsBreadcrumb, toolBreadcrumbs} from '../tools/tools.component'
 
 export const pageUrl: string = '/page';
 export const messageSource: string = 'Page';
@@ -29,17 +26,16 @@ const pagesApiUrl: string = '/pages';
 
 @Injectable()
 export class PageService {
-
     currentPage$: ReplaySubject<any> = new ReplaySubject(1);
-
-    pageCache: Page[] = [];
-    pages$: ReplaySubject<any> = new ReplaySubject(1);
 
     breadcrumbCache: Breadcrumb[] = [];
     breadcrumbs$: ReplaySubject<any> = new ReplaySubject(1);
 
     contentTypeCache: ContentType[] = [];
     contentTypes$: ReplaySubject<any> = new ReplaySubject(1);
+
+    pageCache: Page[] = [];
+    pages$: ReplaySubject<any> = new ReplaySubject(1);
 
     constructor(
         private http: Http,
@@ -50,76 +46,6 @@ export class PageService {
         this.contentTypes$.next([]);
         this.cacheAllPages();
         this.cacheContentTypes();
-    }
-
-    getPage(slug:string): Observable<Page> {
-        let url = `${apiEndpoint}${pagesApiUrl}/read/${slug}`;
-        let pages = this.pageCache.filter(page => page.url == `${pageUrl}/${slug}`);
-        if (pages.length > 0)
-            this.currentPage$.next(pages[0]);
-        else
-            this.http.get(url)
-                .subscribe(
-                    (response: Response) => {
-                        let page: Page = <Page>response.json();
-                        page.url = `${pageUrl}/${page.slug}`;
-                        this.updateCache(page);
-                    },
-                    error => {
-                        this.messageService.addErrorMessage(
-                            messageSource,
-                            `${messageSource} error: From ${url}; Status Code ${error.status}; ${error.statusText}`);
-                        console.log(error);
-                    }
-                );
-        return this.currentPage$;
-    }
-
-    save(page: Page): void {
-        let url = `${apiEndpoint}${pagesApiUrl}/save`;
-        let headers = new Headers({'Content-Type': 'application/json'});
-        let options = new RequestOptions({ headers: headers });
-
-        this.http.post(url, page, options)
-            .subscribe(
-                () => {
-                    this.updateCache(page);
-                    this.populateBreadcrumbCache();
-                },
-                error => {
-                    this.messageService.addErrorMessage(
-                        messageSource,
-                        `${messageSource} save Page error: Url ${url}; Status Code ${error.status}; ${error.statusText}`);
-                    console.log(error);
-                }
-            );
-    }
-
-    getPages(): ReplaySubject<any> {
-        return this.pages$;
-    }
-
-    getBreadcrumbs(): ReplaySubject<any> {
-        return this.breadcrumbs$;
-    }
-
-    getContentTypes(): ReplaySubject<any> {
-        return this.contentTypes$;
-    }
-
-    getPageBreadcrumbs(slug: string): ReplaySubject<any> {
-        let breadcrumbs = this.breadcrumbCache;
-        if (slug != undefined) {
-            var parent = this.pageCache.filter(page => page.url == `${pageUrl}/${slug}`)[0];
-            breadcrumbs = this.breadcrumbCache.filter(breadcrumb => breadcrumb.parentName == parent.title);
-        }
-        this.breadcrumbs$.next(breadcrumbs);
-        return this.breadcrumbs$;
-    }
-
-    refresh(url: string): Observable<Page> {
-        this.pageCache = this.pageCache.filter(page => page.url != url);
-        return this.getPage(url.replace(`${pageUrl}/`, ''));
     }
 
     cacheAllPages(): void {
@@ -158,19 +84,67 @@ export class PageService {
             );
     }
 
-    populatePageCache(): void {
-        for (let page of this.pageCache) {
-            page.url = `${pageUrl}/${page.slug}`;
-            if (page.parentId) {
-                let parent = this.pageCache.filter(parent => parent.id == page.parentId)[0];
-                page.parentName = parent.title;
-            }
+    getBreadcrumbs(): ReplaySubject<any> {
+        return this.breadcrumbs$;
+    }
+
+    getContentTypes(): ReplaySubject<any> {
+        return this.contentTypes$;
+    }
+
+    getDynamicPageBreadcrumbs(): Breadcrumb[] {
+        let breadcrumbs: Breadcrumb[] = [];
+        breadcrumbs.push(blogBreadcrumb);
+        breadcrumbs.push(blogArchiveBreadcrumb);
+        breadcrumbs.push(dashboardBreadcrumb);
+        breadcrumbs.push(feedreaderBreadcrumb);
+        breadcrumbs.push(rootBreadcrumb);
+        breadcrumbs.push(timersBreadcrumb);
+        breadcrumbs.push(toolsBreadcrumb);
+
+        for (let toolBreadcrumb of toolBreadcrumbs) {
+            toolBreadcrumb.parentName = 'Tools';
+            breadcrumbs.push(toolBreadcrumb);
         }
-        for (let page of this.pageCache) {
-            let children = this.pageCache.filter(child => child.parentId == page.id);
-            page.children = children.map(child => <Breadcrumb>{title: child.title,
-                url: child.url, parentName: child.parentName, updated: child.updated});
+
+        return breadcrumbs;
+    }
+
+    getPage(slug:string): Observable<Page> {
+        let url: string = `${apiEndpoint}${pagesApiUrl}/read/${slug}`;
+        let pages: Page[] = this.pageCache.filter(page => page.url == `${pageUrl}/${slug}`);
+        if (pages.length > 0)
+            this.currentPage$.next(pages[0]);
+        else
+            this.http.get(url)
+                .subscribe(
+                    (response: Response) => {
+                        let page: Page = <Page>response.json();
+                        page.url = `${pageUrl}/${page.slug}`;
+                        this.updateCache(page);
+                    },
+                    error => {
+                        this.messageService.addErrorMessage(
+                            messageSource,
+                            `${messageSource} error: From ${url}; Status Code ${error.status}; ${error.statusText}`);
+                        console.log(error);
+                    }
+                );
+        return this.currentPage$;
+    }
+
+    getPageBreadcrumbs(slug: string): ReplaySubject<any> {
+        let breadcrumbs: Breadcrumb[] = this.breadcrumbCache;
+        if (slug != undefined) {
+            let parent: Page = this.pageCache.filter(page => page.url == `${pageUrl}/${slug}`)[0];
+            breadcrumbs = this.breadcrumbCache.filter(breadcrumb => breadcrumb.parentName == parent.title);
         }
+        this.breadcrumbs$.next(breadcrumbs);
+        return this.breadcrumbs$;
+    }
+
+    getPages(): ReplaySubject<any> {
+        return this.pages$;
     }
 
     populateBreadcrumbCache(): void {
@@ -188,39 +162,52 @@ export class PageService {
         this.breadcrumbs$.next(breadcrumbs);
     }
 
-    updateCache(page: Page): void {
-        let pages = this.pageCache.filter(cachedPage => cachedPage.slug == page.slug);
-        if (pages.length > 0)
-            pages[0] = page;
-        else
-            this.pageCache.push(page);
-        this.currentPage$.next(page);
+    populatePageCache(): void {
+        for (let page of this.pageCache) {
+            page.url = `${pageUrl}/${page.slug}`;
+            if (page.parentId) {
+                let parent = this.pageCache.filter(parent => parent.id == page.parentId)[0];
+                page.parentName = parent.title;
+            }
+        }
+        for (let page of this.pageCache) {
+            let children = this.pageCache.filter(child => child.parentId == page.id);
+            page.children = children.map(child => <Breadcrumb>{title: child.title,
+                url: child.url, parentName: child.parentName, updated: child.updated});
+        }
     }
 
-    getDynamicPageBreadcrumbs(): Breadcrumb[] {
-        let breadcrumbs = [];
-        breadcrumbs.push(blogBreadcrumb);
-        breadcrumbs.push(blogArchiveBreadcrumb);
-        breadcrumbs.push(dashboardBreadcrumb);
-        breadcrumbs.push(feedreaderBreadcrumb);
-        breadcrumbs.push(rootBreadcrumb);
-        breadcrumbs.push(timersBreadcrumb);
-        breadcrumbs.push(toolsBreadcrumb);
+    refresh(url: string): Observable<Page> {
+        this.pageCache = this.pageCache.filter(page => page.url != url);
+        return this.getPage(url.replace(`${pageUrl}/`, ''));
+    }
 
-        for (let toolBreadcrumb of toolBreadcrumbs) {
-            toolBreadcrumb.parentName = 'Tools';
-            breadcrumbs.push(toolBreadcrumb);
-        }
+    save(page: Page): void {
+        let url: string = `${apiEndpoint}${pagesApiUrl}/save`;
+        let headers: Headers = new Headers({'Content-Type': 'application/json'});
+        let options: RequestOptions = new RequestOptions({ headers: headers });
 
-        return breadcrumbs;
+        this.http.post(url, page, options)
+            .subscribe(
+                () => {
+                    this.updateCache(page);
+                    this.populateBreadcrumbCache();
+                },
+                error => {
+                    this.messageService.addErrorMessage(
+                        messageSource,
+                        `${messageSource} save Page error: Url ${url}; Status Code ${error.status}; ${error.statusText}`);
+                    console.log(error);
+                }
+            );
     }
 
     search(searchString: string): SearchResults {
         let searchResults: SearchResults = new SearchResults();
-        let searchStringLower = searchString.toLocaleLowerCase();
+        let searchStringLower: string = searchString.toLocaleLowerCase();
 
         for (let breadcrumb of this.breadcrumbCache) {
-            let matchPosition = breadcrumb.title.toLocaleLowerCase().indexOf(searchStringLower);
+            let matchPosition: number = breadcrumb.title.toLocaleLowerCase().indexOf(searchStringLower);
             if (matchPosition == -1)
                 continue;
             let searchResult: SearchResult = new SearchResult();
@@ -229,8 +216,8 @@ export class PageService {
         }
 
         for (let i = 0; i < this.pageCache.length; i++) {
-            let page = this.pageCache[i];
-            let content = page.content;
+            let page: Page = this.pageCache[i];
+            let content: string = page.content;
             let matchContext: string = findStringContext(searchStringLower, content);
 
             if (matchContext) {
@@ -241,7 +228,15 @@ export class PageService {
                 searchResults.contentMatches.push(searchResult);
             }
         }
-
         return searchResults;
+    }
+
+    updateCache(page: Page): void {
+        let pages: Page[] = this.pageCache.filter(cachedPage => cachedPage.slug == page.slug);
+        if (pages.length > 0)
+            pages[0] = page;
+        else
+            this.pageCache.push(page);
+        this.currentPage$.next(page);
     }
 }

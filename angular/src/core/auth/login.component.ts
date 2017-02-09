@@ -1,16 +1,13 @@
 import {Component, EventEmitter, Output} from '@angular/core';
-import {FormBuilder, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 import {AuthService} from "./auth.service";
-
 
 @Component({
     selector: 'ad-login',
     template: `
         <div>
-            <span id="close" class="ad-control" (click)="close()" title="Close">
-                &times;
-            </span>
+            <span id="close" class="ad-control" (click)="close()" title="Close">&times;</span>
             <h3>Login</h3>
             <form [formGroup]="loginForm" (ngSubmit)="doLogin()">
                 <p><input formControlName="username" type="username" placeholder="Username"></p>
@@ -36,23 +33,24 @@ import {AuthService} from "./auth.service";
     `]
 })
 export class LoginComponent {
-    @Output() onHideLogin = new EventEmitter<boolean>();
+    @Output() onHideLogin: EventEmitter<boolean> = new EventEmitter<boolean>();
     
-    public loginForm = this.formBuilder.group({
+    public loginForm: FormGroup = this.formBuilder.group({
         username: ["", Validators.required],
         password: ["", Validators.required]
     });
 
     constructor(
         private authService: AuthService,
-        public formBuilder: FormBuilder) {}
+        public formBuilder: FormBuilder
+    ) {}
 
-    doLogin() {
+    doLogin(): void {
         let formData: any = this.loginForm.value;
         this.authService.login(formData['username'], formData['password']);
     }
     
-    close() {
+    close(): void {
         this.onHideLogin.emit(false);
     }
 }

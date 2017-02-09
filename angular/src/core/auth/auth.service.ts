@@ -12,7 +12,6 @@ const messageSource: string = 'Auth';
 
 @Injectable()
 export class AuthService {
-
     loggedInStatus$: ReplaySubject<any> = new ReplaySubject(1);
 
     constructor(
@@ -27,8 +26,8 @@ export class AuthService {
         return this.loggedInStatus$;
     }
 
-    checkLoggedIn() {
-        let url = `${apiEndpoint}${coreUrl}/checkloggedin`;
+    checkLoggedIn(): void {
+        let url: string = `${apiEndpoint}${coreUrl}/checkloggedin`;
         this.http.get(url)
             .subscribe(
                 response => {
@@ -41,10 +40,10 @@ export class AuthService {
     }
 
     login(username: string, password: string): void {
-        let url = `${apiEndpoint}${coreUrl}/login`;
+        let url: string = `${apiEndpoint}${coreUrl}/login`;
         let headers: Headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded'});
         let options: RequestOptions = new RequestOptions({headers: headers});
-        let credentials = 'username=' + username + '&password=' + encodeURIComponent(password);
+        let credentials: string = 'username=' + username + '&password=' + encodeURIComponent(password);
 
         this.http.post(url, credentials, options)
             .subscribe(
@@ -59,7 +58,7 @@ export class AuthService {
     }
 
     logout(): void {
-        let url = `${apiEndpoint}${coreUrl}/logout`;
+        let url: string = `${apiEndpoint}${coreUrl}/logout`;
         let headers: Headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded'});
         let options: RequestOptions = new RequestOptions({headers: headers});
 

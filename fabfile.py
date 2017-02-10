@@ -147,12 +147,13 @@ def deploy():
         local('scp dist/{bundle} web:{site_root}/site_assets/{bundle}'.format(
             bundle=BUNDLE_NAME,
             site_root=LIVE_SITE_ROOT))
-        local('scp dist/{bundle} web:{site_root}/site_assets/{bundle}'.format(
-            bundle=VENDOR_BUNDLE_NAME,
-            site_root=LIVE_SITE_ROOT))
         local('scp src/{styles} web:{site_root}/site_assets/{styles}'.format(
             styles=STYLES_NAME,
             site_root=LIVE_SITE_ROOT))
+        if confirm('Copy vendor bundle to live system?'):
+            local('scp dist/{bundle} web:{site_root}/site_assets/{bundle}'.format(
+                bundle=VENDOR_BUNDLE_NAME,
+                site_root=LIVE_SITE_ROOT))
 
     with cd(LIVE_SITE_ROOT):
         run('~/.virtualenvs/ahernp/bin/pip install -r ../requirements/production.txt')

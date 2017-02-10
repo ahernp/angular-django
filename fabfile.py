@@ -16,6 +16,7 @@ ANGULAR_ROOT = join(SITE_ROOT, 'angular')
 PROJECT_NAME = 'ad'
 DATABASE_NAME = 'dmcm'
 BUNDLE_NAME = 'ad.bundle.js'
+VENDOR_BUNDLE_NAME = 'vendor.bundle.js'
 STYLES_NAME = 'styles.css'
 
 env.hosts = ['web']
@@ -59,6 +60,7 @@ def setup(*args, **kwargs):
                 local('rm -rf typings')
             with lcd(join(DJANGO_ROOT, 'site_assets')):
                 local('rm %s' % BUNDLE_NAME)
+                local('rm %s' % VENDOR_BUNDLE_NAME)
                 local('rm %s' % STYLES_NAME)
 
     with lcd(DJANGO_ROOT):
@@ -77,6 +79,7 @@ def setup(*args, **kwargs):
     with settings(warn_only=True):
         with lcd(join(DJANGO_ROOT, 'site_assets')):
             local('ln -s ../../angular/dist/{0} {0}'.format(BUNDLE_NAME))
+            local('ln -s ../../angular/dist/{0} {0}'.format(VENDOR_BUNDLE_NAME))
             local('ln -s ../../angular/src/{0} {0}'.format(STYLES_NAME))
 
     # Link to media
@@ -143,6 +146,9 @@ def deploy():
     with lcd(ANGULAR_ROOT):
         local('scp dist/{bundle} web:{site_root}/site_assets/{bundle}'.format(
             bundle=BUNDLE_NAME,
+            site_root=LIVE_SITE_ROOT))
+        local('scp dist/{bundle} web:{site_root}/site_assets/{bundle}'.format(
+            bundle=VENDOR_BUNDLE_NAME,
             site_root=LIVE_SITE_ROOT))
         local('scp src/{styles} web:{site_root}/site_assets/{styles}'.format(
             styles=STYLES_NAME,

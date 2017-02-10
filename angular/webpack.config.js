@@ -1,10 +1,13 @@
 var webpack = require('webpack');
 
 module.exports = {
-    entry: './src/main.ts',
+    entry: {
+        'ad': './src/main.ts',
+        'vendor': './src/vendor.ts',
+    },
     output: {
         path: './dist',
-        filename: 'ad.bundle.js'
+        filename: '[name].bundle.js'
     },
     module: {
         loaders: [
@@ -13,5 +16,8 @@ module.exports = {
     },
     resolve: {
         extensions: ['', '.js', '.ts']
-    }
+    },
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin({name: 'vendor'})
+    ]
 };

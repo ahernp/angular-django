@@ -7,7 +7,7 @@ import {BreadcrumbService} from "../core/breadcrumbs/breadcrumb.service";
 
 import {Footer} from "../core/footer/footer";
 
-import {rootTitle, adminBreadcrumb} from "../app.settings";
+import {rootTitle} from "../app.settings";
 
 const toolsTitle: string = 'Tools';
 const toolsUrl: string = '/tools';
@@ -73,7 +73,7 @@ export class ToolsComponent implements OnInit {
     }
 
     populateFooter(): void {
-        this.footer = <Footer>{breadcrumbs: [adminBreadcrumb]};
+        this.footer = new Footer();
     }
 
     populateHeader(title:string): void {

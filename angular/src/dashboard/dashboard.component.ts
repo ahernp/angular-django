@@ -13,7 +13,7 @@ import {Footer} from "../core/footer/footer";
 
 import {PageService} from "../pages/page.service";
 
-import {adminBreadcrumb, dashboardBreadcrumb, dashboardTitle} from "../app.settings";
+import {dashboardBreadcrumb, dashboardTitle} from "../app.settings";
 
 @Component({
     selector: 'ad-dashboard',
@@ -89,7 +89,7 @@ export class DashboardComponent implements OnInit {
     }
 
     populateFooter(): void  {
-        this.footer = <Footer>{breadcrumbs: [adminBreadcrumb], refreshFlag: true};
+        this.footer = <Footer>{refreshFlag: true};
     }
 
     getDashboard(): void  {

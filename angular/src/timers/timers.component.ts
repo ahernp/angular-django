@@ -6,7 +6,7 @@ import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 
 import {Footer} from "../core/footer/footer";
 
-import {adminBreadcrumb, rootTitle} from "../app.settings";
+import {rootTitle} from "../app.settings";
 
 const timersTitle: string = 'Timers';
 const timersUrl: string = '/timers';
@@ -44,6 +44,6 @@ export class TimersComponent implements OnInit {
     ngOnInit(): void {
         this.titleService.setTitle(timersTitle);
         this.breadcrumbs = this.breadcrumbService.addBreadcrumb(timersBreadcrumb);
-        this.footer = <Footer>{breadcrumbs: [adminBreadcrumb]};
+        this.footer = new Footer();
     }
 }

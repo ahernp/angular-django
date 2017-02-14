@@ -1,7 +1,7 @@
 angular-django
 ==============
 
-Angular 2 frontend with Django backend implemention of ahernp.com
+Angular 2 frontend with Django backend implemention of [ahernp.com](https://ahernp.com).
 
 ## Setup Development Environment
 

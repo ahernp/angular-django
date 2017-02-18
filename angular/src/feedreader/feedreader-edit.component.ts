@@ -17,6 +17,7 @@ const columnHeadings: string[] = ['Group', 'Feed', 'Site'];
     selector: 'ad-feedreader-edit',
     template: `
         <div id="editor">
+            <span (click)="done()" id="close" class="ad-control">&times;</span>
             <h2>Edit Feeds and Groups</h2>
             <p>
                 Add Feed:
@@ -122,6 +123,13 @@ const columnHeadings: string[] = ['Group', 'Feed', 'Site'];
             background-color: white;
             max-height: 50vh;
             overflow: auto;
+        }
+        #close {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 0 25px 25px 25px;
+            font-size: 35px;
         }
     `]
 })

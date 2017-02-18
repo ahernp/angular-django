@@ -13,6 +13,7 @@ import {toDateTimeString} from '../utilities';
     selector: 'ad-page-edit',
     template: `
         <div id="editor">
+            <span (click)="cancel()" id="close" class="ad-control">&times;</span>
             <h2>
                 <span *ngIf="page.id">Edit</span> 
                 <span *ngIf="!page.id">Add</span> 
@@ -94,6 +95,13 @@ import {toDateTimeString} from '../utilities';
             background: white;
             border: solid 1px black;
             padding: 5px;
+        }
+        #close {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 0 25px 25px 25px;
+            font-size: 35px;
         }
     `]
 })

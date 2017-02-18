@@ -12,14 +12,13 @@ import {Gallery} from "./gallery";
         <p>
         <div *ngIf="showLightboxFlag" id="lightbox">
             <span (click)="closeLightbox()" class="lightbox-control"
-                style="top: 10px; right: 25px; font-size: 35px; ">&times;</span>
+                style="top: 0; right: 0; padding-top: 0; font-size: 35px;">&times;</span>
             <span (click)="previousImage()" class="lightbox-control lightbox-previous-next"
                 style="border-radius: 0 3px 3px 0;">&#10094;</span>
             <span (click)="nextImage()" class="lightbox-control lightbox-previous-next"
                 style="right: 0; border-radius: 3px 0 0 3px;">&#10095;</span>
-            <img [src]="gallery.images[currentIndex].imageUrl"
-                style="display: block; margin-left: auto; margin-right: auto; max-height:90%; max-width:90%">
-            <p style="text-align: center; color: white;">
+            <img [src]="gallery.images[currentIndex].imageUrl" class="lightbox-image">
+            <p style="text-align: center;">
                 {{gallery.images[currentIndex].title}}
                 ({{currentIndex + 1}} of {{gallery.images.length}})
             </p>
@@ -45,14 +44,22 @@ import {Gallery} from "./gallery";
             cursor: pointer;
             color: #046;
             font-weight: bold;
+            padding: 25px;
         }
         .lightbox-previous-next {
             top: 50%;
             width: auto;
-            padding: 16px;
             margin-top: -50px;
             font-size: 20px;
             transition: 0.6s ease;
+        }
+        .lightbox-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-height:90%;
+            max-width:90%;
+            border: solid #ccc 1px;
         }
     `],
     providers: []

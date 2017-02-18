@@ -65,6 +65,13 @@ button {
     cursor: pointer;
 }
 
+.ad-close {
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    padding: 5px;
+}
+
 #header {
     display: block;
     background-color: #fff;

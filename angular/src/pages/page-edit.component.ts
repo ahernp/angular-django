@@ -31,7 +31,7 @@ import {toDateTimeString} from '../utilities';
             <div style="clear:both"></div>
 
             <div id="advanced" *ngIf="showAdvanced">
-                <span id="close" class="ad-control" (click)="toggleShowAdvanced()" title="Close">&times;</span>
+                <span class="ad-control ad-close" (click)="toggleShowAdvanced()" title="Close">&times;</span>
                 <h3>Advanced</h3>
                 <p>Title: <input [(ngModel)]="page.title" (keyup)="titleChange()"></p>
                 <p>Slug: <input [(ngModel)]="page.slug"></p>
@@ -93,12 +93,6 @@ import {toDateTimeString} from '../utilities';
             z-index: 12;
             background: white;
             border: solid 1px black;
-            padding: 5px;
-        }
-        span#close {
-            position: absolute;
-            top: -5px;
-            right: 0px;
             padding: 5px;
         }
     `]

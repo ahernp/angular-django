@@ -57,7 +57,7 @@ const columnHeadings: string[] = ['Group', 'Feed', 'Site'];
             </table>
 
             <div id="groups" *ngIf="showGroups">
-                <span id="close" class="ad-control" (click)="toggleShowGroups()" title="Close">&times;</span>
+                <span class="ad-control ad-close" (click)="toggleShowGroups()" title="Close">&times;</span>
                 <h3>Groups</h3>
                 <p>
                     Add Group:
@@ -111,12 +111,6 @@ const columnHeadings: string[] = ['Group', 'Feed', 'Site'];
             z-index: 12;
             background: white;
             border: solid 1px black;
-            padding: 5px;
-        }
-        span#close {
-            position: absolute;
-            top: -5px;
-            right: 0px;
             padding: 5px;
         }
         ad-message {

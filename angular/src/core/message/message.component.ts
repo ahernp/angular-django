@@ -7,7 +7,7 @@ import {MessageService} from "./message.service";
     selector: 'ad-message',
     template: `
         <div style="padding-left: 10px; padding-right: 10px;">
-            <span *ngIf="messages.length > 0" id="close" class="ad-control" (click)="clearMessages()" title="Clear messages">
+            <span *ngIf="messages.length > 0" class="ad-control ad-close" (click)="clearMessages()" title="Clear messages">
                 &times;
             </span>
             <p *ngFor="let message of messages" [class.highlight]="message.type == 'error'">{{message.text}}</p>
@@ -20,12 +20,6 @@ import {MessageService} from "./message.service";
             margin-bottom: 5px;
             padding-left: 5px;
             padding-right: 5px;
-        }
-        span#close {
-            position: absolute;
-            top: -5px;
-            right: 0px;
-            padding: 5px;
         }
     `]
 })

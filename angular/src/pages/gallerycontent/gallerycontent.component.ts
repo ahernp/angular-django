@@ -38,12 +38,12 @@ import {Gallery} from "./gallery";
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: black;
+            background-color: #fff;
         }
         .lightbox-control {
             position: absolute;
             cursor: pointer;
-            color: white;
+            color: #046;
             font-weight: bold;
         }
         .lightbox-previous-next {
@@ -53,7 +53,6 @@ import {Gallery} from "./gallery";
             margin-top: -50px;
             font-size: 20px;
             transition: 0.6s ease;
-            user-select: none;
         }
     `],
     providers: []

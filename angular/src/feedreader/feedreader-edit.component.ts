@@ -107,7 +107,7 @@ const columnHeadings: string[] = ['Group', 'Feed', 'Site'];
         }
         div#groups {
             position: absolute;
-            bottom: 85px;
+            bottom: 1px;
             z-index: 12;
             background: white;
             border: solid 1px black;

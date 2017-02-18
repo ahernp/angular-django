@@ -90,11 +90,12 @@ import {toDateTimeString} from '../utilities';
         }
         div#advanced {
             position: absolute;
-            bottom: 85px;
+            bottom: 86px;
             z-index: 12;
             background: white;
             border: solid 1px black;
             padding: 5px;
+            margin-left: 45px;
         }
         #close {
             position: fixed;

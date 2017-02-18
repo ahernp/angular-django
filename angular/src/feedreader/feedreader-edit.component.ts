@@ -151,7 +151,7 @@ export class FeedreaderEditComponent implements OnInit {
         private feedreaderService: FeedreaderService,
         private titleService: Title
     ) {
-        this.subscription = feedreaderService.feeds$.subscribe(
+        this.subscription = feedreaderService.getFeeds().subscribe(
             feeds => {
                 this.populateTable(feeds);
             }

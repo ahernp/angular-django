@@ -274,6 +274,7 @@ export class FeedreaderService {
             feeds[0] = feed;
         else
             this.feedCache.push(feed);
+        this.feeds$.next(this.feedCache);
     }
 
     updateGroupCache(group: Group): void {
@@ -282,5 +283,6 @@ export class FeedreaderService {
             groups[0] = group;
         else
             this.groupCache.push(group);
+        this.groups$.next(this.groupCache);
     }
 }

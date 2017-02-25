@@ -2,7 +2,6 @@ from datetime import datetime, timedelta
 import json
 
 from django.conf import settings
-from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied
 from django.http import HttpResponse
 
@@ -23,7 +22,6 @@ def get_recent_entries(request):
     return HttpResponse(data, content_type='application/json')
 
 
-@login_required
 def mark_all_read(request):
     if not request.user.is_authenticated:
         raise PermissionDenied
@@ -33,7 +31,6 @@ def mark_all_read(request):
     return HttpResponse('')
 
 
-@login_required
 def toggle_read(request):
     if not request.user.is_authenticated:
         raise PermissionDenied
@@ -59,8 +56,10 @@ def get_feeds(request):
     return HttpResponse(data, content_type='application/json')
 
 
-@login_required
 def delete_feed(request):
+    if not request.user.is_authenticated:
+        raise PermissionDenied
+
     feed_dict = json.loads(request.body)
 
     if 'id' in feed_dict and feed_dict['id']:
@@ -72,8 +71,10 @@ def delete_feed(request):
     return HttpResponse('')
 
 
-@login_required
 def save_feed(request):
+    if not request.user.is_authenticated:
+        raise PermissionDenied
+
     new_feed_dict = json.loads(request.body)
     if 'id' in new_feed_dict and new_feed_dict['id']:
         feed = Feed.objects.get(pk=new_feed_dict['id'])
@@ -98,8 +99,10 @@ def get_groups(request):
     return HttpResponse(data, content_type='application/json')
 
 
-@login_required
 def delete_group(request):
+    if not request.user.is_authenticated:
+        raise PermissionDenied
+
     group_dict = json.loads(request.body)
 
     if 'id' in group_dict and group_dict['id']:
@@ -111,8 +114,10 @@ def delete_group(request):
     return HttpResponse('')
 
 
-@login_required
 def save_group(request):
+    if not request.user.is_authenticated:
+        raise PermissionDenied
+
     new_group_dict = json.loads(request.body)
     if 'id' in new_group_dict and new_group_dict['id']:
         group = Group.objects.get(pk=new_group_dict['id'])

@@ -32,10 +32,10 @@
         "title": "ahernp.com",
         "slug": "ahernp-com",
         "parent": 3,
-        "updated": "2016-12-18T08:36:29.576Z",
+        "updated": "2017-02-25T19:06:31.198Z",
         "published": null,
         "content_type": "homepage",
-        "content": "## External\r\n\r\nFavourite:\r\n[Dictionary](http://dictionary.reference.com \"Dictionary, Thesaurus, etc.\")\r\n[Isabelle](http://isabellebidou.com \"Isabelle Bidou\")\r\n[StartPage](https://startpage.com/uk/? \"Google Search Results, but with privacy\")\r\n\r\nApps:\r\n[Calibre](http://calibre-ebook.com/ \"Ebook Manager\")\r\n[Geany](http://www.geany.org \"Text editor\")\r\n[Inkscape](http://inkscape.org/ \"SVG editor\")\r\n[LastPass](https://lastpass.com/ \"Password Manager\")\r\n\r\nBooks:\r\n[ABE](http://www.abebooks.co.uk/ \"Advanced Book Exchange\")\r\n[Amazon](http://www.amazon.co.uk/ \"Amazon in the UK\")\r\n([read](http://read.amazon.com \"Cloud Reader - Kindle Books\"))\r\n[Baen](http://www.baen.com/ \"Baen book publisher\")\r\n[O'Reilly](http://oreilly.com/ebooks/ \"IT Books\")\r\n[PG](http://www.gutenberg.org/ \"Project Gutenberg\")\r\n\r\nCartoons:\r\n[Dilbert](http://www.dilbert.com \"Today's Dilbert comic\")\r\n[Doonesbury](http://www.doonesbury.com \"Today's Doonesbury comic\")\r\n[Garfield](http://www.garfield.com/comic \"Today's Garfield comic\")\r\n[xkcd](http://xkcd.com/ \"IT Comic\")\r\n\r\nGames:\r\n[BOC](http://www.orienteering.ie/boc \"Bishopstown Orienteering Club\")\r\n[GG](http://www.gamersgate.co.uk \"GamersGate\")\r\n[GOG](http://www.gog.com/ \"Good Old Games\")\r\n[Humble](https://www.humblebundle.com \"Humble Indie Bundles\")\r\n[Steam](http://store.steampowered.com \"Steam Shop\")\r\n\r\nMedia:\r\n[BBC](http://www.bbc.co.uk/weather/2643743?day=0 \"BBC Weather\")\r\n[iPlayer](http://www.bbc.co.uk/iplayer/favourites)\r\n[RT](http://www.radiotimes.com/radio/radio-listings \"Radio Times\")\r\n[Revolutions](http://www.revolutionspodcast.com/ \"by Mike Duncan\")\r\n[YouTube](https://www.youtube.com/feed/subscriptions)\r\n\r\nMisc:\r\n[AE](http://academicearth.org \"Academic Earth lectures\")\r\n[gov.uk](https://www.gov.uk/bank-holidays \"UK Bank Holidays\")\r\n[Map](http://www.openstreetmap.org/)\r\n[MPS](http://www.mpsonline.org.uk \"Mail and Telephone preference service\")\r\n[Radar](http://www.metoffice.gov.uk/public/weather/observation/rainfall-radar#?map=Rainfall&fcTime=1465248600&zoom=9&lon=-0.43&lat=51.34 \"London rainfall radar\")\r\n[TfL](http://www.tfl.gov.uk/tube-dlr-overground/status/ \"London Underground Status\")\r\n[Walks](http://www.walks.com/ \"Guided walks in London\")\r\n\r\n\r\nShopping:\r\n[Allwrite](http://www.allwrite.nl/ \"Pens\")\r\n[BM](http://www.britishmuseum.org/ \"The British Museum\")\r\n[M&S](http://www.marksandspencer.com \"Marks and Spencer\")\r\n[Senz](http://www.senzumbrellas.com/ \"Umbrellas\")\r\n\r\nSocial:\r\n[Contacts](https://www.google.com/contacts \"Useful section Google don't provide a link to\")\r\n[Facebook](https://www.facebook.com/ahernp2 \"My Profile on Facebook\")\r\n[LinkedIn](https://www.linkedin.com/in/ahernp \"My Profile on LinkedIn\")\r\n[Twitter](https://twitter.com/ahernp \"My Profile on Twitter\")\r\n\r\nThis Site:\r\n[Angular](https://angular.io/docs/ts/latest/ \"Angular 2 with Typescript\")\r\n[Django](http://www.djangoproject.com/ \"Web development framework\")\r\n[GitHub](https://github.com/ahernp/angular-django)\r\n\r\nWeb:\r\n[CSS](http://www.cookwood.com/ \"HTML & Cascading Style Sheets\")\r\n[Gibson](http://grc.com/default.htm \"PC security checks\")\r\n[PyPI](https://pypi.python.org/pypi \"Python Package Index\")\r\n[W3Schools](http://w3schools.com/ \"Web standards\")"
+        "content": "## External\n\nFavourite:\n[Dictionary](http://dictionary.reference.com \"Dictionary, Thesaurus, etc.\")\n[Isabelle](http://isabellebidou.com \"Isabelle Bidou\")\n[StartPage](https://startpage.com/uk/? \"Google Search Results, but with privacy\")\n\nApps:\n[Calibre](http://calibre-ebook.com/ \"Ebook Manager\")\n[Geany](http://www.geany.org \"Text editor\")\n[Inkscape](http://inkscape.org/ \"SVG editor\")\n[LastPass](https://lastpass.com/ \"Password Manager\")\n\nBooks:\n[ABE](http://www.abebooks.co.uk/ \"Advanced Book Exchange\")\n[Amazon](http://www.amazon.co.uk/ \"Amazon in the UK\")\n([read](http://read.amazon.com \"Cloud Reader - Kindle Books\"))\n[Baen](http://www.baen.com/ \"Baen book publisher\")\n[O'Reilly](http://oreilly.com/ebooks/ \"IT Books\")\n[PG](http://www.gutenberg.org/ \"Project Gutenberg\")\n\nCartoons:\n[Dilbert](http://www.dilbert.com \"Today's Dilbert comic\")\n[Doonesbury](http://www.doonesbury.com \"Today's Doonesbury comic\")\n[Garfield](http://www.garfield.com/comic \"Today's Garfield comic\")\n[xkcd](http://xkcd.com/ \"IT Comic\")\n\nGames:\n[BOC](http://www.orienteering.ie/boc \"Bishopstown Orienteering Club\")\n[GG](http://www.gamersgate.co.uk \"GamersGate\")\n[GOG](http://www.gog.com/ \"Good Old Games\")\n[Humble](https://www.humblebundle.com \"Humble Indie Bundles\")\n[Steam](http://store.steampowered.com \"Steam Shop\")\n\nMedia:\n[BBC](http://www.bbc.co.uk/weather/2643743?day=0 \"BBC Weather\")\n[iPlayer](http://www.bbc.co.uk/iplayer/favourites)\n[RT](http://www.radiotimes.com/radio/radio-listings \"Radio Times\")\n[Revolutions](http://www.revolutionspodcast.com/ \"by Mike Duncan\")\n[YouTube](https://www.youtube.com/feed/subscriptions)\n\nMisc:\n[AE](http://academicearth.org \"Academic Earth lectures\")\n[gov.uk](https://www.gov.uk/bank-holidays \"UK Bank Holidays\")\n[Map](http://www.openstreetmap.org/)\n[MPS](http://www.mpsonline.org.uk \"Mail and Telephone preference service\")\n[Radar](http://www.metoffice.gov.uk/public/weather/observation/rainfall-radar#?map=Rainfall&fcTime=1465248600&zoom=9&lon=-0.43&lat=51.34 \"London rainfall radar\")\n[TfL](http://www.tfl.gov.uk/tube-dlr-overground/status/ \"London Underground Status\")\n[Walks](http://www.walks.com/ \"Guided walks in London\")\n\n\nShopping:\n[Allwrite](http://www.allwrite.nl/ \"Pens\")\n[BM](http://www.britishmuseum.org/ \"The British Museum\")\n[M&S](http://www.marksandspencer.com \"Marks and Spencer\")\n[Senz](http://www.senzumbrellas.com/ \"Umbrellas\")\n\nSocial:\n[Contacts](https://www.google.com/contacts \"Useful section Google don't provide a link to\")\n[Facebook](https://www.facebook.com/ahernp2 \"My Profile on Facebook\")\n[LinkedIn](https://www.linkedin.com/in/ahernp \"My Profile on LinkedIn\")\n[Twitter](https://twitter.com/ahernp \"My Profile on Twitter\")\n\nThis Site:\n[Angular](https://angular.io/docs/ts/latest/ \"Angular 2 with Typescript\")\n[Django](http://www.djangoproject.com/ \"Web development framework\")\n[GitHub](https://github.com/ahernp/angular-django)\n\nWeb:\n[CSS](http://www.cookwood.com/ \"HTML & Cascading Style Sheets\")\n[Gibson](http://grc.com/default.htm \"PC security checks\")\n[PyPI](https://pypi.python.org/pypi \"Python Package Index\")\n[W3Schools](http://w3schools.com/ \"Web standards\")"
     }
 },
 {
@@ -825,10 +825,10 @@
         "title": "MySQL",
         "slug": "mysql",
         "parent": 39,
-        "updated": "2013-01-09T10:06:20Z",
+        "updated": "2017-02-15T21:29:34.815Z",
         "published": null,
         "content_type": "markdown",
-        "content": "## SQL\r\n\r\n* Show all data in a table: `SELECT * FROM [table];`\r\n* Vertical format results: `SELECT * FROM [table]\\G`\r\n* `SELECT [col], count(*) FROM [table] GROUP BY 1 HAVING count(*) > 1;`\r\n* `UPDATE [table] SET [col] = 0 where [col] is null;`\r\n* `INSERT INTO [table] ([column1], [column2]) VALUES ([literal|now()]);`\r\n* `INSERT INTO [table1] ([col1], [col2]) SELECT a.[col1], a.[col2] FROM [table2] a;`\r\n* Redirect output to file: `TEE [file]`. Stop redirect `NOTEE`\r\n* Run SQL file: `SOURCE [file]`\r\n\r\n## Meta\r\n\r\n* Database sizes: `SELECT table_schema 'Data Base Name', SUM( data_length + index_length) / 1024 / 1024 'Data Base Size in MB' FROM information_schema.TABLES GROUP BY table_schema;`\r\n* Number of rows per table: `SELECT table_name, FORMAT(table_rows,0) FROM information_schema.TABLES WHERE table_schema = '[database_name]';`\r\n* Show structure of tables: `SELECT table_name, ordinal_position, column_name, data_type, character_maximum_length FROM columns where table_schema = '[database]' order by 1,2;`\r\n* Rename table: `ALTER TABLE [table] RENAME [new_table];`\r\n* Rename column: `ALTER TABLE [table] CHANGE COLUMN [col] [new_col] varchar(32);`\r\n* Make an existing column nullable: Columns are nullable by default so just modify the column, leaving the NOT NULL clause off. E.g. `ALTER TABLE [table] MODIFY [boolean_column] BOOL;`\r\n* Show user access: `SHOW GRANTS FOR '[user]'@'localhost';`\r\n* `CREATE USER '[user]'@'localhost' IDENTIFIED BY '[password]';`\r\n* `GRANT ALL ON [database].* to [user]@localhost;`\r\n* List all users: `SELECT * FROM mysql.user;`\r\n* Refresh cached permissions: `FLUSH PRIVILEGES;`\r\n* List all databases on the sql server: `SHOW DATABASES;`\r\n* Switch to a database: `USE [database];`\r\n* See all the tables in the database: `SHOW TABLES;`\r\n* See database's field formats: `DESCRIBE [table];`\r\n* Delete a database: `DROP DATABASE [database];`\r\n* Delete a table: `DROP TABLE [table];`\r\n\r\n## Command Line\r\n\r\n* To start server: `sudo /etc/init.d/mysql start`\r\n* To stop server: `sudo /etc/init.d/mysql stop`\r\n* To restart server: `sudo /etc/init.d/mysql restart`\r\n* To check the status of server: `sudo /etc/init.d/mysql status`\r\n* Login: `mysql -uroot -proot`\r\n* Create database: `mysql --user=root --execute=\"CREATE DATABASE if not exists [database] character set utf8\"`\r\n\r\n## mysqldump\r\n\r\n* Dump single table: `mysqldump -u[user] -p[password] [database] [table] > [file]`\r\n* Data only: `mysqldump --password=[password] --skip-triggers --compact --no-create-info [database] > [file]`\r\n* When dumping a live database use the `--lock-tables=false` option.\r\n\r\n## .my.cnf\r\n\r\nCreate a `.my.cnf` configuration file in your home directory. Containing:\r\n\r\n    [client]\r\n    user = <userid>\r\n    password = <password>\r\n    database = <db_name>\r\n    [mysql]\r\n    # Do not apply updates or deletes which lack where clauses\r\n    safe-updates\r\n    # Include database name in prompt\r\n    prompt=\\d>\\_\r\n"
+        "content": "## SQL\n\n* Show all data in a table: `SELECT * FROM [table];`\n* Vertical format results: `SELECT * FROM [table]\\G`\n* `SELECT [col], count(*) FROM [table] GROUP BY 1 HAVING count(*) > 1;`\n* `UPDATE [table] SET [col] = 0 where [col] is null;`\n* `INSERT INTO [table] ([column1], [column2]) VALUES ([literal|now()]);`\n* `INSERT INTO [table1] ([col1], [col2]) SELECT a.[col1], a.[col2] FROM [table2] a;`\n* Redirect output to file: `TEE [file]`. Stop redirect `NOTEE`\n* Run SQL file: `SOURCE [file]`\n\n## Meta\n\n* Database sizes: `SELECT table_schema 'Data Base Name', SUM(data_length + index_length) / 1024 / 1024 'Data Base Size in MB' FROM information_schema.TABLES GROUP BY table_schema;`\n* Number of rows per table: `SELECT table_name, FORMAT(table_rows,0) FROM information_schema.TABLES WHERE table_schema = '[database_name]';`\n* Show structure of tables: `SELECT table_name, ordinal_position, column_name, data_type, character_maximum_length FROM columns where table_schema = '[database]' order by 1,2;`\n* Rename table: `ALTER TABLE [table] RENAME [new_table];`\n* Rename column: `ALTER TABLE [table] CHANGE COLUMN [col] [new_col] varchar(32);`\n* Make an existing column nullable: Columns are nullable by default so just modify the column, leaving the NOT NULL clause off. E.g. `ALTER TABLE [table] MODIFY [boolean_column] BOOL;`\n* Show user access: `SHOW GRANTS FOR '[user]'@'localhost';`\n* `CREATE USER '[user]'@'localhost' IDENTIFIED BY '[password]';`\n* `GRANT ALL ON [database].* to [user]@localhost;`\n* List all users: `SELECT * FROM mysql.user;`\n* Refresh cached permissions: `FLUSH PRIVILEGES;`\n* List all databases on the sql server: `SHOW DATABASES;`\n* Switch to a database: `USE [database];`\n* See all the tables in the database: `SHOW TABLES;`\n* See database's field formats: `DESCRIBE [table];`\n* Delete a database: `DROP DATABASE [database];`\n* Delete a table: `DROP TABLE [table];`\n\n## Command Line\n\n* To start server: `sudo /etc/init.d/mysql start`\n* To stop server: `sudo /etc/init.d/mysql stop`\n* To restart server: `sudo /etc/init.d/mysql restart`\n* To check the status of server: `sudo /etc/init.d/mysql status`\n* Login: `mysql -uroot -proot`\n* Create database: `mysql --user=root --execute=\"CREATE DATABASE if not exists [database] character set utf8\"`\n\n## mysqldump\n\n* Dump single table: `mysqldump -u[user] -p[password] [database] [table] > [file]`\n* Data only: `mysqldump --password=[password] --skip-triggers --compact --no-create-info [database] > [file]`\n* When dumping a live database use the `--lock-tables=false` option.\n\n## .my.cnf\n\nCreate a `.my.cnf` configuration file in your home directory. Containing:\n\n    [client]\n    user = <userid>\n    password = <password>\n    database = <db_name>\n    [mysql]\n    # Do not apply updates or deletes which lack where clauses\n    safe-updates\n    # Include database name in prompt\n    prompt=\\d>\\_\n"
     }
 },
 {
@@ -1124,10 +1124,10 @@
         "title": "Portfolio",
         "slug": "portfolio",
         "parent": 146,
-        "updated": "2016-11-19T11:25:20.770Z",
+        "updated": "2017-02-15T15:50:51.471Z",
         "published": null,
         "content_type": "markdown",
-        "content": "Open source examples of my work.\r\n\r\n## Angular 2\r\n\r\n###Angular-Django\r\n\r\nAngular 2 and Django implementation of my personal website [ahernp.com](https://ahernp.com).\r\n\r\n[Source](https://github.com/ahernp/angular-django)\r\n\r\n## Django\r\n\r\n<div class=\"column-left\" markdown=\"1\">\r\n\r\n### Bugtracker\r\n\r\nSimple Django Admin-based ticketing system.\r\n\r\n[Documentation](http://ahernp.com/media/doc/django-bugtracker/)\r\n[Package](https://pypi.python.org/pypi/django-bugtracker)\r\n[Source](https://github.com/ahernp/django-bugtracker)\r\n\r\n### Django Markdown Content Manager\r\n\r\nDMCM is a simple Content Management System in which website pages are served on request by the Django web framework using content stored on a database as text in the [Markdown](/markdown/) format.\r\n\r\n[Documentation](http://ahernp.com/media/doc/django-dmcm/)\r\n[Package](https://pypi.python.org/pypi/django-dmcm)\r\n[Source](https://github.com/ahernp/DMCM)\r\n\r\n</div>\r\n<div class=\"column-right\" markdown=\"1\">\r\n\r\n### Feedreader\r\n\r\nRSS Aggregator.\r\n\r\n[Documentation](http://ahernp.com/media/doc/django-feedreader/)\r\n[Package](https://pypi.python.org/pypi/django-feedreader)\r\n[Source](https://github.com/ahernp/django-feedreader)\r\n\r\n### Monitoring\r\n\r\nLogging and Dashboard.\r\n\r\n[Documentation](http://ahernp.com/media/doc/django-monitoring/)\r\n[Package](https://pypi.python.org/pypi/django-monitoring-ahernp)\r\n[Source](https://github.com/ahernp/django-monitoring)\r\n\r\n</div>\r\n<div style=\"clear:both\"></div>"
+        "content": "Open source examples of my work.\n\n## Angular 2\n\n###Angular-Django\n\nAngular 2 and Django implementation of my personal website [ahernp.com](https://ahernp.com).\n\n[Source](https://github.com/ahernp/angular-django)\n\n## Django\n\n<div class=\"column-left\" markdown=\"1\">\n\n### Bugtracker\n\nSimple Django Admin-based ticketing system.\n\n[Documentation](http://ahernp.com/media/doc/django-bugtracker/)\n[Package](https://pypi.python.org/pypi/django-bugtracker)\n[Source](https://github.com/ahernp/django-bugtracker)\n\n### Django Markdown Content Manager\n\nDMCM is a simple Content Management System in which website pages are served on request by the Django web framework using content stored on a database as text in the Markdown format.\n\n[Documentation](http://ahernp.com/media/doc/django-dmcm/)\n[Package](https://pypi.python.org/pypi/django-dmcm)\n[Source](https://github.com/ahernp/DMCM)\n\n</div>\n<div class=\"column-right\" markdown=\"1\">\n\n### Feedreader\n\nRSS Aggregator.\n\n[Documentation](http://ahernp.com/media/doc/django-feedreader/)\n[Package](https://pypi.python.org/pypi/django-feedreader)\n[Source](https://github.com/ahernp/django-feedreader)\n\n### Monitoring\n\nLogging and Dashboard.\n\n[Documentation](http://ahernp.com/media/doc/django-monitoring/)\n[Package](https://pypi.python.org/pypi/django-monitoring-ahernp)\n[Source](https://github.com/ahernp/django-monitoring)\n\n</div>\n<div style=\"clear:both\"></div>"
     }
 },
 {
@@ -1215,10 +1215,10 @@
         "title": "London",
         "slug": "london",
         "parent": 19,
-        "updated": "2016-12-04T11:07:57.676Z",
+        "updated": "2017-02-22T18:59:32.039Z",
         "published": null,
         "content_type": "gallery",
-        "content": "{\r\n    \"heading\": \"London\",\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Tower Bridge 2006\",\r\n            \"imageUrl\": \"/media/img/towerBridge5.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/towerBridge5.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Gherkin\",\r\n            \"imageUrl\": \"/media/img/gherkin.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/gherkin.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"St Pauls\",\r\n            \"imageUrl\": \"/media/img/StPauls.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/StPauls.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Turbine Hall\",\r\n            \"imageUrl\": \"/media/img/TurbineHall.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/TurbineHall.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Prescott St\",\r\n            \"imageUrl\": \"/media/img/PrescottSt.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/PrescottSt.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Tower Bridge Open\",\r\n            \"imageUrl\": \"/media/img/rivertraffic.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rivertraffic.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Goodmans Fields being Demolished\",\r\n            \"imageUrl\": \"/media/img/goodmans_demolition.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/goodmans_demolition.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Palais Royal\",\r\n            \"imageUrl\": \"/media/img/Palace.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/Palace.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"London Bridge\",\r\n            \"imageUrl\": \"/media/img/LondonBridge.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/LondonBridge.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Foggy Day\",\r\n            \"imageUrl\": \"/media/img/foggy_tower_bridge.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/foggy_tower_bridge.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Mordor-on-Thames\",\r\n            \"imageUrl\": \"/media/img/MordorOnThames.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/MordorOnThames.jpg\"\r\n        },\r\n        {\r\n            \"title\": \"Rosy-fingered Dawn\",\r\n            \"imageUrl\": \"/media/img/rosyFingeredDawn.jpg\",\r\n            \"thumbnailUrl\": \"/media/img/thumb/rosyFingeredDawn.jpg\"\r\n        }\r\n    ]\r\n}"
+        "content": "{\n    \"heading\": \"London\",\n    \"images\": [\n        {\n            \"title\": \"Tower Bridge 2006\",\n            \"imageUrl\": \"/media/img/towerBridge5.jpg\",\n            \"thumbnailUrl\": \"/media/img/thumb/towerBridge5.jpg\"\n        },\n        {\n            \"title\": \"Gherkin\",\n            \"imageUrl\": \"/media/img/gherkin.jpg\",\n            \"thumbnailUrl\": \"/media/img/thumb/gherkin.jpg\"\n        },\n        {\n            \"title\": \"St Pauls\",\n            \"imageUrl\": \"/media/img/StPauls.jpg\",\n            \"thumbnailUrl\": \"/media/img/thumb/StPauls.jpg\"\n        },\n        {\n            \"title\": \"Turbine Hall\",\n            \"imageUrl\": \"/media/img/TurbineHall.jpg\",\n            \"thumbnailUrl\": \"/media/img/thumb/TurbineHall.jpg\"\n        },\n        {\n            \"title\": \"Prescott St\",\n            \"imageUrl\": \"/media/img/PrescottSt.jpg\",\n            \"thumbnailUrl\": \"/media/img/thumb/PrescottSt.jpg\"\n        },\n        {\n            \"title\": \"Tower Bridge Open\",\n            \"imageUrl\": \"/media/img/rivertraffic.jpg\",\n            \"thumbnailUrl\": \"/media/img/thumb/rivertraffic.jpg\"\n        },\n        {\n            \"title\": \"Goodmans Fields being Demolished\",\n            \"imageUrl\": \"/media/img/goodmans_demolition.jpg\",\n            \"thumbnailUrl\": \"/media/img/thumb/goodmans_demolition.jpg\"\n        },\n        {\n            \"title\": \"Palais Royal\",\n            \"imageUrl\": \"/media/img/Palace.jpg\",\n            \"thumbnailUrl\": \"/media/img/thumb/Palace.jpg\"\n        },\n        {\n            \"title\": \"London Bridge\",\n            \"imageUrl\": \"/media/img/LondonBridge.jpg\",\n            \"thumbnailUrl\": \"/media/img/thumb/LondonBridge.jpg\"\n        },\n        {\n            \"title\": \"Foggy Day\",\n            \"imageUrl\": \"/media/img/foggy_tower_bridge.jpg\",\n            \"thumbnailUrl\": \"/media/img/thumb/foggy_tower_bridge.jpg\"\n        },\n        {\n            \"title\": \"Mordor-on-Thames\",\n            \"imageUrl\": \"/media/img/MordorOnThames.jpg\",\n            \"thumbnailUrl\": \"/media/img/thumb/MordorOnThames.jpg\"\n        },\n        {\n            \"title\": \"Rosy-fingered Dawn\",\n            \"imageUrl\": \"/media/img/rosyFingeredDawn.jpg\",\n            \"thumbnailUrl\": \"/media/img/thumb/rosyFingeredDawn.jpg\"\n        },\n        {\n            \"title\": \"Pancakes for lunch\",\n            \"imageUrl\": \"/media/img/pancakes.jpg\",\n            \"thumbnailUrl\": \"/media/img/thumb/pancakes.jpg\"\n        }\n    ]\n}"
     }
 },
 {
@@ -1482,6 +1482,19 @@
     }
 },
 {
+    "model": "pages.page",
+    "pk": 163,
+    "fields": {
+        "title": "Angular 2",
+        "slug": "angular-2",
+        "parent": 1,
+        "updated": "2017-02-26T13:57:29.740Z",
+        "published": "2017-02-26",
+        "content_type": "markdown",
+        "content": "Over the past six months I have been learning to use\n[Angular 2](https://angular.io/)\nand reimplementing this website as a Single Page Application (SPA)\nwritten using that Javascript web framework.\n\nThe previous version of [ahernp.com](https://ahernp.com) was implemented using the [Django](https://www.djangoproject.com/) Python web framework. The application server is still implemented in Django.\n\nThis was mostly an exercise in writing a client-side Javascript application as doing that sort of work is a big part of my current job. Since 2010, I have mostly been coding using Python and Django.\n\nAlthough my site is very simple, rewriting it in Javascript is a more complex task than the coding examples which appear in the literature.\n\nAs well as applying some design principals of my own (e.g. everything on the site is text apart from actual images), I have tried to go with the grain of the Angular 2 framework.\n\nAlmost all of the site content is text stored using the\n[Markdown](http://daringfireball.net/projects/markdown/)\nsyntax.\n\nWhen the site is initially loaded, the code and current page content is fetched and rendered immediately. The content of the rest of the pages is downloaded in the background. So clicking on an internal link within the site should result in an immediate response without querying the application server.\n\nClicking on an external link leaves the site (and SPA).\n\nThe source code for this site is available on\n[Github](https://github.com/ahernp/angular-django)\n(as is the previous Django version of the site\n[here](https://github.com/ahernp/ahernp.com))."
+    }
+},
+{
     "model": "feedreader.group",
     "pk": 1,
     "fields": {
@@ -1525,7 +1538,7 @@
         "link": "http://bingethinkinghistory.blogspot.com/",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-02-08T10:17:04.572Z",
+        "last_polled_time": "2017-02-26T13:17:04.938Z",
         "group": 1
     }
 },
@@ -1551,7 +1564,7 @@
         "link": "http://ancientworldpodcast.blogspot.com/",
         "description": "From the first human civilizations to 500 BC in (around) thirty podcasts",
         "published_time": null,
-        "last_polled_time": "2017-02-08T10:17:21.913Z",
+        "last_polled_time": "2017-02-26T13:17:24.487Z",
         "group": 1
     }
 },
@@ -1563,8 +1576,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/analysis/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006r4vz",
         "description": "Programme examining the ideas and forces which shape public policy in Britain and abroad, presented by distinguished writers, journalists and academics",
-        "published_time": "2017-02-06T00:00:00Z",
-        "last_polled_time": "2017-02-06T21:17:02.835Z",
+        "published_time": "2017-02-20T00:00:00Z",
+        "last_polled_time": "2017-02-20T21:17:03.352Z",
         "group": 4
     }
 },
@@ -1576,8 +1589,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/worldservice/discovery/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/p002w557",
         "description": "Explorations in the world of science.",
-        "published_time": "2017-02-06T00:00:00Z",
-        "last_polled_time": "2017-02-06T20:17:08.151Z",
+        "published_time": "2017-02-20T00:00:00Z",
+        "last_polled_time": "2017-02-21T12:17:07.106Z",
         "group": 4
     }
 },
@@ -1602,8 +1615,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/fricomedy/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/p02pc9pj",
         "description": "Download the best new comedy from Radio 4, every Friday. Features The News Quiz, The Now Show, Dead Ringers and The Museum of Curiosity.",
-        "published_time": "2017-02-03T18:57:00Z",
-        "last_polled_time": "2017-02-03T20:17:15.765Z",
+        "published_time": "2017-02-24T18:56:00Z",
+        "last_polled_time": "2017-02-24T19:17:09.898Z",
         "group": 4
     }
 },
@@ -1628,8 +1641,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/iot/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qykl",
         "description": "Melvyn Bragg and guests discuss the history of ideas",
-        "published_time": "2017-02-02T00:00:00Z",
-        "last_polled_time": "2017-02-02T12:17:32.457Z",
+        "published_time": "2017-02-23T00:00:00Z",
+        "last_polled_time": "2017-02-23T12:17:13.675Z",
         "group": 4
     }
 },
@@ -1654,8 +1667,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/media/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b00dv9hq",
         "description": "Steve Hewlett presents a topical programme about the fast-changing media world",
-        "published_time": "2017-02-01T00:00:00Z",
-        "last_polled_time": "2017-02-01T18:17:52.488Z",
+        "published_time": "2017-02-22T00:00:00Z",
+        "last_polled_time": "2017-02-22T18:17:34.578Z",
         "group": 4
     }
 },
@@ -1667,8 +1680,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/profile/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qjz5",
         "description": "An insight into the character of an influential figure making news headlines",
-        "published_time": "2017-01-28T00:00:00Z",
-        "last_polled_time": "2017-01-28T20:17:17.313Z",
+        "published_time": "2017-02-25T00:00:00Z",
+        "last_polled_time": "2017-02-25T20:17:15.674Z",
         "group": 4
     }
 },
@@ -1680,8 +1693,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/bottomline/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006sz6t",
         "description": "Evan Davis hosts the business conversation show with people at the top giving insight into what matters",
-        "published_time": "2017-02-02T00:00:00Z",
-        "last_polled_time": "2017-02-02T21:17:36.138Z",
+        "published_time": "2017-02-23T00:00:00Z",
+        "last_polled_time": "2017-02-23T21:17:29.852Z",
         "group": 4
     }
 },
@@ -1693,8 +1706,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/film/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006r5jt",
         "description": "The latest releases, the hottest stars and the leading directors, plus news and insights from the film world",
-        "published_time": "2017-02-02T00:00:00Z",
-        "last_polled_time": "2017-02-02T19:17:34.822Z",
+        "published_time": "2017-02-23T00:00:00Z",
+        "last_polled_time": "2017-02-23T17:17:28.168Z",
         "group": 4
     }
 },
@@ -1706,8 +1719,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/wpr/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qjfq",
         "description": "Radio 4&#39;s weekly assessment of developments at Westminster",
-        "published_time": "2017-02-04T00:00:00Z",
-        "last_polled_time": "2017-02-04T12:17:56.034Z",
+        "published_time": "2017-02-25T00:00:00Z",
+        "last_polled_time": "2017-02-25T12:17:35.993Z",
         "group": 4
     }
 },
@@ -1719,8 +1732,8 @@
         "xml_url": "http://feedproxy.google.com/linuxtoday/linux",
         "link": "http://www.linuxtoday.com/",
         "description": "",
-        "published_time": "2017-02-08T10:14:38Z",
-        "last_polled_time": "2017-02-08T10:17:11.084Z",
+        "published_time": "2017-02-26T13:15:22Z",
+        "last_polled_time": "2017-02-26T13:17:13.901Z",
         "group": 5
     }
 },
@@ -1733,7 +1746,7 @@
         "link": "https://www.schneier.com/blog/",
         "description": "A blog covering security and security technology.",
         "published_time": null,
-        "last_polled_time": "2017-02-08T10:17:18.526Z",
+        "last_polled_time": "2017-02-26T13:17:20.625Z",
         "group": 5
     }
 },
@@ -1746,7 +1759,7 @@
         "link": "https://inkscapetutorials.org",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-02-08T10:17:09.809Z",
+        "last_polled_time": "2017-02-26T13:17:10.451Z",
         "group": 5
     }
 },
@@ -1771,8 +1784,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/pov/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qng8",
         "description": "A weekly reflection on a topical issue",
-        "published_time": "2017-02-03T00:00:00Z",
-        "last_polled_time": "2017-02-03T21:17:10.871Z",
+        "published_time": "2017-02-24T00:00:00Z",
+        "last_polled_time": "2017-02-24T21:17:04.386Z",
         "group": 4
     }
 },
@@ -1797,8 +1810,8 @@
         "xml_url": "http://revolutionspodcast.libsyn.com/rss/",
         "link": "http://www.revolutionspodcast.com",
         "description": "A weekly podcast series examining great political revolutions. Now:  The Haitian Revolution Next: Simon Bolivar and Gran Colombia. Visit us at revolutionspodcast.com",
-        "published_time": "2017-02-05T23:34:19Z",
-        "last_polled_time": "2017-02-06T00:17:22.968Z",
+        "published_time": "2017-02-13T04:11:39Z",
+        "last_polled_time": "2017-02-13T04:17:18.000Z",
         "group": 1
     }
 },
@@ -1811,7 +1824,7 @@
         "link": "https://www.djangoproject.com/weblog/",
         "description": "Latest news about Django, the Python Web framework.",
         "published_time": null,
-        "last_polled_time": "2017-02-08T10:17:25.472Z",
+        "last_polled_time": "2017-02-26T13:17:27.932Z",
         "group": 5
     }
 },
@@ -1849,8 +1862,8 @@
         "xml_url": "http://www.bbc.co.uk/blogs/markkermode/rss",
         "link": "http://www.bbc.co.uk/blogs/markkermode",
         "description": "Outspoken, opinionated and never lost for words, Mark is the UK's leading film critic.  This\u00a0twice-weekly video blog is the place where he airs his personal views on the things that most fire him up about cinema - and invites you to give your own opinions.",
-        "published_time": "2017-02-07T10:20:25Z",
-        "last_polled_time": "2017-02-07T11:17:12.056Z",
+        "published_time": "2017-02-24T15:35:31Z",
+        "last_polled_time": "2017-02-24T16:17:13.885Z",
         "group": 2
     }
 },
@@ -1863,7 +1876,7 @@
         "link": "http://www.anisopteragames.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-02-08T10:17:15.990Z",
+        "last_polled_time": "2017-02-26T13:17:18.475Z",
         "group": 2
     }
 },
@@ -1875,8 +1888,8 @@
         "xml_url": "http://thehistoryofbyzantium.libsyn.com/rss",
         "link": "http://www.thehistoryofbyzantium.com",
         "description": "A podcast telling the story of the Roman (Byzantine) Empire from 476 AD to 1453",
-        "published_time": "2017-02-03T18:26:18Z",
-        "last_polled_time": "2017-02-03T20:17:39.082Z",
+        "published_time": "2017-02-24T23:40:03Z",
+        "last_polled_time": "2017-02-25T00:18:32.585Z",
         "group": 1
     }
 },
@@ -1887,9 +1900,9 @@
         "title": "Slate Star Codex",
         "xml_url": "http://slatestarcodex.com/feed/",
         "link": "http://slatestarcodex.com",
-        "description": "Open threads at the Open Thread tab every Sunday and Wednesday",
+        "description": "The Schelling Point for being on the #slatestarcodex IRC channel (see sidebar) is Wednesdays at 10 PM EST",
         "published_time": null,
-        "last_polled_time": "2017-02-08T10:17:19.689Z",
+        "last_polled_time": "2017-02-26T13:17:22.037Z",
         "group": 2
     }
 },
@@ -1902,7 +1915,7 @@
         "link": "http://www.exurbe.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-02-08T10:17:08.284Z",
+        "last_polled_time": "2017-02-26T13:17:08.979Z",
         "group": 2
     }
 },
@@ -1915,7 +1928,7 @@
         "link": "http://b5audioguide.com",
         "description": "This is a book club without books, an episode-by-episode walkthrough of one of the most influential and important modern SF series. Each podcast begins with a spoiler-free discussion of the episode for new viewers, then we give listeners a jumping-off point and switch to a discussion of how the episode fits into the five-year history of the show.",
         "published_time": null,
-        "last_polled_time": "2017-02-08T10:17:24.205Z",
+        "last_polled_time": "2017-02-26T13:17:26.698Z",
         "group": 2
     }
 },
@@ -1928,7 +1941,7 @@
         "link": "https://www.theincomparable.com/theincomparable/",
         "description": "The Incomparable is a weekly dive into geeky media we love, including movies, books, TV, comics, and more, featuring a rotating panel of guests and hosted by Jason Snell.",
         "published_time": null,
-        "last_polled_time": "2017-02-08T10:17:28.840Z",
+        "last_polled_time": "2017-02-26T13:17:31.014Z",
         "group": 2
     }
 },
@@ -1941,7 +1954,7 @@
         "link": "https://arstechnica.com",
         "description": "Serving the Technologist for more than a decade. IT news, reviews, and analysis.",
         "published_time": null,
-        "last_polled_time": "2017-02-08T10:17:20.301Z",
+        "last_polled_time": "2017-02-26T13:17:23.208Z",
         "group": 5
     }
 },
@@ -1953,8 +1966,8 @@
         "xml_url": "http://www.bbc.co.uk/programmes/p02dbd4m/episodes/downloads.rss",
         "link": "http://www.bbc.co.uk/programmes/p02dbd4m",
         "description": "Owen Bennett Jones and guests take an in-depth look at a topic in the week&#39;s news",
-        "published_time": "2017-02-03T00:00:00Z",
-        "last_polled_time": "2017-02-03T20:17:22.566Z",
+        "published_time": "2017-02-24T00:00:00Z",
+        "last_polled_time": "2017-02-24T09:17:14.580Z",
         "group": 4
     }
 },
@@ -1966,8 +1979,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/moreorless/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/p02nrss1",
         "description": "Tim Harford and the More or Less team try to make sense of the statistics which surround us. From BBC Radio 4",
-        "published_time": "2017-02-03T20:00:00Z",
-        "last_polled_time": "2017-02-03T20:17:20.642Z",
+        "published_time": "2017-02-24T20:00:00Z",
+        "last_polled_time": "2017-02-24T20:17:13.939Z",
         "group": 4
     }
 },
@@ -1980,7 +1993,7 @@
         "link": "http://www.bbc.co.uk/news/",
         "description": "BBC News - UK Politics",
         "published_time": null,
-        "last_polled_time": "2017-02-08T10:17:04.158Z",
+        "last_polled_time": "2017-02-26T13:17:04.532Z",
         "group": 3
     }
 },
@@ -1993,7 +2006,7 @@
         "link": "https://www.theregister.co.uk/",
         "description": "Biting the hand that feeds IT \u2014 sci/tech news and views for the world",
         "published_time": null,
-        "last_polled_time": "2017-02-08T10:17:30.834Z",
+        "last_polled_time": "2017-02-26T13:17:33.016Z",
         "group": 5
     }
 },
@@ -2006,7 +2019,7 @@
         "link": "http://yieldthought.com/",
         "description": "Mark O\u2019Connor is a programmer, irregular writer and part-time technical fellow. He believes in dynamic typing, first-class functions, working in the cloud and the immortal essence of the human soul. He also likes tea.\n\n\n\n  var _gaq = _gaq || [];\n  _gaq.push(['_setAccount', 'UA-29608497-1']);\n  _gaq.push(['_trackPageview']);\n\n  (function() {\n    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;\n    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);\n  })();",
         "published_time": null,
-        "last_polled_time": "2017-02-08T10:17:32.130Z",
+        "last_polled_time": "2017-02-26T13:17:34.545Z",
         "group": 5
     }
 },
@@ -2019,21 +2032,8 @@
         "link": "http://blog.dilbert.com/",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-02-08T10:17:18.767Z",
+        "last_polled_time": "2017-02-26T13:17:20.908Z",
         "group": 2
-    }
-},
-{
-    "model": "feedreader.feed",
-    "pk": 194,
-    "fields": {
-        "title": "ahernp.com blog",
-        "xml_url": "http://ahernp.com/blog/feed",
-        "link": "http://ahernp.com/blog/",
-        "description": "Recent Blog Entries.",
-        "published_time": null,
-        "last_polled_time": "2017-02-08T10:17:02.513Z",
-        "group": null
     }
 },
 {
@@ -2045,21 +2045,8 @@
         "link": "http://uncannymagazine.com",
         "description": "A Magazine of Science Fiction and Fantasy",
         "published_time": null,
-        "last_polled_time": "2017-02-08T10:17:31.309Z",
+        "last_polled_time": "2017-02-26T13:17:33.710Z",
         "group": 2
-    }
-},
-{
-    "model": "feedreader.feed",
-    "pk": 199,
-    "fields": {
-        "title": "The History of Denmark",
-        "xml_url": "http://feeds.feedburner.com/thehistoryofdenmarkpodcast",
-        "link": "https://thehistoryofdenmark.wordpress.com",
-        "description": "A podcast about the history of the oldest kingdom in Europe!",
-        "published_time": null,
-        "last_polled_time": "2017-02-08T10:17:27.731Z",
-        "group": 1
     }
 },
 {
@@ -2070,9 +2057,35 @@
         "xml_url": "http://www.bbc.co.uk/programmes/b00snr0w/episodes/downloads.rss",
         "link": "http://www.bbc.co.uk/programmes/b00snr0w",
         "description": "Witty, irreverent look at the world through scientists&#39; eyes. With Brian Cox and Robin Ince",
-        "published_time": "2017-02-13T00:00:00Z",
-        "last_polled_time": "2017-02-06T11:17:30.381Z",
+        "published_time": "2017-02-20T00:00:00Z",
+        "last_polled_time": "2017-02-13T17:17:28.940Z",
         "group": 4
+    }
+},
+{
+    "model": "feedreader.feed",
+    "pk": 202,
+    "fields": {
+        "title": "ahernp.com blog",
+        "xml_url": "http://ahernp.com/blog/feed",
+        "link": "http://ahernp.com/blog/",
+        "description": "Recent Blog Entries.",
+        "published_time": null,
+        "last_polled_time": "2017-02-26T13:17:02.522Z",
+        "group": null
+    }
+},
+{
+    "model": "feedreader.feed",
+    "pk": 203,
+    "fields": {
+        "title": "Sophomore Lit",
+        "xml_url": "http://feeds.theincomparable.com/sophomorelit",
+        "link": "https://www.theincomparable.com/sophomorelit/",
+        "description": "A podcast about your 10th grade reading list, hosted by John McCoy.",
+        "published_time": null,
+        "last_polled_time": "2017-02-26T13:17:22.238Z",
+        "group": 2
     }
 }
 ]

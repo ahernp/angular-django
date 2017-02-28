@@ -18,7 +18,7 @@ export class AuthService {
         private http: Http,
         private messageService: MessageService
     ) {
-        this.loggedInStatus$.next(false);
+        this.setNotLoggedIn();
         this.checkLoggedIn();
     }
 
@@ -72,5 +72,9 @@ export class AuthService {
                     console.log(error);
                 }
             );
+    }
+
+    setNotLoggedIn(): void {
+        this.loggedInStatus$.next(false);
     }
 }

@@ -4,6 +4,8 @@ import {Http, Headers, RequestOptions} from '@angular/http';
 import {Observable} from 'rxjs';
 import {ReplaySubject} from "rxjs/ReplaySubject";
 
+import {AuthService} from "../core/auth/auth.service";
+
 import {Breadcrumb} from "../core/breadcrumbs/breadcrumb";
 import {SearchResult, SearchResults} from "../core/search/search-results";
 
@@ -34,6 +36,7 @@ export class FeedreaderService {
     recentEntries$: ReplaySubject<any> = new ReplaySubject(1);
 
     constructor(
+        private auth: AuthService,
         private http: Http,
         private messageService: MessageService,
         private schedulerService: SchedulerService
@@ -136,6 +139,8 @@ export class FeedreaderService {
                         messageSource,
                         `${messageSource} error: From ${url}; Status Code ${error.status}; ${error.statusText}`);
                     console.log(error);
+                    if (error.status == 403)
+                        this.auth.setNotLoggedIn();
                 }
             );
     }
@@ -264,6 +269,8 @@ export class FeedreaderService {
                         messageSource,
                         `${messageSource} error: From ${url}; Status Code ${error.status}; ${error.statusText}`);
                     console.log(error);
+                    if (error.status == 403)
+                        this.auth.setNotLoggedIn();
                 }
             );
     }

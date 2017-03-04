@@ -84,10 +84,10 @@
         "title": "Libre Office",
         "slug": "libre-office",
         "parent": 5,
-        "updated": "2012-03-17T18:13:28Z",
+        "updated": "2017-03-04T08:53:22.685Z",
         "published": null,
         "content_type": "markdown",
-        "content": "## Product\r\n\r\nLibre Office is an office suite available from [libreoffice.org](http://libreoffice.org). Versions can be downloaded for MS Windows as well as Linux.\r\n\r\n## Calc\r\n\r\n* `Ctrl+D`: Copy contents and formatting from topmost cells to rest of selected range in Calc.\r\n* Filter Items in a List:\r\n\r\n    1. Populate column `F` with `0` or `1` depending on if the value in on that row of column `C` is listed in column `H`.\r\n    2. Define column `H` as a range called List (Data > Define Range).\r\n    3. Place the following in `F2` and use it to populate the rest of column `F`: `=COUNTIF(List,C2)`\r\n    4. Sort using column `F` to group all of the matching data together.\r\n\r\n## Writer\r\n\r\n### Red Triangle Bullet Points\r\n\r\n1. Create New Style:\r\n    1. Format > Styles and Formatting > Character Styles\r\n    1. Right-click Default > New\r\n    1. Organizer tab > Give new style a name\r\n    1. Font Effects tab > Choose font color\r\n    1. OK\r\n1. Update List 1 Style:\r\n    1. Format > Styles and Formatting > List Styles 1.\r\n    1. Right-click List 1 > Modify\r\n    1. Options tab:\r\n        1. Character Style > Choose new style created above\r\n        1. Character > Choose triangle from Webdings font\r\n    1. Position tab > Numbering followed by > choose Nothing to reduce indent\r\n    1. OK\r\n1. Use new List 1 Style:\r\n    1. Apply Style > More > List Styles > Choose List 1\r\n    1. Amended List 1 style should be used by all new lists"
+        "content": "## Product\n\nLibre Office is an office suite available from [libreoffice.org](http://libreoffice.org). Versions can be downloaded for MS Windows as well as Linux.\n\nFiles already opened for editing are marked with hidden files in the same directory with names beginning `~lock`. Find them with command `locate \"~lock\"`.\n\n## Calc\n\n* `Ctrl+D`: Copy contents and formatting from topmost cells to rest of selected range in Calc.\n* Filter Items in a List:\n\n    1. Populate column `F` with `0` or `1` depending on if the value in on that row of column `C` is listed in column `H`.\n    2. Define column `H` as a range called List (Data > Define Range).\n    3. Place the following in `F2` and use it to populate the rest of column `F`: `=COUNTIF(List,C2)`\n    4. Sort using column `F` to group all of the matching data together.\n\n## Writer\n\n### Red Triangle Bullet Points\n\n1. Create New Style:\n    1. Format > Styles and Formatting > Character Styles\n    1. Right-click Default > New\n    1. Organizer tab > Give new style a name\n    1. Font Effects tab > Choose font color\n    1. OK\n1. Update List 1 Style:\n    1. Format > Styles and Formatting > List Styles 1.\n    1. Right-click List 1 > Modify\n    1. Options tab:\n        1. Character Style > Choose new style created above\n        1. Character > Choose triangle from Webdings font\n    1. Position tab > Numbering followed by > choose Nothing to reduce indent\n    1. OK\n1. Use new List 1 Style:\n    1. Apply Style > More > List Styles > Choose List 1\n    1. Amended List 1 style should be used by all new lists"
     }
 },
 {
@@ -162,10 +162,10 @@
         "title": "Windows",
         "slug": "windows",
         "parent": 5,
-        "updated": "2012-04-12T19:48:19Z",
+        "updated": "2017-03-04T09:00:27.880Z",
         "published": null,
         "content_type": "markdown",
-        "content": "## General Tips\r\n\r\nSelect multiple items in the Task Bar by holding down the Control Key and clicking on them.\r\n\r\n### Shortcut Keys\r\n\r\n*  `Alt+D` Go to Browser Address field\r\n*  `Alt+F4` Close application\r\n*  `Alt+Tab` cycle through open applications\r\n*  `PrintScreen` Place image of screen in clipboard\r\n*  `Alt+PrintScreen` Place image of active window in clipboard\r\n*  `Windows Key+D` Minimize all windows (toggle)\r\n*  `Windows Key+E` Open Windows Explorer\r\n*  `Windows Key+F` Find files on your computer\r\n*  `Windows Key+L` Lock your computer\r\n*  `Windows Key+R` Opens the Run Program Dialog\r\n\r\n## Recycle Bin\r\n\r\nStop having to \"confirm delete\" when merely moving data to the Recycle Bin:\r\n\r\n1.  Right-click the Recycle Bin icon\r\n2.  Select \"Properties\"\r\n3.  Un-tick \"Display delete confirmation dialog\"\r\n4.  Click \"OK.\"\r\n\r\n## Single-Click\r\n\r\nEnable Single-click to open items:\r\n\r\n1.  Key Windows Key+E to open Windows Explorer\r\n2.  Choose Folder Options from the Tools pull-down menu\r\n3.  In the General tab choose \"Single-click to open an item\"\r\n\r\n## Microsoft Office\r\n\r\n*  Switch off dynamic menus in all Microsoft Office 2003 applications using the \r\n\"Always Show Full Menus\" checkbox in the Options Tab under Tools > Customise in any \r\nof those applications.\r\n*  To swap between files in Microsoft Office (versions 97 onwards) key Control + F6.\r\n\r\n### Word\r\n\r\n*  Disable the Reading Layout: Go to Tools > Options > General. Uncheck \"Allow starting \r\nin Reading Layout\".\r\n*  Change Ctrl+V to Paste text without the formatting into a Word document \r\n([see](http://office.microsoft.com/en-gb/help/HA010429611033.aspx)).\r\n\r\n### Excel\r\n\r\n*   Ctrl+D: Copy contents and formatting from topmost cells to rest of selected range.\r\n*   Filter Items in a List:\r\n    1.  Populate column F with 0 or 1 depending on if the value in on that row of \r\n    column C is listed in column H.\r\n    2.  Place the following in F2 and use it to populate the rest of column F: =COUNTIF(H:H,C2)\r\n    3.  Sort using column F to group all of the matching data together.\r\n    4.  In each record, the value in column C is checked. If it is in the list in column H, \r\n    the record passes through the filter.\r\n\r\n### Outlook\r\n\r\n*   Stop the Reading Pane in Outlook 2003 from marking emails as read by going to \r\nTools > Options > Other tab > Reading Pane button. \r\nThen make sure that both the \"Mark items as read\" options are unchecked.\r\n\r\n#### Add Mailbox\r\n\r\nIf you have permission to view another mailbox then here are the steps to add it to those \r\ndisplayed in your Outlook session:\r\n\r\n1.  From the Tools menu, select E-mail Accounts.\r\n2.  In the E-mail section, select View or change existing e-mail accounts and click Next.\r\n3.  Select Microsoft Exchange Server.\r\n4.  Click Change.\r\n5.  Click More Settings.\r\n6.  Select the Advanced tab.\r\n7.  In the Mailboxes section, click Add.\r\n8.  In the Add Mailbox text box, type the name of the mailbox.\r\n9.  Click Ok, Ok, Next and Finish to apply the change."
+        "content": "## General Tips\n\n* Select multiple items in the Task Bar by holding down the Control Key and clicking on them.\n* [Windows clean boot](http://support.microsoft.com/kb/929135/en-us) by running `msconfig.exe` and then:\n    1. Disable \"Load startup items\".\n    2. Disable All non-Microsoft services.\n    3. Reboot.\n* Keyboard-based application launcher: [Launchy](http://www.launchy.net)\n* When setting up an email account in Outlook you will be prompted to log in with your Windows userid and password - Use your Outlook userid (email) and password instead.\n* Malware-free Open Source updates: [ninite.com](https://ninite.com/).\n\n### Shortcut Keys\n\n*  `Alt+D` Go to Browser Address field\n*  `Alt+F4` Close application\n*  `Alt+Tab` cycle through open applications\n*  `PrintScreen` Place image of screen in clipboard\n*  `Alt+PrintScreen` Place image of active window in clipboard\n*  `Windows Key+D` Minimize all windows (toggle)\n*  `Windows Key+E` Open Windows Explorer\n*  `Windows Key+F` Find files on your computer\n*  `Windows Key+L` Lock your computer\n*  `Windows Key+R` Opens the Run Program Dialog\n\n## Recycle Bin\n\nStop having to \"confirm delete\" when merely moving data to the Recycle Bin:\n\n1.  Right-click the Recycle Bin icon\n2.  Select \"Properties\"\n3.  Un-tick \"Display delete confirmation dialog\"\n4.  Click \"OK.\"\n\n## Single-Click\n\nEnable Single-click to open items:\n\n1.  Key Windows Key+E to open Windows Explorer\n2.  Choose Folder Options from the Tools pull-down menu\n3.  In the General tab choose \"Single-click to open an item\"\n\n## Microsoft Office\n\n*  Switch off dynamic menus in all Microsoft Office 2003 applications using the \n\"Always Show Full Menus\" checkbox in the Options Tab under Tools > Customise in any \nof those applications.\n*  To swap between files in Microsoft Office (versions 97 onwards) key Control + F6.\n\n### Word\n\n*  Disable the Reading Layout: Go to Tools > Options > General. Uncheck \"Allow starting \nin Reading Layout\".\n*  Change Ctrl+V to Paste text without the formatting into a Word document \n([see](http://office.microsoft.com/en-gb/help/HA010429611033.aspx)).\n\n### Excel\n\n*   Ctrl+D: Copy contents and formatting from topmost cells to rest of selected range.\n*   Filter Items in a List:\n    1.  Populate column F with 0 or 1 depending on if the value in on that row of \n    column C is listed in column H.\n    2.  Place the following in F2 and use it to populate the rest of column F: =COUNTIF(H:H,C2)\n    3.  Sort using column F to group all of the matching data together.\n    4.  In each record, the value in column C is checked. If it is in the list in column H, \n    the record passes through the filter.\n\n### Outlook\n\n*   Stop the Reading Pane in Outlook 2003 from marking emails as read by going to \nTools > Options > Other tab > Reading Pane button. \nThen make sure that both the \"Mark items as read\" options are unchecked.\n\n#### Add Mailbox\n\nIf you have permission to view another mailbox then here are the steps to add it to those \ndisplayed in your Outlook session:\n\n1.  From the Tools menu, select E-mail Accounts.\n2.  In the E-mail section, select View or change existing e-mail accounts and click Next.\n3.  Select Microsoft Exchange Server.\n4.  Click Change.\n5.  Click More Settings.\n6.  Select the Advanced tab.\n7.  In the Mailboxes section, click Add.\n8.  In the Add Mailbox text box, type the name of the mailbox.\n9.  Click Ok, Ok, Next and Finish to apply the change."
     }
 },
 {
@@ -305,10 +305,10 @@
         "title": "Twinings Tea",
         "slug": "twinings-tea",
         "parent": 3,
-        "updated": "2012-03-16T18:13:01Z",
+        "updated": "2017-03-04T08:55:02.979Z",
         "published": null,
         "content_type": "markdown",
-        "content": "Varieties of tea available from the [Twinings](http://shop.twinings.co.uk/shop/teabag-pick-n-mix.html) website. The number of **!**'s indicates how popular that variety is with people in my office.\r\n\r\n1. *Everyday Tea*: Blended to be a brighter tasting tea, Everyday tea is perfect all day... everyday. **!!!!**\r\n1. *Traditional English*: A robust blend of the finest Assam, Kenyan and Ceylon teas produces a rich, revitalising cup of tea. **!!!!**\r\n1. *Earl Grey*: Scented with bergamot flavour for a light, soothing drink. **!!!**\r\n1. *Green Pure*: The classic, refreshing taste of pure green tea **!!**\r\n1. *Lemon and Ginger*: A warming infusion, the spiciness of ginger is balanced with clean zesty lemon. **!!**\r\n1. *Assam*: A strong Indian tea with a rich malty character - perfect at any time of the day. **!**\r\n1. *Blended to Recharge*: This refreshing blend combines tangy blackcurrant and hibiscus, with ginseng which is reputed to have reviving properties. **!**\r\n1. *Darjeeling*: A light, distinctive tea from the district renowned for producing the world's most famous tea. **!**\r\n1. *Redbush*: The beating hot sun in Western Africa gives the redbush its juicy, refreshing flavour and copper-red colour. **!**\r\n1. *Amber Keemun Tea*: A bright Keemun black tea with a silky smooth taste.\r\n1. *Blackcurrant, Ginseng & Vanilla*: A luscious infusion with a rich combination of sweet blackcurrant, ginseng root and vanilla.\r\n1. *Blended as a Digestif*: This blend combines fennel seeds with peppermint, both of which have long been used as aids to digestion.\r\n1. *Blended as a Morning Detox*: A purifying blend, combining the fresh taste of verbena, limeflowers and lemon, which has been used for many years, with hot water, as a cleansing drink to start the day.\r\n1. *Blended to Calm*: A soothing blend combining warming rooibos and cocoa beans with lavender and camomile, which has long been used for relaxation.\r\n1. *Blended to Cleanse*: A blend of spearmint, long used to aid digestion; nettle, reputed to have a cleansing effect; and milk thistle, believed to have antioxidant properties.\r\n1. *Blended to Recover*: This cleansing blend combines the fresh taste of peppermint with rooibos and milk thistle, both reputed to have antioxidant properties.\r\n1. *Blossom Earl Grey*: We've created a stylish mix of sweet orange blossom flavour and citrus bergamot.\r\n1. *Blueberry & Apple*: A taste of autumn with a full-bodied blend of sweet red apples and blueberry flavours.\r\n1. *Camomile*: We've picked only the most fragrant flowers to make this light and delicate infusion.\r\n1. *Ceylon*: A bright, medium tea with a slight citrus character. Can be served hot or cooled as a delicious iced tea.\r\n1. *Cranberry & Sanguinello Orange*: The Sanguinello, a Spanish variety of blood orange, perfectly compliments the sharpness of cranberry.\r\n1. *Cranberry, Rasberry & Elderflower*: Lift your senses with a delicious red berry infusion with a hint of elderflower.\r\n1. *Golden Oolong Tea*: A sunny and sweet Oolong Tea with a fragrant taste of spring.\r\n1. *Green Tea with Cranberry*: When summer seems a long way off, our green tea with cranberry could be just the thing to brighten your day.\r\n1. *Green Tea with Orange & Lotus Flower*: This distinctly oriental blend combines zesty orange and a delicate hint of lotus flowers with a lightly aromatic green tea.\r\n1. *Mulled Spice*: Full bodied Assam black tea scented with cinnamon, cloves and Christmas spice flavouring.\r\n1. *Orange, Mango & Cinnamon*: Winter or summer? We love both. That's why we created our orange, mango & cinnamon infusion.\r\n1. *Peppermint Pure*: A refreshing infusion with a clean taste. The cool aroma of mint is both refreshing and soothing.\r\n1. *Pure White*: A delicate, sweet white tea, made from the unopened bud and first leaf of the Camelia Sisensis tea plant.\r\n1. *Rose Garden*: From English country gardens to ancient Turkish palaces, there's nothing like the romance and style of a rose. \r\n1. *Spring White Tea*: An easy and light white tea, made from Spring picked buds; this is tea at its purest.\r\n1. *Traditional English Decaffeinated*: A robust blend of the finest Assam, Kenyan and Ceylon teas produces a rich, revitalising cup of tea.\r\n1. *White Tea and Pomegranate*: A delicate, light tasting white tea, perfectly balanced with the sweet fruity flavour of pomegranate."
+        "content": "Varieties of tea available from the [Twinings](http://shop.twinings.co.uk/shop/teabag-pick-n-mix.html) website. The number of **!**'s indicates how popular that variety is with people in my office (in 2011).\n\n1. *Everyday Tea*: Blended to be a brighter tasting tea, Everyday tea is perfect all day... everyday. **!!!!**\n1. *Traditional English*: A robust blend of the finest Assam, Kenyan and Ceylon teas produces a rich, revitalising cup of tea. **!!!!**\n1. *Earl Grey*: Scented with bergamot flavour for a light, soothing drink. **!!!**\n1. *Green Pure*: The classic, refreshing taste of pure green tea **!!**\n1. *Lemon and Ginger*: A warming infusion, the spiciness of ginger is balanced with clean zesty lemon. **!!**\n1. *Assam*: A strong Indian tea with a rich malty character - perfect at any time of the day. **!**\n1. *Blended to Recharge*: This refreshing blend combines tangy blackcurrant and hibiscus, with ginseng which is reputed to have reviving properties. **!**\n1. *Darjeeling*: A light, distinctive tea from the district renowned for producing the world's most famous tea. **!**\n1. *Redbush*: The beating hot sun in Western Africa gives the redbush its juicy, refreshing flavour and copper-red colour. **!**\n1. *Amber Keemun Tea*: A bright Keemun black tea with a silky smooth taste.\n1. *Blackcurrant, Ginseng & Vanilla*: A luscious infusion with a rich combination of sweet blackcurrant, ginseng root and vanilla.\n1. *Blended as a Digestif*: This blend combines fennel seeds with peppermint, both of which have long been used as aids to digestion.\n1. *Blended as a Morning Detox*: A purifying blend, combining the fresh taste of verbena, limeflowers and lemon, which has been used for many years, with hot water, as a cleansing drink to start the day.\n1. *Blended to Calm*: A soothing blend combining warming rooibos and cocoa beans with lavender and camomile, which has long been used for relaxation.\n1. *Blended to Cleanse*: A blend of spearmint, long used to aid digestion; nettle, reputed to have a cleansing effect; and milk thistle, believed to have antioxidant properties.\n1. *Blended to Recover*: This cleansing blend combines the fresh taste of peppermint with rooibos and milk thistle, both reputed to have antioxidant properties.\n1. *Blossom Earl Grey*: We've created a stylish mix of sweet orange blossom flavour and citrus bergamot.\n1. *Blueberry & Apple*: A taste of autumn with a full-bodied blend of sweet red apples and blueberry flavours.\n1. *Camomile*: We've picked only the most fragrant flowers to make this light and delicate infusion.\n1. *Ceylon*: A bright, medium tea with a slight citrus character. Can be served hot or cooled as a delicious iced tea.\n1. *Cranberry & Sanguinello Orange*: The Sanguinello, a Spanish variety of blood orange, perfectly compliments the sharpness of cranberry.\n1. *Cranberry, Rasberry & Elderflower*: Lift your senses with a delicious red berry infusion with a hint of elderflower.\n1. *Golden Oolong Tea*: A sunny and sweet Oolong Tea with a fragrant taste of spring.\n1. *Green Tea with Cranberry*: When summer seems a long way off, our green tea with cranberry could be just the thing to brighten your day.\n1. *Green Tea with Orange & Lotus Flower*: This distinctly oriental blend combines zesty orange and a delicate hint of lotus flowers with a lightly aromatic green tea.\n1. *Mulled Spice*: Full bodied Assam black tea scented with cinnamon, cloves and Christmas spice flavouring.\n1. *Orange, Mango & Cinnamon*: Winter or summer? We love both. That's why we created our orange, mango & cinnamon infusion.\n1. *Peppermint Pure*: A refreshing infusion with a clean taste. The cool aroma of mint is both refreshing and soothing.\n1. *Pure White*: A delicate, sweet white tea, made from the unopened bud and first leaf of the Camelia Sisensis tea plant.\n1. *Rose Garden*: From English country gardens to ancient Turkish palaces, there's nothing like the romance and style of a rose. \n1. *Spring White Tea*: An easy and light white tea, made from Spring picked buds; this is tea at its purest.\n1. *Traditional English Decaffeinated*: A robust blend of the finest Assam, Kenyan and Ceylon teas produces a rich, revitalising cup of tea.\n1. *White Tea and Pomegranate*: A delicate, light tasting white tea, perfectly balanced with the sweet fruity flavour of pomegranate."
     }
 },
 {
@@ -864,10 +864,10 @@
         "title": "Android",
         "slug": "android",
         "parent": 39,
-        "updated": "2012-04-14T11:12:25Z",
+        "updated": "2017-03-04T09:02:39.272Z",
         "published": null,
         "content_type": "markdown",
-        "content": "## Tips\r\n\r\nDelete applications in: Settings > Applications > Manage applications.\r\n\r\nClear Voicemail notification: Settings > Call > Clear voicemail notification.\r\n\r\n## Favourite Apps\r\n\r\n* Aldiko ebook reader\r\n* Amazon kindle\r\n* Cashew accounting\r\n* Google Sky Map\r\n* Android Quick Settings\r\n\r\n## Fix\r\n\r\n### Calendar Stops Syncing\r\n\r\nThis happened after an Android Update. Fix is to clear the Calendar Storage:\r\n\r\n1. Go to Settings > Applications > Manage applications > Running > Calendar Storage.\r\n1. Press \"Clear data.\"\r\n1. Wait for everything to re-sync."
+        "content": "## Tips\n\n* Delete applications in: Settings > Applications > Manage applications.\n* Clear Voicemail notification: Settings > Application Manager > Slide top bar to All > Go to Phone > Clear data.\n* File structure: Camera photos are in `/DCIM/Camera`.\n\n## Favourite Apps\n\n* Aldiko ebook reader\n* Amazon kindle\n* Cashew accounting\n* Google Sky Map\n* Android Quick Settings\n\n## Fix\n\n### Calendar Stops Syncing\n\nThis happened after an Android Update. Fix is to clear the Calendar Storage:\n\n1. Go to Settings > Applications > Manage applications > Running > Calendar Storage.\n1. Press \"Clear data.\"\n1. Wait for everything to re-sync."
     }
 },
 {
@@ -877,10 +877,10 @@
         "title": "git",
         "slug": "git",
         "parent": 39,
-        "updated": "2013-03-22T10:03:53Z",
+        "updated": "2017-03-04T17:43:15.216Z",
         "published": null,
         "content_type": "markdown",
-        "content": "## Commands\r\n\r\n* `git add -u`: Stage all tracked files (does all `git add` and `git rm` commands).\r\n* `git add -A`: Stage all files (same as `-u` but also adds untracked files).\r\n* `git init`: to create a new repository.\r\n* `git [ci|commit]`: to advance the current branch.\r\n    1. `git commit -m \"message\"` to provide commit message on command line.\r\n    1. `git commit --amend` edit message of most recent commit.\r\n* `git clone`: Get a copy from the upstream branch to prime your local repository. \r\nE.g. `git clone https://github.com/ahernp/DMCM.git`.\r\n* `git log`: Show a log of all commits starting from HEAD back to the initial commit.\r\n* `git status`: Show which files have changed between the current project state and HEAD.\r\n* `git stash`: Moves uncommitted changes to the stash.\r\n* `git stash pop`: Apply stashed changes and remove them from stash.\r\n* `git diff [file]`: To see exactly what was modified.\r\n* `git diff master`: Show differences between the current branch and the `master` branch.\r\n* `git diff [head1]..[head2]`: Show the `diff` between the commits referenced by \r\n//head2// and //head1//.\r\n* `git log [head1]..[head2]`: Show the change log between //head2// and the \r\ncommon ancestor of //head1// and //head2//.\r\n* `git rm -f [file]`: Remove file from the repository.\r\n* `git reset HEAD [file]`: Unstage a Staged file.\r\n* `git checkout -`: Checkout previous branch.\r\n* `git checkout -- [file]`: Unmodify a Modified file.\r\n* `git reflog show`: Find all commits.\r\n* `git blame [file]`: Show what revision and author last modified each line of a file.\r\n* `git revert HEAD`: Remove the most recent commit.\r\n* `git log -- [filename]`: Show commit history of a file.\r\n* `git log -p [filename]`: Show change history of a file (i.e. code changes).\r\n* `git checkout [commit-id] [filename]`: Restore specific file from specific commit.\r\n* `git reset --hard [commit]`: Roll branch back to previous commit permanently \r\nerasing all newer commits.\r\n* `git diff --name-status [branch1]..[branch2]`: Show differences between branches.\r\n* `git rebase -i origin/master`: Interactive rebase on all commits since last push \r\nor merge.\r\n* `git pull`: Fetch and merge changes from remote branch.\r\n* `git fetch`: Update local cache of remote branch.\r\n\r\n## Life Cycle of a Branch\r\n\r\n1. Run `git status`.\r\n    1. Possibly run `git stash` to hide uncommitted changes.\r\n1. Create Branch: `git branch <new_branch> <current_branch>`.\r\n1. Switch to new branch: `git checkout <new_branch>`.\r\n1. Make changes...\r\n1. Run `git status`.\r\n1. Stage all changes to tracked files: `git add -u` (or `git add -A` to add new files also).\r\n1. Run `git status`.\r\n1. Commit changes: `git commit -m \"[comment]\"`.\r\n1. Ensure current branch is up to date: `git fetch`.\r\n1. Merge branches; At each stage resolve any conflicts:\r\n    1. Switch to the parent branch: `git checkout [parent_branch]`.\r\n    1. Ensure branch is up to date: `git fetch` followed by `git merge origin`.\r\n    1. Switch to the new branch: `git checkout [new_branch]`.\r\n    1. Merge parent with new_branch: `git merge [parent_branch]`. \r\nBest to try merging this way first.\r\n    1. Switch to the parent branch: `git checkout [parent_branch]`.\r\n    1. Merge new_branch with parent_branch: `git merge [new_branch]`.\r\n    1. Publish your changes: `git push`.\r\n1. Delete new branch: `git branch -d [new_branch]`.\r\n\r\n## Ignore Files\r\n\r\nCreate a `.gitignore` file to ignore certain files. Example:\r\n\r\n    .project\r\n    .pydevproject\r\n    *.pyc\r\n    *.sqlite\r\n    *.sqlite-journal\r\n    *.conflict\r\n    *.swp\r\n    *.aux\r\n    *.log\r\n    *.dvi\r\n    *.out\r\n    .coverage\r\n    *.Rout\r\n    *.RData\r\n    *.pdf\r\n\r\nGlobal activation: `git config --global core.excludesfile ~/.gitignore`."
+        "content": "Version control system.\n\n## Tips\n\nUse `fetch` and `merge` instead of `pull` ([see](https://longair.net/blog/2009/04/16/git-fetch-and-merge/)).\n\n\n## Commands\n\n* `git add -A`: Stage all files (same as `-u` but also adds untracked files).\n* `git add -u`: Stage all tracked files (does all `git add` and `git rm` commands).\n* `git blame [file]`: Show what revision and author last modified each line of a file.\n* `git checkout -- [file]`: Unmodify a Modified file.\n* `git checkout -`: Checkout previous branch.\n* `git checkout [commit-id] [filename]`: Restore specific file from specific commit.\n* `git clone`: Get a copy from the upstream branch to prime your local repository. E.g. `git clone https://github.com/ahernp/angular-django.git`.\n* `git commit --amend` edit message of most recent commit.\n* `git commit -m \"message\"` to advance the current branch.\n* `git diff [filename]`: To see exactly what was modified.\n* `git fetch`: Update local cache of remote branch.\n* `git log -- [filename]`: Show commit history of a file.\n* `git log -p [filename]`: Show change history of a file (i.e. code changes).\n* `git log`: Show a log of all commits starting from HEAD back to the initial commit.\n* `git mv [filename1] [filename2]`: Rename a file in the repository.\n* `git pull`: Fetch and merge changes from remote branch.\n* `git rebase -i origin/master`: Interactive rebase on all commits since last push or merge.\n* `git reflog show`: List all local commits.\n* `git reset --hard [commit]`: Roll branch back to previous commit permanently erasing all newer commits.\n* `git reset HEAD [file]`: Unstage a Staged file.\n* `git revert HEAD`: Remove the most recent commit.\n* `git rm -f [filename]`: Remove file from the repository.\n* `git stash drop`: Delete most recent stashed changes.\n* `git stash pop`: Apply stashed changes and remove them from stash.\n* `git stash`: Moves uncommitted changes to the stash.\n* `git status`: Show which files have changed between the current project state and HEAD.\n\n## Life Cycle of a change\n\n1. Run git status.\n    * Possibly run git stash to hide uncommitted changes.\n1. Create Branch: `git branch <new_branch> <current_branch>`.\n1. Switch to new branch: `git checkout <new_branch>`.\n1. Make changes...\n1. Run `git status`.\n1. Stage all changes to tracked files: `git add -u` (or `git add -A` to add new files also).\n1. Run `git status`.\n1. Commit changes: `git commit -m \"[comment]\"`.\n1. Ensure current branch is up to date: `git fetch`.\n1. Merge branches; At each stage resolve any conflicts:\n    1. Switch to the parent branch: `git checkout [parent_branch]`.\n    1. Ensure branch is up to date: `git fetch` followed by `git merge origin`.\n    1. Switch to the new branch: `git checkout [new_branch]`.\n    1. Merge parent with new_branch: `git merge [parent_branch]`. \nBest to try merging this way first.\n    1. Switch to the parent branch: `git checkout [parent_branch]`.\n    1. Merge new_branch with parent_branch: `git merge [new_branch]`.\n    1. Publish your changes: `git push`.\n1. Delete new branch: `git branch -d [new_branch]`.\n\n## Setup\n\nUse `git init`: to create a new repository.\n\nAdd a `.gitignore` file to the repositories root directory to exclude files from Git\n([example](https://github.com/ahernp/angular-django/blob/master/.gitignore)).\n\n\n### Configuration file\n\n`~/.gitconfig`:\n\n```\n[user]                                                                          \n    name = Paul Ahern                                                           \n    email = ahernp@ahernp.com                                                   \n[merge]                                                                         \n    tool = vimdiff                                                              \n[core]                                                                          \n    editor = vi                                                                 \n[alias]                                                                         \n    co = checkout                                                               \n    ci = commit                                                                 \n    st = status                                                                 \n    br = branch                                                                 \n    hist = log --pretty=format:\\\"%h %ad | %s%d [%an]\\\" --graph --date=short     \n[color]                                                                         \n    ui = auto                                                                   \n[push]                                                                          \n    default = simple                                                            \n                                                                                \n# Use ssh instead of https                                                      \n[url \"git@github.com:\"]                                                         \n    insteadOf = https://github.com/ \n```"
     }
 },
 {
@@ -890,10 +890,10 @@
         "title": "Personal Finance",
         "slug": "personal-finance",
         "parent": 39,
-        "updated": "2012-04-21T11:55:41Z",
+        "updated": "2017-03-03T07:04:01.758Z",
         "published": null,
         "content_type": "markdown",
-        "content": "Here are some tips and tricks which I have picked up over the years. Mostly they are just a matter of common sense.\r\n\r\nFirst, bear in mind that the Financial Services industry is in the business of making money. Since they are no longer allowed to print it they have to take it from their customers.\r\n\r\n## Rules\r\n\r\n1. Never Borrow Money (except for a Mortgage).\r\n    * Have at least a 25% deposit for your mortgage to get a good deal. Pay off the mortgage as rapidly as possible. Earned interest is taxed but mortgage interest payments avoided through early repayment are not.\r\n1.  Live within your means each month (except for one-off capital expenditure). To paraphrase Dickens:\r\n    * Monthly Income < Monthly Expenditure = Misery\r\n    * Monthly Income > Monthly Expenditure = Happiness\r\n1. Never buy shares (no exceptions).\r\n    * The stock market is a casino. As in all such establishments the odds are rigged to favour the house.\r\n    * Plus by avoiding the market, these days, you gain enormous peace of mind.\r\n\r\n## Tips\r\n\r\n* Keep at least one year's worth of salary in a savings bank account for emergencies.\r\n* Pay bills using direct debits. This lowers the transaction cost & most providers will share the saving with you.\r\n* Use a credit card for convenience but pay it off each month to avoid interest charges.\r\n* Advertisers try to trick you into spending money. If you see something you want in a shop or on-line: *don't buy it*.\r\n    * Instead wait 24 hours. If by then you cannot remember what it was then you didn't really need it and were about to fall victim to an advertisement ploy.\r\n* *Keep Accounts* It is always a surprise to see where the money is going. When you start delaying expenditure until the next accounting period then you know you are taking it seriously.\r\n* *Pension Contributions* Save half your age as a percentage of your income into a pension throughout your career to be able to afford to maintain the same lifestyle in retirement.\r\n    * So when 20 years old you should put 10% of your income into a pension; By the time you reach 40 your contributions should have risen to 20%; And so on.\r\n* When seeking professional financial advice the first question to ask the advisor is: \"Are you on commission?\" If the answer is anything other than a straightforward \"No\" then that should be the end of the conversation.\r\n\r\nBy following these rules, after 15 years working at a mid-level IT job in London, I was able to afford to buy a [mountain](/rooska/) in Ireland.\r\n"
+        "content": "Here are some tips and tricks which I have picked up over the years. Most are just a matter of common sense.\n\nBear in mind that the Financial Services industry is in the business of making money. Since they are no longer allowed to print it they have to take it from their customers.\n\n## Rules\n\n1. Never Borrow Money (except for a Mortgage).\n    * Have as big a deposit for your mortgage as you can to get a better deal. Pay off the mortgage as rapidly as possible. Earned interest is taxed but mortgage interest payments avoided through early repayment are not.\n1.  Live within your means each month (except for one-off capital expenditure). To paraphrase Dickens:\n    * Monthly Income < Expenditure = Misery\n    * Monthly Income > Expenditure = Happiness\n1. Never buy shares (no exceptions).\n    * The stock market is a casino. As in all such establishments the odds are rigged to favour the house.\n    * Also by avoiding the market you gain peace of mind.\n\n## Tips\n\n* Keep at least one year's worth of salary in a savings bank account for emergencies.\n* Pay bills using direct debits. This lowers the transaction cost & most providers will share the saving with you.\n* Use a credit card for convenience but pay it off each month to avoid interest charges.\n* Advertisers try to trick you into spending money. If you see something you want in a shop or on-line: *don't buy it*.\n    * Instead wait 24 hours. If by then you cannot remember what it was then you didn't really need it and were about to fall victim to an advertisement ploy.\n* *Keep Accounts* It is always a surprise to see where the money is going. When you start delaying expenditure until the next accounting period then you know you are taking it seriously.\n* *Pension Contributions* Save half your age as a percentage of your income into a pension throughout your career to be able to afford to maintain the same lifestyle in retirement.\n    * So when 20 years old you should put 10% of your income into a pension; By the time you reach 40 your contributions should have risen to 20%; And so on.\n* When seeking professional financial advice the first question to ask the advisor is: \"Are you on commission?\" If the answer is anything other than a straightforward \"No\" then that should be the end of the conversation.\n\nBy following these rules, after 15 years working at a mid-level IT job in London, I was able to afford to buy a [mountain](/rooska/) in Ireland.\n"
     }
 },
 {
@@ -1495,6 +1495,45 @@
     }
 },
 {
+    "model": "pages.page",
+    "pk": 164,
+    "fields": {
+        "title": "The Three Food Groups",
+        "slug": "the-three-food-groups",
+        "parent": 1,
+        "updated": "2017-03-04T11:27:42.862Z",
+        "published": "2017-03-04",
+        "content_type": "markdown",
+        "content": "My theory of the three major food groups:\n\n1. Things which are not biscuits.\n2. Biscuits.\n3. Ultra Biscuits.\n\nWhat, you may ask, are ultra biscuits? These guys:\n\n[![Ultra Biscuits](/media/img/thumb/ultraBiscuits.png \"Borders Dark Chocolate Ginger Biscuits\")](/media/img/ultraBiscuits.png \"Borders Dark Chocolate Ginger Biscuits\")\n\nGinger is an important part of a balanced diet!"
+    }
+},
+{
+    "model": "pages.page",
+    "pk": 165,
+    "fields": {
+        "title": "Three Food Groups",
+        "slug": "three-food-groups",
+        "parent": 1,
+        "updated": "2017-03-04T11:24:21.319Z",
+        "published": "2017-03-04",
+        "content_type": "markdown",
+        "content": "My theory of the three major food groups:\n\n1. Things which are not biscuits.\n2. Biscuits.\n3. Ultra Biscuits.\n\nWhat, you may ask, are ultra biscuits? These guys:\n\n[![Ultra Biscuits](/media/img/thumb/ultraBiscuits.png \"Scottish Borders dark chocolate ginger biscuits\")](/media/img/ultraBiscuits.png \"Scottish Borders dark chocolate ginger biscuits\")\n"
+    }
+},
+{
+    "model": "pages.page",
+    "pk": 166,
+    "fields": {
+        "title": "",
+        "slug": "",
+        "parent": null,
+        "updated": "2017-03-04T11:25:35.285Z",
+        "published": null,
+        "content_type": "markdown",
+        "content": ""
+    }
+},
+{
     "model": "feedreader.group",
     "pk": 1,
     "fields": {
@@ -1538,7 +1577,7 @@
         "link": "http://bingethinkinghistory.blogspot.com/",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-02-26T13:17:04.938Z",
+        "last_polled_time": "2017-03-04T17:17:05.550Z",
         "group": 1
     }
 },
@@ -1564,7 +1603,7 @@
         "link": "http://ancientworldpodcast.blogspot.com/",
         "description": "From the first human civilizations to 500 BC in (around) thirty podcasts",
         "published_time": null,
-        "last_polled_time": "2017-02-26T13:17:24.487Z",
+        "last_polled_time": "2017-03-04T17:17:22.454Z",
         "group": 1
     }
 },
@@ -1576,8 +1615,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/analysis/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006r4vz",
         "description": "Programme examining the ideas and forces which shape public policy in Britain and abroad, presented by distinguished writers, journalists and academics",
-        "published_time": "2017-02-20T00:00:00Z",
-        "last_polled_time": "2017-02-20T21:17:03.352Z",
+        "published_time": "2017-02-27T00:00:00Z",
+        "last_polled_time": "2017-02-27T21:17:03.173Z",
         "group": 4
     }
 },
@@ -1589,8 +1628,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/worldservice/discovery/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/p002w557",
         "description": "Explorations in the world of science.",
-        "published_time": "2017-02-20T00:00:00Z",
-        "last_polled_time": "2017-02-21T12:17:07.106Z",
+        "published_time": "2017-03-06T00:00:00Z",
+        "last_polled_time": "2017-03-03T14:17:05.988Z",
         "group": 4
     }
 },
@@ -1602,8 +1641,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/fileon4/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006th08",
         "description": "Award-winning current affairs documentary series investigating major issues at home and abroad",
-        "published_time": "2017-02-07T00:00:00Z",
-        "last_polled_time": "2017-02-07T20:17:09.162Z",
+        "published_time": "2017-02-28T00:00:00Z",
+        "last_polled_time": "2017-02-28T21:17:09.243Z",
         "group": 4
     }
 },
@@ -1615,8 +1654,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/fricomedy/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/p02pc9pj",
         "description": "Download the best new comedy from Radio 4, every Friday. Features The News Quiz, The Now Show, Dead Ringers and The Museum of Curiosity.",
-        "published_time": "2017-02-24T18:56:00Z",
-        "last_polled_time": "2017-02-24T19:17:09.898Z",
+        "published_time": "2017-03-03T00:00:00Z",
+        "last_polled_time": "2017-03-03T19:17:12.738Z",
         "group": 4
     }
 },
@@ -1641,8 +1680,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/iot/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qykl",
         "description": "Melvyn Bragg and guests discuss the history of ideas",
-        "published_time": "2017-02-23T00:00:00Z",
-        "last_polled_time": "2017-02-23T12:17:13.675Z",
+        "published_time": "2017-03-02T00:00:00Z",
+        "last_polled_time": "2017-03-02T12:17:11.992Z",
         "group": 4
     }
 },
@@ -1666,9 +1705,9 @@
         "title": "The Media Show",
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/media/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b00dv9hq",
-        "description": "Steve Hewlett presents a topical programme about the fast-changing media world",
-        "published_time": "2017-02-22T00:00:00Z",
-        "last_polled_time": "2017-02-22T18:17:34.578Z",
+        "description": "Topical programme about the fast-changing media world",
+        "published_time": "2017-03-01T00:00:00Z",
+        "last_polled_time": "2017-03-01T18:17:39.938Z",
         "group": 4
     }
 },
@@ -1693,8 +1732,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/bottomline/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006sz6t",
         "description": "Evan Davis hosts the business conversation show with people at the top giving insight into what matters",
-        "published_time": "2017-02-23T00:00:00Z",
-        "last_polled_time": "2017-02-23T21:17:29.852Z",
+        "published_time": "2017-03-02T00:00:00Z",
+        "last_polled_time": "2017-03-02T21:17:26.614Z",
         "group": 4
     }
 },
@@ -1706,8 +1745,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/film/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006r5jt",
         "description": "The latest releases, the hottest stars and the leading directors, plus news and insights from the film world",
-        "published_time": "2017-02-23T00:00:00Z",
-        "last_polled_time": "2017-02-23T17:17:28.168Z",
+        "published_time": "2017-03-02T00:00:00Z",
+        "last_polled_time": "2017-03-02T17:17:28.152Z",
         "group": 4
     }
 },
@@ -1719,8 +1758,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/wpr/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qjfq",
         "description": "Radio 4&#39;s weekly assessment of developments at Westminster",
-        "published_time": "2017-02-25T00:00:00Z",
-        "last_polled_time": "2017-02-25T12:17:35.993Z",
+        "published_time": "2017-03-04T00:00:00Z",
+        "last_polled_time": "2017-03-04T12:17:29.745Z",
         "group": 4
     }
 },
@@ -1732,8 +1771,8 @@
         "xml_url": "http://feedproxy.google.com/linuxtoday/linux",
         "link": "http://www.linuxtoday.com/",
         "description": "",
-        "published_time": "2017-02-26T13:15:22Z",
-        "last_polled_time": "2017-02-26T13:17:13.901Z",
+        "published_time": "2017-03-04T17:16:45Z",
+        "last_polled_time": "2017-03-04T17:17:12.009Z",
         "group": 5
     }
 },
@@ -1746,7 +1785,7 @@
         "link": "https://www.schneier.com/blog/",
         "description": "A blog covering security and security technology.",
         "published_time": null,
-        "last_polled_time": "2017-02-26T13:17:20.625Z",
+        "last_polled_time": "2017-03-04T17:17:18.810Z",
         "group": 5
     }
 },
@@ -1759,7 +1798,7 @@
         "link": "https://inkscapetutorials.org",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-02-26T13:17:10.451Z",
+        "last_polled_time": "2017-03-04T17:17:10.576Z",
         "group": 5
     }
 },
@@ -1784,8 +1823,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/pov/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qng8",
         "description": "A weekly reflection on a topical issue",
-        "published_time": "2017-02-24T00:00:00Z",
-        "last_polled_time": "2017-02-24T21:17:04.386Z",
+        "published_time": "2017-03-03T00:00:00Z",
+        "last_polled_time": "2017-03-03T21:17:03.960Z",
         "group": 4
     }
 },
@@ -1824,7 +1863,7 @@
         "link": "https://www.djangoproject.com/weblog/",
         "description": "Latest news about Django, the Python Web framework.",
         "published_time": null,
-        "last_polled_time": "2017-02-26T13:17:27.932Z",
+        "last_polled_time": "2017-03-04T17:17:25.925Z",
         "group": 5
     }
 },
@@ -1862,8 +1901,8 @@
         "xml_url": "http://www.bbc.co.uk/blogs/markkermode/rss",
         "link": "http://www.bbc.co.uk/blogs/markkermode",
         "description": "Outspoken, opinionated and never lost for words, Mark is the UK's leading film critic.  This\u00a0twice-weekly video blog is the place where he airs his personal views on the things that most fire him up about cinema - and invites you to give your own opinions.",
-        "published_time": "2017-02-24T15:35:31Z",
-        "last_polled_time": "2017-02-24T16:17:13.885Z",
+        "published_time": "2017-03-03T11:56:18Z",
+        "last_polled_time": "2017-03-03T12:17:13.191Z",
         "group": 2
     }
 },
@@ -1876,7 +1915,7 @@
         "link": "http://www.anisopteragames.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-02-26T13:17:18.475Z",
+        "last_polled_time": "2017-03-04T17:17:16.295Z",
         "group": 2
     }
 },
@@ -1888,8 +1927,8 @@
         "xml_url": "http://thehistoryofbyzantium.libsyn.com/rss",
         "link": "http://www.thehistoryofbyzantium.com",
         "description": "A podcast telling the story of the Roman (Byzantine) Empire from 476 AD to 1453",
-        "published_time": "2017-02-24T23:40:03Z",
-        "last_polled_time": "2017-02-25T00:18:32.585Z",
+        "published_time": "2017-03-03T19:31:58Z",
+        "last_polled_time": "2017-03-03T20:17:27.479Z",
         "group": 1
     }
 },
@@ -1902,7 +1941,7 @@
         "link": "http://slatestarcodex.com",
         "description": "The Schelling Point for being on the #slatestarcodex IRC channel (see sidebar) is Wednesdays at 10 PM EST",
         "published_time": null,
-        "last_polled_time": "2017-02-26T13:17:22.037Z",
+        "last_polled_time": "2017-03-04T17:17:20.130Z",
         "group": 2
     }
 },
@@ -1915,7 +1954,7 @@
         "link": "http://www.exurbe.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-02-26T13:17:08.979Z",
+        "last_polled_time": "2017-03-04T17:17:09.116Z",
         "group": 2
     }
 },
@@ -1928,7 +1967,7 @@
         "link": "http://b5audioguide.com",
         "description": "This is a book club without books, an episode-by-episode walkthrough of one of the most influential and important modern SF series. Each podcast begins with a spoiler-free discussion of the episode for new viewers, then we give listeners a jumping-off point and switch to a discussion of how the episode fits into the five-year history of the show.",
         "published_time": null,
-        "last_polled_time": "2017-02-26T13:17:26.698Z",
+        "last_polled_time": "2017-03-04T17:17:24.707Z",
         "group": 2
     }
 },
@@ -1941,7 +1980,7 @@
         "link": "https://www.theincomparable.com/theincomparable/",
         "description": "The Incomparable is a weekly dive into geeky media we love, including movies, books, TV, comics, and more, featuring a rotating panel of guests and hosted by Jason Snell.",
         "published_time": null,
-        "last_polled_time": "2017-02-26T13:17:31.014Z",
+        "last_polled_time": "2017-03-04T17:17:28.970Z",
         "group": 2
     }
 },
@@ -1954,7 +1993,7 @@
         "link": "https://arstechnica.com",
         "description": "Serving the Technologist for more than a decade. IT news, reviews, and analysis.",
         "published_time": null,
-        "last_polled_time": "2017-02-26T13:17:23.208Z",
+        "last_polled_time": "2017-03-04T17:17:21.340Z",
         "group": 5
     }
 },
@@ -1966,8 +2005,8 @@
         "xml_url": "http://www.bbc.co.uk/programmes/p02dbd4m/episodes/downloads.rss",
         "link": "http://www.bbc.co.uk/programmes/p02dbd4m",
         "description": "Owen Bennett Jones and guests take an in-depth look at a topic in the week&#39;s news",
-        "published_time": "2017-02-24T00:00:00Z",
-        "last_polled_time": "2017-02-24T09:17:14.580Z",
+        "published_time": "2017-03-03T00:00:00Z",
+        "last_polled_time": "2017-03-03T09:17:15.685Z",
         "group": 4
     }
 },
@@ -1979,8 +2018,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/moreorless/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/p02nrss1",
         "description": "Tim Harford and the More or Less team try to make sense of the statistics which surround us. From BBC Radio 4",
-        "published_time": "2017-02-24T20:00:00Z",
-        "last_polled_time": "2017-02-24T20:17:13.939Z",
+        "published_time": "2017-03-03T00:00:00Z",
+        "last_polled_time": "2017-03-03T20:17:13.426Z",
         "group": 4
     }
 },
@@ -1993,7 +2032,7 @@
         "link": "http://www.bbc.co.uk/news/",
         "description": "BBC News - UK Politics",
         "published_time": null,
-        "last_polled_time": "2017-02-26T13:17:04.532Z",
+        "last_polled_time": "2017-03-04T17:17:05.142Z",
         "group": 3
     }
 },
@@ -2006,7 +2045,7 @@
         "link": "https://www.theregister.co.uk/",
         "description": "Biting the hand that feeds IT \u2014 sci/tech news and views for the world",
         "published_time": null,
-        "last_polled_time": "2017-02-26T13:17:33.016Z",
+        "last_polled_time": "2017-03-04T17:17:31.382Z",
         "group": 5
     }
 },
@@ -2019,7 +2058,7 @@
         "link": "http://yieldthought.com/",
         "description": "Mark O\u2019Connor is a programmer, irregular writer and part-time technical fellow. He believes in dynamic typing, first-class functions, working in the cloud and the immortal essence of the human soul. He also likes tea.\n\n\n\n  var _gaq = _gaq || [];\n  _gaq.push(['_setAccount', 'UA-29608497-1']);\n  _gaq.push(['_trackPageview']);\n\n  (function() {\n    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;\n    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);\n  })();",
         "published_time": null,
-        "last_polled_time": "2017-02-26T13:17:34.545Z",
+        "last_polled_time": "2017-03-04T17:17:33.999Z",
         "group": 5
     }
 },
@@ -2032,7 +2071,7 @@
         "link": "http://blog.dilbert.com/",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-02-26T13:17:20.908Z",
+        "last_polled_time": "2017-03-04T17:17:19.012Z",
         "group": 2
     }
 },
@@ -2045,7 +2084,7 @@
         "link": "http://uncannymagazine.com",
         "description": "A Magazine of Science Fiction and Fantasy",
         "published_time": null,
-        "last_polled_time": "2017-02-26T13:17:33.710Z",
+        "last_polled_time": "2017-03-04T17:17:33.189Z",
         "group": 2
     }
 },
@@ -2071,7 +2110,7 @@
         "link": "http://ahernp.com/blog/",
         "description": "Recent Blog Entries.",
         "published_time": null,
-        "last_polled_time": "2017-02-26T13:17:02.522Z",
+        "last_polled_time": "2017-03-04T17:17:03.038Z",
         "group": null
     }
 },
@@ -2084,7 +2123,7 @@
         "link": "https://www.theincomparable.com/sophomorelit/",
         "description": "A podcast about your 10th grade reading list, hosted by John McCoy.",
         "published_time": null,
-        "last_polled_time": "2017-02-26T13:17:22.238Z",
+        "last_polled_time": "2017-03-04T17:17:20.312Z",
         "group": 2
     }
 }

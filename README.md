@@ -1,14 +1,33 @@
-angular-django
-==============
+# angular-django
 
 Angular 2 frontend with Django backend implemention of [ahernp.com](https://ahernp.com).
 
-The website content is mostly stored as markdown in a PostgreSQL database.
+## Software
 
-Software stack: NPM, Typescript, Webpack.
-[Angular 2 with Webpack Project Setup](https://www.youtube.com/watch?v=HTFZPF6iixA&list=PLgGUMhSgtxJyIQ4vI3BzlCzZLHL79Ew6p) videos.
+* Frontend – NPM, Typescript & Webpack.
+* Backend – Ubuntu, nginx, uWSGI & Django.
+
+## Architecture
+
+The website content is mostly stored as Markdown text in a PostgreSQL database.
+Access to this data is provided via endpoints implemented by a Django backend.
+
+Most of the application logic resides in an Angular 2 single page application run in the browser.
+
+When the site is first visited, the Angular 2 application is downloaded and runs to render the initial page.
+All the other page content is downloaded in the background so that clicks on internal links can be serviced by the SPA without further recourse to the backend.
+
+Feedreader, an RSS reader is also available. Its content is also downloaded in the background and the server polled hourly to check for updates.
+
+Logged in users gain access to additional controls to edit the markdown content and feedreader subscriptions.
+
+There are also some text manipulation tools, implemented in Javascript which merely process text input in the local browser session.
+
+A dashboard page is also available showing the current versions of software and recent log entries for the application.
 
 ## Development Environment
+
+Tested on Ubuntu 16.04 with `python fabric` installed.
 
 ### Setup
 
@@ -25,7 +44,7 @@ Software stack: NPM, Typescript, Webpack.
 1. Run unit tests: `npm test`
 1. Run end to end tests using [Selenium IDE](http://www.seleniumhq.org/projects/ide/). The test case is in the project root directory in a file called `sanityCheck.selenium`.
 
-### API Endpoints
+### Example API Endpoints
 
 * http://localhost:8000/api/core/checkloggedin
 * http://localhost:8000/api/pages/read/ahernp-com
@@ -33,4 +52,3 @@ Software stack: NPM, Typescript, Webpack.
 * http://localhost:8000/api/feedreader/feeds
 * http://localhost:8000/api/feedreader/toggleread
 
-Tested on Ubuntu 16.04 with `python fabric` installed.

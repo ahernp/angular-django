@@ -1,6 +1,7 @@
 from __future__ import absolute_import
 
 from django.db import models
+from django.utils import timezone
 
 
 class Group(models.Model):
@@ -89,7 +90,7 @@ class Entry(models.Model):
             'title': self.title,
             'link': self.link,
             'description': self.description,
-            'publishedTime': self.published_time.strftime('%Y-%m-%d %H:%M:%S'),
+            'publishedTime': timezone.localtime(self.published_time).strftime('%Y-%m-%d %H:%M:%S'),
             'feedTitle': self.feed.title,
             'groupName': self.feed.group.name if self.feed.group else '',
             'readFlag': self.read_flag

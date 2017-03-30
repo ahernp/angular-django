@@ -29,9 +29,9 @@ let leadingZero = (amount: number): string => amount < 10 ? `0${amount}` : `${am
 export function toDateTimeString(date: Date): string {
     return '' +
         date.getFullYear() + '-' +
-        leadingZero(date.getUTCMonth()+1) + '-' +
-        leadingZero(date.getUTCDate()) + ' ' +
-        leadingZero(date.getUTCHours()) + ':' +
-        leadingZero(date.getUTCMinutes()) + ':' +
-        leadingZero(date.getUTCSeconds());
+        leadingZero(date.getMonth()+1) + '-' +
+        leadingZero(date.getDate()) + ' ' +
+        leadingZero(date.getHours()) + ':' +
+        leadingZero(date.getMinutes()) + ':' +
+        leadingZero(date.getSeconds());
 }

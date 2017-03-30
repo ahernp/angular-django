@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.utils import timezone
 
 HOMEPAGE = 'homepage'
 MARKDOWN = 'markdown'
@@ -45,7 +46,7 @@ class Page(models.Model):
             'title': self.title,
             'slug': self.slug,
             'parentId': self.parent_id,
-            'updated': self.updated.strftime('%Y-%m-%d %H:%M:%S'),
+            'updated': timezone.localtime(self.updated).strftime('%Y-%m-%d %H:%M:%S'),
             'published': self.published.strftime('%Y-%m-%d') if self.published else '',
             'contentType': self.content_type,
             'content': self.content

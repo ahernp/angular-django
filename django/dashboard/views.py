@@ -72,9 +72,9 @@ def dashboard(request):
 
     data['logEntries'] = [{'level': entry.level,
                            'msg': entry.msg,
-                           'datetime': entry.datetime.strftime('%Y-%m-%d %H:%M:%S')}
+                           'datetime': timezone.localtime(entry.datetime).strftime('%Y-%m-%d %H:%M:%S')}
                           for entry in entries]
 
-    data['timeChecked'] = timezone.now().strftime('%Y-%m-%d %H:%M:%S')
+    data['timeChecked'] = timezone.localtime(timezone.now()).strftime('%Y-%m-%d %H:%M:%S')
 
     return HttpResponse(json.dumps(data), content_type='application/json')

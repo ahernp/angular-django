@@ -139,7 +139,11 @@ export class FeedreaderComponent implements OnInit {
             groupCountDictionary[entries[i].groupName].feedCounts[entries[i].feedTitle]++;
         }
         let groupCounts: GroupCount[] = [];
-        let groupNames: any = Object.keys(groupCountDictionary);
+        let groupNames: string[] = Object.keys(groupCountDictionary);
+        groupNames.sort();
+        groupNames.sort(function (a, b) {
+            return a.toLowerCase().localeCompare(b, 'en', {'sensitivity': 'base'});
+        });
         for (let i = 0; i < groupNames.length; i++)
             if (groupCountDictionary[groupNames[i]].count > 0) {
                 let feedCounts: FeedCount[] = [];

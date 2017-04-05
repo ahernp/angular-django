@@ -12,16 +12,6 @@
 <tr><td rowspan="1" colspan="3">sanityCheck</td></tr>
 </thead><tbody>
 <tr>
-	<td>selectWindow</td>
-	<td>null</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>//ad-header[@id='header']/p/span[2]/span[2]</td>
-	<td>Blog</td>
-</tr>
-<tr>
 	<td>open</td>
 	<td></td>
 	<td>'/'</td>

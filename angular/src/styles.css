@@ -122,8 +122,8 @@ button {
     position: fixed;
     top: 50%;
     left: 50%;
-    margin-top: -64px;
-    margin-left: -64px;
+    margin-top: -33px;
+    margin-left: -33px;
     z-index: 3;
 }
 

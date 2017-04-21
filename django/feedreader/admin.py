@@ -32,7 +32,7 @@ admin.site.register(Feed, FeedAdmin)
 
 class EntryAdmin(admin.ModelAdmin):
     list_display = ['title', 'feed', 'published_time']
-    list_filter = ['feed']
+    list_filter = ['read_flag', 'feed']
     search_fields = ['title', 'link']
     readonly_fields = ['link', 'title', 'description', 'published_time', 'feed']
     fieldsets = (

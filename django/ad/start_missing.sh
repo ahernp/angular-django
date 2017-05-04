@@ -6,5 +6,5 @@ then
 fi
 if ! pgrep -u ahernp uwsgi > /dev/null
 then
-    source /home/ahernp/.virtualenvs/ahernp/bin/activate && /home/ahernp/.virtualenvs/ahernp/bin/uwsgi --ini /home/ahernp/code/angular-django/django/ad/uwsgi.ini &
+    source /home/ahernp/.virtualenvs/ahernp2/bin/activate && /home/ahernp/.virtualenvs/ahernp2/bin/uwsgi --ini /home/ahernp/code/angular-django/django/ad/uwsgi.ini &
 fi

@@ -40,7 +40,7 @@ def get_live_data():
     """ Download snapshot of live data """
     with settings(host_string='web'):
         with cd(LIVE_SITE_ROOT):
-            run('~/.virtualenvs/ahernp/bin/python manage.py dumpdata '
+            run('~/.virtualenvs/ahernp2/bin/python manage.py dumpdata '
                 '--indent 4 pages feedreader.group feedreader.feed > ~/live_snapshot.json')
         get('live_snapshot.json', join(DJANGO_ROOT, 'ad', 'fixtures', 'live_snapshot.json'))
 
@@ -156,9 +156,9 @@ def deploy():
                 site_root=LIVE_SITE_ROOT))
 
     with cd(LIVE_SITE_ROOT):
-        run('~/.virtualenvs/ahernp/bin/pip install -r ../requirements/production.txt')
-        run('~/.virtualenvs/ahernp/bin/python manage.py collectstatic --noinput')
-        run('~/.virtualenvs/ahernp/bin/python manage.py migrate --noinput')
+        run('~/.virtualenvs/ahernp2/bin/pip install -r ../requirements/production.txt')
+        run('~/.virtualenvs/ahernp2/bin/python manage.py collectstatic --noinput')
+        run('~/.virtualenvs/ahernp2/bin/python manage.py migrate --noinput')
         run('touch ad/uwsgi.ini')
 
 

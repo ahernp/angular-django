@@ -27,7 +27,10 @@ def update_feed_on_database(feed_from_database, feed_from_xml, verbose):
         return
 
     if hasattr(feed_from_xml.feed, 'published_parsed'):
-        published_time = datetime.fromtimestamp(mktime(feed_from_xml.feed.published_parsed))
+        if feed_from_xml.feed.published_parsed is None:
+            published_time = timezone.now()
+        else:
+            published_time = datetime.fromtimestamp(mktime(feed_from_xml.feed.published_parsed))
         try:
             published_time = pytz.timezone(settings.TIME_ZONE).localize(published_time, is_dst=None)
         except pytz.exceptions.AmbiguousTimeError:
@@ -85,19 +88,22 @@ def skip_entry(entry_from_xml, verbose):
 
 def update_entry_on_database(entry_on_database, entry_from_xml):
     if hasattr(entry_from_xml, 'published_parsed'):
-        published_time = datetime.fromtimestamp(mktime(entry_from_xml.published_parsed))
+        if entry_from_xml.published_parsed is None:
+            published_time = timezone.now()
+        else:
+            published_time = datetime.fromtimestamp(mktime(entry_from_xml.published_parsed))
 
-        try:
-            published_time = pytz.timezone(settings.TIME_ZONE)\
-                .localize(published_time, is_dst=None)
-        except pytz.exceptions.AmbiguousTimeError:
-            pytz_timezone = pytz.timezone(settings.TIME_ZONE)
-            published_time = pytz_timezone.localize(published_time, is_dst=False)
+            try:
+                published_time = pytz.timezone(settings.TIME_ZONE)\
+                    .localize(published_time, is_dst=None)
+            except pytz.exceptions.AmbiguousTimeError:
+                pytz_timezone = pytz.timezone(settings.TIME_ZONE)
+                published_time = pytz_timezone.localize(published_time, is_dst=False)
 
-        now = timezone.now()
+            now = timezone.now()
 
-        if published_time > now:
-            published_time = now
+            if published_time > now:
+                published_time = now
 
         entry_on_database.published_time = published_time
 

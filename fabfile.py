@@ -160,7 +160,9 @@ def deploy():
         run('~/.virtualenvs/ahernp2/bin/python manage.py collectstatic --noinput')
         run('~/.virtualenvs/ahernp2/bin/python manage.py migrate --noinput')
         run('touch ad/uwsgi.ini')
-        run('./ad/start_missing.sh')
+
+    # Fix Centos error (see https://stackoverflow.com/questions/34177315/importerror-while-running-cgi-bin-on-localhost-undefined-symbol-lo-truncate64/40644906#40644906)
+    run('~/.virtualenvs/ahernp2/bin/pip install -U --no-cache-dir --force psycopg2')
 
 
 @task

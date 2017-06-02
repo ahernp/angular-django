@@ -45,10 +45,10 @@
         "title": "Profile",
         "slug": "profile",
         "parent": 146,
-        "updated": "2016-12-07T07:23:04.487Z",
+        "updated": "2017-05-18T06:19:47.669Z",
         "published": null,
         "content_type": "markdown",
-        "content": "## Paul Ahern\r\n\r\n<div style=\"float:right;padding-left:1em;padding-bottom:1em;\" markdown=\"1\">\r\n\r\n![Paul Ahern at Gougane Barra](/media/img/ahernp200x200.png \"Paul Ahern at Gougane Barra\")\r\n\r\n</div>\r\n\r\nI was born and educated in Ireland and then came to work in London.\r\n\r\n1990-2006: Worked in the IT department of Natwest Bank, mainly as a COBOL programmer. Returned to Cork in 2006.\r\n\r\n2006-2007: While looking for a mountain by the sea to build my retirement home on, I completed an Artificial Intelligence MSc course at University College Cork.\r\n\r\n2008-2010: Worked in Web Support for Premiere Global Services. My team answered questions from SAP staff about using Adobe Connect.\r\n\r\nIn 2008 I purchased the site for my place in the country at [Rooska](/rooska/ \"Rooska\") \r\non the south side of Bantry Bay. Phase 1, planting trees, building roads, walls and a barn was completed in 2010.\r\n\r\n2010-2011: Returned to London; Worked as a Web Developer for Steel Business Briefing.\r\n\r\n2011-2012: Worked as a Web Developer for [ReportLab](http://www.reportlab.com).\r\n\r\n2012-2014: Worked as a Web Developer for [digitalis](http://digitalisreputation.co.uk/).\r\n\r\n2014-2016: Working as a Python/Full-Stack Developer for [Festicket](http://festicket.com).\r\n\r\n2016-now: Working as a Web Developer for [Affectv](http://affectv.com/)."
+        "content": "## Paul Ahern\n\n<div style=\"float:right;padding-left:1em;padding-bottom:1em;\" markdown=\"1\">\n\n![Paul Ahern at Gougane Barra](/media/img/ahernp200x200.png \"Paul Ahern at Gougane Barra\")\n\n</div>\n\nI was born and educated in Ireland and then came to work in London.\n\n1990-2006: Worked in the IT department of Natwest Bank, mainly as a COBOL programmer. Returned to Cork in 2006.\n\n2006-2007: While looking for a mountain by the sea to build my retirement home on, I completed an Artificial Intelligence MSc course at University College Cork.\n\n2008-2010: Worked in Web Support for Premiere Global Services. My team answered questions from SAP staff about using Adobe Connect.\n\nIn 2008 I purchased the site for my place in the country at [Rooska](/page/rooska/ \"Rooska\") \non the south side of Bantry Bay. Phase 1, planting trees, building roads, walls and a barn was completed in 2010.\n\n2010-2011: Returned to London; Worked as a Web Developer for Steel Business Briefing.\n\n2011-2012: Worked as a Web Developer for [ReportLab](http://www.reportlab.com).\n\n2012-2014: Worked as a Web Developer for [digitalis](http://digitalisreputation.co.uk/).\n\n2014-2016: Working as a Python/Full-Stack Developer for [Festicket](http://festicket.com).\n\n2016-now: Working as a Web Developer for [Affectv](http://affectv.com/)."
     }
 },
 {
@@ -240,10 +240,10 @@
         "title": "CV",
         "slug": "cv",
         "parent": 146,
-        "updated": "2017-04-16T16:58:22.582Z",
+        "updated": "2017-05-18T06:18:46.106Z",
         "published": null,
         "content_type": "markdown",
-        "content": "Paul Ahern, Python Programmer\n\n## My Story So Far\n\nHaving worked at Natwest bank in London for 15 years developing Retail Banking applications, using the COBOL programming language, in 2006 I moved back to Ireland to build a place in the country. While there, I attended an MSc course in Artificial Intelligence and worked on a helpdesk supporting various web meeting products.\n\nSince September 2010, I have been working in London as a Web Developer mostly using Python and Django. As an Irish citizen I am eligible to work in the UK.\n\n## Technical Skills\n\n*Programming:* Python, Typescript/JavaScript, COBOL\n<br>\n*Scripting:* Bash, Python\n<br>\n*Databases:* PostgreSQL, MySQL\n<br>\n*Web:* Django, HTML, CSS\n<br>\n*Version Control:* Git\n<br>\n*Management:* Pivotal Tracker, Jira\n<br>\n*IDE:* PyCharm\n\n## Portfolio\n\nExamples of my work can be found via links on this page: [ahernp.com/page/portfolio](http://ahernp.com/page/portfolio).\n\n## Education\n\n**1987-1990** BA Computer Studies, University College Cork: \n\n* Majored in Information Technology; Minored in Geography. \n\n**2006-2007** MSc Computer Science, UCC: \n\n* *Subjects* &ndash; Computer Security, Mobile Applications and various aspects of Artificial Intelligence.\n* *Projects* &ndash; Building a University Timetabling tool using Constraint-Based programming techniques and modelling an adaptive Spam filtering system.\n\n## Experience\n\n**2016-** at Affectv in London:\n\n> Working as a Web Developer mostly using Typescript and Javascript in AngularJS 1.5.\n\n**2014-2016** at Festicket in London:\n\n> Working as a Web Developer maintaining and enhancing the festicket.com website.\n\n> * Integrated Booking Protect (Refund Protection) into the Festicket purchase process via an API.\n> * Wrote reporting logic to provide B2B communication to suppliers.\nWrote and maintained automated Unit Tests using py.test.\n> * Used a sprint-based Agile approach to deliver changes to festicket.com.\n\n> Non-Web work and support:\n\n> * Provided IT support to staff: Set-up PCs and accounts for new joiners; Offboarded leavers.\n> * Created and maintained an internal company wiki to document standards and procedures.\n\n**2012-2014** at Digitalis Reputations in London:\n\n> Worked as a Web Developer migrating an existing in-house tool onto the Django web framework. \n\n> * Reverse-engineered a .NET application to create an integrated system providing the full set of functionality required by our in-house teams.\n> * Used a bespoke Agile approach to collect requirements from users and refine prototypes of new systems.\n> * Adjusted our parsing of Search Results as the major search engines changed their format.\n> * Wrote and maintained automated Unit Tests using Django and Selenium IDE.\n> * Wrote Python Fabric scripts to automate testing, delivery and deployment.\n> * Languages used: Python, Javascript and Django.\nTechnical Environment: CentOS operating system; MySQL database; Subversion and Git version control.\n\n**2011-2012** at ReportLab in London:\n\n> Built several web sites which enable organisations to provide links to PDF output which is dynamically generated from their own data sets using the Reportlab core product.\n\n> My team has also built a Django-based wizard which allows users to buy foreign exchange. This has been rolled out across several financial institutions.\n\n> * Built web sites in direct collaboration with the Clients.\n> * Liaised with Clients to manage the interfaces between their systems and ours.\n> * Used Pivotal Tracker tool to manage projects in an Agile fashion.\n> * Provided Live Support to the Clients.\n> * Wrote and maintained automated Unit Tests using Django and Selenium IDE.\n> * Languages used: Python, Javascript and Django.\n> * Technical Environment: Ubuntu operating system; MySQL database; Mercurial version control.\n\n**2010-2011** at Steel Business Briefing in London:\n\n> Worked as a Web Developer building sites using the Django web framework.\n\n> * Built a replacement of the company's PHP website using Django.\n> * Liaised with the users to identify required enhancements to the existing system.\n> * The team worked in a formal Agile/Scrum fashion, e.g. with daily stand-up meetings.\n> * Wrote and maintained automated Unit Tests using Django and Selenium IDE.\n> * Languages used: Python, Javascript and Django.\n> * Technical Environment: Ubuntu operating system; MySQL database; Git version control.\n\n**2008-2010** at Premiere Global Services in Ireland:\n\n> Worked as a Web Technical Specialist answering client questions about using web-meeting products (Adobe Connect, Microsoft Live Meeting & Webex).\n\n**2006-2007** in Ireland:\n\n> Attended a full-time taught MSc course at UCC titled: Intelligent Systems for Business and Manufacturing.\n\n> Learned to drive.\n\n**1990-2006** at Natwest Bank in London:\n\n> For seven years I worked on the Live Support Team, helping to keep vital bank systems running. This included two years on the Helpdesk dealing with problems reported by non-IT staff across the countrywide branch network.\n\n> For several of those years I also worked as a duty-programmer. Working at night to see that the batch programs completed successfully and dealing immediately with any problems that arose. \n\n> The remainder of my time was spent on various application development teams. One of which build a system which automatically sent letters to Customers when changes occurred to the Standing Orders or Direct Debits on their accounts. \n\n> As a member of Application Development teams I participated in the end-to-end process of designing, documenting, building and implementing systems. From collecting requirements from users through writing design documents and implementation plans as well as coding and testing my role covered the full development process. \n\n> Apart from the OS390 IBM mainframe environment, much of my time was spent using Microsoft Word and Visio to capture and communicate the requirements and design of new and amended systems."
+        "content": "Paul Ahern, Web Developer\n\n## My Story So Far\n\nHaving worked at Natwest bank in London for 15 years developing Retail Banking applications, using the COBOL programming language, in 2006 I moved back to Ireland to build a place in the country. While there, I attended an MSc course in Artificial Intelligence and worked on a helpdesk supporting various web meeting products.\n\nSince September 2010, I have been working in London as a Web Developer mostly using Python and Django. As an Irish citizen I am eligible to work in the UK.\n\n## Technical Skills\n\n*Programming:* Python, Typescript/JavaScript, COBOL\n<br>\n*Scripting:* Bash, Python\n<br>\n*Databases:* PostgreSQL, MySQL\n<br>\n*Web:* Django, HTML, CSS\n<br>\n*Version Control:* Git\n<br>\n*Management:* Pivotal Tracker, Jira\n<br>\n*IDE:* PyCharm\n\n## Portfolio\n\nExamples of my work can be found via links on this page: [ahernp.com/page/portfolio](http://ahernp.com/page/portfolio).\n\n## Education\n\n**1987-1990** BA Computer Studies, University College Cork: \n\n* Majored in Information Technology; Minored in Geography. \n\n**2006-2007** MSc Computer Science, UCC: \n\n* *Subjects* &ndash; Computer Security, Mobile Applications and various aspects of Artificial Intelligence.\n* *Projects* &ndash; Building a University Timetabling tool using Constraint-Based programming techniques and modelling an adaptive Spam filtering system.\n\n## Experience\n\n**2016-** at Affectv in London:\n\n> Working as a Web Developer mostly using Typescript and Javascript in AngularJS 1.5.\n\n**2014-2016** at Festicket in London:\n\n> Working as a Web Developer maintaining and enhancing the festicket.com website.\n\n> * Integrated Booking Protect (Refund Protection) into the Festicket purchase process via an API.\n> * Wrote reporting logic to provide B2B communication to suppliers.\nWrote and maintained automated Unit Tests using py.test.\n> * Used a sprint-based Agile approach to deliver changes to festicket.com.\n\n> Non-Web work and support:\n\n> * Provided IT support to staff: Set-up PCs and accounts for new joiners; Offboarded leavers.\n> * Created and maintained an internal company wiki to document standards and procedures.\n\n**2012-2014** at Digitalis Reputations in London:\n\n> Worked as a Web Developer migrating an existing in-house tool onto the Django web framework. \n\n> * Reverse-engineered a .NET application to create an integrated system providing the full set of functionality required by our in-house teams.\n> * Used a bespoke Agile approach to collect requirements from users and refine prototypes of new systems.\n> * Adjusted our parsing of Search Results as the major search engines changed their format.\n> * Wrote and maintained automated Unit Tests using Django and Selenium IDE.\n> * Wrote Python Fabric scripts to automate testing, delivery and deployment.\n> * Languages used: Python, Javascript and Django.\nTechnical Environment: CentOS operating system; MySQL database; Subversion and Git version control.\n\n**2011-2012** at ReportLab in London:\n\n> Built several web sites which enable organisations to provide links to PDF output which is dynamically generated from their own data sets using the Reportlab core product.\n\n> My team has also built a Django-based wizard which allows users to buy foreign exchange. This has been rolled out across several financial institutions.\n\n> * Built web sites in direct collaboration with the Clients.\n> * Liaised with Clients to manage the interfaces between their systems and ours.\n> * Used Pivotal Tracker tool to manage projects in an Agile fashion.\n> * Provided Live Support to the Clients.\n> * Wrote and maintained automated Unit Tests using Django and Selenium IDE.\n> * Languages used: Python, Javascript and Django.\n> * Technical Environment: Ubuntu operating system; MySQL database; Mercurial version control.\n\n**2010-2011** at Steel Business Briefing in London:\n\n> Worked as a Web Developer building sites using the Django web framework.\n\n> * Built a replacement of the company's PHP website using Django.\n> * Liaised with the users to identify required enhancements to the existing system.\n> * The team worked in a formal Agile/Scrum fashion, e.g. with daily stand-up meetings.\n> * Wrote and maintained automated Unit Tests using Django and Selenium IDE.\n> * Languages used: Python, Javascript and Django.\n> * Technical Environment: Ubuntu operating system; MySQL database; Git version control.\n\n**2008-2010** at Premiere Global Services in Ireland:\n\n> Worked as a Web Technical Specialist answering client questions about using web-meeting products (Adobe Connect, Microsoft Live Meeting & Webex).\n\n**2006-2007** in Ireland:\n\n> Attended a full-time taught MSc course at UCC titled: Intelligent Systems for Business and Manufacturing.\n\n> Learned to drive.\n\n**1990-2006** at Natwest Bank in London:\n\n> For seven years I worked on the Live Support Team, helping to keep vital bank systems running. This included two years on the Helpdesk dealing with problems reported by non-IT staff across the countrywide branch network.\n\n> For several of those years I also worked as a duty-programmer. Working at night to see that the batch programs completed successfully and dealing immediately with any problems that arose. \n\n> The remainder of my time was spent on various application development teams. One of which build a system which automatically sent letters to Customers when changes occurred to the Standing Orders or Direct Debits on their accounts. \n\n> As a member of Application Development teams I participated in the end-to-end process of designing, documenting, building and implementing systems. From collecting requirements from users through writing design documents and implementation plans as well as coding and testing my role covered the full development process. \n\n> Apart from the OS390 IBM mainframe environment, much of my time was spent using Microsoft Word and Visio to capture and communicate the requirements and design of new and amended systems."
     }
 },
 {
@@ -1163,10 +1163,10 @@
         "title": "Games",
         "slug": "games",
         "parent": 6,
-        "updated": "2017-04-09T17:13:17.933Z",
+        "updated": "2017-05-08T19:45:23.133Z",
         "published": null,
         "content_type": "table",
-        "content": "Title | Genre | Platform | Source | Size\n------|-------|----------|--------|------\nAge of Wonders III | Strategy | Linux | Steam | 3.2GB\nAI War | RTS | Linux | Steam | 300MB\nApotheon | RPG | Linux | GoG | 546MB\nArmello | Strategy | Linux | Steam | 2GB\nAscii Sector | RPG | Linux | Developer | 2.6MB\nBaldur's Gate 2 | RPG | Linux | GoG | 2.5GB\nBanner Saga | RPG | Linux | GoG | 4GB\nBattle Isle Platinum | Strategy | Windows | GoG | 1.2GB\nBattle Worlds: Kronos | Strategy | Linux | Steam | 1.1GB\nBattlefleet Gothic Armada | RTS | Windows | Steam | 4.4GB\nBattlestation: Harbinger | RPG | Linux | Steam | 120MB\nBioshock Infinite | RPG | Linux |Steam | 17GB\nBorderlands 2 | FPS | Linux | Steam | 9.9GB\nBroforce | Platformer | Linux | Steam | 292MB\nCities Skylines | City Sim | Linux | Steam | 1.8GB\nConquest of Elysium 3 | Strategy | Linux | Desura | 70MB\nCrusader Kings 2 | Strategy | Linux | Steam | 966MB\nDefcon | Strategy | Linux | Developer | 60MB\nDistant Worlds: Universe | Strategy | Windows | Steam | 1GB\nDroidFish | Chess | Android | Google | 11MB\nDwarfFortress | Strategy | Linux | Developer | 13MB\nEuro Truck Simulator 2 | Sim | Linux | Steam | 1.4GB\nEuropa Universalis IV | Strategy | Linux | Steam | 662MB\nF-117a Stealth Fighter | Flight Sim | Linux | GoG | 27MB\nFTL: Faster Than Light | Space Sim | Linux | Humble | 188MB\nGalcon | Strategy | Android | Google | 7MB\nGratuitous Space Battles 2 | Strategy | Linux | Humble | 380MB\nHand of Fate | RPG | Linux | Steam | 1.4GB\nIroncast | Puzzle | Linux | Steam | 215MB\nJewels | Puzzle | Android | Google | 5MB\nKerbal Space Program | Simulation | Linux | Steam | 643MB\nKing of Dragon Pass | RPG | Android | Google | 348MB\nLast Federation | Strategy | Linux | GoG | 534MB\nLords of Xulima | RPG | Linux | GoG | 1.6GB\nLyne | Puzzle | Android | Humble | 21.7MB\nMassive Chalice | Strategy | Linux | GoG | 852MB\nMaster of Orion 1 | Strategy | Linux | GoG | 10MB\nMaster of Orion 2 | Strategy | Linux | GoG | 161MB\nMast of Orion 206 | Strategy | Linux | GoG | 2GB\nMinecraft | RPG | Linux |[Developer | 145MB\nMount and Blade: Warband | RPG | Linux | Steam | 572MB\nOsmos | Puzzle | Linux |[Developer | 20MB\nPandora: First Contact | Strategy | Linux | Steam | 545MB\nPapers Please | RPG | Linux | Steam | 46MB\nPillars of Eternity | RPG | Linux | Steam | 5.7GB\nPlanetary Annihilation | RTS | Linux | Steam | 2.3GB\nPortal | Puzzle | Linux | Steam | 7.3GB\nReassembly | Strategy | Linux | Humble | 89Mb\nSaints Row IV | RPG | Linux | Steam | 8.5GB\nShadow of Mordor | RPG | Linux | Steam | 41.5GB\nShadow Warrior Special Edition | RPG | Linux | Humble | 5.9GB\nShadowrun Returns | RPG | Linux | Humble | 1GB\nSid Meier's Civilisation IV | Strategy | Windows | DVD | 1.8GB\nSid Meier's Civilisation V | Strategy | Linux | Steam | 10GB\nSkyrim - Elder Scrolls V | RPG | Windows | Steam | 10.4GB\nSpace Pirates and Zombies | RPG | Linux | Humble | 150.2MB\nSpacecom | Strategy | Linux | GoG | 129.4MB\nStar Ruler II | Strategy | Linux | GoG | 396MB\nStar Wars: Empire at War | RTS | Windows | Steam | 1.85GB\nStar Wars: KoTOR II | RPG | Linux | Steam | 3GB\nStar Wars: TIE Fighter | Space Sim | Linux | GoG | 322MB\nStarbound | RPG | Linux | Steam | 1GB\nStellaris | Strategy | Linux | Steam | 1.5GB\nSunless Sea | RPG | Linux | Steam | 251MB\nSword of the Stars: The Pit | RPG | Linux | Steam | 1.1GB\nThea: The Awakening | Strategy | Linux | Steam | 845MB\nTorchlight II | RPG | Linux | Humble | 1.5GB\nTotal War: Rome | Strategy | Windows | DVD | 2.9GB\nTotal War: Empire | Strategy | Linux | Steam | 9.7GB\nTransistor | RPG | Linux | Steam | 3GB\nUltimate General: Gettysburg | RTS | Linux | Steam | 1.2GB\nVictory at Sea | RTS | Linux | Steam | 1.2GB\nVoidExpanse | RTS | Linux | Steam | 308MB\nWarlock 2: The Exiled | RTS | Linux | Steam | 1.4GB\nWindward | RPG | Linux | Steam | 108MB\nWitcher 2 | RPG | Linux | Steam | 16GB\nX3: Albion Prelude | Space Sim | Linux | Steam | 6.2GB\nXCOM: Enemy Within | Tactical | Linux | Steam | 13.2GB"
+        "content": "Title | Genre | Platform | Source | Size\n------|-------|----------|--------|------\nAge of Wonders III | Strategy | Linux | Steam | 3.2GB\nAI War | RTS | Linux | Steam | 300MB\nApotheon | RPG | Linux | GoG | 546MB\nArmello | Strategy | Linux | Steam | 2GB\nAscii Sector | RPG | Linux | Developer | 2.6MB\nBaldur's Gate 2 | RPG | Linux | GoG | 2.5GB\nBanner Saga | RPG | Linux | GoG | 4GB\nBattle Isle Platinum | Strategy | Windows | GoG | 1.2GB\nBattle Worlds: Kronos | Strategy | Linux | Steam | 1.1GB\nBattlefleet Gothic Armada | RTS | Windows | Steam | 4.4GB\nBattlestation: Harbinger | RPG | Linux | Steam | 120MB\nBioshock Infinite | RPG | Linux |Steam | 17GB\nBorderlands 2 | FPS | Linux | Steam | 9.9GB\nBroforce | Platformer | Linux | Steam | 292MB\nCities Skylines | City Sim | Linux | Steam | 1.8GB\nConquest of Elysium 3 | Strategy | Linux | Desura | 70MB\nCrusader Kings 2 | Strategy | Linux | Steam | 966MB\nDefcon | Strategy | Linux | Developer | 60MB\nDistant Worlds: Universe | Strategy | Windows | Steam | 1GB\nDroidFish | Chess | Android | Google | 11MB\nDwarfFortress | Strategy | Linux | Developer | 13MB\nEuro Truck Simulator 2 | Sim | Linux | Steam | 1.4GB\nEuropa Universalis IV | Strategy | Linux | Steam | 696MB\nF-117a Stealth Fighter | Flight Sim | Linux | GoG | 27MB\nFTL: Faster Than Light | Space Sim | Linux | Humble | 188MB\nGalcon | Strategy | Android | Google | 7MB\nGratuitous Space Battles 2 | Strategy | Linux | Humble | 380MB\nHand of Fate | RPG | Linux | Steam | 1.4GB\nIroncast | Puzzle | Linux | Steam | 215MB\nJewels | Puzzle | Android | Google | 5MB\nKerbal Space Program | Simulation | Linux | Steam | 643MB\nKing of Dragon Pass | RPG | Android | Google | 348MB\nLast Federation | Strategy | Linux | GoG | 534MB\nLords of Xulima | RPG | Linux | GoG | 1.6GB\nLyne | Puzzle | Android | Humble | 21.7MB\nMassive Chalice | Strategy | Linux | GoG | 852MB\nMaster of Orion 1 | Strategy | Linux | GoG | 10MB\nMaster of Orion 2 | Strategy | Linux | GoG | 161MB\nMast of Orion 206 | Strategy | Linux | GoG | 2GB\nMinecraft | RPG | Linux |[Developer | 145MB\nMount and Blade: Warband | RPG | Linux | Steam | 572MB\nOsmos | Puzzle | Linux |[Developer | 20MB\nPandora: First Contact | Strategy | Linux | Steam | 545MB\nPapers Please | RPG | Linux | Steam | 46MB\nPillars of Eternity | RPG | Linux | Steam | 5.7GB\nPlanetary Annihilation | RTS | Linux | Steam | 2.3GB\nPortal | Puzzle | Linux | Steam | 7.3GB\nReassembly | Strategy | Linux | Humble | 89Mb\nSaints Row IV | RPG | Linux | Steam | 8.5GB\nShadow of Mordor | RPG | Linux | Steam | 41.5GB\nShadow Warrior Special Edition | RPG | Linux | Humble | 5.9GB\nShadowrun Returns | RPG | Linux | Humble | 1GB\nSid Meier's Civilisation IV | Strategy | Windows | DVD | 1.8GB\nSid Meier's Civilisation V | Strategy | Linux | Steam | 10GB\nSkyrim - Elder Scrolls V | RPG | Windows | Steam | 10.4GB\nSpace Pirates and Zombies | RPG | Linux | Humble | 150.2MB\nSpacecom | Strategy | Linux | GoG | 129.4MB\nStar Ruler II | Strategy | Linux | GoG | 396MB\nStar Wars: Empire at War | RTS | Windows | Steam | 1.85GB\nStar Wars: KoTOR II | RPG | Linux | Steam | 3GB\nStar Wars: TIE Fighter | Space Sim | Linux | GoG | 322MB\nStarbound | RPG | Linux | Steam | 1GB\nStellaris | Strategy | Linux | Steam | 1.5GB\nSunless Sea | RPG | Linux | Steam | 251MB\nSword of the Stars: The Pit | RPG | Linux | Steam | 1.1GB\nThea: The Awakening | Strategy | Linux | Steam | 845MB\nTorchlight II | RPG | Linux | Humble | 1.5GB\nTotal War: Rome | Strategy | Windows | DVD | 2.9GB\nTotal War: Empire | Strategy | Linux | Steam | 9.7GB\nTransistor | RPG | Linux | Steam | 3GB\nUltimate General: Gettysburg | RTS | Linux | Steam | 1.2GB\nVictory at Sea | RTS | Linux | Steam | 1.2GB\nVoidExpanse | RTS | Linux | Steam | 308MB\nWarlock 2: The Exiled | RTS | Linux | Steam | 1.4GB\nWindward | RPG | Linux | Steam | 108MB\nWitcher 2 | RPG | Linux | Steam | 16GB\nX3: Albion Prelude | Space Sim | Linux | Steam | 6.2GB\nXCOM: Enemy Within | Tactical | Linux | Steam | 13.2GB"
     }
 },
 {
@@ -1577,7 +1577,7 @@
         "link": "http://bingethinkinghistory.blogspot.com/",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-05-04T17:17:10.488Z",
+        "last_polled_time": "2017-06-02T19:17:10.605Z",
         "group": 1
     }
 },
@@ -1603,7 +1603,7 @@
         "link": "http://ancientworldpodcast.blogspot.com/",
         "description": "From the first human civilizations to 500 BC in (around) thirty podcasts",
         "published_time": null,
-        "last_polled_time": "2017-05-04T17:17:29.095Z",
+        "last_polled_time": "2017-06-02T19:17:26.606Z",
         "group": 1
     }
 },
@@ -1615,8 +1615,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/analysis/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006r4vz",
         "description": "Programme examining the ideas and forces which shape public policy in Britain and abroad, presented by distinguished writers, journalists and academics",
-        "published_time": "2017-04-11T00:00:00Z",
-        "last_polled_time": "2017-04-11T20:17:03.754Z",
+        "published_time": "2017-05-29T00:00:00Z",
+        "last_polled_time": "2017-05-30T09:17:03.447Z",
         "group": 4
     }
 },
@@ -1628,8 +1628,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/worldservice/discovery/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/p002w557",
         "description": "Explorations in the world of science.",
-        "published_time": "2017-05-01T00:00:00Z",
-        "last_polled_time": "2017-05-01T20:17:12.860Z",
+        "published_time": "2017-05-29T00:00:00Z",
+        "last_polled_time": "2017-05-29T20:17:11.370Z",
         "group": 4
     }
 },
@@ -1641,8 +1641,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/fileon4/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006th08",
         "description": "Award-winning current affairs documentary series investigating major issues at home and abroad",
-        "published_time": "2017-03-21T00:00:00Z",
-        "last_polled_time": "2017-03-21T21:17:10.499Z",
+        "published_time": "2017-05-30T00:00:00Z",
+        "last_polled_time": "2017-05-30T20:17:14.101Z",
         "group": 4
     }
 },
@@ -1654,8 +1654,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/fricomedy/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/p02pc9pj",
         "description": "Download the best new comedy from Radio 4, every Friday. Features The News Quiz, The Now Show, Dead Ringers and The Museum of Curiosity.",
-        "published_time": "2017-04-28T00:00:00Z",
-        "last_polled_time": "2017-04-28T18:17:16.619Z",
+        "published_time": "2017-06-02T00:00:00Z",
+        "last_polled_time": "2017-06-02T19:17:14.791Z",
         "group": 4
     }
 },
@@ -1667,8 +1667,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/greatlives/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qxsb",
         "description": "Biographical series in which guests choose someone who has inspired their lives.",
-        "published_time": "2017-05-02T00:00:00Z",
-        "last_polled_time": "2017-05-02T16:17:16.270Z",
+        "published_time": "2017-05-30T00:00:00Z",
+        "last_polled_time": "2017-05-30T16:17:15.217Z",
         "group": 4
     }
 },
@@ -1680,8 +1680,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/iot/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qykl",
         "description": "Melvyn Bragg and guests discuss the history of ideas",
-        "published_time": "2017-05-04T00:00:00Z",
-        "last_polled_time": "2017-05-04T11:17:15.017Z",
+        "published_time": "2017-06-01T00:00:00Z",
+        "last_polled_time": "2017-06-01T10:17:18.239Z",
         "group": 4
     }
 },
@@ -1706,8 +1706,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/media/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b00dv9hq",
         "description": "Topical programme about the fast-changing media world",
-        "published_time": "2017-05-03T00:00:00Z",
-        "last_polled_time": "2017-05-03T18:18:00.866Z",
+        "published_time": "2017-05-31T00:00:00Z",
+        "last_polled_time": "2017-05-31T17:17:36.164Z",
         "group": 4
     }
 },
@@ -1719,8 +1719,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/profile/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qjz5",
         "description": "An insight into the character of an influential figure making news headlines",
-        "published_time": "2017-04-29T00:00:00Z",
-        "last_polled_time": "2017-04-29T19:17:34.626Z",
+        "published_time": "2017-05-27T00:00:00Z",
+        "last_polled_time": "2017-05-27T19:17:20.980Z",
         "group": 4
     }
 },
@@ -1732,8 +1732,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/bottomline/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006sz6t",
         "description": "Evan Davis hosts the business conversation show with people at the top giving insight into what matters",
-        "published_time": "2017-03-30T00:00:00Z",
-        "last_polled_time": "2017-03-30T20:17:31.392Z",
+        "published_time": "2017-06-01T00:00:00Z",
+        "last_polled_time": "2017-06-02T14:17:31.278Z",
         "group": 4
     }
 },
@@ -1745,8 +1745,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/film/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006r5jt",
         "description": "The latest releases, the hottest stars and the leading directors, plus news and insights from the film world",
-        "published_time": "2017-05-04T00:00:00Z",
-        "last_polled_time": "2017-05-04T16:17:32.494Z",
+        "published_time": "2017-06-01T00:00:00Z",
+        "last_polled_time": "2017-06-01T16:17:33.323Z",
         "group": 4
     }
 },
@@ -1759,7 +1759,7 @@
         "link": "http://www.bbc.co.uk/programmes/b006qjfq",
         "description": "Radio 4&#39;s weekly assessment of developments at Westminster",
         "published_time": "2017-04-29T00:00:00Z",
-        "last_polled_time": "2017-04-29T11:17:56.874Z",
+        "last_polled_time": "2017-06-02T19:17:35.376Z",
         "group": 4
     }
 },
@@ -1771,8 +1771,8 @@
         "xml_url": "http://feedproxy.google.com/linuxtoday/linux",
         "link": "http://www.linuxtoday.com/",
         "description": "",
-        "published_time": "2017-05-04T17:12:56Z",
-        "last_polled_time": "2017-05-04T17:17:18.440Z",
+        "published_time": "2017-06-02T19:15:16Z",
+        "last_polled_time": "2017-06-02T19:17:17.674Z",
         "group": 5
     }
 },
@@ -1785,7 +1785,7 @@
         "link": "https://www.schneier.com/blog/",
         "description": "A blog covering security and security technology.",
         "published_time": null,
-        "last_polled_time": "2017-05-04T17:17:25.141Z",
+        "last_polled_time": "2017-06-02T19:17:24.153Z",
         "group": 5
     }
 },
@@ -1798,7 +1798,7 @@
         "link": "https://inkscapetutorials.org",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-05-04T17:17:16.027Z",
+        "last_polled_time": "2017-06-02T19:17:15.630Z",
         "group": 5
     }
 },
@@ -1823,8 +1823,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/pov/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qng8",
         "description": "A weekly reflection on a topical issue",
-        "published_time": "2017-04-28T00:00:00Z",
-        "last_polled_time": "2017-04-28T20:17:04.359Z",
+        "published_time": "2017-05-26T00:00:00Z",
+        "last_polled_time": "2017-05-26T20:17:04.267Z",
         "group": 4
     }
 },
@@ -1849,8 +1849,8 @@
         "xml_url": "http://revolutionspodcast.libsyn.com/rss/",
         "link": "http://www.revolutionspodcast.com",
         "description": "A weekly podcast exploring great political revolutions. Now: The July Revolution. Next: 1848",
-        "published_time": "2017-04-30T23:07:37Z",
-        "last_polled_time": "2017-04-30T23:17:34.019Z",
+        "published_time": "2017-05-29T03:32:53Z",
+        "last_polled_time": "2017-05-29T04:17:23.784Z",
         "group": 1
     }
 },
@@ -1863,7 +1863,7 @@
         "link": "https://www.djangoproject.com/weblog/",
         "description": "Latest news about Django, the Python Web framework.",
         "published_time": null,
-        "last_polled_time": "2017-05-04T17:17:32.454Z",
+        "last_polled_time": "2017-06-02T19:17:30.546Z",
         "group": 5
     }
 },
@@ -1888,8 +1888,8 @@
         "xml_url": "http://mythandhistory.podbean.com/feed/",
         "link": "http://mythandhistory.podbean.com",
         "description": "A journey through the myths and history of Ancient Greece and Rome for all the family.",
-        "published_time": "2017-04-16T21:23:31Z",
-        "last_polled_time": "2017-04-16T22:17:20.791Z",
+        "published_time": "2017-05-23T01:40:01Z",
+        "last_polled_time": "2017-05-23T02:17:19.594Z",
         "group": 1
     }
 },
@@ -1901,8 +1901,8 @@
         "xml_url": "http://www.bbc.co.uk/blogs/markkermode/rss",
         "link": "http://www.bbc.co.uk/blogs/markkermode",
         "description": "Outspoken, opinionated and never lost for words, Mark is the UK's leading film critic.  This\u00a0twice-weekly video blog is the place where he airs his personal views on the things that most fire him up about cinema - and invites you to give your own opinions.",
-        "published_time": "2017-05-02T15:50:12Z",
-        "last_polled_time": "2017-05-02T16:17:17.882Z",
+        "published_time": "2017-05-31T06:08:21Z",
+        "last_polled_time": "2017-05-31T06:17:16.940Z",
         "group": 2
     }
 },
@@ -1915,7 +1915,7 @@
         "link": "http://www.anisopteragames.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-05-04T17:17:22.783Z",
+        "last_polled_time": "2017-06-02T19:17:21.947Z",
         "group": 2
     }
 },
@@ -1927,8 +1927,8 @@
         "xml_url": "http://thehistoryofbyzantium.libsyn.com/rss",
         "link": "http://www.thehistoryofbyzantium.com",
         "description": "A podcast telling the story of the Roman (Byzantine) Empire from 476 AD to 1453",
-        "published_time": "2017-04-28T17:30:41Z",
-        "last_polled_time": "2017-04-28T18:17:36.713Z",
+        "published_time": "2017-05-12T13:47:29Z",
+        "last_polled_time": "2017-05-12T14:36:38.605Z",
         "group": 1
     }
 },
@@ -1939,9 +1939,9 @@
         "title": "Slate Star Codex",
         "xml_url": "http://slatestarcodex.com/feed/",
         "link": "http://slatestarcodex.com",
-        "description": "SSC DISCORD SERVER AT https://discordapp.com/invite/gpaTCxh ; SCHELLING POINT FOR DISCUSSION IS WED 10 PM EST",
+        "description": "N\ua66eW WITH M\ua66eRE MULTI\ua66eCULAR \ua66e",
         "published_time": null,
-        "last_polled_time": "2017-05-04T17:17:26.134Z",
+        "last_polled_time": "2017-06-02T19:17:24.924Z",
         "group": 2
     }
 },
@@ -1954,7 +1954,7 @@
         "link": "http://www.exurbe.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-05-04T17:17:14.691Z",
+        "last_polled_time": "2017-06-02T19:17:13.985Z",
         "group": 2
     }
 },
@@ -1967,7 +1967,7 @@
         "link": "http://b5audioguide.com",
         "description": "This is a book club without books, an episode-by-episode walkthrough of one of the most influential and important modern SF series. Each podcast begins with a spoiler-free discussion of the episode for new viewers, then we give listeners a jumping-off point and switch to a discussion of how the episode fits into the five-year history of the show.",
         "published_time": null,
-        "last_polled_time": "2017-05-04T17:17:31.420Z",
+        "last_polled_time": "2017-06-02T19:17:29.147Z",
         "group": 2
     }
 },
@@ -1980,7 +1980,7 @@
         "link": "https://www.theincomparable.com/theincomparable/",
         "description": "The Incomparable is a weekly dive into geeky media we love, including movies, books, TV, comics, and more, featuring a rotating panel of guests and hosted by Jason Snell.",
         "published_time": null,
-        "last_polled_time": "2017-05-04T17:17:35.438Z",
+        "last_polled_time": "2017-06-02T19:17:33.241Z",
         "group": 2
     }
 },
@@ -1993,7 +1993,7 @@
         "link": "https://arstechnica.com",
         "description": "Serving the Technologist for more than a decade. IT news, reviews, and analysis.",
         "published_time": null,
-        "last_polled_time": "2017-05-04T17:17:27.111Z",
+        "last_polled_time": "2017-06-02T19:17:25.677Z",
         "group": 5
     }
 },
@@ -2005,8 +2005,8 @@
         "xml_url": "http://www.bbc.co.uk/programmes/p02dbd4m/episodes/downloads.rss",
         "link": "http://www.bbc.co.uk/programmes/p02dbd4m",
         "description": "Owen Bennett Jones and guests take an in-depth look at a topic in the week&#39;s news",
-        "published_time": "2017-04-28T00:00:00Z",
-        "last_polled_time": "2017-04-28T08:17:23.554Z",
+        "published_time": "2017-06-02T00:00:00Z",
+        "last_polled_time": "2017-06-02T08:17:20.412Z",
         "group": 4
     }
 },
@@ -2018,8 +2018,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/moreorless/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/p02nrss1",
         "description": "Tim Harford and the More or Less team try to make sense of the statistics which surround us. From BBC Radio 4",
-        "published_time": "2017-05-01T00:00:00Z",
-        "last_polled_time": "2017-05-01T11:17:26.066Z",
+        "published_time": "2017-06-02T00:00:00Z",
+        "last_polled_time": "2017-06-02T18:17:19.922Z",
         "group": 4
     }
 },
@@ -2032,7 +2032,7 @@
         "link": "http://www.bbc.co.uk/news/",
         "description": "BBC News - UK Politics",
         "published_time": null,
-        "last_polled_time": "2017-05-04T17:17:10.077Z",
+        "last_polled_time": "2017-06-02T19:17:10.317Z",
         "group": 3
     }
 },
@@ -2045,7 +2045,7 @@
         "link": "https://www.theregister.co.uk/",
         "description": "Biting the hand that feeds IT \u2014 sci/tech news and views for the world",
         "published_time": null,
-        "last_polled_time": "2017-05-04T17:17:37.248Z",
+        "last_polled_time": "2017-06-02T19:17:35.262Z",
         "group": 5
     }
 },
@@ -2058,7 +2058,7 @@
         "link": "http://yieldthought.com/",
         "description": "Mark O\u2019Connor is a programmer, irregular writer and part-time technical fellow. He believes in dynamic typing, first-class functions, working in the cloud and the immortal essence of the human soul. He also likes tea.\n\n\n\n  var _gaq = _gaq || [];\n  _gaq.push(['_setAccount', 'UA-29608497-1']);\n  _gaq.push(['_trackPageview']);\n\n  (function() {\n    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;\n    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);\n  })();",
         "published_time": null,
-        "last_polled_time": "2017-05-04T17:17:38.355Z",
+        "last_polled_time": "2017-06-02T19:17:36.259Z",
         "group": 5
     }
 },
@@ -2071,7 +2071,7 @@
         "link": "http://blog.dilbert.com/",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-05-04T17:17:25.541Z",
+        "last_polled_time": "2017-06-02T19:17:24.303Z",
         "group": 2
     }
 },
@@ -2097,7 +2097,7 @@
         "link": "http://ahernp.com/blog/",
         "description": "Recent Blog Entries.",
         "published_time": null,
-        "last_polled_time": "2017-05-04T17:17:02.360Z",
+        "last_polled_time": "2017-06-02T19:17:02.571Z",
         "group": null
     }
 },
@@ -2110,7 +2110,7 @@
         "link": "https://www.theincomparable.com/sophomorelit/",
         "description": "A podcast about your 10th grade reading list, hosted by John McCoy.",
         "published_time": null,
-        "last_polled_time": "2017-05-04T17:17:26.438Z",
+        "last_polled_time": "2017-06-02T19:17:25.150Z",
         "group": 2
     }
 },
@@ -2123,7 +2123,7 @@
         "link": "http://approximatelycorrect.com",
         "description": "Technical and Social Perspectives on Machine Learning",
         "published_time": null,
-        "last_polled_time": "2017-05-04T17:17:09.855Z",
+        "last_polled_time": "2017-06-02T19:17:10.165Z",
         "group": 5
     }
 },
@@ -2161,8 +2161,8 @@
         "xml_url": "http://www.bbc.co.uk/programmes/p04z203l/episodes/downloads.rss",
         "link": "http://www.bbc.co.uk/programmes/p04z203l",
         "description": "Nick Robinson talks about what\u2019s really going on in British politics, with his weekly take on the election campaign.",
-        "published_time": "2017-04-30T00:00:00Z",
-        "last_polled_time": "2017-04-30T17:17:26.747Z",
+        "published_time": "2017-05-27T00:00:00Z",
+        "last_polled_time": "2017-05-27T11:17:25.301Z",
         "group": 4
     }
 }

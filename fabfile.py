@@ -160,6 +160,7 @@ def deploy():
         run('~/.virtualenvs/ahernp2/bin/python manage.py collectstatic --noinput')
         run('~/.virtualenvs/ahernp2/bin/python manage.py migrate --noinput')
         run('touch ad/uwsgi.ini')
+        run('./ad/start_missing.sh')
 
 
 @task

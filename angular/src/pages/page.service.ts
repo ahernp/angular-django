@@ -122,9 +122,6 @@ export class PageService {
                         let page: Page = <Page>response.json();
                         page.url = `${pageUrl}/${page.slug}`;
                         this.updateCache(page);
-                        this.pages$.subscribe(pages => {
-                            this.refreshCurrentPageFromCache(page);
-                        })
                     },
                     error => {
                         this.messageService.addErrorMessage(
@@ -241,6 +238,15 @@ export class PageService {
     }
 
     updateCache(page: Page): void {
+        page.url = `${pageUrl}/${page.slug}`;
+        if (page.parentId) {
+            let parent = this.pageCache.filter(parent => parent.id == page.parentId)[0];
+            page.parentName = parent.title;
+        }
+        let children = this.pageCache.filter(child => child.parentId == page.id);
+        page.children = children.map(child => <Breadcrumb>{title: child.title,
+            url: child.url, parentName: child.parentName, updated: child.updated});
+
         let pages: Page[] = this.pageCache.filter(cachedPage => cachedPage.slug == page.slug);
         if (pages.length > 0)
             pages[0] = page;

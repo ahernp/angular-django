@@ -122,6 +122,9 @@ export class PageService {
                         let page: Page = <Page>response.json();
                         page.url = `${pageUrl}/${page.slug}`;
                         this.updateCache(page);
+                        this.pages$.subscribe(pages => {
+                            this.refreshCurrentPageFromCache(page);
+                        })
                     },
                     error => {
                         this.messageService.addErrorMessage(
@@ -180,6 +183,12 @@ export class PageService {
     refresh(url: string): Observable<Page> {
         this.pageCache = this.pageCache.filter(page => page.url != url);
         return this.getPage(url.replace(`${pageUrl}/`, ''));
+    }
+
+    refreshCurrentPageFromCache(currentPage: Page): void {
+        let pages:Page[] = this.pageCache.filter(page => page.url == currentPage.url);
+        if (pages.length > 0)
+            this.currentPage$.next(pages[0]);
     }
 
     save(page: Page): void {

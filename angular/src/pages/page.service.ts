@@ -181,12 +181,28 @@ export class PageService {
     }
 
     refresh(url: string): Observable<Page> {
-        this.pageCache = this.pageCache.filter(page => page.url != url);
-        return this.getPage(url.replace(`${pageUrl}/`, ''));
+        this.http.get(url)
+                .subscribe(
+                    (response: Response) => {
+                        let currentPage: Page = <Page>response.json();
+                        currentPage.url = `${pageUrl}/${currentPage.slug}`;
+                        let cachedPage: Page = this.pageCache.filter(page => page.url == currentPage.url)[0];
+                        currentPage.parentName = cachedPage.parentName;
+                        currentPage.children = cachedPage.children;
+                        this.updateCache(currentPage);
+                    },
+                    error => {
+                        this.messageService.addErrorMessage(
+                            messageSource,
+                            `${messageSource} error: From ${url}; Status Code ${error.status}; ${error.statusText}`);
+                        console.log(error);
+                    }
+                );
+        return this.currentPage$;
     }
 
     refreshCurrentPageFromCache(currentPage: Page): void {
-        let pages:Page[] = this.pageCache.filter(page => page.url == currentPage.url);
+        let pages: Page[] = this.pageCache.filter(page => page.url == currentPage.url);
         if (pages.length > 0)
             this.currentPage$.next(pages[0]);
     }

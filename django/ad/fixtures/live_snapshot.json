@@ -1163,10 +1163,10 @@
         "title": "Games",
         "slug": "games",
         "parent": 6,
-        "updated": "2017-06-10T16:31:01.028Z",
+        "updated": "2017-06-25T15:31:15.362Z",
         "published": null,
         "content_type": "table",
-        "content": "Title | Genre | Platform | Source | Size\n------|-------|----------|--------|------\nAge of Wonders III | Strategy | Linux | Steam | 3.2GB\nAI War | RTS | Linux | Steam | 300MB\nApotheon | RPG | Linux | GoG | 546MB\nArmello | Strategy | Linux | Steam | 2GB\nAscii Sector | RPG | Linux | Developer | 2.6MB\nBaldur's Gate 2 | RPG | Linux | GoG | 2.5GB\nBanner Saga | RPG | Linux | GoG | 4GB\nBattle Isle Platinum | Strategy | Windows | GoG | 1.2GB\nBattle Worlds: Kronos | Strategy | Linux | Steam | 1.1GB\nBattlefleet Gothic Armada | RTS | Windows | Steam | 4.4GB\nBattlestation: Harbinger | RPG | Linux | Steam | 120MB\nBioshock Infinite | RPG | Linux |Steam | 17GB\nBorderlands 2 | FPS | Linux | Steam | 9.9GB\nBroforce | Platformer | Linux | Steam | 292MB\nCities Skylines | City Sim | Linux | Steam | 1.8GB\nConquest of Elysium 3 | Strategy | Linux | Desura | 70MB\nCrusader Kings 2 | Strategy | Linux | Steam | 966MB\nDefcon | Strategy | Linux | Developer | 60MB\nDistant Worlds: Universe | Strategy | Windows | Steam | 1GB\nDroidFish | Chess | Android | Google | 11MB\nDwarfFortress | Strategy | Linux | Developer | 13MB\nEuro Truck Simulator 2 | Sim | Linux | Steam | 1.4GB\nEuropa Universalis IV | Strategy | Linux | Steam | 696MB\nF-117a Stealth Fighter | Flight Sim | Linux | GoG | 27MB\nFTL: Faster Than Light | Space Sim | Linux | Humble | 188MB\nGalcon | Strategy | Android | Google | 7MB\nGratuitous Space Battles 2 | Strategy | Linux | Humble | 380MB\nHand of Fate | RPG | Linux | Steam | 1.4GB\nIroncast | Puzzle | Linux | Steam | 215MB\nJewels | Puzzle | Android | Google | 5MB\nKerbal Space Program | Simulation | Linux | Steam | 643MB\nKing of Dragon Pass | RPG | Android | Google | 348MB\nLast Federation | Strategy | Linux | GoG | 534MB\nLords of Xulima | RPG | Linux | GoG | 1.6GB\nLyne | Puzzle | Android | Humble | 21.7MB\nMassive Chalice | Strategy | Linux | GoG | 852MB\nMaster of Orion 1 | Strategy | Linux | GoG | 10MB\nMaster of Orion 2 | Strategy | Linux | GoG | 161MB\nMast of Orion 206 | Strategy | Linux | GoG | 2GB\nMinecraft | RPG | Linux |[Developer | 145MB\nMount and Blade: Warband | RPG | Linux | Steam | 572MB\nOsmos | Puzzle | Linux |[Developer | 20MB\nPandora: First Contact | Strategy | Linux | Steam | 545MB\nPapers Please | RPG | Linux | Steam | 46MB\nPillars of Eternity | RPG | Linux | Steam | 5.7GB\nPlanetary Annihilation | RTS | Linux | Steam | 2.3GB\nPortal | Puzzle | Linux | Steam | 7.3GB\nReassembly | Strategy | Linux | Humble | 89Mb\nSaints Row IV | RPG | Linux | Steam | 8.5GB\nShadow of Mordor | RPG | Linux | Steam | 41.5GB\nShadow Warrior Special Edition | RPG | Linux | Humble | 5.9GB\nShadowrun Returns | RPG | Linux | Humble | 1GB\nSid Meier's Civilisation IV | Strategy | Windows | DVD | 1.8GB\nSid Meier's Civilisation V | Strategy | Linux | Steam | 10GB\nSkyrim - Elder Scrolls V | RPG | Windows | Steam | 10.4GB\nSpace Pirates and Zombies | RPG | Linux | Humble | 150.2MB\nSpacecom | Strategy | Linux | GoG | 129.4MB\nStar Ruler II | Strategy | Linux | GoG | 396MB\nStar Wars: Empire at War | RTS | Windows | Steam | 1.85GB\nStar Wars: KoTOR II | RPG | Linux | Steam | 3GB\nStar Wars: TIE Fighter | Space Sim | Linux | GoG | 322MB\nStarbound | RPG | Linux | Steam | 1GB\nStellaris | Strategy | Linux | Steam | 1.5GB\nSunless Sea | RPG | Linux | Steam | 251MB\nSword of the Stars: The Pit | RPG | Linux | Steam | 1.1GB\nThea: The Awakening | Strategy | Linux | Steam | 845MB\nTorchlight II | RPG | Linux | Humble | 1.5GB\nTotal War: Rome | Strategy | Windows | DVD | 2.9GB\nTotal War: Empire | Strategy | Linux | Steam | 9.7GB\nTrain Fever | Sim | Linux | Steam | 1.6GB\nTransistor | RPG | Linux | Steam | 3GB\nUltimate General: Gettysburg | RTS | Linux | Steam | 1.2GB\nVictory at Sea | RTS | Linux | Steam | 1.2GB\nVoidExpanse | RTS | Linux | Steam | 308MB\nWarlock 2: The Exiled | RTS | Linux | Steam | 1.4GB\nWindward | RPG | Linux | Steam | 108MB\nWitcher 2 | RPG | Linux | Steam | 16GB\nX3: Albion Prelude | Space Sim | Linux | Steam | 6.2GB\nXCOM: Enemy Within | Tactical | Linux | Steam | 13.2GB"
+        "content": "Title | Genre | Platform | Source | Size\n------|-------|----------|--------|------\nAge of Wonders III | Strategy | Linux | Steam | 3.2GB\nAI War | RTS | Linux | Steam | 300MB\nApotheon | RPG | Linux | GoG | 546MB\nArmello | Strategy | Linux | Steam | 2GB\nAscii Sector | RPG | Linux | Developer | 2.6MB\nBaldur's Gate 2 | RPG | Linux | GoG | 2.5GB\nBanner Saga | RPG | Linux | GoG | 4GB\nBattle Isle Platinum | Strategy | Windows | GoG | 1.2GB\nBattle Worlds: Kronos | Strategy | Linux | Steam | 1.1GB\nBattlefleet Gothic Armada | RTS | Windows | Steam | 4.4GB\nBattlestation: Harbinger | RPG | Linux | Steam | 120MB\nBioshock Infinite | RPG | Linux |Steam | 17GB\nBorderlands 2 | FPS | Linux | Steam | 9.9GB\nBroforce | Platformer | Linux | Steam | 292MB\nCities Skylines | City Sim | Linux | Steam | 1.8GB\nConquest of Elysium 3 | Strategy | Linux | Desura | 70MB\nCrusader Kings 2 | Strategy | Linux | Steam | 966MB\nDefcon | Strategy | Linux | Developer | 60MB\nDistant Worlds: Universe | Strategy | Windows | Steam | 1GB\nDroidFish | Chess | Android | Google | 11MB\nDwarfFortress | Strategy | Linux | Developer | 13MB\nEuro Truck Simulator 2 | Sim | Linux | Steam | 1.4GB\nEuropa Universalis IV | Strategy | Linux | Steam | 696MB\nF-117a Stealth Fighter | Flight Sim | Linux | GoG | 27MB\nFTL: Faster Than Light | Space Sim | Linux | Humble | 188MB\nGalcon | Strategy | Android | Google | 7MB\nGratuitous Space Battles 2 | Strategy | Linux | Humble | 380MB\nHand of Fate | RPG | Linux | Steam | 1.4GB\nIroncast | Puzzle | Linux | Steam | 215MB\nJewels | Puzzle | Android | Google | 5MB\nKerbal Space Program | Simulation | Linux | Steam | 643MB\nKing of Dragon Pass | RPG | Android | Google | 348MB\nLast Federation | Strategy | Linux | GoG | 534MB\nLords of Xulima | RPG | Linux | GoG | 1.6GB\nLyne | Puzzle | Android | Humble | 21.7MB\nMassive Chalice | Strategy | Linux | GoG | 852MB\nMaster of Orion 1 | Strategy | Linux | GoG | 10MB\nMaster of Orion 2 | Strategy | Linux | GoG | 161MB\nMast of Orion 206 | Strategy | Linux | GoG | 2GB\nMinecraft | RPG | Linux |[Developer | 145MB\nMount and Blade: Warband | RPG | Linux | Steam | 572MB\nOsmos | Puzzle | Linux |[Developer | 20MB\nPandora: First Contact | Strategy | Linux | Steam | 545MB\nPapers Please | RPG | Linux | Steam | 46MB\nPillars of Eternity | RPG | Linux | Steam | 5.7GB\nPlanetary Annihilation | RTS | Linux | Steam | 2.3GB\nPortal | Puzzle | Linux | Steam | 7.3GB\nReassembly | Strategy | Linux | Humble | 89Mb\nSaints Row IV | RPG | Linux | Steam | 8.5GB\nShadow of Mordor | RPG | Linux | Steam | 41.5GB\nShadow Warrior Special Edition | RPG | Linux | Humble | 5.9GB\nShadowrun Returns | RPG | Linux | Humble | 1GB\nSid Meier's Civilisation IV | Strategy | Windows | DVD | 1.8GB\nSid Meier's Civilisation V | Strategy | Linux | Steam | 10GB\nSkyrim - Elder Scrolls V | RPG | Windows | Steam | 10.4GB\nSpace Pirates and Zombies | RPG | Linux | Humble | 150.2MB\nSpacecom | Strategy | Linux | GoG | 129.4MB\nStar Ruler II | Strategy | Linux | GoG | 396MB\nStar Wars: Empire at War | RTS | Windows | Steam | 1.85GB\nStar Wars: KoTOR II | RPG | Linux | Steam | 3GB\nStar Wars: TIE Fighter | Space Sim | Linux | GoG | 322MB\nStarbound | RPG | Linux | Steam | 1GB\nStellaris | Strategy | Linux | Steam | 1.5GB\nSunless Sea | RPG | Linux | Steam | 251MB\nSword of the Stars: The Pit | RPG | Linux | Steam | 1.1GB\nThea: The Awakening | Strategy | Linux | Steam | 845MB\nTorchlight II | RPG | Linux | Humble | 1.5GB\nTotal War: Rome | Strategy | Windows | DVD | 2.9GB\nTotal War: Empire | Strategy | Linux | Steam | 9.7GB\nTrain Fever | Sim | Linux | Steam | 1.6GB\nTransistor | RPG | Linux | Steam | 3GB\nTransport Fever | Sim | Linux | Steam | 4.7GB\nUltimate General: Gettysburg | RTS | Linux | Steam | 1.2GB\nVictory at Sea | RTS | Linux | Steam | 1.2GB\nVoidExpanse | RTS | Linux | Steam | 308MB\nWarlock 2: The Exiled | RTS | Linux | Steam | 1.4GB\nWindward | RPG | Linux | Steam | 108MB\nWitcher 2 | RPG | Linux | Steam | 16GB\nX3: Albion Prelude | Space Sim | Linux | Steam | 6.2GB\nXCOM: Enemy Within | Tactical | Linux | Steam | 13.2GB"
     }
 },
 {
@@ -1577,7 +1577,7 @@
         "link": "http://bingethinkinghistory.blogspot.com/",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-06-10T19:17:09.918Z",
+        "last_polled_time": "2017-07-02T07:17:11.100Z",
         "group": 1
     }
 },
@@ -1603,7 +1603,7 @@
         "link": "http://ancientworldpodcast.blogspot.com/",
         "description": "From the first human civilizations to 500 BC in (around) thirty podcasts",
         "published_time": null,
-        "last_polled_time": "2017-06-10T19:17:28.534Z",
+        "last_polled_time": "2017-07-02T07:17:30.031Z",
         "group": 1
     }
 },
@@ -1615,8 +1615,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/analysis/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006r4vz",
         "description": "Programme examining the ideas and forces which shape public policy in Britain and abroad, presented by distinguished writers, journalists and academics",
-        "published_time": "2017-06-05T00:00:00Z",
-        "last_polled_time": "2017-06-05T20:17:03.069Z",
+        "published_time": "2017-06-26T00:00:00Z",
+        "last_polled_time": "2017-06-26T20:17:03.348Z",
         "group": 4
     }
 },
@@ -1628,8 +1628,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/worldservice/discovery/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/p002w557",
         "description": "Explorations in the world of science.",
-        "published_time": "2017-06-05T00:00:00Z",
-        "last_polled_time": "2017-06-05T20:17:11.772Z",
+        "published_time": "2017-06-26T00:00:00Z",
+        "last_polled_time": "2017-06-26T20:17:25.597Z",
         "group": 4
     }
 },
@@ -1641,8 +1641,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/fileon4/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006th08",
         "description": "Award-winning current affairs documentary series investigating major issues at home and abroad",
-        "published_time": "2017-06-06T00:00:00Z",
-        "last_polled_time": "2017-06-06T20:17:16.403Z",
+        "published_time": "2017-06-27T00:00:00Z",
+        "last_polled_time": "2017-06-27T20:17:18.306Z",
         "group": 4
     }
 },
@@ -1654,8 +1654,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/fricomedy/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/p02pc9pj",
         "description": "Download the best new comedy from Radio 4, every Friday. Features The News Quiz, The Now Show, Dead Ringers and The Museum of Curiosity.",
-        "published_time": "2017-06-09T00:00:00Z",
-        "last_polled_time": "2017-06-09T18:17:17.151Z",
+        "published_time": "2017-06-30T00:00:00Z",
+        "last_polled_time": "2017-06-30T18:17:15.466Z",
         "group": 4
     }
 },
@@ -1680,8 +1680,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/iot/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qykl",
         "description": "Melvyn Bragg and guests discuss the history of ideas",
-        "published_time": "2017-06-08T00:00:00Z",
-        "last_polled_time": "2017-06-08T11:17:18.584Z",
+        "published_time": "2017-06-29T00:00:00Z",
+        "last_polled_time": "2017-06-29T11:17:18.697Z",
         "group": 4
     }
 },
@@ -1693,8 +1693,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/law/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006tgy1",
         "description": "Joshua Rozenberg presents Radio 4&#39;s long-running legal magazine programme, featuring reports and discussion on matters relating to law",
-        "published_time": "2017-03-28T00:00:00Z",
-        "last_polled_time": "2017-03-28T16:17:19.273Z",
+        "published_time": "2017-06-27T00:00:00Z",
+        "last_polled_time": "2017-06-27T16:17:22.750Z",
         "group": 4
     }
 },
@@ -1706,8 +1706,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/media/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b00dv9hq",
         "description": "Topical programme about the fast-changing media world",
-        "published_time": "2017-06-07T00:00:00Z",
-        "last_polled_time": "2017-06-07T17:17:38.271Z",
+        "published_time": "2017-06-28T00:00:00Z",
+        "last_polled_time": "2017-06-28T17:17:39.018Z",
         "group": 4
     }
 },
@@ -1719,8 +1719,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/profile/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qjz5",
         "description": "An insight into the character of an influential figure making news headlines",
-        "published_time": "2017-06-10T00:00:00Z",
-        "last_polled_time": "2017-06-10T19:17:21.642Z",
+        "published_time": "2017-07-01T00:00:00Z",
+        "last_polled_time": "2017-07-01T19:17:22.900Z",
         "group": 4
     }
 },
@@ -1732,8 +1732,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/bottomline/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006sz6t",
         "description": "Evan Davis hosts the business conversation show with people at the top giving insight into what matters",
-        "published_time": "2017-06-08T00:00:00Z",
-        "last_polled_time": "2017-06-08T22:17:31.864Z",
+        "published_time": "2017-06-29T00:00:00Z",
+        "last_polled_time": "2017-06-29T20:17:34.706Z",
         "group": 4
     }
 },
@@ -1745,8 +1745,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/film/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006r5jt",
         "description": "The latest releases, the hottest stars and the leading directors, plus news and insights from the film world",
-        "published_time": "2017-06-08T00:00:00Z",
-        "last_polled_time": "2017-06-08T16:17:33.416Z",
+        "published_time": "2017-06-29T00:00:00Z",
+        "last_polled_time": "2017-06-29T16:17:39.362Z",
         "group": 4
     }
 },
@@ -1758,8 +1758,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/wpr/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qjfq",
         "description": "Radio 4&#39;s weekly assessment of developments at Westminster",
-        "published_time": "2017-06-10T00:00:00Z",
-        "last_polled_time": "2017-06-10T11:17:35.758Z",
+        "published_time": "2017-07-01T00:00:00Z",
+        "last_polled_time": "2017-07-01T11:17:42.673Z",
         "group": 4
     }
 },
@@ -1771,8 +1771,8 @@
         "xml_url": "http://feedproxy.google.com/linuxtoday/linux",
         "link": "http://www.linuxtoday.com/",
         "description": "",
-        "published_time": "2017-06-10T19:08:03Z",
-        "last_polled_time": "2017-06-10T19:17:18.155Z",
+        "published_time": "2017-07-02T07:10:21Z",
+        "last_polled_time": "2017-07-02T07:17:19.852Z",
         "group": 5
     }
 },
@@ -1785,7 +1785,7 @@
         "link": "https://www.schneier.com/blog/",
         "description": "A blog covering security and security technology.",
         "published_time": null,
-        "last_polled_time": "2017-06-10T19:17:25.996Z",
+        "last_polled_time": "2017-07-02T07:17:27.653Z",
         "group": 5
     }
 },
@@ -1798,7 +1798,7 @@
         "link": "https://inkscapetutorials.org",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-06-10T19:17:15.720Z",
+        "last_polled_time": "2017-07-02T07:17:17.390Z",
         "group": 5
     }
 },
@@ -1823,8 +1823,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/pov/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/b006qng8",
         "description": "A weekly reflection on a topical issue",
-        "published_time": "2017-06-09T00:00:00Z",
-        "last_polled_time": "2017-06-09T20:17:04.396Z",
+        "published_time": "2017-06-30T00:00:00Z",
+        "last_polled_time": "2017-06-30T20:17:04.868Z",
         "group": 4
     }
 },
@@ -1836,8 +1836,8 @@
         "xml_url": "http://talkinghistorypodcast.libsyn.com/rss",
         "link": "http://talkinghistorypodcast.com",
         "description": "Two brothers telling the story of the Italian Unification, 1790-1870. Our story will start with a quick recap of Italian history from Roman times to 1790, then we&#39;ll slow down and examine the complex social, political, and economic themes as we cover the events of the Italian Unification.",
-        "published_time": "2017-03-19T22:08:56Z",
-        "last_polled_time": "2017-03-19T22:17:20.701Z",
+        "published_time": "2017-06-12T00:36:29Z",
+        "last_polled_time": "2017-06-12T01:17:26.647Z",
         "group": 1
     }
 },
@@ -1863,7 +1863,7 @@
         "link": "https://www.djangoproject.com/weblog/",
         "description": "Latest news about Django, the Python Web framework.",
         "published_time": null,
-        "last_polled_time": "2017-06-10T19:17:31.974Z",
+        "last_polled_time": "2017-07-02T07:17:33.704Z",
         "group": 5
     }
 },
@@ -1873,10 +1873,10 @@
     "fields": {
         "title": "The History of China",
         "xml_url": "http://feeds.feedburner.com/TheHistoryOfChina",
-        "link": "http://www.patreon.com/thehistoryofchina",
-        "description": "A journey through the 5000 years of history documented by one of the world&#39;s oldest continuous civilizations. For all the episodes for free, as well as additional content, please subscribe and/or visit http://thehistoryofchina.wordpress.com .",
-        "published_time": "2016-01-31T17:22:39Z",
-        "last_polled_time": "2016-01-31T18:17:28.091Z",
+        "link": "http://thehistoryofchina.wordpress.com",
+        "description": "A journey through the 5000 years of history documented by one of the world&#39;s oldest continuous civilizations. \n\nFor all the episodes for free, as well as additional content, please subscribe and/or visit http://thehistoryofchina.wordpress.com .",
+        "published_time": "2017-06-23T16:00:00Z",
+        "last_polled_time": "2017-06-24T07:17:39.896Z",
         "group": 1
     }
 },
@@ -1901,8 +1901,8 @@
         "xml_url": "http://www.bbc.co.uk/blogs/markkermode/rss",
         "link": "http://www.bbc.co.uk/blogs/markkermode",
         "description": "Outspoken, opinionated and never lost for words, Mark is the UK's leading film critic.  This\u00a0twice-weekly video blog is the place where he airs his personal views on the things that most fire him up about cinema - and invites you to give your own opinions.",
-        "published_time": "2017-06-08T11:54:06Z",
-        "last_polled_time": "2017-06-08T12:17:18.794Z",
+        "published_time": "2017-06-30T13:09:15Z",
+        "last_polled_time": "2017-06-30T14:17:19.281Z",
         "group": 2
     }
 },
@@ -1915,7 +1915,7 @@
         "link": "http://www.anisopteragames.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-06-10T19:17:23.614Z",
+        "last_polled_time": "2017-07-02T07:17:24.797Z",
         "group": 2
     }
 },
@@ -1925,10 +1925,10 @@
     "fields": {
         "title": "The History of Byzantium",
         "xml_url": "http://thehistoryofbyzantium.libsyn.com/rss",
-        "link": "http://www.thehistoryofbyzantium.com",
+        "link": "http://www.acast.com/thehistoryofbyzantium",
         "description": "A podcast telling the story of the Roman (Byzantine) Empire from 476 AD to 1453",
-        "published_time": "2017-05-12T13:47:29Z",
-        "last_polled_time": "2017-05-12T14:36:38.605Z",
+        "published_time": "2017-06-23T21:48:39Z",
+        "last_polled_time": "2017-06-23T22:17:36.514Z",
         "group": 1
     }
 },
@@ -1941,7 +1941,7 @@
         "link": "http://slatestarcodex.com",
         "description": "N\ua66eW WITH M\ua66eRE MULTI\ua66eCULAR \ua66e",
         "published_time": null,
-        "last_polled_time": "2017-06-10T19:17:26.914Z",
+        "last_polled_time": "2017-07-02T07:17:28.414Z",
         "group": 2
     }
 },
@@ -1954,7 +1954,7 @@
         "link": "http://www.exurbe.com",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-06-10T19:17:14.060Z",
+        "last_polled_time": "2017-07-02T07:17:15.840Z",
         "group": 2
     }
 },
@@ -1967,7 +1967,7 @@
         "link": "http://b5audioguide.com",
         "description": "This is a book club without books, an episode-by-episode walkthrough of one of the most influential and important modern SF series. Each podcast begins with a spoiler-free discussion of the episode for new viewers, then we give listeners a jumping-off point and switch to a discussion of how the episode fits into the five-year history of the show.",
         "published_time": null,
-        "last_polled_time": "2017-06-10T19:17:30.883Z",
+        "last_polled_time": "2017-07-02T07:17:32.500Z",
         "group": 2
     }
 },
@@ -1980,7 +1980,7 @@
         "link": "https://www.theincomparable.com/theincomparable/",
         "description": "The Incomparable is a weekly dive into geeky media we love, including movies, books, TV, comics, and more, featuring a rotating panel of guests and hosted by Jason Snell.",
         "published_time": null,
-        "last_polled_time": "2017-06-10T19:17:34.932Z",
+        "last_polled_time": "2017-07-02T07:17:37.304Z",
         "group": 2
     }
 },
@@ -1993,7 +1993,7 @@
         "link": "https://arstechnica.com",
         "description": "Serving the Technologist for more than a decade. IT news, reviews, and analysis.",
         "published_time": null,
-        "last_polled_time": "2017-06-10T19:17:27.615Z",
+        "last_polled_time": "2017-07-02T07:17:29.145Z",
         "group": 5
     }
 },
@@ -2004,9 +2004,9 @@
         "title": "Newshour Extra",
         "xml_url": "http://www.bbc.co.uk/programmes/p02dbd4m/episodes/downloads.rss",
         "link": "http://www.bbc.co.uk/programmes/p02dbd4m",
-        "description": "Owen Bennett Jones and guests take an in-depth look at a topic in the week&#39;s news",
-        "published_time": "2017-06-09T00:00:00Z",
-        "last_polled_time": "2017-06-09T19:17:22.717Z",
+        "description": "Discussion, debate and analysis of the issues behind the news",
+        "published_time": "2017-06-30T00:00:00Z",
+        "last_polled_time": "2017-06-30T08:17:21.805Z",
         "group": 4
     }
 },
@@ -2018,8 +2018,8 @@
         "xml_url": "http://downloads.bbc.co.uk/podcasts/radio4/moreorless/rss.xml",
         "link": "http://www.bbc.co.uk/programmes/p02nrss1",
         "description": "Tim Harford and the More or Less team try to make sense of the statistics which surround us. From BBC Radio 4",
-        "published_time": "2017-06-07T00:00:00Z",
-        "last_polled_time": "2017-06-07T17:17:20.130Z",
+        "published_time": "2017-06-30T00:00:00Z",
+        "last_polled_time": "2017-06-30T22:17:19.161Z",
         "group": 4
     }
 },
@@ -2032,7 +2032,7 @@
         "link": "http://www.bbc.co.uk/news/",
         "description": "BBC News - UK Politics",
         "published_time": null,
-        "last_polled_time": "2017-06-10T19:17:09.682Z",
+        "last_polled_time": "2017-07-02T07:17:10.767Z",
         "group": 3
     }
 },
@@ -2045,7 +2045,7 @@
         "link": "https://www.theregister.co.uk/",
         "description": "Biting the hand that feeds IT \u2014 sci/tech news and views for the world",
         "published_time": null,
-        "last_polled_time": "2017-06-10T19:17:37.096Z",
+        "last_polled_time": "2017-07-02T07:17:39.137Z",
         "group": 5
     }
 },
@@ -2058,7 +2058,7 @@
         "link": "http://yieldthought.com/",
         "description": "Mark O\u2019Connor is a programmer, irregular writer and part-time technical fellow. He believes in dynamic typing, first-class functions, working in the cloud and the immortal essence of the human soul. He also likes tea.\n\n\n\n  var _gaq = _gaq || [];\n  _gaq.push(['_setAccount', 'UA-29608497-1']);\n  _gaq.push(['_trackPageview']);\n\n  (function() {\n    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;\n    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);\n  })();",
         "published_time": null,
-        "last_polled_time": "2017-06-10T19:17:38.409Z",
+        "last_polled_time": "2017-07-02T07:17:40.440Z",
         "group": 5
     }
 },
@@ -2071,7 +2071,7 @@
         "link": "http://blog.dilbert.com/",
         "description": "",
         "published_time": null,
-        "last_polled_time": "2017-06-10T19:17:26.152Z",
+        "last_polled_time": "2017-07-02T07:17:27.801Z",
         "group": 2
     }
 },
@@ -2097,7 +2097,7 @@
         "link": "http://ahernp.com/blog/",
         "description": "Recent Blog Entries.",
         "published_time": null,
-        "last_polled_time": "2017-06-10T19:17:01.694Z",
+        "last_polled_time": "2017-07-02T07:17:02.678Z",
         "group": null
     }
 },
@@ -2110,7 +2110,7 @@
         "link": "https://www.theincomparable.com/sophomorelit/",
         "description": "A podcast about your 10th grade reading list, hosted by John McCoy.",
         "published_time": null,
-        "last_polled_time": "2017-06-10T19:17:27.085Z",
+        "last_polled_time": "2017-07-02T07:17:28.599Z",
         "group": 2
     }
 },
@@ -2123,7 +2123,7 @@
         "link": "http://approximatelycorrect.com",
         "description": "Technical and Social Perspectives on Machine Learning",
         "published_time": null,
-        "last_polled_time": "2017-06-10T19:17:09.387Z",
+        "last_polled_time": "2017-07-02T07:17:10.556Z",
         "group": 5
     }
 },
@@ -2134,9 +2134,9 @@
         "title": "When Diplomacy Fails Podcast",
         "xml_url": "http://rss.acast.com/whendiplomacyfails",
         "link": "http://www.acast.com/whendiplomacyfails",
-        "description": "When Diplomacy Fails Podcast covers the build up to, break out of and consequences of various wars throughout history, with a focus on diplomacy and international relations. Zack Twamley is a 25 year old eternal student with big plans and even crazier ambitions for history. He has a BA in History &amp; Politics and a Masters in a History of International Relations. If you want to lend a hand to what Zack does here then please subscribe/rate/review the podcast here, like the Facebook page, follow on Twitter @wdfpodcast visit the website www.wdfpodcast.com become a Patron at https://www.patreon.com/WhenDiplomacyFails and contact Zack directly at his email address: wdfpodcast@hotmail.com  Thanksss!",
-        "published_time": "2015-11-25T11:46:30Z",
-        "last_polled_time": "2017-04-19T17:47:20.047Z",
+        "description": "When Diplomacy Fails Podcast covers the build up to, break out of and consequences of various wars throughout history, with a focus on diplomacy and international relations. Zack Twamley is a 25 year old eternal student with big plans and even crazier ambitions for history.  If you want to lend a hand to what Zack does here then please subscribe/rate/review the podcast here, like the Facebook page, follow on Twitter @wdfpodcast visit the website www.wdfpodcast.com become a Patron at https://www.patreon.com/WhenDiplomacyFails and contact Zack directly at his email address: wdfpodcast@hotmail.com  Thanksss!",
+        "published_time": "2017-06-25T23:01:00Z",
+        "last_polled_time": "2017-06-25T23:17:40.431Z",
         "group": 1
     }
 },
@@ -2148,8 +2148,8 @@
         "xml_url": "http://rss.acast.com/10americanpresidents",
         "link": "http://www.acast.com/10americanpresidents",
         "description": "From Washington to Obama, 10 American Presidents a podcast narrated by guest hosts.\n\nThe life and legacy of an American President. Each show is intercut with music and where possible archive news clips or dramatisations to set a feeling of place and time.",
-        "published_time": "2015-10-15T08:53:10Z",
-        "last_polled_time": "2017-04-19T20:09:04.246Z",
+        "published_time": "2017-06-12T11:15:18Z",
+        "last_polled_time": "2017-06-21T16:17:02.676Z",
         "group": 1
     }
 },
@@ -2164,6 +2164,32 @@
         "published_time": "2017-06-03T00:00:00Z",
         "last_polled_time": "2017-06-03T12:17:21.397Z",
         "group": 4
+    }
+},
+{
+    "model": "feedreader.feed",
+    "pk": 214,
+    "fields": {
+        "title": "The Documentary",
+        "xml_url": "http://podcasts.files.bbci.co.uk/p02nq0lx.rss",
+        "link": "http://www.bbc.co.uk/programmes/p02nq0lx",
+        "description": "The best of BBC World Service documentaries and other factual programmes.",
+        "published_time": "2017-07-01T00:00:00Z",
+        "last_polled_time": "2017-07-01T14:17:33.054Z",
+        "group": 4
+    }
+},
+{
+    "model": "feedreader.feed",
+    "pk": 215,
+    "fields": {
+        "title": "sam[ ]zdat",
+        "xml_url": "https://samzdat.com/feed/",
+        "link": "https://samzdat.com",
+        "description": "antecedents have consequences",
+        "published_time": null,
+        "last_polled_time": "2017-07-02T07:17:26.025Z",
+        "group": 2
     }
 }
 ]
